@@ -27,7 +27,7 @@ namespace GroupDocs.Editor.Examples.CSharp.AdvancedUsage
         internal static void Run()
         {
             //1. Get a path to the input TXT file (or stream with file content)
-            string inputFilePath = Constants.SAMPLE_TXT;
+            string inputFilePath = "Your Sample Document";
 
             //2. Create Editor instance (not load options required)
             using (Editor editor = new Editor(inputFilePath))

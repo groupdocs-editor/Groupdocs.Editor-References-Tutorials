@@ -23,7 +23,7 @@ namespace GroupDocs.Editor.Examples.CSharp.AdvancedUsage.EditableDocumentExample
     {
         internal static void Run()
         {
-            string htmlFilePath = Constants.SAMPLE_HTML;
+            string htmlFilePath = "Your Sample Document";
             using (EditableDocument document = EditableDocument.FromFile(htmlFilePath, null))
             {
                 using (Editor editor = new Editor(htmlFilePath))

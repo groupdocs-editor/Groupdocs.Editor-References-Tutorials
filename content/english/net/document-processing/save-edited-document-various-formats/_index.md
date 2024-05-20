@@ -20,7 +20,7 @@ namespace GroupDocs.Editor.Examples.CSharp.AdvancedUsage
         internal static void Run()
         {
             //1. Get a path to the input WordProcessing file (or stream with file content)
-            string inputFilePath = Constants.SAMPLE_DOCX;
+            string inputFilePath = "Your Sample Document";
 
             //2. Create load options for this document
             Options.WordProcessingLoadOptions loadOptions = new Options.WordProcessingLoadOptions();
@@ -50,7 +50,7 @@ namespace GroupDocs.Editor.Examples.CSharp.AdvancedUsage
                             Options.WordProcessingSaveOptions saveOptions = new Options.WordProcessingSaveOptions(oneFormat);
 
                             //8.2. Prepare save path
-                            string savePath = System.IO.Path.Combine(Constants.GetOutputDirectoryPath(Constants.SAMPLE_DOCX), "MultipleOutFormats." + saveOptions.OutputFormat.Extension);
+                            string savePath = System.IO.Path.Combine(Constants.GetOutputDirectoryPath("Your Sample Document"), "MultipleOutFormats." + saveOptions.OutputFormat.Extension);
 
                             //8.3. Save to this path using save options
                             editor.Save(afterEdit, savePath, saveOptions);

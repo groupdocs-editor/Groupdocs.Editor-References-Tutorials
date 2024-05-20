@@ -25,7 +25,7 @@ namespace GroupDocs.Editor.Examples.CSharp.BasicUsage
         internal static void Run()
         {
             //Load some WordProcessing document somehow, as it is shown in LoadDocument.cs
-            string inputFilePath = Constants.SAMPLE_DOCX; //path to some document
+            string inputFilePath = "Your Sample Document"; //path to some document
             Editor editor1 = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 
             //Edit WordProcessing document with default options
@@ -48,7 +48,7 @@ namespace GroupDocs.Editor.Examples.CSharp.BasicUsage
 
 
             //Load another document, Spreadsheet at this time
-            Editor editor2 = new Editor(Constants.SAMPLE_XLSX, delegate { return new SpreadsheetLoadOptions();});
+            Editor editor2 = new Editor("Your Sample Document", delegate { return new SpreadsheetLoadOptions();});
 
             //Edit 1st tab of this Spreadsheet
             SpreadsheetEditOptions sheetTab1EditOptions = new SpreadsheetEditOptions();

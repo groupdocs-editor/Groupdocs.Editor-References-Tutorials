@@ -26,7 +26,7 @@ namespace GroupDocs.Editor.Examples.CSharp.AdvancedUsage
         internal static void Run()
         {
             //1. Get a path to the input file (or stream with file content). In this case it is sample DOCX with complex content and formatting
-            string inputFilePath = Constants.SAMPLE_DOCX;
+            string inputFilePath = "Your Sample Document";
 
             //2. Create stream from this path
             using (FileStream fs = File.OpenRead(inputFilePath))

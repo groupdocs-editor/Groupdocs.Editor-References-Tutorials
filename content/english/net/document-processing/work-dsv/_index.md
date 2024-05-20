@@ -27,7 +27,7 @@ namespace GroupDocs.Editor.Examples.CSharp.AdvancedUsage
         internal static void Run()
         {
             //1. Get a path to the input DSV file. In our case it is CSV
-            string inputFilePath = Constants.SAMPLE_CSV;
+            string inputFilePath = "Your Sample Document";
 
             //2. Create Editor instance (not load options required)
             using (Editor editor = new Editor(inputFilePath))

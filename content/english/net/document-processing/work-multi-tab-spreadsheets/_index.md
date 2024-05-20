@@ -25,7 +25,7 @@ namespace GroupDocs.Editor.Examples.CSharp.AdvancedUsage
         {
             //1. Get a path to the input file (or stream with file content).
             //In this case it is sample XLSX (OOXML) with two tabs.
-            string inputFilePath = Constants.SAMPLE_XLSX;
+            string inputFilePath = "Your Sample Document";
 
 
             //2. Load it into Editor instance from stream

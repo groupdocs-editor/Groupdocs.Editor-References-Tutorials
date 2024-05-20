@@ -23,7 +23,7 @@ namespace GroupDocs.Editor.Examples.CSharp.BasicUsage
         internal static void Run()
         {
 
-            string inputPath = Constants.SAMPLE_DOCX;
+            string inputPath = "Your Sample Document";
 
             //Load document as file via path and without load options
             Editor editor1 = new Editor(inputPath);
@@ -33,7 +33,7 @@ namespace GroupDocs.Editor.Examples.CSharp.BasicUsage
             wordLoadOptions.Password = "some password";
             Editor editor2 = new Editor(inputPath, delegate { return wordLoadOptions; });
 
-            FileStream inputStream = File.OpenRead(Constants.SAMPLE_XLSX);
+            FileStream inputStream = File.OpenRead("Your Sample Document");
 
             //Load document as content from byte stream and without load options
             Editor editor3 = new Editor(delegate { return inputStream; });

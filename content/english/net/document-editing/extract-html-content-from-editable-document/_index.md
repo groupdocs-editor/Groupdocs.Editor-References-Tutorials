@@ -20,7 +20,7 @@ namespace GroupDocs.Editor.Examples.CSharp.AdvancedUsage.EditableDocumentExample
     {
         internal static void Run()
         {
-            using (FileStream fs = File.OpenRead(Constants.SAMPLE_DOCX))
+            using (FileStream fs = File.OpenRead("Your Sample Document"))
             {
                 using (Editor editor = new Editor(delegate { return fs; }, delegate { return new WordProcessingLoadOptions(); }))
                 {

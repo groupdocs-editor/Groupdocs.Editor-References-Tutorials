@@ -24,7 +24,7 @@ namespace GroupDocs.Editor.Examples.CSharp.BasicUsage
         internal static void Run()
         {
             //Load and edit some document, like it was shown in LoadDocument.cs and EditDocument.cs
-            string inputFilePath = Constants.SAMPLE_DOCX;
+            string inputFilePath = "Your Sample Document";
             Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
             EditableDocument defaultWordProcessingDoc = editor.Edit();
 

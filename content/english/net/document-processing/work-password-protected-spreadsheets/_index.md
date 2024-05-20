@@ -27,7 +27,7 @@ namespace GroupDocs.Editor.Examples.CSharp.AdvancedUsage
         {
             //1. Get a path to the input file (or stream with file content).
             //In this case it is sample XLS (pre-OOXML) with one tab, and it is encoded with password. Let's try to open it.
-            string inputFilePath = Constants.SAMPLE_XLS_PROTECTED;
+            string inputFilePath = "Your Sample Document";
 
             //1.1. First of all let's try to open document without password at all
             Editor editor = new Editor(inputFilePath);

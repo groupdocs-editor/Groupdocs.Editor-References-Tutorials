@@ -36,7 +36,7 @@ namespace GroupDocs.Editor.Examples.CSharp.AdvancedUsage.EditableDocumentExample
              */
 
             //1. Lets create a EditableDocument instance in usual way, by loading and editing input document of some supportable format
-            string inputFilePath = Constants.SAMPLE_DOCX;
+            string inputFilePath = "Your Sample Document";
             Editor editor = new Editor(inputFilePath, delegate { return new WordProcessingLoadOptions();});
             EditableDocument beforeEdit = editor.Edit(new WordProcessingEditOptions());
 
