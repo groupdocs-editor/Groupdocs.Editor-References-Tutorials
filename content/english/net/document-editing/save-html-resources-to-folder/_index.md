@@ -25,7 +25,6 @@ using GroupDocs.Editor.HtmlCss.Resources.Fonts;
 using GroupDocs.Editor.HtmlCss.Resources.Images;
 using GroupDocs.Editor.HtmlCss.Resources.Textual;
 using GroupDocs.Editor.Options;
-using (Editor editor = new Editor("Your Sample Document", delegate { return new WordProcessingLoadOptions(); }))
 ```
 ##Now, let's break down the process of saving HTML resources to a folder using Groupdocs.Editor for .NET into multiple steps:
 ## Step 1: Initialize Groupdocs.Editor
