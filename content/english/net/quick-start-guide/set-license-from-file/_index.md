@@ -21,6 +21,7 @@ To get started with GroupDocs.Editor for .NET, you'll need to import the necessa
 ```csharp
 using System;
 using System.IO;
+using GroupDocs.Editor;
 ```
 These namespaces will allow you to perform various document editing tasks, such as loading, editing, and saving documents.
 ## Step 1: Install GroupDocs.Editor for .NET

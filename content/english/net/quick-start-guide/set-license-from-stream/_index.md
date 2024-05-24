@@ -20,6 +20,7 @@ To start using Groupdocs.Editor for .NET, you'll need to import the necessary na
 ```csharp
 using System;
 using System.IO;
+using GroupDocs.Editor;
 ```
 
 Setting up the license is the first critical step in using Groupdocs.Editor for .NET. Here’s a step-by-step guide to help you through the process:

@@ -21,7 +21,6 @@ In some scenarios, you might need to set the license from a stream instead of a 
 [Read more](./set-license-from-stream/)
 
 ## Set Metered License
-[Set Metered License](./set-metered-license/)
 
 For businesses and developers who prefer a pay-as-you-go model, setting a metered license in GroupDocs.Editor for .NET is the way to go. This tutorial will help you understand how to integrate and use a metered license, which can be beneficial for managing costs effectively based on usage. We’ll walk you through the entire process, from obtaining the metered license to implementing it in your application. Imagine it like having a subscription service that scales with your needs—flexible and cost-efficient. Dive into our guide to learn all about setting up a metered license.
 

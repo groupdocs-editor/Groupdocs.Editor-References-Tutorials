@@ -19,6 +19,7 @@ Before we jump into the technical details, make sure you have the following prer
 To use GroupDocs.Editor for .NET, you'll need to import the necessary namespaces in your project. This step is crucial as it sets up your project to utilize the library's functionalities.
 ```csharp
 using System;
+using GroupDocs.Editor;
 ```
 Let's break down each example into multiple steps to ensure you can follow along easily.
 ## Step 1: Install GroupDocs.Editor for .NET
