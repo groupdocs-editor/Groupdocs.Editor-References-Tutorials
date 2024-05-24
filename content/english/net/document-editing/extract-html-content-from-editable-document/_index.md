@@ -22,7 +22,6 @@ To get started, you need to import the necessary namespaces in your project. The
 using System;
 using System.IO;
 using GroupDocs.Editor.Options;
-	using (Editor editor = new Editor(delegate { return fs; }, delegate { return new WordProcessingLoadOptions(); }))
 ```
 ## Step 1: Create a FileStream for Your Document
 The first step is to create a `FileStream` object that opens the document you want to extract HTML content from. This stream will be used to read the document into the editor.
