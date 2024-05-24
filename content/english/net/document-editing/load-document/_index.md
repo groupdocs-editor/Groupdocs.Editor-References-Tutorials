@@ -13,7 +13,7 @@ Editing documents programmatically can be a daunting task, especially if you're 
 Before we dive in, make sure you have the following prerequisites set up:
 - Visual Studio: Ensure you have Visual Studio installed on your machine.
 - .NET Framework: GroupDocs.Editor for .NET supports .NET Framework 2.0 or later. Ensure your project is targeting a compatible framework.
-- GroupDocs.Editor for .NET: Download the latest version from the [official download page](https://releases.groupdocs.com/editor/net/).
+- GroupDocs.Editor for .NET: Download the latest version from the [download page](https://releases.groupdocs.com/editor/net/).
 - Basic Knowledge of C#: Familiarity with C# and .NET programming is necessary to follow along with this tutorial.
 ## Import Namespaces
 To begin using GroupDocs.Editor for .NET, you need to import the necessary namespaces into your project. Add the following using directives at the top of your C# file:
@@ -76,7 +76,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 Congratulations! You’ve successfully learned how to load documents using GroupDocs.Editor for .NET in various ways. Whether you’re dealing with local files, password-protected documents, or byte streams, GroupDocs.Editor provides a flexible and powerful solution for your document editing needs. Remember to always dispose of resources to ensure optimal performance and resource management in your applications.
 ## FAQ's
 ### What file formats are supported by GroupDocs.Editor for .NET?
-GroupDocs.Editor supports a wide range of file formats, including DOCX, XLSX, PPTX, HTML, and many more. For a full list, refer to the [official documentation](https://reference.groupdocs.com/editor/net/).
+GroupDocs.Editor supports a wide range of file formats, including DOCX, XLSX, PPTX, HTML, and many more. For a full list, refer to the [documentation](https://reference.groupdocs.com/editor/net/).
 ### How do I handle password-protected documents?
 You can use load options such as `WordProcessingLoadOptions` to specify the password when loading password-protected documents.
 ### Can I use GroupDocs.Editor in a web application?
