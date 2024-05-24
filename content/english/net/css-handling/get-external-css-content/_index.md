@@ -21,7 +21,6 @@ Before diving into the code examples, you need to import the necessary namespace
 using System;
 using System.Collections.Generic;
 using GroupDocs.Editor.Options;
-using (Editor editor = new Editor("Your Sample Document", delegate { return new WordProcessingLoadOptions(); }))
 ```
 Now that we have our prerequisites sorted and namespaces imported, let's break down the example code step-by-step.
 ## Step 1: Initialize the Editor
