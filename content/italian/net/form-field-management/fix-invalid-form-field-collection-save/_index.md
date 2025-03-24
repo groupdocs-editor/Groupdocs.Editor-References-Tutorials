@@ -3,7 +3,6 @@ title: Correggi la raccolta di campi modulo non validi e salva
 linktitle: Correggi la raccolta di campi modulo non validi e salva
 second_title: API GroupDocs.Editor .NET
 description: Scopri come correggere i campi modulo non validi in DOCX utilizzando Groupdocs.Editor per .NET. Segui questa guida per assicurarti che i tuoi documenti siano privi di errori e salvarli in modo sicuro.
-type: docs
 weight: 11
 url: /it/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## Conclusione
- E il gioco è fatto! Hai corretto con successo i campi del modulo non validi e salvato il documento utilizzando Groupdocs.Editor per .NET. Questa guida passo passo avrebbe dovuto rendere il processo chiaro e gestibile. Se riscontri problemi o hai domande, non esitare a controllare il[documentazione](https://reference.groupdocs.com/editor/net/) o contattare[supporto](https://forum.groupdocs.com/c/editor/20).
+ E il gioco è fatto! Hai corretto con successo i campi del modulo non validi e salvato il documento utilizzando Groupdocs.Editor per .NET. Questa guida passo passo avrebbe dovuto rendere il processo chiaro e gestibile. Se riscontri problemi o hai domande, non esitare a controllare il[documentazione](https://tutorials.groupdocs.com/editor/net/) o contattare[supporto](https://forum.groupdocs.com/c/editor/20).
 ## Domande frequenti
 ### Cosa succede se il mio documento è protetto da password?
  È possibile specificare la password nel file`WordProcessingLoadOptions` per aprire il documento.

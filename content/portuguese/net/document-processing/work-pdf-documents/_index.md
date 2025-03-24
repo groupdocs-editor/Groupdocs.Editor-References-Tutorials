@@ -3,7 +3,6 @@ title: Trabalhar com documentos PDF
 linktitle: Trabalhar com documentos PDF
 second_title: API GroupDocs.Editor .NET
 description: Aprenda como editar documentos PDF usando GroupDocs.Editor for .NET com este tutorial. Modifique conteúdo, lide com arquivos grandes e salve suas edições com segurança.
-type: docs
 weight: 14
 url: /pt/net/document-processing/work-pdf-documents/
 ---

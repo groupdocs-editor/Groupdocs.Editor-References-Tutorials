@@ -3,7 +3,6 @@ title: Tetapkan Lisensi dari Stream
 linktitle: Tetapkan Lisensi dari Stream
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara menggunakan Groupdocs.Editor untuk .NET untuk mengedit dokumen secara terprogram. Ikuti panduan komprehensif ini untuk integrasi yang lancar dan fitur-fitur canggih.
-type: docs
 weight: 11
 url: /id/net/quick-start-guide/set-license-from-stream/
 ---
@@ -146,7 +145,7 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 }
 ```
 ## Kesimpulan
- Groupdocs.Editor untuk .NET adalah alat serbaguna dan kuat yang dapat menyederhanakan proses pengeditan dokumen Anda secara signifikan. Dengan fitur-fitur canggih dan dukungan untuk berbagai format dokumen, mengintegrasikan perpustakaan ini ke dalam aplikasi .NET Anda pasti akan meningkatkan produktivitas dan kemampuan Anda. Jangan lupa untuk menjelajahinya[dokumentasi](https://reference.groupdocs.com/editor/net/) untuk informasi lebih rinci dan skenario penggunaan lanjutan.
+ Groupdocs.Editor untuk .NET adalah alat serbaguna dan kuat yang dapat menyederhanakan proses pengeditan dokumen Anda secara signifikan. Dengan fitur-fitur canggih dan dukungan untuk berbagai format dokumen, mengintegrasikan perpustakaan ini ke dalam aplikasi .NET Anda pasti akan meningkatkan produktivitas dan kemampuan Anda. Jangan lupa untuk menjelajahinya[dokumentasi](https://tutorials.groupdocs.com/editor/net/) untuk informasi lebih rinci dan skenario penggunaan lanjutan.
 ## FAQ
 ### Bisakah saya menggunakan Groupdocs.Editor untuk .NET tanpa lisensi?
  Tidak, Anda memerlukan lisensi yang valid untuk menggunakan Groupdocs.Editor untuk .NET. Namun, Anda dapat meminta a[izin sementara](https://purchase.groupdocs.com/temporary-license/) untuk evaluasi.
@@ -157,4 +156,4 @@ Ya, ini mendukung pengeditan file PDF bersama dengan berbagai format lain sepert
 ### Apakah mungkin untuk melindungi dokumen dengan kata sandi menggunakan Groupdocs.Editor?
 Ya, Anda dapat mengatur kata sandi dan opsi keamanan lainnya saat menyimpan dokumen.
 ### Format file apa yang didukung Groupdocs.Editor untuk .NET?
- Ini mendukung berbagai format, termasuk DOCX, XLSX, PDF, dan banyak lainnya. Mengacu kepada[dokumentasi](https://reference.groupdocs.com/editor/net/) untuk daftar lengkap.
+ Ini mendukung berbagai format, termasuk DOCX, XLSX, PDF, dan banyak lainnya. Mengacu kepada[dokumentasi](https://tutorials.groupdocs.com/editor/net/) untuk daftar lengkap.

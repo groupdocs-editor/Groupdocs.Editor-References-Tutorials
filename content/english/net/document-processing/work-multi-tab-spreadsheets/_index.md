@@ -3,7 +3,6 @@ title: Work with Multi-Tab Spreadsheets
 linktitle: Work with Multi-Tab Spreadsheets
 second_title: GroupDocs.Editor .NET API
 description: Learn how to work with multi-tab spreadsheets in .NET using GroupDocs.Editor. Step-by-step guide, code examples, and best practices included.
-type: docs
 weight: 17
 url: /net/document-processing/work-multi-tab-spreadsheets/
 ---

@@ -3,7 +3,6 @@ title: แยกข้อมูลเอกสาร
 linktitle: แยกข้อมูลเอกสาร
 second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีดึงข้อมูลเอกสารโดยใช้ GroupDocs.Editor สำหรับ .NET พร้อมบทช่วยสอนแบบละเอียดทีละขั้นตอนของเรา เหมาะสำหรับการจัดการเอกสารประเภทต่างๆ
-type: docs
 weight: 10
 url: /th/net/document-processing/extract-document-info/
 ---

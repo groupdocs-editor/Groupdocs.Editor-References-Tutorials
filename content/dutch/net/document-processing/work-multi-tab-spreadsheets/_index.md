@@ -3,7 +3,6 @@ title: Werken met spreadsheets met meerdere tabbladen
 linktitle: Werken met spreadsheets met meerdere tabbladen
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u kunt werken met spreadsheets met meerdere tabbladen in .NET met behulp van GroupDocs.Editor. Inclusief stapsgewijze handleiding, codevoorbeelden en best practices.
-type: docs
 weight: 17
 url: /nl/net/document-processing/work-multi-tab-spreadsheets/
 ---

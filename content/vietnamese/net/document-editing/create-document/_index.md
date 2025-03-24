@@ -3,7 +3,6 @@ title: Tạo tài liệu
 linktitle: Tạo tài liệu
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách chỉnh sửa tài liệu Word, Excel, PowerPoint, Ebook và Email bằng GroupDocs.Editor cho .NET với hướng dẫn từng bước toàn diện này.
-type: docs
 weight: 10
 url: /vi/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ Bạn có thể sử dụng chức năng gọi lại để lưu luồng tài li�
 ### Tôi có cần giấy phép để sử dụng GroupDocs.Editor cho .NET không?
  Có, bạn có thể lấy giấy phép từ[đây](https://purchase.groupdocs.com/buy). Ngoài ra còn có một tùy chọn cho giấy phép tạm thời.
 ### Tôi có thể tìm tài liệu chi tiết hơn ở đâu?
- Tài liệu chi tiết có sẵn trên[GroupDocs.Editor cho trang tài liệu .NET](https://reference.groupdocs.com/editor/net/).
+ Tài liệu chi tiết có sẵn trên[GroupDocs.Editor cho trang tài liệu .NET](https://tutorials.groupdocs.com/editor/net/).

@@ -3,7 +3,6 @@ title: Bekerja dengan Dokumen XML
 linktitle: Bekerja dengan Dokumen XML
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengedit dokumen XML secara efisien menggunakan GroupDocs.Editor untuk .NET dengan panduan langkah demi langkah kami, yang mencakup semua langkah dan opsi penting.
-type: docs
 weight: 20
 url: /id/net/document-processing/work-xml-documents/
 ---

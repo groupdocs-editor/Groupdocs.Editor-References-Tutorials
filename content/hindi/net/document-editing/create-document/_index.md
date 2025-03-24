@@ -3,7 +3,6 @@ title: दस्तावेज़ बनाएँ
 linktitle: दस्तावेज़ बनाएँ
 second_title: GroupDocs.Editor .NET एपीआई
 description: इस व्यापक चरण-दर-चरण ट्यूटोरियल के साथ .NET के लिए GroupDocs.Editor का उपयोग करके Word, Excel, PowerPoint, Ebook और ईमेल दस्तावेज़ों को संपादित करना सीखें।
-type: docs
 weight: 10
 url: /hi/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ System.Console.WriteLine("CreateDocument routine has successfully finished");
 ### क्या मुझे .NET के लिए GroupDocs.Editor का उपयोग करने के लिए लाइसेंस की आवश्यकता है?
  हां, आप यहां से लाइसेंस प्राप्त कर सकते हैं[यहाँ](https://purchase.groupdocs.com/buy)इसमें अस्थायी लाइसेंस का विकल्प भी है।
 ### मैं अधिक विस्तृत दस्तावेज कहां पा सकता हूं?
- विस्तृत दस्तावेज यहां उपलब्ध है[.NET प्रलेखन पृष्ठ के लिए GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ विस्तृत दस्तावेज यहां उपलब्ध है[.NET प्रलेखन पृष्ठ के लिए GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).

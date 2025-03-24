@@ -3,7 +3,6 @@ title: HTML tartalom visszakeresés
 linktitle: HTML tartalom visszakeresés
 second_title: GroupDocs.Editor .NET API
 description: Fedezze fel, hogyan tölthet le HTML-tartalmat a GroupDocs.Editor for .NET segítségével. Lépésről lépésre útmutatók a törzstartalom és az egyéni előtagok lekéréséhez.
-type: docs
 weight: 22
 url: /hu/net/html-content-retrieval/
 ---

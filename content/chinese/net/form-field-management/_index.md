@@ -3,7 +3,6 @@ title: 表单字段管理
 linktitle: 表单字段管理
 second_title: GroupDocs.Editor .NET API
 description: 使用 GroupDocs.Editor 掌握 .NET 中的表单字段管理。学习无缝编辑、修复、使用旧版和删除表单字段集合。
-type: docs
 weight: 23
 url: /zh/net/form-field-management/
 ---

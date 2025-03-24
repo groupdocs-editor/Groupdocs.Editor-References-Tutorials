@@ -3,7 +3,6 @@ title: حفظ المستند المحرر بتنسيقات مختلفة
 linktitle: حفظ المستند المحرر بتنسيقات مختلفة
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية حفظ المستندات التي تم تحريرها بتنسيقات مختلفة باستخدام GroupDocs.Editor لـ .NET في هذا الدليل الشامل خطوة بخطوة.
-type: docs
 weight: 11
 url: /ar/net/document-processing/save-edited-document-various-formats/
 ---
@@ -92,4 +91,4 @@ Console.WriteLine("SavingEditedDocumentToAllFormats routine has successfully fin
 ### كيف يمكنني الحصول على ترخيص مؤقت لـ GroupDocs.Editor؟
  يمكنك الحصول على ترخيص مؤقت[هنا](https://purchase.groupdocs.com/temporary-license/).
 ### أين يمكنني العثور على المزيد من الوثائق والدعم؟
- الوثائق التفصيلية متاحة[هنا](https://reference.groupdocs.com/editor/net/) ، ويمكنك الحصول على الدعم[هنا](https://forum.groupdocs.com/c/editor/20).
+ الوثائق التفصيلية متاحة[هنا](https://tutorials.groupdocs.com/editor/net/) ، ويمكنك الحصول على الدعم[هنا](https://forum.groupdocs.com/c/editor/20).

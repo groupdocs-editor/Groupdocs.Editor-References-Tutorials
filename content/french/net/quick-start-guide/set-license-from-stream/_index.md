@@ -3,7 +3,6 @@ title: Définir la licence à partir du flux
 linktitle: Définir la licence à partir du flux
 second_title: API GroupDocs.Editor .NET
 description: Découvrez comment utiliser Groupdocs.Editor for .NET pour modifier des documents par programmation. Suivez ce guide complet pour une intégration transparente et des fonctionnalités avancées.
-type: docs
 weight: 11
 url: /fr/net/quick-start-guide/set-license-from-stream/
 ---
@@ -146,7 +145,7 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 }
 ```
 ## Conclusion
- Groupdocs.Editor for .NET est un outil polyvalent et puissant qui peut rationaliser considérablement vos processus d'édition de documents. Avec ses fonctionnalités robustes et sa prise en charge de plusieurs formats de documents, l'intégration de cette bibliothèque dans vos applications .NET améliorera sans aucun doute votre productivité et vos capacités. N'oubliez pas d'explorer le[Documentation](https://reference.groupdocs.com/editor/net/) pour des informations plus détaillées et des scénarios d’utilisation avancés.
+ Groupdocs.Editor for .NET est un outil polyvalent et puissant qui peut rationaliser considérablement vos processus d'édition de documents. Avec ses fonctionnalités robustes et sa prise en charge de plusieurs formats de documents, l'intégration de cette bibliothèque dans vos applications .NET améliorera sans aucun doute votre productivité et vos capacités. N'oubliez pas d'explorer le[Documentation](https://tutorials.groupdocs.com/editor/net/) pour des informations plus détaillées et des scénarios d’utilisation avancés.
 ## FAQ
 ### Puis-je utiliser Groupdocs.Editor pour .NET sans licence ?
  Non, vous avez besoin d'une licence valide pour utiliser Groupdocs.Editor pour .NET. Cependant, vous pouvez demander un[permis temporaire](https://purchase.groupdocs.com/temporary-license/) pour évaluation.
@@ -157,4 +156,4 @@ Oui, il prend en charge l'édition de fichiers PDF ainsi que divers autres forma
 ### Est-il possible de protéger des documents par mot de passe à l'aide de Groupdocs.Editor ?
 Oui, vous pouvez définir des mots de passe et d'autres options de sécurité lors de l'enregistrement de documents.
 ### Quels formats de fichiers Groupdocs.Editor pour .NET prend-il en charge ?
- Il prend en charge un large éventail de formats, notamment DOCX, XLSX, PDF et bien d'autres. Se référer au[Documentation](https://reference.groupdocs.com/editor/net/) pour une liste complète.
+ Il prend en charge un large éventail de formats, notamment DOCX, XLSX, PDF et bien d'autres. Se référer au[Documentation](https://tutorials.groupdocs.com/editor/net/) pour une liste complète.

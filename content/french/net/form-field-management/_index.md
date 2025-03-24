@@ -3,7 +3,6 @@ title: Gestion des champs de formulaire
 linktitle: Gestion des champs de formulaire
 second_title: API GroupDocs.Editor .NET
 description: Maîtrisez la gestion des champs de formulaire dans .NET avec GroupDocs.Editor. Apprenez à modifier, corriger, utiliser les anciennes collections et supprimer des collections de champs de formulaire de manière transparente.
-type: docs
 weight: 23
 url: /fr/net/form-field-management/
 ---

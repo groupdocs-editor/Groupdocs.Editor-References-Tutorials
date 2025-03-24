@@ -3,7 +3,6 @@ title: Wprowadzenie do GroupDocs.Editor dla .NET
 linktitle: Wprowadzenie do GroupDocs.Editor dla .NET
 second_title: Edytor GroupDocs.NET API
 description: Dzięki temu szczegółowemu przewodnikowi krok po kroku dowiesz się, jak używać programu GroupDocs.Editor dla platformy .NET do programowej edycji dokumentów.
-type: docs
 weight: 12
 url: /pl/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ GroupDocs.Editor dla .NET obsługuje różne formaty, w tym między innymi DOCX,
 ### Czy można zintegrować GroupDocs.Editor z magazynem w chmurze?
 Tak, możesz zintegrować GroupDocs.Editor z różnymi rozwiązaniami do przechowywania w chmurze, aby zarządzać swoimi dokumentami.
 ### Gdzie mogę znaleźć dokumentację GroupDocs.Editor dla .NET?
-Dokumentacja jest dostępna[Tutaj](https://reference.groupdocs.com/editor/net/).
+Dokumentacja jest dostępna[Tutaj](https://tutorials.groupdocs.com/editor/net/).

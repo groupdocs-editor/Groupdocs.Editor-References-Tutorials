@@ -3,7 +3,6 @@ title: Inleiding tot GroupDocs.Editor voor .NET
 linktitle: Inleiding tot GroupDocs.Editor voor .NET
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u GroupDocs.Editor voor .NET kunt gebruiken om documenten programmatisch te bewerken met deze gedetailleerde stapsgewijze handleiding.
-type: docs
 weight: 12
 url: /nl/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ GroupDocs.Editor voor .NET ondersteunt verschillende formaten, waaronder onder a
 ### Is het mogelijk om GroupDocs.Editor te integreren met cloudopslag?
 Ja, u kunt GroupDocs.Editor integreren met verschillende cloudopslagoplossingen om uw documenten te beheren.
 ### Waar kan ik de documentatie voor GroupDocs.Editor voor .NET vinden?
-De documentatie is beschikbaar[hier](https://reference.groupdocs.com/editor/net/).
+De documentatie is beschikbaar[hier](https://tutorials.groupdocs.com/editor/net/).

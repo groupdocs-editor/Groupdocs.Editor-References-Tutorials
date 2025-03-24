@@ -3,7 +3,6 @@ title: ดึงเนื้อหา HTML ด้วยคำนำหน้า
 linktitle: ดึงเนื้อหา HTML ด้วยคำนำหน้า
 second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีดึงเนื้อหา HTML จากเอกสารโดยใช้ GroupDocs.Editor สำหรับ .NET พร้อมคำนำหน้าแบบกำหนดเองสำหรับรูปภาพและสไตล์ชีต รวมคำแนะนำทีละขั้นตอน
-type: docs
 weight: 11
 url: /th/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 ข้อมูลโค้ดนี้จะดึงเนื้อหา HTML พร้อมคำนำหน้าที่กำหนดเองและพิมพ์ลงในคอนโซล คุณสามารถประมวลผลหรือบันทึกเนื้อหา HTML นี้เพิ่มเติมได้ตามต้องการ
 ## บทสรุป
 และคุณก็ได้แล้ว! เมื่อทำตามขั้นตอนเหล่านี้ คุณจะสามารถดึงเนื้อหา HTML จากเอกสารได้อย่างง่ายดายโดยใช้ GroupDocs.Editor สำหรับ .NET พร้อมด้วยคำนำหน้าแบบกำหนดเองสำหรับรูปภาพและสไตล์ชีต เครื่องมืออันทรงพลังนี้ทำให้การจัดการเอกสารง่ายขึ้น ช่วยให้คุณมุ่งเน้นที่การรวมการแก้ไขเอกสารเข้ากับแอปพลิเคชัน .NET ของคุณได้อย่างราบรื่น
- สำหรับข้อมูลโดยละเอียดเพิ่มเติม โปรดดูที่[GroupDocs.Editor สำหรับเอกสาร .NET](https://reference.groupdocs.com/editor/net/) - หากคุณมีคำถามหรือต้องการความช่วยเหลือเพิ่มเติม โปรดติดต่อได้ที่[ฟอรั่มการสนับสนุน](https://forum.groupdocs.com/c/editor/20).
+ สำหรับข้อมูลโดยละเอียดเพิ่มเติม โปรดดูที่[GroupDocs.Editor สำหรับเอกสาร .NET](https://tutorials.groupdocs.com/editor/net/) - หากคุณมีคำถามหรือต้องการความช่วยเหลือเพิ่มเติม โปรดติดต่อได้ที่[ฟอรั่มการสนับสนุน](https://forum.groupdocs.com/c/editor/20).
 ## คำถามที่พบบ่อย
 ### ฉันสามารถแก้ไขเอกสารประเภทใดด้วย GroupDocs.Editor สำหรับ .NET ได้บ้าง
 GroupDocs.Editor รองรับรูปแบบเอกสารที่หลากหลาย รวมถึง Word, Excel, PowerPoint, PDF และอื่นๆ

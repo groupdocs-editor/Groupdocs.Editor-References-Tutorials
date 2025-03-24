@@ -3,7 +3,6 @@ title: 문서 형식 작업
 linktitle: 문서 형식 작업
 second_title: GroupDocs.Editor .NET API
 description: .NET용 GroupDocs.Editor를 사용하여 다양한 문서 형식을 프로그래밍 방식으로 편집하는 방법을 알아보세요. 원활한 통합을 위한 예시가 포함된 단계별 가이드입니다.
-type: docs
 weight: 13
 url: /ko/net/document-processing/work-document-formats/
 ---
@@ -159,4 +158,4 @@ GroupDocs.Editor는 특히 워드 프로세싱, 스프레드시트, 프리젠테
 ### GroupDocs.Editor를 무료로 사용할 수 있나요?
  당신은 사용할 수 있습니다[무료 시험판](https://releases.groupdocs.com/) 제한된 기능을 사용하거나[임시면허](https://purchase.groupdocs.com/temporary-license/) 전체 액세스를 위해.
 ### 더 많은 리소스와 지원을 어디서 찾을 수 있나요?
- 방문하다[GroupDocs.Editor 문서](https://reference.groupdocs.com/editor/net/) 자세한 내용을 알아보거나 해당 사이트를 확인하세요.[지원 포럼](https://forum.groupdocs.com/c/editor/20) 도와주기 위해.
+ 방문하다[GroupDocs.Editor 문서](https://tutorials.groupdocs.com/editor/net/) 자세한 내용을 알아보거나 해당 사이트를 확인하세요.[지원 포럼](https://forum.groupdocs.com/c/editor/20) 도와주기 위해.

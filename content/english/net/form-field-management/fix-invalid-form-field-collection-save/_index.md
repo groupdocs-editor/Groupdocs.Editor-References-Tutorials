@@ -3,7 +3,6 @@ title: Fix Invalid Form Field Collection and Save
 linktitle: Fix Invalid Form Field Collection and Save
 second_title: GroupDocs.Editor .NET API
 description: Learn how to fix invalid form fields in DOCX using Groupdocs.Editor for .NET. Follow this guide to ensure your documents are error-free and save them securely.
-type: docs
 weight: 11
 url: /net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## Conclusion
-And there you have it! You've successfully fixed invalid form fields and saved your document using Groupdocs.Editor for .NET. This step-by-step guide should have made the process clear and manageable. If you run into any issues or have questions, feel free to check the [documentation](https://reference.groupdocs.com/editor/net/) or reach out to [support](https://forum.groupdocs.com/c/editor/20).
+And there you have it! You've successfully fixed invalid form fields and saved your document using Groupdocs.Editor for .NET. This step-by-step guide should have made the process clear and manageable. If you run into any issues or have questions, feel free to check the [documentation](https://tutorials.groupdocs.com/editor/net/) or reach out to [support](https://forum.groupdocs.com/c/editor/20).
 ## FAQ's
 ### What if my document is password-protected?
 You can specify the password in the `WordProcessingLoadOptions` to open the document.

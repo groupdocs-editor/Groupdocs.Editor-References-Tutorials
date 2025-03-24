@@ -3,7 +3,6 @@ title: Truy xuất nội dung HTML
 linktitle: Truy xuất nội dung HTML
 second_title: API GroupDocs.Editor .NET
 description: Truy xuất nội dung HTML bằng GroupDocs.Editor cho .NET với hướng dẫn từng bước của chúng tôi. Nâng cao các ứng dụng .NET của bạn một cách dễ dàng.
-type: docs
 weight: 10
 url: /vi/net/html-content-retrieval/retrieve-html-body-content/
 ---
@@ -62,4 +61,4 @@ GroupDocs.Editor hỗ trợ nhiều định dạng tệp bao gồm tài liệu W
 ### Tôi có thể sử dụng GroupDocs.Editor với .NET Core không?
 Có, GroupDocs.Editor tương thích với .NET Core, mang lại sự linh hoạt cho việc phát triển ứng dụng hiện đại.
 ### Tôi có thể tìm thêm ví dụ và tài liệu về GroupDocs.Editor ở đâu?
- Bạn có thể tìm thêm ví dụ và tài liệu chi tiết về[Trang tài liệu GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ Bạn có thể tìm thêm ví dụ và tài liệu chi tiết về[Trang tài liệu GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).

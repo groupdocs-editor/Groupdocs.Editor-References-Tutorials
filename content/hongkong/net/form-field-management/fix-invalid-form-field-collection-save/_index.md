@@ -3,7 +3,6 @@ title: 修復無效的表單欄位集合並儲存
 linktitle: 修復無效的表單欄位集合並儲存
 second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 Groupdocs.Editor for .NET 修復 DOCX 中的無效表單欄位。請遵循本指南，確保您的文件沒有錯誤並安全保存。
-type: docs
 weight: 11
 url: /zh-hant/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## 結論
-現在你就得到它了！您已成功修復無效的表單欄位並使用 Groupdocs.Editor for .NET 儲存了文件。這個逐步指南應該會使整個過程變得清晰且易於管理。如果您遇到任何問題或有疑問，請隨時查看[文件](https://reference.groupdocs.com/editor/net/)或聯繫[支援](https://forum.groupdocs.com/c/editor/20).
+現在你就得到它了！您已成功修復無效的表單欄位並使用 Groupdocs.Editor for .NET 儲存了文件。這個逐步指南應該會使整個過程變得清晰且易於管理。如果您遇到任何問題或有疑問，請隨時查看[文件](https://tutorials.groupdocs.com/editor/net/)或聯繫[支援](https://forum.groupdocs.com/c/editor/20).
 ## 常見問題解答
 ### 如果我的文件受密碼保護怎麼辦？
 您可以在中指定密碼`WordProcessingLoadOptions`開啟文檔。

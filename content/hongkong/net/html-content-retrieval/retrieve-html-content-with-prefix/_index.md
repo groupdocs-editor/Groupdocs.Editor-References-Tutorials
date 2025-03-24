@@ -3,7 +3,6 @@ title: 檢索帶有前綴的 HTML 內容
 linktitle: 檢索帶有前綴的 HTML 內容
 second_title: GroupDocs.Editor .NET API
 description: 了解如何使用適用於 .NET 的 GroupDocs.Editor 以及圖像和樣式表的自訂前綴從文件中擷取 HTML 內容。包括逐步指南。
-type: docs
 weight: 11
 url: /zh-hant/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 此程式碼片段使用自訂前綴來取得 HTML 內容並將其列印到控制台。您可以根據需要進一步處理或儲存此 HTML 內容。
 ## 結論
 現在你就得到它了！透過執行這些步驟，您可以使用 GroupDocs.Editor for .NET 輕鬆地從文件中擷取 HTML 內容，並提供圖片和樣式表的自訂前綴。這個強大的工具簡化了文件操作，使您能夠專注於將文件編輯無縫整合到 .NET 應用程式中。
-欲了解更多詳細信息，請查看[用於 .NET 文件的 GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) 。如果您有任何疑問或需要進一步協助，請隨時聯繫[支援論壇](https://forum.groupdocs.com/c/editor/20).
+欲了解更多詳細信息，請查看[用於 .NET 文件的 GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) 。如果您有任何疑問或需要進一步協助，請隨時聯繫[支援論壇](https://forum.groupdocs.com/c/editor/20).
 ## 常見問題解答
 ### 我可以使用 GroupDocs.Editor for .NET 編輯哪些類型的文件？
 GroupDocs.Editor 支援多種文件格式，包括 Word、Excel、PowerPoint、PDF 等。

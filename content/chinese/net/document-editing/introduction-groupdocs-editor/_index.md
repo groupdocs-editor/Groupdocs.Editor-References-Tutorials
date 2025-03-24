@@ -3,7 +3,6 @@ title: GroupDocs.Editor for .NET 简介
 linktitle: GroupDocs.Editor for .NET 简介
 second_title: GroupDocs.Editor .NET API
 description: 通过本详细的分步指南了解如何使用 GroupDocs.Editor for .NET 以编程方式编辑文档。
-type: docs
 weight: 12
 url: /zh/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ GroupDocs.Editor for .NET 支持多种格式，包括 DOCX、PDF、HTML 和 RTF 
 ### 是否可以将 GroupDocs.Editor 与云存储集成？
 是的，您可以将 GroupDocs.Editor 与各种云存储解决方案集成来管理您的文档。
 ### 在哪里可以找到 .NET 的 GroupDocs.Editor 文档？
-文档可用[这里](https://reference.groupdocs.com/editor/net/).
+文档可用[这里](https://tutorials.groupdocs.com/editor/net/).

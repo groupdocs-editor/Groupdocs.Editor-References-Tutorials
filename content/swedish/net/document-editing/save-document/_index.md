@@ -3,7 +3,6 @@ title: Spara dokument
 linktitle: Spara dokument
 second_title: GroupDocs.Editor .NET API
 description: Redigera och spara dokument enkelt med GroupDocs.Editor för .NET. Denna steg-för-steg-guide förenklar processen för utvecklare.
-type: docs
 weight: 14
 url: /sv/net/document-editing/save-document/
 ---
@@ -80,7 +79,7 @@ Genom att följa dessa steg kan du effektivt ladda, redigera och spara dokument 
 Att redigera och spara dokument programmatiskt har aldrig varit enklare med GroupDocs.Editor för .NET. Den här guiden ledde dig genom hela processen, från att ladda ett dokument till att spara det i olika format. Med GroupDocs.Editor har du en mångsidig och robust lösning till hands, vilket förenklar dokumentredigeringsprocessen.
 ## FAQ's
 ### Vilka filformat stöder GroupDocs.Editor?
-GroupDocs.Editor stöder olika filformat, inklusive DOCX, RTF, TXT och många fler. För en fullständig lista, kolla in[dokumentation](https://reference.groupdocs.com/editor/net/).
+GroupDocs.Editor stöder olika filformat, inklusive DOCX, RTF, TXT och många fler. För en fullständig lista, kolla in[dokumentation](https://tutorials.groupdocs.com/editor/net/).
 ### Kan jag prova GroupDocs.Editor innan jag köper?
  Ja, du kan få en[gratis provperiod](https://releases.groupdocs.com/) för att testa funktionerna i GroupDocs.Editor.
 ### Finns det någon support tillgänglig om jag stöter på problem?

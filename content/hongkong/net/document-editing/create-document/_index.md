@@ -3,7 +3,6 @@ title: 建立文檔
 linktitle: 建立文檔
 second_title: GroupDocs.Editor .NET API
 description: 透過這個全面的逐步教學，了解如何使用 GroupDocs.Editor for .NET 編輯 Word、Excel、PowerPoint、電子書和電子郵件文件。
-type: docs
 weight: 10
 url: /zh-hant/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ GroupDocs.Editor for .NET 是一個多功能且功能強大的工具，可以簡
 ### 我需要許可證才能使用 GroupDocs.Editor for .NET 嗎？
 是的，您可以從以下位置取得許可證[這裡](https://purchase.groupdocs.com/buy)。還有一個臨時許可證的選項。
 ### 在哪裡可以找到更詳細的文件？
-詳細文件可在[.NET 文件頁面的 GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+詳細文件可在[.NET 文件頁面的 GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).

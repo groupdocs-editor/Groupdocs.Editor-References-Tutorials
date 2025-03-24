@@ -3,7 +3,6 @@ title: Reparar la colección de campos de formulario no válidos y guardar
 linktitle: Reparar la colección de campos de formulario no válidos y guardar
 second_title: API GroupDocs.Editor .NET
 description: Aprenda cómo corregir campos de formulario no válidos en DOCX usando Groupdocs.Editor para .NET. Siga esta guía para asegurarse de que sus documentos estén libres de errores y guárdelos de forma segura.
-type: docs
 weight: 11
 url: /es/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## Conclusión
- ¡Y ahí lo tienes! Ha corregido con éxito campos de formulario no válidos y ha guardado su documento usando Groupdocs.Editor para .NET. Esta guía paso a paso debería haber dejado el proceso claro y manejable. Si tiene algún problema o tiene preguntas, no dude en consultar el[documentación](https://reference.groupdocs.com/editor/net/) o comuníquese con[apoyo](https://forum.groupdocs.com/c/editor/20).
+ ¡Y ahí lo tienes! Ha corregido con éxito campos de formulario no válidos y ha guardado su documento usando Groupdocs.Editor para .NET. Esta guía paso a paso debería haber dejado el proceso claro y manejable. Si tiene algún problema o tiene preguntas, no dude en consultar el[documentación](https://tutorials.groupdocs.com/editor/net/) o comuníquese con[apoyo](https://forum.groupdocs.com/c/editor/20).
 ## Preguntas frecuentes
 ### ¿Qué pasa si mi documento está protegido con contraseña?
  Puede especificar la contraseña en el`WordProcessingLoadOptions` para abrir el documento.

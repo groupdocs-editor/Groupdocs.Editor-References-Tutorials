@@ -3,7 +3,6 @@ title: Muat Dokumen
 linktitle: Muat Dokumen
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengedit dokumen secara terprogram dengan GroupDocs.Editor untuk .NET. Panduan langkah demi langkah untuk memuat dokumen, menangani file yang dilindungi kata sandi, dan banyak lagi.
-type: docs
 weight: 13
 url: /id/net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 Selamat! Anda telah berhasil mempelajari cara memuat dokumen menggunakan GroupDocs.Editor untuk .NET dengan berbagai cara. Baik Anda berurusan dengan file lokal, dokumen yang dilindungi kata sandi, atau aliran byte, GroupDocs.Editor memberikan solusi yang fleksibel dan kuat untuk kebutuhan pengeditan dokumen Anda. Ingatlah untuk selalu membuang sumber daya untuk memastikan kinerja optimal dan pengelolaan sumber daya dalam aplikasi Anda.
 ## FAQ
 ### Format file apa yang didukung oleh GroupDocs.Editor untuk .NET?
- GroupDocs.Editor mendukung berbagai format file, termasuk DOCX, XLSX, PPTX, HTML, dan banyak lagi. Untuk daftar lengkap, lihat[dokumentasi](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor mendukung berbagai format file, termasuk DOCX, XLSX, PPTX, HTML, dan banyak lagi. Untuk daftar lengkap, lihat[dokumentasi](https://tutorials.groupdocs.com/editor/net/).
 ### Bagaimana cara menangani dokumen yang dilindungi kata sandi?
  Anda dapat menggunakan opsi pemuatan seperti`WordProcessingLoadOptions` untuk menentukan kata sandi saat memuat dokumen yang dilindungi kata sandi.
 ### Bisakah saya menggunakan GroupDocs.Editor dalam aplikasi web?

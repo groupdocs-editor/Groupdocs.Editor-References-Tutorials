@@ -3,7 +3,6 @@ title: 측정 라이센스 설정
 linktitle: 측정 라이센스 설정
 second_title: GroupDocs.Editor .NET API
 description: 포괄적인 가이드를 통해 .NET용 GroupDocs.Editor를 통합하고 사용하는 방법을 알아보세요. .NET 애플리케이션 내에서 강력한 문서 편집 기능을 활용하세요.
-type: docs
 weight: 12
 url: /ko/net/quick-start-guide/set-metered-license/
 ---
@@ -69,15 +68,15 @@ editor.Save(editableDocument, "updated_sample.docx");
 Console.WriteLine("Document saved successfully.");
 ```
 ## 결론
- 축하해요! 응용 프로그램에 .NET용 GroupDocs.Editor를 성공적으로 통합하고 사용했습니다. 라이브러리 설치부터 정액 라이선스 설정, 문서 편집까지 모든 필수 단계를 다루었습니다. 이 강력한 도구는 .NET 애플리케이션 내에서 문서 편집 작업 흐름을 크게 간소화할 수 있습니다. 자세한 내용은 다음을 참조하세요.[.NET 문서용 GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ 축하해요! 응용 프로그램에 .NET용 GroupDocs.Editor를 성공적으로 통합하고 사용했습니다. 라이브러리 설치부터 정액 라이선스 설정, 문서 편집까지 모든 필수 단계를 다루었습니다. 이 강력한 도구는 .NET 애플리케이션 내에서 문서 편집 작업 흐름을 크게 간소화할 수 있습니다. 자세한 내용은 다음을 참조하세요.[.NET 문서용 GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).
 ## FAQ
 ### GroupDocs.Editor 라이센스를 얻으려면 어떻게 해야 합니까?
  에서 라이센스를 취득하실 수 있습니다.[GroupDocs 구매 페이지](https://purchase.groupdocs.com/buy) . 임시 라이센스를 받으려면 다음을 방문하세요.[여기](https://purchase.groupdocs.com/temporary-license/).
 ### GroupDocs.Editor를 무료로 사용해 볼 수 있나요?
  예, 다음에서 무료 평가판을 다운로드할 수 있습니다.[다운로드 페이지](https://releases.groupdocs.com/) 임시 라이센스를 요청하세요.
 ### GroupDocs.Editor는 어떤 문서 형식을 지원합니까?
- GroupDocs.Editor는 DOCX, PPTX, XLSX, TXT, HTML 등을 포함한 다양한 형식을 지원합니다. 전체 목록을 보려면 다음을 확인하세요.[선적 서류 비치](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor는 DOCX, PPTX, XLSX, TXT, HTML 등을 포함한 다양한 형식을 지원합니다. 전체 목록을 보려면 다음을 확인하세요.[선적 서류 비치](https://tutorials.groupdocs.com/editor/net/).
 ### GroupDocs.Editor에 사용할 수 있는 커뮤니티 지원이 있습니까?
  예, 다음으로부터 커뮤니티 지원을 받을 수 있습니다.[GroupDocs.Editor 포럼](https://forum.groupdocs.com/c/editor/20).
 ### .NET용 GroupDocs.Editor를 시작하려면 어떻게 해야 합니까?
- 단계별 가이드에 따라 라이브러리를 설정하고 라이센스를 취득하고 문서 편집을 시작하세요. 자세한 지침을 보려면 다음을 방문하세요.[선적 서류 비치](https://reference.groupdocs.com/editor/net/).
+ 단계별 가이드에 따라 라이브러리를 설정하고 라이센스를 취득하고 문서 편집을 시작하세요. 자세한 지침을 보려면 다음을 방문하세요.[선적 서류 비치](https://tutorials.groupdocs.com/editor/net/).

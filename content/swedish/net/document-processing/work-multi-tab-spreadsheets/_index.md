@@ -3,7 +3,6 @@ title: Arbeta med kalkylblad med flera flikar
 linktitle: Arbeta med kalkylblad med flera flikar
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du arbetar med kalkylblad med flera flikar i .NET med GroupDocs.Editor. Steg-för-steg-guide, kodexempel och bästa praxis ingår.
-type: docs
 weight: 17
 url: /sv/net/document-processing/work-multi-tab-spreadsheets/
 ---

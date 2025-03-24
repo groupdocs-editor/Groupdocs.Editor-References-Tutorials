@@ -3,7 +3,6 @@ title: CSS-tartalom kezelése előtaggal
 linktitle: CSS-tartalom kezelése előtaggal
 second_title: GroupDocs.Editor .NET API
 description: Ebben a részletes, lépésenkénti oktatóanyagban megtudhatja, hogyan kezelheti az előtaggal ellátott CSS-tartalmakat a Groupdocs.Editor for .NET használatával. Tökéletes minden szintű fejlesztő számára.
-type: docs
 weight: 11
 url: /hu/net/css-handling/handle-css-content-with-prefix/
 ---
@@ -66,6 +65,6 @@ Igen, a Groupdocs.Editor for .NET különféle dokumentumformátumokat támogat,
 ### Hogyan szerezhetek ideiglenes licencet a Groupdocs.Editor for .NET számára?
  Kaphat ideiglenes engedélyt[itt](https://purchase.groupdocs.com/temporary-license/).
 ### Hol találom a Groupdocs.Editor for .NET részletes dokumentációját?
- A részletes dokumentáció elérhető[itt](https://reference.groupdocs.com/editor/net/).
+ A részletes dokumentáció elérhető[itt](https://tutorials.groupdocs.com/editor/net/).
 ### Milyen támogatási lehetőségek állnak rendelkezésre a Groupdocs.Editor for .NET számára?
  Támogatást kaphat[itt](https://forum.groupdocs.com/c/editor/20).

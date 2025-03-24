@@ -3,7 +3,6 @@ title: Lavora con la raccolta di campi modulo legacy
 linktitle: Lavora con la raccolta di campi modulo legacy
 second_title: API GroupDocs.Editor .NET
 description: Scopri come gestire i campi del modulo legacy utilizzando GroupDocs.Editor per .NET con la nostra guida dettagliata. Perfetto per gestire campi di testo, caselle di controllo, date e altro.
-type: docs
 weight: 12
 url: /it/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## Passaggio 8: conclusione
 Seguendo questi passaggi, puoi gestire e interagire in modo efficace con i campi modulo legacy nei tuoi documenti utilizzando GroupDocs.Editor per .NET. Che si tratti di campi di testo, caselle di controllo, date, numeri o menu a discesa, questa guida fornisce un modo chiaro e conciso per gestire ogni tipo.
 ## Conclusione
- Lavorare con i campi modulo legacy nei documenti può essere semplice se si utilizzano gli strumenti giusti. GroupDocs.Editor per .NET fornisce una soluzione solida per gestire questi campi in modo efficiente. Seguendo questa guida passo passo, ora dovresti essere in grado di manipolare facilmente vari campi modulo nei tuoi documenti. Non dimenticare di esplorare il[documentazione](https://reference.groupdocs.com/editor/net/)per funzionalità e opzioni più avanzate.
+ Lavorare con i campi modulo legacy nei documenti può essere semplice se si utilizzano gli strumenti giusti. GroupDocs.Editor per .NET fornisce una soluzione solida per gestire questi campi in modo efficiente. Seguendo questa guida passo passo, ora dovresti essere in grado di manipolare facilmente vari campi modulo nei tuoi documenti. Non dimenticare di esplorare il[documentazione](https://tutorials.groupdocs.com/editor/net/)per funzionalità e opzioni più avanzate.
 ## Domande frequenti
 ### 1. Posso utilizzare GroupDocs.Editor for .NET con documenti protetti da password?
 Sì, puoi specificare la password nelle opzioni di caricamento per gestire i documenti protetti da password.
@@ -104,4 +103,4 @@ Sì, puoi specificare la password nelle opzioni di caricamento per gestire i doc
 ### 4. Posso acquistare una licenza per GroupDocs.Editor per .NET?
  Sì, puoi acquistare una licenza da[Qui](https://purchase.groupdocs.com/buy).
 ### 5. Dove posso trovare la documentazione per GroupDocs.Editor per .NET?
-La documentazione è disponibile[Qui](https://reference.groupdocs.com/editor/net/).
+La documentazione è disponibile[Qui](https://tutorials.groupdocs.com/editor/net/).

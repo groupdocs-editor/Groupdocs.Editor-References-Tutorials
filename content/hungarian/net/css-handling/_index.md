@@ -3,7 +3,6 @@ title: CSS kezelés
 linktitle: CSS kezelés
 second_title: GroupDocs.Editor .NET API
 description: Tanulja meg a CSS-tartalom hatékony kezelését a GroupDocs.Editor for .NET segítségével. Csomagolja ki a külső CSS-tartalmat, és könnyedén kezelje a CSS-tartalmat előtagokkal.
-type: docs
 weight: 21
 url: /hu/net/css-handling/
 ---

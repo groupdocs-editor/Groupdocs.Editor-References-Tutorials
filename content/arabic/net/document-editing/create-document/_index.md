@@ -3,7 +3,6 @@ title: إنشاء مستند
 linktitle: إنشاء مستند
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية تحرير مستندات Word وExcel وPowerPoint والكتب الإلكترونية والبريد الإلكتروني باستخدام GroupDocs.Editor لـ .NET باستخدام هذا البرنامج التعليمي الشامل خطوة بخطوة.
-type: docs
 weight: 10
 url: /ar/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ System.Console.WriteLine("CreateDocument routine has successfully finished");
 ### هل أحتاج إلى ترخيص لاستخدام GroupDocs.Editor لـ .NET؟
  نعم يمكنك الحصول على ترخيص من[هنا](https://purchase.groupdocs.com/buy). هناك أيضًا خيار للحصول على ترخيص مؤقت.
 ### أين يمكنني العثور على وثائق أكثر تفصيلا؟
- الوثائق التفصيلية متاحة على[GroupDocs.Editor لصفحة وثائق .NET](https://reference.groupdocs.com/editor/net/).
+ الوثائق التفصيلية متاحة على[GroupDocs.Editor لصفحة وثائق .NET](https://tutorials.groupdocs.com/editor/net/).

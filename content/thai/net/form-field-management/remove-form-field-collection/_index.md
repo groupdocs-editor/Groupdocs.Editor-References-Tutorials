@@ -3,7 +3,6 @@ title: ลบคอลเลกชันฟิลด์แบบฟอร์ม
 linktitle: ลบคอลเลกชันฟิลด์แบบฟอร์ม
 second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีลบฟิลด์แบบฟอร์มออกจากเอกสาร Word โดยใช้ GroupDocs.Editor สำหรับ .NET พร้อมคำแนะนำทีละขั้นตอนนี้ เหมาะสำหรับนักพัฒนา
-type: docs
 weight: 13
 url: /th/net/form-field-management/remove-form-field-collection/
 ---

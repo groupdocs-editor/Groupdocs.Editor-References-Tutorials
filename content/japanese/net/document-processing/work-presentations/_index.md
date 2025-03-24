@@ -3,7 +3,6 @@ title: プレゼンテーションの操作
 linktitle: プレゼンテーションの操作
 second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用して PowerPoint プレゼンテーションを編集する方法を学びます。このステップ バイ ステップ ガイドに従って、ドキュメント編集プロセスを効率化します。
-type: docs
 weight: 16
 url: /ja/net/document-processing/work-presentations/
 ---
@@ -132,4 +131,4 @@ GroupDocs.Editor は、PPTX、PPTM など、さまざまな形式をサポート
 ### GroupDocs.Editor for .NET を Web アプリケーションで使用できますか?
 はい、GroupDocs.Editor for .NET を Web アプリケーションに統合して、ドキュメント編集機能を提供できます。
 ### より詳細なドキュメントとサポートはどこで見つかりますか?
-詳細なドキュメントは以下をご覧ください[ここ](https://reference.groupdocs.com/editor/net/)サポートについては、[サポートフォーラム](https://forum.groupdocs.com/c/editor/20).
+詳細なドキュメントは以下をご覧ください[ここ](https://tutorials.groupdocs.com/editor/net/)サポートについては、[サポートフォーラム](https://forum.groupdocs.com/c/editor/20).

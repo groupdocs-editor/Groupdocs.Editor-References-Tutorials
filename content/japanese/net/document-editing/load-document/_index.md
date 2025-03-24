@@ -3,7 +3,6 @@ title: ドキュメントを読み込む
 linktitle: ドキュメントを読み込む
 second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用してプログラムでドキュメントを編集する方法を学びます。ドキュメントの読み込み、パスワードで保護されたファイルの処理などに関するステップバイステップ ガイドです。
-type: docs
 weight: 13
 url: /ja/net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 おめでとうございます。GroupDocs.Editor for .NET を使用してさまざまな方法でドキュメントを読み込む方法を学習しました。ローカル ファイル、パスワードで保護されたドキュメント、またはバイト ストリームのいずれを扱う場合でも、GroupDocs.Editor はドキュメント編集のニーズに応える柔軟で強力なソリューションを提供します。アプリケーションで最適なパフォーマンスとリソース管理を確保するには、常にリソースを破棄することを忘れないでください。
 ## よくある質問
 ### GroupDocs.Editor for .NET ではどのようなファイル形式がサポートされていますか?
- GroupDocs.Editorは、DOCX、XLSX、PPTX、HTMLなど、幅広いファイル形式をサポートしています。完全なリストについては、[ドキュメンテーション](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editorは、DOCX、XLSX、PPTX、HTMLなど、幅広いファイル形式をサポートしています。完全なリストについては、[ドキュメンテーション](https://tutorials.groupdocs.com/editor/net/).
 ### パスワードで保護されたドキュメントをどのように処理すればよいですか?
 次のようなロードオプションを使用できます。`WordProcessingLoadOptions`パスワードで保護されたドキュメントを読み込むときにパスワードを指定します。
 ### GroupDocs.Editor を Web アプリケーションで使用できますか?

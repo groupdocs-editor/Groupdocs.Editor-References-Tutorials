@@ -3,7 +3,6 @@ title: قم بتعيين الترخيص من الدفق
 linktitle: قم بتعيين الترخيص من الدفق
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية استخدام Groupdocs.Editor لـ .NET لتحرير المستندات برمجيًا. اتبع هذا الشامل للتكامل السلس والميزات المتقدمة.
-type: docs
 weight: 11
 url: /ar/net/quick-start-guide/set-license-from-stream/
 ---
@@ -146,7 +145,7 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 }
 ```
 ## خاتمة
- يعد Groupdocs.Editor for .NET أداة متعددة الاستخدامات وقوية يمكنها تبسيط عمليات تحرير المستندات بشكل كبير. بفضل ميزاتها القوية ودعمها لتنسيقات المستندات المتعددة، فإن دمج هذه المكتبة في تطبيقات .NET الخاصة بك سيعزز بلا شك إنتاجيتك وقدراتك. لا تنسى استكشاف[توثيق](https://reference.groupdocs.com/editor/net/) للحصول على معلومات أكثر تفصيلاً وسيناريوهات الاستخدام المتقدمة.
+ يعد Groupdocs.Editor for .NET أداة متعددة الاستخدامات وقوية يمكنها تبسيط عمليات تحرير المستندات بشكل كبير. بفضل ميزاتها القوية ودعمها لتنسيقات المستندات المتعددة، فإن دمج هذه المكتبة في تطبيقات .NET الخاصة بك سيعزز بلا شك إنتاجيتك وقدراتك. لا تنسى استكشاف[توثيق](https://tutorials.groupdocs.com/editor/net/) للحصول على معلومات أكثر تفصيلاً وسيناريوهات الاستخدام المتقدمة.
 ## الأسئلة الشائعة
 ### هل يمكنني استخدام Groupdocs.Editor لـ .NET بدون ترخيص؟
  لا، أنت بحاجة إلى ترخيص صالح لاستخدام Groupdocs.Editor لـ .NET. ومع ذلك، يمكنك طلب أ[ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/) للتقييم.
@@ -157,4 +156,4 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 ### هل من الممكن حماية المستندات بكلمة مرور باستخدام Groupdocs.Editor؟
 نعم، يمكنك تعيين كلمات المرور وخيارات الأمان الأخرى عند حفظ المستندات.
 ### ما هي تنسيقات الملفات التي يدعمها Groupdocs.Editor لـ .NET؟
- وهو يدعم مجموعة واسعة من التنسيقات، بما في ذلك DOCX وXLSX وPDF وغيرها الكثير. الرجوع إلى[توثيق](https://reference.groupdocs.com/editor/net/) للحصول على قائمة كاملة.
+ وهو يدعم مجموعة واسعة من التنسيقات، بما في ذلك DOCX وXLSX وPDF وغيرها الكثير. الرجوع إلى[توثيق](https://tutorials.groupdocs.com/editor/net/) للحصول على قائمة كاملة.

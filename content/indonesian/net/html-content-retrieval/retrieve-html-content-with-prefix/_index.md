@@ -3,7 +3,6 @@ title: Ambil Konten HTML dengan Awalan
 linktitle: Ambil Konten HTML dengan Awalan
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengambil konten HTML dari dokumen menggunakan GroupDocs.Editor untuk .NET dengan awalan khusus untuk gambar dan stylesheet. Panduan langkah demi langkah disertakan.
-type: docs
 weight: 11
 url: /id/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 Cuplikan kode ini mengambil konten HTML dengan awalan khusus dan mencetaknya ke konsol. Anda dapat memproses lebih lanjut atau menyimpan konten HTML ini sesuai kebutuhan.
 ## Kesimpulan
 Dan itu dia! Dengan mengikuti langkah-langkah ini, Anda dapat dengan mudah mengambil konten HTML dari dokumen menggunakan GroupDocs.Editor untuk .NET, lengkap dengan awalan khusus untuk gambar dan stylesheet. Alat canggih ini menyederhanakan manipulasi dokumen, memungkinkan Anda fokus pada pengintegrasian pengeditan dokumen ke dalam aplikasi .NET Anda dengan mulus.
- Untuk informasi lebih detail, lihat[GroupDocs.Editor untuk dokumentasi .NET](https://reference.groupdocs.com/editor/net/) . Jika Anda memiliki pertanyaan atau memerlukan bantuan lebih lanjut, jangan ragu untuk menghubungi[forum dukungan](https://forum.groupdocs.com/c/editor/20).
+ Untuk informasi lebih detail, lihat[GroupDocs.Editor untuk dokumentasi .NET](https://tutorials.groupdocs.com/editor/net/) . Jika Anda memiliki pertanyaan atau memerlukan bantuan lebih lanjut, jangan ragu untuk menghubungi[forum dukungan](https://forum.groupdocs.com/c/editor/20).
 ## FAQ
 ### Jenis dokumen apa yang dapat saya edit dengan GroupDocs.Editor untuk .NET?
 GroupDocs.Editor mendukung berbagai format dokumen termasuk Word, Excel, PowerPoint, PDF, dan banyak lagi.

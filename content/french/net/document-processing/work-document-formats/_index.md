@@ -3,7 +3,6 @@ title: Travailler avec des formats de documents
 linktitle: Travailler avec des formats de documents
 second_title: API GroupDocs.Editor .NET
 description: Découvrez comment utiliser GroupDocs.Editor pour .NET pour modifier divers formats de documents par programmation. Guide étape par étape avec des exemples pour une intégration transparente.
-type: docs
 weight: 13
 url: /fr/net/document-processing/work-document-formats/
 ---
@@ -159,4 +158,4 @@ GroupDocs.Editor prend en charge, entre autres, les formats de traitement de tex
 ### Puis-je utiliser GroupDocs.Editor gratuitement ?
  Vous pouvez utiliser un[essai gratuit](https://releases.groupdocs.com/) avec des fonctionnalités limitées ou obtenir un[permis temporaire](https://purchase.groupdocs.com/temporary-license/) pour un accès complet.
 ### Où puis-je trouver plus de ressources et d’assistance ?
- Visiter le[Documentation GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) pour des informations détaillées, ou consultez leur[forum d'entraide](https://forum.groupdocs.com/c/editor/20) pour aider.
+ Visiter le[Documentation GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) pour des informations détaillées, ou consultez leur[forum d'entraide](https://forum.groupdocs.com/c/editor/20) pour aider.

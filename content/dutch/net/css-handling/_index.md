@@ -3,7 +3,6 @@ title: CSS-afhandeling
 linktitle: CSS-afhandeling
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u effectief met CSS-inhoud kunt omgaan met GroupDocs.Editor voor .NET. Extraheer externe CSS-inhoud en verwerk moeiteloos CSS-inhoud met voorvoegsels.
-type: docs
 weight: 21
 url: /nl/net/css-handling/
 ---

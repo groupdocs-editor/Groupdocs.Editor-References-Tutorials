@@ -3,7 +3,6 @@ title: ドキュメントを編集
 linktitle: ドキュメントを編集
 second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用してドキュメントを簡単に編集する方法を学びます。ワード プロセッサおよびスプレッドシート ファイルのステップ バイ ステップ ガイド。
-type: docs
 weight: 11
 url: /ja/net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 適切に破棄することで、アプリケーションでメモリ リークやパフォーマンスの問題が発生しなくなります。
 ## 結論
-おめでとうございます。これで、GroupDocs.Editor for .NET を使用して、ワード プロセッサ ドキュメントやスプレッドシートからコンテンツを読み込み、編集し、抽出する方法をしっかりと理解できました。この強力なツールは、ドキュメント編集タスクを簡素化し、.NET アプリケーションとシームレスに統合します。詳細については、[ドキュメンテーション](https://reference.groupdocs.com/editor/net/), [最新バージョンをダウンロード](https://releases.groupdocs.com/editor/net/) 、または取得する[一時ライセンス](https://purchase.groupdocs.com/temporary-license/).
+おめでとうございます。これで、GroupDocs.Editor for .NET を使用して、ワード プロセッサ ドキュメントやスプレッドシートからコンテンツを読み込み、編集し、抽出する方法をしっかりと理解できました。この強力なツールは、ドキュメント編集タスクを簡素化し、.NET アプリケーションとシームレスに統合します。詳細については、[ドキュメンテーション](https://tutorials.groupdocs.com/editor/net/), [最新バージョンをダウンロード](https://releases.groupdocs.com/editor/net/) 、または取得する[一時ライセンス](https://purchase.groupdocs.com/temporary-license/).
 ## よくある質問
 ### GroupDocs.Editor for .NET で PDF ドキュメントを編集できますか?
 現在、GroupDocs.Editor for .NET は主にワード プロセッサ、スプレッドシート、プレゼンテーション形式をサポートしています。

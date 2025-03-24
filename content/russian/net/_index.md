@@ -1,7 +1,6 @@
 ---
 title: Учебники и примеры GroupDocs.Editor для .NET
 linktitle: GroupDocs.Editor для учебных пособий по .NET
-type: docs
 weight: 10
 url: /ru/net/
 description: Управляйте и редактируйте документы с помощью GroupDocs.Editor .NET. Изучите обработку документов, редактирование документов, извлечение HTML-контента, управление полями форм и многое другое!

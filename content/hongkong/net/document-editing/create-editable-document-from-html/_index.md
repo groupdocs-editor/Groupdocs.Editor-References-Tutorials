@@ -3,7 +3,6 @@ title: 從 HTML 建立可編輯文檔
 linktitle: 從 HTML 建立可編輯文檔
 second_title: GroupDocs.Editor .NET API
 description: 透過此逐步指南，使用適用於 .NET 的 GroupDocs.Editor 將 HTML 轉換為可編輯的 Word 文件。非常適合簡化您的文件管理工作流程。
-type: docs
 weight: 10
 url: /zh-hant/net/document-editing/create-editable-document-from-html/
 ---

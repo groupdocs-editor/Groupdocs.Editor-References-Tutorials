@@ -3,7 +3,6 @@ title: 複数タブのスプレッドシートを操作する
 linktitle: 複数タブのスプレッドシートを操作する
 second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor を使用して .NET でマルチタブ スプレッドシートを操作する方法を学びます。ステップ バイ ステップ ガイド、コード例、ベスト プラクティスが含まれています。
-type: docs
 weight: 17
 url: /ja/net/document-processing/work-multi-tab-spreadsheets/
 ---

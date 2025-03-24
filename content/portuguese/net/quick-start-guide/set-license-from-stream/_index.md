@@ -3,7 +3,6 @@ title: Definir licença do Stream
 linktitle: Definir licença do Stream
 second_title: API GroupDocs.Editor .NET
 description: Aprenda como usar o Groupdocs.Editor for .NET para editar documentos programaticamente. Siga este guia completo para integração perfeita e recursos avançados.
-type: docs
 weight: 11
 url: /pt/net/quick-start-guide/set-license-from-stream/
 ---
@@ -146,7 +145,7 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 }
 ```
 ## Conclusão
- Groupdocs.Editor for .NET é uma ferramenta versátil e poderosa que pode agilizar significativamente seus processos de edição de documentos. Com seus recursos robustos e suporte para vários formatos de documentos, a integração desta biblioteca em seus aplicativos .NET sem dúvida aumentará sua produtividade e capacidades. Não se esqueça de explorar o[documentação](https://reference.groupdocs.com/editor/net/) para obter informações mais detalhadas e cenários de uso avançados.
+ Groupdocs.Editor for .NET é uma ferramenta versátil e poderosa que pode agilizar significativamente seus processos de edição de documentos. Com seus recursos robustos e suporte para vários formatos de documentos, a integração desta biblioteca em seus aplicativos .NET sem dúvida aumentará sua produtividade e capacidades. Não se esqueça de explorar o[documentação](https://tutorials.groupdocs.com/editor/net/) para obter informações mais detalhadas e cenários de uso avançados.
 ## Perguntas frequentes
 ### Posso usar o Groupdocs.Editor for .NET sem licença?
  Não, você precisa de uma licença válida para usar o Groupdocs.Editor for .NET. No entanto, você pode solicitar um[licença temporária](https://purchase.groupdocs.com/temporary-license/) para avaliação.
@@ -157,4 +156,4 @@ Sim, ele suporta a edição de arquivos PDF junto com vários outros formatos co
 ### É possível proteger documentos com senha usando Groupdocs.Editor?
 Sim, você pode definir senhas e outras opções de segurança ao salvar documentos.
 ### Quais formatos de arquivo o Groupdocs.Editor for .NET suporta?
- Suporta uma ampla variedade de formatos, incluindo DOCX, XLSX, PDF e muitos outros. Consulte o[documentação](https://reference.groupdocs.com/editor/net/) para obter uma lista completa.
+ Suporta uma ampla variedade de formatos, incluindo DOCX, XLSX, PDF e muitos outros. Consulte o[documentação](https://tutorials.groupdocs.com/editor/net/) para obter uma lista completa.

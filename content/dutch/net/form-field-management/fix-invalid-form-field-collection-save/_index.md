@@ -3,7 +3,6 @@ title: Herstel ongeldige formulierveldverzameling en sla op
 linktitle: Herstel ongeldige formulierveldverzameling en sla op
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u ongeldige formuliervelden in DOCX kunt corrigeren met Groupdocs.Editor voor .NET. Volg deze handleiding om ervoor te zorgen dat uw documenten foutloos zijn en ze veilig opslaan.
-type: docs
 weight: 11
 url: /nl/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## Conclusie
- En daar heb je het! U heeft ongeldige formuliervelden hersteld en uw document opgeslagen met Groupdocs.Editor voor .NET. Deze stapsgewijze handleiding had het proces duidelijk en beheersbaar moeten maken. Als u problemen ondervindt of vragen heeft, kunt u terecht op de[documentatie](https://reference.groupdocs.com/editor/net/) of contact opnemen[steun](https://forum.groupdocs.com/c/editor/20).
+ En daar heb je het! U heeft ongeldige formuliervelden hersteld en uw document opgeslagen met Groupdocs.Editor voor .NET. Deze stapsgewijze handleiding had het proces duidelijk en beheersbaar moeten maken. Als u problemen ondervindt of vragen heeft, kunt u terecht op de[documentatie](https://tutorials.groupdocs.com/editor/net/) of contact opnemen[steun](https://forum.groupdocs.com/c/editor/20).
 ## Veelgestelde vragen
 ### Wat moet ik doen als mijn document met een wachtwoord is beveiligd?
  U kunt het wachtwoord opgeven in het`WordProcessingLoadOptions` om het document te openen.

@@ -3,7 +3,6 @@ title: Werken met documentformaten
 linktitle: Werken met documentformaten
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u GroupDocs.Editor voor .NET kunt gebruiken om verschillende documentindelingen programmatisch te bewerken. Stap-voor-stap handleiding met voorbeelden voor naadloze integratie.
-type: docs
 weight: 13
 url: /nl/net/document-processing/work-document-formats/
 ---
@@ -159,4 +158,4 @@ GroupDocs.Editor ondersteunt onder andere de formaten Tekstverwerking, Spreadshe
 ### Kan ik GroupDocs.Editor gratis gebruiken?
  U kunt gebruik maken van een[gratis proefperiode](https://releases.groupdocs.com/) met beperkte functies of verkrijg een[tijdelijke licentie](https://purchase.groupdocs.com/temporary-license/) voor volledige toegang.
 ### Waar kan ik meer bronnen en ondersteuning vinden?
- Bezoek de[GroupDocs.Editor-documentatie](https://reference.groupdocs.com/editor/net/) voor gedetailleerde informatie, of bekijk hun[Helpforum](https://forum.groupdocs.com/c/editor/20) voor hulp.
+ Bezoek de[GroupDocs.Editor-documentatie](https://tutorials.groupdocs.com/editor/net/) voor gedetailleerde informatie, of bekijk hun[Helpforum](https://forum.groupdocs.com/c/editor/20) voor hulp.

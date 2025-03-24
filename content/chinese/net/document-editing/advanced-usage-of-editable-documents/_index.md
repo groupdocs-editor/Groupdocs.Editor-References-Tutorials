@@ -3,7 +3,6 @@ title: 可编辑文档的高级用法
 linktitle: 可编辑文档的高级用法
 second_title: GroupDocs.Editor .NET API
 description: 学习 GroupDocs.Editor for .NET 的高级用法，以编程方式创建、编辑和提取文档中的资源。
-type: docs
 weight: 11
 url: /zh/net/document-editing/advanced-usage-of-editable-documents/
 ---

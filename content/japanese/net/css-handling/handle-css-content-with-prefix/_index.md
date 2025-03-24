@@ -3,7 +3,6 @@ title: プレフィックス付きのCSSコンテンツを処理する
 linktitle: プレフィックス付きのCSSコンテンツを処理する
 second_title: GroupDocs.Editor .NET API
 description: この詳細なステップバイステップのチュートリアルでは、Groupdocs.Editor for .NET を使用してプレフィックス付きの CSS コンテンツを処理する方法を学びます。あらゆるレベルの開発者に最適です。
-type: docs
 weight: 11
 url: /ja/net/css-handling/handle-css-content-with-prefix/
 ---
@@ -66,6 +65,6 @@ Groupdocs.Editor for .NET を使用してプレフィックス付きの CSS コ�
 ### Groupdocs.Editor for .NET の一時ライセンスを取得するにはどうすればよいですか?
 臨時免許証を取得できます[ここ](https://purchase.groupdocs.com/temporary-license/).
 ### Groupdocs.Editor for .NET の詳細なドキュメントはどこで入手できますか?
-詳細なドキュメントが利用可能[ここ](https://reference.groupdocs.com/editor/net/).
+詳細なドキュメントが利用可能[ここ](https://tutorials.groupdocs.com/editor/net/).
 ### Groupdocs.Editor for .NET にはどのようなサポート オプションがありますか?
 サポートを受けることができます[ここ](https://forum.groupdocs.com/c/editor/20).

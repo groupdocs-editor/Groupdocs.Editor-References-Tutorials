@@ -3,7 +3,6 @@ title: Úprava dokumentu
 linktitle: Úprava dokumentu
 second_title: GroupDocs.Editor .NET API
 description: Spravujte a upravujte dokumenty pomocí GroupDocs.Editor .NET. Naučte se snadno vytvářet, upravovat a ukládat dokumenty. Vylepšete svůj pracovní postup správy dokumentů ještě dnes!
-type: docs
 weight: 20
 url: /cs/net/document-editing/
 ---

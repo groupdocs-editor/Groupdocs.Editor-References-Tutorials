@@ -3,7 +3,6 @@ title: 문서 편집
 linktitle: 문서 편집
 second_title: GroupDocs.Editor .NET API
 description: .NET용 GroupDocs.Editor를 사용하여 손쉽게 문서를 편집하는 방법을 알아보세요. 워드 프로세싱 및 스프레드시트 파일에 대한 단계별 가이드입니다.
-type: docs
 weight: 11
 url: /ko/net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 적절하게 폐기하면 애플리케이션에 메모리 누수나 성능 문제가 발생하지 않습니다.
 ## 결론
- 축하해요! 이제 .NET용 GroupDocs.Editor를 사용하여 워드 프로세싱 문서 및 스프레드시트의 콘텐츠를 로드, 편집 및 추출하는 방법을 확실하게 이해하게 되었습니다. 이 강력한 도구는 문서 편집 작업을 단순화하고 .NET 애플리케이션과 원활하게 통합됩니다. 자세한 내용은 다음을 참조하세요.[선적 서류 비치](https://reference.groupdocs.com/editor/net/), [최신 버전을 다운로드하세요](https://releases.groupdocs.com/editor/net/) , 또는[임시면허](https://purchase.groupdocs.com/temporary-license/).
+ 축하해요! 이제 .NET용 GroupDocs.Editor를 사용하여 워드 프로세싱 문서 및 스프레드시트의 콘텐츠를 로드, 편집 및 추출하는 방법을 확실하게 이해하게 되었습니다. 이 강력한 도구는 문서 편집 작업을 단순화하고 .NET 애플리케이션과 원활하게 통합됩니다. 자세한 내용은 다음을 참조하세요.[선적 서류 비치](https://tutorials.groupdocs.com/editor/net/), [최신 버전을 다운로드하세요](https://releases.groupdocs.com/editor/net/) , 또는[임시면허](https://purchase.groupdocs.com/temporary-license/).
 ## FAQ
 ### .NET용 GroupDocs.Editor를 사용하여 PDF 문서를 편집할 수 있습니까?
 현재 .NET용 GroupDocs.Editor는 주로 워드 프로세싱, 스프레드시트 및 프레젠테이션 형식을 지원합니다.

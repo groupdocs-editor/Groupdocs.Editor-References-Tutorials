@@ -3,7 +3,6 @@ title: Lidar com conteúdo CSS com prefixo
 linktitle: Lidar com conteúdo CSS com prefixo
 second_title: API GroupDocs.Editor .NET
 description: Aprenda como lidar com conteúdo CSS com prefixo usando Groupdocs.Editor for .NET neste tutorial passo a passo detalhado. Perfeito para desenvolvedores de todos os níveis.
-type: docs
 weight: 11
 url: /pt/net/css-handling/handle-css-content-with-prefix/
 ---
@@ -66,6 +65,6 @@ Sim, o Groupdocs.Editor for .NET oferece suporte a vários formatos de documento
 ### Como obtenho uma licença temporária do Groupdocs.Editor for .NET?
  Você pode obter uma licença temporária[aqui](https://purchase.groupdocs.com/temporary-license/).
 ### Onde posso encontrar documentação detalhada para Groupdocs.Editor for .NET?
- Documentação detalhada está disponível[aqui](https://reference.groupdocs.com/editor/net/).
+ Documentação detalhada está disponível[aqui](https://tutorials.groupdocs.com/editor/net/).
 ### Quais opções de suporte estão disponíveis para Groupdocs.Editor for .NET?
  Você pode obter suporte[aqui](https://forum.groupdocs.com/c/editor/20).

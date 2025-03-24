@@ -3,7 +3,6 @@ title: HTML-innehållshämtning
 linktitle: HTML-innehållshämtning
 second_title: GroupDocs.Editor .NET API
 description: Upptäck hur du hämtar HTML-innehåll med GroupDocs.Editor för .NET. Steg-för-steg-guider för att hämta kroppsinnehåll och anpassade prefix ingår.
-type: docs
 weight: 22
 url: /sv/net/html-content-retrieval/
 ---

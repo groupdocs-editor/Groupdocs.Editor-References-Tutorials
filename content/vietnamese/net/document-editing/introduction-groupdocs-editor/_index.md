@@ -3,7 +3,6 @@ title: Giới thiệu về GroupDocs.Editor cho .NET
 linktitle: Giới thiệu về GroupDocs.Editor cho .NET
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách sử dụng GroupDocs.Editor dành cho .NET để chỉnh sửa tài liệu theo chương trình với hướng dẫn chi tiết từng bước này.
-type: docs
 weight: 12
 url: /vi/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ GroupDocs.Editor cho .NET hỗ trợ nhiều định dạng khác nhau, bao gồ
 ### Có thể tích hợp GroupDocs.Editor với bộ lưu trữ đám mây không?
 Có, bạn có thể tích hợp GroupDocs.Editor với nhiều giải pháp lưu trữ đám mây khác nhau để quản lý tài liệu của mình.
 ### Tôi có thể tìm tài liệu về GroupDocs.Editor cho .NET ở đâu?
-Tài liệu có sẵn[đây](https://reference.groupdocs.com/editor/net/).
+Tài liệu có sẵn[đây](https://tutorials.groupdocs.com/editor/net/).

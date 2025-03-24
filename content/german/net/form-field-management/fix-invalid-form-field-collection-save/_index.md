@@ -3,7 +3,6 @@ title: Ungültige Formularfeldsammlung korrigieren und speichern
 linktitle: Ungültige Formularfeldsammlung korrigieren und speichern
 second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie, wie Sie ungültige Formularfelder in DOCX mit Groupdocs.Editor für .NET korrigieren. Folgen Sie dieser Anleitung, um sicherzustellen, dass Ihre Dokumente fehlerfrei sind und sicher gespeichert werden.
-type: docs
 weight: 11
 url: /de/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## Abschluss
- Und da haben Sie es! Sie haben erfolgreich ungültige Formularfelder korrigiert und Ihr Dokument mit Groupdocs.Editor für .NET gespeichert. Diese Schritt-für-Schritt-Anleitung sollte den Vorgang klar und handhabbar gemacht haben. Wenn Sie auf Probleme stoßen oder Fragen haben, können Sie gerne die[Dokumentation](https://reference.groupdocs.com/editor/net/) oder wenden Sie sich an[Unterstützung](https://forum.groupdocs.com/c/editor/20).
+ Und da haben Sie es! Sie haben erfolgreich ungültige Formularfelder korrigiert und Ihr Dokument mit Groupdocs.Editor für .NET gespeichert. Diese Schritt-für-Schritt-Anleitung sollte den Vorgang klar und handhabbar gemacht haben. Wenn Sie auf Probleme stoßen oder Fragen haben, können Sie gerne die[Dokumentation](https://tutorials.groupdocs.com/editor/net/) oder wenden Sie sich an[Unterstützung](https://forum.groupdocs.com/c/editor/20).
 ## Häufig gestellte Fragen
 ### Was ist, wenn mein Dokument passwortgeschützt ist?
  Sie können das Passwort im`WordProcessingLoadOptions` , um das Dokument zu öffnen.

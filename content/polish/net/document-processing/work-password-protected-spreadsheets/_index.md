@@ -3,7 +3,6 @@ title: Pracuj z arkuszami kalkulacyjnymi chronionymi hasłem
 linktitle: Pracuj z arkuszami kalkulacyjnymi chronionymi hasłem
 second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak obsługiwać arkusze kalkulacyjne chronione hasłem przy użyciu programu GroupDocs.Editor dla platformy .NET. Ten szczegółowy przewodnik przeprowadzi Cię przez proces otwierania i zapisywania bezpiecznych plików Excel.
-type: docs
 weight: 18
 url: /pl/net/document-processing/work-password-protected-spreadsheets/
 ---
@@ -108,4 +107,4 @@ GroupDocs.Editor dla .NET to potężny interfejs API do edycji dokumentów, któ
 ### Czy mogę ustawić różne hasła do otwierania i zapisywania arkusza kalkulacyjnego?
 Absolutnie! Korzystając z opcji zapisywania, możesz ustawić osobne hasła do otwierania dokumentu i ochrony przed zapisem.
 ### Gdzie mogę znaleźć bardziej szczegółową dokumentację?
- Możesz uzyskać dostęp do obszernej dokumentacji GroupDocs.Editor dla .NET[Tutaj](https://reference.groupdocs.com/editor/net/).
+ Możesz uzyskać dostęp do obszernej dokumentacji GroupDocs.Editor dla .NET[Tutaj](https://tutorials.groupdocs.com/editor/net/).

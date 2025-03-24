@@ -3,7 +3,6 @@ title: HTMLリソースをフォルダーに保存
 linktitle: HTMLリソースをフォルダーに保存
 second_title: GroupDocs.Editor .NET API
 description: Groupdocs.Editor for .NET を使用してドキュメントから HTML リソースを抽出する方法を学習します。この包括的なチュートリアルでは、開発者向けにステップバイステップのガイダンスを提供します。
-type: docs
 weight: 13
 url: /ja/net/document-editing/save-html-resources-to-folder/
 ---

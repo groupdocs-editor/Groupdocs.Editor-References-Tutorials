@@ -3,7 +3,6 @@ title: 編集可能なドキュメントの高度な使用法
 linktitle: 編集可能なドキュメントの高度な使用法
 second_title: GroupDocs.Editor .NET API
 description: プログラムによってドキュメントからリソースを作成、編集、抽出する GroupDocs.Editor for .NET の高度な使用方法を学習します。
-type: docs
 weight: 11
 url: /ja/net/document-editing/advanced-usage-of-editable-documents/
 ---

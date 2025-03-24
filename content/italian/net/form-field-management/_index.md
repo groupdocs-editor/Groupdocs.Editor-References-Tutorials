@@ -3,7 +3,6 @@ title: Gestione dei campi del modulo
 linktitle: Gestione dei campi del modulo
 second_title: API GroupDocs.Editor .NET
 description: Gestione dei campi dei moduli master in .NET con GroupDocs.Editor. Impara a modificare, correggere, utilizzare elementi legacy e rimuovere senza problemi raccolte di campi modulo.
-type: docs
 weight: 23
 url: /it/net/form-field-management/
 ---

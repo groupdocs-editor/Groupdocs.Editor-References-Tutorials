@@ -3,7 +3,6 @@ title: Abrufen von HTML-Inhalten
 linktitle: Abrufen von HTML-Inhalten
 second_title: GroupDocs.Editor .NET API
 description: Entdecken Sie, wie Sie HTML-Inhalte mit GroupDocs.Editor für .NET abrufen. Schritt-für-Schritt-Anleitungen zum Abrufen von Textinhalten und benutzerdefinierten Präfixen enthalten.
-type: docs
 weight: 22
 url: /de/net/html-content-retrieval/
 ---

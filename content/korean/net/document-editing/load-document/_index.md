@@ -3,7 +3,6 @@ title: 문서 로드
 linktitle: 문서 로드
 second_title: GroupDocs.Editor .NET API
 description: .NET용 GroupDocs.Editor를 사용하여 프로그래밍 방식으로 문서를 편집하는 방법을 알아보세요. 문서 로딩, 비밀번호로 보호된 파일 처리 등에 대한 단계별 가이드입니다.
-type: docs
 weight: 13
 url: /ko/net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 축하해요! .NET용 GroupDocs.Editor를 사용하여 다양한 방법으로 문서를 로드하는 방법을 성공적으로 배웠습니다. 로컬 파일, 암호로 보호된 문서 또는 바이트 스트림을 처리하는 경우 GroupDocs.Editor는 문서 편집 요구 사항에 맞는 유연하고 강력한 솔루션을 제공합니다. 애플리케이션에서 최적의 성능과 리소스 관리를 보장하려면 항상 리소스를 폐기해야 합니다.
 ## FAQ
 ### .NET용 GroupDocs.Editor는 어떤 파일 형식을 지원합니까?
- GroupDocs.Editor는 DOCX, XLSX, PPTX, HTML 등을 포함한 광범위한 파일 형식을 지원합니다. 전체 목록은 다음을 참조하세요.[선적 서류 비치](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor는 DOCX, XLSX, PPTX, HTML 등을 포함한 광범위한 파일 형식을 지원합니다. 전체 목록은 다음을 참조하세요.[선적 서류 비치](https://tutorials.groupdocs.com/editor/net/).
 ### 비밀번호로 보호된 문서는 어떻게 처리하나요?
  다음과 같은 로드 옵션을 사용할 수 있습니다.`WordProcessingLoadOptions` 비밀번호로 보호된 문서를 로드할 때 비밀번호를 지정합니다.
 ### 웹 응용 프로그램에서 GroupDocs.Editor를 사용할 수 있습니까?

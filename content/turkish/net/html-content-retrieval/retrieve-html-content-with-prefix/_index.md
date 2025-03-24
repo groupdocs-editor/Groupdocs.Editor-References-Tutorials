@@ -3,7 +3,6 @@ title: HTML İçeriğini Önekle Al
 linktitle: HTML İçeriğini Önekle Al
 second_title: GroupDocs.Editor .NET API'si
 description: Görüntüler ve stil sayfaları için özel öneklerle GroupDocs.Editor for .NET'i kullanarak belgelerden HTML içeriğini nasıl alacağınızı öğrenin. Adım adım kılavuz dahildir.
-type: docs
 weight: 11
 url: /tr/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 Bu kod parçacığı, HTML içeriğini özel öneklerle getirir ve konsola yazdırır. Bu HTML içeriğini gerektiği gibi daha fazla işleyebilir veya kaydedebilirsiniz.
 ## Çözüm
 İşte buyur! Bu adımları izleyerek, GroupDocs.Editor for .NET'i kullanarak görüntüler ve stil sayfaları için özel öneklerle tamamlanan HTML içeriğini bir belgeden kolayca alabilirsiniz. Bu güçlü araç, belge düzenlemeyi basitleştirerek belge düzenlemeyi .NET uygulamalarınıza sorunsuz bir şekilde entegre etmeye odaklanmanıza olanak tanır.
- Daha ayrıntılı bilgi için şuraya göz atın:[.NET belgeleri için GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) . Herhangi bir sorunuz varsa veya daha fazla yardıma ihtiyacınız varsa, bizimle iletişime geçmekten çekinmeyin.[destek Forumu](https://forum.groupdocs.com/c/editor/20).
+ Daha ayrıntılı bilgi için şuraya göz atın:[.NET belgeleri için GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) . Herhangi bir sorunuz varsa veya daha fazla yardıma ihtiyacınız varsa, bizimle iletişime geçmekten çekinmeyin.[destek Forumu](https://forum.groupdocs.com/c/editor/20).
 ## SSS'ler
 ### GroupDocs.Editor for .NET ile ne tür belgeleri düzenleyebilirim?
 GroupDocs.Editor, Word, Excel, PowerPoint, PDF ve daha fazlasını içeren çeşitli belge formatlarını destekler.

@@ -3,7 +3,6 @@ title: Edit Document
 linktitle: Edit Document
 second_title: GroupDocs.Editor .NET API
 description: Learn to edit documents effortlessly with GroupDocs.Editor for .NET. Step-by-step guide for Word Processing and Spreadsheet files.
-type: docs
 weight: 11
 url: /net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 Proper disposal ensures there are no memory leaks or performance issues in your application.
 ## Conclusion
-Congratulations! You now have a solid understanding of how to use GroupDocs.Editor for .NET to load, edit, and extract content from Word Processing documents and Spreadsheets. This powerful tool simplifies document editing tasks and integrates seamlessly with your .NET applications. For further details, you can explore the [documentation](https://reference.groupdocs.com/editor/net/), [download the latest version](https://releases.groupdocs.com/editor/net/), or obtain a [temporary license](https://purchase.groupdocs.com/temporary-license/).
+Congratulations! You now have a solid understanding of how to use GroupDocs.Editor for .NET to load, edit, and extract content from Word Processing documents and Spreadsheets. This powerful tool simplifies document editing tasks and integrates seamlessly with your .NET applications. For further details, you can explore the [documentation](https://tutorials.groupdocs.com/editor/net/), [download the latest version](https://releases.groupdocs.com/editor/net/), or obtain a [temporary license](https://purchase.groupdocs.com/temporary-license/).
 ## FAQ's
 ### Can I edit PDF documents with GroupDocs.Editor for .NET?
 Currently, GroupDocs.Editor for .NET primarily supports Word Processing, Spreadsheet, and Presentation formats.

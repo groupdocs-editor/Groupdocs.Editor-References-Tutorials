@@ -3,7 +3,6 @@ title: Przetwarzanie dokumentów
 linktitle: Przetwarzanie dokumentów
 second_title: Edytor GroupDocs.NET API
 description: Przetwarzanie dokumentów głównych w .NET za pomocą GroupDocs.Editor. Naucz się wyodrębniać informacje, zapisywać je w różnych formatach i bez wysiłku pracować z różnymi typami dokumentów.
-type: docs
 weight: 24
 url: /pl/net/document-processing/
 ---

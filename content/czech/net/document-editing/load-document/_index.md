@@ -3,7 +3,6 @@ title: Načíst dokument
 linktitle: Načíst dokument
 second_title: GroupDocs.Editor .NET API
 description: Naučte se upravovat dokumenty programově pomocí GroupDocs.Editor pro .NET. Podrobný průvodce pro načítání dokumentů, manipulaci se soubory chráněnými heslem a další.
-type: docs
 weight: 13
 url: /cs/net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 Gratulujeme! Úspěšně jste se naučili, jak různými způsoby načítat dokumenty pomocí GroupDocs.Editor pro .NET. Ať už pracujete s místními soubory, heslem chráněnými dokumenty nebo byte streamy, GroupDocs.Editor poskytuje flexibilní a výkonné řešení pro vaše potřeby úpravy dokumentů. Nezapomeňte vždy disponovat prostředky, abyste zajistili optimální výkon a správu prostředků ve svých aplikacích.
 ## FAQ
 ### Jaké formáty souborů podporuje GroupDocs.Editor pro .NET?
- GroupDocs.Editor podporuje širokou škálu formátů souborů, včetně DOCX, XLSX, PPTX, HTML a mnoha dalších. Úplný seznam naleznete na[dokumentace](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor podporuje širokou škálu formátů souborů, včetně DOCX, XLSX, PPTX, HTML a mnoha dalších. Úplný seznam naleznete na[dokumentace](https://tutorials.groupdocs.com/editor/net/).
 ### Jak nakládám s dokumenty chráněnými heslem?
  Můžete využít možnosti zatížení jako např`WordProcessingLoadOptions` pro zadání hesla při načítání dokumentů chráněných heslem.
 ### Mohu používat GroupDocs.Editor ve webové aplikaci?

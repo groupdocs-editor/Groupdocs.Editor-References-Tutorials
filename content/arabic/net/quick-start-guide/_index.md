@@ -3,7 +3,6 @@ title: دليل البدء السريع
 linktitle: دليل البدء السريع
 second_title: GroupDocs.Editor .NET API
 description: تعلم كيفية استخدام GroupDocs.Editor لـ .NET من خلال برامجنا التعليمية الشاملة. قم بتعيين التراخيص ودمج الميزات وفتح إمكانات تحرير المستندات القوية.
-type: docs
 weight: 26
 url: /ar/net/quick-start-guide/
 ---

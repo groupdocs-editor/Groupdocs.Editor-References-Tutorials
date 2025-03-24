@@ -3,7 +3,6 @@ title: Document opslaan
 linktitle: Document opslaan
 second_title: GroupDocs.Editor .NET API
 description: Bewerk en bewaar documenten moeiteloos met GroupDocs.Editor voor .NET. Deze stapsgewijze handleiding vereenvoudigt het proces voor ontwikkelaars.
-type: docs
 weight: 14
 url: /nl/net/document-editing/save-document/
 ---
@@ -80,7 +79,7 @@ Door deze stappen te volgen, kunt u documenten efficiënt laden, bewerken en ops
 Documenten programmatisch bewerken en opslaan is nog nooit zo eenvoudig geweest met GroupDocs.Editor voor .NET. Deze gids begeleidt u door het hele proces, van het laden van een document tot het opslaan in verschillende formaten. Met GroupDocs.Editor heeft u een veelzijdige en robuuste oplossing binnen handbereik, die het documentbewerkingsproces vereenvoudigt.
 ## Veelgestelde vragen
 ### Welke bestandsformaten ondersteunt GroupDocs.Editor?
-GroupDocs.Editor ondersteunt verschillende bestandsformaten, waaronder DOCX, RTF, TXT en nog veel meer. Voor een volledige lijst, bekijk de[documentatie](https://reference.groupdocs.com/editor/net/).
+GroupDocs.Editor ondersteunt verschillende bestandsformaten, waaronder DOCX, RTF, TXT en nog veel meer. Voor een volledige lijst, bekijk de[documentatie](https://tutorials.groupdocs.com/editor/net/).
 ### Kan ik GroupDocs.Editor uitproberen voordat ik het aanschaf?
  Ja, je kunt een[gratis proefperiode](https://releases.groupdocs.com/) om de functies van GroupDocs.Editor te testen.
 ### Is er ondersteuning beschikbaar als ik problemen ondervind?

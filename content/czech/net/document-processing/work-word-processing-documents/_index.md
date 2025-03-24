@@ -3,7 +3,6 @@ title: Práce s dokumenty pro zpracování textu
 linktitle: Práce s dokumenty pro zpracování textu
 second_title: GroupDocs.Editor .NET API
 description: Bez námahy upravujte dokumenty pro zpracování textu pomocí GroupDocs.Editor pro .NET. Postupujte podle našeho podrobného výukového programu krok za krokem a zdokonalte své dovednosti v oblasti správy dokumentů.
-type: docs
 weight: 19
 url: /cs/net/document-processing/work-word-processing-documents/
 ---
@@ -117,7 +116,7 @@ Console.WriteLine("Document editing and saving process completed successfully.")
 Nyní jste dokončili komplexního podrobného průvodce, jak pracovat s dokumenty pro zpracování textu pomocí GroupDocs.Editor pro .NET. Tento výkonný nástroj usnadňuje manipulaci a programovou úpravu dokumentů a poskytuje širokou škálu možností přizpůsobení pracovního postupu zpracování dokumentů.
 ## FAQ
 ### Mohu použít GroupDocs.Editor pro .NET k úpravě jiných formátů dokumentů?
- Ano, GroupDocs.Editor podporuje různé formáty dokumentů včetně PDF, HTML a dalších. Zkontrolovat[dokumentace](https://reference.groupdocs.com/editor/net/) pro úplný seznam podporovaných formátů.
+ Ano, GroupDocs.Editor podporuje různé formáty dokumentů včetně PDF, HTML a dalších. Zkontrolovat[dokumentace](https://tutorials.groupdocs.com/editor/net/) pro úplný seznam podporovaných formátů.
 ### Je možné používat GroupDocs.Editor bez licence?
  Můžete použít bezplatnou zkušební verzi nebo požádat o dočasnou licenci. Pro rozšířené použití se doporučuje zakoupit licenci. Získejte licenci[tady](https://purchase.groupdocs.com/buy).
 ### Jak zpracuji velké dokumenty, které způsobují výjimku OutOfMemoryException?

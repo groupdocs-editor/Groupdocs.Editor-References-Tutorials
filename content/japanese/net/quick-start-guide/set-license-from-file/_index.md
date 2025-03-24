@@ -3,7 +3,6 @@ title: ファイルからライセンスを設定する
 linktitle: ファイルからライセンスを設定する
 second_title: GroupDocs.Editor .NET API
 description: アプリケーションでシームレスにドキュメントを編集するために GroupDocs.Editor for .NET を使用する方法を学びます。ステップバイステップのガイド、ヒント、FAQ が含まれています。
-type: docs
 weight: 10
 url: /ja/net/quick-start-guide/set-license-from-file/
 ---
@@ -89,4 +88,4 @@ GroupDocs.Editor for .NET は、DOCX、PDF、HTML、PPTX、XLSX など、幅広�
 ### GroupDocs.Editor for .NET で大きなドキュメントを処理するにはどうすればよいですか?
 GroupDocs.Editor for .NET は、大きなドキュメントを効率的に処理できるように設計されています。ただし、最適なパフォーマンスを得るには、必要に応じてリソースを管理し、ドキュメントをセグメントで処理することを検討してください。
 ### より詳細なドキュメントとサポートはどこで見つかりますか?
-詳細なドキュメントは[GroupDocs.Editor ドキュメント ページ](https://reference.groupdocs.com/editor/net/)そして、[GroupDocs サポートフォーラム](https://forum.groupdocs.com/c/editor/20).
+詳細なドキュメントは[GroupDocs.Editor ドキュメント ページ](https://tutorials.groupdocs.com/editor/net/)そして、[GroupDocs サポートフォーラム](https://forum.groupdocs.com/c/editor/20).

@@ -3,7 +3,6 @@ title: Introduktion till GroupDocs.Editor för .NET
 linktitle: Introduktion till GroupDocs.Editor för .NET
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du använder GroupDocs.Editor för .NET för att redigera dokument programmatiskt med denna detaljerade steg-för-steg-guide.
-type: docs
 weight: 12
 url: /sv/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ GroupDocs.Editor för .NET stöder olika format, inklusive DOCX, PDF, HTML och R
 ### Är det möjligt att integrera GroupDocs.Editor med molnlagring?
 Ja, du kan integrera GroupDocs.Editor med olika molnlagringslösningar för att hantera dina dokument.
 ### Var kan jag hitta dokumentationen för GroupDocs.Editor för .NET?
-Dokumentationen finns tillgänglig[här](https://reference.groupdocs.com/editor/net/).
+Dokumentationen finns tillgänglig[här](https://tutorials.groupdocs.com/editor/net/).

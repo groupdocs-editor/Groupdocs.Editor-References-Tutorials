@@ -3,7 +3,6 @@ title: Trích xuất nội dung HTML từ tài liệu có thể chỉnh sửa
 linktitle: Trích xuất nội dung HTML từ tài liệu có thể chỉnh sửa
 second_title: API GroupDocs.Editor .NET
 description: Trích xuất nội dung HTML từ tài liệu một cách dễ dàng bằng GroupDocs.Editor cho .NET. Hãy làm theo hướng dẫn chi tiết của chúng tôi để tích hợp liền mạch và quản lý tài liệu.
-type: docs
 weight: 12
 url: /vi/net/document-editing/extract-html-content-from-editable-document/
 ---
@@ -64,6 +63,6 @@ GroupDocs.Editor cho .NET hỗ trợ nhiều định dạng tài liệu, bao g�
 ### Làm cách nào để có được giấy phép tạm thời cho GroupDocs.Editor cho .NET?
  Bạn có thể yêu cầu giấy phép tạm thời từ[Trang mua GroupDocs](https://purchase.groupdocs.com/temporary-license/).
 ### Tôi có thể tìm tài liệu về GroupDocs.Editor cho .NET ở đâu?
- Tài liệu đầy đủ có sẵn[đây](https://reference.groupdocs.com/editor/net/).
+ Tài liệu đầy đủ có sẵn[đây](https://tutorials.groupdocs.com/editor/net/).
 ### Tôi có thể nhận được hỗ trợ nếu gặp vấn đề không?
  Có, bạn có thể tìm kiếm sự hỗ trợ từ[Diễn đàn hỗ trợ GroupDocs](https://forum.groupdocs.com/c/editor/20).

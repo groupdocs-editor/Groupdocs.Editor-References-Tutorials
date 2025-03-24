@@ -3,7 +3,6 @@ title: Práce s Legacy Form Field Collection
 linktitle: Práce s Legacy Form Field Collection
 second_title: GroupDocs.Editor .NET API
 description: Naučte se, jak spravovat starší pole formuláře pomocí GroupDocs.Editor pro .NET s naším podrobným průvodcem. Ideální pro práci s textovými poli, zaškrtávacími políčky, daty a dalšími.
-type: docs
 weight: 12
 url: /cs/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## Krok 8: Závěr
 Dodržením těchto kroků můžete efektivně spravovat a pracovat se staršími poli formulářů ve vašich dokumentech pomocí GroupDocs.Editor pro .NET. Ať už se jedná o textová pole, zaškrtávací políčka, data, čísla nebo rozevírací seznamy, tato příručka poskytuje jasný a stručný způsob, jak zacházet s každým typem.
 ## Závěr
- Práce se staršími poli formulářů v dokumentech může být při použití správných nástrojů jednoduchá. GroupDocs.Editor pro .NET poskytuje robustní řešení pro efektivní správu těchto polí. Podle tohoto podrobného průvodce byste nyní měli být schopni snadno manipulovat s různými poli formuláře ve vašich dokumentech. Nezapomeňte prozkoumat[dokumentace](https://reference.groupdocs.com/editor/net/)pro pokročilejší funkce a možnosti.
+ Práce se staršími poli formulářů v dokumentech může být při použití správných nástrojů jednoduchá. GroupDocs.Editor pro .NET poskytuje robustní řešení pro efektivní správu těchto polí. Podle tohoto podrobného průvodce byste nyní měli být schopni snadno manipulovat s různými poli formuláře ve vašich dokumentech. Nezapomeňte prozkoumat[dokumentace](https://tutorials.groupdocs.com/editor/net/)pro pokročilejší funkce a možnosti.
 ## FAQ
 ### 1. Mohu použít GroupDocs.Editor pro .NET s dokumenty chráněnými heslem?
 Ano, můžete zadat heslo v možnostech načtení pro zpracování dokumentů chráněných heslem.
@@ -104,4 +103,4 @@ Ano, můžete zadat heslo v možnostech načtení pro zpracování dokumentů ch
 ### 4. Mohu si zakoupit licenci pro GroupDocs.Editor pro .NET?
  Ano, můžete si zakoupit licenci od[tady](https://purchase.groupdocs.com/buy).
 ### 5. Kde najdu dokumentaci k GroupDocs.Editor pro .NET?
-Dokumentace je k dispozici[tady](https://reference.groupdocs.com/editor/net/).
+Dokumentace je k dispozici[tady](https://tutorials.groupdocs.com/editor/net/).

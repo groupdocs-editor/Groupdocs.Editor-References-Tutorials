@@ -3,7 +3,6 @@ title: 保存文档
 linktitle: 保存文档
 second_title: GroupDocs.Editor .NET API
 description: 使用 GroupDocs.Editor for .NET 轻松编辑和保存文档。本分步指南简化了开发人员的流程。
-type: docs
 weight: 14
 url: /zh/net/document-editing/save-document/
 ---
@@ -80,7 +79,7 @@ editor.Dispose();
 使用 GroupDocs.Editor for .NET，以编程方式编辑和保存文档从未如此简单。本指南将引导您完成整个过程，从加载文档到以各种格式保存文档。使用 GroupDocs.Editor，您可以轻松获得多功能且强大的解决方案，从而简化文档编辑过程。
 ## 常见问题解答
 ### GroupDocs.Editor 支持哪些文件格式？
-GroupDocs.Editor 支持多种文件格式，包括 DOCX、RTF、TXT 等。如需查看完整列表，请查看[文档](https://reference.groupdocs.com/editor/net/).
+GroupDocs.Editor 支持多种文件格式，包括 DOCX、RTF、TXT 等。如需查看完整列表，请查看[文档](https://tutorials.groupdocs.com/editor/net/).
 ### 我可以在购买之前试用 GroupDocs.Editor 吗？
 是的，你可以得到一个[免费试用](https://releases.groupdocs.com/)测试 GroupDocs.Editor 的功能。
 ### 如果我遇到问题，可以获得任何支持吗？

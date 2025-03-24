@@ -3,7 +3,6 @@ title: Инструкция по началу работы
 linktitle: Инструкция по началу работы
 second_title: GroupDocs.Editor .NET API
 description: Научитесь использовать GroupDocs.Editor для .NET с помощью наших подробных руководств. Устанавливайте лицензии, интегрируйте функции и разблокируйте мощные возможности редактирования документов.
-type: docs
 weight: 26
 url: /ru/net/quick-start-guide/
 ---

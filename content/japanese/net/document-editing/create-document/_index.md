@@ -3,7 +3,6 @@ title: ドキュメントを作成
 linktitle: ドキュメントを作成
 second_title: GroupDocs.Editor .NET API
 description: この包括的なステップバイステップのチュートリアルでは、GroupDocs.Editor for .NET を使用して Word、Excel、PowerPoint、電子ブック、電子メールのドキュメントを編集する方法を学習します。
-type: docs
 weight: 10
 url: /ja/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ GroupDocs.Editor for .NET は、さまざまなドキュメント タイプを�
 ### GroupDocs.Editor for .NET を使用するにはライセンスが必要ですか?
 はい、ライセンスは以下から取得できます。[ここ](https://purchase.groupdocs.com/buy)一時ライセンスのオプションもあります。
 ### より詳細なドキュメントはどこで見つかりますか?
-詳細なドキュメントは、[GroupDocs.Editor for .NET ドキュメント ページ](https://reference.groupdocs.com/editor/net/).
+詳細なドキュメントは、[GroupDocs.Editor for .NET ドキュメント ページ](https://tutorials.groupdocs.com/editor/net/).

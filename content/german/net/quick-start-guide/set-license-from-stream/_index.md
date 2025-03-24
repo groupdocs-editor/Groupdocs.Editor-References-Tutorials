@@ -3,7 +3,6 @@ title: Lizenz vom Stream festlegen
 linktitle: Lizenz vom Stream festlegen
 second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie, wie Sie mit Groupdocs.Editor für .NET Dokumente programmgesteuert bearbeiten. Folgen Sie dieser umfassenden Anleitung für nahtlose Integration und erweiterte Funktionen.
-type: docs
 weight: 11
 url: /de/net/quick-start-guide/set-license-from-stream/
 ---
@@ -146,7 +145,7 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 }
 ```
 ## Abschluss
- Groupdocs.Editor für .NET ist ein vielseitiges und leistungsstarkes Tool, das Ihre Dokumentbearbeitungsprozesse erheblich rationalisieren kann. Mit seinen robusten Funktionen und der Unterstützung mehrerer Dokumentformate wird die Integration dieser Bibliothek in Ihre .NET-Anwendungen zweifellos Ihre Produktivität und Fähigkeiten steigern. Vergessen Sie nicht, die[Dokumentation](https://reference.groupdocs.com/editor/net/) für ausführlichere Informationen und erweiterte Nutzungsszenarien.
+ Groupdocs.Editor für .NET ist ein vielseitiges und leistungsstarkes Tool, das Ihre Dokumentbearbeitungsprozesse erheblich rationalisieren kann. Mit seinen robusten Funktionen und der Unterstützung mehrerer Dokumentformate wird die Integration dieser Bibliothek in Ihre .NET-Anwendungen zweifellos Ihre Produktivität und Fähigkeiten steigern. Vergessen Sie nicht, die[Dokumentation](https://tutorials.groupdocs.com/editor/net/) für ausführlichere Informationen und erweiterte Nutzungsszenarien.
 ## Häufig gestellte Fragen
 ### Kann ich Groupdocs.Editor für .NET ohne Lizenz verwenden?
  Nein, Sie benötigen eine gültige Lizenz, um Groupdocs.Editor für .NET zu verwenden. Sie können jedoch eine[vorläufige Lizenz](https://purchase.groupdocs.com/temporary-license/) zur Auswertung.
@@ -157,4 +156,4 @@ Ja, es unterstützt die Bearbeitung von PDF-Dateien sowie verschiedener anderer 
 ### Ist es möglich, Dokumente mit Groupdocs.Editor mit einem Passwort zu schützen?
 Ja, Sie können beim Speichern von Dokumenten Passwörter und andere Sicherheitsoptionen festlegen.
 ### Welche Dateiformate unterstützt Groupdocs.Editor für .NET?
- Es unterstützt eine Vielzahl von Formaten, darunter DOCX, XLSX, PDF und viele andere. Weitere Informationen finden Sie im[Dokumentation](https://reference.groupdocs.com/editor/net/) für eine vollständige Liste.
+ Es unterstützt eine Vielzahl von Formaten, darunter DOCX, XLSX, PDF und viele andere. Weitere Informationen finden Sie im[Dokumentation](https://tutorials.groupdocs.com/editor/net/) für eine vollständige Liste.

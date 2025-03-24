@@ -3,7 +3,6 @@ title: Xử lý nội dung CSS bằng tiền tố
 linktitle: Xử lý nội dung CSS bằng tiền tố
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách xử lý nội dung CSS có tiền tố bằng Groupdocs.Editor cho .NET trong hướng dẫn chi tiết từng bước này. Hoàn hảo cho các nhà phát triển ở mọi cấp độ.
-type: docs
 weight: 11
 url: /vi/net/css-handling/handle-css-content-with-prefix/
 ---
@@ -66,6 +65,6 @@ Có, Groupdocs.Editor cho .NET hỗ trợ nhiều định dạng tài liệu kh�
 ### Làm cách nào để có được giấy phép tạm thời cho Groupdocs.Editor cho .NET?
  Bạn có thể có được giấy phép tạm thời[đây](https://purchase.groupdocs.com/temporary-license/).
 ### Tôi có thể tìm tài liệu chi tiết về Groupdocs.Editor cho .NET ở đâu?
- Tài liệu chi tiết có sẵn[đây](https://reference.groupdocs.com/editor/net/).
+ Tài liệu chi tiết có sẵn[đây](https://tutorials.groupdocs.com/editor/net/).
 ### Những tùy chọn hỗ trợ nào có sẵn cho Groupdocs.Editor cho .NET?
  Bạn có thể nhận được sự hỗ trợ[đây](https://forum.groupdocs.com/c/editor/20).

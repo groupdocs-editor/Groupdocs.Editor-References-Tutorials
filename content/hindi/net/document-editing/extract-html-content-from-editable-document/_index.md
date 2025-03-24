@@ -3,7 +3,6 @@ title: संपादन योग्य दस्तावेज़ से HTM
 linktitle: संपादन योग्य दस्तावेज़ से HTML सामग्री निकालें
 second_title: GroupDocs.Editor .NET एपीआई
 description: .NET के लिए GroupDocs.Editor का उपयोग करके दस्तावेज़ों से HTML सामग्री को आसानी से निकालें। सहज एकीकरण और दस्तावेज़ प्रबंधन के लिए हमारी विस्तृत मार्गदर्शिका का पालन करें।
-type: docs
 weight: 12
 url: /hi/net/document-editing/extract-html-content-from-editable-document/
 ---
@@ -64,6 +63,6 @@ Console.WriteLine("HTML content of the input document (first 200 chars): {0}", h
 ### मैं .NET के लिए GroupDocs.Editor का अस्थायी लाइसेंस कैसे प्राप्त करूं?
  आप अस्थायी लाइसेंस का अनुरोध कर सकते हैं[ग्रुपडॉक्स खरीद पृष्ठ](https://purchase.groupdocs.com/temporary-license/).
 ### मैं .NET के लिए GroupDocs.Editor के दस्तावेज़ कहां पा सकता हूं?
- विस्तृत दस्तावेज उपलब्ध है[यहाँ](https://reference.groupdocs.com/editor/net/).
+ विस्तृत दस्तावेज उपलब्ध है[यहाँ](https://tutorials.groupdocs.com/editor/net/).
 ### यदि मुझे कोई समस्या आती है तो क्या मुझे सहायता मिल सकती है?
  हां, आप सहायता ले सकते हैं[ग्रुपडॉक्स सहायता मंच](https://forum.groupdocs.com/c/editor/20).

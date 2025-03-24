@@ -3,7 +3,6 @@ title: Düz Metin Belgeleriyle Çalışma
 linktitle: Düz Metin Belgeleriyle Çalışma
 second_title: GroupDocs.Editor .NET API'si
 description: Adım adım kılavuzumuzla GroupDocs.Editor for .NET'i kullanarak düz metin belgelerini düzenlemeyi öğrenin. .NET belge düzenleme sürecinizi basitleştirin.
-type: docs
 weight: 15
 url: /tr/net/document-processing/work-plain-text-documents/
 ---
@@ -96,10 +95,10 @@ Son olarak, düzenlenen belgeyi belirtilen kaydetme seçeneklerini kullanarak he
 System.Console.WriteLine("Document editing process completed successfully!");
 ```
 ## Çözüm
- Tebrikler! GroupDocs.Editor for .NET'i kullanarak düz metin belgesini başarıyla düzenlediniz. Bu güçlü araç, belge düzenlemeyi basitleştirerek .NET uygulamalarınızla entegrasyonunu kolaylaştırır. İster basit metin dosyalarıyla ister karmaşık belge formatlarıyla çalışıyor olun, GroupDocs.Editor ihtiyacınızı karşılar. adresini ziyaret ederek daha fazla özellik ve yeteneği keşfedin[GroupDocs.Editor belgeleri](https://reference.groupdocs.com/editor/net/).
+ Tebrikler! GroupDocs.Editor for .NET'i kullanarak düz metin belgesini başarıyla düzenlediniz. Bu güçlü araç, belge düzenlemeyi basitleştirerek .NET uygulamalarınızla entegrasyonunu kolaylaştırır. İster basit metin dosyalarıyla ister karmaşık belge formatlarıyla çalışıyor olun, GroupDocs.Editor ihtiyacınızı karşılar. adresini ziyaret ederek daha fazla özellik ve yeteneği keşfedin[GroupDocs.Editor belgeleri](https://tutorials.groupdocs.com/editor/net/).
 ## SSS'ler
 ### GroupDocs.Editor for .NET hangi dosya formatlarını destekler?
- GroupDocs.Editor for .NET, DOCX, TXT, HTML ve daha fazlasını içeren çok çeşitli dosya formatlarını destekler. Kontrol edin[dokümantasyon](https://reference.groupdocs.com/editor/net/) tam liste için.
+ GroupDocs.Editor for .NET, DOCX, TXT, HTML ve daha fazlasını içeren çok çeşitli dosya formatlarını destekler. Kontrol edin[dokümantasyon](https://tutorials.groupdocs.com/editor/net/) tam liste için.
 ### GroupDocs.Editor for .NET'in ücretsiz deneme sürümünü nasıl edinebilirim?
  GroupDocs.Editor for .NET'in ücretsiz deneme sürümünü şu adresten indirebilirsiniz:[sürümler sayfası](https://releases.groupdocs.com/).
 ### GroupDocs.Editor for .NET için geçici bir lisans satın alabilir miyim?
@@ -107,4 +106,4 @@ Evet, geçici lisansı şu adresten alabilirsiniz:[GroupDocs satın alma sayfas�
 ### .NET için GroupDocs.Editor desteğini nereden alabilirim?
  Destek şu adresten edinilebilir:[GroupDocs.Editor destek forumu](https://forum.groupdocs.com/c/editor/20).
 ### GroupDocs.Editor for .NET'e ilişkin ayrıntılı belgeler mevcut mu?
- Evet, ayrıntılı belgeler şu adreste mevcuttur:[GroupDocs.Editor dokümantasyon sayfası](https://reference.groupdocs.com/editor/net/).
+ Evet, ayrıntılı belgeler şu adreste mevcuttur:[GroupDocs.Editor dokümantasyon sayfası](https://tutorials.groupdocs.com/editor/net/).

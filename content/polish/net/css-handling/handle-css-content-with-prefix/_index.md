@@ -3,7 +3,6 @@ title: Obsługuj zawartość CSS za pomocą prefiksu
 linktitle: Obsługuj zawartość CSS za pomocą prefiksu
 second_title: Edytor GroupDocs.NET API
 description: Z tego szczegółowego samouczka krok po kroku dowiesz się, jak obsługiwać zawartość CSS z prefiksem przy użyciu programu Groupdocs.Editor dla platformy .NET. Idealny dla programistów na wszystkich poziomach.
-type: docs
 weight: 11
 url: /pl/net/css-handling/handle-css-content-with-prefix/
 ---
@@ -66,6 +65,6 @@ Tak, Groupdocs.Editor dla .NET obsługuje różne formaty dokumentów, w tym PDF
 ### Jak uzyskać tymczasową licencję na Groupdocs.Editor dla .NET?
  Możesz uzyskać licencję tymczasową[Tutaj](https://purchase.groupdocs.com/temporary-license/).
 ### Gdzie mogę znaleźć szczegółową dokumentację Groupdocs.Editor dla .NET?
- Dostępna jest szczegółowa dokumentacja[Tutaj](https://reference.groupdocs.com/editor/net/).
+ Dostępna jest szczegółowa dokumentacja[Tutaj](https://tutorials.groupdocs.com/editor/net/).
 ### Jakie opcje pomocy są dostępne dla Groupdocs.Editor dla .NET?
  Możesz uzyskać wsparcie[Tutaj](https://forum.groupdocs.com/c/editor/20).

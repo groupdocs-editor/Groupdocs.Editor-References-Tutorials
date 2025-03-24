@@ -3,7 +3,6 @@ title: Dokumentum létrehozása
 linktitle: Dokumentum létrehozása
 second_title: GroupDocs.Editor .NET API
 description: Ezzel az átfogó, lépésenkénti oktatóanyaggal megtudhatja, hogyan szerkeszthet Word, Excel, PowerPoint, Ebook és E-mail dokumentumokat a GroupDocs.Editor for .NET segítségével.
-type: docs
 weight: 10
 url: /hu/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ visszahívási funkció segítségével a szerkesztett dokumentumfolyamot a kív
 ### Szükségem van licencre a GroupDocs.Editor for .NET használatához?
  Igen, kaphat engedélyt[itt](https://purchase.groupdocs.com/buy). Lehetőség van ideiglenes engedélyre is.
 ### Hol találok részletesebb dokumentációt?
- A részletes dokumentáció elérhető a[GroupDocs.Editor for .NET dokumentációs oldal](https://reference.groupdocs.com/editor/net/).
+ A részletes dokumentáció elérhető a[GroupDocs.Editor for .NET dokumentációs oldal](https://tutorials.groupdocs.com/editor/net/).

@@ -3,7 +3,6 @@ title: تعيين الترخيص المقنن
 linktitle: تعيين الترخيص المقنن
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية دمج واستخدام GroupDocs.Editor لـ .NET من خلال دليلنا الشامل. أطلق العنان لميزات تحرير المستندات القوية ضمن تطبيقات .NET الخاصة بك.
-type: docs
 weight: 12
 url: /ar/net/quick-start-guide/set-metered-license/
 ---
@@ -69,15 +68,15 @@ editor.Save(editableDocument, "updated_sample.docx");
 Console.WriteLine("Document saved successfully.");
 ```
 ## خاتمة
- تهانينا! لقد نجحت في دمج GroupDocs.Editor لـ .NET واستخدامه في تطبيقك. من تثبيت المكتبة إلى إعداد ترخيص محدود وتحرير المستندات، لقد قمت بتغطية جميع الخطوات الأساسية. يمكن لهذه الأداة القوية تبسيط سير عمل تحرير المستندات بشكل كبير داخل تطبيقات .NET الخاصة بك. لمزيد من المعلومات، راجع[GroupDocs.Editor لوثائق .NET](https://reference.groupdocs.com/editor/net/).
+ تهانينا! لقد نجحت في دمج GroupDocs.Editor لـ .NET واستخدامه في تطبيقك. من تثبيت المكتبة إلى إعداد ترخيص محدود وتحرير المستندات، لقد قمت بتغطية جميع الخطوات الأساسية. يمكن لهذه الأداة القوية تبسيط سير عمل تحرير المستندات بشكل كبير داخل تطبيقات .NET الخاصة بك. لمزيد من المعلومات، راجع[GroupDocs.Editor لوثائق .NET](https://tutorials.groupdocs.com/editor/net/).
 ## الأسئلة الشائعة
 ### كيف يمكنني الحصول على ترخيص GroupDocs.Editor؟
  يمكنك الحصول على ترخيص من[صفحة شراء GroupDocs](https://purchase.groupdocs.com/buy) . للحصول على ترخيص مؤقت، قم بزيارة[هنا](https://purchase.groupdocs.com/temporary-license/).
 ### هل يمكنني تجربة GroupDocs.Editor مجانًا؟
  نعم، يمكنك تنزيل نسخة تجريبية مجانية من[صفحة التحميل](https://releases.groupdocs.com/) وطلب ترخيص مؤقت.
 ### ما هي تنسيقات المستندات التي يدعمها GroupDocs.Editor؟
- يدعم GroupDocs.Editor العديد من التنسيقات بما في ذلك DOCX وPPTX وXLSX وTXT وHTML والمزيد. للحصول على القائمة الكاملة، تحقق من[توثيق](https://reference.groupdocs.com/editor/net/).
+ يدعم GroupDocs.Editor العديد من التنسيقات بما في ذلك DOCX وPPTX وXLSX وTXT وHTML والمزيد. للحصول على القائمة الكاملة، تحقق من[توثيق](https://tutorials.groupdocs.com/editor/net/).
 ### هل هناك أي دعم مجتمعي متاح لـ GroupDocs.Editor؟
  نعم، يمكنك الحصول على دعم المجتمع من[منتدى GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
 ### كيف أبدأ باستخدام GroupDocs.Editor لـ .NET؟
- اتبع دليلنا خطوة بخطوة لإعداد المكتبة والحصول على ترخيص وبدء تحرير المستندات. للحصول على تعليمات مفصلة، قم بزيارة[توثيق](https://reference.groupdocs.com/editor/net/).
+ اتبع دليلنا خطوة بخطوة لإعداد المكتبة والحصول على ترخيص وبدء تحرير المستندات. للحصول على تعليمات مفصلة، قم بزيارة[توثيق](https://tutorials.groupdocs.com/editor/net/).

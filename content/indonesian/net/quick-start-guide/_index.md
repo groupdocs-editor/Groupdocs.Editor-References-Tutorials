@@ -3,7 +3,6 @@ title: Panduan Memulai Cepat
 linktitle: Panduan Memulai Cepat
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara menggunakan GroupDocs.Editor untuk .NET dengan tutorial komprehensif kami. Tetapkan lisensi, integrasikan fitur, dan buka kemampuan pengeditan dokumen yang canggih.
-type: docs
 weight: 26
 url: /id/net/quick-start-guide/
 ---

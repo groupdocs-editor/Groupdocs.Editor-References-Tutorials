@@ -3,7 +3,6 @@ title: 문서 처리
 linktitle: 문서 처리
 second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor를 사용하여 .NET에서 마스터 문서 처리. 정보를 추출하고, 다양한 형식으로 저장하고, 다양한 문서 유형으로 손쉽게 작업하는 방법을 알아보세요.
-type: docs
 weight: 24
 url: /ko/net/document-processing/
 ---

@@ -3,7 +3,6 @@ title: Documentbeheer ontgrendelen met GroupDocs.Editor
 linktitle: GroupDocs.Editor-tutorials
 additionalTitle: GroupDocs API-referenties
 description: Beheers moeiteloos het bewerken van documenten met GroupDocs.Editor voor .NET en Java. Stroomlijn de workflow, beheer CSS, haal HTML-inhoud op en meer!
-type: docs
 weight: 11
 url: /nl/
 is_root: true

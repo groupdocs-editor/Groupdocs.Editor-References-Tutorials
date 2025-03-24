@@ -3,7 +3,6 @@ title: Munka elválasztott értékekkel (DSV)
 linktitle: Munka elválasztott értékekkel (DSV)
 second_title: GroupDocs.Editor .NET API
 description: Ebből a lépésről lépésre szóló útmutatóból megtudhatja, hogyan szerkeszthet CSV- és TSV-fájlokat a GroupDocs.Editor for .NET használatával. Javítsa .NET-projektjeit könnyedén.
-type: docs
 weight: 12
 url: /hu/net/document-processing/work-dsv/
 ---
@@ -111,4 +110,4 @@ Természetesen a kívánt kódolást megadhatja a mentési beállításokban.
 ### Átalakíthatok egy CSV-fájlt Excel-táblázattá a GroupDocs.Editor for .NET segítségével?
 Igen, a megfelelő mentési beállítások használatával elmenthet egy CSV-fájlt Excel-táblázatként.
 ### Hol találok további dokumentációt a GroupDocs.Editor for .NET-hez?
- Részletes dokumentációt találhat[itt](https://reference.groupdocs.com/editor/net/)
+ Részletes dokumentációt találhat[itt](https://tutorials.groupdocs.com/editor/net/)

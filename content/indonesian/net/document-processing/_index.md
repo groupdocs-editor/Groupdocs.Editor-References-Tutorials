@@ -3,7 +3,6 @@ title: Pemrosesan Dokumen
 linktitle: Pemrosesan Dokumen
 second_title: GroupDocs.Editor .NET API
 description: Pemrosesan dokumen master di .NET dengan GroupDocs.Editor. Pelajari cara mengekstrak informasi, menyimpan ke berbagai format, dan bekerja dengan berbagai jenis dokumen dengan mudah.
-type: docs
 weight: 24
 url: /id/net/document-processing/
 ---

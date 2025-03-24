@@ -3,7 +3,6 @@ title: Dokumentumkezelés feloldása a GroupDocs.Editor segítségével
 linktitle: GroupDocs.Editor oktatóanyagok
 additionalTitle: GroupDocs API referenciák
 description: A GroupDocs.Editor for .NET és Java segítségével könnyedén szerkesztheti dokumentumait. Egyszerűsítse a munkafolyamatot, kezelje a CSS-t, kérjen le HTML-tartalmat és még sok más!
-type: docs
 weight: 11
 url: /hu/
 is_root: true

@@ -1,7 +1,6 @@
 ---
 title: Tutorial dan Contoh GroupDocs.Editor untuk .NET
 linktitle: GroupDocs.Editor untuk Tutorial .NET
-type: docs
 weight: 10
 url: /id/net/
 description: Kelola dan edit dokumen dengan GroupDocs.Editor .NET. Pelajari pemrosesan dokumen, pengeditan dokumen, pengambilan konten HTML, manajemen bidang formulir, dan banyak lagi!

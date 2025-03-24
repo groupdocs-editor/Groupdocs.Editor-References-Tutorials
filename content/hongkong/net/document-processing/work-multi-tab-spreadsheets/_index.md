@@ -3,7 +3,6 @@ title: 使用多選項卡電子表格
 linktitle: 使用多選項卡電子表格
 second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor 在 .NET 中處理多選項卡電子表格。包含逐步指南、程式碼範例和最佳實務。
-type: docs
 weight: 17
 url: /zh-hant/net/document-processing/work-multi-tab-spreadsheets/
 ---

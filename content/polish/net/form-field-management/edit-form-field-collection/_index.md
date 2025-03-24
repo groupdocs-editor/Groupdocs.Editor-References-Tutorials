@@ -3,7 +3,6 @@ title: Edytuj zbiór pól formularza
 linktitle: Edytuj zbiór pól formularza
 second_title: Edytor GroupDocs.NET API
 description: Zwiększ efektywność edycji dokumentów w projektach .NET dzięki Groupdocs.Editor. Bezproblemowo modyfikuj zbiory pól formularzy.
-type: docs
 weight: 10
 url: /pl/net/form-field-management/edit-form-field-collection/
 ---

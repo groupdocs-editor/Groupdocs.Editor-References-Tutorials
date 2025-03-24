@@ -3,7 +3,6 @@ title: حفظ موارد HTML إلى المجلد
 linktitle: حفظ موارد HTML إلى المجلد
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية استخراج موارد HTML من المستندات باستخدام Groupdocs.Editor لـ .NET. يوفر هذا البرنامج التعليمي الشامل إرشادات خطوة بخطوة للمطورين.
-type: docs
 weight: 13
 url: /ar/net/document-editing/save-html-resources-to-folder/
 ---

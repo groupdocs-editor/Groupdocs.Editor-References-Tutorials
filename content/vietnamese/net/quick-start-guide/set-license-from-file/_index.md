@@ -3,7 +3,6 @@ title: Đặt giấy phép từ tệp
 linktitle: Đặt giấy phép từ tệp
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách sử dụng GroupDocs.Editor dành cho .NET để chỉnh sửa tài liệu liền mạch trong ứng dụng của bạn. Bao gồm hướng dẫn từng bước, mẹo và câu hỏi thường gặp.
-type: docs
 weight: 10
 url: /vi/net/quick-start-guide/set-license-from-file/
 ---
@@ -89,4 +88,4 @@ Tuyệt đối! GroupDocs.Editor cho .NET có thể được tích hợp vào nh
 ### Làm cách nào để xử lý các tài liệu lớn bằng GroupDocs.Editor cho .NET?
 GroupDocs.Editor cho .NET được thiết kế để xử lý hiệu quả các tài liệu lớn. Tuy nhiên, để có hiệu suất tối ưu, hãy cân nhắc việc quản lý tài nguyên và xử lý tài liệu theo từng phân đoạn nếu cần thiết.
 ### Tôi có thể tìm tài liệu và hỗ trợ chi tiết hơn ở đâu?
- Bạn có thể tìm thấy tài liệu chi tiết về[Trang tài liệu GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) và tìm kiếm sự hỗ trợ từ[Diễn đàn hỗ trợ GroupDocs](https://forum.groupdocs.com/c/editor/20).
+ Bạn có thể tìm thấy tài liệu chi tiết về[Trang tài liệu GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) và tìm kiếm sự hỗ trợ từ[Diễn đàn hỗ trợ GroupDocs](https://forum.groupdocs.com/c/editor/20).

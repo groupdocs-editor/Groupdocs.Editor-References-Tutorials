@@ -3,7 +3,6 @@ title: HTML-bronnen opslaan in map
 linktitle: HTML-bronnen opslaan in map
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u HTML-bronnen uit documenten kunt extraheren met Groupdocs.Editor voor .NET. Deze uitgebreide tutorial biedt stapsgewijze begeleiding voor ontwikkelaars.
-type: docs
 weight: 13
 url: /nl/net/document-editing/save-html-resources-to-folder/
 ---

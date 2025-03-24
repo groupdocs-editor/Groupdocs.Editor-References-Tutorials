@@ -3,7 +3,6 @@ title: Truy xuất nội dung HTML
 linktitle: Truy xuất nội dung HTML
 second_title: API GroupDocs.Editor .NET
 description: Khám phá cách truy xuất nội dung HTML bằng GroupDocs.Editor cho .NET. Bao gồm hướng dẫn từng bước để truy xuất nội dung nội dung và tiền tố tùy chỉnh.
-type: docs
 weight: 22
 url: /vi/net/html-content-retrieval/
 ---

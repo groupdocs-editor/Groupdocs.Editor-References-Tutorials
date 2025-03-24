@@ -3,7 +3,6 @@ title: Úvod do GroupDocs.Editoru pro .NET
 linktitle: Úvod do GroupDocs.Editoru pro .NET
 second_title: GroupDocs.Editor .NET API
 description: Naučte se, jak používat GroupDocs.Editor pro .NET k programové úpravě dokumentů pomocí tohoto podrobného průvodce krok za krokem.
-type: docs
 weight: 12
 url: /cs/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ GroupDocs.Editor pro .NET podporuje různé formáty, mimo jiné DOCX, PDF, HTML
 ### Je možné integrovat GroupDocs.Editor s cloudovým úložištěm?
 Ano, můžete integrovat GroupDocs.Editor s různými řešeními cloudového úložiště pro správu vašich dokumentů.
 ### Kde najdu dokumentaci k GroupDocs.Editor pro .NET?
-Dokumentace je k dispozici[tady](https://reference.groupdocs.com/editor/net/).
+Dokumentace je k dispozici[tady](https://tutorials.groupdocs.com/editor/net/).

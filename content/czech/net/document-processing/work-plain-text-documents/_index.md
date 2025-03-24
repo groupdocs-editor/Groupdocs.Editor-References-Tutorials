@@ -3,7 +3,6 @@ title: Práce s dokumenty ve formátu prostého textu
 linktitle: Práce s dokumenty ve formátu prostého textu
 second_title: GroupDocs.Editor .NET API
 description: Naučte se upravovat dokumenty ve formátu prostého textu pomocí GroupDocs.Editor pro .NET pomocí našeho podrobného průvodce. Zjednodušte si proces úprav dokumentů .NET.
-type: docs
 weight: 15
 url: /cs/net/document-processing/work-plain-text-documents/
 ---
@@ -96,10 +95,10 @@ Nakonec uložte upravený dokument ve formátu DOCX i TXT pomocí zadaných mož
 System.Console.WriteLine("Document editing process completed successfully!");
 ```
 ## Závěr
- Gratulujeme! Úspěšně jste upravili dokument ve formátu prostého textu pomocí GroupDocs.Editor pro .NET. Tento výkonný nástroj zjednodušuje úpravy dokumentů a usnadňuje integraci do vašich aplikací .NET. Ať už zpracováváte jednoduché textové soubory nebo složité formáty dokumentů, GroupDocs.Editor vás pokryje. Prozkoumejte další funkce a možnosti na[GroupDocs.Editor dokumentace](https://reference.groupdocs.com/editor/net/).
+ Gratulujeme! Úspěšně jste upravili dokument ve formátu prostého textu pomocí GroupDocs.Editor pro .NET. Tento výkonný nástroj zjednodušuje úpravy dokumentů a usnadňuje integraci do vašich aplikací .NET. Ať už zpracováváte jednoduché textové soubory nebo složité formáty dokumentů, GroupDocs.Editor vás pokryje. Prozkoumejte další funkce a možnosti na[GroupDocs.Editor dokumentace](https://tutorials.groupdocs.com/editor/net/).
 ## FAQ
 ### Jaké formáty souborů podporuje GroupDocs.Editor for .NET?
- GroupDocs.Editor pro .NET podporuje širokou škálu formátů souborů, včetně DOCX, TXT, HTML a dalších. Zkontrolovat[dokumentace](https://reference.groupdocs.com/editor/net/) pro úplný seznam.
+ GroupDocs.Editor pro .NET podporuje širokou škálu formátů souborů, včetně DOCX, TXT, HTML a dalších. Zkontrolovat[dokumentace](https://tutorials.groupdocs.com/editor/net/) pro úplný seznam.
 ### Jak mohu získat bezplatnou zkušební verzi GroupDocs.Editor pro .NET?
  Můžete si stáhnout bezplatnou zkušební verzi GroupDocs.Editor pro .NET z webu[stránka vydání](https://releases.groupdocs.com/).
 ### Mohu si zakoupit dočasnou licenci pro GroupDocs.Editor pro .NET?
@@ -107,4 +106,4 @@ Ano, můžete získat dočasnou licenci od[Nákupní stránka GroupDocs](https:/
 ### Kde mohu získat podporu pro GroupDocs.Editor pro .NET?
  Podpora je k dispozici prostřednictvím[Fórum podpory GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
 ### Je k dispozici podrobná dokumentace pro GroupDocs.Editor pro .NET?
- Ano, podrobná dokumentace je k dispozici na[Stránka dokumentace GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ Ano, podrobná dokumentace je k dispozici na[Stránka dokumentace GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).

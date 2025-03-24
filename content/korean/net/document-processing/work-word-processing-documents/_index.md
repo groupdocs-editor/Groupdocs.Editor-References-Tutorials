@@ -3,7 +3,6 @@ title: 워드 프로세싱 문서 작업
 linktitle: 워드 프로세싱 문서 작업
 second_title: GroupDocs.Editor .NET API
 description: .NET용 GroupDocs.Editor를 사용하여 워드 프로세싱 문서를 손쉽게 편집하세요. 문서 관리 기술을 향상하려면 자세한 단계별 튜토리얼을 따르십시오.
-type: docs
 weight: 19
 url: /ko/net/document-processing/work-word-processing-documents/
 ---
@@ -117,7 +116,7 @@ Console.WriteLine("Document editing and saving process completed successfully.")
 이제 .NET용 GroupDocs.Editor를 사용하여 워드 처리 문서로 작업하는 방법에 대한 포괄적인 단계별 가이드를 완료했습니다. 이 강력한 도구를 사용하면 프로그래밍 방식으로 문서를 쉽게 조작하고 편집할 수 있으며 문서 처리 워크플로우를 사용자 정의할 수 있는 다양한 옵션을 제공합니다.
 ## FAQ
 ### .NET용 GroupDocs.Editor를 사용하여 다른 문서 형식을 편집할 수 있습니까?
- 예, GroupDocs.Editor는 PDF, HTML 등을 포함한 다양한 문서 형식을 지원합니다. 을 체크 해봐[선적 서류 비치](https://reference.groupdocs.com/editor/net/) 지원되는 형식의 전체 목록을 보려면
+ 예, GroupDocs.Editor는 PDF, HTML 등을 포함한 다양한 문서 형식을 지원합니다. 을 체크 해봐[선적 서류 비치](https://tutorials.groupdocs.com/editor/net/) 지원되는 형식의 전체 목록을 보려면
 ### 라이센스 없이 GroupDocs.Editor를 사용할 수 있습니까?
  무료 평가판을 사용하거나 임시 라이센스를 요청할 수 있습니다. 장기간 사용하려면 라이센스 구매를 권장합니다. 라이센스 받기[여기](https://purchase.groupdocs.com/buy).
 ### OutOfMemoryException을 발생시키는 대용량 문서를 어떻게 처리합니까?

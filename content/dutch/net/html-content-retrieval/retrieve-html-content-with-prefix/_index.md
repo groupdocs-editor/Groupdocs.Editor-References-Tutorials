@@ -3,7 +3,6 @@ title: Haal HTML-inhoud met voorvoegsel op
 linktitle: Haal HTML-inhoud met voorvoegsel op
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u HTML-inhoud uit documenten kunt ophalen met GroupDocs.Editor voor .NET met aangepaste voorvoegsels voor afbeeldingen en stylesheets. Stap-voor-stap handleiding inbegrepen.
-type: docs
 weight: 11
 url: /nl/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 Met dit codefragment wordt de HTML-inhoud met de aangepaste voorvoegsels opgehaald en naar de console afgedrukt. U kunt deze HTML-inhoud indien nodig verder verwerken of opslaan.
 ## Conclusie
 En daar heb je het! Door deze stappen te volgen, kunt u eenvoudig HTML-inhoud uit een document ophalen met GroupDocs.Editor voor .NET, compleet met aangepaste voorvoegsels voor afbeeldingen en stylesheets. Deze krachtige tool vereenvoudigt documentmanipulatie, zodat u zich kunt concentreren op het naadloos integreren van documentbewerking in uw .NET-applicaties.
- Voor meer gedetailleerde informatie, bekijk de[GroupDocs.Editor voor .NET-documentatie](https://reference.groupdocs.com/editor/net/) . Als u vragen heeft of meer hulp nodig heeft, kunt u contact opnemen met de[Helpforum](https://forum.groupdocs.com/c/editor/20).
+ Voor meer gedetailleerde informatie, bekijk de[GroupDocs.Editor voor .NET-documentatie](https://tutorials.groupdocs.com/editor/net/) . Als u vragen heeft of meer hulp nodig heeft, kunt u contact opnemen met de[Helpforum](https://forum.groupdocs.com/c/editor/20).
 ## Veelgestelde vragen
 ### Welke soorten documenten kan ik bewerken met GroupDocs.Editor voor .NET?
 GroupDocs.Editor ondersteunt verschillende documentformaten, waaronder Word, Excel, PowerPoint, PDF en meer.

@@ -3,7 +3,6 @@ title: Работа со значениями, разделенными разд
 linktitle: Работа со значениями, разделенными разделителями (DSV)
 second_title: GroupDocs.Editor .NET API
 description: Узнайте, как редактировать файлы CSV и TSV с помощью GroupDocs.Editor для .NET, с помощью этого пошагового руководства. Улучшайте свои проекты .NET без особых усилий.
-type: docs
 weight: 12
 url: /ru/net/document-processing/work-dsv/
 ---
@@ -111,4 +110,4 @@ System.Console.WriteLine("WorkingWithDsv routine has successfully finished");
 ### Могу ли я преобразовать файл CSV в электронную таблицу Excel с помощью GroupDocs.Editor для .NET?
 Да, вы можете сохранить файл CSV как электронную таблицу Excel, используя соответствующие параметры сохранения.
 ### Где я могу найти дополнительную документацию по GroupDocs.Editor для .NET?
- Вы можете найти подробную документацию[здесь](https://reference.groupdocs.com/editor/net/)
+ Вы можете найти подробную документацию[здесь](https://tutorials.groupdocs.com/editor/net/)

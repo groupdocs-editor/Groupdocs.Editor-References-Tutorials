@@ -3,7 +3,6 @@ title: Bekerja dengan Format Dokumen
 linktitle: Bekerja dengan Format Dokumen
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara menggunakan GroupDocs.Editor untuk .NET untuk mengedit berbagai format dokumen secara terprogram. Panduan langkah demi langkah dengan contoh untuk integrasi yang lancar.
-type: docs
 weight: 13
 url: /id/net/document-processing/work-document-formats/
 ---
@@ -159,4 +158,4 @@ GroupDocs.Editor antara lain mendukung format Pemrosesan Kata, Spreadsheet, Pres
 ### Bisakah saya menggunakan GroupDocs.Editor secara gratis?
  Anda dapat menggunakan a[uji coba gratis](https://releases.groupdocs.com/) dengan fitur terbatas atau dapatkan a[izin sementara](https://purchase.groupdocs.com/temporary-license/) untuk akses penuh.
 ### Di mana saya dapat menemukan lebih banyak sumber daya dan dukungan?
- Mengunjungi[Dokumentasi GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) untuk informasi rinci, atau lihat mereka[forum dukungan](https://forum.groupdocs.com/c/editor/20) untuk bantuan.
+ Mengunjungi[Dokumentasi GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) untuk informasi rinci, atau lihat mereka[forum dukungan](https://forum.groupdocs.com/c/editor/20) untuk bantuan.

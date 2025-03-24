@@ -3,7 +3,6 @@ title: Tetapkan Lisensi dari File
 linktitle: Tetapkan Lisensi dari File
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara menggunakan GroupDocs.Editor untuk .NET untuk pengeditan dokumen yang lancar di aplikasi Anda. Panduan langkah demi langkah, tip, dan FAQ disertakan.
-type: docs
 weight: 10
 url: /id/net/quick-start-guide/set-license-from-file/
 ---
@@ -89,4 +88,4 @@ Sangat! GroupDocs.Editor untuk .NET dapat diintegrasikan ke dalam berbagai jenis
 ### Bagaimana cara menangani dokumen besar dengan GroupDocs.Editor untuk .NET?
 GroupDocs.Editor untuk .NET dirancang untuk menangani dokumen besar secara efisien. Namun, untuk performa optimal, pertimbangkan untuk mengelola sumber daya dan menangani dokumen dalam segmen jika diperlukan.
 ### Di mana saya dapat menemukan dokumentasi dan dukungan yang lebih detail?
- Anda dapat menemukan dokumentasi terperinci di[Halaman dokumentasi GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) dan mencari dukungan dari[Forum dukungan GroupDocs](https://forum.groupdocs.com/c/editor/20).
+ Anda dapat menemukan dokumentasi terperinci di[Halaman dokumentasi GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) dan mencari dukungan dari[Forum dukungan GroupDocs](https://forum.groupdocs.com/c/editor/20).

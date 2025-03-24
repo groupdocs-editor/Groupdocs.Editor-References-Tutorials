@@ -3,7 +3,6 @@ title: Upravit kolekci polí formuláře
 linktitle: Upravit kolekci polí formuláře
 second_title: GroupDocs.Editor .NET API
 description: Zvyšte efektivitu úprav dokumentů v projektech .NET pomocí Groupdocs.Editor. Bezproblémově upravujte kolekce polí formuláře.
-type: docs
 weight: 10
 url: /cs/net/form-field-management/edit-form-field-collection/
 ---

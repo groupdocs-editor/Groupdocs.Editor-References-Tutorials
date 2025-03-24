@@ -3,7 +3,6 @@ title: Licentie instellen vanuit bestand
 linktitle: Licentie instellen vanuit bestand
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u GroupDocs.Editor voor .NET kunt gebruiken voor naadloze documentbewerking in uw toepassingen. Inclusief stap-voor-stap handleiding, tips en veelgestelde vragen.
-type: docs
 weight: 10
 url: /nl/net/quick-start-guide/set-license-from-file/
 ---
@@ -89,4 +88,4 @@ Absoluut! GroupDocs.Editor voor .NET kan worden geïntegreerd in verschillende s
 ### Hoe ga ik om met grote documenten met GroupDocs.Editor voor .NET?
 GroupDocs.Editor voor .NET is ontworpen om grote documenten efficiënt te verwerken. Voor optimale prestaties kunt u echter overwegen om resources te beheren en documenten indien nodig in segmenten te verwerken.
 ### Waar kan ik meer gedetailleerde documentatie en ondersteuning vinden?
- Uitgebreide documentatie vindt u op de website[GroupDocs.Editor-documentatiepagina](https://reference.groupdocs.com/editor/net/) en steun zoeken bij de[GroupDocs-ondersteuningsforum](https://forum.groupdocs.com/c/editor/20).
+ Uitgebreide documentatie vindt u op de website[GroupDocs.Editor-documentatiepagina](https://tutorials.groupdocs.com/editor/net/) en steun zoeken bij de[GroupDocs-ondersteuningsforum](https://forum.groupdocs.com/c/editor/20).

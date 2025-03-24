@@ -1,7 +1,6 @@
 ---
 title: .NET için GroupDocs.Editor Öğreticileri ve Örnekleri
 linktitle: .NET Eğitimleri için GroupDocs.Editor
-type: docs
 weight: 10
 url: /tr/net/
 description: GroupDocs.Editor .NET ile belgeleri yönetin ve düzenleyin. Belge işlemeyi, belge düzenlemeyi, HTML içeriği almayı, form alanı yönetimini ve daha fazlasını öğrenin!

@@ -3,7 +3,6 @@ title: تعامل مع محتوى CSS باستخدام البادئة
 linktitle: تعامل مع محتوى CSS باستخدام البادئة
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية التعامل مع محتوى CSS باستخدام البادئة باستخدام Groupdocs.Editor لـ .NET في هذا البرنامج التعليمي المفصل خطوة بخطوة. مثالية للمطورين من جميع المستويات.
-type: docs
 weight: 11
 url: /ar/net/css-handling/handle-css-content-with-prefix/
 ---
@@ -66,6 +65,6 @@ using (Editor editor = new Editor("Your Sample Document", delegate { return new 
 ### كيف يمكنني الحصول على ترخيص مؤقت لـ Groupdocs.Editor لـ .NET؟
  يمكنك الحصول على ترخيص مؤقت[هنا](https://purchase.groupdocs.com/temporary-license/).
 ### أين يمكنني العثور على الوثائق التفصيلية لـ Groupdocs.Editor لـ .NET؟
- الوثائق التفصيلية متاحة[هنا](https://reference.groupdocs.com/editor/net/).
+ الوثائق التفصيلية متاحة[هنا](https://tutorials.groupdocs.com/editor/net/).
 ### ما هي خيارات الدعم المتوفرة لـ Groupdocs.Editor لـ .NET؟
  يمكنك الحصول على الدعم[هنا](https://forum.groupdocs.com/c/editor/20).

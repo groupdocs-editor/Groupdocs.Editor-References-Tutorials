@@ -3,7 +3,6 @@ title: Создать редактируемый документ из HTML
 linktitle: Создать редактируемый документ из HTML
 second_title: GroupDocs.Editor .NET API
 description: Преобразуйте HTML в редактируемые документы Word с помощью GroupDocs.Editor для .NET с помощью этого пошагового руководства. Идеально подходит для оптимизации рабочего процесса управления документами.
-type: docs
 weight: 10
 url: /ru/net/document-editing/create-editable-document-from-html/
 ---

@@ -3,7 +3,6 @@ title: العمل مع القيم المنفصلة المحددة (DSV)
 linktitle: العمل مع القيم المنفصلة المحددة (DSV)
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية تحرير ملفات CSV وTSV باستخدام GroupDocs.Editor لـ .NET باستخدام هذا الدليل التفصيلي خطوة بخطوة. قم بتحسين مشاريع .NET الخاصة بك بسهولة.
-type: docs
 weight: 12
 url: /ar/net/document-processing/work-dsv/
 ---
@@ -111,4 +110,4 @@ System.Console.WriteLine("WorkingWithDsv routine has successfully finished");
 ### هل يمكنني تحويل ملف CSV إلى جدول بيانات Excel باستخدام GroupDocs.Editor لـ .NET؟
 نعم، يمكنك حفظ ملف CSV كجدول بيانات Excel باستخدام خيارات الحفظ المناسبة.
 ### أين يمكنني العثور على مزيد من الوثائق حول GroupDocs.Editor لـ .NET؟
- يمكنك العثور على وثائق مفصلة[هنا](https://reference.groupdocs.com/editor/net/)
+ يمكنك العثور على وثائق مفصلة[هنا](https://tutorials.groupdocs.com/editor/net/)

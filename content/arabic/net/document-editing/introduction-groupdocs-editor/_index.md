@@ -3,7 +3,6 @@ title: مقدمة إلى GroupDocs.Editor لـ .NET
 linktitle: مقدمة إلى GroupDocs.Editor لـ .NET
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية استخدام GroupDocs.Editor لـ .NET لتحرير المستندات برمجيًا باستخدام هذا الدليل المفصل خطوة بخطوة.
-type: docs
 weight: 12
 url: /ar/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ editor.Dispose();
 ### هل من الممكن دمج GroupDocs.Editor مع التخزين السحابي؟
 نعم، يمكنك دمج GroupDocs.Editor مع حلول التخزين السحابية المتنوعة لإدارة مستنداتك.
 ### أين يمكنني العثور على الوثائق الخاصة بـ GroupDocs.Editor لـ .NET؟
-الوثائق متاحة[هنا](https://reference.groupdocs.com/editor/net/).
+الوثائق متاحة[هنا](https://tutorials.groupdocs.com/editor/net/).

@@ -3,7 +3,6 @@ title: 文档处理
 linktitle: 文档处理
 second_title: GroupDocs.Editor .NET API
 description: 使用 GroupDocs.Editor 掌握 .NET 中的文档处理。学习如何轻松提取信息、保存为各种格式以及处理不同类型的文档。
-type: docs
 weight: 24
 url: /zh/net/document-processing/
 ---

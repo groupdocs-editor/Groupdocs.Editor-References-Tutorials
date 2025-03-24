@@ -3,7 +3,6 @@ title: ドキュメント形式の操作
 linktitle: ドキュメント形式の操作
 second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用してさまざまなドキュメント形式をプログラムで編集する方法を学びます。シームレスな統合のための例を説明したステップバイステップ ガイドです。
-type: docs
 weight: 13
 url: /ja/net/document-processing/work-document-formats/
 ---
@@ -159,4 +158,4 @@ GroupDocs.Editor は、ワードプロセッシング、スプレッドシート
 ### GroupDocs.Editor は無料で使用できますか?
 あなたは[無料トライアル](https://releases.groupdocs.com/)機能が制限された[一時ライセンス](https://purchase.groupdocs.com/temporary-license/)フルアクセス。
 ### より多くのリソースとサポートはどこで見つかりますか?
-訪問[GroupDocs.Editor ドキュメント](https://reference.groupdocs.com/editor/net/)詳しい情報はこちら、または[サポートフォーラム](https://forum.groupdocs.com/c/editor/20)助けを求めて。
+訪問[GroupDocs.Editor ドキュメント](https://tutorials.groupdocs.com/editor/net/)詳しい情報はこちら、または[サポートフォーラム](https://forum.groupdocs.com/c/editor/20)助けを求めて。

@@ -3,7 +3,6 @@ title: プレフィックス付きのHTMLコンテンツを取得する
 linktitle: プレフィックス付きのHTMLコンテンツを取得する
 second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用して、画像とスタイルシートのカスタム プレフィックスを使用してドキュメントから HTML コンテンツを取得する方法を学びます。ステップ バイ ステップ ガイドが含まれています。
-type: docs
 weight: 11
 url: /ja/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 このコード スニペットは、カスタム プレフィックス付きの HTML コンテンツを取得し、コンソールに出力します。必要に応じて、この HTML コンテンツをさらに処理したり保存したりできます。
 ## 結論
 これで完了です。これらの手順に従うと、GroupDocs.Editor for .NET を使用して、画像やスタイルシートのカスタム プレフィックスを備えたドキュメントから HTML コンテンツを簡単に取得できます。この強力なツールにより、ドキュメントの操作が簡素化され、ドキュメント編集を .NET アプリケーションにシームレスに統合することに集中できます。
-詳しい情報については、[.NET ドキュメント用の GroupDocs.Editor](https://reference.groupdocs.com/editor/net/)ご質問やさらなるサポートが必要な場合は、お気軽にお問い合わせください。[サポートフォーラム](https://forum.groupdocs.com/c/editor/20).
+詳しい情報については、[.NET ドキュメント用の GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/)ご質問やさらなるサポートが必要な場合は、お気軽にお問い合わせください。[サポートフォーラム](https://forum.groupdocs.com/c/editor/20).
 ## よくある質問
 ### GroupDocs.Editor for .NET で編集できるドキュメントの種類は何ですか?
 GroupDocs.Editor は、Word、Excel、PowerPoint、PDF など、さまざまなドキュメント形式をサポートしています。

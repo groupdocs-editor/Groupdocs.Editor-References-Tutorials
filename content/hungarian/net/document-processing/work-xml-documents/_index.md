@@ -3,7 +3,6 @@ title: Dolgozzon XML dokumentumokkal
 linktitle: Dolgozzon XML dokumentumokkal
 second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan lehet hatékonyan szerkeszteni XML-dokumentumokat a GroupDocs.Editor for .NET segítségével lépésről lépésre szóló útmutatónkból, amely minden lényeges lépést és lehetőséget lefed.
-type: docs
 weight: 20
 url: /hu/net/document-processing/work-xml-documents/
 ---

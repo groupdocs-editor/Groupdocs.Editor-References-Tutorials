@@ -3,7 +3,6 @@ title: Xử lý CSS
 linktitle: Xử lý CSS
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách xử lý nội dung CSS hiệu quả với GroupDocs.Editor cho .NET. Trích xuất nội dung CSS bên ngoài và xử lý nội dung CSS bằng tiền tố một cách dễ dàng.
-type: docs
 weight: 21
 url: /vi/net/css-handling/
 ---

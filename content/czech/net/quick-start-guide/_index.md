@@ -3,7 +3,6 @@ title: Rychlý návod
 linktitle: Rychlý návod
 second_title: GroupDocs.Editor .NET API
 description: Naučte se používat GroupDocs.Editor pro .NET pomocí našich komplexních výukových programů. Nastavte licence, integrujte funkce a odemkněte výkonné možnosti úpravy dokumentů.
-type: docs
 weight: 26
 url: /cs/net/quick-start-guide/
 ---

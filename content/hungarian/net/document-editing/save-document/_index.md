@@ -3,7 +3,6 @@ title: Dokumentum mentése
 linktitle: Dokumentum mentése
 second_title: GroupDocs.Editor .NET API
 description: Könnyedén szerkesztheti és mentheti a dokumentumokat a GroupDocs.Editor for .NET segítségével. Ez a lépésenkénti útmutató leegyszerűsíti a folyamatot a fejlesztők számára.
-type: docs
 weight: 14
 url: /hu/net/document-editing/save-document/
 ---
@@ -80,7 +79,7 @@ Ha követi ezeket a lépéseket, hatékonyan tölthet be, szerkeszthet és menth
 A dokumentumok programozott szerkesztése és mentése még soha nem volt ilyen egyszerű a GroupDocs.Editor for .NET segítségével. Ez az útmutató végigvezeti Önt a teljes folyamaton, a dokumentum betöltésétől a különféle formátumokban történő mentéséig. A GroupDocs.Editor segítségével sokoldalú és robusztus megoldást kaphat, amely leegyszerűsíti a dokumentumszerkesztési folyamatot.
 ## GYIK
 ### Milyen fájlformátumokat támogat a GroupDocs.Editor?
- GroupDocs.Editor különféle fájlformátumokat támogat, beleértve a DOCX, RTF, TXT és még sok más formátumot. A teljes lista megtekintéséhez nézze meg a[dokumentáció](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor különféle fájlformátumokat támogat, beleértve a DOCX, RTF, TXT és még sok más formátumot. A teljes lista megtekintéséhez nézze meg a[dokumentáció](https://tutorials.groupdocs.com/editor/net/).
 ### Kipróbálhatom a GroupDocs.Editort vásárlás előtt?
  Igen, kaphat a[ingyenes próbaverzió](https://releases.groupdocs.com/) hogy tesztelje a GroupDocs.Editor szolgáltatásait.
 ### Van-e valamilyen támogatás, ha problémákkal szembesülök?

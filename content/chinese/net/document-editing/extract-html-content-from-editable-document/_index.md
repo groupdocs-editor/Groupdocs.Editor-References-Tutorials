@@ -3,7 +3,6 @@ title: 从可编辑文档中提取 HTML 内容
 linktitle: 从可编辑文档中提取 HTML 内容
 second_title: GroupDocs.Editor .NET API
 description: 使用 GroupDocs.Editor for .NET 轻松从文档中提取 HTML 内容。按照我们的详细指南进行无缝集成和文档管理。
-type: docs
 weight: 12
 url: /zh/net/document-editing/extract-html-content-from-editable-document/
 ---
@@ -64,6 +63,6 @@ GroupDocs.Editor for .NET 支持多种文档格式，包括文字处理、电子
 ### 如何获取 .NET 的 GroupDocs.Editor 临时许可证？
 您可以向[GroupDocs 购买页面](https://purchase.groupdocs.com/temporary-license/).
 ### 在哪里可以找到 .NET 的 GroupDocs.Editor 文档？
-提供全面的文档[这里](https://reference.groupdocs.com/editor/net/).
+提供全面的文档[这里](https://tutorials.groupdocs.com/editor/net/).
 ### 如果我遇到问题可以获得支持吗？
 是的，你可以向[GroupDocs 支持论坛](https://forum.groupdocs.com/c/editor/20).

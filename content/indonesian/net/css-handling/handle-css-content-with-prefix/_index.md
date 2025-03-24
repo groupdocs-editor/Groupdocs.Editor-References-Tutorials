@@ -3,7 +3,6 @@ title: Tangani Konten CSS dengan Awalan
 linktitle: Tangani Konten CSS dengan Awalan
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara menangani konten CSS dengan awalan menggunakan Groupdocs.Editor untuk .NET dalam tutorial langkah demi langkah yang mendetail ini. Sempurna untuk pengembang dari semua tingkatan.
-type: docs
 weight: 11
 url: /id/net/css-handling/handle-css-content-with-prefix/
 ---
@@ -66,6 +65,6 @@ Ya, Groupdocs.Editor untuk .NET mendukung berbagai format dokumen termasuk PDF, 
 ### Bagaimana cara mendapatkan lisensi sementara untuk Groupdocs.Editor untuk .NET?
  Anda bisa mendapatkan lisensi sementara[Di Sini](https://purchase.groupdocs.com/temporary-license/).
 ### Di mana saya dapat menemukan dokumentasi terperinci untuk Groupdocs.Editor untuk .NET?
- Dokumentasi terperinci tersedia[Di Sini](https://reference.groupdocs.com/editor/net/).
+ Dokumentasi terperinci tersedia[Di Sini](https://tutorials.groupdocs.com/editor/net/).
 ### Opsi dukungan apa yang tersedia untuk Groupdocs.Editor untuk .NET?
  Anda bisa mendapatkan dukungan[Di Sini](https://forum.groupdocs.com/c/editor/20).

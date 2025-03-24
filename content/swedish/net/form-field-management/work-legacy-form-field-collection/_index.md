@@ -3,7 +3,6 @@ title: Arbeta med Legacy Form Field Collection
 linktitle: Arbeta med Legacy Form Field Collection
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du hanterar äldre formulärfält med hjälp av GroupDocs.Editor för .NET med vår detaljerade guide. Perfekt för att hantera textfält, kryssrutor, datum och mer.
-type: docs
 weight: 12
 url: /sv/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## Steg 8: Slutsats
 Genom att följa dessa steg kan du effektivt hantera och interagera med äldre formulärfält i dina dokument med GroupDocs.Editor för .NET. Oavsett om det är textfält, kryssrutor, datum, siffror eller rullgardinsmenyer, ger den här guiden ett tydligt och kortfattat sätt att hantera varje typ.
 ## Slutsats
- Att arbeta med äldre formulärfält i dokument kan vara enkelt när du använder rätt verktyg. GroupDocs.Editor för .NET tillhandahåller en robust lösning för att hantera dessa fält effektivt. Genom att följa denna steg-för-steg-guide bör du nu kunna manipulera olika formulärfält i dina dokument med lätthet. Glöm inte att utforska[dokumentation](https://reference.groupdocs.com/editor/net/)för mer avancerade funktioner och alternativ.
+ Att arbeta med äldre formulärfält i dokument kan vara enkelt när du använder rätt verktyg. GroupDocs.Editor för .NET tillhandahåller en robust lösning för att hantera dessa fält effektivt. Genom att följa denna steg-för-steg-guide bör du nu kunna manipulera olika formulärfält i dina dokument med lätthet. Glöm inte att utforska[dokumentation](https://tutorials.groupdocs.com/editor/net/)för mer avancerade funktioner och alternativ.
 ## FAQ's
 ### 1. Kan jag använda GroupDocs.Editor för .NET med lösenordsskyddade dokument?
 Ja, du kan ange lösenordet i laddningsalternativen för att hantera lösenordsskyddade dokument.
@@ -104,4 +103,4 @@ Ja, du kan ange lösenordet i laddningsalternativen för att hantera lösenordss
 ### 4. Kan jag köpa en licens för GroupDocs.Editor för .NET?
  Ja, du kan köpa en licens från[här](https://purchase.groupdocs.com/buy).
 ### 5. Var kan jag hitta dokumentationen för GroupDocs.Editor för .NET?
-Dokumentationen finns tillgänglig[här](https://reference.groupdocs.com/editor/net/).
+Dokumentationen finns tillgänglig[här](https://tutorials.groupdocs.com/editor/net/).

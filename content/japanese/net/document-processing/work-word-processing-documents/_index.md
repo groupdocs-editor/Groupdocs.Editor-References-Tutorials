@@ -3,7 +3,6 @@ title: ワープロ文書の操作
 linktitle: ワープロ文書の操作
 second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用すると、Word 処理ドキュメントを簡単に編集できます。詳細なステップバイステップのチュートリアルに従って、ドキュメント管理スキルを高めてください。
-type: docs
 weight: 19
 url: /ja/net/document-processing/work-word-processing-documents/
 ---
@@ -117,7 +116,7 @@ Console.WriteLine("Document editing and saving process completed successfully.")
 これで、GroupDocs.Editor for .NET を使用して Word 処理ドキュメントを操作する方法に関する包括的なステップ バイ ステップ ガイドが完了しました。この強力なツールを使用すると、プログラムによるドキュメントの操作と編集が簡単になり、ドキュメント処理ワークフローをカスタマイズするための幅広いオプションが提供されます。
 ## よくある質問
 ### GroupDocs.Editor for .NET を使用して他のドキュメント形式を編集できますか?
-はい、GroupDocs.EditorはPDF、HTMLなどさまざまなドキュメント形式をサポートしています。[ドキュメンテーション](https://reference.groupdocs.com/editor/net/)サポートされている形式の完全なリストについては、こちらをご覧ください。
+はい、GroupDocs.EditorはPDF、HTMLなどさまざまなドキュメント形式をサポートしています。[ドキュメンテーション](https://tutorials.groupdocs.com/editor/net/)サポートされている形式の完全なリストについては、こちらをご覧ください。
 ### GroupDocs.Editor をライセンスなしで使用することは可能ですか?
 無料トライアルを利用するか、一時ライセンスをリクエストすることができます。長期間使用する場合は、ライセンスを購入することをお勧めします。ライセンスを取得する[ここ](https://purchase.groupdocs.com/buy).
 ### OutOfMemoryException を引き起こす大きなドキュメントをどのように処理すればよいですか?

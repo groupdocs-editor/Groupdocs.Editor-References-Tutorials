@@ -3,7 +3,6 @@ title: ข้อมูลเบื้องต้นเกี่ยวกับ 
 linktitle: ข้อมูลเบื้องต้นเกี่ยวกับ GroupDocs.Editor สำหรับ .NET
 second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีใช้ GroupDocs.Editor สำหรับ .NET เพื่อแก้ไขเอกสารโดยทางโปรแกรมพร้อมคำแนะนำทีละขั้นตอนโดยละเอียดนี้
-type: docs
 weight: 12
 url: /th/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ GroupDocs.Editor สำหรับ .NET รองรับรูปแบบต
 ### เป็นไปได้หรือไม่ที่จะผสานรวม GroupDocs.Editor เข้ากับพื้นที่เก็บข้อมูลบนคลาวด์
 ได้ คุณสามารถผสานรวม GroupDocs.Editor เข้ากับโซลูชันพื้นที่เก็บข้อมูลบนคลาวด์ต่างๆ เพื่อจัดการเอกสารของคุณได้
 ### ฉันจะหาเอกสารสำหรับ GroupDocs.Editor สำหรับ .NET ได้ที่ไหน
-เอกสารก็มีให้[ที่นี่](https://reference.groupdocs.com/editor/net/).
+เอกสารก็มีให้[ที่นี่](https://tutorials.groupdocs.com/editor/net/).

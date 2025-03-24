@@ -3,7 +3,6 @@ title: Åtgärda Insamling av ogiltiga formulärfält och spara
 linktitle: Åtgärda Insamling av ogiltiga formulärfält och spara
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du fixar ogiltiga formulärfält i DOCX med Groupdocs.Editor för .NET. Följ den här guiden för att säkerställa att dina dokument är felfria och spara dem på ett säkert sätt.
-type: docs
 weight: 11
 url: /sv/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## Slutsats
- Och där har du det! Du har åtgärdat ogiltiga formulärfält och sparat ditt dokument med Groupdocs.Editor för .NET. Denna steg-för-steg-guide borde ha gjort processen tydlig och hanterbar. Om du stöter på några problem eller har frågor, kolla gärna[dokumentation](https://reference.groupdocs.com/editor/net/) eller nå ut till[Stöd](https://forum.groupdocs.com/c/editor/20).
+ Och där har du det! Du har åtgärdat ogiltiga formulärfält och sparat ditt dokument med Groupdocs.Editor för .NET. Denna steg-för-steg-guide borde ha gjort processen tydlig och hanterbar. Om du stöter på några problem eller har frågor, kolla gärna[dokumentation](https://tutorials.groupdocs.com/editor/net/) eller nå ut till[Stöd](https://forum.groupdocs.com/c/editor/20).
 ## FAQ's
 ### Vad händer om mitt dokument är lösenordsskyddat?
  Du kan ange lösenordet i`WordProcessingLoadOptions` för att öppna dokumentet.

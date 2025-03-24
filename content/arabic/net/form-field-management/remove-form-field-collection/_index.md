@@ -3,7 +3,6 @@ title: إزالة مجموعة حقول النموذج
 linktitle: إزالة مجموعة حقول النموذج
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية إزالة حقول النموذج من مستندات Word باستخدام GroupDocs.Editor لـ .NET باستخدام هذا الدليل التفصيلي خطوة بخطوة. مثالية للمطورين.
-type: docs
 weight: 13
 url: /ar/net/form-field-management/remove-form-field-collection/
 ---

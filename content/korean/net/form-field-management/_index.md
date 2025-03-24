@@ -3,7 +3,6 @@ title: 양식 필드 관리
 linktitle: 양식 필드 관리
 second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor를 사용하여 .NET에서 마스터 양식 필드 관리. 양식 필드 컬렉션을 원활하게 편집, 수정, 레거시 작업하고 제거하는 방법을 알아보세요.
-type: docs
 weight: 23
 url: /ko/net/form-field-management/
 ---

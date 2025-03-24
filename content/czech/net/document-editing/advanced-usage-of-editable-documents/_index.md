@@ -3,7 +3,6 @@ title: Pokročilé použití upravitelných dokumentů
 linktitle: Pokročilé použití upravitelných dokumentů
 second_title: GroupDocs.Editor .NET API
 description: Naučte se pokročilé používání GroupDocs.Editor pro .NET vytváření, úpravy a extrahování zdrojů z dokumentů programově.
-type: docs
 weight: 11
 url: /cs/net/document-editing/advanced-usage-of-editable-documents/
 ---

@@ -3,7 +3,6 @@ title: Práce s oddělenými hodnotami (DSV)
 linktitle: Práce s oddělenými hodnotami (DSV)
 second_title: GroupDocs.Editor .NET API
 description: Naučte se upravovat soubory CSV a TSV pomocí GroupDocs.Editor pro .NET pomocí tohoto podrobného průvodce. Vylepšete své .NET projekty bez námahy.
-type: docs
 weight: 12
 url: /cs/net/document-processing/work-dsv/
 ---
@@ -111,4 +110,4 @@ Samozřejmě můžete zadat požadované kódování v možnostech uložení.
 ### Mohu převést soubor CSV na tabulku aplikace Excel pomocí GroupDocs.Editor pro .NET?
 Ano, pomocí vhodných možností uložení můžete uložit soubor CSV jako tabulku aplikace Excel.
 ### Kde najdu další dokumentaci k GroupDocs.Editor pro .NET?
- Můžete najít podrobnou dokumentaci[tady](https://reference.groupdocs.com/editor/net/)
+ Můžete najít podrobnou dokumentaci[tady](https://tutorials.groupdocs.com/editor/net/)

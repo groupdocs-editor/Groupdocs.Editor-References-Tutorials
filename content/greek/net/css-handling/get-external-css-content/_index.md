@@ -3,7 +3,6 @@ title: Λάβετε εξωτερικό περιεχόμενο CSS
 linktitle: Λάβετε εξωτερικό περιεχόμενο CSS
 second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να χρησιμοποιείτε το GroupDocs.Editor για .NET για εξαγωγή εξωτερικού περιεχομένου CSS από έγγραφα με αυτόν τον αναλυτικό οδηγό. Ιδανικό για προγραμματιστές που ενσωματώνουν έγγραφα.
-type: docs
 weight: 10
 url: /el/net/css-handling/get-external-css-content/
 ---
@@ -67,6 +66,6 @@ foreach (string css in stylesheets)
 ### Μπορώ να χρησιμοποιήσω το GroupDocs.Editor δωρεάν;
  Το GroupDocs.Editor προσφέρει μια δωρεάν δοκιμή την οποία μπορείτε να κατεβάσετε από το[Δωρεάν δοκιμαστική σελίδα GroupDocs](https://releases.groupdocs.com/). Για πλήρη χαρακτηριστικά, σκεφτείτε να αγοράσετε μια άδεια.
 ### Ποιες μορφές αρχείων υποστηρίζει το GroupDocs.Editor;
- Το GroupDocs.Editor υποστηρίζει ένα ευρύ φάσμα μορφών αρχείων, συμπεριλαμβανομένων των DOCX, XLSX, PPTX, PDF, HTML και πολλών άλλων. Ελεγξε το[τεκμηρίωση](https://reference.groupdocs.com/editor/net/) για μια πλήρη λίστα.
+ Το GroupDocs.Editor υποστηρίζει ένα ευρύ φάσμα μορφών αρχείων, συμπεριλαμβανομένων των DOCX, XLSX, PPTX, PDF, HTML και πολλών άλλων. Ελεγξε το[τεκμηρίωση](https://tutorials.groupdocs.com/editor/net/) για μια πλήρη λίστα.
 ### Πώς μπορώ να λάβω υποστήριξη για το GroupDocs.Editor;
  Μπορείτε να λάβετε υποστήριξη από το[Φόρουμ υποστήριξης GroupDocs](https://forum.groupdocs.com/c/editor/20) όπου μπορείτε να κάνετε ερωτήσεις και να λαμβάνετε βοήθεια από την κοινότητα και τους ειδικούς του GroupDocs.

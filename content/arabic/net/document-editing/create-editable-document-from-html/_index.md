@@ -3,7 +3,6 @@ title: إنشاء مستند قابل للتحرير من HTML
 linktitle: إنشاء مستند قابل للتحرير من HTML
 second_title: GroupDocs.Editor .NET API
 description: قم بتحويل HTML إلى مستندات Word قابلة للتحرير باستخدام GroupDocs.Editor لـ .NET باستخدام هذا الدليل التفصيلي خطوة بخطوة. مثالية لتبسيط سير عمل إدارة المستندات الخاصة بك.
-type: docs
 weight: 10
 url: /ar/net/document-editing/create-editable-document-from-html/
 ---

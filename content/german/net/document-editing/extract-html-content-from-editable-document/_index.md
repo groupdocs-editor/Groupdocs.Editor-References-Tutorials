@@ -3,7 +3,6 @@ title: Extrahieren Sie HTML-Inhalte aus einem bearbeitbaren Dokument
 linktitle: Extrahieren Sie HTML-Inhalte aus einem bearbeitbaren Dokument
 second_title: GroupDocs.Editor .NET API
 description: Extrahieren Sie mühelos HTML-Inhalte aus Dokumenten mit GroupDocs.Editor für .NET. Folgen Sie unserer ausführlichen Anleitung für nahtlose Integration und Dokumentenverwaltung.
-type: docs
 weight: 12
 url: /de/net/document-editing/extract-html-content-from-editable-document/
 ---
@@ -64,6 +63,6 @@ GroupDocs.Editor für .NET unterstützt eine breite Palette von Dokumentformaten
 ### Wie erhalte ich eine temporäre Lizenz für GroupDocs.Editor für .NET?
  Sie können eine temporäre Lizenz anfordern bei der[GroupDocs-Kaufseite](https://purchase.groupdocs.com/temporary-license/).
 ### Wo finde ich die Dokumentation für GroupDocs.Editor für .NET?
- Die ausführliche Dokumentation ist verfügbar[Hier](https://reference.groupdocs.com/editor/net/).
+ Die ausführliche Dokumentation ist verfügbar[Hier](https://tutorials.groupdocs.com/editor/net/).
 ### Kann ich Support erhalten, wenn ich auf Probleme stoße?
  Ja, Sie können Unterstützung suchen bei der[GroupDocs-Supportforum](https://forum.groupdocs.com/c/editor/20).

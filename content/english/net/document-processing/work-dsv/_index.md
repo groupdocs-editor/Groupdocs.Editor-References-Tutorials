@@ -3,7 +3,6 @@ title: Work with Delimited Separated Values (DSV)
 linktitle: Work with Delimited Separated Values (DSV)
 second_title: GroupDocs.Editor .NET API
 description: Learn how to edit CSV and TSV files using GroupDocs.Editor for .NET with this step-by-step guide. Improve your .NET projects effortlessly.
-type: docs
 weight: 12
 url: /net/document-processing/work-dsv/
 ---
@@ -12,7 +11,7 @@ If you’re a developer working with delimited separated values (DSV) like CSV o
 ## Prerequisites
 Before we dive into the tutorial, make sure you have the following prerequisites:
 - Visual Studio: Ensure you have Visual Studio installed on your machine.
-- GroupDocs.Editor for .NET: You will need to download and reference the GroupDocs.Editor for .NET library. You can download it [here](https://releases.groupdocs.com/editor/net/).
+- GroupDocs.Editor for .NET: You will need to download and tutorials the GroupDocs.Editor for .NET library. You can download it [here](https://releases.groupdocs.com/editor/net/).
 - Basic Understanding of C#: This tutorial assumes you have a basic understanding of C# and .NET development.
 ## Import Namespaces
 First, you need to import the necessary namespaces in your project. These namespaces provide the classes and methods required to work with GroupDocs.Editor for .NET.
@@ -111,4 +110,4 @@ Absolutely, you can specify the desired encoding in the save options.
 ### Can I convert a CSV file to an Excel spreadsheet using GroupDocs.Editor for .NET?
 Yes, you can save a CSV file as an Excel spreadsheet by using the appropriate save options.
 ### Where can I find more documentation on GroupDocs.Editor for .NET?
-You can find detailed documentation [here](https://reference.groupdocs.com/editor/net/)
+You can find detailed documentation [here](https://tutorials.groupdocs.com/editor/net/)

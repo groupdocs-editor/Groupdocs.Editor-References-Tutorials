@@ -3,7 +3,6 @@ title: 양식 필드 컬렉션 제거
 linktitle: 양식 필드 컬렉션 제거
 second_title: GroupDocs.Editor .NET API
 description: 이 단계별 가이드를 통해 .NET용 GroupDocs.Editor를 사용하여 Word 문서에서 양식 필드를 제거하는 방법을 알아보세요. 개발자에게 이상적입니다.
-type: docs
 weight: 13
 url: /ko/net/form-field-management/remove-form-field-collection/
 ---

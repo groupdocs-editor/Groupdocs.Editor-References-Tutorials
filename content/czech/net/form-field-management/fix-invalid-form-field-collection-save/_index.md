@@ -3,7 +3,6 @@ title: Opravte neplatnou kolekci polí formuláře a uložte
 linktitle: Opravte neplatnou kolekci polí formuláře a uložte
 second_title: GroupDocs.Editor .NET API
 description: Přečtěte si, jak opravit neplatná pole formuláře v DOCX pomocí Groupdocs.Editor pro .NET. Postupujte podle tohoto průvodce, abyste se ujistili, že vaše dokumenty jsou bez chyb a bezpečně je uložte.
-type: docs
 weight: 11
 url: /cs/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## Závěr
- A tady to máte! Úspěšně jste opravili neplatná pole formuláře a uložili dokument pomocí Groupdocs.Editor pro .NET. Tento průvodce krok za krokem by měl tento proces objasnit a zvládnout. Pokud narazíte na nějaké problémy nebo máte dotazy, neváhejte se podívat na[dokumentace](https://reference.groupdocs.com/editor/net/) nebo oslovit[Podpěra, podpora](https://forum.groupdocs.com/c/editor/20).
+ A tady to máte! Úspěšně jste opravili neplatná pole formuláře a uložili dokument pomocí Groupdocs.Editor pro .NET. Tento průvodce krok za krokem by měl tento proces objasnit a zvládnout. Pokud narazíte na nějaké problémy nebo máte dotazy, neváhejte se podívat na[dokumentace](https://tutorials.groupdocs.com/editor/net/) nebo oslovit[Podpěra, podpora](https://forum.groupdocs.com/c/editor/20).
 ## FAQ
 ### Co když je můj dokument chráněn heslem?
  Heslo můžete zadat v`WordProcessingLoadOptions` k otevření dokumentu.

@@ -3,7 +3,6 @@ title: 處理 PDF 文檔
 linktitle: 處理 PDF 文檔
 second_title: GroupDocs.Editor .NET API
 description: 透過本教學課程，了解如何使用 GroupDocs.Editor for .NET 編輯 PDF 文件。修改內容、處理大檔案並安全地儲存您的編輯。
-type: docs
 weight: 14
 url: /zh-hant/net/document-processing/work-pdf-documents/
 ---

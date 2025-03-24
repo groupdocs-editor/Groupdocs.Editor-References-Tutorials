@@ -3,7 +3,6 @@ title: HTML 内容检索
 linktitle: HTML 内容检索
 second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 检索 HTML 内容。其中包含检索正文内容和自定义前缀的分步指南。
-type: docs
 weight: 22
 url: /zh/net/html-content-retrieval/
 ---

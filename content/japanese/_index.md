@@ -3,7 +3,6 @@ title: GroupDocs.Editor でドキュメント管理を解放する
 linktitle: GroupDocs.Editor チュートリアル
 additionalTitle: GroupDocs API リファレンス
 description: GroupDocs.Editor for .NET & Java を使用すると、ドキュメント編集を簡単にマスターできます。ワークフローを合理化し、CSS を管理し、HTML コンテンツを取得するなど、さまざまなことができます。
-type: docs
 weight: 11
 url: /ja/
 is_root: true

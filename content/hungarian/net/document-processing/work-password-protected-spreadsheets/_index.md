@@ -3,7 +3,6 @@ title: Dolgozzon jelszóval védett táblázatokkal
 linktitle: Dolgozzon jelszóval védett táblázatokkal
 second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan kezelheti a jelszóval védett táblázatokat a GroupDocs.Editor for .NET segítségével. Ez a részletes útmutató végigvezeti a biztonságos Excel-fájlok megnyitásán.
-type: docs
 weight: 18
 url: /hu/net/document-processing/work-password-protected-spreadsheets/
 ---
@@ -108,4 +107,4 @@ A GroupDocs.Editor for .NET egy hatékony dokumentumszerkesztő API, amely lehet
 ### Beállíthatok különböző jelszavakat a táblázat megnyitásához és írásához?
 Teljesen! A mentési opciók segítségével külön jelszavakat állíthat be a dokumentum megnyitásához és az írásvédelemhez.
 ### Hol találok részletesebb dokumentációt?
- Hozzáférhet a GroupDocs.Editor for .NET átfogó dokumentációjához[itt](https://reference.groupdocs.com/editor/net/).
+ Hozzáférhet a GroupDocs.Editor for .NET átfogó dokumentációjához[itt](https://tutorials.groupdocs.com/editor/net/).

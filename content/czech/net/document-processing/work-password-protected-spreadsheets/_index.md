@@ -3,7 +3,6 @@ title: Práce s tabulkami chráněnými heslem
 linktitle: Práce s tabulkami chráněnými heslem
 second_title: GroupDocs.Editor .NET API
 description: Naučte se pracovat s tabulkami chráněnými heslem pomocí GroupDocs.Editor pro .NET. Tento podrobný průvodce vás provede otevřením a uložením zabezpečených souborů Excel.
-type: docs
 weight: 18
 url: /cs/net/document-processing/work-password-protected-spreadsheets/
 ---
@@ -108,4 +107,4 @@ GroupDocs.Editor for .NET je výkonné rozhraní API pro úpravu dokumentů, kte
 ### Mohu nastavit různá hesla pro otevírání a zápis do tabulky?
 Absolutně! Pomocí možností uložení můžete nastavit samostatná hesla pro otevření dokumentu a pro ochranu proti zápisu.
 ### Kde najdu podrobnější dokumentaci?
- Máte přístup ke komplexní dokumentaci pro GroupDocs.Editor pro .NET[tady](https://reference.groupdocs.com/editor/net/).
+ Máte přístup ke komplexní dokumentaci pro GroupDocs.Editor pro .NET[tady](https://tutorials.groupdocs.com/editor/net/).

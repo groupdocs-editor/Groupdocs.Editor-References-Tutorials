@@ -3,7 +3,6 @@ title: 使用演示文稿
 linktitle: 使用演示文稿
 second_title: GroupDocs.Editor .NET API
 description: 学习使用 GroupDocs.Editor for .NET 编辑 PowerPoint 演示文稿。按照此分步指南简化您的文档编辑过程。
-type: docs
 weight: 16
 url: /zh/net/document-processing/work-presentations/
 ---
@@ -132,4 +131,4 @@ GroupDocs.Editor 支持多种格式，包括 PPTX、PPTM 等。您可以在保�
 ### 我可以在 Web 应用程序中使用 GroupDocs.Editor for .NET 吗？
 是的，GroupDocs.Editor for .NET 可以集成到 Web 应用程序中以提供文档编辑功能。
 ### 在哪里可以找到更详细的文档和支持？
-您可以找到详细的文档[这里](https://reference.groupdocs.com/editor/net/) 。如需支持，请访问[支持论坛](https://forum.groupdocs.com/c/editor/20).
+您可以找到详细的文档[这里](https://tutorials.groupdocs.com/editor/net/) 。如需支持，请访问[支持论坛](https://forum.groupdocs.com/c/editor/20).

@@ -3,7 +3,6 @@ title: استرجاع محتوى HTML
 linktitle: استرجاع محتوى HTML
 second_title: GroupDocs.Editor .NET API
 description: اكتشف كيفية استرداد محتوى HTML باستخدام GroupDocs.Editor لـ .NET. تم تضمين أدلة خطوة بخطوة لاسترداد محتوى النص والبادئات المخصصة.
-type: docs
 weight: 22
 url: /ar/net/html-content-retrieval/
 ---

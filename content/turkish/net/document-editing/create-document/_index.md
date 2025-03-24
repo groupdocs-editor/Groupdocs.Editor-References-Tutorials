@@ -3,7 +3,6 @@ title: Belge Oluştur
 linktitle: Belge Oluştur
 second_title: GroupDocs.Editor .NET API'si
 description: Bu kapsamlı adım adım eğitimle GroupDocs.Editor for .NET'i kullanarak Word, Excel, PowerPoint, E-kitap ve E-posta belgelerini nasıl düzenleyeceğinizi öğrenin.
-type: docs
 weight: 10
 url: /tr/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ Düzenlenen belge akışını istediğiniz konuma kaydetmek için geri arama iş
 ### GroupDocs.Editor for .NET'i kullanmak için lisansa ihtiyacım var mı?
  Evet, adresinden lisans alabilirsiniz.[Burada](https://purchase.groupdocs.com/buy). Ayrıca geçici lisans seçeneği de bulunmaktadır.
 ### Daha ayrıntılı belgeleri nerede bulabilirim?
- Ayrıntılı belgeler şu adreste mevcuttur:[.NET dokümantasyon sayfası için GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ Ayrıntılı belgeler şu adreste mevcuttur:[.NET dokümantasyon sayfası için GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).

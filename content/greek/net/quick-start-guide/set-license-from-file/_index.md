@@ -3,7 +3,6 @@ title: Ορισμός άδειας χρήσης από το αρχείο
 linktitle: Ορισμός άδειας χρήσης από το αρχείο
 second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να χρησιμοποιείτε το GroupDocs.Editor για .NET για απρόσκοπτη επεξεργασία εγγράφων στις εφαρμογές σας. Περιλαμβάνονται οδηγός βήμα προς βήμα, συμβουλές και συχνές ερωτήσεις.
-type: docs
 weight: 10
 url: /el/net/quick-start-guide/set-license-from-file/
 ---
@@ -89,4 +88,4 @@ using (FileStream outputStream = File.Create(outputPath))
 ### Πώς μπορώ να χειρίζομαι μεγάλα έγγραφα με το GroupDocs.Editor για .NET;
 Το GroupDocs.Editor για .NET έχει σχεδιαστεί για να χειρίζεται αποτελεσματικά μεγάλα έγγραφα. Ωστόσο, για βέλτιστη απόδοση, εξετάστε το ενδεχόμενο διαχείρισης πόρων και διαχείρισης εγγράφων σε τμήματα, εάν είναι απαραίτητο.
 ### Πού μπορώ να βρω πιο λεπτομερή τεκμηρίωση και υποστήριξη;
- Μπορείτε να βρείτε αναλυτική τεκμηρίωση στο[Σελίδα τεκμηρίωσης GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) και ζητήστε υποστήριξη από το[Φόρουμ υποστήριξης GroupDocs](https://forum.groupdocs.com/c/editor/20).
+ Μπορείτε να βρείτε αναλυτική τεκμηρίωση στο[Σελίδα τεκμηρίωσης GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) και ζητήστε υποστήριξη από το[Φόρουμ υποστήριξης GroupDocs](https://forum.groupdocs.com/c/editor/20).

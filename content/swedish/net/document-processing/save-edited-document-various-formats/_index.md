@@ -3,7 +3,6 @@ title: Spara redigerat dokument i olika format
 linktitle: Spara redigerat dokument i olika format
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du sparar redigerade dokument i olika format med GroupDocs.Editor för .NET i den här omfattande steg-för-steg-guiden.
-type: docs
 weight: 11
 url: /sv/net/document-processing/save-edited-document-various-formats/
 ---
@@ -92,4 +91,4 @@ GroupDocs.Editor stöder ett brett utbud av format, inklusive DOCX, PDF, HTML oc
 ### Hur får jag en tillfällig licens för GroupDocs.Editor?
  Du kan få en tillfällig licens[här](https://purchase.groupdocs.com/temporary-license/).
 ### Var kan jag hitta mer dokumentation och support?
- Detaljerad dokumentation finns tillgänglig[här](https://reference.groupdocs.com/editor/net/) , och du kan få stöd[här](https://forum.groupdocs.com/c/editor/20).
+ Detaljerad dokumentation finns tillgänglig[här](https://tutorials.groupdocs.com/editor/net/) , och du kan få stöd[här](https://forum.groupdocs.com/c/editor/20).

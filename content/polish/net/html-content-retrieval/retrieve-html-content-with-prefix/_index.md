@@ -3,7 +3,6 @@ title: Pobierz treść HTML z prefiksem
 linktitle: Pobierz treść HTML z prefiksem
 second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak pobierać zawartość HTML z dokumentów za pomocą narzędzia GroupDocs.Editor dla platformy .NET z niestandardowymi przedrostkami obrazów i arkuszy stylów. W zestawie instrukcja krok po kroku.
-type: docs
 weight: 11
 url: /pl/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 Ten fragment kodu pobiera treść HTML z niestandardowymi przedrostkami i drukuje ją na konsoli. W razie potrzeby możesz dalej przetwarzać lub zapisywać tę treść HTML.
 ## Wniosek
 I masz to! Wykonując poniższe kroki, możesz łatwo pobrać zawartość HTML z dokumentu za pomocą programu GroupDocs.Editor dla .NET, wraz z niestandardowymi przedrostkami obrazów i arkuszy stylów. To potężne narzędzie upraszcza manipulowanie dokumentami, umożliwiając skupienie się na płynnej integracji edycji dokumentów z aplikacjami .NET.
- Aby uzyskać bardziej szczegółowe informacje, zapoznaj się z[GroupDocs.Editor dla dokumentacji .NET](https://reference.groupdocs.com/editor/net/) . Jeśli masz jakieś pytania lub potrzebujesz dalszej pomocy, skontaktuj się z nami pod adresem[forum wsparcia](https://forum.groupdocs.com/c/editor/20).
+ Aby uzyskać bardziej szczegółowe informacje, zapoznaj się z[GroupDocs.Editor dla dokumentacji .NET](https://tutorials.groupdocs.com/editor/net/) . Jeśli masz jakieś pytania lub potrzebujesz dalszej pomocy, skontaktuj się z nami pod adresem[forum wsparcia](https://forum.groupdocs.com/c/editor/20).
 ## Często zadawane pytania
 ### Jakie typy dokumentów mogę edytować za pomocą GroupDocs.Editor dla .NET?
 GroupDocs.Editor obsługuje różne formaty dokumentów, w tym Word, Excel, PowerPoint, PDF i inne.

@@ -3,7 +3,6 @@ title: Dolgozzon dokumentumformátumokkal
 linktitle: Dolgozzon dokumentumformátumokkal
 second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan használhatja a GroupDocs.Editor for .NET-et különféle dokumentumformátumok programozott szerkesztéséhez. Lépésről lépésre útmutató példákkal a zökkenőmentes integráció érdekében.
-type: docs
 weight: 13
 url: /hu/net/document-processing/work-document-formats/
 ---
@@ -159,4 +158,4 @@ A GroupDocs.Editor többek között támogatja a szövegszerkesztőt, a tábláz
 ### Használhatom ingyenesen a GroupDocs.Editort?
  Használhatja a[ingyenes próbaverzió](https://releases.groupdocs.com/) korlátozott funkciókkal, vagy szerezzen be a[ideiglenes engedély](https://purchase.groupdocs.com/temporary-license/) a teljes hozzáférés érdekében.
 ### Hol találhatok további forrásokat és támogatást?
- Meglátogatni a[GroupDocs.Editor dokumentáció](https://reference.groupdocs.com/editor/net/) részletes információkért, vagy nézze meg őket[támogatói fórum](https://forum.groupdocs.com/c/editor/20) segítségért.
+ Meglátogatni a[GroupDocs.Editor dokumentáció](https://tutorials.groupdocs.com/editor/net/) részletes információkért, vagy nézze meg őket[támogatói fórum](https://forum.groupdocs.com/c/editor/20) segítségért.

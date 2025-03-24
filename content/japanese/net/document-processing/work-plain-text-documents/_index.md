@@ -3,7 +3,6 @@ title: プレーンテキスト文書の操作
 linktitle: プレーンテキスト文書の操作
 second_title: GroupDocs.Editor .NET API
 description: ステップバイステップ ガイドを使用して、GroupDocs.Editor for .NET を使用してプレーン テキスト ドキュメントを編集する方法を学びます。.NET ドキュメントの編集プロセスを簡素化します。
-type: docs
 weight: 15
 url: /ja/net/document-processing/work-plain-text-documents/
 ---
@@ -96,10 +95,10 @@ WordProcessing 形式の保存オプションを準備します。この例で�
 System.Console.WriteLine("Document editing process completed successfully!");
 ```
 ## 結論
-おめでとうございます。GroupDocs.Editor for .NET を使用してプレーンテキスト ドキュメントを編集できました。この強力なツールはドキュメント編集を簡素化し、.NET アプリケーションへの統合を容易にします。単純なテキスト ファイルでも複雑なドキュメント形式でも、GroupDocs.Editor なら対応できます。その他の機能や機能については、次の Web サイトをご覧ください。[GroupDocs.Editor ドキュメント](https://reference.groupdocs.com/editor/net/).
+おめでとうございます。GroupDocs.Editor for .NET を使用してプレーンテキスト ドキュメントを編集できました。この強力なツールはドキュメント編集を簡素化し、.NET アプリケーションへの統合を容易にします。単純なテキスト ファイルでも複雑なドキュメント形式でも、GroupDocs.Editor なら対応できます。その他の機能や機能については、次の Web サイトをご覧ください。[GroupDocs.Editor ドキュメント](https://tutorials.groupdocs.com/editor/net/).
 ## よくある質問
 ### GroupDocs.Editor for .NET はどのようなファイル形式をサポートしていますか?
- GroupDocs.Editor for .NETは、DOCX、TXT、HTMLなど、幅広いファイル形式をサポートしています。[ドキュメンテーション](https://reference.groupdocs.com/editor/net/)完全なリストについてはこちらをご覧ください。
+ GroupDocs.Editor for .NETは、DOCX、TXT、HTMLなど、幅広いファイル形式をサポートしています。[ドキュメンテーション](https://tutorials.groupdocs.com/editor/net/)完全なリストについてはこちらをご覧ください。
 ### GroupDocs.Editor for .NET の無料試用版を入手するにはどうすればよいですか?
  GroupDocs.Editor for .NETの無料トライアルは、[リリースページ](https://releases.groupdocs.com/).
 ### GroupDocs.Editor for .NET の一時ライセンスを購入できますか?
@@ -107,4 +106,4 @@ System.Console.WriteLine("Document editing process completed successfully!");
 ### GroupDocs.Editor for .NET のサポートはどこで受けられますか?
 サポートは以下からご利用いただけます。[GroupDocs.Editor サポート フォーラム](https://forum.groupdocs.com/c/editor/20).
 ### GroupDocs.Editor for .NET の詳細なドキュメントはありますか?
-はい、詳細なドキュメントは[GroupDocs.Editor ドキュメント ページ](https://reference.groupdocs.com/editor/net/).
+はい、詳細なドキュメントは[GroupDocs.Editor ドキュメント ページ](https://tutorials.groupdocs.com/editor/net/).

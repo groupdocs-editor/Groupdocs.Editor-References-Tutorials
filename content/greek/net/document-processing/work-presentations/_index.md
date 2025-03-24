@@ -3,7 +3,6 @@ title: Εργασία με Παρουσιάσεις
 linktitle: Εργασία με Παρουσιάσεις
 second_title: GroupDocs.Editor .NET API
 description: Μάθετε να επεξεργάζεστε παρουσιάσεις PowerPoint χρησιμοποιώντας το GroupDocs.Editor για .NET. Ακολουθήστε αυτόν τον οδηγό βήμα προς βήμα για να απλοποιήσετε τη διαδικασία επεξεργασίας του εγγράφου σας.
-type: docs
 weight: 16
 url: /el/net/document-processing/work-presentations/
 ---
@@ -132,4 +131,4 @@ System.Console.WriteLine("Working with presentations routine has successfully fi
 ### Μπορώ να χρησιμοποιήσω το GroupDocs.Editor για .NET σε μια εφαρμογή Ιστού;
 Ναι, το GroupDocs.Editor για .NET μπορεί να ενσωματωθεί σε εφαρμογές web για να παρέχει δυνατότητες επεξεργασίας εγγράφων.
 ### Πού μπορώ να βρω πιο λεπτομερή τεκμηρίωση και υποστήριξη;
- Μπορείτε να βρείτε αναλυτική τεκμηρίωση[εδώ](https://reference.groupdocs.com/editor/net/) . Για υποστήριξη, επισκεφθείτε το[φόρουμ υποστήριξης](https://forum.groupdocs.com/c/editor/20).
+ Μπορείτε να βρείτε αναλυτική τεκμηρίωση[εδώ](https://tutorials.groupdocs.com/editor/net/) . Για υποστήριξη, επισκεφθείτε το[φόρουμ υποστήριξης](https://forum.groupdocs.com/c/editor/20).

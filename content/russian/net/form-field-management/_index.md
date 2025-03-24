@@ -3,7 +3,6 @@ title: Управление полями формы
 linktitle: Управление полями формы
 second_title: GroupDocs.Editor .NET API
 description: Управление полями основной формы в .NET с помощью GroupDocs.Editor. Научитесь редактировать, исправлять, работать с устаревшими версиями и легко удалять коллекции полей форм.
-type: docs
 weight: 23
 url: /ru/net/form-field-management/
 ---

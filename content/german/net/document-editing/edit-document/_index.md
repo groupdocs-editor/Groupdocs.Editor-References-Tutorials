@@ -3,7 +3,6 @@ title: Dokument bearbeiten
 linktitle: Dokument bearbeiten
 second_title: GroupDocs.Editor .NET API
 description: Lernen Sie, mit GroupDocs.Editor für .NET mühelos Dokumente zu bearbeiten. Schritt-für-Schritt-Anleitung für Textverarbeitungs- und Tabellenkalkulationsdateien.
-type: docs
 weight: 11
 url: /de/net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 Durch die ordnungsgemäße Entsorgung wird sichergestellt, dass in Ihrer Anwendung keine Speicherlecks oder Leistungsprobleme auftreten.
 ## Abschluss
- Herzlichen Glückwunsch! Sie haben jetzt ein solides Verständnis dafür, wie Sie mit GroupDocs.Editor für .NET Inhalte aus Textverarbeitungsdokumenten und Tabellenkalkulationen laden, bearbeiten und extrahieren können. Dieses leistungsstarke Tool vereinfacht die Dokumentbearbeitung und lässt sich nahtlos in Ihre .NET-Anwendungen integrieren. Weitere Einzelheiten finden Sie im[Dokumentation](https://reference.groupdocs.com/editor/net/), [Laden Sie die neueste Version herunter](https://releases.groupdocs.com/editor/net/) oder erhalten Sie eine[vorläufige Lizenz](https://purchase.groupdocs.com/temporary-license/).
+ Herzlichen Glückwunsch! Sie haben jetzt ein solides Verständnis dafür, wie Sie mit GroupDocs.Editor für .NET Inhalte aus Textverarbeitungsdokumenten und Tabellenkalkulationen laden, bearbeiten und extrahieren können. Dieses leistungsstarke Tool vereinfacht die Dokumentbearbeitung und lässt sich nahtlos in Ihre .NET-Anwendungen integrieren. Weitere Einzelheiten finden Sie im[Dokumentation](https://tutorials.groupdocs.com/editor/net/), [Laden Sie die neueste Version herunter](https://releases.groupdocs.com/editor/net/) oder erhalten Sie eine[vorläufige Lizenz](https://purchase.groupdocs.com/temporary-license/).
 ## Häufig gestellte Fragen
 ### Kann ich PDF-Dokumente mit GroupDocs.Editor für .NET bearbeiten?
 Derzeit unterstützt GroupDocs.Editor für .NET hauptsächlich die Formate Textverarbeitung, Tabellenkalkulation und Präsentation.

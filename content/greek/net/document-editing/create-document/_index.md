@@ -3,7 +3,6 @@ title: Δημιουργία εγγράφου
 linktitle: Δημιουργία εγγράφου
 second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να επεξεργάζεστε έγγραφα Word, Excel, PowerPoint, Ebook και Email χρησιμοποιώντας το GroupDocs.Editor για .NET με αυτόν τον αναλυτικό οδηγό βήμα προς βήμα.
-type: docs
 weight: 10
 url: /el/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ System.Console.WriteLine("CreateDocument routine has successfully finished");
 ### Χρειάζομαι άδεια χρήσης για να χρησιμοποιήσω το GroupDocs.Editor για .NET;
  Ναι, μπορείτε να λάβετε άδεια από[εδώ](https://purchase.groupdocs.com/buy). Υπάρχει επίσης μια επιλογή για προσωρινή άδεια.
 ### Πού μπορώ να βρω πιο αναλυτική τεκμηρίωση;
- Λεπτομερής τεκμηρίωση είναι διαθέσιμη στο[Σελίδα τεκμηρίωσης GroupDocs.Editor για .NET](https://reference.groupdocs.com/editor/net/).
+ Λεπτομερής τεκμηρίωση είναι διαθέσιμη στο[Σελίδα τεκμηρίωσης GroupDocs.Editor για .NET](https://tutorials.groupdocs.com/editor/net/).

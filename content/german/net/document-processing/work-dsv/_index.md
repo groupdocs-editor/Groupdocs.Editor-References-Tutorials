@@ -3,7 +3,6 @@ title: Arbeiten mit durch Trennzeichen getrennten Werten (DSV)
 linktitle: Arbeiten mit durch Trennzeichen getrennten Werten (DSV)
 second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie in dieser Schritt-für-Schritt-Anleitung, wie Sie CSV- und TSV-Dateien mit GroupDocs.Editor für .NET bearbeiten. Verbessern Sie Ihre .NET-Projekte mühelos.
-type: docs
 weight: 12
 url: /de/net/document-processing/work-dsv/
 ---
@@ -111,4 +110,4 @@ Natürlich können Sie in den Speicheroptionen die gewünschte Kodierung angeben
 ### Kann ich mit GroupDocs.Editor für .NET eine CSV-Datei in eine Excel-Tabelle konvertieren?
 Ja, Sie können eine CSV-Datei als Excel-Tabelle speichern, indem Sie die entsprechenden Speicheroptionen verwenden.
 ### Wo finde ich weitere Dokumentation zu GroupDocs.Editor für .NET?
- Eine ausführliche Dokumentation finden Sie[Hier](https://reference.groupdocs.com/editor/net/)
+ Eine ausführliche Dokumentation finden Sie[Hier](https://tutorials.groupdocs.com/editor/net/)

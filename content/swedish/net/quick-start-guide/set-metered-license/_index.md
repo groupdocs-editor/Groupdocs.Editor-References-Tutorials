@@ -3,7 +3,6 @@ title: Ställ in mätlicens
 linktitle: Ställ in mätlicens
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du integrerar och använder GroupDocs.Editor för .NET med vår omfattande guide. Lås upp kraftfulla dokumentredigeringsfunktioner i dina .NET-applikationer.
-type: docs
 weight: 12
 url: /sv/net/quick-start-guide/set-metered-license/
 ---
@@ -69,15 +68,15 @@ editor.Save(editableDocument, "updated_sample.docx");
 Console.WriteLine("Document saved successfully.");
 ```
 ## Slutsats
- Grattis! Du har framgångsrikt integrerat och använt GroupDocs.Editor för .NET i din applikation. Från att installera biblioteket till att ställa in en mätlicens och redigera dokument, du har täckt alla viktiga steg. Detta kraftfulla verktyg kan avsevärt effektivisera dina dokumentredigeringsarbetsflöden i dina .NET-applikationer. För ytterligare information, se[GroupDocs.Editor för .NET-dokumentation](https://reference.groupdocs.com/editor/net/).
+ Grattis! Du har framgångsrikt integrerat och använt GroupDocs.Editor för .NET i din applikation. Från att installera biblioteket till att ställa in en mätlicens och redigera dokument, du har täckt alla viktiga steg. Detta kraftfulla verktyg kan avsevärt effektivisera dina dokumentredigeringsarbetsflöden i dina .NET-applikationer. För ytterligare information, se[GroupDocs.Editor för .NET-dokumentation](https://tutorials.groupdocs.com/editor/net/).
 ## FAQ's
 ### Hur får jag en GroupDocs.Editor-licens?
  Du kan få en licens från[GroupDocs köpsida](https://purchase.groupdocs.com/buy) . För en tillfällig licens, besök[här](https://purchase.groupdocs.com/temporary-license/).
 ### Kan jag prova GroupDocs.Editor gratis?
  Ja, du kan ladda ner en gratis testversion från[nedladdningssida](https://releases.groupdocs.com/) och begära en tillfällig licens.
 ### Vilka dokumentformat stöds av GroupDocs.Editor?
- GroupDocs.Editor stöder olika format inklusive DOCX, PPTX, XLSX, TXT, HTML och mer. För en fullständig lista, kolla[dokumentation](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor stöder olika format inklusive DOCX, PPTX, XLSX, TXT, HTML och mer. För en fullständig lista, kolla[dokumentation](https://tutorials.groupdocs.com/editor/net/).
 ### Finns det något communitystöd tillgängligt för GroupDocs.Editor?
  Ja, du kan få stöd från samhället[GroupDocs.Editor-forum](https://forum.groupdocs.com/c/editor/20).
 ### Hur kommer jag igång med GroupDocs.Editor för .NET?
- Följ vår steg-för-steg-guide för att ställa in biblioteket, skaffa en licens och börja redigera dokument. För detaljerade instruktioner, besök[dokumentation](https://reference.groupdocs.com/editor/net/).
+ Följ vår steg-för-steg-guide för att ställa in biblioteket, skaffa en licens och börja redigera dokument. För detaljerade instruktioner, besök[dokumentation](https://tutorials.groupdocs.com/editor/net/).

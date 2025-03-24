@@ -3,7 +3,6 @@ title: Trabalhar com valores separados delimitados (DSV)
 linktitle: Trabalhar com valores separados delimitados (DSV)
 second_title: API GroupDocs.Editor .NET
 description: Aprenda como editar arquivos CSV e TSV usando GroupDocs.Editor for .NET com este guia passo a passo. Melhore seus projetos .NET sem esforço.
-type: docs
 weight: 12
 url: /pt/net/document-processing/work-dsv/
 ---
@@ -111,4 +110,4 @@ Com certeza, você pode especificar a codificação desejada nas opções de sal
 ### Posso converter um arquivo CSV em uma planilha do Excel usando GroupDocs.Editor for .NET?
 Sim, você pode salvar um arquivo CSV como uma planilha do Excel usando as opções de salvamento apropriadas.
 ### Onde posso encontrar mais documentação sobre GroupDocs.Editor for .NET?
- Você pode encontrar documentação detalhada[aqui](https://reference.groupdocs.com/editor/net/)
+ Você pode encontrar documentação detalhada[aqui](https://tutorials.groupdocs.com/editor/net/)

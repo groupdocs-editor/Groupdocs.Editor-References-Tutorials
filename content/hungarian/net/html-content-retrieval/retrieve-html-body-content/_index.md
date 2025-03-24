@@ -3,7 +3,6 @@ title: HTML törzstartalom lekérése
 linktitle: HTML törzstartalom lekérése
 second_title: GroupDocs.Editor .NET API
 description: Letöltheti a HTML törzstartalmat a GroupDocs.Editor for .NET segítségével lépésenkénti útmutatónkkal. Bővítse .NET-alkalmazásait könnyedén.
-type: docs
 weight: 10
 url: /hu/net/html-content-retrieval/retrieve-html-body-content/
 ---
@@ -62,4 +61,4 @@ GroupDocs.Editor a fájlformátumok széles skáláját támogatja, beleértve a
 ### Használhatom a GroupDocs.Editort .NET Core-al?
 Igen, a GroupDocs.Editor kompatibilis a .NET Core programmal, rugalmasságot biztosítva a modern alkalmazásfejlesztéshez.
 ### Hol találok további példákat és dokumentációt a GroupDocs.Editorhoz?
- További példákat és részletes dokumentációt találhat a[GroupDocs.Editor dokumentációs oldal](https://reference.groupdocs.com/editor/net/).
+ További példákat és részletes dokumentációt találhat a[GroupDocs.Editor dokumentációs oldal](https://tutorials.groupdocs.com/editor/net/).

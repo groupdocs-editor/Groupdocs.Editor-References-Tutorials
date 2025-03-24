@@ -3,7 +3,6 @@ title: 編輯文檔
 linktitle: 編輯文檔
 second_title: GroupDocs.Editor .NET API
 description: 学习如何使用 GroupDocs.Editor for .NET 轻松编辑文档。文字处理和电子表格文件的分步指南。
-type: docs
 weight: 11
 url: /zh/net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 适当的处置可确保您的应用程序中没有内存泄漏或性能问题。
 ## 结论
-恭喜！现在，您已经充分了解如何使用 GroupDocs.Editor for .NET 加载、编辑和提取文字处理文档和电子表格中的内容。这款功能强大的工具简化了文档编辑任务，并与您的 .NET 应用程序无缝集成。有关更多详细信息，您可以探索[文档](https://reference.groupdocs.com/editor/net/), [下载最新版本](https://releases.groupdocs.com/editor/net/)或获取[临时执照](https://purchase.groupdocs.com/temporary-license/).
+恭喜！现在，您已经充分了解如何使用 GroupDocs.Editor for .NET 加载、编辑和提取文字处理文档和电子表格中的内容。这款功能强大的工具简化了文档编辑任务，并与您的 .NET 应用程序无缝集成。有关更多详细信息，您可以探索[文档](https://tutorials.groupdocs.com/editor/net/), [下载最新版本](https://releases.groupdocs.com/editor/net/)或获取[临时执照](https://purchase.groupdocs.com/temporary-license/).
 ## 常见问题解答
 ### 我可以使用 GroupDocs.Editor for .NET 编辑 PDF 文档吗？
 目前，GroupDocs.Editor for .NET 主要支持文字处理、电子表格和演示文稿格式。

@@ -3,7 +3,6 @@ title: Dokumentenmanagement mit GroupDocs.Editor freischalten
 linktitle: GroupDocs.Editor-Tutorials
 additionalTitle: GroupDocs API-Referenzen
 description: Meistern Sie die mühelose Dokumentbearbeitung mit GroupDocs.Editor für .NET und Java. Optimieren Sie den Workflow, verwalten Sie CSS, rufen Sie HTML-Inhalte ab und mehr!
-type: docs
 weight: 11
 url: /de/
 is_root: true

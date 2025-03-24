@@ -3,7 +3,6 @@ title: العمل مع المستندات النصية العادية
 linktitle: العمل مع المستندات النصية العادية
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية تحرير المستندات النصية العادية باستخدام GroupDocs.Editor لـ .NET من خلال دليلنا التفصيلي خطوة بخطوة. قم بتبسيط عملية تحرير مستندات .NET الخاصة بك.
-type: docs
 weight: 15
 url: /ar/net/document-processing/work-plain-text-documents/
 ---
@@ -96,10 +95,10 @@ using (Editor editor = new Editor(inputFilePath))
 System.Console.WriteLine("Document editing process completed successfully!");
 ```
 ## خاتمة
- تهانينا! لقد قمت بتحرير مستند نص عادي بنجاح باستخدام GroupDocs.Editor لـ .NET. تعمل هذه الأداة القوية على تبسيط عملية تحرير المستندات، مما يجعل من السهل دمجها في تطبيقات .NET الخاصة بك. سواء كنت تتعامل مع ملفات نصية بسيطة أو تنسيقات مستندات معقدة، فإن GroupDocs.Editor يلبي احتياجاتك. اكتشف المزيد من الميزات والإمكانيات من خلال زيارة[وثائق GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ تهانينا! لقد قمت بتحرير مستند نص عادي بنجاح باستخدام GroupDocs.Editor لـ .NET. تعمل هذه الأداة القوية على تبسيط عملية تحرير المستندات، مما يجعل من السهل دمجها في تطبيقات .NET الخاصة بك. سواء كنت تتعامل مع ملفات نصية بسيطة أو تنسيقات مستندات معقدة، فإن GroupDocs.Editor يلبي احتياجاتك. اكتشف المزيد من الميزات والإمكانيات من خلال زيارة[وثائق GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).
 ## الأسئلة الشائعة
 ### ما هي تنسيقات الملفات التي يدعمها GroupDocs.Editor لـ .NET؟
- يدعم GroupDocs.Editor for .NET نطاقًا واسعًا من تنسيقات الملفات، بما في ذلك DOCX وTXT وHTML والمزيد. افحص ال[توثيق](https://reference.groupdocs.com/editor/net/) للحصول على قائمة كاملة.
+ يدعم GroupDocs.Editor for .NET نطاقًا واسعًا من تنسيقات الملفات، بما في ذلك DOCX وTXT وHTML والمزيد. افحص ال[توثيق](https://tutorials.groupdocs.com/editor/net/) للحصول على قائمة كاملة.
 ### كيف يمكنني الحصول على نسخة تجريبية مجانية من GroupDocs.Editor لـ .NET؟
  يمكنك تنزيل نسخة تجريبية مجانية من GroupDocs.Editor لـ .NET من[صفحة الإصدارات](https://releases.groupdocs.com/).
 ### هل يمكنني شراء ترخيص مؤقت لـ GroupDocs.Editor لـ .NET؟
@@ -107,4 +106,4 @@ System.Console.WriteLine("Document editing process completed successfully!");
 ### أين يمكنني الحصول على الدعم لـ GroupDocs.Editor لـ .NET؟
  الدعم متاح من خلال[منتدى دعم GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
 ### هل تتوفر وثائق تفصيلية لـ GroupDocs.Editor لـ .NET؟
- نعم، الوثائق التفصيلية متاحة على[صفحة وثائق GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ نعم، الوثائق التفصيلية متاحة على[صفحة وثائق GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).

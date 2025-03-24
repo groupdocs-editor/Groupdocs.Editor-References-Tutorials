@@ -3,7 +3,6 @@ title: 잘못된 양식 필드 수집 수정 및 저장
 linktitle: 잘못된 양식 필드 수집 수정 및 저장
 second_title: GroupDocs.Editor .NET API
 description: .NET용 Groupdocs.Editor를 사용하여 DOCX의 잘못된 양식 필드를 수정하는 방법을 알아보세요. 문서에 오류가 없는지 확인하고 안전하게 저장하려면 이 가이드를 따르세요.
-type: docs
 weight: 11
 url: /ko/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## 결론
- 그리고 거기에 있습니다! 잘못된 양식 필드를 성공적으로 수정하고 .NET용 Groupdocs.Editor를 사용하여 문서를 저장했습니다. 이 단계별 가이드는 프로세스를 명확하고 관리하기 쉽게 만들었습니다. 문제가 발생하거나 궁금한 점이 있으면 언제든지 확인하세요.[선적 서류 비치](https://reference.groupdocs.com/editor/net/) 아니면 연락해[지원하다](https://forum.groupdocs.com/c/editor/20).
+ 그리고 거기에 있습니다! 잘못된 양식 필드를 성공적으로 수정하고 .NET용 Groupdocs.Editor를 사용하여 문서를 저장했습니다. 이 단계별 가이드는 프로세스를 명확하고 관리하기 쉽게 만들었습니다. 문제가 발생하거나 궁금한 점이 있으면 언제든지 확인하세요.[선적 서류 비치](https://tutorials.groupdocs.com/editor/net/) 아니면 연락해[지원하다](https://forum.groupdocs.com/c/editor/20).
 ## FAQ
 ### 내 문서가 비밀번호로 보호되어 있으면 어떻게 되나요?
  비밀번호는 다음에서 지정할 수 있습니다.`WordProcessingLoadOptions` 문서를 열려면

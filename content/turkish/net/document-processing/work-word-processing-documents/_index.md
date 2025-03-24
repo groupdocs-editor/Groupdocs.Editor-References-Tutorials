@@ -3,7 +3,6 @@ title: Kelime İşleme Belgeleriyle Çalışmak
 linktitle: Kelime İşleme Belgeleriyle Çalışmak
 second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET ile Kelime işlem belgelerini zahmetsizce düzenleyin. Belge yönetimi becerilerinizi geliştirmek için ayrıntılı, adım adım eğitimimizi izleyin.
-type: docs
 weight: 19
 url: /tr/net/document-processing/work-word-processing-documents/
 ---
@@ -117,7 +116,7 @@ Console.WriteLine("Document editing and saving process completed successfully.")
 Artık GroupDocs.Editor for .NET'i kullanarak Kelime işlem belgeleriyle nasıl çalışacağınıza ilişkin kapsamlı, adım adım kılavuzu tamamladınız. Bu güçlü araç, belgeleri programlı olarak yönetmeyi ve düzenlemeyi kolaylaştırarak belge işleme iş akışınızı özelleştirmek için çok çeşitli seçenekler sunar.
 ## SSS'ler
 ### Diğer belge formatlarını düzenlemek için GroupDocs.Editor for .NET'i kullanabilir miyim?
- Evet, GroupDocs.Editor PDF, HTML ve daha fazlasını içeren çeşitli belge formatlarını destekler. Kontrol edin[dokümantasyon](https://reference.groupdocs.com/editor/net/) Desteklenen formatların tam listesi için.
+ Evet, GroupDocs.Editor PDF, HTML ve daha fazlasını içeren çeşitli belge formatlarını destekler. Kontrol edin[dokümantasyon](https://tutorials.groupdocs.com/editor/net/) Desteklenen formatların tam listesi için.
 ### GroupDocs.Editor'ü lisanssız kullanmak mümkün mü?
  Ücretsiz deneme sürümünü kullanabilir veya geçici bir lisans talep edebilirsiniz. Uzun süreli kullanım için lisans satın almanız önerilir. Lisans alın[Burada](https://purchase.groupdocs.com/buy).
 ### OutOfMemoryException'a neden olan büyük belgeleri nasıl işleyebilirim?

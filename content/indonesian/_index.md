@@ -3,7 +3,6 @@ title: Membuka Kunci Manajemen Dokumen dengan GroupDocs.Editor
 linktitle: GroupDocs.Tutorial Editor
 additionalTitle: Referensi API GroupDocs
 description: Kuasai pengeditan dokumen dengan mudah menggunakan GroupDocs.Editor untuk .NET & Java. Sederhanakan alur kerja, kelola CSS, ambil konten HTML, & banyak lagi!
-type: docs
 weight: 11
 url: /id/
 is_root: true

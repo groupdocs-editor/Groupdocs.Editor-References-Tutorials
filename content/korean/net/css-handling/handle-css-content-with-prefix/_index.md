@@ -3,7 +3,6 @@ title: 접두사가 있는 CSS 콘텐츠 처리
 linktitle: 접두사가 있는 CSS 콘텐츠 처리
 second_title: GroupDocs.Editor .NET API
 description: 자세한 단계별 튜토리얼에서 .NET용 Groupdocs.Editor를 사용하여 접두사가 포함된 CSS 콘텐츠를 처리하는 방법을 알아보세요. 모든 수준의 개발자에게 적합합니다.
-type: docs
 weight: 11
 url: /ko/net/css-handling/handle-css-content-with-prefix/
 ---
@@ -66,6 +65,6 @@ using (Editor editor = new Editor("Your Sample Document", delegate { return new 
 ### .NET용 Groupdocs.Editor의 임시 라이센스를 얻으려면 어떻게 해야 합니까?
  임시면허를 취득할 수 있습니다.[여기](https://purchase.groupdocs.com/temporary-license/).
 ### .NET용 Groupdocs.Editor에 대한 자세한 설명서는 어디에서 찾을 수 있습니까?
- 자세한 문서가 제공됩니다.[여기](https://reference.groupdocs.com/editor/net/).
+ 자세한 문서가 제공됩니다.[여기](https://tutorials.groupdocs.com/editor/net/).
 ### .NET용 Groupdocs.Editor에 어떤 지원 옵션을 사용할 수 있나요?
  지원을 받으실 수 있습니다[여기](https://forum.groupdocs.com/c/editor/20).

@@ -3,7 +3,6 @@ title: Nastavte měřenou licenci
 linktitle: Nastavte měřenou licenci
 second_title: GroupDocs.Editor .NET API
 description: Naučte se, jak integrovat a používat GroupDocs.Editor pro .NET pomocí našeho komplexního průvodce. Odemkněte výkonné funkce pro úpravu dokumentů ve svých aplikacích .NET.
-type: docs
 weight: 12
 url: /cs/net/quick-start-guide/set-metered-license/
 ---
@@ -29,7 +28,7 @@ Nejprve musíte do svého projektu nainstalovat GroupDocs.Editor for .NET. Můž
 2.  Jít do`Tools` >`NuGet Package Manager` >`Manage NuGet Packages for Solution`.
 3.  Hledat`GroupDocs.Editor`.
 4.  Klikněte na`Install`.
-Tím do svého projektu přidáte potřebné reference.
+Tím do svého projektu přidáte potřebné tutorials.
 ## Krok 2: Nastavte měřenou licenci
 Chcete-li odemknout všechny funkce aplikace GroupDocs.Editor, budete muset nastavit měřenou licenci. To vám umožňuje používat API bez jakýchkoli omezení.
 ### Nastavení měřené licence
@@ -69,15 +68,15 @@ editor.Save(editableDocument, "updated_sample.docx");
 Console.WriteLine("Document saved successfully.");
 ```
 ## Závěr
- Gratulujeme! Úspěšně jste integrovali a používali GroupDocs.Editor pro .NET ve své aplikaci. Od instalace knihovny po nastavení měřené licence a úpravy dokumentů jste probrali všechny základní kroky. Tento výkonný nástroj může výrazně zefektivnit vaše pracovní postupy při úpravě dokumentů ve vašich aplikacích .NET. Další informace naleznete v části[GroupDocs.Editor pro dokumentaci .NET](https://reference.groupdocs.com/editor/net/).
+ Gratulujeme! Úspěšně jste integrovali a používali GroupDocs.Editor pro .NET ve své aplikaci. Od instalace knihovny po nastavení měřené licence a úpravy dokumentů jste probrali všechny základní kroky. Tento výkonný nástroj může výrazně zefektivnit vaše pracovní postupy při úpravě dokumentů ve vašich aplikacích .NET. Další informace naleznete v části[GroupDocs.Editor pro dokumentaci .NET](https://tutorials.groupdocs.com/editor/net/).
 ## FAQ
 ### Jak získám licenci GroupDocs.Editor?
  Licenci můžete získat od[Nákupní stránka GroupDocs](https://purchase.groupdocs.com/buy) . Chcete-li získat dočasnou licenci, navštivte[tady](https://purchase.groupdocs.com/temporary-license/).
 ### Mohu vyzkoušet GroupDocs.Editor zdarma?
  Ano, můžete si stáhnout bezplatnou zkušební verzi z[stránka ke stažení](https://releases.groupdocs.com/) a požádat o dočasnou licenci.
 ### Jaké formáty dokumentů podporuje GroupDocs.Editor?
- GroupDocs.Editor podporuje různé formáty včetně DOCX, PPTX, XLSX, TXT, HTML a dalších. Úplný seznam naleznete na[dokumentace](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor podporuje různé formáty včetně DOCX, PPTX, XLSX, TXT, HTML a dalších. Úplný seznam naleznete na[dokumentace](https://tutorials.groupdocs.com/editor/net/).
 ### Je pro GroupDocs.Editor k dispozici nějaká podpora komunity?
  Ano, můžete získat podporu komunity od[Fórum GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
 ### Jak mohu začít s GroupDocs.Editor pro .NET?
- Postupujte podle našeho podrobného průvodce nastavením knihovny, získáním licence a zahájením úprav dokumentů. Podrobné pokyny naleznete na[dokumentace](https://reference.groupdocs.com/editor/net/).
+ Postupujte podle našeho podrobného průvodce nastavením knihovny, získáním licence a zahájením úprav dokumentů. Podrobné pokyny naleznete na[dokumentace](https://tutorials.groupdocs.com/editor/net/).

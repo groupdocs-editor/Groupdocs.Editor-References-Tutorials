@@ -3,7 +3,6 @@ title: Получение HTML-контента
 linktitle: Получение HTML-контента
 second_title: GroupDocs.Editor .NET API
 description: Узнайте, как получить содержимое HTML с помощью GroupDocs.Editor для .NET. Включены пошаговые руководства по получению основного содержимого и пользовательских префиксов.
-type: docs
 weight: 22
 url: /ru/net/html-content-retrieval/
 ---

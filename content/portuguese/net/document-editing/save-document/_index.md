@@ -3,7 +3,6 @@ title: Salvar documento
 linktitle: Salvar documento
 second_title: API GroupDocs.Editor .NET
 description: Edite e salve documentos sem esforço usando GroupDocs.Editor for .NET. Este guia passo a passo simplifica o processo para desenvolvedores.
-type: docs
 weight: 14
 url: /pt/net/document-editing/save-document/
 ---
@@ -80,7 +79,7 @@ Seguindo essas etapas, você pode carregar, editar e salvar documentos com efici
 Editar e salvar documentos programaticamente nunca foi tão fácil com GroupDocs.Editor for .NET. Este guia orientou você durante todo o processo, desde carregar um documento até salvá-lo em vários formatos. Com o GroupDocs.Editor, você tem uma solução versátil e robusta ao seu alcance, simplificando o processo de edição de documentos.
 ## Perguntas frequentes
 ### Quais formatos de arquivo o GroupDocs.Editor suporta?
-GroupDocs.Editor suporta vários formatos de arquivo, incluindo DOCX, RTF, TXT e muitos mais. Para uma lista completa, confira o[documentação](https://reference.groupdocs.com/editor/net/).
+GroupDocs.Editor suporta vários formatos de arquivo, incluindo DOCX, RTF, TXT e muitos mais. Para uma lista completa, confira o[documentação](https://tutorials.groupdocs.com/editor/net/).
 ### Posso experimentar o GroupDocs.Editor antes de comprar?
  Sim, você pode obter um[teste grátis](https://releases.groupdocs.com/) para testar os recursos do GroupDocs.Editor.
 ### Existe algum suporte disponível se eu tiver problemas?

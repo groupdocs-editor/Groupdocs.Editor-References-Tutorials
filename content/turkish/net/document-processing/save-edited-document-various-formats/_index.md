@@ -3,7 +3,6 @@ title: Düzenlenen Belgeyi Çeşitli Formatlarda Kaydetme
 linktitle: Düzenlenen Belgeyi Çeşitli Formatlarda Kaydetme
 second_title: GroupDocs.Editor .NET API'si
 description: Bu kapsamlı adım adım kılavuzda, GroupDocs.Editor for .NET'i kullanarak düzenlenen belgeleri çeşitli formatlarda nasıl kaydedeceğinizi öğrenin.
-type: docs
 weight: 11
 url: /tr/net/document-processing/save-edited-document-various-formats/
 ---
@@ -92,4 +91,4 @@ GroupDocs.Editor, DOCX, PDF, HTML ve çok daha fazlasını içeren çok çeşitl
 ### GroupDocs.Editor için nasıl geçici lisans alabilirim?
  Geçici lisans alabilirsiniz[Burada](https://purchase.groupdocs.com/temporary-license/).
 ### Daha fazla belge ve desteği nerede bulabilirim?
- Detaylı dokümantasyon mevcut[Burada](https://reference.groupdocs.com/editor/net/) ve destek alabilirsiniz[Burada](https://forum.groupdocs.com/c/editor/20).
+ Detaylı dokümantasyon mevcut[Burada](https://tutorials.groupdocs.com/editor/net/) ve destek alabilirsiniz[Burada](https://forum.groupdocs.com/c/editor/20).

@@ -3,7 +3,6 @@ title: Đặt giấy phép đo lường
 linktitle: Đặt giấy phép đo lường
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách tích hợp và sử dụng GroupDocs.Editor cho .NET với hướng dẫn toàn diện của chúng tôi. Mở khóa các tính năng chỉnh sửa tài liệu mạnh mẽ trong các ứng dụng .NET của bạn.
-type: docs
 weight: 12
 url: /vi/net/quick-start-guide/set-metered-license/
 ---
@@ -69,15 +68,15 @@ editor.Save(editableDocument, "updated_sample.docx");
 Console.WriteLine("Document saved successfully.");
 ```
 ## Phần kết luận
- Chúc mừng! Bạn đã tích hợp và sử dụng thành công GroupDocs.Editor for .NET trong ứng dụng của mình. Từ việc cài đặt thư viện đến thiết lập giấy phép đo lường và chỉnh sửa tài liệu, bạn đã thực hiện tất cả các bước cần thiết. Công cụ mạnh mẽ này có thể hợp lý hóa đáng kể quy trình chỉnh sửa tài liệu trong các ứng dụng .NET của bạn. Để biết thêm thông tin, hãy tham khảo[GroupDocs.Editor cho tài liệu .NET](https://reference.groupdocs.com/editor/net/).
+ Chúc mừng! Bạn đã tích hợp và sử dụng thành công GroupDocs.Editor for .NET trong ứng dụng của mình. Từ việc cài đặt thư viện đến thiết lập giấy phép đo lường và chỉnh sửa tài liệu, bạn đã thực hiện tất cả các bước cần thiết. Công cụ mạnh mẽ này có thể hợp lý hóa đáng kể quy trình chỉnh sửa tài liệu trong các ứng dụng .NET của bạn. Để biết thêm thông tin, hãy tham khảo[GroupDocs.Editor cho tài liệu .NET](https://tutorials.groupdocs.com/editor/net/).
 ## Câu hỏi thường gặp
 ### Làm cách nào để có được giấy phép GroupDocs.Editor?
  Bạn có thể nhận được giấy phép từ[Trang mua GroupDocs](https://purchase.groupdocs.com/buy) . Để có giấy phép tạm thời, hãy truy cập[đây](https://purchase.groupdocs.com/temporary-license/).
 ### Tôi có thể dùng thử GroupDocs.Editor miễn phí không?
  Có, bạn có thể tải xuống bản dùng thử miễn phí từ[trang tải xuống](https://releases.groupdocs.com/) và yêu cầu giấy phép tạm thời.
 ### Những định dạng tài liệu nào được GroupDocs.Editor hỗ trợ?
- GroupDocs.Editor hỗ trợ nhiều định dạng khác nhau bao gồm DOCX, PPTX, XLSX, TXT, HTML, v.v. Để có danh sách đầy đủ, hãy kiểm tra[tài liệu](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor hỗ trợ nhiều định dạng khác nhau bao gồm DOCX, PPTX, XLSX, TXT, HTML, v.v. Để có danh sách đầy đủ, hãy kiểm tra[tài liệu](https://tutorials.groupdocs.com/editor/net/).
 ### Có hỗ trợ cộng đồng nào dành cho GroupDocs.Editor không?
  Có, bạn có thể nhận được sự hỗ trợ của cộng đồng từ[Diễn đàn GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
 ### Làm cách nào để bắt đầu với GroupDocs.Editor cho .NET?
- Làm theo hướng dẫn từng bước của chúng tôi để thiết lập thư viện, lấy giấy phép và bắt đầu chỉnh sửa tài liệu. Để được hướng dẫn chi tiết, hãy truy cập[tài liệu](https://reference.groupdocs.com/editor/net/).
+ Làm theo hướng dẫn từng bước của chúng tôi để thiết lập thư viện, lấy giấy phép và bắt đầu chỉnh sửa tài liệu. Để được hướng dẫn chi tiết, hãy truy cập[tài liệu](https://tutorials.groupdocs.com/editor/net/).

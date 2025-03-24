@@ -3,7 +3,6 @@ title: Handle CSS Content with Prefix
 linktitle: Handle CSS Content with Prefix
 second_title: GroupDocs.Editor .NET API
 description: Learn how to handle CSS content with prefix using Groupdocs.Editor for .NET in this detailed step-by-step tutorial. Perfect for developers of all levels.
-type: docs
 weight: 11
 url: /net/css-handling/handle-css-content-with-prefix/
 ---
@@ -57,7 +56,7 @@ Finally, we output the number of stylesheets found and print each stylesheet to 
 }
 ```
 ## Conclusion
-Handling CSS content with prefixes using Groupdocs.Editor for .NET is straightforward and efficient. By following these steps, you can easily manage your document's stylesheets and ensure they reference the correct external resources. This tutorial has covered the essential steps to get you started, but Groupdocs.Editor for .NET offers much more. Explore its documentation and features to fully leverage its capabilities in your projects.
+Handling CSS content with prefixes using Groupdocs.Editor for .NET is straightforward and efficient. By following these steps, you can easily manage your document's stylesheets and ensure they tutorials the correct external resources. This tutorial has covered the essential steps to get you started, but Groupdocs.Editor for .NET offers much more. Explore its documentation and features to fully leverage its capabilities in your projects.
 ## FAQ's
 ### Can I use Groupdocs.Editor for .NET with other document formats?
 Yes, Groupdocs.Editor for .NET supports various document formats including PDF, Word, Excel, and more.
@@ -66,6 +65,6 @@ Absolutely! You can start your free trial [here](https://releases.groupdocs.com/
 ### How do I get a temporary license for Groupdocs.Editor for .NET?
 You can obtain a temporary license [here](https://purchase.groupdocs.com/temporary-license/).
 ### Where can I find detailed documentation for Groupdocs.Editor for .NET?
-Detailed documentation is available [here](https://reference.groupdocs.com/editor/net/).
+Detailed documentation is available [here](https://tutorials.groupdocs.com/editor/net/).
 ### What support options are available for Groupdocs.Editor for .NET?
 You can get support [here](https://forum.groupdocs.com/c/editor/20).

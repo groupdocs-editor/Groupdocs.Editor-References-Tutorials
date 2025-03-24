@@ -3,7 +3,6 @@ title: استرداد محتوى HTML باستخدام البادئة
 linktitle: استرداد محتوى HTML باستخدام البادئة
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية استرداد محتوى HTML من المستندات باستخدام GroupDocs.Editor لـ .NET مع البادئات المخصصة للصور وأوراق الأنماط. يتضمن دليل خطوة بخطوة.
-type: docs
 weight: 11
 url: /ar/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 يقوم مقتطف الكود هذا بجلب محتوى HTML بالبادئات المخصصة وطباعته على وحدة التحكم. يمكنك أيضًا معالجة محتوى HTML هذا أو حفظه حسب الحاجة.
 ## خاتمة
 وهناك لديك! باتباع هذه الخطوات، يمكنك بسهولة استرداد محتوى HTML من مستند باستخدام GroupDocs.Editor لـ .NET، مع البادئات المخصصة للصور وأوراق الأنماط. تعمل هذه الأداة القوية على تبسيط معالجة المستندات، مما يسمح لك بالتركيز على دمج تحرير المستندات في تطبيقات .NET الخاصة بك بسلاسة.
- لمزيد من المعلومات التفصيلية، قم بمراجعة[GroupDocs.Editor لوثائق .NET](https://reference.groupdocs.com/editor/net/) . إذا كانت لديك أي أسئلة أو كنت بحاجة إلى مزيد من المساعدة، فلا تتردد في التواصل معنا على[منتدى الدعم](https://forum.groupdocs.com/c/editor/20).
+ لمزيد من المعلومات التفصيلية، قم بمراجعة[GroupDocs.Editor لوثائق .NET](https://tutorials.groupdocs.com/editor/net/) . إذا كانت لديك أي أسئلة أو كنت بحاجة إلى مزيد من المساعدة، فلا تتردد في التواصل معنا على[منتدى الدعم](https://forum.groupdocs.com/c/editor/20).
 ## الأسئلة الشائعة
 ### ما أنواع المستندات التي يمكنني تحريرها باستخدام GroupDocs.Editor لـ .NET؟
 يدعم GroupDocs.Editor تنسيقات المستندات المختلفة بما في ذلك Word وExcel وPowerPoint وPDF والمزيد.

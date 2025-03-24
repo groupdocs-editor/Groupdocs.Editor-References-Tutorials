@@ -3,7 +3,6 @@ title: معالجة الملف
 linktitle: معالجة الملف
 second_title: GroupDocs.Editor .NET API
 description: معالجة المستندات الرئيسية في .NET باستخدام GroupDocs.Editor. تعلم كيفية استخراج المعلومات والحفظ بتنسيقات مختلفة والعمل مع أنواع مختلفة من المستندات دون عناء.
-type: docs
 weight: 24
 url: /ar/net/document-processing/
 ---

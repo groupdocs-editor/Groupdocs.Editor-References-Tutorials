@@ -3,7 +3,6 @@ title: CSS 處理
 linktitle: CSS 處理
 second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 有效處理 CSS 內容。輕鬆提取外部 CSS 內容並處理帶有前綴的 CSS 內容。
-type: docs
 weight: 21
 url: /zh-hant/net/css-handling/
 ---

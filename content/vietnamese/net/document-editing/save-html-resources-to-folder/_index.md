@@ -3,7 +3,6 @@ title: Lưu tài nguyên HTML vào thư mục
 linktitle: Lưu tài nguyên HTML vào thư mục
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách trích xuất tài nguyên HTML từ tài liệu bằng Groupdocs.Editor cho .NET. Hướng dẫn toàn diện này cung cấp hướng dẫn từng bước cho các nhà phát triển.
-type: docs
 weight: 13
 url: /vi/net/document-editing/save-html-resources-to-folder/
 ---

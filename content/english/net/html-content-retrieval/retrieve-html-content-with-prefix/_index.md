@@ -3,7 +3,6 @@ title: Retrieve HTML Content with Prefix
 linktitle: Retrieve HTML Content with Prefix
 second_title: GroupDocs.Editor .NET API
 description: Learn how to retrieve HTML content from documents using GroupDocs.Editor for .NET with custom prefixes for images and stylesheets. Step-by-step guide included.
-type: docs
 weight: 11
 url: /net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 This code snippet fetches the HTML content with the custom prefixes and prints it to the console. You can further process or save this HTML content as needed.
 ## Conclusion
 And there you have it! By following these steps, you can easily retrieve HTML content from a document using GroupDocs.Editor for .NET, complete with custom prefixes for images and stylesheets. This powerful tool simplifies document manipulation, allowing you to focus on integrating document editing into your .NET applications seamlessly.
-For more detailed information, check out the [GroupDocs.Editor for .NET documentation](https://reference.groupdocs.com/editor/net/). If you have any questions or need further assistance, feel free to reach out on the [support forum](https://forum.groupdocs.com/c/editor/20).
+For more detailed information, check out the [GroupDocs.Editor for .NET documentation](https://tutorials.groupdocs.com/editor/net/). If you have any questions or need further assistance, feel free to reach out on the [support forum](https://forum.groupdocs.com/c/editor/20).
 ## FAQ's
 ### What types of documents can I edit with GroupDocs.Editor for .NET?
 GroupDocs.Editor supports various document formats including Word, Excel, PowerPoint, PDF, and more.

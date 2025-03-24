@@ -3,7 +3,6 @@ title: Snelstartgids
 linktitle: Snelstartgids
 second_title: GroupDocs.Editor .NET API
 description: Leer GroupDocs.Editor voor .NET gebruiken met onze uitgebreide tutorials. Stel licenties in, integreer functies en ontgrendel krachtige documentbewerkingsmogelijkheden.
-type: docs
 weight: 26
 url: /nl/net/quick-start-guide/
 ---

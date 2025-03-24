@@ -3,7 +3,6 @@ title: Skapa dokument
 linktitle: Skapa dokument
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du redigerar Word-, Excel-, PowerPoint-, Ebook- och e-postdokument med hjälp av GroupDocs.Editor för .NET med denna omfattande steg-för-steg-handledning.
-type: docs
 weight: 10
 url: /sv/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ Du kan använda en återuppringningsfunktion för att spara den redigerade dokum
 ### Behöver jag en licens för att använda GroupDocs.Editor för .NET?
  Ja, du kan få en licens från[här](https://purchase.groupdocs.com/buy). Det finns även möjlighet till en tillfällig licens.
 ### Var kan jag hitta mer detaljerad dokumentation?
- Detaljerad dokumentation finns tillgänglig på[GroupDocs.Editor för .NET dokumentationssida](https://reference.groupdocs.com/editor/net/).
+ Detaljerad dokumentation finns tillgänglig på[GroupDocs.Editor för .NET dokumentationssida](https://tutorials.groupdocs.com/editor/net/).

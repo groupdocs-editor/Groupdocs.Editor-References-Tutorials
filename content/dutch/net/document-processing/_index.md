@@ -3,7 +3,6 @@ title: Documentverwerking
 linktitle: Documentverwerking
 second_title: GroupDocs.Editor .NET API
 description: Masterdocumentverwerking in .NET met GroupDocs.Editor. Leer informatie extraheren, opslaan in verschillende formaten en moeiteloos met verschillende documenttypen werken.
-type: docs
 weight: 24
 url: /nl/net/document-processing/
 ---

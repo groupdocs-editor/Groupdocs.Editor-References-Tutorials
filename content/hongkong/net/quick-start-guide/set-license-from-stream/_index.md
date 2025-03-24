@@ -3,7 +3,6 @@ title: 從 Stream 設定許可證
 linktitle: 從 Stream 設定許可證
 second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 Groupdocs.Editor for .NET 以程式設計方式編輯文件。遵循此全面的無縫整合和高級功能。
-type: docs
 weight: 11
 url: /zh-hant/net/quick-start-guide/set-license-from-stream/
 ---
@@ -146,7 +145,7 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 }
 ```
 ## 結論
- Groupdocs.Editor for .NET 是一個多功能且功能強大的工具，可顯著簡化您的文件編輯流程。憑藉其強大的功能和對多種文件格式的支持，將該庫整合到您的 .NET 應用程式中無疑會提高您的生產力和能力。不要忘記探索[文件](https://reference.groupdocs.com/editor/net/)了解更多詳細資訊和進階使用情境。
+ Groupdocs.Editor for .NET 是一個多功能且功能強大的工具，可顯著簡化您的文件編輯流程。憑藉其強大的功能和對多種文件格式的支持，將該庫整合到您的 .NET 應用程式中無疑會提高您的生產力和能力。不要忘記探索[文件](https://tutorials.groupdocs.com/editor/net/)了解更多詳細資訊和進階使用情境。
 ## 常見問題解答
 ### 我可以在沒有授權的情況下使用 Groupdocs.Editor for .NET 嗎？
 不可以，您需要有效的授權才能使用 Groupdocs.Editor for .NET。但是，您可以請求[臨時執照](https://purchase.groupdocs.com/temporary-license/)進行評估。
@@ -157,4 +156,4 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 ### 是否可以使用 Groupdocs.Editor 對文件進行密碼保護？
 是的，您可以在儲存文件時設定密碼和其他安全選項。
 ### Groupdocs.Editor for .NET 支援哪些文件格式？
-它支援多種格式，包括 DOCX、XLSX、PDF 等。請參閱[文件](https://reference.groupdocs.com/editor/net/)以獲得完整清單。
+它支援多種格式，包括 DOCX、XLSX、PDF 等。請參閱[文件](https://tutorials.groupdocs.com/editor/net/)以獲得完整清單。

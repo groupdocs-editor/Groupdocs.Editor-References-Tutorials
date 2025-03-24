@@ -3,7 +3,6 @@ title: Odemknutí správy dokumentů pomocí GroupDocs.Editor
 linktitle: Výukové programy GroupDocs.Editor
 additionalTitle: Reference API GroupDocs
 description: Ovládněte úpravy dokumentů bez námahy s GroupDocs.Editor pro .NET a Java. Zjednodušte pracovní postup, spravujte CSS, načtěte obsah HTML a další!
-type: docs
 weight: 11
 url: /cs/
 is_root: true

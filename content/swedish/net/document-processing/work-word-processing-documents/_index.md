@@ -3,7 +3,6 @@ title: Arbeta med ordbehandlingsdokument
 linktitle: Arbeta med ordbehandlingsdokument
 second_title: GroupDocs.Editor .NET API
 description: Redigera ordbehandlingsdokument enkelt med GroupDocs.Editor för .NET. Följ vår detaljerade, steg-för-steg-handledning för att förbättra dina färdigheter i dokumenthantering.
-type: docs
 weight: 19
 url: /sv/net/document-processing/work-word-processing-documents/
 ---
@@ -117,7 +116,7 @@ Console.WriteLine("Document editing and saving process completed successfully.")
 Du har nu slutfört en omfattande steg-för-steg-guide om hur du arbetar med ordbehandlingsdokument med GroupDocs.Editor för .NET. Detta kraftfulla verktyg gör det enkelt att manipulera och redigera dokument programmatiskt, vilket ger ett brett utbud av alternativ för att anpassa ditt arbetsflöde för dokumentbearbetning.
 ## FAQ's
 ### Kan jag använda GroupDocs.Editor för .NET för att redigera andra dokumentformat?
- Ja, GroupDocs.Editor stöder olika dokumentformat inklusive PDF, HTML och mer. Kolla[dokumentation](https://reference.groupdocs.com/editor/net/) för en fullständig lista över format som stöds.
+ Ja, GroupDocs.Editor stöder olika dokumentformat inklusive PDF, HTML och mer. Kolla[dokumentation](https://tutorials.groupdocs.com/editor/net/) för en fullständig lista över format som stöds.
 ### Är det möjligt att använda GroupDocs.Editor utan licens?
  Du kan använda en gratis provperiod eller begära en tillfällig licens. För längre användning rekommenderas att köpa en licens. Skaffa en licens[här](https://purchase.groupdocs.com/buy).
 ### Hur hanterar jag stora dokument som orsakar OutOfMemoryException?

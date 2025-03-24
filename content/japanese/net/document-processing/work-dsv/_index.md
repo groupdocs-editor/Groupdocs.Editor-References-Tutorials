@@ -3,7 +3,6 @@ title: 区切り文字で区切られた値 (DSV) の操作
 linktitle: 区切り文字で区切られた値 (DSV) の操作
 second_title: GroupDocs.Editor .NET API
 description: このステップバイステップ ガイドでは、GroupDocs.Editor for .NET を使用して CSV および TSV ファイルを編集する方法を学習します。.NET プロジェクトを簡単に改善できます。
-type: docs
 weight: 12
 url: /ja/net/document-processing/work-dsv/
 ---
@@ -111,4 +110,4 @@ GroupDocs.Editor for .NET を使用して DSV ファイルを編集するのは�
 ### GroupDocs.Editor for .NET を使用して CSV ファイルを Excel スプレッドシートに変換できますか?
 はい、適切な保存オプションを使用することで、CSV ファイルを Excel スプレッドシートとして保存できます。
 ### GroupDocs.Editor for .NET に関する詳細なドキュメントはどこで入手できますか?
-詳細なドキュメントは以下をご覧ください[ここ](https://reference.groupdocs.com/editor/net/)
+詳細なドキュメントは以下をご覧ください[ここ](https://tutorials.groupdocs.com/editor/net/)

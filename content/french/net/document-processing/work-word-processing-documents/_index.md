@@ -3,7 +3,6 @@ title: Travailler avec des documents de traitement de texte
 linktitle: Travailler avec des documents de traitement de texte
 second_title: API GroupDocs.Editor .NET
 description: Modifiez sans effort des documents de traitement de texte avec GroupDocs.Editor pour .NET. Suivez notre didacticiel détaillé étape par étape pour améliorer vos compétences en gestion de documents.
-type: docs
 weight: 19
 url: /fr/net/document-processing/work-word-processing-documents/
 ---
@@ -117,7 +116,7 @@ Console.WriteLine("Document editing and saving process completed successfully.")
 Vous avez maintenant terminé un guide complet étape par étape sur la façon de travailler avec des documents de traitement de texte à l'aide de GroupDocs.Editor pour .NET. Cet outil puissant facilite la manipulation et la modification de documents par programmation, offrant un large éventail d'options pour personnaliser votre flux de traitement de documents.
 ## FAQ
 ### Puis-je utiliser GroupDocs.Editor pour .NET pour modifier d’autres formats de document ?
- Oui, GroupDocs.Editor prend en charge divers formats de documents, notamment PDF, HTML, etc. Vérifier la[Documentation](https://reference.groupdocs.com/editor/net/) pour une liste complète des formats pris en charge.
+ Oui, GroupDocs.Editor prend en charge divers formats de documents, notamment PDF, HTML, etc. Vérifier la[Documentation](https://tutorials.groupdocs.com/editor/net/) pour une liste complète des formats pris en charge.
 ### Est-il possible d'utiliser GroupDocs.Editor sans licence ?
  Vous pouvez utiliser un essai gratuit ou demander une licence temporaire. Pour une utilisation prolongée, l'achat d'une licence est recommandé. Obtenez une licence[ici](https://purchase.groupdocs.com/buy).
 ### Comment gérer les documents volumineux qui provoquent une exception OutOfMemoryException ?

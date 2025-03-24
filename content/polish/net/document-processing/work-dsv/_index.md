@@ -3,7 +3,6 @@ title: Praca z wartościami rozdzielonymi rozdzielanymi (DSV)
 linktitle: Praca z wartościami rozdzielonymi rozdzielanymi (DSV)
 second_title: Edytor GroupDocs.NET API
 description: Z tego przewodnika krok po kroku dowiesz się, jak edytować pliki CSV i TSV przy użyciu programu GroupDocs.Editor dla platformy .NET. Ulepszaj swoje projekty .NET bez wysiłku.
-type: docs
 weight: 12
 url: /pl/net/document-processing/work-dsv/
 ---
@@ -111,4 +110,4 @@ Oczywiście możesz określić żądane kodowanie w opcjach zapisu.
 ### Czy mogę przekonwertować plik CSV na arkusz kalkulacyjny Excel za pomocą GroupDocs.Editor dla .NET?
 Tak, możesz zapisać plik CSV jako arkusz kalkulacyjny Excel, korzystając z odpowiednich opcji zapisywania.
 ### Gdzie mogę znaleźć więcej dokumentacji dotyczącej GroupDocs.Editor dla .NET?
- Można znaleźć szczegółową dokumentację[Tutaj](https://reference.groupdocs.com/editor/net/)
+ Można znaleźć szczegółową dokumentację[Tutaj](https://tutorials.groupdocs.com/editor/net/)

@@ -3,7 +3,6 @@ title: 檢索 HTML 正文內容
 linktitle: 檢索 HTML 正文內容
 second_title: GroupDocs.Editor .NET API
 description: 根據我們的逐步指南，使用適用於 .NET 的 GroupDocs.Editor 來擷取 HTML 正文內容。輕鬆增強您的 .NET 應用程式。
-type: docs
 weight: 10
 url: /zh-hant/net/html-content-retrieval/retrieve-html-body-content/
 ---
@@ -62,4 +61,4 @@ GroupDocs.Editor 支援多種文件格式，包括 Word 文件、PDF、Excel 電
 ### 我可以將 GroupDocs.Editor 與 .NET Core 一起使用嗎？
 是的，GroupDocs.Editor 與 .NET Core 相容，為現代應用程式開發提供靈活性。
 ### 在哪裡可以找到 GroupDocs.Editor 的更多範例和文件？
-您可以在以下位置找到更多範例和詳細文檔[GroupDocs.Editor 文件頁面](https://reference.groupdocs.com/editor/net/).
+您可以在以下位置找到更多範例和詳細文檔[GroupDocs.Editor 文件頁面](https://tutorials.groupdocs.com/editor/net/).

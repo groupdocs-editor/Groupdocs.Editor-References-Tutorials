@@ -3,7 +3,6 @@ title: Hantera CSS-innehåll med prefix
 linktitle: Hantera CSS-innehåll med prefix
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du hanterar CSS-innehåll med prefix med Groupdocs.Editor för .NET i denna detaljerade steg-för-steg-handledning. Perfekt för utvecklare på alla nivåer.
-type: docs
 weight: 11
 url: /sv/net/css-handling/handle-css-content-with-prefix/
 ---
@@ -66,6 +65,6 @@ Ja, Groupdocs.Editor för .NET stöder olika dokumentformat inklusive PDF, Word,
 ### Hur får jag en tillfällig licens för Groupdocs.Editor för .NET?
  Du kan få en tillfällig licens[här](https://purchase.groupdocs.com/temporary-license/).
 ### Var kan jag hitta detaljerad dokumentation för Groupdocs.Editor för .NET?
- Detaljerad dokumentation finns tillgänglig[här](https://reference.groupdocs.com/editor/net/).
+ Detaljerad dokumentation finns tillgänglig[här](https://tutorials.groupdocs.com/editor/net/).
 ### Vilka supportalternativ finns tillgängliga för Groupdocs.Editor för .NET?
  Du kan få stöd[här](https://forum.groupdocs.com/c/editor/20).

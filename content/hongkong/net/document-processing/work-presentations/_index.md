@@ -3,7 +3,6 @@ title: 處理簡報
 linktitle: 處理簡報
 second_title: GroupDocs.Editor .NET API
 description: 了解使用 GroupDocs.Editor for .NET 編輯 PowerPoint 簡報。請按照此逐步指南簡化您的文件編輯流程。
-type: docs
 weight: 16
 url: /zh-hant/net/document-processing/work-presentations/
 ---
@@ -132,4 +131,4 @@ GroupDocs.Editor 支援多種格式，包括 PPTX、PPTM 等。您可以在儲�
 ### 我可以在 Web 應用程式中使用 GroupDocs.Editor for .NET 嗎？
 是的，GroupDocs.Editor for .NET 可以整合到 Web 應用程式中以提供文件編輯功能。
 ### 在哪裡可以找到更詳細的文件和支援？
-你可以找到詳細的文檔[這裡](https://reference.groupdocs.com/editor/net/) 。如需支持，請訪問[支援論壇](https://forum.groupdocs.com/c/editor/20).
+你可以找到詳細的文檔[這裡](https://tutorials.groupdocs.com/editor/net/) 。如需支持，請訪問[支援論壇](https://forum.groupdocs.com/c/editor/20).

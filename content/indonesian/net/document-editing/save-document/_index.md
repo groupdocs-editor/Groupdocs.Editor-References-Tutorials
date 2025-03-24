@@ -3,7 +3,6 @@ title: Simpan Dokumen
 linktitle: Simpan Dokumen
 second_title: GroupDocs.Editor .NET API
 description: Edit dan simpan dokumen dengan mudah menggunakan GroupDocs.Editor untuk .NET. Panduan langkah demi langkah ini menyederhanakan proses bagi pengembang.
-type: docs
 weight: 14
 url: /id/net/document-editing/save-document/
 ---
@@ -80,7 +79,7 @@ Dengan mengikuti langkah-langkah ini, Anda dapat memuat, mengedit, dan menyimpan
 Mengedit dan menyimpan dokumen secara terprogram tidak pernah semudah ini dengan GroupDocs.Editor untuk .NET. Panduan ini memandu Anda melalui seluruh proses, mulai dari memuat dokumen hingga menyimpannya dalam berbagai format. Dengan GroupDocs.Editor, Anda memiliki solusi serbaguna dan tangguh di ujung jari Anda, menyederhanakan proses pengeditan dokumen.
 ## FAQ
 ### Format file apa yang didukung GroupDocs.Editor?
-GroupDocs.Editor mendukung berbagai format file, termasuk DOCX, RTF, TXT, dan masih banyak lagi. Untuk daftar lengkap, lihat[dokumentasi](https://reference.groupdocs.com/editor/net/).
+GroupDocs.Editor mendukung berbagai format file, termasuk DOCX, RTF, TXT, dan masih banyak lagi. Untuk daftar lengkap, lihat[dokumentasi](https://tutorials.groupdocs.com/editor/net/).
 ### Bisakah saya mencoba GroupDocs.Editor sebelum membeli?
  Ya, Anda bisa mendapatkan[uji coba gratis](https://releases.groupdocs.com/) untuk menguji fitur GroupDocs.Editor.
 ### Apakah ada dukungan yang tersedia jika saya menghadapi masalah?

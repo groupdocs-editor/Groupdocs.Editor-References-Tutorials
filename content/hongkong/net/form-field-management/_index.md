@@ -3,7 +3,6 @@ title: 表單欄位管理
 linktitle: 表單欄位管理
 second_title: GroupDocs.Editor .NET API
 description: 使用 GroupDocs.Editor 掌握 .NET 中的表單欄位管理。學習無縫地編輯、修復、處理遺留表單欄位集合以及刪除表單欄位集合。
-type: docs
 weight: 23
 url: /zh-hant/net/form-field-management/
 ---

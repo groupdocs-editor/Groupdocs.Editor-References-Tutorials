@@ -3,7 +3,6 @@ title: Crie um documento editável em HTML
 linktitle: Crie um documento editável em HTML
 second_title: API GroupDocs.Editor .NET
 description: Converta HTML em documentos editáveis do Word usando GroupDocs.Editor for .NET com este guia passo a passo. Perfeito para agilizar seu fluxo de trabalho de gerenciamento de documentos.
-type: docs
 weight: 10
 url: /pt/net/document-editing/create-editable-document-from-html/
 ---

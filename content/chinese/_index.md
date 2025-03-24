@@ -3,7 +3,6 @@ title: 使用 GroupDocs.Editor 解锁文档管理
 linktitle: GroupDocs.Editor 教程
 additionalTitle: GroupDocs API 参考
 description: 使用 GroupDocs.Editor for .NET 和 Java 轻松掌握文档编辑。简化工作流程、管理 CSS、检索 HTML 内容等等！
-type: docs
 weight: 11
 url: /zh/
 is_root: true

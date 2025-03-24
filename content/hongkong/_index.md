@@ -3,7 +3,6 @@ title: 使用 GroupDocs.Editor 解鎖文件管理
 linktitle: GroupDocs.Editor 教程
 additionalTitle: GroupDocs API 參考
 description: 使用適用於 .NET 和 Java 的 GroupDocs.Editor 輕鬆掌握文件編輯。簡化工作流程、管理 CSS、檢索 HTML 內容等等！
-type: docs
 weight: 11
 url: /zh-hant/
 is_root: true

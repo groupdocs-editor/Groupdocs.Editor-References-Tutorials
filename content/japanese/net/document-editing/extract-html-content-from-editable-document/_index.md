@@ -3,7 +3,6 @@ title: 編集可能なドキュメントから HTML コンテンツを抽出す�
 linktitle: 編集可能なドキュメントから HTML コンテンツを抽出する
 second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用して、ドキュメントから HTML コンテンツを簡単に抽出できます。シームレスな統合とドキュメント管理については、詳細なガイドに従ってください。
-type: docs
 weight: 12
 url: /ja/net/document-editing/extract-html-content-from-editable-document/
 ---
@@ -64,6 +63,6 @@ GroupDocs.Editor for .NET は、ワードプロセッシング、スプレッド
 ### GroupDocs.Editor for .NET の一時ライセンスを取得するにはどうすればよいですか?
 一時ライセンスを申請するには、[GroupDocs 購入ページ](https://purchase.groupdocs.com/temporary-license/).
 ### GroupDocs.Editor for .NET のドキュメントはどこにありますか?
-包括的なドキュメントが利用可能[ここ](https://reference.groupdocs.com/editor/net/).
+包括的なドキュメントが利用可能[ここ](https://tutorials.groupdocs.com/editor/net/).
 ### 問題が発生した場合、サポートを受けることはできますか?
 はい、サポートを受けることができます[GroupDocs サポートフォーラム](https://forum.groupdocs.com/c/editor/20).

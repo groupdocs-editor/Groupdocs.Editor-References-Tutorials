@@ -3,7 +3,6 @@ title: HTML Gövde İçeriğini Alma
 linktitle: HTML Gövde İçeriğini Alma
 second_title: GroupDocs.Editor .NET API'si
 description: Adım adım kılavuzumuzla GroupDocs.Editor for .NET'i kullanarak HTML gövde içeriğini alın. .NET uygulamalarınızı zahmetsizce geliştirin.
-type: docs
 weight: 10
 url: /tr/net/html-content-retrieval/retrieve-html-body-content/
 ---
@@ -62,4 +61,4 @@ GroupDocs.Editor, Word belgeleri, PDF'ler, Excel elektronik tabloları, PowerPoi
 ### GroupDocs.Editor'ı .NET Core ile kullanabilir miyim?
 Evet, GroupDocs.Editor .NET Core ile uyumludur ve modern uygulama geliştirme için esneklik sağlar.
 ### GroupDocs.Editor için daha fazla örnek ve belgeyi nerede bulabilirim?
- Daha fazla örnek ve ayrıntılı belgeleri şu adreste bulabilirsiniz:[GroupDocs.Editor dokümantasyon sayfası](https://reference.groupdocs.com/editor/net/).
+ Daha fazla örnek ve ayrıntılı belgeleri şu adreste bulabilirsiniz:[GroupDocs.Editor dokümantasyon sayfası](https://tutorials.groupdocs.com/editor/net/).

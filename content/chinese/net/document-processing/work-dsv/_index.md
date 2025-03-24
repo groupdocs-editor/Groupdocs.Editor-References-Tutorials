@@ -3,7 +3,6 @@ title: 使用分隔值 (DSV)
 linktitle: 使用分隔值 (DSV)
 second_title: GroupDocs.Editor .NET API
 description: 通过本分步指南了解如何使用 GroupDocs.Editor for .NET 编辑 CSV 和 TSV 文件。轻松改进您的 .NET 项目。
-type: docs
 weight: 12
 url: /zh/net/document-processing/work-dsv/
 ---
@@ -111,4 +110,4 @@ System.Console.WriteLine("WorkingWithDsv routine has successfully finished");
 ### 我可以使用 GroupDocs.Editor for .NET 将 CSV 文件转换为 Excel 电子表格吗？
 是的，您可以使用适当的保存选项将 CSV 文件保存为 Excel 电子表格。
 ### 在哪里可以找到有关 GroupDocs.Editor for .NET 的更多文档？
-您可以找到详细的文档[这里](https://reference.groupdocs.com/editor/net/)
+您可以找到详细的文档[这里](https://tutorials.groupdocs.com/editor/net/)

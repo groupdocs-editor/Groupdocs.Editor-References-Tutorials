@@ -3,7 +3,6 @@ title: Nastavte licenci ze souboru
 linktitle: Nastavte licenci ze souboru
 second_title: GroupDocs.Editor .NET API
 description: Naučte se používat GroupDocs.Editor pro .NET pro bezproblémové úpravy dokumentů ve vašich aplikacích. Obsahuje podrobného průvodce, tipy a často kladené otázky.
-type: docs
 weight: 10
 url: /cs/net/quick-start-guide/set-license-from-file/
 ---
@@ -89,4 +88,4 @@ Absolutně! GroupDocs.Editor for .NET lze integrovat do různých typů aplikac�
 ### Jak zpracuji velké dokumenty s GroupDocs.Editor pro .NET?
 GroupDocs.Editor for .NET je navržen tak, aby efektivně zpracovával velké dokumenty. Chcete-li však dosáhnout optimálního výkonu, zvažte v případě potřeby správu zdrojů a manipulaci s dokumenty v segmentech.
 ### Kde najdu podrobnější dokumentaci a podporu?
- Podrobnou dokumentaci najdete na[Stránka dokumentace GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) a hledat podporu u[Fórum podpory GroupDocs](https://forum.groupdocs.com/c/editor/20).
+ Podrobnou dokumentaci najdete na[Stránka dokumentace GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) a hledat podporu u[Fórum podpory GroupDocs](https://forum.groupdocs.com/c/editor/20).

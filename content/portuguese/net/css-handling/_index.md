@@ -3,7 +3,6 @@ title: Manipulação de CSS
 linktitle: Manipulação de CSS
 second_title: API GroupDocs.Editor .NET
 description: Aprenda como lidar com conteúdo CSS de maneira eficaz com GroupDocs.Editor for .NET. Extraia conteúdo CSS externo e manipule conteúdo CSS com prefixos sem esforço.
-type: docs
 weight: 21
 url: /pt/net/css-handling/
 ---

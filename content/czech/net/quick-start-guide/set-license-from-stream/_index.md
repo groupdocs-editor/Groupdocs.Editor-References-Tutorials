@@ -3,7 +3,6 @@ title: Nastavit licenci ze streamu
 linktitle: Nastavit licenci ze streamu
 second_title: GroupDocs.Editor .NET API
 description: Naučte se používat Groupdocs.Editor pro .NET k programové úpravě dokumentů. Postupujte podle tohoto komplexního pro bezproblémovou integraci a pokročilé funkce.
-type: docs
 weight: 11
 url: /cs/net/quick-start-guide/set-license-from-stream/
 ---
@@ -146,7 +145,7 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 }
 ```
 ## Závěr
- Groupdocs.Editor for .NET je všestranný a výkonný nástroj, který může výrazně zefektivnit vaše procesy úpravy dokumentů. Díky svým robustním funkcím a podpoře více formátů dokumentů integrace této knihovny do vašich aplikací .NET nepochybně zvýší vaši produktivitu a schopnosti. Nezapomeňte prozkoumat[dokumentace](https://reference.groupdocs.com/editor/net/) pro podrobnější informace a pokročilé scénáře použití.
+ Groupdocs.Editor for .NET je všestranný a výkonný nástroj, který může výrazně zefektivnit vaše procesy úpravy dokumentů. Díky svým robustním funkcím a podpoře více formátů dokumentů integrace této knihovny do vašich aplikací .NET nepochybně zvýší vaši produktivitu a schopnosti. Nezapomeňte prozkoumat[dokumentace](https://tutorials.groupdocs.com/editor/net/) pro podrobnější informace a pokročilé scénáře použití.
 ## FAQ
 ### Mohu používat Groupdocs.Editor pro .NET bez licence?
  Ne, k používání Groupdocs.Editor pro .NET potřebujete platnou licenci. Můžete však požádat a[dočasná licence](https://purchase.groupdocs.com/temporary-license/) pro hodnocení.
@@ -157,4 +156,4 @@ Ano, podporuje úpravy souborů PDF spolu s různými dalšími formáty, jako j
 ### Je možné pomocí Groupdocs.Editoru chránit dokumenty heslem?
 Ano, při ukládání dokumentů můžete nastavit hesla a další možnosti zabezpečení.
 ### Jaké formáty souborů podporuje Groupdocs.Editor for .NET?
- Podporuje širokou škálu formátů, včetně DOCX, XLSX, PDF a mnoha dalších. Odkazovat na[dokumentace](https://reference.groupdocs.com/editor/net/) pro úplný seznam.
+ Podporuje širokou škálu formátů, včetně DOCX, XLSX, PDF a mnoha dalších. Odkazovat na[dokumentace](https://tutorials.groupdocs.com/editor/net/) pro úplný seznam.

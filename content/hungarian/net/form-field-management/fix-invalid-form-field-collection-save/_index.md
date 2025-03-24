@@ -3,7 +3,6 @@ title: Javítsa ki az érvénytelen űrlapmező-gyűjteményt, és mentse
 linktitle: Javítsa ki az érvénytelen űrlapmező-gyűjteményt, és mentse
 second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan javíthatja ki az érvénytelen űrlapmezőket a DOCX-ben a Groupdocs.Editor for .NET segítségével. Kövesse ezt az útmutatót, hogy dokumentumai hibamentesek legyenek, és biztonságosan mentse azokat.
-type: docs
 weight: 11
 url: /hu/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## Következtetés
- És megvan! Sikeresen kijavította az érvénytelen űrlapmezőket, és elmentette a dokumentumot a Groupdocs.Editor for .NET segítségével. Ennek a lépésenkénti útmutatónak egyértelművé és kezelhetővé kellett volna tennie a folyamatot. Ha bármilyen problémába ütközik, vagy kérdése van, nézze meg a[dokumentáció](https://reference.groupdocs.com/editor/net/) vagy nyúlj hozzá[támogatás](https://forum.groupdocs.com/c/editor/20).
+ És megvan! Sikeresen kijavította az érvénytelen űrlapmezőket, és elmentette a dokumentumot a Groupdocs.Editor for .NET segítségével. Ennek a lépésenkénti útmutatónak egyértelművé és kezelhetővé kellett volna tennie a folyamatot. Ha bármilyen problémába ütközik, vagy kérdése van, nézze meg a[dokumentáció](https://tutorials.groupdocs.com/editor/net/) vagy nyúlj hozzá[támogatás](https://forum.groupdocs.com/c/editor/20).
 ## GYIK
 ### Mi a teendő, ha a dokumentumom jelszóval védett?
  A jelszót a`WordProcessingLoadOptions` a dokumentum megnyitásához.

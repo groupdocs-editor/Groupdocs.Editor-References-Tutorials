@@ -3,7 +3,6 @@ title: Kivonat a dokumentum információiról
 linktitle: Kivonat a dokumentum információiról
 second_title: GroupDocs.Editor .NET API
 description: Részletes, lépésenkénti oktatóanyagunkból megtudhatja, hogyan nyerhet ki dokumentuminformációkat a GroupDocs.Editor for .NET segítségével. Kiválóan alkalmas különféle dokumentumtípusok kezelésére.
-type: docs
 weight: 10
 url: /hu/net/document-processing/extract-document-info/
 ---

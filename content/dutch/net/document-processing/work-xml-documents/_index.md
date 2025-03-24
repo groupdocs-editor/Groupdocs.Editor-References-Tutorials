@@ -3,7 +3,6 @@ title: Werken met XML-documenten
 linktitle: Werken met XML-documenten
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u XML-documenten efficiënt kunt bewerken met GroupDocs.Editor voor .NET met onze stapsgewijze handleiding, waarin alle essentiële stappen en opties worden behandeld.
-type: docs
 weight: 20
 url: /nl/net/document-processing/work-xml-documents/
 ---

@@ -3,7 +3,6 @@ title: Buat Dokumen
 linktitle: Buat Dokumen
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengedit dokumen Word, Excel, PowerPoint, Ebook, dan Email menggunakan GroupDocs.Editor untuk .NET dengan tutorial langkah demi langkah yang komprehensif ini.
-type: docs
 weight: 10
 url: /id/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ Anda dapat menggunakan fungsi panggilan balik untuk menyimpan aliran dokumen yan
 ### Apakah saya memerlukan lisensi untuk menggunakan GroupDocs.Editor untuk .NET?
  Ya, Anda bisa mendapatkan lisensi dari[Di Sini](https://purchase.groupdocs.com/buy). Ada juga opsi untuk lisensi sementara.
 ### Di mana saya dapat menemukan dokumentasi yang lebih detail?
- Dokumentasi terperinci tersedia di[GroupDocs.Editor untuk halaman dokumentasi .NET](https://reference.groupdocs.com/editor/net/).
+ Dokumentasi terperinci tersedia di[GroupDocs.Editor untuk halaman dokumentasi .NET](https://tutorials.groupdocs.com/editor/net/).

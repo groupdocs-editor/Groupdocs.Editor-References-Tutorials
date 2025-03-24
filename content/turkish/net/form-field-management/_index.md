@@ -3,7 +3,6 @@ title: Form Alanı Yönetimi
 linktitle: Form Alanı Yönetimi
 second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor ile .NET'te form alanı yönetimine hakim olun. Form alanı koleksiyonlarını sorunsuz bir şekilde düzenlemeyi, düzeltmeyi, eski sürümlerle çalışmayı ve kaldırmayı öğrenin.
-type: docs
 weight: 23
 url: /tr/net/form-field-management/
 ---

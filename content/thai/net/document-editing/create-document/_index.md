@@ -3,7 +3,6 @@ title: สร้างเอกสาร
 linktitle: สร้างเอกสาร
 second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีแก้ไขเอกสาร Word, Excel, PowerPoint, Ebook และอีเมลโดยใช้ GroupDocs.Editor สำหรับ .NET พร้อมบทช่วยสอนทีละขั้นตอนที่ครอบคลุมนี้
-type: docs
 weight: 10
 url: /th/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ GroupDocs.Editor สำหรับ .NET เป็นเครื่องมื
 ### ฉันต้องมีใบอนุญาตเพื่อใช้ GroupDocs.Editor สำหรับ .NET หรือไม่
  ใช่ คุณสามารถขอรับใบอนุญาตได้จาก[ที่นี่](https://purchase.groupdocs.com/buy)- นอกจากนี้ยังมีตัวเลือกสำหรับใบอนุญาตชั่วคราว
 ### ฉันจะหาเอกสารรายละเอียดเพิ่มเติมได้จากที่ไหน?
- เอกสารรายละเอียดมีอยู่ที่[GroupDocs.Editor สำหรับหน้าเอกสารประกอบ .NET](https://reference.groupdocs.com/editor/net/).
+ เอกสารรายละเอียดมีอยู่ที่[GroupDocs.Editor สำหรับหน้าเอกสารประกอบ .NET](https://tutorials.groupdocs.com/editor/net/).

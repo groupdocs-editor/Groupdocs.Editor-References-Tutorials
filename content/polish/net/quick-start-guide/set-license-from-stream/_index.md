@@ -3,7 +3,6 @@ title: Ustaw licencję ze strumienia
 linktitle: Ustaw licencję ze strumienia
 second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak używać programu Groupdocs.Editor dla platformy .NET do programowej edycji dokumentów. Skorzystaj z tego kompleksowego rozwiązania, aby uzyskać bezproblemową integrację i zaawansowane funkcje.
-type: docs
 weight: 11
 url: /pl/net/quick-start-guide/set-license-from-stream/
 ---
@@ -146,7 +145,7 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 }
 ```
 ## Wniosek
- Groupdocs.Editor dla .NET to wszechstronne i potężne narzędzie, które może znacznie usprawnić procesy edycji dokumentów. Dzięki solidnym funkcjom i obsłudze wielu formatów dokumentów, zintegrowanie tej biblioteki z aplikacjami .NET niewątpliwie zwiększy Twoją produktywność i możliwości. Nie zapomnij zbadać[dokumentacja](https://reference.groupdocs.com/editor/net/) aby uzyskać bardziej szczegółowe informacje i zaawansowane scenariusze użytkowania.
+ Groupdocs.Editor dla .NET to wszechstronne i potężne narzędzie, które może znacznie usprawnić procesy edycji dokumentów. Dzięki solidnym funkcjom i obsłudze wielu formatów dokumentów, zintegrowanie tej biblioteki z aplikacjami .NET niewątpliwie zwiększy Twoją produktywność i możliwości. Nie zapomnij zbadać[dokumentacja](https://tutorials.groupdocs.com/editor/net/) aby uzyskać bardziej szczegółowe informacje i zaawansowane scenariusze użytkowania.
 ## Często zadawane pytania
 ### Czy mogę używać Groupdocs.Editor dla .NET bez licencji?
  Nie, potrzebujesz ważnej licencji, aby używać Groupdocs.Editor dla .NET. Możesz jednak poprosić o[licencja tymczasowa](https://purchase.groupdocs.com/temporary-license/) dla ewolucji.
@@ -157,4 +156,4 @@ Tak, obsługuje edycję plików PDF oraz różnych innych formatów, takich jak 
 ### Czy można chronić dokumenty hasłem za pomocą Groupdocs.Editor?
 Tak, możesz ustawić hasła i inne opcje zabezpieczeń podczas zapisywania dokumentów.
 ### Jakie formaty plików obsługuje Groupdocs.Editor dla .NET?
- Obsługuje szeroką gamę formatów, w tym DOCX, XLSX, PDF i wiele innych. Patrz[dokumentacja](https://reference.groupdocs.com/editor/net/) aby uzyskać pełną listę.
+ Obsługuje szeroką gamę formatów, w tym DOCX, XLSX, PDF i wiele innych. Patrz[dokumentacja](https://tutorials.groupdocs.com/editor/net/) aby uzyskać pełną listę.

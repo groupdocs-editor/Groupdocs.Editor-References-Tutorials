@@ -3,7 +3,6 @@ title: Ladda dokument
 linktitle: Ladda dokument
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du redigerar dokument programmatiskt med GroupDocs.Editor för .NET. Steg-för-steg-guide för att ladda dokument, hantera lösenordsskyddade filer och mer.
-type: docs
 weight: 13
 url: /sv/net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 Grattis! Du har framgångsrikt lärt dig hur du laddar dokument med GroupDocs.Editor för .NET på olika sätt. Oavsett om du har att göra med lokala filer, lösenordsskyddade dokument eller byteströmmar, tillhandahåller GroupDocs.Editor en flexibel och kraftfull lösning för dina dokumentredigeringsbehov. Kom ihåg att alltid göra dig av med resurser för att säkerställa optimal prestanda och resurshantering i dina applikationer.
 ## FAQ's
 ### Vilka filformat stöds av GroupDocs.Editor för .NET?
- GroupDocs.Editor stöder ett brett utbud av filformat, inklusive DOCX, XLSX, PPTX, HTML och många fler. För en fullständig lista, se[dokumentation](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor stöder ett brett utbud av filformat, inklusive DOCX, XLSX, PPTX, HTML och många fler. För en fullständig lista, se[dokumentation](https://tutorials.groupdocs.com/editor/net/).
 ### Hur hanterar jag lösenordsskyddade dokument?
  Du kan använda laddningsalternativ som t.ex`WordProcessingLoadOptions` för att ange lösenordet när du laddar lösenordsskyddade dokument.
 ### Kan jag använda GroupDocs.Editor i en webbapplikation?

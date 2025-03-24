@@ -3,7 +3,6 @@ title: HTML İçerik Alma
 linktitle: HTML İçerik Alma
 second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET'i kullanarak HTML içeriğini nasıl alacağınızı keşfedin. Gövde içeriğini almak için adım adım kılavuzlar ve özel önekler dahildir.
-type: docs
 weight: 22
 url: /tr/net/html-content-retrieval/
 ---

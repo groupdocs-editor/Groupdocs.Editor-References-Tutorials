@@ -3,7 +3,6 @@ title: 無効なフォームフィールドコレクションを修正して保�
 linktitle: 無効なフォームフィールドコレクションを修正して保存する
 second_title: GroupDocs.Editor .NET API
 description: Groupdocs.Editor for .NET を使用して DOCX 内の無効なフォーム フィールドを修正する方法を学びます。このガイドに従って、ドキュメントにエラーがないことを確認し、安全に保存します。
-type: docs
 weight: 11
 url: /ja/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## 結論
-これで完了です。Groupdocs.Editor for .NET を使用して無効なフォームフィールドを修正し、ドキュメントを保存できました。このステップバイステップのガイドにより、プロセスが明確になり、管理しやすくなりました。問題が発生したり、質問がある場合は、[ドキュメンテーション](https://reference.groupdocs.com/editor/net/)または連絡する[サポート](https://forum.groupdocs.com/c/editor/20).
+これで完了です。Groupdocs.Editor for .NET を使用して無効なフォームフィールドを修正し、ドキュメントを保存できました。このステップバイステップのガイドにより、プロセスが明確になり、管理しやすくなりました。問題が発生したり、質問がある場合は、[ドキュメンテーション](https://tutorials.groupdocs.com/editor/net/)または連絡する[サポート](https://forum.groupdocs.com/c/editor/20).
 ## よくある質問
 ### ドキュメントがパスワードで保護されている場合はどうなりますか?
 パスワードは`WordProcessingLoadOptions`ドキュメントを開きます。

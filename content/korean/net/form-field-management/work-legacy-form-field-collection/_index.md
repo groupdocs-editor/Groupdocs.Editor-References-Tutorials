@@ -3,7 +3,6 @@ title: 레거시 양식 필드 컬렉션 작업
 linktitle: 레거시 양식 필드 컬렉션 작업
 second_title: GroupDocs.Editor .NET API
 description: 자세한 가이드를 통해 .NET용 GroupDocs.Editor를 사용하여 기존 양식 필드를 관리하는 방법을 알아보세요. 텍스트 필드, 체크박스, 날짜 등을 처리하는 데 적합합니다.
-type: docs
 weight: 12
 url: /ko/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## 8단계: 결론
 다음 단계를 수행하면 .NET용 GroupDocs.Editor를 사용하여 문서의 기존 양식 필드를 효과적으로 관리하고 상호 작용할 수 있습니다. 텍스트 필드, 확인란, 날짜, 숫자, 드롭다운 등 이 가이드는 각 유형을 처리하는 명확하고 간결한 방법을 제공합니다.
 ## 결론
- 올바른 도구를 사용하면 문서의 기존 양식 필드 작업이 간단해질 수 있습니다. .NET용 GroupDocs.Editor는 이러한 필드를 효율적으로 관리하기 위한 강력한 솔루션을 제공합니다. 이 단계별 가이드를 따르면 이제 문서의 다양한 양식 필드를 쉽게 조작할 수 있습니다. 탐험하는 것을 잊지 마세요.[선적 서류 비치](https://reference.groupdocs.com/editor/net/)더 많은 고급 기능과 옵션을 확인하세요.
+ 올바른 도구를 사용하면 문서의 기존 양식 필드 작업이 간단해질 수 있습니다. .NET용 GroupDocs.Editor는 이러한 필드를 효율적으로 관리하기 위한 강력한 솔루션을 제공합니다. 이 단계별 가이드를 따르면 이제 문서의 다양한 양식 필드를 쉽게 조작할 수 있습니다. 탐험하는 것을 잊지 마세요.[선적 서류 비치](https://tutorials.groupdocs.com/editor/net/)더 많은 고급 기능과 옵션을 확인하세요.
 ## FAQ
 ### 1. 비밀번호로 보호된 문서에 .NET용 GroupDocs.Editor를 사용할 수 있습니까?
 예, 로드 옵션에서 비밀번호를 지정하여 비밀번호로 보호된 문서를 처리할 수 있습니다.
@@ -104,4 +103,4 @@ foreach (var formField in collection)
 ### 4. .NET용 GroupDocs.Editor 라이센스를 구입할 수 있습니까?
  예, 다음에서 라이센스를 구입할 수 있습니다.[여기](https://purchase.groupdocs.com/buy).
 ### 5. .NET용 GroupDocs.Editor에 대한 설명서는 어디에서 찾을 수 있습니까?
-문서를 사용할 수 있습니다[여기](https://reference.groupdocs.com/editor/net/).
+문서를 사용할 수 있습니다[여기](https://tutorials.groupdocs.com/editor/net/).

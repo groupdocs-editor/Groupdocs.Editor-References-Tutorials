@@ -3,7 +3,6 @@ title: Napraw nieprawidłowy zbiór pól formularza i zapisz
 linktitle: Napraw nieprawidłowy zbiór pól formularza i zapisz
 second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak naprawić nieprawidłowe pola formularza w DOCX za pomocą Groupdocs.Editor dla .NET. Postępuj zgodnie z tym przewodnikiem, aby mieć pewność, że Twoje dokumenty są wolne od błędów i bezpiecznie je zapisywać.
-type: docs
 weight: 11
 url: /pl/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## Wniosek
- I masz to! Pomyślnie naprawiłeś nieprawidłowe pola formularza i zapisałeś dokument za pomocą Groupdocs.Editor dla .NET. Ten przewodnik krok po kroku powinien był sprawić, że proces będzie jasny i łatwy w zarządzaniu. Jeśli napotkasz jakiekolwiek problemy lub masz pytania, nie wahaj się sprawdzić[dokumentacja](https://reference.groupdocs.com/editor/net/) lub skontaktuj się z nami[wsparcie](https://forum.groupdocs.com/c/editor/20).
+ I masz to! Pomyślnie naprawiłeś nieprawidłowe pola formularza i zapisałeś dokument za pomocą Groupdocs.Editor dla .NET. Ten przewodnik krok po kroku powinien był sprawić, że proces będzie jasny i łatwy w zarządzaniu. Jeśli napotkasz jakiekolwiek problemy lub masz pytania, nie wahaj się sprawdzić[dokumentacja](https://tutorials.groupdocs.com/editor/net/) lub skontaktuj się z nami[wsparcie](https://forum.groupdocs.com/c/editor/20).
 ## Często zadawane pytania
 ### Co się stanie, jeśli mój dokument jest chroniony hasłem?
  Hasło możesz określić w pliku`WordProcessingLoadOptions` aby otworzyć dokument.

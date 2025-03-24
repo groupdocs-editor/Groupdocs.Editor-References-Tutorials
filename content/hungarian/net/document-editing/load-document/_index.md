@@ -3,7 +3,6 @@ title: Dokumentum betöltése
 linktitle: Dokumentum betöltése
 second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan szerkeszthet programozott dokumentumokat a GroupDocs.Editor for .NET segítségével. Útmutató lépésről lépésre a dokumentumok betöltéséhez, a jelszóval védett fájlok kezeléséhez és egyebekhez.
-type: docs
 weight: 13
 url: /hu/net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 Gratulálunk! Sikeresen megtanulta, hogyan tölthet be dokumentumokat a GroupDocs.Editor for .NET használatával különféle módokon. Legyen szó helyi fájlokról, jelszóval védett dokumentumokról vagy bájtfolyamokról, a GroupDocs.Editor rugalmas és hatékony megoldást kínál dokumentumszerkesztési igényeire. Ne feledje, hogy mindig távolítsa el az erőforrásokat az alkalmazások optimális teljesítményének és erőforrás-kezelésének biztosítása érdekében.
 ## GYIK
 ### Milyen fájlformátumokat támogat a GroupDocs.Editor for .NET?
- A GroupDocs.Editor a fájlformátumok széles skáláját támogatja, beleértve a DOCX, XLSX, PPTX, HTML és sok más formátumot. A teljes listát lásd a[dokumentáció](https://reference.groupdocs.com/editor/net/).
+ A GroupDocs.Editor a fájlformátumok széles skáláját támogatja, beleértve a DOCX, XLSX, PPTX, HTML és sok más formátumot. A teljes listát lásd a[dokumentáció](https://tutorials.groupdocs.com/editor/net/).
 ### Hogyan kezelhetem a jelszóval védett dokumentumokat?
  Használhat betöltési opciókat, mint pl`WordProcessingLoadOptions` jelszó megadásához jelszóval védett dokumentumok betöltésekor.
 ### Használhatom a GroupDocs.Editort webalkalmazásban?

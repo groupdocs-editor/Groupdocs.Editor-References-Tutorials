@@ -3,7 +3,6 @@ title: Zvládejte obsah CSS s předponou
 linktitle: Zvládejte obsah CSS s předponou
 second_title: GroupDocs.Editor .NET API
 description: V tomto podrobném návodu krok za krokem se dozvíte, jak zacházet s obsahem CSS s předponou pomocí Groupdocs.Editor pro .NET. Ideální pro vývojáře všech úrovní.
-type: docs
 weight: 11
 url: /cs/net/css-handling/handle-css-content-with-prefix/
 ---
@@ -66,6 +65,6 @@ Ano, Groupdocs.Editor pro .NET podporuje různé formáty dokumentů včetně PD
 ### Jak získám dočasnou licenci pro Groupdocs.Editor pro .NET?
  Můžete získat dočasnou licenci[tady](https://purchase.groupdocs.com/temporary-license/).
 ### Kde najdu podrobnou dokumentaci k Groupdocs.Editor pro .NET?
- K dispozici je podrobná dokumentace[tady](https://reference.groupdocs.com/editor/net/).
+ K dispozici je podrobná dokumentace[tady](https://tutorials.groupdocs.com/editor/net/).
 ### Jaké možnosti podpory jsou k dispozici pro Groupdocs.Editor pro .NET?
  Můžete získat podporu[tady](https://forum.groupdocs.com/c/editor/20).

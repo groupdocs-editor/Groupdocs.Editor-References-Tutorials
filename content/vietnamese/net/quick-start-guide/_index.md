@@ -3,7 +3,6 @@ title: Hướng dẫn nhanh
 linktitle: Hướng dẫn nhanh
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách sử dụng GroupDocs.Editor cho .NET với các hướng dẫn toàn diện của chúng tôi. Đặt giấy phép, tích hợp tính năng và mở khóa khả năng chỉnh sửa tài liệu mạnh mẽ.
-type: docs
 weight: 26
 url: /vi/net/quick-start-guide/
 ---

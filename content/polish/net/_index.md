@@ -1,7 +1,6 @@
 ---
 title: Poradniki i przykłady GroupDocs.Editor dla .NET
 linktitle: GroupDocs.Editor dla samouczków .NET
-type: docs
 weight: 10
 url: /pl/net/
 description: Zarządzaj i edytuj dokumenty za pomocą GroupDocs.Editor .NET. Naucz się przetwarzania dokumentów, edytowania dokumentów, wyszukiwania treści HTML, zarządzania polami formularzy i nie tylko!

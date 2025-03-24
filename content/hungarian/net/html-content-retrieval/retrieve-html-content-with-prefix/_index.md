@@ -3,7 +3,6 @@ title: HTML-tartalom lekérése előtaggal
 linktitle: HTML-tartalom lekérése előtaggal
 second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan kérhet le HTML-tartalmat a dokumentumokból a GroupDocs.Editor for .NET segítségével, egyéni előtagokkal a képekhez és stíluslapokhoz. Lépésről lépésre útmutató mellékelve.
-type: docs
 weight: 11
 url: /hu/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 Ez a kódrészlet lekéri az egyéni előtagokkal ellátott HTML-tartalmat, és kinyomtatja a konzolra. Ezt a HTML-tartalmat szükség szerint tovább feldolgozhatja vagy mentheti.
 ## Következtetés
 És megvan! Az alábbi lépések követésével könnyedén lekérhet HTML-tartalmat egy dokumentumból a GroupDocs.Editor for .NET segítségével, kiegészítve a képek és stíluslapok egyéni előtagjaival. Ez a hatékony eszköz leegyszerűsíti a dokumentumok kezelését, lehetővé téve, hogy a dokumentumszerkesztés zökkenőmentes integrálására összpontosítson .NET-alkalmazásaiba.
- Részletesebb információkért tekintse meg a[GroupDocs.Editor .NET dokumentációhoz](https://reference.groupdocs.com/editor/net/) . Ha bármilyen kérdése van, vagy további segítségre van szüksége, forduljon bizalommal a[támogatói fórum](https://forum.groupdocs.com/c/editor/20).
+ Részletesebb információkért tekintse meg a[GroupDocs.Editor .NET dokumentációhoz](https://tutorials.groupdocs.com/editor/net/) . Ha bármilyen kérdése van, vagy további segítségre van szüksége, forduljon bizalommal a[támogatói fórum](https://forum.groupdocs.com/c/editor/20).
 ## GYIK
 ### Milyen típusú dokumentumokat szerkeszthetek a GroupDocs.Editor for .NET segítségével?
 A GroupDocs.Editor különféle dokumentumformátumokat támogat, beleértve a Word, Excel, PowerPoint, PDF és egyebeket.

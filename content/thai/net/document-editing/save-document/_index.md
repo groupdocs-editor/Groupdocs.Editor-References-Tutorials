@@ -3,7 +3,6 @@ title: บันทึกเอกสาร
 linktitle: บันทึกเอกสาร
 second_title: GroupDocs.Editor .NET API
 description: แก้ไขและบันทึกเอกสารได้อย่างง่ายดายโดยใช้ GroupDocs.Editor สำหรับ .NET คำแนะนำทีละขั้นตอนนี้ทำให้กระบวนการสำหรับนักพัฒนาง่ายขึ้น
-type: docs
 weight: 14
 url: /th/net/document-editing/save-document/
 ---
@@ -80,7 +79,7 @@ editor.Dispose();
 การแก้ไขและบันทึกเอกสารโดยทางโปรแกรมได้ง่ายกว่าที่เคยด้วย GroupDocs.Editor สำหรับ .NET คู่มือนี้จะอธิบายคุณตลอดกระบวนการทั้งหมด ตั้งแต่การโหลดเอกสารไปจนถึงการบันทึกในรูปแบบต่างๆ ด้วย GroupDocs.Editor คุณจะมีโซลูชันที่หลากหลายและมีประสิทธิภาพเพียงปลายนิ้วสัมผัส ซึ่งทำให้กระบวนการแก้ไขเอกสารง่ายขึ้น
 ## คำถามที่พบบ่อย
 ### GroupDocs.Editor รองรับไฟล์รูปแบบใดบ้าง
-GroupDocs.Editor รองรับไฟล์หลากหลายรูปแบบ รวมถึง DOCX, RTF, TXT และอื่นๆ อีกมากมาย สำหรับรายการทั้งหมด โปรดดูที่[เอกสารประกอบ](https://reference.groupdocs.com/editor/net/).
+GroupDocs.Editor รองรับไฟล์หลากหลายรูปแบบ รวมถึง DOCX, RTF, TXT และอื่นๆ อีกมากมาย สำหรับรายการทั้งหมด โปรดดูที่[เอกสารประกอบ](https://tutorials.groupdocs.com/editor/net/).
 ### ฉันสามารถลองใช้ GroupDocs.Editor ก่อนซื้อได้หรือไม่
  ใช่ คุณจะได้รับ[ทดลองฟรี](https://releases.groupdocs.com/) เพื่อทดสอบคุณสมบัติของ GroupDocs.Editor
 ### มีการสนับสนุนใด ๆ หรือไม่หากฉันประสบปัญหา?

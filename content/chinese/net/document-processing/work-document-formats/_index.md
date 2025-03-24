@@ -3,7 +3,6 @@ title: 使用文档格式
 linktitle: 使用文档格式
 second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 以编程方式编辑各种文档格式。带有无缝集成示例的分步指南。
-type: docs
 weight: 13
 url: /zh/net/document-processing/work-document-formats/
 ---
@@ -159,4 +158,4 @@ GroupDocs.Editor 支持文字处理、电子表格、演示文稿和文本格式
 ### 我可以免费使用 GroupDocs.Editor 吗？
 您可以使用[免费试用](https://releases.groupdocs.com/)功能有限或获得[临时执照](https://purchase.groupdocs.com/temporary-license/)以获得完全访问权限。
 ### 我可以在哪里找到更多资源和支持？
-访问[GroupDocs.Editor 文档](https://reference.groupdocs.com/editor/net/)了解详细信息，或查看他们的[支持论坛](https://forum.groupdocs.com/c/editor/20)求助。
+访问[GroupDocs.Editor 文档](https://tutorials.groupdocs.com/editor/net/)了解详细信息，或查看他们的[支持论坛](https://forum.groupdocs.com/c/editor/20)求助。

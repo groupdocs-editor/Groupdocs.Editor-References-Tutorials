@@ -3,7 +3,6 @@ title: 문서 저장
 linktitle: 문서 저장
 second_title: GroupDocs.Editor .NET API
 description: .NET용 GroupDocs.Editor를 사용하여 문서를 손쉽게 편집하고 저장하세요. 이 단계별 가이드는 개발자의 프로세스를 단순화합니다.
-type: docs
 weight: 14
 url: /ko/net/document-editing/save-document/
 ---
@@ -80,7 +79,7 @@ editor.Dispose();
 .NET용 GroupDocs.Editor를 사용하면 프로그래밍 방식으로 문서를 편집하고 저장하는 것이 그 어느 때보다 쉬워졌습니다. 이 가이드는 문서 로드부터 다양한 형식으로 저장까지 전체 과정을 안내했습니다. GroupDocs.Editor를 사용하면 다용도의 강력한 솔루션을 손쉽게 사용할 수 있어 문서 편집 프로세스가 단순화됩니다.
 ## FAQ
 ### GroupDocs.Editor는 어떤 파일 형식을 지원합니까?
-GroupDocs.Editor는 DOCX, RTF, TXT 등을 포함한 다양한 파일 형식을 지원합니다. 전체 목록을 보려면 다음을 확인하세요.[선적 서류 비치](https://reference.groupdocs.com/editor/net/).
+GroupDocs.Editor는 DOCX, RTF, TXT 등을 포함한 다양한 파일 형식을 지원합니다. 전체 목록을 보려면 다음을 확인하세요.[선적 서류 비치](https://tutorials.groupdocs.com/editor/net/).
 ### 구매하기 전에 GroupDocs.Editor를 사용해 볼 수 있나요?
  예, 다음을 얻을 수 있습니다.[무료 시험판](https://releases.groupdocs.com/) GroupDocs.Editor의 기능을 테스트합니다.
 ### 문제가 발생하면 지원을 받을 수 있나요?

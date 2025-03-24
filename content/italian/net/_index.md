@@ -1,7 +1,6 @@
 ---
 title: Tutorial ed esempi di GroupDocs.Editor per .NET
 linktitle: GroupDocs.Editor per tutorial .NET
-type: docs
 weight: 10
 url: /it/net/
 description: Gestisci e modifica documenti con GroupDocs.Editor .NET. Scopri l'elaborazione e la modifica dei documenti, il recupero dei contenuti HTML, la gestione dei campi dei moduli e altro ancora!

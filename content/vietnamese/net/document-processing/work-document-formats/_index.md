@@ -3,7 +3,6 @@ title: Làm việc với các định dạng tài liệu
 linktitle: Làm việc với các định dạng tài liệu
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách sử dụng GroupDocs.Editor cho .NET để chỉnh sửa các định dạng tài liệu khác nhau theo chương trình. Hướng dẫn từng bước với các ví dụ để tích hợp liền mạch.
-type: docs
 weight: 13
 url: /vi/net/document-processing/work-document-formats/
 ---
@@ -159,4 +158,4 @@ GroupDocs.Editor hỗ trợ các định dạng Xử lý văn bản, Bảng tín
 ### Tôi có thể sử dụng GroupDocs.Editor miễn phí không?
  Bạn có thể sử dụng một[dùng thử miễn phí](https://releases.groupdocs.com/) với các tính năng hạn chế hoặc có được một[giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/) để truy cập đầy đủ.
 ### Tôi có thể tìm thêm tài nguyên và hỗ trợ ở đâu?
- Tham quan[Tài liệu GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) để biết thông tin chi tiết hoặc kiểm tra[diễn đàn hỗ trợ](https://forum.groupdocs.com/c/editor/20) để được giúp đỡ.
+ Tham quan[Tài liệu GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) để biết thông tin chi tiết hoặc kiểm tra[diễn đàn hỗ trợ](https://forum.groupdocs.com/c/editor/20) để được giúp đỡ.

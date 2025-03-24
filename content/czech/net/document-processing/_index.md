@@ -3,7 +3,6 @@ title: Zpracování dokumentů
 linktitle: Zpracování dokumentů
 second_title: GroupDocs.Editor .NET API
 description: Zpracování hlavního dokumentu v .NET s GroupDocs.Editor. Naučte se bez námahy extrahovat informace, ukládat do různých formátů a pracovat s různými typy dokumentů.
-type: docs
 weight: 24
 url: /cs/net/document-processing/
 ---

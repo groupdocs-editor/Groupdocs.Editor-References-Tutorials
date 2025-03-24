@@ -3,7 +3,6 @@ title: Tải tài liệu
 linktitle: Tải tài liệu
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách chỉnh sửa tài liệu theo chương trình bằng GroupDocs.Editor cho .NET. Hướng dẫn từng bước để tải tài liệu, xử lý các tệp được bảo vệ bằng mật khẩu, v.v.
-type: docs
 weight: 13
 url: /vi/net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 Chúc mừng! Bạn đã học thành công cách tải tài liệu bằng GroupDocs.Editor cho .NET theo nhiều cách khác nhau. Cho dù bạn đang xử lý các tệp cục bộ, tài liệu được bảo vệ bằng mật khẩu hay luồng byte, GroupDocs.Editor đều cung cấp giải pháp linh hoạt và mạnh mẽ cho nhu cầu chỉnh sửa tài liệu của bạn. Hãy nhớ luôn loại bỏ tài nguyên để đảm bảo hiệu suất tối ưu và quản lý tài nguyên trong ứng dụng của bạn.
 ## Câu hỏi thường gặp
 ### Những định dạng tệp nào được GroupDocs.Editor hỗ trợ cho .NET?
- GroupDocs.Editor hỗ trợ nhiều định dạng tệp, bao gồm DOCX, XLSX, PPTX, HTML, v.v. Để có danh sách đầy đủ, hãy tham khảo[tài liệu](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor hỗ trợ nhiều định dạng tệp, bao gồm DOCX, XLSX, PPTX, HTML, v.v. Để có danh sách đầy đủ, hãy tham khảo[tài liệu](https://tutorials.groupdocs.com/editor/net/).
 ### Làm cách nào để xử lý các tài liệu được bảo vệ bằng mật khẩu?
  Bạn có thể sử dụng các tùy chọn tải như`WordProcessingLoadOptions` để chỉ định mật khẩu khi tải tài liệu được bảo vệ bằng mật khẩu.
 ### Tôi có thể sử dụng GroupDocs.Editor trong ứng dụng web không?
