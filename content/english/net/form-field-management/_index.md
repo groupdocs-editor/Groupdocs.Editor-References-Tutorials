@@ -3,7 +3,6 @@ title: Form Field Management
 linktitle: Form Field Management
 second_title: GroupDocs.Editor .NET API
 description: Master form field management in .NET with GroupDocs.Editor. Learn to edit, fix, work with legacy, and remove form field collections seamlessly.
-type: docs
 weight: 23
 url: /net/form-field-management/
 ---

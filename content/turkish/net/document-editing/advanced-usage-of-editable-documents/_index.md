@@ -3,7 +3,6 @@ title: Düzenlenebilir Belgelerin Gelişmiş Kullanımı
 linktitle: Düzenlenebilir Belgelerin Gelişmiş Kullanımı
 second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET'in program aracılığıyla belgeler oluşturma, düzenleme ve kaynak çıkarma işlemlerinin ileri düzey kullanımını öğrenin.
-type: docs
 weight: 11
 url: /tr/net/document-editing/advanced-usage-of-editable-documents/
 ---

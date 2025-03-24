@@ -3,7 +3,6 @@ title: Edición de documentos
 linktitle: Edición de documentos
 second_title: API GroupDocs.Editor .NET
 description: Administre y edite documentos con GroupDocs.Editor .NET. Aprenda a crear, editar y guardar documentos con facilidad. ¡Mejore su flujo de trabajo de gestión de documentos hoy!
-type: docs
 weight: 20
 url: /es/net/document-editing/
 ---

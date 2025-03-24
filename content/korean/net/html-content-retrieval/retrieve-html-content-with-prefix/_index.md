@@ -3,7 +3,6 @@ title: 접두사가 포함된 HTML 콘텐츠 검색
 linktitle: 접두사가 포함된 HTML 콘텐츠 검색
 second_title: GroupDocs.Editor .NET API
 description: 이미지 및 스타일시트에 대한 사용자 정의 접두어가 있는 .NET용 GroupDocs.Editor를 사용하여 문서에서 HTML 콘텐츠를 검색하는 방법을 알아보세요. 단계별 가이드가 포함되어 있습니다.
-type: docs
 weight: 11
 url: /ko/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 이 코드 조각은 사용자 정의 접두사가 포함된 HTML 콘텐츠를 가져와서 콘솔에 인쇄합니다. 필요에 따라 이 HTML 콘텐츠를 추가로 처리하거나 저장할 수 있습니다.
 ## 결론
 그리고 거기에 있습니다! 다음 단계를 수행하면 이미지 및 스타일시트에 대한 사용자 정의 접두사가 포함된 .NET용 GroupDocs.Editor를 사용하여 문서에서 HTML 콘텐츠를 쉽게 검색할 수 있습니다. 이 강력한 도구는 문서 조작을 단순화하여 문서 편집을 .NET 애플리케이션에 원활하게 통합하는 데 집중할 수 있도록 해줍니다.
- 자세한 내용은 다음을 확인하세요.[.NET 문서용 GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) . 질문이 있거나 추가 지원이 필요한 경우 언제든지 문의해 주세요.[지원 포럼](https://forum.groupdocs.com/c/editor/20).
+ 자세한 내용은 다음을 확인하세요.[.NET 문서용 GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) . 질문이 있거나 추가 지원이 필요한 경우 언제든지 문의해 주세요.[지원 포럼](https://forum.groupdocs.com/c/editor/20).
 ## FAQ
 ### .NET용 GroupDocs.Editor를 사용하여 어떤 유형의 문서를 편집할 수 있나요?
 GroupDocs.Editor는 Word, Excel, PowerPoint, PDF 등을 포함한 다양한 문서 형식을 지원합니다.

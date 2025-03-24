@@ -3,7 +3,6 @@ title: Sınırlandırılmış Ayrılmış Değerlerle Çalışma (DSV)
 linktitle: Sınırlandırılmış Ayrılmış Değerlerle Çalışma (DSV)
 second_title: GroupDocs.Editor .NET API'si
 description: Bu adım adım kılavuzla GroupDocs.Editor for .NET'i kullanarak CSV ve TSV dosyalarını nasıl düzenleyeceğinizi öğrenin. .NET projelerinizi zahmetsizce geliştirin.
-type: docs
 weight: 12
 url: /tr/net/document-processing/work-dsv/
 ---
@@ -111,4 +110,4 @@ Kesinlikle kaydetme seçeneklerinde istediğiniz kodlamayı belirleyebilirsiniz.
 ### GroupDocs.Editor for .NET'i kullanarak bir CSV dosyasını Excel elektronik tablosuna dönüştürebilir miyim?
 Evet, uygun kaydetme seçeneklerini kullanarak bir CSV dosyasını Excel elektronik tablosu olarak kaydedebilirsiniz.
 ### GroupDocs.Editor for .NET hakkında daha fazla belgeyi nerede bulabilirim?
- Ayrıntılı belgeleri bulabilirsiniz[Burada](https://reference.groupdocs.com/editor/net/)
+ Ayrıntılı belgeleri bulabilirsiniz[Burada](https://tutorials.groupdocs.com/editor/net/)

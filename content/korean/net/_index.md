@@ -1,7 +1,6 @@
 ---
 title: .NET용 GroupDocs.Editor의 튜토리얼 및 예제
 linktitle: .NET 튜토리얼용 GroupDocs.Editor
-type: docs
 weight: 10
 url: /ko/net/
 description: GroupDocs.Editor .NET을 사용하여 문서를 관리하고 편집하세요. 문서 처리, 문서 편집, HTML 콘텐츠 검색, 양식 필드 관리 등에 대해 알아보세요!

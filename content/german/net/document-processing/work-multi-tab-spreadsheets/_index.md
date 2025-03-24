@@ -3,7 +3,6 @@ title: Arbeiten mit Tabellenkalkulationen mit mehreren Registerkarten
 linktitle: Arbeiten mit Tabellenkalkulationen mit mehreren Registerkarten
 second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie, wie Sie mit GroupDocs.Editor mit Tabellenkalkulationen mit mehreren Registerkarten in .NET arbeiten. Schritt-für-Schritt-Anleitung, Codebeispiele und bewährte Methoden inklusive.
-type: docs
 weight: 17
 url: /de/net/document-processing/work-multi-tab-spreadsheets/
 ---

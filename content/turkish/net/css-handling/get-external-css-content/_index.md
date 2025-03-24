@@ -3,7 +3,6 @@ title: Harici CSS İçeriği Alın
 linktitle: Harici CSS İçeriği Alın
 second_title: GroupDocs.Editor .NET API'si
 description: Bu adım adım kılavuzla, belgelerden harici CSS içeriğini ayıklamak için GroupDocs.Editor for .NET'i nasıl kullanacağınızı öğrenin. Belgeyi entegre eden geliştiriciler için mükemmeldir.
-type: docs
 weight: 10
 url: /tr/net/css-handling/get-external-css-content/
 ---
@@ -67,6 +66,6 @@ GroupDocs.Editor for .NET, geliştiricilerin .NET uygulamaları içindeki Word, 
 ### GroupDocs.Editor'ı ücretsiz kullanabilir miyim?
  GroupDocs.Editor, şuradan indirebileceğiniz ücretsiz bir deneme sürümü sunar:[GroupDocs ücretsiz deneme sayfası](https://releases.groupdocs.com/). Tüm özellikler için bir lisans satın almayı düşünün.
 ### GroupDocs.Editor hangi dosya formatlarını destekliyor?
- GroupDocs.Editor, DOCX, XLSX, PPTX, PDF, HTML ve çok daha fazlasını içeren çok çeşitli dosya formatlarını destekler. Kontrol edin[dokümantasyon](https://reference.groupdocs.com/editor/net/) tam bir liste için.
+ GroupDocs.Editor, DOCX, XLSX, PPTX, PDF, HTML ve çok daha fazlasını içeren çok çeşitli dosya formatlarını destekler. Kontrol edin[dokümantasyon](https://tutorials.groupdocs.com/editor/net/) tam bir liste için.
 ### GroupDocs.Editor için nasıl destek alabilirim?
  adresinden destek alabilirsiniz.[GroupDocs destek forumu](https://forum.groupdocs.com/c/editor/20) topluluktan ve GroupDocs uzmanlarından soru sorabileceğiniz ve yardım alabileceğiniz yer.

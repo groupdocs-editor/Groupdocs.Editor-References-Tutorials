@@ -3,7 +3,6 @@ title: Εξαγωγή περιεχομένου HTML από επεξεργάσι�
 linktitle: Εξαγωγή περιεχομένου HTML από επεξεργάσιμο έγγραφο
 second_title: GroupDocs.Editor .NET API
 description: Εξάγετε εύκολα περιεχόμενο HTML από έγγραφα χρησιμοποιώντας το GroupDocs.Editor για .NET. Ακολουθήστε τον λεπτομερή οδηγό μας για απρόσκοπτη ενσωμάτωση και διαχείριση εγγράφων.
-type: docs
 weight: 12
 url: /el/net/document-editing/extract-html-content-from-editable-document/
 ---
@@ -64,6 +63,6 @@ Console.WriteLine("HTML content of the input document (first 200 chars): {0}", h
 ### Πώς μπορώ να αποκτήσω μια προσωρινή άδεια για το GroupDocs.Editor για .NET;
  Μπορείτε να ζητήσετε μια προσωρινή άδεια από το[Σελίδα αγοράς GroupDocs](https://purchase.groupdocs.com/temporary-license/).
 ### Πού μπορώ να βρω την τεκμηρίωση για το GroupDocs.Editor για .NET;
- Η πλήρης τεκμηρίωση είναι διαθέσιμη[εδώ](https://reference.groupdocs.com/editor/net/).
+ Η πλήρης τεκμηρίωση είναι διαθέσιμη[εδώ](https://tutorials.groupdocs.com/editor/net/).
 ### Μπορώ να λάβω υποστήριξη εάν αντιμετωπίσω προβλήματα;
  Ναι, μπορείτε να ζητήσετε υποστήριξη από το[Φόρουμ υποστήριξης GroupDocs](https://forum.groupdocs.com/c/editor/20).

@@ -3,7 +3,6 @@ title: Ambil Konten Tubuh HTML
 linktitle: Ambil Konten Tubuh HTML
 second_title: GroupDocs.Editor .NET API
 description: Ambil konten isi HTML menggunakan GroupDocs.Editor untuk .NET dengan panduan langkah demi langkah kami. Tingkatkan aplikasi .NET Anda dengan mudah.
-type: docs
 weight: 10
 url: /id/net/html-content-retrieval/retrieve-html-body-content/
 ---
@@ -62,4 +61,4 @@ GroupDocs.Editor mendukung berbagai format file termasuk dokumen Word, PDF, spre
 ### Bisakah saya menggunakan GroupDocs.Editor dengan .NET Core?
 Ya, GroupDocs.Editor kompatibel dengan .NET Core, memberikan fleksibilitas untuk pengembangan aplikasi modern.
 ### Di mana saya dapat menemukan lebih banyak contoh dan dokumentasi untuk GroupDocs.Editor?
- Anda dapat menemukan lebih banyak contoh dan dokumentasi terperinci di[Halaman dokumentasi GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ Anda dapat menemukan lebih banyak contoh dan dokumentasi terperinci di[Halaman dokumentasi GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).

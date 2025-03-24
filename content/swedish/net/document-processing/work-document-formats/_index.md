@@ -3,7 +3,6 @@ title: Arbeta med dokumentformat
 linktitle: Arbeta med dokumentformat
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du använder GroupDocs.Editor för .NET för att redigera olika dokumentformat programmatiskt. Steg-för-steg guide med exempel för sömlös integration.
-type: docs
 weight: 13
 url: /sv/net/document-processing/work-document-formats/
 ---
@@ -159,4 +158,4 @@ GroupDocs.Editor stöder bland annat ordbehandlings-, kalkylblads-, presentation
 ### Kan jag använda GroupDocs.Editor gratis?
  Du kan använda en[gratis provperiod](https://releases.groupdocs.com/) med begränsade funktioner eller skaffa en[tillfällig licens](https://purchase.groupdocs.com/temporary-license/) för full åtkomst.
 ### Var kan jag hitta mer resurser och support?
- Besök[GroupDocs.Editor dokumentation](https://reference.groupdocs.com/editor/net/) för detaljerad information, eller kolla in deras[supportforum](https://forum.groupdocs.com/c/editor/20) för hjälp.
+ Besök[GroupDocs.Editor dokumentation](https://tutorials.groupdocs.com/editor/net/) för detaljerad information, eller kolla in deras[supportforum](https://forum.groupdocs.com/c/editor/20) för hjälp.

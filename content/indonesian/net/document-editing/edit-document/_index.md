@@ -3,7 +3,6 @@ title: Sunting Dokumen
 linktitle: Sunting Dokumen
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengedit dokumen dengan mudah menggunakan GroupDocs.Editor untuk .NET. Panduan langkah demi langkah untuk file Pemrosesan Kata dan Spreadsheet.
-type: docs
 weight: 11
 url: /id/net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 Pembuangan yang benar memastikan tidak ada kebocoran memori atau masalah kinerja dalam aplikasi Anda.
 ## Kesimpulan
- Selamat! Anda sekarang memiliki pemahaman yang kuat tentang cara menggunakan GroupDocs.Editor untuk .NET untuk memuat, mengedit, dan mengekstrak konten dari dokumen dan Spreadsheet Pemrosesan Word. Alat canggih ini menyederhanakan tugas pengeditan dokumen dan terintegrasi secara mulus dengan aplikasi .NET Anda. Untuk lebih jelasnya, Anda dapat menjelajahi[dokumentasi](https://reference.groupdocs.com/editor/net/), [unduh versi terbaru](https://releases.groupdocs.com/editor/net/) , atau dapatkan a[izin sementara](https://purchase.groupdocs.com/temporary-license/).
+ Selamat! Anda sekarang memiliki pemahaman yang kuat tentang cara menggunakan GroupDocs.Editor untuk .NET untuk memuat, mengedit, dan mengekstrak konten dari dokumen dan Spreadsheet Pemrosesan Word. Alat canggih ini menyederhanakan tugas pengeditan dokumen dan terintegrasi secara mulus dengan aplikasi .NET Anda. Untuk lebih jelasnya, Anda dapat menjelajahi[dokumentasi](https://tutorials.groupdocs.com/editor/net/), [unduh versi terbaru](https://releases.groupdocs.com/editor/net/) , atau dapatkan a[izin sementara](https://purchase.groupdocs.com/temporary-license/).
 ## FAQ
 ### Bisakah saya mengedit dokumen PDF dengan GroupDocs.Editor untuk .NET?
 Saat ini, GroupDocs.Editor untuk .NET terutama mendukung format Pemrosesan Kata, Spreadsheet, dan Presentasi.

@@ -3,7 +3,6 @@ title: Extrahujte obsah HTML z upravitelného dokumentu
 linktitle: Extrahujte obsah HTML z upravitelného dokumentu
 second_title: GroupDocs.Editor .NET API
 description: Bez námahy extrahujte obsah HTML z dokumentů pomocí GroupDocs.Editor pro .NET. Postupujte podle našeho podrobného průvodce pro bezproblémovou integraci a správu dokumentů.
-type: docs
 weight: 12
 url: /cs/net/document-editing/extract-html-content-from-editable-document/
 ---
@@ -64,6 +63,6 @@ GroupDocs.Editor for .NET podporuje širokou škálu formátů dokumentů, včet
 ### Jak získám dočasnou licenci pro GroupDocs.Editor pro .NET?
  Můžete požádat o dočasnou licenci od[Nákupní stránka GroupDocs](https://purchase.groupdocs.com/temporary-license/).
 ### Kde najdu dokumentaci k GroupDocs.Editor pro .NET?
- K dispozici je obsáhlá dokumentace[tady](https://reference.groupdocs.com/editor/net/).
+ K dispozici je obsáhlá dokumentace[tady](https://tutorials.groupdocs.com/editor/net/).
 ### Mohu získat podporu, pokud narazím na problémy?
  Ano, můžete hledat podporu u[Fórum podpory GroupDocs](https://forum.groupdocs.com/c/editor/20).

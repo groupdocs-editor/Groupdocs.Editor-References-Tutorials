@@ -3,7 +3,6 @@ title: Salva le risorse HTML nella cartella
 linktitle: Salva le risorse HTML nella cartella
 second_title: API GroupDocs.Editor .NET
 description: Scopri come estrarre risorse HTML dai documenti utilizzando Groupdocs.Editor per .NET. Questo tutorial completo fornisce una guida passo passo per gli sviluppatori.
-type: docs
 weight: 13
 url: /it/net/document-editing/save-html-resources-to-folder/
 ---

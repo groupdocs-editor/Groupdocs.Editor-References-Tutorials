@@ -3,7 +3,6 @@ title: फ़ाइल से लाइसेंस सेट करें
 linktitle: फ़ाइल से लाइसेंस सेट करें
 second_title: GroupDocs.Editor .NET एपीआई
 description: अपने अनुप्रयोगों में सहज दस्तावेज़ संपादन के लिए GroupDocs.Editor for .NET का उपयोग करना सीखें। चरण-दर-चरण मार्गदर्शिका, युक्तियाँ और FAQs शामिल हैं।
-type: docs
 weight: 10
 url: /hi/net/quick-start-guide/set-license-from-file/
 ---
@@ -89,4 +88,4 @@ using (FileStream outputStream = File.Create(outputPath))
 ### मैं .NET के लिए GroupDocs.Editor के साथ बड़े दस्तावेज़ों को कैसे संभाल सकता हूँ?
 .NET के लिए GroupDocs.Editor को बड़े दस्तावेज़ों को कुशलतापूर्वक संभालने के लिए डिज़ाइन किया गया है। हालाँकि, इष्टतम प्रदर्शन के लिए, यदि आवश्यक हो तो संसाधनों का प्रबंधन और खंडों में दस्तावेज़ों को संभालने पर विचार करें।
 ### मुझे अधिक विस्तृत दस्तावेज और सहायता कहां मिल सकती है?
- आप विस्तृत दस्तावेज यहाँ पा सकते हैं[GroupDocs.Editor दस्तावेज़न पृष्ठ](https://reference.groupdocs.com/editor/net/) और समर्थन मांगें[ग्रुपडॉक्स सहायता मंच](https://forum.groupdocs.com/c/editor/20).
+ आप विस्तृत दस्तावेज यहाँ पा सकते हैं[GroupDocs.Editor दस्तावेज़न पृष्ठ](https://tutorials.groupdocs.com/editor/net/) और समर्थन मांगें[ग्रुपडॉक्स सहायता मंच](https://forum.groupdocs.com/c/editor/20).

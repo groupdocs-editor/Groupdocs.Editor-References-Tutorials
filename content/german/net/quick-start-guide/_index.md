@@ -3,7 +3,6 @@ title: Schnellstartanleitung
 linktitle: Schnellstartanleitung
 second_title: GroupDocs.Editor .NET API
 description: Lernen Sie mit unseren umfassenden Tutorials, GroupDocs.Editor für .NET zu verwenden. Legen Sie Lizenzen fest, integrieren Sie Funktionen und schalten Sie leistungsstarke Funktionen zur Dokumentbearbeitung frei.
-type: docs
 weight: 26
 url: /de/net/quick-start-guide/
 ---

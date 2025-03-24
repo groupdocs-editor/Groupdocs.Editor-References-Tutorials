@@ -3,7 +3,6 @@ title: Upravit dokument
 linktitle: Upravit dokument
 second_title: GroupDocs.Editor .NET API
 description: Naučte se snadno upravovat dokumenty s GroupDocs.Editor pro .NET. Podrobný průvodce pro textové a tabulkové soubory.
-type: docs
 weight: 11
 url: /cs/net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 Správná likvidace zajišťuje, že ve vaší aplikaci nedochází k únikům paměti nebo problémům s výkonem.
 ## Závěr
- Gratulujeme! Nyní dobře rozumíte tomu, jak používat GroupDocs.Editor pro .NET k načítání, úpravám a extrahování obsahu z dokumentů textového procesoru a tabulek. Tento výkonný nástroj zjednodušuje úlohy úpravy dokumentů a hladce se integruje s vašimi aplikacemi .NET. Pro další podrobnosti můžete prozkoumat[dokumentace](https://reference.groupdocs.com/editor/net/), [stáhněte si nejnovější verzi](https://releases.groupdocs.com/editor/net/) nebo získat a[dočasná licence](https://purchase.groupdocs.com/temporary-license/).
+ Gratulujeme! Nyní dobře rozumíte tomu, jak používat GroupDocs.Editor pro .NET k načítání, úpravám a extrahování obsahu z dokumentů textového procesoru a tabulek. Tento výkonný nástroj zjednodušuje úlohy úpravy dokumentů a hladce se integruje s vašimi aplikacemi .NET. Pro další podrobnosti můžete prozkoumat[dokumentace](https://tutorials.groupdocs.com/editor/net/), [stáhněte si nejnovější verzi](https://releases.groupdocs.com/editor/net/) nebo získat a[dočasná licence](https://purchase.groupdocs.com/temporary-license/).
 ## FAQ
 ### Mohu upravovat dokumenty PDF pomocí GroupDocs.Editor pro .NET?
 současné době GroupDocs.Editor for .NET primárně podporuje formáty Word Processing, Spreadsheet a Presentation.

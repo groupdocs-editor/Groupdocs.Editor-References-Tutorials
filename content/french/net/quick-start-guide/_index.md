@@ -3,7 +3,6 @@ title: Guide de démarrage rapide
 linktitle: Guide de démarrage rapide
 second_title: API GroupDocs.Editor .NET
 description: Apprenez à utiliser GroupDocs.Editor pour .NET avec nos didacticiels complets. Définissez des licences, intégrez des fonctionnalités et débloquez de puissantes capacités d’édition de documents.
-type: docs
 weight: 26
 url: /fr/net/quick-start-guide/
 ---

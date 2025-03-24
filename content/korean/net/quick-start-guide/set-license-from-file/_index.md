@@ -3,7 +3,6 @@ title: 파일에서 라이센스 설정
 linktitle: 파일에서 라이센스 설정
 second_title: GroupDocs.Editor .NET API
 description: 응용 프로그램에서 원활한 문서 편집을 위해 .NET용 GroupDocs.Editor를 사용하는 방법을 알아보세요. 단계별 가이드, 팁, FAQ가 포함되어 있습니다.
-type: docs
 weight: 10
 url: /ko/net/quick-start-guide/set-license-from-file/
 ---
@@ -89,4 +88,4 @@ using (FileStream outputStream = File.Create(outputPath))
 ### .NET용 GroupDocs.Editor를 사용하여 대용량 문서를 어떻게 처리합니까?
 .NET용 GroupDocs.Editor는 대용량 문서를 효율적으로 처리하도록 설계되었습니다. 그러나 최적의 성능을 위해서는 필요한 경우 리소스를 관리하고 문서를 세그먼트로 처리하는 것을 고려하십시오.
 ### 더 자세한 문서와 지원은 어디서 찾을 수 있나요?
- 자세한 문서는 다음에서 찾을 수 있습니다.[GroupDocs.Editor 문서 페이지](https://reference.groupdocs.com/editor/net/) 그리고 로부터 지원을 구하라.[GroupDocs 지원 포럼](https://forum.groupdocs.com/c/editor/20).
+ 자세한 문서는 다음에서 찾을 수 있습니다.[GroupDocs.Editor 문서 페이지](https://tutorials.groupdocs.com/editor/net/) 그리고 로부터 지원을 구하라.[GroupDocs 지원 포럼](https://forum.groupdocs.com/c/editor/20).

@@ -3,7 +3,6 @@ title: Låsa upp dokumenthantering med GroupDocs.Editor
 linktitle: Guider för GroupDocs.Editor
 additionalTitle: GroupDocs API-referenser
 description: Bemästra dokumentredigering utan ansträngning med GroupDocs.Editor för .NET & Java. Effektivisera arbetsflödet, hantera CSS, hämta HTML-innehåll och mer!
-type: docs
 weight: 11
 url: /sv/
 is_root: true

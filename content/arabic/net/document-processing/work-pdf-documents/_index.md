@@ -3,7 +3,6 @@ title: العمل مع وثائق PDF
 linktitle: العمل مع وثائق PDF
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية تحرير مستندات PDF باستخدام GroupDocs.Editor لـ .NET باستخدام هذا البرنامج التعليمي. قم بتعديل المحتوى والتعامل مع الملفات الكبيرة وحفظ تعديلاتك بشكل آمن.
-type: docs
 weight: 14
 url: /ar/net/document-processing/work-pdf-documents/
 ---

@@ -3,7 +3,6 @@ title: Werken met platte tekstdocumenten
 linktitle: Werken met platte tekstdocumenten
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u platte-tekstdocumenten kunt bewerken met GroupDocs.Editor voor .NET met onze stapsgewijze handleiding. Vereenvoudig uw .NET-documentbewerkingsproces.
-type: docs
 weight: 15
 url: /nl/net/document-processing/work-plain-text-documents/
 ---
@@ -96,10 +95,10 @@ Sla ten slotte het bewerkte document op in zowel de DOCX- als de TXT-indeling me
 System.Console.WriteLine("Document editing process completed successfully!");
 ```
 ## Conclusie
- Gefeliciteerd! U hebt met succes een document zonder opmaak bewerkt met GroupDocs.Editor voor .NET. Deze krachtige tool vereenvoudigt het bewerken van documenten, waardoor deze eenvoudig in uw .NET-applicaties kan worden geïntegreerd. Of u nu eenvoudige tekstbestanden of complexe documentformaten verwerkt, GroupDocs.Editor staat voor u klaar. Ontdek meer functies en mogelijkheden door naar de[GroupDocs.Editor-documentatie](https://reference.groupdocs.com/editor/net/).
+ Gefeliciteerd! U hebt met succes een document zonder opmaak bewerkt met GroupDocs.Editor voor .NET. Deze krachtige tool vereenvoudigt het bewerken van documenten, waardoor deze eenvoudig in uw .NET-applicaties kan worden geïntegreerd. Of u nu eenvoudige tekstbestanden of complexe documentformaten verwerkt, GroupDocs.Editor staat voor u klaar. Ontdek meer functies en mogelijkheden door naar de[GroupDocs.Editor-documentatie](https://tutorials.groupdocs.com/editor/net/).
 ## Veelgestelde vragen
 ### Welke bestandsindelingen ondersteunt GroupDocs.Editor voor .NET?
- GroupDocs.Editor voor .NET ondersteunt een breed scala aan bestandsindelingen, waaronder DOCX, TXT, HTML en meer. Controleer de[documentatie](https://reference.groupdocs.com/editor/net/) voor een volledige lijst.
+ GroupDocs.Editor voor .NET ondersteunt een breed scala aan bestandsindelingen, waaronder DOCX, TXT, HTML en meer. Controleer de[documentatie](https://tutorials.groupdocs.com/editor/net/) voor een volledige lijst.
 ### Hoe kan ik een gratis proefversie van GroupDocs.Editor voor .NET krijgen?
  U kunt een gratis proefversie van GroupDocs.Editor voor .NET downloaden van de[releases pagina](https://releases.groupdocs.com/).
 ### Kan ik een tijdelijke licentie kopen voor GroupDocs.Editor voor .NET?
@@ -107,4 +106,4 @@ Ja, u kunt een tijdelijke licentie verkrijgen bij de[GroupDocs-aankooppagina](ht
 ### Waar kan ik ondersteuning krijgen voor GroupDocs.Editor voor .NET?
  Ondersteuning is beschikbaar via de[GroupDocs.Editor-ondersteuningsforum](https://forum.groupdocs.com/c/editor/20).
 ### Is er gedetailleerde documentatie beschikbaar voor GroupDocs.Editor voor .NET?
- Ja, gedetailleerde documentatie is beschikbaar op de[GroupDocs.Editor-documentatiepagina](https://reference.groupdocs.com/editor/net/).
+ Ja, gedetailleerde documentatie is beschikbaar op de[GroupDocs.Editor-documentatiepagina](https://tutorials.groupdocs.com/editor/net/).

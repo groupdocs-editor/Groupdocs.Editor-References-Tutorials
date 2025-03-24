@@ -3,7 +3,6 @@ title: Arbeiten mit kennwortgeschützten Tabellen
 linktitle: Arbeiten mit kennwortgeschützten Tabellen
 second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie, wie Sie mit GroupDocs.Editor für .NET kennwortgeschützte Tabellenkalkulationen verwalten. Diese ausführliche Anleitung führt Sie durch das Öffnen und Speichern sicherer Excel-Dateien.
-type: docs
 weight: 18
 url: /de/net/document-processing/work-password-protected-spreadsheets/
 ---
@@ -108,4 +107,4 @@ GroupDocs.Editor für .NET ist eine leistungsstarke API zur Dokumentbearbeitung,
 ### Kann ich zum Öffnen und Schreiben in eine Tabelle unterschiedliche Passwörter festlegen?
 Auf jeden Fall! Du kannst in den Speicheroptionen separate Passwörter für das Öffnen des Dokuments und für den Schreibschutz festlegen.
 ### Wo finde ich ausführlichere Dokumentation?
- Sie können auf die umfassende Dokumentation für GroupDocs.Editor für .NET zugreifen[Hier](https://reference.groupdocs.com/editor/net/).
+ Sie können auf die umfassende Dokumentation für GroupDocs.Editor für .NET zugreifen[Hier](https://tutorials.groupdocs.com/editor/net/).

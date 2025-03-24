@@ -3,7 +3,6 @@ title: Simpan Sumber Daya HTML ke Folder
 linktitle: Simpan Sumber Daya HTML ke Folder
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengekstrak sumber daya HTML dari dokumen menggunakan Groupdocs.Editor untuk .NET. Tutorial komprehensif ini memberikan panduan langkah demi langkah untuk pengembang.
-type: docs
 weight: 13
 url: /id/net/document-editing/save-html-resources-to-folder/
 ---

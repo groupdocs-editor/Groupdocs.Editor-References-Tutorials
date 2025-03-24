@@ -3,7 +3,6 @@ title: CSS Handling
 linktitle: CSS Handling
 second_title: GroupDocs.Editor .NET API
 description: Learn how to handle CSS content effectively with GroupDocs.Editor for .NET. Extract external CSS content and handle CSS content with prefixes effortlessly.
-type: docs
 weight: 21
 url: /net/css-handling/
 ---

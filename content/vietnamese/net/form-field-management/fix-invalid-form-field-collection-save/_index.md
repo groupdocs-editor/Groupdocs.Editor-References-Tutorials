@@ -3,7 +3,6 @@ title: Sửa lỗi Thu thập và lưu trường biểu mẫu không hợp lệ
 linktitle: Sửa lỗi Thu thập và lưu trường biểu mẫu không hợp lệ
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách sửa các trường biểu mẫu không hợp lệ trong DOCX bằng Groupdocs.Editor cho .NET. Hãy làm theo hướng dẫn này để đảm bảo tài liệu của bạn không có lỗi và lưu chúng một cách an toàn.
-type: docs
 weight: 11
 url: /vi/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## Phần kết luận
- Và bạn có nó rồi đấy! Bạn đã sửa thành công các trường biểu mẫu không hợp lệ và lưu tài liệu của mình bằng Groupdocs.Editor cho .NET. Hướng dẫn từng bước này lẽ ra phải làm cho quy trình trở nên rõ ràng và dễ quản lý. Nếu bạn gặp phải bất kỳ vấn đề hoặc có thắc mắc nào, vui lòng kiểm tra[tài liệu](https://reference.groupdocs.com/editor/net/) hoặc tiếp cận với[ủng hộ](https://forum.groupdocs.com/c/editor/20).
+ Và bạn có nó rồi đấy! Bạn đã sửa thành công các trường biểu mẫu không hợp lệ và lưu tài liệu của mình bằng Groupdocs.Editor cho .NET. Hướng dẫn từng bước này lẽ ra phải làm cho quy trình trở nên rõ ràng và dễ quản lý. Nếu bạn gặp phải bất kỳ vấn đề hoặc có thắc mắc nào, vui lòng kiểm tra[tài liệu](https://tutorials.groupdocs.com/editor/net/) hoặc tiếp cận với[ủng hộ](https://forum.groupdocs.com/c/editor/20).
 ## Câu hỏi thường gặp
 ### Nếu tài liệu của tôi được bảo vệ bằng mật khẩu thì sao?
  Bạn có thể chỉ định mật khẩu trong`WordProcessingLoadOptions` để mở tài liệu.

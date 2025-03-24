@@ -3,7 +3,6 @@ title: Form Fälthantering
 linktitle: Form Fälthantering
 second_title: GroupDocs.Editor .NET API
 description: Behärska formulärfältshantering i .NET med GroupDocs.Editor. Lär dig att redigera, fixa, arbeta med äldre och ta bort formulärfältsamlingar sömlöst.
-type: docs
 weight: 23
 url: /sv/net/form-field-management/
 ---

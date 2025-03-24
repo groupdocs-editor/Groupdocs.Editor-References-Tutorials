@@ -3,7 +3,6 @@ title: Arbeta med XML-dokument
 linktitle: Arbeta med XML-dokument
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du effektivt redigerar XML-dokument med GroupDocs.Editor för .NET med vår steg-för-steg-guide som täcker alla viktiga steg och alternativ.
-type: docs
 weight: 20
 url: /sv/net/document-processing/work-xml-documents/
 ---

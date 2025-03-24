@@ -3,7 +3,6 @@ title: Làm việc với Bảng tính nhiều tab
 linktitle: Làm việc với Bảng tính nhiều tab
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách làm việc với bảng tính nhiều tab trong .NET bằng GroupDocs.Editor. Bao gồm hướng dẫn từng bước, ví dụ về mã và các phương pháp hay nhất.
-type: docs
 weight: 17
 url: /vi/net/document-processing/work-multi-tab-spreadsheets/
 ---

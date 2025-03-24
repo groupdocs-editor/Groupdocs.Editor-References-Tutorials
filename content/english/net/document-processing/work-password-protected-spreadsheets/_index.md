@@ -3,7 +3,6 @@ title: Work with Password-Protected Spreadsheets
 linktitle: Work with Password-Protected Spreadsheets
 second_title: GroupDocs.Editor .NET API
 description: Learn how to handle password-protected spreadsheets using GroupDocs.Editor for .NET. This detailed guide walks you through opening to saving secure Excel files.
-type: docs
 weight: 18
 url: /net/document-processing/work-password-protected-spreadsheets/
 ---
@@ -108,4 +107,4 @@ Yes, you can enable memory optimization by setting the `OptimizeMemoryUsage` pro
 ### Can I set different passwords for opening and writing to a spreadsheet?
 Absolutely! You can set separate passwords for opening the document and for write protection using the save options.
 ### Where can I find more detailed documentation?
-You can access the comprehensive documentation for GroupDocs.Editor for .NET [here](https://reference.groupdocs.com/editor/net/).
+You can access the comprehensive documentation for GroupDocs.Editor for .NET [here](https://tutorials.groupdocs.com/editor/net/).

@@ -3,7 +3,6 @@ title: Document maken
 linktitle: Document maken
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u Word-, Excel-, PowerPoint-, Ebook- en e-maildocumenten kunt bewerken met GroupDocs.Editor voor .NET met deze uitgebreide stapsgewijze zelfstudie.
-type: docs
 weight: 10
 url: /nl/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ kunt een callback-functie gebruiken om de bewerkte documentstroom op de gewenste
 ### Heb ik een licentie nodig om GroupDocs.Editor voor .NET te gebruiken?
  Ja, u kunt een licentie verkrijgen bij[hier](https://purchase.groupdocs.com/buy). Er is ook een optie voor een tijdelijke licentie.
 ### Waar kan ik meer gedetailleerde documentatie vinden?
- Gedetailleerde documentatie is beschikbaar op de[GroupDocs.Editor voor .NET-documentatiepagina](https://reference.groupdocs.com/editor/net/).
+ Gedetailleerde documentatie is beschikbaar op de[GroupDocs.Editor voor .NET-documentatiepagina](https://tutorials.groupdocs.com/editor/net/).

@@ -3,7 +3,6 @@ title: .NET용 GroupDocs.Editor 소개
 linktitle: .NET용 GroupDocs.Editor 소개
 second_title: GroupDocs.Editor .NET API
 description: 이 상세한 단계별 가이드를 통해 .NET용 GroupDocs.Editor를 사용하여 프로그래밍 방식으로 문서를 편집하는 방법을 알아보세요.
-type: docs
 weight: 12
 url: /ko/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ editor.Dispose();
 ### GroupDocs.Editor를 클라우드 저장소와 통합할 수 있습니까?
 예, GroupDocs.Editor를 다양한 클라우드 저장소 솔루션과 통합하여 문서를 관리할 수 있습니다.
 ### .NET용 GroupDocs.Editor에 대한 설명서는 어디에서 찾을 수 있나요?
-문서를 사용할 수 있습니다[여기](https://reference.groupdocs.com/editor/net/).
+문서를 사용할 수 있습니다[여기](https://tutorials.groupdocs.com/editor/net/).

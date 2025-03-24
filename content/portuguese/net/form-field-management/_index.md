@@ -3,7 +3,6 @@ title: Gerenciamento de campo de formulário
 linktitle: Gerenciamento de campo de formulário
 second_title: API GroupDocs.Editor .NET
 description: Domine o gerenciamento de campos de formulário em .NET com GroupDocs.Editor. Aprenda a editar, corrigir, trabalhar com legado e remover coleções de campos de formulário com facilidade.
-type: docs
 weight: 23
 url: /pt/net/form-field-management/
 ---

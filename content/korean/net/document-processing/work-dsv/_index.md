@@ -3,7 +3,6 @@ title: DSV(구분된 구분 값) 작업
 linktitle: DSV(구분된 구분 값) 작업
 second_title: GroupDocs.Editor .NET API
 description: 이 단계별 가이드를 통해 .NET용 GroupDocs.Editor를 사용하여 CSV 및 TSV 파일을 편집하는 방법을 알아보세요. .NET 프로젝트를 손쉽게 개선하세요.
-type: docs
 weight: 12
 url: /ko/net/document-processing/work-dsv/
 ---
@@ -111,4 +110,4 @@ System.Console.WriteLine("WorkingWithDsv routine has successfully finished");
 ### .NET용 GroupDocs.Editor를 사용하여 CSV 파일을 Excel 스프레드시트로 변환할 수 있나요?
 예, 적절한 저장 옵션을 사용하여 CSV 파일을 Excel 스프레드시트로 저장할 수 있습니다.
 ### .NET용 GroupDocs.Editor에 대한 추가 문서는 어디서 찾을 수 있나요?
- 자세한 문서를 찾을 수 있습니다[여기](https://reference.groupdocs.com/editor/net/)
+ 자세한 문서를 찾을 수 있습니다[여기](https://tutorials.groupdocs.com/editor/net/)

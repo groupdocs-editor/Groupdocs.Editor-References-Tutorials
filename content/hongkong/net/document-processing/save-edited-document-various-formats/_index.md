@@ -3,7 +3,6 @@ title: 將編輯的文檔儲存為各種格式
 linktitle: 將編輯的文檔儲存為各種格式
 second_title: GroupDocs.Editor .NET API
 description: 在這份全面的逐步指南中了解如何使用 GroupDocs.Editor for .NET 將編輯後的文件儲存為各種格式。
-type: docs
 weight: 11
 url: /zh-hant/net/document-processing/save-edited-document-various-formats/
 ---
@@ -92,4 +91,4 @@ GroupDocs.Editor 支援多種格式，包括 DOCX、PDF、HTML 等。
 ### 如何取得 GroupDocs.Editor 的臨時授權？
 您可以獲得臨時許可證[這裡](https://purchase.groupdocs.com/temporary-license/).
 ### 在哪裡可以找到更多文件和支援？
-提供詳細文檔[這裡](https://reference.groupdocs.com/editor/net/) ，並且您可以獲得支持[這裡](https://forum.groupdocs.com/c/editor/20).
+提供詳細文檔[這裡](https://tutorials.groupdocs.com/editor/net/) ，並且您可以獲得支持[這裡](https://forum.groupdocs.com/c/editor/20).

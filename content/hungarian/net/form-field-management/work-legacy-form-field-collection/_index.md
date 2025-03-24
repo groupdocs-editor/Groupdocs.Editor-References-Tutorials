@@ -3,7 +3,6 @@ title: Dolgozzon a Legacy Form Field Collection segítségével
 linktitle: Dolgozzon a Legacy Form Field Collection segítségével
 second_title: GroupDocs.Editor .NET API
 description: Részletes útmutatónkból megtudhatja, hogyan kezelheti a régi űrlapmezőket a GroupDocs.Editor for .NET használatával. Tökéletes a szövegmezők, jelölőnégyzetek, dátumok és egyebek kezelésére.
-type: docs
 weight: 12
 url: /hu/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## 8. lépés: Következtetés
 Ha követi ezeket a lépéseket, hatékonyan kezelheti és kommunikálhat a dokumentumok régi űrlapmezőivel a GroupDocs.Editor for .NET segítségével. Legyen szó szövegmezőkről, jelölőnégyzetekről, dátumokról, számokról vagy legördülő menükről, ez az útmutató világos és tömör módszert kínál az egyes típusok kezelésére.
 ## Következtetés
- A dokumentumokban a régi űrlapmezőkkel való munka egyszerű lehet, ha megfelelő eszközöket használ. A GroupDocs.Editor for .NET robusztus megoldást kínál ezeknek a mezőknek a hatékony kezelésére. Ennek a lépésről-lépésre szóló útmutatónak a követésével most már könnyedén kezelheti a dokumentumok különböző űrlapmezőit. Ne felejtse el felfedezni a[dokumentáció](https://reference.groupdocs.com/editor/net/) fejlettebb funkciókért és opciókért.
+ A dokumentumokban a régi űrlapmezőkkel való munka egyszerű lehet, ha megfelelő eszközöket használ. A GroupDocs.Editor for .NET robusztus megoldást kínál ezeknek a mezőknek a hatékony kezelésére. Ennek a lépésről-lépésre szóló útmutatónak a követésével most már könnyedén kezelheti a dokumentumok különböző űrlapmezőit. Ne felejtse el felfedezni a[dokumentáció](https://tutorials.groupdocs.com/editor/net/) fejlettebb funkciókért és opciókért.
 ## GYIK
 ### 1. Használhatom a GroupDocs.Editor for .NET programot jelszóval védett dokumentumokkal?
 Igen, megadhatja a jelszót a betöltési beállításokban a jelszóval védett dokumentumok kezeléséhez.
@@ -104,4 +103,4 @@ Igen, megadhatja a jelszót a betöltési beállításokban a jelszóval védett
 ### 4. Vásárolhatok licencet a GroupDocs.Editor for .NET számára?
  Igen, vásárolhat licencet[itt](https://purchase.groupdocs.com/buy).
 ### 5. Hol találom a GroupDocs.Editor for .NET dokumentációját?
- dokumentáció elérhető[itt](https://reference.groupdocs.com/editor/net/).
+ dokumentáció elérhető[itt](https://tutorials.groupdocs.com/editor/net/).

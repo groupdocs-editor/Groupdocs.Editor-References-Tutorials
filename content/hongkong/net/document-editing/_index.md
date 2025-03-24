@@ -3,7 +3,6 @@ title: 文件編輯
 linktitle: 文件編輯
 second_title: GroupDocs.Editor .NET API
 description: 使用 GroupDocs.Editor .NET 管理和編輯文件。了解如何輕鬆建立、編輯和儲存文件。立即增強您的文件管理工作流程！
-type: docs
 weight: 20
 url: /zh-hant/net/document-editing/
 ---

@@ -3,7 +3,6 @@ title: Dokumentverarbeitung
 linktitle: Dokumentverarbeitung
 second_title: GroupDocs.Editor .NET API
 description: Meistern Sie die Dokumentenverarbeitung in .NET mit GroupDocs.Editor. Lernen Sie, mühelos Informationen zu extrahieren, in verschiedenen Formaten zu speichern und mit verschiedenen Dokumenttypen zu arbeiten.
-type: docs
 weight: 24
 url: /de/net/document-processing/
 ---

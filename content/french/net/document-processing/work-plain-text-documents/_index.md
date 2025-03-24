@@ -3,7 +3,6 @@ title: Travailler avec des documents en texte brut
 linktitle: Travailler avec des documents en texte brut
 second_title: API GroupDocs.Editor .NET
 description: Apprenez à modifier des documents en texte brut à l'aide de GroupDocs.Editor pour .NET grâce à notre guide étape par étape. Simplifiez votre processus d'édition de documents .NET.
-type: docs
 weight: 15
 url: /fr/net/document-processing/work-plain-text-documents/
 ---
@@ -96,10 +95,10 @@ Enfin, enregistrez le document modifié aux formats DOCX et TXT en utilisant les
 System.Console.WriteLine("Document editing process completed successfully!");
 ```
 ## Conclusion
- Toutes nos félicitations! Vous avez modifié avec succès un document en texte brut à l'aide de GroupDocs.Editor pour .NET. Cet outil puissant simplifie l'édition de documents, facilitant ainsi son intégration dans vos applications .NET. Que vous traitiez des fichiers texte simples ou des formats de documents complexes, GroupDocs.Editor a ce qu'il vous faut. Découvrez plus de fonctionnalités et de capacités en visitant le[Documentation GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ Toutes nos félicitations! Vous avez modifié avec succès un document en texte brut à l'aide de GroupDocs.Editor pour .NET. Cet outil puissant simplifie l'édition de documents, facilitant ainsi son intégration dans vos applications .NET. Que vous traitiez des fichiers texte simples ou des formats de documents complexes, GroupDocs.Editor a ce qu'il vous faut. Découvrez plus de fonctionnalités et de capacités en visitant le[Documentation GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).
 ## FAQ
 ### Quels formats de fichiers GroupDocs.Editor pour .NET prend-il en charge ?
- GroupDocs.Editor pour .NET prend en charge un large éventail de formats de fichiers, notamment DOCX, TXT, HTML, etc. Vérifier la[Documentation](https://reference.groupdocs.com/editor/net/) pour une liste complète.
+ GroupDocs.Editor pour .NET prend en charge un large éventail de formats de fichiers, notamment DOCX, TXT, HTML, etc. Vérifier la[Documentation](https://tutorials.groupdocs.com/editor/net/) pour une liste complète.
 ### Comment puis-je obtenir un essai gratuit de GroupDocs.Editor pour .NET ?
  Vous pouvez télécharger un essai gratuit de GroupDocs.Editor pour .NET à partir du[page des versions](https://releases.groupdocs.com/).
 ### Puis-je acheter une licence temporaire pour GroupDocs.Editor pour .NET ?
@@ -107,4 +106,4 @@ Oui, vous pouvez obtenir une licence temporaire auprès du[Page d'achat de Group
 ### Où puis-je obtenir de l'aide pour GroupDocs.Editor pour .NET ?
  L'assistance est disponible via le[Forum d'assistance GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
 ### Existe-t-il une documentation détaillée disponible pour GroupDocs.Editor pour .NET ?
- Oui, une documentation détaillée est disponible sur le[Page de documentation de GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ Oui, une documentation détaillée est disponible sur le[Page de documentation de GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).

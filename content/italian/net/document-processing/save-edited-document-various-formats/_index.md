@@ -3,7 +3,6 @@ title: Salva il documento modificato in vari formati
 linktitle: Salva il documento modificato in vari formati
 second_title: API GroupDocs.Editor .NET
 description: Scopri come salvare i documenti modificati in vari formati utilizzando GroupDocs.Editor per .NET in questa guida passo passo completa.
-type: docs
 weight: 11
 url: /it/net/document-processing/save-edited-document-various-formats/
 ---
@@ -92,4 +91,4 @@ GroupDocs.Editor supporta un'ampia gamma di formati, inclusi DOCX, PDF, HTML e m
 ### Come posso ottenere una licenza temporanea per GroupDocs.Editor?
  È possibile ottenere una licenza temporanea[Qui](https://purchase.groupdocs.com/temporary-license/).
 ### Dove posso trovare ulteriore documentazione e supporto?
- È disponibile la documentazione dettagliata[Qui](https://reference.groupdocs.com/editor/net/) e puoi ottenere supporto[Qui](https://forum.groupdocs.com/c/editor/20).
+ È disponibile la documentazione dettagliata[Qui](https://tutorials.groupdocs.com/editor/net/) e puoi ottenere supporto[Qui](https://forum.groupdocs.com/c/editor/20).

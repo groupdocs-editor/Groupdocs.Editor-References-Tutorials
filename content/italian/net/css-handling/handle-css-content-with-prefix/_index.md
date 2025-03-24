@@ -3,7 +3,6 @@ title: Gestisci il contenuto CSS con il prefisso
 linktitle: Gestisci il contenuto CSS con il prefisso
 second_title: API GroupDocs.Editor .NET
 description: Scopri come gestire il contenuto CSS con prefisso utilizzando Groupdocs.Editor per .NET in questo tutorial dettagliato passo dopo passo. Perfetto per sviluppatori di tutti i livelli.
-type: docs
 weight: 11
 url: /it/net/css-handling/handle-css-content-with-prefix/
 ---
@@ -66,6 +65,6 @@ Sì, Groupdocs.Editor per .NET supporta vari formati di documenti tra cui PDF, W
 ### Come posso ottenere una licenza temporanea per Groupdocs.Editor per .NET?
  È possibile ottenere una licenza temporanea[Qui](https://purchase.groupdocs.com/temporary-license/).
 ### Dove posso trovare la documentazione dettagliata per Groupdocs.Editor per .NET?
- È disponibile la documentazione dettagliata[Qui](https://reference.groupdocs.com/editor/net/).
+ È disponibile la documentazione dettagliata[Qui](https://tutorials.groupdocs.com/editor/net/).
 ### Quali opzioni di supporto sono disponibili per Groupdocs.Editor per .NET?
  Puoi ottenere supporto[Qui](https://forum.groupdocs.com/c/editor/20).

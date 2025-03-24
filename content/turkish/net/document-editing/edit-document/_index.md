@@ -3,7 +3,6 @@ title: Belgeyi Düzenle
 linktitle: Belgeyi Düzenle
 second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET ile belgeleri zahmetsizce düzenlemeyi öğrenin. Kelime İşleme ve Elektronik Tablo dosyaları için adım adım kılavuz.
-type: docs
 weight: 11
 url: /tr/net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 Doğru imha, uygulamanızda bellek sızıntısı veya performans sorunu olmamasını sağlar.
 ## Çözüm
- Tebrikler! Artık Kelime İşleme belgelerinden ve Elektronik Tablolardan içerik yüklemek, düzenlemek ve çıkarmak için GroupDocs.Editor for .NET'in nasıl kullanılacağına dair sağlam bir anlayışa sahipsiniz. Bu güçlü araç, belge düzenleme görevlerini basitleştirir ve .NET uygulamalarınızla sorunsuz bir şekilde bütünleşir. Daha detaylı bilgi için şunları inceleyebilirsiniz:[dokümantasyon](https://reference.groupdocs.com/editor/net/), [en son sürümü indir](https://releases.groupdocs.com/editor/net/) veya bir[geçici lisans](https://purchase.groupdocs.com/temporary-license/).
+ Tebrikler! Artık Kelime İşleme belgelerinden ve Elektronik Tablolardan içerik yüklemek, düzenlemek ve çıkarmak için GroupDocs.Editor for .NET'in nasıl kullanılacağına dair sağlam bir anlayışa sahipsiniz. Bu güçlü araç, belge düzenleme görevlerini basitleştirir ve .NET uygulamalarınızla sorunsuz bir şekilde bütünleşir. Daha detaylı bilgi için şunları inceleyebilirsiniz:[dokümantasyon](https://tutorials.groupdocs.com/editor/net/), [en son sürümü indir](https://releases.groupdocs.com/editor/net/) veya bir[geçici lisans](https://purchase.groupdocs.com/temporary-license/).
 ## SSS'ler
 ### PDF belgelerini GroupDocs.Editor for .NET ile düzenleyebilir miyim?
 Şu anda GroupDocs.Editor for .NET öncelikli olarak Kelime İşleme, Elektronik Tablo ve Sunum formatlarını desteklemektedir.

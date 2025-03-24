@@ -3,7 +3,6 @@ title: 设置计量许可证
 linktitle: 设置计量许可证
 second_title: GroupDocs.Editor .NET API
 description: 通过我们的综合指南了解如何集成和使用 GroupDocs.Editor for .NET。在您的 .NET 应用程序中解锁强大的文档编辑功能。
-type: docs
 weight: 12
 url: /zh/net/quick-start-guide/set-metered-license/
 ---
@@ -69,15 +68,15 @@ editor.Save(editableDocument, "updated_sample.docx");
 Console.WriteLine("Document saved successfully.");
 ```
 ## 结论
-恭喜！您已成功在应用程序中集成并使用 GroupDocs.Editor for .NET。从安装库到设置计量许可证和编辑文档，您已了解所有必要步骤。这个强大的工具可以显著简化 .NET 应用程序中的文档编辑工作流程。有关更多信息，请参阅[GroupDocs.Editor for .NET 文档](https://reference.groupdocs.com/editor/net/).
+恭喜！您已成功在应用程序中集成并使用 GroupDocs.Editor for .NET。从安装库到设置计量许可证和编辑文档，您已了解所有必要步骤。这个强大的工具可以显著简化 .NET 应用程序中的文档编辑工作流程。有关更多信息，请参阅[GroupDocs.Editor for .NET 文档](https://tutorials.groupdocs.com/editor/net/).
 ## 常见问题解答
 ### 如何获得 GroupDocs.Editor 许可证？
 您可以从[GroupDocs 购买页面](https://purchase.groupdocs.com/buy)。如需临时许可证，请访问[这里](https://purchase.groupdocs.com/temporary-license/).
 ### 我可以免费试用 GroupDocs.Editor 吗？
 是的，你可以从[下载页面](https://releases.groupdocs.com/)并申请临时执照。
 ### GroupDocs.Editor 支持哪些文档格式？
- GroupDocs.Editor 支持多种格式，包括 DOCX、PPTX、XLSX、TXT、HTML 等。如需查看完整列表，请查看[文档](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor 支持多种格式，包括 DOCX、PPTX、XLSX、TXT、HTML 等。如需查看完整列表，请查看[文档](https://tutorials.groupdocs.com/editor/net/).
 ### GroupDocs.Editor 是否有任何社区支持？
 是的，你可以从[GroupDocs.Editor 论坛](https://forum.groupdocs.com/c/editor/20).
 ### 如何开始使用 GroupDocs.Editor for .NET？
-按照我们的分步指南设置库、获取许可证并开始编辑文档。有关详细说明，请访问[文档](https://reference.groupdocs.com/editor/net/).
+按照我们的分步指南设置库、获取许可证并开始编辑文档。有关详细说明，请访问[文档](https://tutorials.groupdocs.com/editor/net/).

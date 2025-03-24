@@ -3,7 +3,6 @@ title: Получить HTML-содержимое тела
 linktitle: Получить HTML-содержимое тела
 second_title: GroupDocs.Editor .NET API
 description: Получите содержимое тела HTML с помощью GroupDocs.Editor для .NET с помощью нашего пошагового руководства. Улучшайте свои приложения .NET без особых усилий.
-type: docs
 weight: 10
 url: /ru/net/html-content-retrieval/retrieve-html-body-content/
 ---
@@ -62,4 +61,4 @@ GroupDocs.Editor поддерживает широкий спектр форма
 ### Могу ли я использовать GroupDocs.Editor с .NET Core?
 Да, GroupDocs.Editor совместим с .NET Core, обеспечивая гибкость для разработки современных приложений.
 ### Где я могу найти дополнительные примеры и документацию для GroupDocs.Editor?
- Дополнительные примеры и подробную документацию можно найти на странице[Страница документации GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ Дополнительные примеры и подробную документацию можно найти на странице[Страница документации GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).

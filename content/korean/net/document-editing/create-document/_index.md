@@ -3,7 +3,6 @@ title: 문서 만들기
 linktitle: 문서 만들기
 second_title: GroupDocs.Editor .NET API
 description: 이 포괄적인 단계별 자습서를 통해 .NET용 GroupDocs.Editor를 사용하여 Word, Excel, PowerPoint, Ebook 및 이메일 문서를 편집하는 방법을 알아보세요.
-type: docs
 weight: 10
 url: /ko/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ System.Console.WriteLine("CreateDocument routine has successfully finished");
 ### .NET용 GroupDocs.Editor를 사용하려면 라이센스가 필요합니까?
  예, 다음에서 라이센스를 얻을 수 있습니다.[여기](https://purchase.groupdocs.com/buy). 임시 라이센스 옵션도 있습니다.
 ### 더 자세한 문서는 어디서 찾을 수 있나요?
- 자세한 문서는 다음에서 확인할 수 있습니다.[.NET 설명서 페이지용 GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ 자세한 문서는 다음에서 확인할 수 있습니다.[.NET 설명서 페이지용 GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).

@@ -3,7 +3,6 @@ title: Εργαστείτε με υπολογιστικά φύλλα που πρ
 linktitle: Εργαστείτε με υπολογιστικά φύλλα που προστατεύονται με κωδικό πρόσβασης
 second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να χειρίζεστε υπολογιστικά φύλλα που προστατεύονται με κωδικό πρόσβασης χρησιμοποιώντας το GroupDocs.Editor για .NET. Αυτός ο λεπτομερής οδηγός σας καθοδηγεί στο άνοιγμα στην αποθήκευση ασφαλών αρχείων Excel.
-type: docs
 weight: 18
 url: /el/net/document-processing/work-password-protected-spreadsheets/
 ---
@@ -108,4 +107,4 @@ Console.WriteLine("Successfully handled the password-protected spreadsheet. Edit
 ### Μπορώ να ορίσω διαφορετικούς κωδικούς πρόσβασης για άνοιγμα και εγγραφή σε ένα υπολογιστικό φύλλο;
 Απολύτως! Μπορείτε να ορίσετε ξεχωριστούς κωδικούς πρόσβασης για το άνοιγμα του εγγράφου και για την προστασία εγγραφής χρησιμοποιώντας τις επιλογές αποθήκευσης.
 ### Πού μπορώ να βρω πιο αναλυτική τεκμηρίωση;
- Μπορείτε να αποκτήσετε πρόσβαση στην ολοκληρωμένη τεκμηρίωση για το GroupDocs.Editor για .NET[εδώ](https://reference.groupdocs.com/editor/net/).
+ Μπορείτε να αποκτήσετε πρόσβαση στην ολοκληρωμένη τεκμηρίωση για το GroupDocs.Editor για .NET[εδώ](https://tutorials.groupdocs.com/editor/net/).

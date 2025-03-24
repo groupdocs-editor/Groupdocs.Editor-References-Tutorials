@@ -3,7 +3,6 @@ title: Travailler avec des feuilles de calcul protégées par mot de passe
 linktitle: Travailler avec des feuilles de calcul protégées par mot de passe
 second_title: API GroupDocs.Editor .NET
 description: Découvrez comment gérer des feuilles de calcul protégées par mot de passe à l'aide de GroupDocs.Editor for .NET. Ce guide détaillé vous guide tout au long de l'ouverture pour enregistrer des fichiers Excel sécurisés.
-type: docs
 weight: 18
 url: /fr/net/document-processing/work-password-protected-spreadsheets/
 ---
@@ -108,4 +107,4 @@ GroupDocs.Editor for .NET est une puissante API d'édition de documents qui perm
 ### Puis-je définir des mots de passe différents pour ouvrir et écrire dans une feuille de calcul ?
 Absolument! Vous pouvez définir des mots de passe distincts pour l'ouverture du document et pour la protection en écriture à l'aide des options d'enregistrement.
 ### Où puis-je trouver une documentation plus détaillée ?
- Vous pouvez accéder à la documentation complète de GroupDocs.Editor pour .NET[ici](https://reference.groupdocs.com/editor/net/).
+ Vous pouvez accéder à la documentation complète de GroupDocs.Editor pour .NET[ici](https://tutorials.groupdocs.com/editor/net/).

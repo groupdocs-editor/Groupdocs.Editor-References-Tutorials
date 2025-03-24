@@ -3,7 +3,6 @@ title: HTML-Ressourcen im Ordner speichern
 linktitle: HTML-Ressourcen im Ordner speichern
 second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie, wie Sie mit Groupdocs.Editor für .NET HTML-Ressourcen aus Dokumenten extrahieren. Dieses umfassende Tutorial bietet Entwicklern eine Schritt-für-Schritt-Anleitung.
-type: docs
 weight: 13
 url: /de/net/document-editing/save-html-resources-to-folder/
 ---

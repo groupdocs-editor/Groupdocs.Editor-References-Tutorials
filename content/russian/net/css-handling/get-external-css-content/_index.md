@@ -3,7 +3,6 @@ title: Получить внешний CSS-контент
 linktitle: Получить внешний CSS-контент
 second_title: GroupDocs.Editor .NET API
 description: Узнайте, как использовать GroupDocs.Editor для .NET для извлечения внешнего содержимого CSS из документов, с помощью этого пошагового руководства. Идеально подходит для разработчиков, интегрирующих документ.
-type: docs
 weight: 10
 url: /ru/net/css-handling/get-external-css-content/
 ---
@@ -67,6 +66,6 @@ GroupDocs.Editor для .NET — это API для редактирования 
 ### Могу ли я использовать GroupDocs.Editor бесплатно?
  GroupDocs.Editor предлагает бесплатную пробную версию, которую вы можете загрузить с сайта[Страница бесплатной пробной версии GroupDocs](https://releases.groupdocs.com/). Для получения полных функций рассмотрите возможность приобретения лицензии.
 ### Какие форматы файлов поддерживает GroupDocs.Editor?
- GroupDocs.Editor поддерживает широкий спектр форматов файлов, включая DOCX, XLSX, PPTX, PDF, HTML и многие другие. Проверить[документация](https://reference.groupdocs.com/editor/net/) для полного списка.
+ GroupDocs.Editor поддерживает широкий спектр форматов файлов, включая DOCX, XLSX, PPTX, PDF, HTML и многие другие. Проверить[документация](https://tutorials.groupdocs.com/editor/net/) для полного списка.
 ### Как мне получить поддержку для GroupDocs.Editor?
  Вы можете получить поддержку от[Форум поддержки GroupDocs](https://forum.groupdocs.com/c/editor/20) где вы можете задать вопросы и получить помощь от сообщества и экспертов GroupDocs.

@@ -3,7 +3,6 @@ title: Trabalhar com apresentações
 linktitle: Trabalhar com apresentações
 second_title: API GroupDocs.Editor .NET
 description: Aprenda a editar apresentações em PowerPoint usando GroupDocs.Editor for .NET. Siga este guia passo a passo para agilizar o processo de edição de documentos.
-type: docs
 weight: 16
 url: /pt/net/document-processing/work-presentations/
 ---
@@ -132,4 +131,4 @@ Atualmente, GroupDocs.Editor permite editar um slide por vez. Você pode percorr
 ### Posso usar o GroupDocs.Editor for .NET em um aplicativo da web?
 Sim, o GroupDocs.Editor for .NET pode ser integrado a aplicativos da web para fornecer recursos de edição de documentos.
 ### Onde posso encontrar documentação e suporte mais detalhados?
- Você pode encontrar documentação detalhada[aqui](https://reference.groupdocs.com/editor/net/) . Para suporte, visite o[Fórum de suporte](https://forum.groupdocs.com/c/editor/20).
+ Você pode encontrar documentação detalhada[aqui](https://tutorials.groupdocs.com/editor/net/) . Para suporte, visite o[Fórum de suporte](https://forum.groupdocs.com/c/editor/20).

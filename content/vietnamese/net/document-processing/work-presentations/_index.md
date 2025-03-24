@@ -3,7 +3,6 @@ title: Làm việc với bài thuyết trình
 linktitle: Làm việc với bài thuyết trình
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách chỉnh sửa bản trình bày PowerPoint bằng GroupDocs.Editor cho .NET. Hãy làm theo hướng dẫn từng bước này để hợp lý hóa quy trình chỉnh sửa tài liệu của bạn.
-type: docs
 weight: 16
 url: /vi/net/document-processing/work-presentations/
 ---
@@ -132,4 +131,4 @@ Hiện tại, GroupDocs.Editor cho phép bạn chỉnh sửa từng slide một.
 ### Tôi có thể sử dụng GroupDocs.Editor cho .NET trong ứng dụng web không?
 Có, GroupDocs.Editor dành cho .NET có thể được tích hợp vào các ứng dụng web để cung cấp khả năng chỉnh sửa tài liệu.
 ### Tôi có thể tìm tài liệu và hỗ trợ chi tiết hơn ở đâu?
- Bạn có thể tìm tài liệu chi tiết[đây](https://reference.groupdocs.com/editor/net/) . Để được hỗ trợ, hãy truy cập[diễn đàn hỗ trợ](https://forum.groupdocs.com/c/editor/20).
+ Bạn có thể tìm tài liệu chi tiết[đây](https://tutorials.groupdocs.com/editor/net/) . Để được hỗ trợ, hãy truy cập[diễn đàn hỗ trợ](https://forum.groupdocs.com/c/editor/20).

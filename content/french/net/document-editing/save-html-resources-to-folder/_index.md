@@ -3,7 +3,6 @@ title: Enregistrer les ressources HTML dans un dossier
 linktitle: Enregistrer les ressources HTML dans un dossier
 second_title: API GroupDocs.Editor .NET
 description: Découvrez comment extraire des ressources HTML à partir de documents à l'aide de Groupdocs.Editor for .NET. Ce didacticiel complet fournit des conseils étape par étape aux développeurs.
-type: docs
 weight: 13
 url: /fr/net/document-editing/save-html-resources-to-folder/
 ---

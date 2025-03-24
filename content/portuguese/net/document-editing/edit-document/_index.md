@@ -3,7 +3,6 @@ title: Editar documento
 linktitle: Editar documento
 second_title: API GroupDocs.Editor .NET
 description: Aprenda a editar documentos sem esforço com GroupDocs.Editor for .NET. Guia passo a passo para arquivos de processamento de texto e planilhas.
-type: docs
 weight: 11
 url: /pt/net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 O descarte adequado garante que não haja vazamentos de memória ou problemas de desempenho em seu aplicativo.
 ## Conclusão
- Parabéns! Agora você tem um conhecimento sólido de como usar o GroupDocs.Editor for .NET para carregar, editar e extrair conteúdo de documentos e planilhas de processamento de texto. Esta ferramenta poderosa simplifica as tarefas de edição de documentos e integra-se perfeitamente aos seus aplicativos .NET. Para mais detalhes, você pode explorar o[documentação](https://reference.groupdocs.com/editor/net/), [baixe a versão mais recente](https://releases.groupdocs.com/editor/net/) , ou obter um[licença temporária](https://purchase.groupdocs.com/temporary-license/).
+ Parabéns! Agora você tem um conhecimento sólido de como usar o GroupDocs.Editor for .NET para carregar, editar e extrair conteúdo de documentos e planilhas de processamento de texto. Esta ferramenta poderosa simplifica as tarefas de edição de documentos e integra-se perfeitamente aos seus aplicativos .NET. Para mais detalhes, você pode explorar o[documentação](https://tutorials.groupdocs.com/editor/net/), [baixe a versão mais recente](https://releases.groupdocs.com/editor/net/) , ou obter um[licença temporária](https://purchase.groupdocs.com/temporary-license/).
 ## Perguntas frequentes
 ### Posso editar documentos PDF com GroupDocs.Editor for .NET?
 Atualmente, o GroupDocs.Editor for .NET oferece suporte principalmente aos formatos de processamento de texto, planilha e apresentação.

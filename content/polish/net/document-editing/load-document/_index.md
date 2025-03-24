@@ -3,7 +3,6 @@ title: Załaduj dokument
 linktitle: Załaduj dokument
 second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak programowo edytować dokumenty za pomocą GroupDocs.Editor dla platformy .NET. Przewodnik krok po kroku dotyczący ładowania dokumentów, obsługi plików chronionych hasłem i nie tylko.
-type: docs
 weight: 13
 url: /pl/net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 Gratulacje! Pomyślnie nauczyłeś się, jak ładować dokumenty za pomocą GroupDocs.Editor dla .NET na różne sposoby. Niezależnie od tego, czy masz do czynienia z plikami lokalnymi, dokumentami chronionymi hasłem, czy strumieniami bajtów, GroupDocs.Editor zapewnia elastyczne i wydajne rozwiązanie do edycji dokumentów. Pamiętaj, aby zawsze dysponować zasobami, aby zapewnić optymalną wydajność i zarządzanie zasobami w swoich aplikacjach.
 ## Często zadawane pytania
 ### Jakie formaty plików są obsługiwane przez GroupDocs.Editor dla .NET?
- GroupDocs.Editor obsługuje szeroką gamę formatów plików, w tym DOCX, XLSX, PPTX, HTML i wiele innych. Pełna lista znajduje się w[dokumentacja](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor obsługuje szeroką gamę formatów plików, w tym DOCX, XLSX, PPTX, HTML i wiele innych. Pełna lista znajduje się w[dokumentacja](https://tutorials.groupdocs.com/editor/net/).
 ### Jak postępować z dokumentami chronionymi hasłem?
  Możesz użyć opcji ładowania, takich jak`WordProcessingLoadOptions` aby określić hasło podczas ładowania dokumentów chronionych hasłem.
 ### Czy mogę używać GroupDocs.Editor w aplikacji internetowej?

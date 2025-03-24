@@ -3,7 +3,6 @@ title: Làm việc với tài liệu văn bản thuần túy
 linktitle: Làm việc với tài liệu văn bản thuần túy
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách chỉnh sửa tài liệu văn bản thuần túy bằng GroupDocs.Editor dành cho .NET với hướng dẫn từng bước của chúng tôi. Đơn giản hóa quá trình chỉnh sửa tài liệu .NET của bạn.
-type: docs
 weight: 15
 url: /vi/net/document-processing/work-plain-text-documents/
 ---
@@ -96,10 +95,10 @@ Cuối cùng, lưu tài liệu đã chỉnh sửa ở cả định dạng DOCX v
 System.Console.WriteLine("Document editing process completed successfully!");
 ```
 ## Phần kết luận
- Chúc mừng! Bạn đã chỉnh sửa thành công tài liệu văn bản thuần túy bằng GroupDocs.Editor cho .NET. Công cụ mạnh mẽ này giúp đơn giản hóa việc chỉnh sửa tài liệu, giúp bạn dễ dàng tích hợp vào các ứng dụng .NET của mình. Cho dù bạn đang xử lý các tệp văn bản đơn giản hay các định dạng tài liệu phức tạp, GroupDocs.Editor đều có thể hỗ trợ bạn. Khám phá thêm các tính năng và khả năng bằng cách truy cập[Tài liệu GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ Chúc mừng! Bạn đã chỉnh sửa thành công tài liệu văn bản thuần túy bằng GroupDocs.Editor cho .NET. Công cụ mạnh mẽ này giúp đơn giản hóa việc chỉnh sửa tài liệu, giúp bạn dễ dàng tích hợp vào các ứng dụng .NET của mình. Cho dù bạn đang xử lý các tệp văn bản đơn giản hay các định dạng tài liệu phức tạp, GroupDocs.Editor đều có thể hỗ trợ bạn. Khám phá thêm các tính năng và khả năng bằng cách truy cập[Tài liệu GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).
 ## Câu hỏi thường gặp
 ### GroupDocs.Editor cho .NET hỗ trợ những định dạng tệp nào?
- GroupDocs.Editor cho .NET hỗ trợ nhiều định dạng tệp, bao gồm DOCX, TXT, HTML, v.v. Kiểm tra[tài liệu](https://reference.groupdocs.com/editor/net/) để có danh sách đầy đủ.
+ GroupDocs.Editor cho .NET hỗ trợ nhiều định dạng tệp, bao gồm DOCX, TXT, HTML, v.v. Kiểm tra[tài liệu](https://tutorials.groupdocs.com/editor/net/) để có danh sách đầy đủ.
 ### Làm cách nào tôi có thể dùng thử miễn phí GroupDocs.Editor cho .NET?
  Bạn có thể tải xuống bản dùng thử miễn phí GroupDocs.Editor cho .NET từ[trang phát hành](https://releases.groupdocs.com/).
 ### Tôi có thể mua giấy phép tạm thời cho GroupDocs.Editor cho .NET không?
@@ -107,4 +106,4 @@ Có, bạn có thể xin giấy phép tạm thời từ[Trang mua GroupDocs](htt
 ### Tôi có thể nhận hỗ trợ cho GroupDocs.Editor cho .NET ở đâu?
  Hỗ trợ có sẵn thông qua[Diễn đàn hỗ trợ GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
 ### Có tài liệu chi tiết nào về GroupDocs.Editor cho .NET không?
- Có, tài liệu chi tiết có sẵn trên[Trang tài liệu GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ Có, tài liệu chi tiết có sẵn trên[Trang tài liệu GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).

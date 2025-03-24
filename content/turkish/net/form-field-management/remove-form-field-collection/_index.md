@@ -3,7 +3,6 @@ title: Form Alanı Koleksiyonunu Kaldır
 linktitle: Form Alanı Koleksiyonunu Kaldır
 second_title: GroupDocs.Editor .NET API'si
 description: Bu adım adım kılavuzla GroupDocs.Editor for .NET'i kullanarak form alanlarını Word belgelerinden nasıl kaldıracağınızı öğrenin. Geliştiriciler için idealdir.
-type: docs
 weight: 13
 url: /tr/net/form-field-management/remove-form-field-collection/
 ---

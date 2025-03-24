@@ -1,7 +1,6 @@
 ---
 title: 適用於 .NET 的 GroupDocs.Editor 教學與範例
 linktitle: .NET 教學的 GroupDocs.Editor
-type: docs
 weight: 10
 url: /zh-hant/net/
 description: 使用 GroupDocs.Editor .NET 管理和編輯文件。學習文件處理、文件編輯、HTML 內容檢索、表單欄位管理等等！

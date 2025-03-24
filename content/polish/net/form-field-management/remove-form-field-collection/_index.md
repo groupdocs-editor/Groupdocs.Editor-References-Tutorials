@@ -3,7 +3,6 @@ title: Usuń kolekcję pól formularza
 linktitle: Usuń kolekcję pól formularza
 second_title: Edytor GroupDocs.NET API
 description: Z tego przewodnika krok po kroku dowiesz się, jak usuwać pola formularzy z dokumentów programu Word za pomocą programu GroupDocs.Editor dla platformy .NET. Idealny dla programistów.
-type: docs
 weight: 13
 url: /pl/net/form-field-management/remove-form-field-collection/
 ---

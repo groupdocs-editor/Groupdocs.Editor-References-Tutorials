@@ -3,7 +3,6 @@ title: Ekstrak Konten HTML dari Dokumen yang Dapat Diedit
 linktitle: Ekstrak Konten HTML dari Dokumen yang Dapat Diedit
 second_title: GroupDocs.Editor .NET API
 description: Ekstrak konten HTML dari dokumen dengan mudah menggunakan GroupDocs.Editor untuk .NET. Ikuti panduan terperinci kami untuk integrasi dan manajemen dokumen yang lancar.
-type: docs
 weight: 12
 url: /id/net/document-editing/extract-html-content-from-editable-document/
 ---
@@ -64,6 +63,6 @@ GroupDocs.Editor untuk .NET mendukung berbagai format dokumen, termasuk Pemroses
 ### Bagaimana cara mendapatkan lisensi sementara untuk GroupDocs.Editor untuk .NET?
  Anda dapat meminta lisensi sementara dari[Halaman pembelian GroupDocs](https://purchase.groupdocs.com/temporary-license/).
 ### Di mana saya dapat menemukan dokumentasi GroupDocs.Editor untuk .NET?
- Dokumentasi komprehensif tersedia[Di Sini](https://reference.groupdocs.com/editor/net/).
+ Dokumentasi komprehensif tersedia[Di Sini](https://tutorials.groupdocs.com/editor/net/).
 ### Bisakah saya mendapatkan dukungan jika saya mengalami masalah?
  Ya, Anda dapat mencari dukungan dari[Forum dukungan GroupDocs](https://forum.groupdocs.com/c/editor/20).

@@ -3,7 +3,6 @@ title: إدارة حقل النموذج
 linktitle: إدارة حقل النموذج
 second_title: GroupDocs.Editor .NET API
 description: إدارة حقل النموذج الرئيسي في .NET باستخدام GroupDocs.Editor. تعرف على كيفية تحرير مجموعات حقول النماذج وإصلاحها والعمل معها وإزالتها بسلاسة.
-type: docs
 weight: 23
 url: /ar/net/form-field-management/
 ---

@@ -3,7 +3,6 @@ title: GroupDocs.Editor로 문서 관리 잠금 해제
 linktitle: GroupDocs.Editor 튜토리얼
 additionalTitle: GroupDocs API 참조
 description: .NET 및 Java용 GroupDocs.Editor를 사용하여 손쉽게 문서 편집을 마스터하세요. 작업 흐름 간소화, CSS 관리, HTML 콘텐츠 검색 등!
-type: docs
 weight: 11
 url: /ko/
 is_root: true

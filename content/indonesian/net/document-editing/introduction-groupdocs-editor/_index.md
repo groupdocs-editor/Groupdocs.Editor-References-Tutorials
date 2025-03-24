@@ -3,7 +3,6 @@ title: Pengantar GroupDocs.Editor untuk .NET
 linktitle: Pengantar GroupDocs.Editor untuk .NET
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara menggunakan GroupDocs.Editor untuk .NET untuk mengedit dokumen secara terprogram dengan panduan langkah demi langkah yang mendetail ini.
-type: docs
 weight: 12
 url: /id/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ GroupDocs.Editor untuk .NET mendukung berbagai format, antara lain DOCX, PDF, HT
 ### Apakah mungkin untuk mengintegrasikan GroupDocs.Editor dengan penyimpanan cloud?
 Ya, Anda dapat mengintegrasikan GroupDocs.Editor dengan berbagai solusi penyimpanan cloud untuk mengelola dokumen Anda.
 ### Di mana saya dapat menemukan dokumentasi GroupDocs.Editor untuk .NET?
-Dokumentasi tersedia[Di Sini](https://reference.groupdocs.com/editor/net/).
+Dokumentasi tersedia[Di Sini](https://tutorials.groupdocs.com/editor/net/).

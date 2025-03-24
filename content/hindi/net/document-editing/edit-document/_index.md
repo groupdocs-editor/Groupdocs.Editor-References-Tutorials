@@ -3,7 +3,6 @@ title: दस्तावेज़ संपादित करें
 linktitle: दस्तावेज़ संपादित करें
 second_title: GroupDocs.Editor .NET एपीआई
 description: .NET के लिए GroupDocs.Editor के साथ दस्तावेज़ों को आसानी से संपादित करना सीखें। Word Processing और Spreadsheet फ़ाइलों के लिए चरण-दर-चरण मार्गदर्शिका।
-type: docs
 weight: 11
 url: /hi/net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 उचित निपटान यह सुनिश्चित करता है कि आपके अनुप्रयोग में कोई मेमोरी लीक या प्रदर्शन संबंधी समस्या न हो।
 ## निष्कर्ष
- बधाई हो! अब आपको Word Processing दस्तावेज़ों और स्प्रेडशीट से सामग्री लोड करने, संपादित करने और निकालने के लिए .NET के लिए GroupDocs.Editor का उपयोग करने के बारे में ठोस समझ है। यह शक्तिशाली उपकरण दस्तावेज़ संपादन कार्यों को सरल बनाता है और आपके .NET अनुप्रयोगों के साथ सहजता से एकीकृत करता है। अधिक जानकारी के लिए, आप देख सकते हैं[प्रलेखन](https://reference.groupdocs.com/editor/net/), [नवीनतम संस्करण डाउनलोड करें](https://releases.groupdocs.com/editor/net/) , या प्राप्त करें[अस्थायी लाइसेंस](https://purchase.groupdocs.com/temporary-license/).
+ बधाई हो! अब आपको Word Processing दस्तावेज़ों और स्प्रेडशीट से सामग्री लोड करने, संपादित करने और निकालने के लिए .NET के लिए GroupDocs.Editor का उपयोग करने के बारे में ठोस समझ है। यह शक्तिशाली उपकरण दस्तावेज़ संपादन कार्यों को सरल बनाता है और आपके .NET अनुप्रयोगों के साथ सहजता से एकीकृत करता है। अधिक जानकारी के लिए, आप देख सकते हैं[प्रलेखन](https://tutorials.groupdocs.com/editor/net/), [नवीनतम संस्करण डाउनलोड करें](https://releases.groupdocs.com/editor/net/) , या प्राप्त करें[अस्थायी लाइसेंस](https://purchase.groupdocs.com/temporary-license/).
 ## अक्सर पूछे जाने वाले प्रश्न
 ### क्या मैं .NET के लिए GroupDocs.Editor के साथ PDF दस्तावेज़ों को संपादित कर सकता हूँ?
 वर्तमान में, .NET के लिए GroupDocs.Editor मुख्य रूप से वर्ड प्रोसेसिंग, स्प्रेडशीट और प्रेजेंटेशन प्रारूपों का समर्थन करता है।

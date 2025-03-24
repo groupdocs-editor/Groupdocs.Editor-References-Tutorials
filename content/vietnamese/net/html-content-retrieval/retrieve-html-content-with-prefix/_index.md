@@ -3,7 +3,6 @@ title: Truy xuất nội dung HTML bằng tiền tố
 linktitle: Truy xuất nội dung HTML bằng tiền tố
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách truy xuất nội dung HTML từ tài liệu bằng GroupDocs.Editor cho .NET với tiền tố tùy chỉnh cho hình ảnh và biểu định kiểu. Hướng dẫn từng bước bao gồm.
-type: docs
 weight: 11
 url: /vi/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 Đoạn mã này tìm nạp nội dung HTML với các tiền tố tùy chỉnh và in nó ra bảng điều khiển. Bạn có thể xử lý thêm hoặc lưu nội dung HTML này nếu cần.
 ## Phần kết luận
 Và bạn có nó rồi đấy! Bằng cách làm theo các bước này, bạn có thể dễ dàng truy xuất nội dung HTML từ tài liệu bằng GroupDocs.Editor cho .NET, hoàn chỉnh với các tiền tố tùy chỉnh cho hình ảnh và biểu định kiểu. Công cụ mạnh mẽ này đơn giản hóa thao tác tài liệu, cho phép bạn tập trung vào việc tích hợp chỉnh sửa tài liệu vào các ứng dụng .NET của mình một cách liền mạch.
- Để biết thêm thông tin chi tiết, hãy xem[GroupDocs.Editor cho tài liệu .NET](https://reference.groupdocs.com/editor/net/) . Nếu bạn có bất kỳ câu hỏi nào hoặc cần hỗ trợ thêm, vui lòng liên hệ theo số[diễn đàn hỗ trợ](https://forum.groupdocs.com/c/editor/20).
+ Để biết thêm thông tin chi tiết, hãy xem[GroupDocs.Editor cho tài liệu .NET](https://tutorials.groupdocs.com/editor/net/) . Nếu bạn có bất kỳ câu hỏi nào hoặc cần hỗ trợ thêm, vui lòng liên hệ theo số[diễn đàn hỗ trợ](https://forum.groupdocs.com/c/editor/20).
 ## Câu hỏi thường gặp
 ### Tôi có thể chỉnh sửa những loại tài liệu nào bằng GroupDocs.Editor cho .NET?
 GroupDocs.Editor hỗ trợ nhiều định dạng tài liệu khác nhau bao gồm Word, Excel, PowerPoint, PDF, v.v.

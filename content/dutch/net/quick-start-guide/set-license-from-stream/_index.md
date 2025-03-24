@@ -3,7 +3,6 @@ title: Licentie instellen vanuit Stream
 linktitle: Licentie instellen vanuit Stream
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u Groupdocs.Editor voor .NET kunt gebruiken om documenten programmatisch te bewerken. Volg deze uitgebreide versie voor naadloze integratie en geavanceerde functies.
-type: docs
 weight: 11
 url: /nl/net/quick-start-guide/set-license-from-stream/
 ---
@@ -146,7 +145,7 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 }
 ```
 ## Conclusie
- Groupdocs.Editor voor .NET is een veelzijdige en krachtige tool die uw documentbewerkingsprocessen aanzienlijk kan stroomlijnen. Met zijn robuuste functies en ondersteuning voor meerdere documentformaten zal de integratie van deze bibliotheek in uw .NET-applicaties ongetwijfeld uw productiviteit en mogelijkheden verbeteren. Vergeet niet om de[documentatie](https://reference.groupdocs.com/editor/net/) voor meer gedetailleerde informatie en geavanceerde gebruiksscenario's.
+ Groupdocs.Editor voor .NET is een veelzijdige en krachtige tool die uw documentbewerkingsprocessen aanzienlijk kan stroomlijnen. Met zijn robuuste functies en ondersteuning voor meerdere documentformaten zal de integratie van deze bibliotheek in uw .NET-applicaties ongetwijfeld uw productiviteit en mogelijkheden verbeteren. Vergeet niet om de[documentatie](https://tutorials.groupdocs.com/editor/net/) voor meer gedetailleerde informatie en geavanceerde gebruiksscenario's.
 ## Veelgestelde vragen
 ### Kan ik Groupdocs.Editor voor .NET gebruiken zonder licentie?
  Nee, u heeft een geldige licentie nodig om Groupdocs.Editor voor .NET te gebruiken. U kunt echter wel een verzoek indienen[tijdelijke licentie](https://purchase.groupdocs.com/temporary-license/) voor evaluatie.
@@ -157,4 +156,4 @@ Ja, het ondersteunt het bewerken van PDF-bestanden samen met verschillende ander
 ### Is het mogelijk om documenten met een wachtwoord te beveiligen met Groupdocs.Editor?
 Ja, u kunt wachtwoorden en andere beveiligingsopties instellen bij het opslaan van documenten.
 ### Welke bestandsformaten ondersteunt Groupdocs.Editor voor .NET?
- Het ondersteunt een breed scala aan formaten, waaronder DOCX, XLSX, PDF en vele andere. Verwijs naar de[documentatie](https://reference.groupdocs.com/editor/net/) voor een volledige lijst.
+ Het ondersteunt een breed scala aan formaten, waaronder DOCX, XLSX, PDF en vele andere. Verwijs naar de[documentatie](https://tutorials.groupdocs.com/editor/net/) voor een volledige lijst.

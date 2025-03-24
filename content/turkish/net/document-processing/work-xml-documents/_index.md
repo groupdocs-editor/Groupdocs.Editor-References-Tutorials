@@ -3,7 +3,6 @@ title: XML Belgeleriyle Çalışma
 linktitle: XML Belgeleriyle Çalışma
 second_title: GroupDocs.Editor .NET API'si
 description: Tüm önemli adımları ve seçenekleri kapsayan adım adım kılavuzumuzla GroupDocs.Editor for .NET'i kullanarak XML belgelerini nasıl verimli bir şekilde düzenleyeceğinizi öğrenin.
-type: docs
 weight: 20
 url: /tr/net/document-processing/work-xml-documents/
 ---

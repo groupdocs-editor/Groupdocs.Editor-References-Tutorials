@@ -3,7 +3,6 @@ title: Werken met tekstverwerkingsdocumenten
 linktitle: Werken met tekstverwerkingsdocumenten
 second_title: GroupDocs.Editor .NET API
 description: Bewerk moeiteloos tekstverwerkingsdocumenten met GroupDocs.Editor voor .NET. Volg onze gedetailleerde, stapsgewijze zelfstudie om uw vaardigheden op het gebied van documentbeheer te verbeteren.
-type: docs
 weight: 19
 url: /nl/net/document-processing/work-word-processing-documents/
 ---
@@ -117,7 +116,7 @@ Console.WriteLine("Document editing and saving process completed successfully.")
 U hebt nu een uitgebreide stapsgewijze handleiding voltooid over hoe u met tekstverwerkingsdocumenten kunt werken met GroupDocs.Editor voor .NET. Deze krachtige tool maakt het gemakkelijk om documenten programmatisch te manipuleren en te bewerken, en biedt een breed scala aan opties om uw documentverwerkingsworkflow aan te passen.
 ## Veelgestelde vragen
 ### Kan ik GroupDocs.Editor voor .NET gebruiken om andere documentformaten te bewerken?
- Ja, GroupDocs.Editor ondersteunt verschillende documentformaten, waaronder PDF, HTML en meer. Controleer de[documentatie](https://reference.groupdocs.com/editor/net/) voor een volledige lijst met ondersteunde formaten.
+ Ja, GroupDocs.Editor ondersteunt verschillende documentformaten, waaronder PDF, HTML en meer. Controleer de[documentatie](https://tutorials.groupdocs.com/editor/net/) voor een volledige lijst met ondersteunde formaten.
 ### Is het mogelijk om GroupDocs.Editor te gebruiken zonder licentie?
  U kunt gebruik maken van een gratis proefperiode of een tijdelijke licentie aanvragen. Voor langdurig gebruik wordt aanbevolen een licentie aan te schaffen. Koop een licentie[hier](https://purchase.groupdocs.com/buy).
 ### Hoe ga ik om met grote documenten die OutOfMemoryException veroorzaken?

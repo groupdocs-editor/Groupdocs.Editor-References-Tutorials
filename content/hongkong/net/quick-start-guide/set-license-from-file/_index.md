@@ -3,7 +3,6 @@ title: 從文件設定許可證
 linktitle: 從文件設定許可證
 second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 在應用程式中進行無縫文件編輯。包括逐步指南、提示和常見問題。
-type: docs
 weight: 10
 url: /zh-hant/net/quick-start-guide/set-license-from-file/
 ---
@@ -89,4 +88,4 @@ GroupDocs.Editor for .NET 支援多種格式，包括 DOCX、PDF、HTML、PPTX�
 ### 如何使用 GroupDocs.Editor for .NET 處理大型文件？
 GroupDocs.Editor for .NET 旨在高效處理大型文件。但是，為了獲得最佳效能，如有必要，請考慮分段管理資源和處理文件。
 ### 在哪裡可以找到更詳細的文件和支援？
-您可以在以下位置找到詳細文檔[GroupDocs.Editor 文件頁面](https://reference.groupdocs.com/editor/net/)並尋求相關部門的支持[GroupDocs 支援論壇](https://forum.groupdocs.com/c/editor/20).
+您可以在以下位置找到詳細文檔[GroupDocs.Editor 文件頁面](https://tutorials.groupdocs.com/editor/net/)並尋求相關部門的支持[GroupDocs 支援論壇](https://forum.groupdocs.com/c/editor/20).

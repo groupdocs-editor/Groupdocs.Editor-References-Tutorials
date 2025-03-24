@@ -3,7 +3,6 @@ title: Dokumentumfeldolgozás
 linktitle: Dokumentumfeldolgozás
 second_title: GroupDocs.Editor .NET API
 description: Fődokumentum-feldolgozás .NET-ben a GroupDocs.Editorral. Tanuljon meg információkat kinyerni, különféle formátumokba menteni, és könnyedén dolgozzon a különböző dokumentumtípusokkal.
-type: docs
 weight: 24
 url: /hu/net/document-processing/
 ---

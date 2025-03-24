@@ -3,7 +3,6 @@ title: Werken met gescheiden gescheiden waarden (DSV)
 linktitle: Werken met gescheiden gescheiden waarden (DSV)
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u CSV- en TSV-bestanden kunt bewerken met GroupDocs.Editor voor .NET met deze stapsgewijze handleiding. Verbeter moeiteloos uw .NET-projecten.
-type: docs
 weight: 12
 url: /nl/net/document-processing/work-dsv/
 ---
@@ -111,4 +110,4 @@ Absoluut, u kunt de gewenste codering opgeven in de opslagopties.
 ### Kan ik een CSV-bestand naar een Excel-spreadsheet converteren met GroupDocs.Editor voor .NET?
 Ja, u kunt een CSV-bestand opslaan als Excel-spreadsheet met behulp van de juiste opslagopties.
 ### Waar kan ik meer documentatie vinden over GroupDocs.Editor voor .NET?
- U kunt gedetailleerde documentatie vinden[hier](https://reference.groupdocs.com/editor/net/)
+ U kunt gedetailleerde documentatie vinden[hier](https://tutorials.groupdocs.com/editor/net/)

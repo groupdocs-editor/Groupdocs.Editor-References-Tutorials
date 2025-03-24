@@ -3,7 +3,6 @@ title: Hızlı başlangıç Kılavuzu
 linktitle: Hızlı başlangıç Kılavuzu
 second_title: GroupDocs.Editor .NET API'si
 description: Kapsamlı eğitimlerimizle GroupDocs.Editor for .NET'i kullanmayı öğrenin. Lisansları ayarlayın, özellikleri entegre edin ve güçlü belge düzenleme özelliklerinin kilidini açın.
-type: docs
 weight: 26
 url: /tr/net/quick-start-guide/
 ---

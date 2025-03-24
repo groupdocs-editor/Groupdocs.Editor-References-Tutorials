@@ -3,7 +3,6 @@ title: Ställ in licens från fil
 linktitle: Ställ in licens från fil
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du använder GroupDocs.Editor för .NET för sömlös dokumentredigering i dina applikationer. Steg-för-steg-guide, tips och vanliga frågor ingår.
-type: docs
 weight: 10
 url: /sv/net/quick-start-guide/set-license-from-file/
 ---
@@ -89,4 +88,4 @@ Absolut! GroupDocs.Editor för .NET kan integreras i olika typer av applikatione
 ### Hur hanterar jag stora dokument med GroupDocs.Editor för .NET?
 GroupDocs.Editor för .NET är utformad för att effektivt hantera stora dokument. Men för optimal prestanda, överväg att hantera resurser och hantera dokument i segment om det behövs.
 ### Var kan jag hitta mer detaljerad dokumentation och support?
- Du kan hitta detaljerad dokumentation på[GroupDocs.Editor dokumentationssida](https://reference.groupdocs.com/editor/net/) och söka stöd från[GroupDocs supportforum](https://forum.groupdocs.com/c/editor/20).
+ Du kan hitta detaljerad dokumentation på[GroupDocs.Editor dokumentationssida](https://tutorials.groupdocs.com/editor/net/) och söka stöd från[GroupDocs supportforum](https://forum.groupdocs.com/c/editor/20).

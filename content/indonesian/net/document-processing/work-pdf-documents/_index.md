@@ -3,7 +3,6 @@ title: Bekerja dengan Dokumen PDF
 linktitle: Bekerja dengan Dokumen PDF
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengedit dokumen PDF menggunakan GroupDocs.Editor untuk .NET dengan tutorial ini. Ubah konten, tangani file besar, dan simpan hasil edit Anda dengan aman.
-type: docs
 weight: 14
 url: /id/net/document-processing/work-pdf-documents/
 ---

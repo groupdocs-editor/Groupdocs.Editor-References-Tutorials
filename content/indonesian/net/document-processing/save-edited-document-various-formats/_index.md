@@ -3,7 +3,6 @@ title: Simpan Dokumen yang Diedit ke Berbagai Format
 linktitle: Simpan Dokumen yang Diedit ke Berbagai Format
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara menyimpan dokumen yang diedit ke berbagai format menggunakan GroupDocs.Editor untuk .NET dalam panduan langkah demi langkah yang komprehensif ini.
-type: docs
 weight: 11
 url: /id/net/document-processing/save-edited-document-various-formats/
 ---
@@ -92,4 +91,4 @@ GroupDocs.Editor mendukung berbagai format, termasuk DOCX, PDF, HTML, dan banyak
 ### Bagaimana cara mendapatkan lisensi sementara untuk GroupDocs.Editor?
  Anda bisa mendapatkan lisensi sementara[Di Sini](https://purchase.groupdocs.com/temporary-license/).
 ### Di mana saya dapat menemukan lebih banyak dokumentasi dan dukungan?
- Dokumentasi terperinci tersedia[Di Sini](https://reference.groupdocs.com/editor/net/) , dan Anda bisa mendapatkan dukungan[Di Sini](https://forum.groupdocs.com/c/editor/20).
+ Dokumentasi terperinci tersedia[Di Sini](https://tutorials.groupdocs.com/editor/net/) , dan Anda bisa mendapatkan dukungan[Di Sini](https://forum.groupdocs.com/c/editor/20).

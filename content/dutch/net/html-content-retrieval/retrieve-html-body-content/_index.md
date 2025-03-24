@@ -3,7 +3,6 @@ title: HTML-hoofdtekstinhoud ophalen
 linktitle: HTML-hoofdtekstinhoud ophalen
 second_title: GroupDocs.Editor .NET API
 description: Haal HTML-tekstinhoud op met GroupDocs.Editor voor .NET met onze stapsgewijze handleiding. Verbeter uw .NET-applicaties moeiteloos.
-type: docs
 weight: 10
 url: /nl/net/html-content-retrieval/retrieve-html-body-content/
 ---
@@ -62,4 +61,4 @@ GroupDocs.Editor ondersteunt een breed scala aan bestandsindelingen, waaronder W
 ### Kan ik GroupDocs.Editor gebruiken met .NET Core?
 Ja, GroupDocs.Editor is compatibel met .NET Core en biedt flexibiliteit voor de ontwikkeling van moderne applicaties.
 ### Waar kan ik meer voorbeelden en documentatie voor GroupDocs.Editor vinden?
- Meer voorbeelden en gedetailleerde documentatie vindt u op de[GroupDocs.Editor-documentatiepagina](https://reference.groupdocs.com/editor/net/).
+ Meer voorbeelden en gedetailleerde documentatie vindt u op de[GroupDocs.Editor-documentatiepagina](https://tutorials.groupdocs.com/editor/net/).

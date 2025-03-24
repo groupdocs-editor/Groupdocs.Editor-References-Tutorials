@@ -3,7 +3,6 @@ title: Načíst obsah HTML s předponou
 linktitle: Načíst obsah HTML s předponou
 second_title: GroupDocs.Editor .NET API
 description: Naučte se, jak načíst obsah HTML z dokumentů pomocí GroupDocs.Editor pro .NET s vlastními předponami pro obrázky a šablony stylů. Včetně průvodce krok za krokem.
-type: docs
 weight: 11
 url: /cs/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 Tento fragment kódu načte obsah HTML s vlastními předponami a vytiskne jej do konzoly. Tento obsah HTML můžete podle potřeby dále zpracovat nebo uložit.
 ## Závěr
 A tady to máte! Podle těchto kroků můžete snadno načíst obsah HTML z dokumentu pomocí GroupDocs.Editor pro .NET, doplněný vlastními předponami pro obrázky a šablony stylů. Tento výkonný nástroj zjednodušuje manipulaci s dokumenty a umožňuje vám soustředit se na bezproblémovou integraci úprav dokumentů do vašich aplikací .NET.
- Pro podrobnější informace se podívejte na[GroupDocs.Editor pro dokumentaci .NET](https://reference.groupdocs.com/editor/net/) . Pokud máte nějaké dotazy nebo potřebujete další pomoc, neváhejte se obrátit na[Fórum podpory](https://forum.groupdocs.com/c/editor/20).
+ Pro podrobnější informace se podívejte na[GroupDocs.Editor pro dokumentaci .NET](https://tutorials.groupdocs.com/editor/net/) . Pokud máte nějaké dotazy nebo potřebujete další pomoc, neváhejte se obrátit na[Fórum podpory](https://forum.groupdocs.com/c/editor/20).
 ## FAQ
 ### Jaké typy dokumentů mohu upravovat pomocí GroupDocs.Editor pro .NET?
 GroupDocs.Editor podporuje různé formáty dokumentů včetně Wordu, Excelu, PowerPointu, PDF a dalších.

@@ -3,7 +3,6 @@ title: Modifica raccolta campi modulo
 linktitle: Modifica raccolta campi modulo
 second_title: API GroupDocs.Editor .NET
 description: Migliora l'efficienza della modifica dei documenti nei progetti .NET con Groupdocs.Editor. Modifica facilmente le raccolte di campi del modulo.
-type: docs
 weight: 10
 url: /it/net/form-field-management/edit-form-field-collection/
 ---

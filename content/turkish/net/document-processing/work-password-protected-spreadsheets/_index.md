@@ -3,7 +3,6 @@ title: Parola Korumalı Elektronik Tablolarla Çalışma
 linktitle: Parola Korumalı Elektronik Tablolarla Çalışma
 second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET'i kullanarak parola korumalı elektronik tabloları nasıl kullanacağınızı öğrenin. Bu ayrıntılı kılavuz, güvenli Excel dosyalarını kaydetmeye başlama konusunda size yol gösterir.
-type: docs
 weight: 18
 url: /tr/net/document-processing/work-password-protected-spreadsheets/
 ---
@@ -108,4 +107,4 @@ GroupDocs.Editor for .NET, geliştiricilerin .NET uygulamaları içindeki çeşi
 ### Bir e-tabloyu açmak ve yazmak için farklı şifreler ayarlayabilir miyim?
 Kesinlikle! Kaydetme seçeneklerini kullanarak belgeyi açmak ve yazma koruması için ayrı şifreler belirleyebilirsiniz.
 ### Daha ayrıntılı belgeleri nerede bulabilirim?
- GroupDocs.Editor for .NET'in kapsamlı belgelerine erişebilirsiniz.[Burada](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor for .NET'in kapsamlı belgelerine erişebilirsiniz.[Burada](https://tutorials.groupdocs.com/editor/net/).

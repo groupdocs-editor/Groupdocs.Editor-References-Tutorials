@@ -3,7 +3,6 @@ title: Definir licença do arquivo
 linktitle: Definir licença do arquivo
 second_title: API GroupDocs.Editor .NET
 description: Aprenda como usar o GroupDocs.Editor for .NET para uma edição perfeita de documentos em seus aplicativos. Guia passo a passo, dicas e perguntas frequentes incluídas.
-type: docs
 weight: 10
 url: /pt/net/quick-start-guide/set-license-from-file/
 ---
@@ -89,4 +88,4 @@ Absolutamente! GroupDocs.Editor for .NET pode ser integrado a vários tipos de a
 ### Como lidar com documentos grandes com GroupDocs.Editor for .NET?
 GroupDocs.Editor for .NET foi projetado para lidar com documentos grandes com eficiência. No entanto, para um desempenho ideal, considere gerir recursos e tratar documentos em segmentos, se necessário.
 ### Onde posso encontrar documentação e suporte mais detalhados?
- Você pode encontrar documentação detalhada no[Página de documentação do GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) e busque o apoio do[Fórum de suporte do GroupDocs](https://forum.groupdocs.com/c/editor/20).
+ Você pode encontrar documentação detalhada no[Página de documentação do GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) e busque o apoio do[Fórum de suporte do GroupDocs](https://forum.groupdocs.com/c/editor/20).

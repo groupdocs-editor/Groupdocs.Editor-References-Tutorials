@@ -3,7 +3,6 @@ title: Recuperar conteúdo HTML com prefixo
 linktitle: Recuperar conteúdo HTML com prefixo
 second_title: API GroupDocs.Editor .NET
 description: Aprenda como recuperar conteúdo HTML de documentos usando GroupDocs.Editor for .NET com prefixos personalizados para imagens e folhas de estilo. Guia passo a passo incluído.
-type: docs
 weight: 11
 url: /pt/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 Este trecho de código busca o conteúdo HTML com os prefixos personalizados e o imprime no console. Você pode processar ou salvar ainda mais esse conteúdo HTML conforme necessário.
 ## Conclusão
 E aí está! Seguindo essas etapas, você pode recuperar facilmente o conteúdo HTML de um documento usando GroupDocs.Editor for .NET, completo com prefixos personalizados para imagens e folhas de estilo. Essa ferramenta poderosa simplifica a manipulação de documentos, permitindo que você se concentre na integração perfeita da edição de documentos em seus aplicativos .NET.
- Para informações mais detalhadas, confira o[Documentação do GroupDocs.Editor para .NET](https://reference.groupdocs.com/editor/net/) . Se você tiver alguma dúvida ou precisar de mais assistência, sinta-se à vontade para entrar em contato pelo[Fórum de suporte](https://forum.groupdocs.com/c/editor/20).
+ Para informações mais detalhadas, confira o[Documentação do GroupDocs.Editor para .NET](https://tutorials.groupdocs.com/editor/net/) . Se você tiver alguma dúvida ou precisar de mais assistência, sinta-se à vontade para entrar em contato pelo[Fórum de suporte](https://forum.groupdocs.com/c/editor/20).
 ## Perguntas frequentes
 ### Que tipos de documentos posso editar com GroupDocs.Editor for .NET?
 GroupDocs.Editor suporta vários formatos de documentos, incluindo Word, Excel, PowerPoint, PDF e muito mais.

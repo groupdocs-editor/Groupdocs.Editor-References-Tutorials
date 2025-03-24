@@ -3,7 +3,6 @@ title: Corrigez la collecte de champs de formulaire invalides et enregistrez
 linktitle: Corrigez la collecte de champs de formulaire invalides et enregistrez
 second_title: API GroupDocs.Editor .NET
 description: Découvrez comment corriger les champs de formulaire non valides dans DOCX à l'aide de Groupdocs.Editor pour .NET. Suivez ce guide pour vous assurer que vos documents sont exempts d'erreurs et enregistrez-les en toute sécurité.
-type: docs
 weight: 11
 url: /fr/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## Conclusion
- Et voila! Vous avez réussi à corriger les champs de formulaire non valides et à enregistrer votre document à l'aide de Groupdocs.Editor pour .NET. Ce guide étape par étape aurait dû rendre le processus clair et gérable. Si vous rencontrez des problèmes ou avez des questions, n'hésitez pas à consulter le[Documentation](https://reference.groupdocs.com/editor/net/) ou contactez[soutien](https://forum.groupdocs.com/c/editor/20).
+ Et voila! Vous avez réussi à corriger les champs de formulaire non valides et à enregistrer votre document à l'aide de Groupdocs.Editor pour .NET. Ce guide étape par étape aurait dû rendre le processus clair et gérable. Si vous rencontrez des problèmes ou avez des questions, n'hésitez pas à consulter le[Documentation](https://tutorials.groupdocs.com/editor/net/) ou contactez[soutien](https://forum.groupdocs.com/c/editor/20).
 ## FAQ
 ### Que faire si mon document est protégé par mot de passe ?
  Vous pouvez spécifier le mot de passe dans le`WordProcessingLoadOptions` pour ouvrir le document.

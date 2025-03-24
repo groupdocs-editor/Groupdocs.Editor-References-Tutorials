@@ -3,7 +3,6 @@ title: Gemeten licentie instellen
 linktitle: Gemeten licentie instellen
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u GroupDocs.Editor voor .NET kunt integreren en gebruiken met onze uitgebreide handleiding. Ontgrendel krachtige documentbewerkingsfuncties binnen uw .NET-applicaties.
-type: docs
 weight: 12
 url: /nl/net/quick-start-guide/set-metered-license/
 ---
@@ -69,15 +68,15 @@ editor.Save(editableDocument, "updated_sample.docx");
 Console.WriteLine("Document saved successfully.");
 ```
 ## Conclusie
- Gefeliciteerd! U heeft GroupDocs.Editor voor .NET met succes in uw toepassing geïntegreerd en gebruikt. Van het installeren van de bibliotheek tot het instellen van een licentie met datalimiet en het bewerken van documenten: u heeft alle essentiële stappen doorlopen. Deze krachtige tool kan uw documentbewerkingsworkflows binnen uw .NET-applicaties aanzienlijk stroomlijnen. Voor meer informatie, zie de[GroupDocs.Editor voor .NET-documentatie](https://reference.groupdocs.com/editor/net/).
+ Gefeliciteerd! U heeft GroupDocs.Editor voor .NET met succes in uw toepassing geïntegreerd en gebruikt. Van het installeren van de bibliotheek tot het instellen van een licentie met datalimiet en het bewerken van documenten: u heeft alle essentiële stappen doorlopen. Deze krachtige tool kan uw documentbewerkingsworkflows binnen uw .NET-applicaties aanzienlijk stroomlijnen. Voor meer informatie, zie de[GroupDocs.Editor voor .NET-documentatie](https://tutorials.groupdocs.com/editor/net/).
 ## Veelgestelde vragen
 ### Hoe verkrijg ik een GroupDocs.Editor-licentie?
  Een licentie kunt u verkrijgen bij de[GroupDocs-aankooppagina](https://purchase.groupdocs.com/buy) . Ga voor een tijdelijke licentie naar[hier](https://purchase.groupdocs.com/temporary-license/).
 ### Kan ik GroupDocs.Editor gratis uitproberen?
  Ja, u kunt een gratis proefversie downloaden van de[downloadpagina](https://releases.groupdocs.com/) en vraag een tijdelijke licentie aan.
 ### Welke documentformaten worden ondersteund door GroupDocs.Editor?
- GroupDocs.Editor ondersteunt verschillende formaten, waaronder DOCX, PPTX, XLSX, TXT, HTML en meer. Voor een volledige lijst, kijk op de[documentatie](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor ondersteunt verschillende formaten, waaronder DOCX, PPTX, XLSX, TXT, HTML en meer. Voor een volledige lijst, kijk op de[documentatie](https://tutorials.groupdocs.com/editor/net/).
 ### Is er community-ondersteuning beschikbaar voor GroupDocs.Editor?
  Ja, u kunt gemeenschapssteun krijgen van de[GroupDocs.Editor-forum](https://forum.groupdocs.com/c/editor/20).
 ### Hoe ga ik aan de slag met GroupDocs.Editor voor .NET?
- Volg onze stapsgewijze handleiding om de bibliotheek in te stellen, een licentie te verkrijgen en te beginnen met het bewerken van documenten. Voor gedetailleerde instructies, bezoek de[documentatie](https://reference.groupdocs.com/editor/net/).
+ Volg onze stapsgewijze handleiding om de bibliotheek in te stellen, een licentie te verkrijgen en te beginnen met het bewerken van documenten. Voor gedetailleerde instructies, bezoek de[documentatie](https://tutorials.groupdocs.com/editor/net/).

@@ -1,7 +1,6 @@
 ---
 title: GroupDocs.Editor for .NET のチュートリアルと例
 linktitle: GroupDocs.Editor for .NET チュートリアル
-type: docs
 weight: 10
 url: /ja/net/
 description: GroupDocs.Editor .NET を使用してドキュメントを管理および編集します。ドキュメント処理、ドキュメント編集、HTML コンテンツの取得、フォーム フィールドの管理などを学習します。

@@ -3,7 +3,6 @@ title: Arbeiten mit der Legacy-Formularfeldsammlung
 linktitle: Arbeiten mit der Legacy-Formularfeldsammlung
 second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie in unserem ausführlichen Handbuch, wie Sie mit GroupDocs.Editor für .NET ältere Formularfelder verwalten. Perfekt für die Handhabung von Textfeldern, Kontrollkästchen, Daten und mehr.
-type: docs
 weight: 12
 url: /de/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## Schritt 8: Fazit
 Wenn Sie diese Schritte befolgen, können Sie mit GroupDocs.Editor für .NET ältere Formularfelder in Ihren Dokumenten effektiv verwalten und mit ihnen interagieren. Ob Textfelder, Kontrollkästchen, Daten, Zahlen oder Dropdown-Listen – dieser Leitfaden bietet eine klare und prägnante Möglichkeit, mit jedem Typ umzugehen.
 ## Abschluss
- Das Arbeiten mit alten Formularfeldern in Dokumenten kann mit den richtigen Tools unkompliziert sein. GroupDocs.Editor für .NET bietet eine robuste Lösung für die effiziente Verwaltung dieser Felder. Wenn Sie dieser Schritt-für-Schritt-Anleitung folgen, sollten Sie nun in der Lage sein, verschiedene Formularfelder in Ihren Dokumenten problemlos zu bearbeiten. Vergessen Sie nicht, die[Dokumentation](https://reference.groupdocs.com/editor/net/)für erweiterte Funktionen und Optionen.
+ Das Arbeiten mit alten Formularfeldern in Dokumenten kann mit den richtigen Tools unkompliziert sein. GroupDocs.Editor für .NET bietet eine robuste Lösung für die effiziente Verwaltung dieser Felder. Wenn Sie dieser Schritt-für-Schritt-Anleitung folgen, sollten Sie nun in der Lage sein, verschiedene Formularfelder in Ihren Dokumenten problemlos zu bearbeiten. Vergessen Sie nicht, die[Dokumentation](https://tutorials.groupdocs.com/editor/net/)für erweiterte Funktionen und Optionen.
 ## Häufig gestellte Fragen
 ### 1. Kann ich GroupDocs.Editor für .NET mit passwortgeschützten Dokumenten verwenden?
 Ja, Sie können für den Umgang mit passwortgeschützten Dokumenten das Passwort in den Ladeoptionen angeben.
@@ -104,4 +103,4 @@ Ja, Sie können für den Umgang mit passwortgeschützten Dokumenten das Passwort
 ### 4. Kann ich eine Lizenz für GroupDocs.Editor für .NET erwerben?
  Ja, Sie können eine Lizenz kaufen bei[Hier](https://purchase.groupdocs.com/buy).
 ### 5. Wo finde ich die Dokumentation für GroupDocs.Editor für .NET?
-Die Dokumentation ist verfügbar[Hier](https://reference.groupdocs.com/editor/net/).
+Die Dokumentation ist verfügbar[Hier](https://tutorials.groupdocs.com/editor/net/).

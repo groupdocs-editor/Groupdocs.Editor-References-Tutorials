@@ -3,7 +3,6 @@ title: Extrair informações do documento
 linktitle: Extrair informações do documento
 second_title: API GroupDocs.Editor .NET
 description: Aprenda como extrair informações de documentos usando GroupDocs.Editor for .NET com nosso tutorial passo a passo detalhado. Perfeito para gerenciar vários tipos de documentos.
-type: docs
 weight: 10
 url: /pt/net/document-processing/extract-document-info/
 ---

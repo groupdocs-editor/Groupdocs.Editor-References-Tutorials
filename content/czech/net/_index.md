@@ -1,7 +1,6 @@
 ---
 title: Návody a příklady GroupDocs.Editoru pro .NET
 linktitle: GroupDocs.Editor pro .NET výukové programy
-type: docs
 weight: 10
 url: /cs/net/
 description: Spravujte a upravujte dokumenty pomocí GroupDocs.Editor .NET. Naučte se zpracování dokumentů, úpravy dokumentů, načítání obsahu HTML, správu polí formulářů a další!

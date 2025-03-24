@@ -3,7 +3,6 @@ title: 修复无效的表单字段收集并保存
 linktitle: 修复无效的表单字段收集并保存
 second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 Groupdocs.Editor for .NET 修复 DOCX 中的无效表单字段。按照本指南确保您的文档没有错误并安全保存。
-type: docs
 weight: 11
 url: /zh/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## 结论
-就这样！您已成功修复无效的表单字段并使用 Groupdocs.Editor for .NET 保存了文档。本分步指南应该使该过程清晰易懂。如果您遇到任何问题或有疑问，请随时查看[文档](https://reference.groupdocs.com/editor/net/)或联系[支持](https://forum.groupdocs.com/c/editor/20).
+就这样！您已成功修复无效的表单字段并使用 Groupdocs.Editor for .NET 保存了文档。本分步指南应该使该过程清晰易懂。如果您遇到任何问题或有疑问，请随时查看[文档](https://tutorials.groupdocs.com/editor/net/)或联系[支持](https://forum.groupdocs.com/c/editor/20).
 ## 常见问题解答
 ### 如果我的文档受密码保护怎么办？
 您可以在`WordProcessingLoadOptions`打开文档。

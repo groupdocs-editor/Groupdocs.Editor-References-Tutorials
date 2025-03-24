@@ -3,7 +3,6 @@ title: Εισαγωγή στο GroupDocs.Editor για .NET
 linktitle: Εισαγωγή στο GroupDocs.Editor για .NET
 second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να χρησιμοποιείτε το GroupDocs.Editor για .NET για να επεξεργάζεστε έγγραφα μέσω προγραμματισμού με αυτόν τον αναλυτικό οδηγό βήμα προς βήμα.
-type: docs
 weight: 12
 url: /el/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ editor.Dispose();
 ### Είναι δυνατή η ενσωμάτωση του GroupDocs.Editor με αποθήκευση cloud;
 Ναι, μπορείτε να ενσωματώσετε το GroupDocs.Editor με διάφορες λύσεις αποθήκευσης cloud για τη διαχείριση των εγγράφων σας.
 ### Πού μπορώ να βρω την τεκμηρίωση για το GroupDocs.Editor για .NET;
-Η τεκμηρίωση είναι διαθέσιμη[εδώ](https://reference.groupdocs.com/editor/net/).
+Η τεκμηρίωση είναι διαθέσιμη[εδώ](https://tutorials.groupdocs.com/editor/net/).

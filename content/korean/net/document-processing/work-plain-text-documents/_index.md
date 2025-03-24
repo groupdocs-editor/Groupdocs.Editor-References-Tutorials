@@ -3,7 +3,6 @@ title: 일반 텍스트 문서 작업
 linktitle: 일반 텍스트 문서 작업
 second_title: GroupDocs.Editor .NET API
 description: 단계별 가이드를 통해 .NET용 GroupDocs.Editor를 사용하여 일반 텍스트 문서를 편집하는 방법을 알아보세요. .NET 문서 편집 프로세스를 단순화하세요.
-type: docs
 weight: 15
 url: /ko/net/document-processing/work-plain-text-documents/
 ---
@@ -96,10 +95,10 @@ using (Editor editor = new Editor(inputFilePath))
 System.Console.WriteLine("Document editing process completed successfully!");
 ```
 ## 결론
- 축하해요! .NET용 GroupDocs.Editor를 사용하여 일반 텍스트 문서를 성공적으로 편집했습니다. 이 강력한 도구는 문서 편집을 단순화하여 .NET 애플리케이션에 쉽게 통합할 수 있도록 해줍니다. 간단한 텍스트 파일을 처리하든 복잡한 문서 형식을 처리하든 GroupDocs.Editor가 도와드립니다. 다음을 방문하여 더 많은 기능을 살펴보세요.[GroupDocs.Editor 문서](https://reference.groupdocs.com/editor/net/).
+ 축하해요! .NET용 GroupDocs.Editor를 사용하여 일반 텍스트 문서를 성공적으로 편집했습니다. 이 강력한 도구는 문서 편집을 단순화하여 .NET 애플리케이션에 쉽게 통합할 수 있도록 해줍니다. 간단한 텍스트 파일을 처리하든 복잡한 문서 형식을 처리하든 GroupDocs.Editor가 도와드립니다. 다음을 방문하여 더 많은 기능을 살펴보세요.[GroupDocs.Editor 문서](https://tutorials.groupdocs.com/editor/net/).
 ## FAQ
 ### .NET용 GroupDocs.Editor는 어떤 파일 형식을 지원합니까?
- .NET용 GroupDocs.Editor는 DOCX, TXT, HTML 등을 포함한 광범위한 파일 형식을 지원합니다. 을 체크 해봐[선적 서류 비치](https://reference.groupdocs.com/editor/net/) 전체 목록을 보려면.
+ .NET용 GroupDocs.Editor는 DOCX, TXT, HTML 등을 포함한 광범위한 파일 형식을 지원합니다. 을 체크 해봐[선적 서류 비치](https://tutorials.groupdocs.com/editor/net/) 전체 목록을 보려면.
 ### .NET용 GroupDocs.Editor의 무료 평가판을 받으려면 어떻게 해야 합니까?
  다음에서 .NET용 GroupDocs.Editor 무료 평가판을 다운로드할 수 있습니다.[릴리스 페이지](https://releases.groupdocs.com/).
 ### .NET용 GroupDocs.Editor의 임시 라이센스를 구입할 수 있습니까?
@@ -107,4 +106,4 @@ System.Console.WriteLine("Document editing process completed successfully!");
 ### .NET용 GroupDocs.Editor에 대한 지원은 어디서 받을 수 있나요?
  지원은 다음을 통해 제공됩니다.[GroupDocs.Editor 지원 포럼](https://forum.groupdocs.com/c/editor/20).
 ### .NET용 GroupDocs.Editor에 대한 자세한 설명서가 있습니까?
- 예, 자세한 문서는 다음에서 확인할 수 있습니다.[GroupDocs.Editor 문서 페이지](https://reference.groupdocs.com/editor/net/).
+ 예, 자세한 문서는 다음에서 확인할 수 있습니다.[GroupDocs.Editor 문서 페이지](https://tutorials.groupdocs.com/editor/net/).

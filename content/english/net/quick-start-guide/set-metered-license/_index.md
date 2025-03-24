@@ -3,7 +3,6 @@ title: Set Metered License
 linktitle: Set Metered License
 second_title: GroupDocs.Editor .NET API
 description: Learn how to integrate and use GroupDocs.Editor for .NET with our comprehensive guide. Unlock powerful document editing features within your .NET applications.
-type: docs
 weight: 12
 url: /net/quick-start-guide/set-metered-license/
 ---
@@ -29,7 +28,7 @@ First things first, you need to install GroupDocs.Editor for .NET in your projec
 2. Go to `Tools` > `NuGet Package Manager` > `Manage NuGet Packages for Solution`.
 3. Search for `GroupDocs.Editor`.
 4. Click on `Install`.
-This will add the necessary references to your project.
+This will add the necessary tutorialss to your project.
 ## Step 2: Set Up a Metered License
 To unlock the full features of GroupDocs.Editor, you'll need to set up a metered license. This allows you to use the API without any limitations.
 ### Setting the Metered License
@@ -69,15 +68,15 @@ editor.Save(editableDocument, "updated_sample.docx");
 Console.WriteLine("Document saved successfully.");
 ```
 ## Conclusion
-Congratulations! You've successfully integrated and used GroupDocs.Editor for .NET in your application. From installing the library to setting up a metered license and editing documents, you've covered all the essential steps. This powerful tool can significantly streamline your document editing workflows within your .NET applications. For further information, refer to the [GroupDocs.Editor for .NET documentation](https://reference.groupdocs.com/editor/net/).
+Congratulations! You've successfully integrated and used GroupDocs.Editor for .NET in your application. From installing the library to setting up a metered license and editing documents, you've covered all the essential steps. This powerful tool can significantly streamline your document editing workflows within your .NET applications. For further information, refer to the [GroupDocs.Editor for .NET documentation](https://tutorials.groupdocs.com/editor/net/).
 ## FAQ's
 ### How do I obtain a GroupDocs.Editor license?
 You can obtain a license from the [GroupDocs purchase page](https://purchase.groupdocs.com/buy). For a temporary license, visit [here](https://purchase.groupdocs.com/temporary-license/).
 ### Can I try GroupDocs.Editor for free?
 Yes, you can download a free trial from the [download page](https://releases.groupdocs.com/) and request a temporary license.
 ### What document formats are supported by GroupDocs.Editor?
-GroupDocs.Editor supports various formats including DOCX, PPTX, XLSX, TXT, HTML, and more. For a full list, check the [documentation](https://reference.groupdocs.com/editor/net/).
+GroupDocs.Editor supports various formats including DOCX, PPTX, XLSX, TXT, HTML, and more. For a full list, check the [documentation](https://tutorials.groupdocs.com/editor/net/).
 ### Is there any community support available for GroupDocs.Editor?
 Yes, you can get community support from the [GroupDocs.Editor forum](https://forum.groupdocs.com/c/editor/20).
 ### How do I get started with GroupDocs.Editor for .NET?
-Follow our step-by-step guide to set up the library, obtain a license, and start editing documents. For detailed instructions, visit the [documentation](https://reference.groupdocs.com/editor/net/).
+Follow our step-by-step guide to set up the library, obtain a license, and start editing documents. For detailed instructions, visit the [documentation](https://tutorials.groupdocs.com/editor/net/).

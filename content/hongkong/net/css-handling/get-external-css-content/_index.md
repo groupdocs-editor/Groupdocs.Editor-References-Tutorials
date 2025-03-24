@@ -3,7 +3,6 @@ title: 取得外部 CSS 內容
 linktitle: 取得外部 CSS 內容
 second_title: GroupDocs.Editor .NET API
 description: 透過此逐步指南，了解如何使用 GroupDocs.Editor for .NET 從文件中提取外部 CSS 內容。非常適合開發人員整合文件。
-type: docs
 weight: 10
 url: /zh-hant/net/css-handling/get-external-css-content/
 ---
@@ -67,6 +66,6 @@ GroupDocs.Editor for .NET 是一個文檔編輯 API，允許開發人員在 .NET
 ### 我可以免費使用 GroupDocs.Editor 嗎？
  GroupDocs.Editor 提供免費試用版，您可以從[GroupDocs 免費試用頁面](https://releases.groupdocs.com/)。如需完整功能，請考慮購買許可證。
 ### GroupDocs.Editor 支援哪些檔案格式？
- GroupDocs.Editor 支援多種檔案格式，包括 DOCX、XLSX、PPTX、PDF、HTML 等。檢查[文件](https://reference.groupdocs.com/editor/net/)以獲得完整清單。
+ GroupDocs.Editor 支援多種檔案格式，包括 DOCX、XLSX、PPTX、PDF、HTML 等。檢查[文件](https://tutorials.groupdocs.com/editor/net/)以獲得完整清單。
 ### 如何獲得對 GroupDocs.Editor 的支援？
 您可以從以下方面獲得支持[GroupDocs 支援論壇](https://forum.groupdocs.com/c/editor/20)您可以在其中提出問題並獲得社群和 GroupDocs 專家的協助。

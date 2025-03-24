@@ -3,7 +3,6 @@ title: Maak een bewerkbaar document van HTML
 linktitle: Maak een bewerkbaar document van HTML
 second_title: GroupDocs.Editor .NET API
 description: Converteer HTML naar bewerkbare Word-documenten met GroupDocs.Editor voor .NET met deze stapsgewijze handleiding. Perfect voor het stroomlijnen van uw documentbeheerworkflow.
-type: docs
 weight: 10
 url: /nl/net/document-editing/create-editable-document-from-html/
 ---

@@ -3,7 +3,6 @@ title: Dokumentum szerkesztése
 linktitle: Dokumentum szerkesztése
 second_title: GroupDocs.Editor .NET API
 description: Tanuljon meg könnyedén szerkeszteni dokumentumokat a GroupDocs.Editor for .NET segítségével. Lépésről lépésre útmutató szövegszerkesztő és táblázatkezelő fájlokhoz.
-type: docs
 weight: 11
 url: /hu/net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 A megfelelő ártalmatlanítás biztosítja, hogy az alkalmazásban ne legyen memóriaszivárgás vagy teljesítményproblémák.
 ## Következtetés
- Gratulálunk! Most már komoly ismeretekkel rendelkezik arról, hogyan használhatja a GroupDocs.Editor for .NET alkalmazást a szövegszerkesztő dokumentumok és táblázatok tartalmának betöltésére, szerkesztésére és kibontására. Ez a hatékony eszköz leegyszerűsíti a dokumentumszerkesztési feladatokat, és zökkenőmentesen integrálódik .NET-alkalmazásaival. További részletekért fedezze fel a[dokumentáció](https://reference.groupdocs.com/editor/net/), [töltse le a legújabb verziót](https://releases.groupdocs.com/editor/net/) , vagy szerezzen be a[ideiglenes engedély](https://purchase.groupdocs.com/temporary-license/).
+ Gratulálunk! Most már komoly ismeretekkel rendelkezik arról, hogyan használhatja a GroupDocs.Editor for .NET alkalmazást a szövegszerkesztő dokumentumok és táblázatok tartalmának betöltésére, szerkesztésére és kibontására. Ez a hatékony eszköz leegyszerűsíti a dokumentumszerkesztési feladatokat, és zökkenőmentesen integrálódik .NET-alkalmazásaival. További részletekért fedezze fel a[dokumentáció](https://tutorials.groupdocs.com/editor/net/), [töltse le a legújabb verziót](https://releases.groupdocs.com/editor/net/) , vagy szerezzen be a[ideiglenes engedély](https://purchase.groupdocs.com/temporary-license/).
 ## GYIK
 ### Szerkeszthetek PDF dokumentumokat a GroupDocs.Editor for .NET segítségével?
 Jelenleg a GroupDocs.Editor for .NET elsősorban a szövegszerkesztő, a táblázatkezelő és a prezentációs formátumokat támogatja.

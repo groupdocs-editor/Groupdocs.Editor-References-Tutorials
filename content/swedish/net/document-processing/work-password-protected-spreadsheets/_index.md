@@ -3,7 +3,6 @@ title: Arbeta med lösenordsskyddade kalkylblad
 linktitle: Arbeta med lösenordsskyddade kalkylblad
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du hanterar lösenordsskyddade kalkylblad med GroupDocs.Editor för .NET. Den här detaljerade guiden leder dig genom hur du öppnar för att spara säkra Excel-filer.
-type: docs
 weight: 18
 url: /sv/net/document-processing/work-password-protected-spreadsheets/
 ---
@@ -108,4 +107,4 @@ GroupDocs.Editor för .NET är ett kraftfullt dokumentredigerings-API som tillå
 ### Kan jag ställa in olika lösenord för att öppna och skriva till ett kalkylblad?
 Absolut! Du kan ställa in separata lösenord för att öppna dokumentet och för skrivskydd med hjälp av sparalternativen.
 ### Var kan jag hitta mer detaljerad dokumentation?
- Du kan komma åt den omfattande dokumentationen för GroupDocs.Editor för .NET[här](https://reference.groupdocs.com/editor/net/).
+ Du kan komma åt den omfattande dokumentationen för GroupDocs.Editor för .NET[här](https://tutorials.groupdocs.com/editor/net/).

@@ -3,7 +3,6 @@ title: GroupDocs.Editor ile Belge Yönetiminin Kilidini Açma
 linktitle: GroupDocs.Editör Eğitimleri
 additionalTitle: GroupDocs API Referansları
 description: .NET ve Java için GroupDocs.Editor ile belge düzenlemede zahmetsizce ustalaşın. İş akışını kolaylaştırın, CSS'yi yönetin, HTML içeriğini alın ve daha fazlasını yapın!
-type: docs
 weight: 11
 url: /tr/
 is_root: true

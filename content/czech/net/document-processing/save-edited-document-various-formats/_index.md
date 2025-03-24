@@ -3,7 +3,6 @@ title: Uložit upravený dokument do různých formátů
 linktitle: Uložit upravený dokument do různých formátů
 second_title: GroupDocs.Editor .NET API
 description: Zjistěte, jak uložit upravené dokumenty do různých formátů pomocí GroupDocs.Editor pro .NET v tomto podrobném průvodci krok za krokem.
-type: docs
 weight: 11
 url: /cs/net/document-processing/save-edited-document-various-formats/
 ---
@@ -92,4 +91,4 @@ GroupDocs.Editor podporuje širokou škálu formátů, včetně DOCX, PDF, HTML 
 ### Jak získám dočasnou licenci pro GroupDocs.Editor?
  Můžete získat dočasnou licenci[tady](https://purchase.groupdocs.com/temporary-license/).
 ### Kde najdu další dokumentaci a podporu?
- K dispozici je podrobná dokumentace[tady](https://reference.groupdocs.com/editor/net/) a můžete získat podporu[tady](https://forum.groupdocs.com/c/editor/20).
+ K dispozici je podrobná dokumentace[tady](https://tutorials.groupdocs.com/editor/net/) a můžete získat podporu[tady](https://forum.groupdocs.com/c/editor/20).

@@ -3,7 +3,6 @@ title: تحرير مجموعة حقول النموذج
 linktitle: تحرير مجموعة حقول النموذج
 second_title: GroupDocs.Editor .NET API
 description: قم بتحسين كفاءة تحرير المستندات في مشاريع .NET باستخدام Groupdocs.Editor. تعديل مجموعات حقول النموذج بسلاسة.
-type: docs
 weight: 10
 url: /ar/net/form-field-management/edit-form-field-collection/
 ---

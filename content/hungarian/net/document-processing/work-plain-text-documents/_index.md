@@ -3,7 +3,6 @@ title: Egyszerű szöveges dokumentumok használata
 linktitle: Egyszerű szöveges dokumentumok használata
 second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan szerkeszthet egyszerű szöveges dokumentumokat a GroupDocs.Editor for .NET segítségével lépésenkénti útmutatónkkal. Egyszerűsítse a .NET-dokumentumszerkesztési folyamatot.
-type: docs
 weight: 15
 url: /hu/net/document-processing/work-plain-text-documents/
 ---
@@ -96,10 +95,10 @@ Végül mentse a szerkesztett dokumentumot DOCX és TXT formátumban is a megado
 System.Console.WriteLine("Document editing process completed successfully!");
 ```
 ## Következtetés
- Gratulálunk! Sikeresen szerkesztett egy egyszerű szöveges dokumentumot a GroupDocs.Editor for .NET segítségével. Ez a hatékony eszköz leegyszerűsíti a dokumentumok szerkesztését, így könnyen integrálható a .NET-alkalmazásokba. Függetlenül attól, hogy egyszerű szöveges fájlokat vagy összetett dokumentumformátumokat kezel, a GroupDocs.Editor mindent megtalál. Fedezzen fel további funkciókat és képességeket, ha felkeresi a[GroupDocs.Editor dokumentáció](https://reference.groupdocs.com/editor/net/).
+ Gratulálunk! Sikeresen szerkesztett egy egyszerű szöveges dokumentumot a GroupDocs.Editor for .NET segítségével. Ez a hatékony eszköz leegyszerűsíti a dokumentumok szerkesztését, így könnyen integrálható a .NET-alkalmazásokba. Függetlenül attól, hogy egyszerű szöveges fájlokat vagy összetett dokumentumformátumokat kezel, a GroupDocs.Editor mindent megtalál. Fedezzen fel további funkciókat és képességeket, ha felkeresi a[GroupDocs.Editor dokumentáció](https://tutorials.groupdocs.com/editor/net/).
 ## GYIK
 ### Milyen fájlformátumokat támogat a GroupDocs.Editor for .NET?
- A GroupDocs.Editor for .NET a fájlformátumok széles skáláját támogatja, beleértve a DOCX, TXT, HTML és egyebeket. Ellenőrizd a[dokumentáció](https://reference.groupdocs.com/editor/net/) a teljes listáért.
+ A GroupDocs.Editor for .NET a fájlformátumok széles skáláját támogatja, beleértve a DOCX, TXT, HTML és egyebeket. Ellenőrizd a[dokumentáció](https://tutorials.groupdocs.com/editor/net/) a teljes listáért.
 ### Hogyan szerezhetem be a GroupDocs.Editor ingyenes próbaverzióját .NET-hez?
  Letöltheti a GroupDocs.Editor .NET-hez készült ingyenes próbaverzióját a webhelyről[kiadások oldala](https://releases.groupdocs.com/).
 ### Vásárolhatok ideiglenes licencet a GroupDocs.Editor for .NET számára?
@@ -107,4 +106,4 @@ Igen, ideiglenes engedélyt kaphat a[GroupDocs vásárlási oldal](https://purch
 ### Hol kaphatok támogatást a GroupDocs.Editor for .NET-hez?
  A támogatás a következőn keresztül érhető el[GroupDocs.Editor támogatási fórum](https://forum.groupdocs.com/c/editor/20).
 ### Elérhető-e részletes dokumentáció a GroupDocs.Editor for .NET-hez?
- Igen, a részletes dokumentáció elérhető a[GroupDocs.Editor dokumentációs oldal](https://reference.groupdocs.com/editor/net/).
+ Igen, a részletes dokumentáció elérhető a[GroupDocs.Editor dokumentációs oldal](https://tutorials.groupdocs.com/editor/net/).

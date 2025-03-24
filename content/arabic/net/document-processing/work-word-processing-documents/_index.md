@@ -3,7 +3,6 @@ title: العمل مع مستندات معالجة النصوص
 linktitle: العمل مع مستندات معالجة النصوص
 second_title: GroupDocs.Editor .NET API
 description: قم بتحرير مستندات معالجة Word بسهولة باستخدام GroupDocs.Editor لـ .NET. اتبع برنامجنا التعليمي المفصل خطوة بخطوة لتعزيز مهاراتك في إدارة المستندات.
-type: docs
 weight: 19
 url: /ar/net/document-processing/work-word-processing-documents/
 ---
@@ -117,7 +116,7 @@ Console.WriteLine("Document editing and saving process completed successfully.")
 لقد أكملت الآن دليلاً شاملاً خطوة بخطوة حول كيفية العمل مع مستندات معالجة Word باستخدام GroupDocs.Editor لـ .NET. تعمل هذه الأداة القوية على تسهيل التعامل مع المستندات وتحريرها برمجيًا، مما يوفر نطاقًا واسعًا من الخيارات لتخصيص سير عمل معالجة المستندات لديك.
 ## الأسئلة الشائعة
 ### هل يمكنني استخدام GroupDocs.Editor لـ .NET لتحرير تنسيقات المستندات الأخرى؟
- نعم، يدعم GroupDocs.Editor تنسيقات المستندات المختلفة بما في ذلك PDF وHTML والمزيد. افحص ال[توثيق](https://reference.groupdocs.com/editor/net/) للحصول على قائمة كاملة من التنسيقات المدعومة.
+ نعم، يدعم GroupDocs.Editor تنسيقات المستندات المختلفة بما في ذلك PDF وHTML والمزيد. افحص ال[توثيق](https://tutorials.groupdocs.com/editor/net/) للحصول على قائمة كاملة من التنسيقات المدعومة.
 ### هل من الممكن استخدام GroupDocs.Editor بدون ترخيص؟
  يمكنك استخدام نسخة تجريبية مجانية أو طلب ترخيص مؤقت. للاستخدام الممتد، يوصى بشراء ترخيص. احصل على ترخيص[هنا](https://purchase.groupdocs.com/buy).
 ### كيف أتعامل مع المستندات الكبيرة التي تسبب OutOfMemoryException؟

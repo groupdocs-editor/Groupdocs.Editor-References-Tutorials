@@ -3,7 +3,6 @@ title: Načítání obsahu HTML
 linktitle: Načítání obsahu HTML
 second_title: GroupDocs.Editor .NET API
 description: Objevte, jak načíst obsah HTML pomocí GroupDocs.Editor pro .NET. Součástí jsou podrobné pokyny pro načítání obsahu těla a vlastních předpon.
-type: docs
 weight: 22
 url: /cs/net/html-content-retrieval/
 ---

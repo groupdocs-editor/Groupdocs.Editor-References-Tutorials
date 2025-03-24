@@ -3,7 +3,6 @@ title: दस्तावेज़ प्रारूपों के साथ 
 linktitle: दस्तावेज़ प्रारूपों के साथ कार्य करें
 second_title: GroupDocs.Editor .NET एपीआई
 description: .NET के लिए GroupDocs.Editor का उपयोग करके विभिन्न दस्तावेज़ स्वरूपों को प्रोग्रामेटिक रूप से संपादित करना सीखें। सहज एकीकरण के लिए उदाहरणों के साथ चरण-दर-चरण मार्गदर्शिका।
-type: docs
 weight: 13
 url: /hi/net/document-processing/work-document-formats/
 ---
@@ -159,4 +158,4 @@ GroupDocs.Editor वर्ड प्रोसेसिंग, स्प्रे
 ### क्या मैं GroupDocs.Editor का निःशुल्क उपयोग कर सकता हूँ?
  आप एक का उपयोग कर सकते हैं[मुफ्त परीक्षण](https://releases.groupdocs.com/) सीमित सुविधाओं के साथ या प्राप्त करें[अस्थायी लाइसेंस](https://purchase.groupdocs.com/temporary-license/) पूर्ण पहुँच के लिए.
 ### मुझे और अधिक संसाधन और सहायता कहां मिल सकती है?
- दौरा करना[GroupDocs.Editor दस्तावेज़ीकरण](https://reference.groupdocs.com/editor/net/) विस्तृत जानकारी के लिए, या उनकी जाँच करें[सहयता मंच](https://forum.groupdocs.com/c/editor/20) मदद के लिए।
+ दौरा करना[GroupDocs.Editor दस्तावेज़ीकरण](https://tutorials.groupdocs.com/editor/net/) विस्तृत जानकारी के लिए, या उनकी जाँच करें[सहयता मंच](https://forum.groupdocs.com/c/editor/20) मदद के लिए।

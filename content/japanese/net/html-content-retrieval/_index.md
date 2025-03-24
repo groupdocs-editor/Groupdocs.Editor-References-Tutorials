@@ -3,7 +3,6 @@ title: HTML コンテンツの取得
 linktitle: HTML コンテンツの取得
 second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用して HTML コンテンツを取得する方法について説明します。本文コンテンツとカスタム プレフィックスを取得するためのステップ バイ ステップ ガイドが含まれています。
-type: docs
 weight: 22
 url: /ja/net/html-content-retrieval/
 ---

@@ -3,7 +3,6 @@ title: レガシーフォームフィールドコレクションの操作
 linktitle: レガシーフォームフィールドコレクションの操作
 second_title: GroupDocs.Editor .NET API
 description: 詳細なガイドで、GroupDocs.Editor for .NET を使用して従来のフォーム フィールドを管理する方法を学びます。テキスト フィールド、チェックボックス、日付などの処理に最適です。
-type: docs
 weight: 12
 url: /ja/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## ステップ8: 結論
 これらの手順に従うことで、GroupDocs.Editor for .NET を使用してドキュメント内の従来のフォーム フィールドを効果的に管理および操作できます。テキスト フィールド、チェック ボックス、日付、数値、ドロップダウンなど、このガイドでは、各タイプを処理するための明確で簡潔な方法を説明します。
 ## 結論
-適切なツールを使用すれば、ドキュメント内の従来のフォームフィールドの操作は簡単です。GroupDocs.Editor for .NET は、これらのフィールドを効率的に管理するための強力なソリューションを提供します。このステップバイステップのガイドに従うことで、ドキュメント内のさまざまなフォームフィールドを簡単に操作できるようになります。[ドキュメンテーション](https://reference.groupdocs.com/editor/net/)より高度な機能とオプションについては、こちらをご覧ください。
+適切なツールを使用すれば、ドキュメント内の従来のフォームフィールドの操作は簡単です。GroupDocs.Editor for .NET は、これらのフィールドを効率的に管理するための強力なソリューションを提供します。このステップバイステップのガイドに従うことで、ドキュメント内のさまざまなフォームフィールドを簡単に操作できるようになります。[ドキュメンテーション](https://tutorials.groupdocs.com/editor/net/)より高度な機能とオプションについては、こちらをご覧ください。
 ## よくある質問
 ### 1. パスワードで保護されたドキュメントで GroupDocs.Editor for .NET を使用できますか?
 はい、読み込みオプションでパスワードを指定して、パスワードで保護されたドキュメントを処理できます。
@@ -104,4 +103,4 @@ foreach (var formField in collection)
 ### 4. GroupDocs.Editor for .NET のライセンスを購入できますか?
 はい、ライセンスは以下から購入できます。[ここ](https://purchase.groupdocs.com/buy).
 ### 5. GroupDocs.Editor for .NET のドキュメントはどこにありますか?
-ドキュメントは入手可能です[ここ](https://reference.groupdocs.com/editor/net/).
+ドキュメントは入手可能です[ここ](https://tutorials.groupdocs.com/editor/net/).

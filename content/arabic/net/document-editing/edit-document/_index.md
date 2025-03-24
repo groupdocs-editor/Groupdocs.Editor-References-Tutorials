@@ -3,7 +3,6 @@ title: تحرير المستند
 linktitle: تحرير المستند
 second_title: GroupDocs.Editor .NET API
 description: تعلم كيفية تحرير المستندات بسهولة باستخدام GroupDocs.Editor لـ .NET. دليل خطوة بخطوة لمعالجة النصوص وملفات جداول البيانات.
-type: docs
 weight: 11
 url: /ar/net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 يضمن التخلص السليم عدم وجود تسرب للذاكرة أو مشكلات في الأداء في تطبيقك.
 ## خاتمة
- تهانينا! لديك الآن فهم قوي لكيفية استخدام GroupDocs.Editor لـ .NET لتحميل المحتوى وتحريره واستخراجه من مستندات معالجة الكلمات وجداول البيانات. تعمل هذه الأداة القوية على تبسيط مهام تحرير المستندات وتتكامل بسلاسة مع تطبيقات .NET الخاصة بك. لمزيد من التفاصيل، يمكنك استكشاف[توثيق](https://reference.groupdocs.com/editor/net/), [تحميل أحدث نسخة](https://releases.groupdocs.com/editor/net/) ، أو الحصول على[ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/).
+ تهانينا! لديك الآن فهم قوي لكيفية استخدام GroupDocs.Editor لـ .NET لتحميل المحتوى وتحريره واستخراجه من مستندات معالجة الكلمات وجداول البيانات. تعمل هذه الأداة القوية على تبسيط مهام تحرير المستندات وتتكامل بسلاسة مع تطبيقات .NET الخاصة بك. لمزيد من التفاصيل، يمكنك استكشاف[توثيق](https://tutorials.groupdocs.com/editor/net/), [تحميل أحدث نسخة](https://releases.groupdocs.com/editor/net/) ، أو الحصول على[ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/).
 ## الأسئلة الشائعة
 ### هل يمكنني تحرير مستندات PDF باستخدام GroupDocs.Editor لـ .NET؟
 حاليًا، يدعم GroupDocs.Editor for .NET بشكل أساسي تنسيقات معالجة الكلمات وجداول البيانات والعروض التقديمية.

@@ -3,7 +3,6 @@ title: Belgeyi Kaydet
 linktitle: Belgeyi Kaydet
 second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET'i kullanarak belgeleri zahmetsizce düzenleyin ve kaydedin. Bu adım adım kılavuz, geliştiriciler için süreci basitleştirir.
-type: docs
 weight: 14
 url: /tr/net/document-editing/save-document/
 ---
@@ -80,7 +79,7 @@ Bu adımları izleyerek, GroupDocs.Editor for .NET'i kullanarak belgeleri veriml
 GroupDocs.Editor for .NET ile belgeleri programlı olarak düzenlemek ve kaydetmek hiç bu kadar kolay olmamıştı. Bu kılavuz, bir belgenin yüklenmesinden onu çeşitli formatlarda kaydetmeye kadar tüm süreç boyunca size yol gösterdi. GroupDocs.Editor ile belge düzenleme sürecini kolaylaştıran çok yönlü ve sağlam bir çözüm parmaklarınızın ucundadır.
 ## SSS'ler
 ### GroupDocs.Editor hangi dosya formatlarını destekliyor?
-GroupDocs.Editor, DOCX, RTF, TXT ve çok daha fazlası dahil olmak üzere çeşitli dosya formatlarını destekler. Tam liste için şu adrese göz atın:[dokümantasyon](https://reference.groupdocs.com/editor/net/).
+GroupDocs.Editor, DOCX, RTF, TXT ve çok daha fazlası dahil olmak üzere çeşitli dosya formatlarını destekler. Tam liste için şu adrese göz atın:[dokümantasyon](https://tutorials.groupdocs.com/editor/net/).
 ### Satın almadan önce GroupDocs.Editor'ı deneyebilir miyim?
  Evet, alabilirsiniz[ücretsiz deneme](https://releases.groupdocs.com/) GroupDocs.Editor'un özelliklerini test etmek için.
 ### Sorunla karşılaşırsam herhangi bir destek var mı?

@@ -3,7 +3,6 @@ title: Werken met PDF-documenten
 linktitle: Werken met PDF-documenten
 second_title: GroupDocs.Editor .NET API
 description: Leer in deze tutorial hoe u PDF-documenten kunt bewerken met GroupDocs.Editor voor .NET. Wijzig inhoud, behandel grote bestanden en sla uw bewerkingen veilig op.
-type: docs
 weight: 14
 url: /nl/net/document-processing/work-pdf-documents/
 ---

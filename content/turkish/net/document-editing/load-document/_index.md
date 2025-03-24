@@ -3,7 +3,6 @@ title: Belgeyi Yükle
 linktitle: Belgeyi Yükle
 second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET ile belgeleri programlı olarak nasıl düzenleyeceğinizi öğrenin. Belgelerin yüklenmesi, parola korumalı dosyaların işlenmesi ve daha fazlası için adım adım kılavuz.
-type: docs
 weight: 13
 url: /tr/net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 Tebrikler! GroupDocs.Editor for .NET kullanarak belgeleri çeşitli yollarla nasıl yükleyeceğinizi başarıyla öğrendiniz. İster yerel dosyalarla, ister parola korumalı belgelerle, ister bayt akışlarıyla ilgileniyor olun, GroupDocs.Editor belge düzenleme ihtiyaçlarınız için esnek ve güçlü bir çözüm sunar. Uygulamalarınızda optimum performansı ve kaynak yönetimini sağlamak için her zaman kaynakları elden çıkarmayı unutmayın.
 ## SSS'ler
 ### GroupDocs.Editor for .NET hangi dosya formatlarını destekliyor?
- GroupDocs.Editor, DOCX, XLSX, PPTX, HTML ve çok daha fazlasını içeren çok çeşitli dosya formatlarını destekler. Tam liste için bkz.[dokümantasyon](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor, DOCX, XLSX, PPTX, HTML ve çok daha fazlasını içeren çok çeşitli dosya formatlarını destekler. Tam liste için bkz.[dokümantasyon](https://tutorials.groupdocs.com/editor/net/).
 ### Parola korumalı belgeleri nasıl yönetirim?
  gibi yükleme seçeneklerini kullanabilirsiniz.`WordProcessingLoadOptions` Parola korumalı belgeleri yüklerken parolayı belirtmek için.
 ### GroupDocs.Editor'ı bir web uygulamasında kullanabilir miyim?

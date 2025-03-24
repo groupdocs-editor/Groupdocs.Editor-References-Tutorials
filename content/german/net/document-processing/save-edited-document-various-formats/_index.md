@@ -3,7 +3,6 @@ title: Bearbeitetes Dokument in verschiedenen Formaten speichern
 linktitle: Bearbeitetes Dokument in verschiedenen Formaten speichern
 second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie in dieser umfassenden Schritt-für-Schritt-Anleitung, wie Sie bearbeitete Dokumente mit GroupDocs.Editor für .NET in verschiedenen Formaten speichern.
-type: docs
 weight: 11
 url: /de/net/document-processing/save-edited-document-various-formats/
 ---
@@ -92,4 +91,4 @@ GroupDocs.Editor unterstützt eine Vielzahl von Formaten, darunter DOCX, PDF, HT
 ### Wie erhalte ich eine temporäre Lizenz für GroupDocs.Editor?
  Sie können eine temporäre Lizenz erhalten[Hier](https://purchase.groupdocs.com/temporary-license/).
 ### Wo finde ich weitere Dokumentation und Support?
- Detaillierte Dokumentation ist verfügbar[Hier](https://reference.groupdocs.com/editor/net/) , und Sie können Unterstützung erhalten[Hier](https://forum.groupdocs.com/c/editor/20).
+ Detaillierte Dokumentation ist verfügbar[Hier](https://tutorials.groupdocs.com/editor/net/) , und Sie können Unterstützung erhalten[Hier](https://forum.groupdocs.com/c/editor/20).

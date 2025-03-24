@@ -3,7 +3,6 @@ title: Penanganan CSS
 linktitle: Penanganan CSS
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara menangani konten CSS secara efektif dengan GroupDocs.Editor untuk .NET. Ekstrak konten CSS eksternal dan tangani konten CSS dengan awalan dengan mudah.
-type: docs
 weight: 21
 url: /id/net/css-handling/
 ---

@@ -3,7 +3,6 @@ title: Unlocking Document Management with GroupDocs.Editor
 linktitle: GroupDocs.Editor Tutorials
 additionalTitle: GroupDocs API References
 description: Master document editing effortlessly with GroupDocs.Editor for .NET & Java. Streamline workflow, manage CSS, retrieve HTML content, & more!
-type: docs
 weight: 11
 url: /
 is_root: true

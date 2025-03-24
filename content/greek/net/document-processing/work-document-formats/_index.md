@@ -3,7 +3,6 @@ title: Εργασία με μορφές εγγράφων
 linktitle: Εργασία με μορφές εγγράφων
 second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να χρησιμοποιείτε το GroupDocs.Editor για .NET για την επεξεργασία διαφόρων μορφών εγγράφων μέσω προγραμματισμού. Οδηγός βήμα προς βήμα με παραδείγματα για απρόσκοπτη ενσωμάτωση.
-type: docs
 weight: 13
 url: /el/net/document-processing/work-document-formats/
 ---
@@ -159,4 +158,4 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 ### Μπορώ να χρησιμοποιήσω το GroupDocs.Editor δωρεάν;
  Μπορείτε να χρησιμοποιήσετε α[δωρεάν δοκιμή](https://releases.groupdocs.com/) με περιορισμένα χαρακτηριστικά ή αποκτήστε α[προσωρινή άδεια](https://purchase.groupdocs.com/temporary-license/) για πλήρη πρόσβαση.
 ### Πού μπορώ να βρω περισσότερους πόρους και υποστήριξη;
- Επισκέψου το[Τεκμηρίωση GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) για λεπτομερείς πληροφορίες ή ελέγξτε τους[φόρουμ υποστήριξης](https://forum.groupdocs.com/c/editor/20) για βοήθεια.
+ Επισκέψου το[Τεκμηρίωση GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) για λεπτομερείς πληροφορίες ή ελέγξτε τους[φόρουμ υποστήριξης](https://forum.groupdocs.com/c/editor/20) για βοήθεια.

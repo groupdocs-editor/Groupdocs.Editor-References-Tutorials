@@ -3,7 +3,6 @@ title: Práce s formáty dokumentů
 linktitle: Práce s formáty dokumentů
 second_title: GroupDocs.Editor .NET API
 description: Naučte se používat GroupDocs.Editor pro .NET k programové úpravě různých formátů dokumentů. Podrobný průvodce s příklady bezproblémové integrace.
-type: docs
 weight: 13
 url: /cs/net/document-processing/work-document-formats/
 ---
@@ -159,4 +158,4 @@ GroupDocs.Editor podporuje mimo jiné textové, tabulkové, prezentační a text
 ### Mohu používat GroupDocs.Editor zdarma?
  Můžete použít a[zkušební verze zdarma](https://releases.groupdocs.com/) s omezenými funkcemi nebo získat a[dočasná licence](https://purchase.groupdocs.com/temporary-license/) pro plný přístup.
 ### Kde najdu další zdroje a podporu?
- Navštivte[GroupDocs.Editor dokumentace](https://reference.groupdocs.com/editor/net/) pro podrobné informace, nebo se podívejte na jejich[Fórum podpory](https://forum.groupdocs.com/c/editor/20) pro pomoc.
+ Navštivte[GroupDocs.Editor dokumentace](https://tutorials.groupdocs.com/editor/net/) pro podrobné informace, nebo se podívejte na jejich[Fórum podpory](https://forum.groupdocs.com/c/editor/20) pro pomoc.

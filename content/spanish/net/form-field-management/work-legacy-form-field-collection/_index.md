@@ -3,7 +3,6 @@ title: Trabajar con la colección de campos de formulario heredados
 linktitle: Trabajar con la colección de campos de formulario heredados
 second_title: API GroupDocs.Editor .NET
 description: Aprenda a administrar campos de formularios heredados usando GroupDocs.Editor para .NET con nuestra guía detallada. Perfecto para manejar campos de texto, casillas de verificación, fechas y más.
-type: docs
 weight: 12
 url: /es/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## Paso 8: Conclusión
 Si sigue estos pasos, podrá administrar e interactuar de manera efectiva con los campos de formulario heredados en sus documentos usando GroupDocs.Editor para .NET. Ya sean campos de texto, casillas de verificación, fechas, números o menús desplegables, esta guía proporciona una manera clara y concisa de manejar cada tipo.
 ## Conclusión
- Trabajar con campos de formulario heredados en documentos puede resultar sencillo si se utilizan las herramientas adecuadas. GroupDocs.Editor para .NET proporciona una solución sólida para administrar estos campos de manera eficiente. Si sigue esta guía paso a paso, ahora debería poder manipular varios campos de formulario en sus documentos con facilidad. No olvides explorar el[documentación](https://reference.groupdocs.com/editor/net/)para funciones y opciones más avanzadas.
+ Trabajar con campos de formulario heredados en documentos puede resultar sencillo si se utilizan las herramientas adecuadas. GroupDocs.Editor para .NET proporciona una solución sólida para administrar estos campos de manera eficiente. Si sigue esta guía paso a paso, ahora debería poder manipular varios campos de formulario en sus documentos con facilidad. No olvides explorar el[documentación](https://tutorials.groupdocs.com/editor/net/)para funciones y opciones más avanzadas.
 ## Preguntas frecuentes
 ### 1. ¿Puedo utilizar GroupDocs.Editor para .NET con documentos protegidos con contraseña?
 Sí, puede especificar la contraseña en las opciones de carga para manejar documentos protegidos con contraseña.
@@ -104,4 +103,4 @@ Sí, puede especificar la contraseña en las opciones de carga para manejar docu
 ### 4. ¿Puedo comprar una licencia de GroupDocs.Editor para .NET?
  Sí, puedes comprar una licencia en[aquí](https://purchase.groupdocs.com/buy).
 ### 5. ¿Dónde puedo encontrar la documentación de GroupDocs.Editor para .NET?
-La documentación está disponible.[aquí](https://reference.groupdocs.com/editor/net/).
+La documentación está disponible.[aquí](https://tutorials.groupdocs.com/editor/net/).

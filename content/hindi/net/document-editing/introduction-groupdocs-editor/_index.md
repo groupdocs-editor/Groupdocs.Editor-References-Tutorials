@@ -3,7 +3,6 @@ title: .NET के लिए GroupDocs.Editor का परिचय
 linktitle: .NET के लिए GroupDocs.Editor का परिचय
 second_title: GroupDocs.Editor .NET एपीआई
 description: इस विस्तृत चरण-दर-चरण मार्गदर्शिका के साथ दस्तावेज़ों को प्रोग्रामेटिक रूप से संपादित करने के लिए GroupDocs.Editor for .NET का उपयोग करना सीखें।
-type: docs
 weight: 12
 url: /hi/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ editor.Dispose();
 ### क्या GroupDocs.Editor को क्लाउड स्टोरेज के साथ एकीकृत करना संभव है?
 हां, आप अपने दस्तावेज़ों को प्रबंधित करने के लिए विभिन्न क्लाउड स्टोरेज समाधानों के साथ GroupDocs.Editor को एकीकृत कर सकते हैं।
 ### मैं .NET के लिए GroupDocs.Editor के दस्तावेज़ कहां पा सकता हूं?
-दस्तावेज़ उपलब्ध है[यहाँ](https://reference.groupdocs.com/editor/net/).
+दस्तावेज़ उपलब्ध है[यहाँ](https://tutorials.groupdocs.com/editor/net/).

@@ -3,7 +3,6 @@ title: Szövegszerkesztő dokumentumok használata
 linktitle: Szövegszerkesztő dokumentumok használata
 second_title: GroupDocs.Editor .NET API
 description: Könnyedén szerkessze a szövegszerkesztő dokumentumokat a GroupDocs.Editor for .NET segítségével. Kövesse részletes, lépésről lépésre bemutató oktatóanyagunkat, hogy javítsa dokumentumkezelési készségeit.
-type: docs
 weight: 19
 url: /hu/net/document-processing/work-word-processing-documents/
 ---
@@ -117,7 +116,7 @@ Console.WriteLine("Document editing and saving process completed successfully.")
 Mostanra elkészült egy átfogó, lépésről lépésre bemutatott útmutató arról, hogyan dolgozhat szövegszerkesztő dokumentumokkal a GroupDocs.Editor for .NET használatával. Ez a hatékony eszköz megkönnyíti a dokumentumok programozott kezelését és szerkesztését, és számos lehetőséget kínál a dokumentumfeldolgozási munkafolyamat testreszabásához.
 ## GYIK
 ### Használhatom a GroupDocs.Editor for .NET programot más dokumentumformátumok szerkesztésére?
- Igen, a GroupDocs.Editor különféle dokumentumformátumokat támogat, beleértve a PDF-t, HTML-t és egyebeket. Ellenőrizd a[dokumentáció](https://reference.groupdocs.com/editor/net/) a támogatott formátumok teljes listájához.
+ Igen, a GroupDocs.Editor különféle dokumentumformátumokat támogat, beleértve a PDF-t, HTML-t és egyebeket. Ellenőrizd a[dokumentáció](https://tutorials.groupdocs.com/editor/net/) a támogatott formátumok teljes listájához.
 ### Használható a GroupDocs.Editor licenc nélkül?
  Használhat ingyenes próbaverziót, vagy kérhet ideiglenes licencet. Hosszabb használathoz licenc vásárlása javasolt. Szerezzen jogosítványt[itt](https://purchase.groupdocs.com/buy).
 ### Hogyan kezelhetek olyan nagy dokumentumokat, amelyek OutOfMemoryException kivételt okoznak?

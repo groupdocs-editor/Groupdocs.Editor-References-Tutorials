@@ -3,7 +3,6 @@ title: Lisansı Akıştan Ayarla
 linktitle: Lisansı Akıştan Ayarla
 second_title: GroupDocs.Editor .NET API'si
 description: Belgeleri program aracılığıyla düzenlemek için Groupdocs.Editor for .NET'i nasıl kullanacağınızı öğrenin. Kusursuz entegrasyon ve gelişmiş özellikler için bu kapsamlı programı takip edin.
-type: docs
 weight: 11
 url: /tr/net/quick-start-guide/set-license-from-stream/
 ---
@@ -146,7 +145,7 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 }
 ```
 ## Çözüm
- Groupdocs.Editor for .NET, belge düzenleme süreçlerinizi önemli ölçüde kolaylaştırabilecek çok yönlü ve güçlü bir araçtır. Güçlü özellikleri ve birden fazla belge formatı desteği ile bu kitaplığı .NET uygulamalarınıza entegre etmek, şüphesiz üretkenliğinizi ve yeteneklerinizi artıracaktır. Keşfetmeyi unutmayın[dokümantasyon](https://reference.groupdocs.com/editor/net/) daha ayrıntılı bilgi ve gelişmiş kullanım senaryoları için.
+ Groupdocs.Editor for .NET, belge düzenleme süreçlerinizi önemli ölçüde kolaylaştırabilecek çok yönlü ve güçlü bir araçtır. Güçlü özellikleri ve birden fazla belge formatı desteği ile bu kitaplığı .NET uygulamalarınıza entegre etmek, şüphesiz üretkenliğinizi ve yeteneklerinizi artıracaktır. Keşfetmeyi unutmayın[dokümantasyon](https://tutorials.groupdocs.com/editor/net/) daha ayrıntılı bilgi ve gelişmiş kullanım senaryoları için.
 ## SSS'ler
 ### Groupdocs.Editor for .NET'i lisans olmadan kullanabilir miyim?
  Hayır, Groupdocs.Editor for .NET'i kullanmak için geçerli bir lisansa ihtiyacınız var. Ancak talepte bulunabilirsiniz[geçici lisans](https://purchase.groupdocs.com/temporary-license/) Evrim için.
@@ -157,4 +156,4 @@ Evet, PDF dosyalarının yanı sıra Word ve Excel gibi diğer çeşitli formatl
 ### Groupdocs.Editor kullanarak belgeleri parolayla korumak mümkün mü?
 Evet, belgeleri kaydederken parolaları ve diğer güvenlik seçeneklerini ayarlayabilirsiniz.
 ### Groupdocs.Editor for .NET hangi dosya formatlarını destekler?
- DOCX, XLSX, PDF ve diğerleri dahil olmak üzere çok çeşitli formatları destekler. Bakın[dokümantasyon](https://reference.groupdocs.com/editor/net/) tam bir liste için.
+ DOCX, XLSX, PDF ve diğerleri dahil olmak üzere çok çeşitli formatları destekler. Bakın[dokümantasyon](https://tutorials.groupdocs.com/editor/net/) tam bir liste için.

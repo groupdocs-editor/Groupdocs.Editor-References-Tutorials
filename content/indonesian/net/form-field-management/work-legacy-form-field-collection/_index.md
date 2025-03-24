@@ -3,7 +3,6 @@ title: Bekerja dengan Koleksi Bidang Formulir Warisan
 linktitle: Bekerja dengan Koleksi Bidang Formulir Warisan
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengelola bidang formulir lama menggunakan GroupDocs.Editor untuk .NET dengan panduan terperinci kami. Sempurna untuk menangani bidang teks, kotak centang, tanggal, dan banyak lagi.
-type: docs
 weight: 12
 url: /id/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## Langkah 8: Kesimpulan
 Dengan mengikuti langkah-langkah ini, Anda dapat secara efektif mengelola dan berinteraksi dengan bidang formulir lama di dokumen Anda menggunakan GroupDocs.Editor untuk .NET. Baik itu bidang teks, kotak centang, tanggal, angka, atau dropdown, panduan ini memberikan cara yang jelas dan ringkas untuk menangani setiap jenis.
 ## Kesimpulan
- Bekerja dengan bidang formulir lama di dokumen dapat dilakukan dengan mudah jika menggunakan alat yang tepat. GroupDocs.Editor untuk .NET memberikan solusi tangguh untuk mengelola bidang ini secara efisien. Dengan mengikuti panduan langkah demi langkah ini, Anda sekarang dapat memanipulasi berbagai bidang formulir di dokumen Anda dengan mudah. Jangan lupa untuk menjelajahinya[dokumentasi](https://reference.groupdocs.com/editor/net/)untuk fitur dan opsi lebih lanjut.
+ Bekerja dengan bidang formulir lama di dokumen dapat dilakukan dengan mudah jika menggunakan alat yang tepat. GroupDocs.Editor untuk .NET memberikan solusi tangguh untuk mengelola bidang ini secara efisien. Dengan mengikuti panduan langkah demi langkah ini, Anda sekarang dapat memanipulasi berbagai bidang formulir di dokumen Anda dengan mudah. Jangan lupa untuk menjelajahinya[dokumentasi](https://tutorials.groupdocs.com/editor/net/)untuk fitur dan opsi lebih lanjut.
 ## FAQ
 ### 1. Bisakah saya menggunakan GroupDocs.Editor untuk .NET dengan dokumen yang dilindungi kata sandi?
 Ya, Anda dapat menentukan kata sandi dalam opsi pemuatan untuk menangani dokumen yang dilindungi kata sandi.
@@ -104,4 +103,4 @@ Ya, Anda dapat menentukan kata sandi dalam opsi pemuatan untuk menangani dokumen
 ### 4. Dapatkah saya membeli lisensi GroupDocs.Editor untuk .NET?
  Ya, Anda dapat membeli lisensi dari[Di Sini](https://purchase.groupdocs.com/buy).
 ### 5. Di mana saya dapat menemukan dokumentasi GroupDocs.Editor untuk .NET?
-Dokumentasi tersedia[Di Sini](https://reference.groupdocs.com/editor/net/).
+Dokumentasi tersedia[Di Sini](https://tutorials.groupdocs.com/editor/net/).

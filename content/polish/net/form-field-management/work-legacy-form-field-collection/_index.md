@@ -3,7 +3,6 @@ title: Pracuj ze starszą kolekcją pól formularzy
 linktitle: Pracuj ze starszą kolekcją pól formularzy
 second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak zarządzać starszymi polami formularzy za pomocą GroupDocs.Editor dla .NET, korzystając z naszego szczegółowego przewodnika. Idealny do obsługi pól tekstowych, pól wyboru, dat i nie tylko.
-type: docs
 weight: 12
 url: /pl/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## Krok 8: Wniosek
 Wykonując poniższe kroki, możesz efektywnie zarządzać polami formularzy w dokumentach i wchodzić w interakcję ze starszymi polami formularzy za pomocą programu GroupDocs.Editor dla .NET. Niezależnie od tego, czy są to pola tekstowe, pola wyboru, daty, liczby czy listy rozwijane, ten przewodnik zapewnia jasny i zwięzły sposób obsługi każdego typu.
 ## Wniosek
- Praca ze starszymi polami formularzy w dokumentach może być prosta, jeśli użyje się odpowiednich narzędzi. GroupDocs.Editor dla .NET zapewnia solidne rozwiązanie do efektywnego zarządzania tymi polami. Postępując zgodnie z tym przewodnikiem krok po kroku, powinno być teraz możliwe łatwe manipulowanie różnymi polami formularzy w dokumentach. Nie zapomnij zbadać[dokumentacja](https://reference.groupdocs.com/editor/net/)aby uzyskać bardziej zaawansowane funkcje i opcje.
+ Praca ze starszymi polami formularzy w dokumentach może być prosta, jeśli użyje się odpowiednich narzędzi. GroupDocs.Editor dla .NET zapewnia solidne rozwiązanie do efektywnego zarządzania tymi polami. Postępując zgodnie z tym przewodnikiem krok po kroku, powinno być teraz możliwe łatwe manipulowanie różnymi polami formularzy w dokumentach. Nie zapomnij zbadać[dokumentacja](https://tutorials.groupdocs.com/editor/net/)aby uzyskać bardziej zaawansowane funkcje i opcje.
 ## Często zadawane pytania
 ### 1. Czy mogę używać GroupDocs.Editor dla .NET z dokumentami chronionymi hasłem?
 Tak, możesz określić hasło w opcjach ładowania, aby obsługiwać dokumenty chronione hasłem.
@@ -104,4 +103,4 @@ Tak, możesz określić hasło w opcjach ładowania, aby obsługiwać dokumenty 
 ### 4. Czy mogę kupić licencję na GroupDocs.Editor dla .NET?
  Tak, możesz kupić licencję od[Tutaj](https://purchase.groupdocs.com/buy).
 ### 5. Gdzie mogę znaleźć dokumentację GroupDocs.Editor dla .NET?
-Dokumentacja jest dostępna[Tutaj](https://reference.groupdocs.com/editor/net/).
+Dokumentacja jest dostępna[Tutaj](https://tutorials.groupdocs.com/editor/net/).

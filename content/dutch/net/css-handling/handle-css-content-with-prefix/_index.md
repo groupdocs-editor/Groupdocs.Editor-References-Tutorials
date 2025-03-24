@@ -3,7 +3,6 @@ title: Behandel CSS-inhoud met voorvoegsel
 linktitle: Behandel CSS-inhoud met voorvoegsel
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u met CSS-inhoud met voorvoegsel omgaat met Groupdocs.Editor voor .NET in deze gedetailleerde stapsgewijze zelfstudie. Perfect voor ontwikkelaars van alle niveaus.
-type: docs
 weight: 11
 url: /nl/net/css-handling/handle-css-content-with-prefix/
 ---
@@ -66,6 +65,6 @@ Ja, Groupdocs.Editor voor .NET ondersteunt verschillende documentformaten, waaro
 ### Hoe krijg ik een tijdelijke licentie voor Groupdocs.Editor voor .NET?
  U kunt een tijdelijke licentie verkrijgen[hier](https://purchase.groupdocs.com/temporary-license/).
 ### Waar kan ik gedetailleerde documentatie vinden voor Groupdocs.Editor voor .NET?
- Gedetailleerde documentatie is beschikbaar[hier](https://reference.groupdocs.com/editor/net/).
+ Gedetailleerde documentatie is beschikbaar[hier](https://tutorials.groupdocs.com/editor/net/).
 ### Welke ondersteuningsopties zijn beschikbaar voor Groupdocs.Editor voor .NET?
  U kunt ondersteuning krijgen[hier](https://forum.groupdocs.com/c/editor/20).

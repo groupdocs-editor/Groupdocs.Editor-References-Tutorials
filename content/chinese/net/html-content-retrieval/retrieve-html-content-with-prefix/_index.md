@@ -3,7 +3,6 @@ title: 检索带前缀的 HTML 内容
 linktitle: 检索带前缀的 HTML 内容
 second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 以及图像和样式表的自定义前缀从文档中检索 HTML 内容。包含分步指南。
-type: docs
 weight: 11
 url: /zh/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 此代码片段获取带有自定义前缀的 HTML 内容并将其打印到控制台。您可以根据需要进一步处理或保存此 HTML 内容。
 ## 结论
 就这样！按照这些步骤，您可以使用 GroupDocs.Editor for .NET 轻松检索文档中的 HTML 内容，并为图像和样式表添加自定义前缀。这个强大的工具简化了文档操作，让您可以专注于将文档编辑无缝集成到 .NET 应用程序中。
-如需了解更多详细信息，请查看[GroupDocs.Editor for .NET 文档](https://reference.groupdocs.com/editor/net/)。如果您有任何疑问或需要进一步帮助，请随时通过[支持论坛](https://forum.groupdocs.com/c/editor/20).
+如需了解更多详细信息，请查看[GroupDocs.Editor for .NET 文档](https://tutorials.groupdocs.com/editor/net/)。如果您有任何疑问或需要进一步帮助，请随时通过[支持论坛](https://forum.groupdocs.com/c/editor/20).
 ## 常见问题解答
 ### 我可以使用 GroupDocs.Editor for .NET 编辑哪些类型的文档？
 GroupDocs.Editor 支持各种文档格式，包括 Word、Excel、PowerPoint、PDF 等。

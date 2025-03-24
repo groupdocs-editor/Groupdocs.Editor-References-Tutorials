@@ -3,7 +3,6 @@ title: .NET için GroupDocs.Editor'a giriş
 linktitle: .NET için GroupDocs.Editor'a giriş
 second_title: GroupDocs.Editor .NET API'si
 description: Bu ayrıntılı adım adım kılavuzla belgeleri programlı olarak düzenlemek için GroupDocs.Editor for .NET'i nasıl kullanacağınızı öğrenin.
-type: docs
 weight: 12
 url: /tr/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ GroupDocs.Editor for .NET, diğerlerinin yanı sıra DOCX, PDF, HTML ve RTF dahi
 ### GroupDocs.Editor'ü bulut depolamayla entegre etmek mümkün mü?
 Evet, belgelerinizi yönetmek için GroupDocs.Editor'ı çeşitli bulut depolama çözümleriyle entegre edebilirsiniz.
 ### GroupDocs.Editor for .NET belgelerini nerede bulabilirim?
-Belgeler mevcut[Burada](https://reference.groupdocs.com/editor/net/).
+Belgeler mevcut[Burada](https://tutorials.groupdocs.com/editor/net/).

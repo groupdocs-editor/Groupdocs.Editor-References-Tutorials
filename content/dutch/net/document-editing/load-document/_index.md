@@ -3,7 +3,6 @@ title: Document laden
 linktitle: Document laden
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u documenten programmatisch kunt bewerken met GroupDocs.Editor voor .NET. Stapsgewijze handleiding voor het laden van documenten, het omgaan met met een wachtwoord beveiligde bestanden en meer.
-type: docs
 weight: 13
 url: /nl/net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 Gefeliciteerd! U hebt met succes geleerd hoe u op verschillende manieren documenten kunt laden met GroupDocs.Editor voor .NET. Of u nu te maken heeft met lokale bestanden, met een wachtwoord beveiligde documenten of bytestreams, GroupDocs.Editor biedt een flexibele en krachtige oplossing voor uw documentbewerkingsbehoeften. Vergeet niet om altijd over resources te beschikken om optimale prestaties en resourcebeheer in uw applicaties te garanderen.
 ## Veelgestelde vragen
 ### Welke bestandsformaten worden ondersteund door GroupDocs.Editor voor .NET?
- GroupDocs.Editor ondersteunt een breed scala aan bestandsindelingen, waaronder DOCX, XLSX, PPTX, HTML en nog veel meer. Voor een volledige lijst, zie de[documentatie](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor ondersteunt een breed scala aan bestandsindelingen, waaronder DOCX, XLSX, PPTX, HTML en nog veel meer. Voor een volledige lijst, zie de[documentatie](https://tutorials.groupdocs.com/editor/net/).
 ### Hoe ga ik om met wachtwoordbeveiligde documenten?
  U kunt laadopties gebruiken zoals`WordProcessingLoadOptions` om het wachtwoord op te geven bij het laden van met een wachtwoord beveiligde documenten.
 ### Kan ik GroupDocs.Editor gebruiken in een webapplicatie?

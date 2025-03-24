@@ -3,7 +3,6 @@ title: Licenc beállítása a Streamből
 linktitle: Licenc beállítása a Streamből
 second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan használhatja a Groupdocs.Editor for .NET-et dokumentumok programozott szerkesztéséhez. Kövesse ezt az átfogó leírást a zökkenőmentes integráció és a fejlett funkciók érdekében.
-type: docs
 weight: 11
 url: /hu/net/quick-start-guide/set-license-from-stream/
 ---
@@ -146,7 +145,7 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 }
 ```
 ## Következtetés
- A Groupdocs.Editor for .NET egy sokoldalú és hatékony eszköz, amely jelentősen leegyszerűsítheti a dokumentumszerkesztési folyamatokat. Robusztus funkcióinak és többféle dokumentumformátum támogatásának köszönhetően a könyvtár integrálása .NET-alkalmazásaiba kétségtelenül növeli a termelékenységet és a képességeket. Ne felejtse el felfedezni a[dokumentáció](https://reference.groupdocs.com/editor/net/) részletesebb információkért és speciális használati forgatókönyvekért.
+ A Groupdocs.Editor for .NET egy sokoldalú és hatékony eszköz, amely jelentősen leegyszerűsítheti a dokumentumszerkesztési folyamatokat. Robusztus funkcióinak és többféle dokumentumformátum támogatásának köszönhetően a könyvtár integrálása .NET-alkalmazásaiba kétségtelenül növeli a termelékenységet és a képességeket. Ne felejtse el felfedezni a[dokumentáció](https://tutorials.groupdocs.com/editor/net/) részletesebb információkért és speciális használati forgatókönyvekért.
 ## GYIK
 ### Használhatom a Groupdocs.Editort .NET-hez licenc nélkül?
  Nem, érvényes licenc szükséges a Groupdocs.Editor for .NET használatához. Ugyanakkor kérheti a[ideiglenes engedély](https://purchase.groupdocs.com/temporary-license/) értékeléshez.
@@ -157,4 +156,4 @@ Igen, támogatja a PDF-fájlok szerkesztését, valamint számos más formátumo
 ### Lehetséges-e jelszóval védeni a dokumentumokat a Groupdocs.Editor segítségével?
 Igen, beállíthat jelszavakat és egyéb biztonsági beállításokat a dokumentumok mentésekor.
 ### Milyen fájlformátumokat támogat a Groupdocs.Editor for .NET?
- A formátumok széles skáláját támogatja, beleértve a DOCX, XLSX, PDF és sok más formátumot. Utal[dokumentáció](https://reference.groupdocs.com/editor/net/) a teljes listáért.
+ A formátumok széles skáláját támogatja, beleértve a DOCX, XLSX, PDF és sok más formátumot. Utal[dokumentáció](https://tutorials.groupdocs.com/editor/net/) a teljes listáért.

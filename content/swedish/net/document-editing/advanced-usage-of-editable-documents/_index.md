@@ -3,7 +3,6 @@ title: Avancerad användning av redigerbara dokument
 linktitle: Avancerad användning av redigerbara dokument
 second_title: GroupDocs.Editor .NET API
 description: Lär dig avancerad användning av GroupDocs.Editor för .NET skapa, redigera och extrahera resurser från dokument programmatiskt.
-type: docs
 weight: 11
 url: /sv/net/document-editing/advanced-usage-of-editable-documents/
 ---

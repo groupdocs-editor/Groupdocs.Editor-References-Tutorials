@@ -3,7 +3,6 @@ title: 处理纯文本文档
 linktitle: 处理纯文本文档
 second_title: GroupDocs.Editor .NET API
 description: 通过我们的分步指南学习如何使用 GroupDocs.Editor for .NET 编辑纯文本文档。简化您的 .NET 文档编辑过程。
-type: docs
 weight: 15
 url: /zh/net/document-processing/work-plain-text-documents/
 ---
@@ -96,10 +95,10 @@ using (Editor editor = new Editor(inputFilePath))
 System.Console.WriteLine("Document editing process completed successfully!");
 ```
 ## 结论
-恭喜！您已成功使用 GroupDocs.Editor for .NET 编辑纯文本文档。这款功能强大的工具简化了文档编辑，使其易于集成到您的 .NET 应用程序中。无论您处理的是简单的文本文件还是复杂的文档格式，GroupDocs.Editor 都能满足您的需求。访问[GroupDocs.Editor 文档](https://reference.groupdocs.com/editor/net/).
+恭喜！您已成功使用 GroupDocs.Editor for .NET 编辑纯文本文档。这款功能强大的工具简化了文档编辑，使其易于集成到您的 .NET 应用程序中。无论您处理的是简单的文本文件还是复杂的文档格式，GroupDocs.Editor 都能满足您的需求。访问[GroupDocs.Editor 文档](https://tutorials.groupdocs.com/editor/net/).
 ## 常见问题解答
 ### GroupDocs.Editor for .NET 支持哪些文件格式？
- GroupDocs.Editor for .NET 支持多种文件格式，包括 DOCX、TXT、HTML 等。查看[文档](https://reference.groupdocs.com/editor/net/)以获取完整列表。
+ GroupDocs.Editor for .NET 支持多种文件格式，包括 DOCX、TXT、HTML 等。查看[文档](https://tutorials.groupdocs.com/editor/net/)以获取完整列表。
 ### 如何免费试用 .NET 版 GroupDocs.Editor？
 您可以从以下网址下载 GroupDocs.Editor for .NET 的免费试用版[发布页面](https://releases.groupdocs.com/).
 ### 我可以购买 GroupDocs.Editor for .NET 的临时许可证吗？
@@ -107,4 +106,4 @@ System.Console.WriteLine("Document editing process completed successfully!");
 ### 在哪里可以获得 .NET 的 GroupDocs.Editor 支持？
 可通过以下方式获得支持[GroupDocs.Editor 支持论坛](https://forum.groupdocs.com/c/editor/20).
 ### 是否有关于 GroupDocs.Editor for .NET 的详细文档？
-是的，详细文档可在[GroupDocs.Editor 文档页面](https://reference.groupdocs.com/editor/net/).
+是的，详细文档可在[GroupDocs.Editor 文档页面](https://tutorials.groupdocs.com/editor/net/).

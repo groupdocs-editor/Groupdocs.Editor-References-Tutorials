@@ -3,7 +3,6 @@ title: Trabalhe com planilhas protegidas por senha
 linktitle: Trabalhe com planilhas protegidas por senha
 second_title: API GroupDocs.Editor .NET
 description: Aprenda como lidar com planilhas protegidas por senha usando GroupDocs.Editor for .NET. Este guia detalhado orienta você na abertura e no salvamento de arquivos Excel seguros.
-type: docs
 weight: 18
 url: /pt/net/document-processing/work-password-protected-spreadsheets/
 ---
@@ -108,4 +107,4 @@ GroupDocs.Editor for .NET é uma poderosa API de edição de documentos que perm
 ### Posso definir senhas diferentes para abrir e gravar em uma planilha?
 Absolutamente! Você pode definir senhas separadas para abrir o documento e para proteção contra gravação usando as opções de salvamento.
 ### Onde posso encontrar documentação mais detalhada?
- Você pode acessar a documentação abrangente do GroupDocs.Editor for .NET[aqui](https://reference.groupdocs.com/editor/net/).
+ Você pode acessar a documentação abrangente do GroupDocs.Editor for .NET[aqui](https://tutorials.groupdocs.com/editor/net/).

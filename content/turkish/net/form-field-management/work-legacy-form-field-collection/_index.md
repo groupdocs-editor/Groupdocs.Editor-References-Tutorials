@@ -3,7 +3,6 @@ title: Eski Form Alanı Koleksiyonuyla Çalışma
 linktitle: Eski Form Alanı Koleksiyonuyla Çalışma
 second_title: GroupDocs.Editor .NET API'si
 description: Ayrıntılı kılavuzumuzla GroupDocs.Editor for .NET'i kullanarak eski form alanlarını nasıl yöneteceğinizi öğrenin. Metin alanlarını, onay kutularını, tarihleri ve daha fazlasını yönetmek için mükemmeldir.
-type: docs
 weight: 12
 url: /tr/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## Adım 8: Sonuç
 Bu adımları izleyerek, GroupDocs.Editor for .NET'i kullanarak belgelerinizdeki eski form alanlarını etkili bir şekilde yönetebilir ve bunlarla etkileşimde bulunabilirsiniz. Metin alanları, onay kutuları, tarihler, sayılar veya açılır listeler olsun, bu kılavuz her türün ele alınması için açık ve kısa bir yol sağlar.
 ## Çözüm
- Doğru araçları kullandığınızda belgelerdeki eski form alanlarıyla çalışmak kolay olabilir. GroupDocs.Editor for .NET, bu alanları verimli bir şekilde yönetmek için sağlam bir çözüm sağlar. Bu adım adım kılavuzu izleyerek artık belgelerinizdeki çeşitli form alanlarını kolaylıkla yönetebileceksiniz. Keşfetmeyi unutmayın[dokümantasyon](https://reference.groupdocs.com/editor/net/)Daha gelişmiş özellikler ve seçenekler için.
+ Doğru araçları kullandığınızda belgelerdeki eski form alanlarıyla çalışmak kolay olabilir. GroupDocs.Editor for .NET, bu alanları verimli bir şekilde yönetmek için sağlam bir çözüm sağlar. Bu adım adım kılavuzu izleyerek artık belgelerinizdeki çeşitli form alanlarını kolaylıkla yönetebileceksiniz. Keşfetmeyi unutmayın[dokümantasyon](https://tutorials.groupdocs.com/editor/net/)Daha gelişmiş özellikler ve seçenekler için.
 ## SSS'ler
 ### 1. GroupDocs.Editor for .NET'i parola korumalı belgelerle kullanabilir miyim?
 Evet, parola korumalı belgeleri işlemek için yükleme seçeneklerinde parolayı belirleyebilirsiniz.
@@ -104,4 +103,4 @@ Evet, parola korumalı belgeleri işlemek için yükleme seçeneklerinde parolay
 ### 4. GroupDocs.Editor for .NET lisansını satın alabilir miyim?
  Evet, adresinden lisans satın alabilirsiniz.[Burada](https://purchase.groupdocs.com/buy).
 ### 5. GroupDocs.Editor for .NET belgelerini nerede bulabilirim?
-Belgeler mevcut[Burada](https://reference.groupdocs.com/editor/net/).
+Belgeler mevcut[Burada](https://tutorials.groupdocs.com/editor/net/).

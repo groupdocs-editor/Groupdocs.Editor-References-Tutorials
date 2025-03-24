@@ -3,7 +3,6 @@ title: Chỉnh sửa tài liệu
 linktitle: Chỉnh sửa tài liệu
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách chỉnh sửa tài liệu dễ dàng với GroupDocs.Editor dành cho .NET. Hướng dẫn từng bước cho các tệp Xử lý văn bản và Bảng tính.
-type: docs
 weight: 11
 url: /vi/net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 Việc xử lý đúng cách đảm bảo không có rò rỉ bộ nhớ hoặc các vấn đề về hiệu suất trong ứng dụng của bạn.
 ## Phần kết luận
- Chúc mừng! Bây giờ bạn đã hiểu rõ về cách sử dụng GroupDocs.Editor cho .NET để tải, chỉnh sửa và trích xuất nội dung từ các tài liệu và Bảng tính Xử lý Word. Công cụ mạnh mẽ này đơn giản hóa các tác vụ chỉnh sửa tài liệu và tích hợp hoàn hảo với các ứng dụng .NET của bạn. Để biết thêm chi tiết, bạn có thể khám phá[tài liệu](https://reference.groupdocs.com/editor/net/), [tải về phiên bản mới nhất](https://releases.groupdocs.com/editor/net/) , hoặc có được một[giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/).
+ Chúc mừng! Bây giờ bạn đã hiểu rõ về cách sử dụng GroupDocs.Editor cho .NET để tải, chỉnh sửa và trích xuất nội dung từ các tài liệu và Bảng tính Xử lý Word. Công cụ mạnh mẽ này đơn giản hóa các tác vụ chỉnh sửa tài liệu và tích hợp hoàn hảo với các ứng dụng .NET của bạn. Để biết thêm chi tiết, bạn có thể khám phá[tài liệu](https://tutorials.groupdocs.com/editor/net/), [tải về phiên bản mới nhất](https://releases.groupdocs.com/editor/net/) , hoặc có được một[giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/).
 ## Câu hỏi thường gặp
 ### Tôi có thể chỉnh sửa tài liệu PDF bằng GroupDocs.Editor cho .NET không?
 Hiện tại, GroupDocs.Editor cho .NET chủ yếu hỗ trợ các định dạng Xử lý văn bản, Bảng tính và Trình bày.

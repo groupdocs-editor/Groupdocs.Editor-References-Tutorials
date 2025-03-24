@@ -3,7 +3,6 @@ title: 使用受密码保护的电子表格
 linktitle: 使用受密码保护的电子表格
 second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 处理受密码保护的电子表格。本详细指南将引导您打开并保存安全的 Excel 文件。
-type: docs
 weight: 18
 url: /zh/net/document-processing/work-password-protected-spreadsheets/
 ---
@@ -108,4 +107,4 @@ GroupDocs.Editor for .NET 是一个强大的文档编辑 API，允许开发人�
 ### 我可以为打开和写入电子表格设置不同的密码吗？
 当然可以！您可以使用保存选项为打开文档和写保护设置单独的密码。
 ### 在哪里可以找到更详细的文档？
-您可以访问 GroupDocs.Editor for .NET 的综合文档[这里](https://reference.groupdocs.com/editor/net/).
+您可以访问 GroupDocs.Editor for .NET 的综合文档[这里](https://tutorials.groupdocs.com/editor/net/).

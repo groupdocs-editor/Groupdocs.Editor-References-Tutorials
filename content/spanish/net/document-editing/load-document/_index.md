@@ -3,7 +3,6 @@ title: Cargar documento
 linktitle: Cargar documento
 second_title: API GroupDocs.Editor .NET
 description: Aprenda a editar documentos mediante programación con GroupDocs.Editor para .NET. Guía paso a paso para cargar documentos, manejar archivos protegidos con contraseña y más.
-type: docs
 weight: 13
 url: /es/net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 ¡Felicidades! Ha aprendido con éxito cómo cargar documentos usando GroupDocs.Editor para .NET de varias maneras. Ya sea que trabaje con archivos locales, documentos protegidos con contraseña o flujos de bytes, GroupDocs.Editor proporciona una solución flexible y potente para sus necesidades de edición de documentos. Recuerde disponer siempre de los recursos para garantizar un rendimiento óptimo y una gestión de recursos en sus aplicaciones.
 ## Preguntas frecuentes
 ### ¿Qué formatos de archivo son compatibles con GroupDocs.Editor para .NET?
- GroupDocs.Editor admite una amplia gama de formatos de archivo, incluidos DOCX, XLSX, PPTX, HTML y muchos más. Para obtener una lista completa, consulte la[documentación](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor admite una amplia gama de formatos de archivo, incluidos DOCX, XLSX, PPTX, HTML y muchos más. Para obtener una lista completa, consulte la[documentación](https://tutorials.groupdocs.com/editor/net/).
 ### ¿Cómo manejo documentos protegidos con contraseña?
  Puede utilizar opciones de carga como`WordProcessingLoadOptions` para especificar la contraseña al cargar documentos protegidos con contraseña.
 ### ¿Puedo utilizar GroupDocs.Editor en una aplicación web?

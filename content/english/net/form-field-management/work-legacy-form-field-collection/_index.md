@@ -3,7 +3,6 @@ title: Work with Legacy Form Field Collection
 linktitle: Work with Legacy Form Field Collection
 second_title: GroupDocs.Editor .NET API
 description: Learn how to manage legacy form fields using GroupDocs.Editor for .NET with our detailed guide. Perfect for handling text fields, checkboxes, dates, and more.
-type: docs
 weight: 12
 url: /net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## Step 8: Conclusion
 By following these steps, you can effectively manage and interact with legacy form fields in your documents using GroupDocs.Editor for .NET. Whether it's text fields, checkboxes, dates, numbers, or dropdowns, this guide provides a clear and concise way to handle each type.
 ## Conclusion
-Working with legacy form fields in documents can be straightforward when using the right tools. GroupDocs.Editor for .NET provides a robust solution for managing these fields efficiently. By following this step-by-step guide, you should now be able to manipulate various form fields in your documents with ease. Don't forget to explore the [documentation](https://reference.groupdocs.com/editor/net/) for more advanced features and options.
+Working with legacy form fields in documents can be straightforward when using the right tools. GroupDocs.Editor for .NET provides a robust solution for managing these fields efficiently. By following this step-by-step guide, you should now be able to manipulate various form fields in your documents with ease. Don't forget to explore the [documentation](https://tutorials.groupdocs.com/editor/net/) for more advanced features and options.
 ## FAQ's
 ### 1. Can I use GroupDocs.Editor for .NET with password-protected documents?
 Yes, you can specify the password in the load options to handle password-protected documents.
@@ -104,4 +103,4 @@ Yes, you can access support [here](https://forum.groupdocs.com/c/editor/20).
 ### 4. Can I purchase a license for GroupDocs.Editor for .NET?
 Yes, you can buy a license from [here](https://purchase.groupdocs.com/buy).
 ### 5. Where can I find the documentation for GroupDocs.Editor for .NET?
-The documentation is available [here](https://reference.groupdocs.com/editor/net/).
+The documentation is available [here](https://tutorials.groupdocs.com/editor/net/).

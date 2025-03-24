@@ -3,7 +3,6 @@ title: Erweiterte Verwendung editierbarer Dokumente
 linktitle: Erweiterte Verwendung editierbarer Dokumente
 second_title: GroupDocs.Editor .NET API
 description: Erlernen Sie die erweiterte Verwendung von GroupDocs.Editor für .NET zum programmgesteuerten Erstellen, Bearbeiten und Extrahieren von Ressourcen aus Dokumenten.
-type: docs
 weight: 11
 url: /de/net/document-editing/advanced-usage-of-editable-documents/
 ---

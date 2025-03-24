@@ -1,7 +1,6 @@
 ---
 title: Handledningar och exempel på GroupDocs.Editor för .NET
 linktitle: GroupDocs.Editor för .NET Tutorials
-type: docs
 weight: 10
 url: /sv/net/
 description: Hantera och redigera dokument med GroupDocs.Editor .NET. Lär dig dokumentbehandling, dokumentredigering, HTML-innehållshämtning, formulärfältshantering och mer!

@@ -3,7 +3,6 @@ title: 스트림에서 라이선스 설정
 linktitle: 스트림에서 라이선스 설정
 second_title: GroupDocs.Editor .NET API
 description: .NET용 Groupdocs.Editor를 사용하여 프로그래밍 방식으로 문서를 편집하는 방법을 알아보세요. 원활한 통합과 고급 기능을 보려면 이 포괄적인 내용을 따르십시오.
-type: docs
 weight: 11
 url: /ko/net/quick-start-guide/set-license-from-stream/
 ---
@@ -146,7 +145,7 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 }
 ```
 ## 결론
- .NET용 Groupdocs.Editor는 문서 편집 프로세스를 대폭 간소화할 수 있는 다재다능하고 강력한 도구입니다. 강력한 기능과 다양한 문서 형식 지원을 통해 이 라이브러리를 .NET 응용 프로그램에 통합하면 의심할 여지 없이 생산성과 기능이 향상됩니다. 탐험하는 것을 잊지 마세요.[선적 서류 비치](https://reference.groupdocs.com/editor/net/) 더 자세한 정보와 고급 사용 시나리오를 확인하세요.
+ .NET용 Groupdocs.Editor는 문서 편집 프로세스를 대폭 간소화할 수 있는 다재다능하고 강력한 도구입니다. 강력한 기능과 다양한 문서 형식 지원을 통해 이 라이브러리를 .NET 응용 프로그램에 통합하면 의심할 여지 없이 생산성과 기능이 향상됩니다. 탐험하는 것을 잊지 마세요.[선적 서류 비치](https://tutorials.groupdocs.com/editor/net/) 더 자세한 정보와 고급 사용 시나리오를 확인하세요.
 ## FAQ
 ### 라이센스 없이 .NET용 Groupdocs.Editor를 사용할 수 있습니까?
  아니요, .NET용 Groupdocs.Editor를 사용하려면 유효한 라이센스가 필요합니다. 그러나 귀하는[임시면허](https://purchase.groupdocs.com/temporary-license/) 평가를 위해.
@@ -157,4 +156,4 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 ### Groupdocs.Editor를 사용하여 문서를 비밀번호로 보호할 수 있습니까?
 예, 문서를 저장할 때 비밀번호 및 기타 보안 옵션을 설정할 수 있습니다.
 ### .NET용 Groupdocs.Editor는 어떤 파일 형식을 지원합니까?
- DOCX, XLSX, PDF 등 다양한 형식을 지원합니다. 다음을 참조하세요.[선적 서류 비치](https://reference.groupdocs.com/editor/net/) 전체 목록을 보려면.
+ DOCX, XLSX, PDF 등 다양한 형식을 지원합니다. 다음을 참조하세요.[선적 서류 비치](https://tutorials.groupdocs.com/editor/net/) 전체 목록을 보려면.

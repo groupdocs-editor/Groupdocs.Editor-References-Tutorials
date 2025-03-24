@@ -3,7 +3,6 @@ title: 编辑表单字段集合
 linktitle: 编辑表单字段集合
 second_title: GroupDocs.Editor .NET API
 description: 使用 Groupdocs.Editor 提高 .NET 项目中的文档编辑效率。无缝修改表单字段集合。
-type: docs
 weight: 10
 url: /zh/net/form-field-management/edit-form-field-collection/
 ---

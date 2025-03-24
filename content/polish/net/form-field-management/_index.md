@@ -3,7 +3,6 @@ title: Zarządzanie polami formularzy
 linktitle: Zarządzanie polami formularzy
 second_title: Edytor GroupDocs.NET API
 description: Zarządzanie polami formularzy głównych w .NET za pomocą GroupDocs.Editor. Naucz się bezproblemowo edytować, naprawiać, pracować ze starszymi wersjami i usuwać zbiory pól formularzy.
-type: docs
 weight: 23
 url: /pl/net/form-field-management/
 ---

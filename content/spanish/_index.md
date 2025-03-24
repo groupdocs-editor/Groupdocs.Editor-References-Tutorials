@@ -3,7 +3,6 @@ title: Desbloqueo de la gestión de documentos con GroupDocs.Editor
 linktitle: Tutoriales de GroupDocs.Editor
 additionalTitle: Referencias de la API de GroupDocs
 description: Domine la edición de documentos sin esfuerzo con GroupDocs.Editor para .NET y Java. ¡Agilice el flujo de trabajo, administre CSS, recupere contenido HTML y más!
-type: docs
 weight: 11
 url: /es/
 is_root: true

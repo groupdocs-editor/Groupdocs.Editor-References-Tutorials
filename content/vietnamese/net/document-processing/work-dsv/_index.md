@@ -3,7 +3,6 @@ title: Làm việc với các giá trị được phân tách bằng dấu phân
 linktitle: Làm việc với các giá trị được phân tách bằng dấu phân cách (DSV)
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách chỉnh sửa tệp CSV và TSV bằng GroupDocs.Editor dành cho .NET với hướng dẫn từng bước này. Cải thiện các dự án .NET của bạn một cách dễ dàng.
-type: docs
 weight: 12
 url: /vi/net/document-processing/work-dsv/
 ---
@@ -111,4 +110,4 @@ Tuyệt đối, bạn có thể chỉ định mã hóa mong muốn trong tùy ch
 ### Tôi có thể chuyển đổi tệp CSV thành bảng tính Excel bằng GroupDocs.Editor cho .NET không?
 Có, bạn có thể lưu tệp CSV dưới dạng bảng tính Excel bằng cách sử dụng các tùy chọn lưu thích hợp.
 ### Tôi có thể tìm thêm tài liệu về GroupDocs.Editor cho .NET ở đâu?
- Bạn có thể tìm tài liệu chi tiết[đây](https://reference.groupdocs.com/editor/net/)
+ Bạn có thể tìm tài liệu chi tiết[đây](https://tutorials.groupdocs.com/editor/net/)

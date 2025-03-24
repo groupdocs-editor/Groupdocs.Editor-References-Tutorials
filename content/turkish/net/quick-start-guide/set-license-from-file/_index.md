@@ -3,7 +3,6 @@ title: Lisansı Dosyadan Ayarla
 linktitle: Lisansı Dosyadan Ayarla
 second_title: GroupDocs.Editor .NET API'si
 description: Uygulamalarınızda kusursuz belge düzenleme için GroupDocs.Editor for .NET'i nasıl kullanacağınızı öğrenin. Adım adım kılavuz, ipuçları ve SSS'ler dahildir.
-type: docs
 weight: 10
 url: /tr/net/quick-start-guide/set-license-from-file/
 ---
@@ -89,4 +88,4 @@ Kesinlikle! GroupDocs.Editor for .NET, web uygulamaları, masaüstü uygulamalar
 ### GroupDocs.Editor for .NET ile büyük belgeleri nasıl yönetirim?
 GroupDocs.Editor for .NET, büyük belgeleri verimli bir şekilde işlemek için tasarlanmıştır. Ancak en iyi performansı elde etmek için kaynakları yönetmeyi ve gerekirse belgeleri bölümler halinde işlemeyi düşünün.
 ### Daha ayrıntılı belge ve desteği nerede bulabilirim?
- Ayrıntılı belgeleri şu adreste bulabilirsiniz:[GroupDocs.Editor dokümantasyon sayfası](https://reference.groupdocs.com/editor/net/) ve destek isteyin[GroupDocs destek forumu](https://forum.groupdocs.com/c/editor/20).
+ Ayrıntılı belgeleri şu adreste bulabilirsiniz:[GroupDocs.Editor dokümantasyon sayfası](https://tutorials.groupdocs.com/editor/net/) ve destek isteyin[GroupDocs destek forumu](https://forum.groupdocs.com/c/editor/20).

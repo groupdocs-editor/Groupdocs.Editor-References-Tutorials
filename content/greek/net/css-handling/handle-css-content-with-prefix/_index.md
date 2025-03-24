@@ -3,7 +3,6 @@ title: Χειριστείτε το περιεχόμενο CSS με πρόθεμ�
 linktitle: Χειριστείτε το περιεχόμενο CSS με πρόθεμα
 second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να χειρίζεστε περιεχόμενο CSS με πρόθεμα χρησιμοποιώντας το Groupdocs.Editor για .NET σε αυτόν τον αναλυτικό, βήμα προς βήμα εκμάθηση. Ιδανικό για προγραμματιστές όλων των επιπέδων.
-type: docs
 weight: 11
 url: /el/net/css-handling/handle-css-content-with-prefix/
 ---
@@ -66,6 +65,6 @@ using (Editor editor = new Editor("Your Sample Document", delegate { return new 
 ### Πώς μπορώ να αποκτήσω μια προσωρινή άδεια για το Groupdocs.Editor για .NET;
  Μπορείτε να αποκτήσετε μια προσωρινή άδεια[εδώ](https://purchase.groupdocs.com/temporary-license/).
 ### Πού μπορώ να βρω λεπτομερή τεκμηρίωση για το Groupdocs.Editor για .NET;
- Λεπτομερής τεκμηρίωση είναι διαθέσιμη[εδώ](https://reference.groupdocs.com/editor/net/).
+ Λεπτομερής τεκμηρίωση είναι διαθέσιμη[εδώ](https://tutorials.groupdocs.com/editor/net/).
 ### Ποιες επιλογές υποστήριξης είναι διαθέσιμες για το Groupdocs.Editor για .NET;
  Μπορείτε να λάβετε υποστήριξη[εδώ](https://forum.groupdocs.com/c/editor/20).

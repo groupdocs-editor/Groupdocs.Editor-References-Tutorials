@@ -3,7 +3,6 @@ title: Abrufen von HTML-Inhalten mit Präfix
 linktitle: Abrufen von HTML-Inhalten mit Präfix
 second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie, wie Sie mit GroupDocs.Editor für .NET HTML-Inhalte aus Dokumenten mit benutzerdefinierten Präfixen für Bilder und Stylesheets abrufen. Schritt-für-Schritt-Anleitung enthalten.
-type: docs
 weight: 11
 url: /de/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 Dieser Codeausschnitt holt den HTML-Inhalt mit den benutzerdefinierten Präfixen und gibt ihn auf der Konsole aus. Sie können diesen HTML-Inhalt nach Bedarf weiterverarbeiten oder speichern.
 ## Abschluss
 Und da haben Sie es! Indem Sie diese Schritte befolgen, können Sie mit GroupDocs.Editor für .NET ganz einfach HTML-Inhalte aus einem Dokument abrufen, komplett mit benutzerdefinierten Präfixen für Bilder und Stylesheets. Dieses leistungsstarke Tool vereinfacht die Dokumentbearbeitung, sodass Sie sich auf die nahtlose Integration der Dokumentbearbeitung in Ihre .NET-Anwendungen konzentrieren können.
- Ausführlichere Informationen finden Sie im[GroupDocs.Editor für .NET-Dokumentation](https://reference.groupdocs.com/editor/net/) Wenn Sie Fragen haben oder weitere Hilfe benötigen, wenden Sie sich bitte an[Hilfeforum](https://forum.groupdocs.com/c/editor/20).
+ Ausführlichere Informationen finden Sie im[GroupDocs.Editor für .NET-Dokumentation](https://tutorials.groupdocs.com/editor/net/) Wenn Sie Fragen haben oder weitere Hilfe benötigen, wenden Sie sich bitte an[Hilfeforum](https://forum.groupdocs.com/c/editor/20).
 ## Häufig gestellte Fragen
 ### Welche Dokumenttypen kann ich mit GroupDocs.Editor für .NET bearbeiten?
 GroupDocs.Editor unterstützt verschiedene Dokumentformate, darunter Word, Excel, PowerPoint, PDF und mehr.

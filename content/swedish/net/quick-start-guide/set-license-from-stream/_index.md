@@ -3,7 +3,6 @@ title: Ställ in licens från Stream
 linktitle: Ställ in licens från Stream
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du använder Groupdocs.Editor för .NET för att redigera dokument programmatiskt. Följ detta omfattande för sömlös integration och avancerade funktioner.
-type: docs
 weight: 11
 url: /sv/net/quick-start-guide/set-license-from-stream/
 ---
@@ -146,7 +145,7 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 }
 ```
 ## Slutsats
- Groupdocs.Editor för .NET är ett mångsidigt och kraftfullt verktyg som avsevärt kan effektivisera dina dokumentredigeringsprocesser. Med sina robusta funktioner och stöd för flera dokumentformat, kommer att integrera detta bibliotek i dina .NET-applikationer utan tvekan att förbättra din produktivitet och kapacitet. Glöm inte att utforska[dokumentation](https://reference.groupdocs.com/editor/net/) för mer detaljerad information och avancerade användningsscenarier.
+ Groupdocs.Editor för .NET är ett mångsidigt och kraftfullt verktyg som avsevärt kan effektivisera dina dokumentredigeringsprocesser. Med sina robusta funktioner och stöd för flera dokumentformat, kommer att integrera detta bibliotek i dina .NET-applikationer utan tvekan att förbättra din produktivitet och kapacitet. Glöm inte att utforska[dokumentation](https://tutorials.groupdocs.com/editor/net/) för mer detaljerad information och avancerade användningsscenarier.
 ## FAQ's
 ### Kan jag använda Groupdocs.Editor för .NET utan licens?
  Nej, du behöver en giltig licens för att använda Groupdocs.Editor för .NET. Du kan dock begära en[tillfällig licens](https://purchase.groupdocs.com/temporary-license/) för utvärdering.
@@ -157,4 +156,4 @@ Ja, det stöder redigering av PDF-filer tillsammans med olika andra format som W
 ### Är det möjligt att lösenordsskydda dokument med Groupdocs.Editor?
 Ja, du kan ställa in lösenord och andra säkerhetsalternativ när du sparar dokument.
 ### Vilka filformat stöder Groupdocs.Editor för .NET?
- Den stöder ett brett utbud av format, inklusive DOCX, XLSX, PDF och många andra. Referera till[dokumentation](https://reference.groupdocs.com/editor/net/) för en komplett lista.
+ Den stöder ett brett utbud av format, inklusive DOCX, XLSX, PDF och många andra. Referera till[dokumentation](https://tutorials.groupdocs.com/editor/net/) för en komplett lista.

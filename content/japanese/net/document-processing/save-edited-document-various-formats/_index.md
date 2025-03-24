@@ -3,7 +3,6 @@ title: 編集した文書をさまざまな形式で保存する
 linktitle: 編集した文書をさまざまな形式で保存する
 second_title: GroupDocs.Editor .NET API
 description: この包括的なステップバイステップ ガイドでは、GroupDocs.Editor for .NET を使用して編集したドキュメントをさまざまな形式で保存する方法を学習します。
-type: docs
 weight: 11
 url: /ja/net/document-processing/save-edited-document-various-formats/
 ---
@@ -92,4 +91,4 @@ GroupDocs.Editor は、DOCX、PDF、HTML など、幅広い形式をサポート
 ### GroupDocs.Editor の一時ライセンスを取得するにはどうすればよいですか?
 臨時免許証を取得できます[ここ](https://purchase.groupdocs.com/temporary-license/).
 ### 詳細なドキュメントやサポートはどこで入手できますか?
-詳細なドキュメントが利用可能[ここ](https://reference.groupdocs.com/editor/net/) 、サポートを受けることができます[ここ](https://forum.groupdocs.com/c/editor/20).
+詳細なドキュメントが利用可能[ここ](https://tutorials.groupdocs.com/editor/net/) 、サポートを受けることができます[ここ](https://forum.groupdocs.com/c/editor/20).

@@ -3,7 +3,6 @@ title: Werken met verouderde formulierveldverzameling
 linktitle: Werken met verouderde formulierveldverzameling
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u oudere formuliervelden beheert met GroupDocs.Editor voor .NET met onze gedetailleerde handleiding. Perfect voor het verwerken van tekstvelden, selectievakjes, datums en meer.
-type: docs
 weight: 12
 url: /nl/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## Stap 8: Conclusie
 Door deze stappen te volgen, kunt u verouderde formuliervelden in uw documenten effectief beheren en gebruiken met GroupDocs.Editor voor .NET. Of het nu gaat om tekstvelden, selectievakjes, datums, cijfers of vervolgkeuzelijsten, deze handleiding biedt een duidelijke en beknopte manier om met elk type om te gaan.
 ## Conclusie
- Werken met oudere formuliervelden in documenten kan eenvoudig zijn als u de juiste hulpmiddelen gebruikt. GroupDocs.Editor voor .NET biedt een robuuste oplossing voor het efficiënt beheren van deze velden. Door deze stapsgewijze handleiding te volgen, zou u nu gemakkelijk verschillende formuliervelden in uw documenten moeten kunnen manipuleren. Vergeet niet om de[documentatie](https://reference.groupdocs.com/editor/net/)voor meer geavanceerde functies en opties.
+ Werken met oudere formuliervelden in documenten kan eenvoudig zijn als u de juiste hulpmiddelen gebruikt. GroupDocs.Editor voor .NET biedt een robuuste oplossing voor het efficiënt beheren van deze velden. Door deze stapsgewijze handleiding te volgen, zou u nu gemakkelijk verschillende formuliervelden in uw documenten moeten kunnen manipuleren. Vergeet niet om de[documentatie](https://tutorials.groupdocs.com/editor/net/)voor meer geavanceerde functies en opties.
 ## Veelgestelde vragen
 ### 1. Kan ik GroupDocs.Editor voor .NET gebruiken met met een wachtwoord beveiligde documenten?
 Ja, u kunt het wachtwoord opgeven in de laadopties om met een wachtwoord beveiligde documenten te verwerken.
@@ -104,4 +103,4 @@ Ja, u kunt het wachtwoord opgeven in de laadopties om met een wachtwoord beveili
 ### 4. Kan ik een licentie kopen voor GroupDocs.Editor voor .NET?
  Ja, u kunt een licentie kopen bij[hier](https://purchase.groupdocs.com/buy).
 ### 5. Waar kan ik de documentatie voor GroupDocs.Editor voor .NET vinden?
-De documentatie is beschikbaar[hier](https://reference.groupdocs.com/editor/net/).
+De documentatie is beschikbaar[hier](https://tutorials.groupdocs.com/editor/net/).

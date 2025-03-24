@@ -3,7 +3,6 @@ title: HTML सामग्री पुनर्प्राप्ति
 linktitle: HTML सामग्री पुनर्प्राप्ति
 second_title: GroupDocs.Editor .NET एपीआई
 description: .NET के लिए GroupDocs.Editor का उपयोग करके HTML सामग्री को पुनः प्राप्त करने का तरीका जानें। बॉडी सामग्री और कस्टम प्रीफ़िक्स को पुनः प्राप्त करने के लिए चरण-दर-चरण मार्गदर्शिकाएँ शामिल हैं।
-type: docs
 weight: 22
 url: /hi/net/html-content-retrieval/
 ---

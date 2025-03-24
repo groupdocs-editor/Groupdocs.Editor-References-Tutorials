@@ -3,7 +3,6 @@ title: تعيين الترخيص من الملف
 linktitle: تعيين الترخيص من الملف
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية استخدام GroupDocs.Editor لـ .NET لتحرير المستندات بسلاسة في تطبيقاتك. يتضمن الدليل خطوة بخطوة والنصائح والأسئلة الشائعة.
-type: docs
 weight: 10
 url: /ar/net/quick-start-guide/set-license-from-file/
 ---
@@ -89,4 +88,4 @@ using (FileStream outputStream = File.Create(outputPath))
 ### كيف يمكنني التعامل مع المستندات الكبيرة باستخدام GroupDocs.Editor لـ .NET؟
 تم تصميم GroupDocs.Editor for .NET للتعامل مع المستندات الكبيرة بكفاءة. ومع ذلك، للحصول على الأداء الأمثل، فكر في إدارة الموارد والتعامل مع المستندات في المقاطع إذا لزم الأمر.
 ### أين يمكنني العثور على مزيد من الوثائق التفصيلية والدعم؟
- يمكنك العثور على وثائق مفصلة عن[صفحة وثائق GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) وطلب الدعم من[منتدى دعم مستندات المجموعة](https://forum.groupdocs.com/c/editor/20).
+ يمكنك العثور على وثائق مفصلة عن[صفحة وثائق GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) وطلب الدعم من[منتدى دعم مستندات المجموعة](https://forum.groupdocs.com/c/editor/20).

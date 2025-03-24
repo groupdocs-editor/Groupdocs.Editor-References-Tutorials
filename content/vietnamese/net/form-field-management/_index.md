@@ -3,7 +3,6 @@ title: Quản lý trường biểu mẫu
 linktitle: Quản lý trường biểu mẫu
 second_title: API GroupDocs.Editor .NET
 description: Quản lý trường biểu mẫu chính trong .NET với GroupDocs.Editor. Tìm hiểu cách chỉnh sửa, sửa chữa, làm việc với các bộ sưu tập trường biểu mẫu một cách liền mạch.
-type: docs
 weight: 23
 url: /vi/net/form-field-management/
 ---

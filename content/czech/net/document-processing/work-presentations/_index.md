@@ -3,7 +3,6 @@ title: Práce s prezentacemi
 linktitle: Práce s prezentacemi
 second_title: GroupDocs.Editor .NET API
 description: Naučte se upravovat prezentace PowerPoint pomocí GroupDocs.Editor pro .NET. Postupujte podle tohoto podrobného průvodce a zefektivněte proces úprav dokumentů.
-type: docs
 weight: 16
 url: /cs/net/document-processing/work-presentations/
 ---
@@ -132,4 +131,4 @@ současné době vám GroupDocs.Editor umožňuje upravovat jeden snímek po dru
 ### Mohu použít GroupDocs.Editor pro .NET ve webové aplikaci?
 Ano, GroupDocs.Editor for .NET lze integrovat do webových aplikací a poskytovat tak možnosti úprav dokumentů.
 ### Kde najdu podrobnější dokumentaci a podporu?
- Můžete najít podrobnou dokumentaci[tady](https://reference.groupdocs.com/editor/net/) . Pro podporu navštivte[Fórum podpory](https://forum.groupdocs.com/c/editor/20).
+ Můžete najít podrobnou dokumentaci[tady](https://tutorials.groupdocs.com/editor/net/) . Pro podporu navštivte[Fórum podpory](https://forum.groupdocs.com/c/editor/20).

@@ -3,7 +3,6 @@ title: 快速入門指南
 linktitle: 快速入門指南
 second_title: GroupDocs.Editor .NET API
 description: 透過我們的綜合教學學習如何使用 GroupDocs.Editor for .NET。設定許可證、整合功能並解鎖強大的文件編輯功能。
-type: docs
 weight: 26
 url: /zh-hant/net/quick-start-guide/
 ---

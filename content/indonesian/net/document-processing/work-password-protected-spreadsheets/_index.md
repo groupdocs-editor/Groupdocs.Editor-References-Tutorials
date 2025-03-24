@@ -3,7 +3,6 @@ title: Bekerja dengan Spreadsheet yang Dilindungi Kata Sandi
 linktitle: Bekerja dengan Spreadsheet yang Dilindungi Kata Sandi
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara menangani spreadsheet yang dilindungi kata sandi menggunakan GroupDocs.Editor untuk .NET. Panduan terperinci ini memandu Anda membuka untuk menyimpan file Excel yang aman.
-type: docs
 weight: 18
 url: /id/net/document-processing/work-password-protected-spreadsheets/
 ---
@@ -108,4 +107,4 @@ GroupDocs.Editor untuk .NET adalah API pengeditan dokumen canggih yang memungkin
 ### Dapatkah saya menetapkan kata sandi yang berbeda untuk membuka dan menulis ke spreadsheet?
 Sangat! Anda dapat mengatur kata sandi terpisah untuk membuka dokumen dan proteksi penulisan menggunakan opsi penyimpanan.
 ### Di mana saya dapat menemukan dokumentasi yang lebih detail?
- Anda dapat mengakses dokumentasi komprehensif untuk GroupDocs.Editor untuk .NET[Di Sini](https://reference.groupdocs.com/editor/net/).
+ Anda dapat mengakses dokumentasi komprehensif untuk GroupDocs.Editor untuk .NET[Di Sini](https://tutorials.groupdocs.com/editor/net/).

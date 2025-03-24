@@ -3,7 +3,6 @@ title: حفظ المستند
 linktitle: حفظ المستند
 second_title: GroupDocs.Editor .NET API
 description: قم بتحرير المستندات وحفظها بسهولة باستخدام GroupDocs.Editor لـ .NET. يعمل هذا الدليل التفصيلي على تبسيط العملية للمطورين.
-type: docs
 weight: 14
 url: /ar/net/document-editing/save-document/
 ---
@@ -80,7 +79,7 @@ editor.Dispose();
 لم يكن تحرير المستندات وحفظها برمجيًا أسهل من أي وقت مضى مع GroupDocs.Editor for .NET. يرشدك هذا الدليل خلال العملية بأكملها، بدءًا من تحميل المستند وحتى حفظه بتنسيقات مختلفة. مع GroupDocs.Editor، لديك حل قوي ومتعدد الاستخدامات في متناول يدك، مما يبسط عملية تحرير المستندات.
 ## الأسئلة الشائعة
 ### ما هي تنسيقات الملفات التي يدعمها GroupDocs.Editor؟
-يدعم GroupDocs.Editor العديد من تنسيقات الملفات، بما في ذلك DOCX وRTF وTXT وغيرها الكثير. للحصول على القائمة الكاملة، قم بمراجعة[توثيق](https://reference.groupdocs.com/editor/net/).
+يدعم GroupDocs.Editor العديد من تنسيقات الملفات، بما في ذلك DOCX وRTF وTXT وغيرها الكثير. للحصول على القائمة الكاملة، قم بمراجعة[توثيق](https://tutorials.groupdocs.com/editor/net/).
 ### هل يمكنني تجربة GroupDocs.Editor قبل الشراء؟
  نعم يمكنك الحصول على[تجربة مجانية](https://releases.groupdocs.com/) لاختبار ميزات GroupDocs.Editor.
 ### هل هناك أي دعم متاح إذا واجهت مشاكل؟

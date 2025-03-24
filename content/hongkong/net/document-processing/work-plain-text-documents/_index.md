@@ -3,7 +3,6 @@ title: 處理純文字文檔
 linktitle: 處理純文字文檔
 second_title: GroupDocs.Editor .NET API
 description: 透過我們的逐步指南，學習使用 GroupDocs.Editor for .NET 編輯純文字文件。簡化您的 .NET 文件編輯流程。
-type: docs
 weight: 15
 url: /zh-hant/net/document-processing/work-plain-text-documents/
 ---
@@ -96,10 +95,10 @@ using (Editor editor = new Editor(inputFilePath))
 System.Console.WriteLine("Document editing process completed successfully!");
 ```
 ## 結論
-恭喜！您已使用 GroupDocs.Editor for .NET 成功編輯了純文字文件。這個強大的工具簡化了文件編輯，使其可以輕鬆整合到您的 .NET 應用程式中。無論您是處理簡單的文字檔案還是複雜的文件格式，GroupDocs.Editor 都能滿足您的需求。透過存取探索更多特性和功能[GroupDocs.Editor 文檔](https://reference.groupdocs.com/editor/net/).
+恭喜！您已使用 GroupDocs.Editor for .NET 成功編輯了純文字文件。這個強大的工具簡化了文件編輯，使其可以輕鬆整合到您的 .NET 應用程式中。無論您是處理簡單的文字檔案還是複雜的文件格式，GroupDocs.Editor 都能滿足您的需求。透過存取探索更多特性和功能[GroupDocs.Editor 文檔](https://tutorials.groupdocs.com/editor/net/).
 ## 常見問題解答
 ### GroupDocs.Editor for .NET 支援哪些檔案格式？
- GroupDocs.Editor for .NET 支援多種檔案格式，包括 DOCX、TXT、HTML 等。檢查[文件](https://reference.groupdocs.com/editor/net/)以獲得完整清單。
+ GroupDocs.Editor for .NET 支援多種檔案格式，包括 DOCX、TXT、HTML 等。檢查[文件](https://tutorials.groupdocs.com/editor/net/)以獲得完整清單。
 ### 如何取得 GroupDocs.Editor for .NET 的免費試用版？
 您可以從以下位置下載 GroupDocs.Editor for .NET 的免費試用版：[發布頁面](https://releases.groupdocs.com/).
 ### 我可以購買 GroupDocs.Editor for .NET 的臨時授權嗎？
@@ -107,4 +106,4 @@ System.Console.WriteLine("Document editing process completed successfully!");
 ### 在哪裡可以獲得 GroupDocs.Editor for .NET 的支援？
 可透過以下方式獲得支持[GroupDocs.Editor 支援論壇](https://forum.groupdocs.com/c/editor/20).
 ### 是否有適用於 .NET 的 GroupDocs.Editor 的詳細文件？
-是的，詳細文件可在[GroupDocs.Editor 文件頁面](https://reference.groupdocs.com/editor/net/).
+是的，詳細文件可在[GroupDocs.Editor 文件頁面](https://tutorials.groupdocs.com/editor/net/).

@@ -3,7 +3,6 @@ title: استخراج محتوى HTML من مستند قابل للتحرير
 linktitle: استخراج محتوى HTML من مستند قابل للتحرير
 second_title: GroupDocs.Editor .NET API
 description: قم باستخراج محتوى HTML من المستندات بسهولة باستخدام GroupDocs.Editor لـ .NET. اتبع دليلنا التفصيلي للتكامل السلس وإدارة المستندات.
-type: docs
 weight: 12
 url: /ar/net/document-editing/extract-html-content-from-editable-document/
 ---
@@ -64,6 +63,6 @@ Console.WriteLine("HTML content of the input document (first 200 chars): {0}", h
 ### كيف يمكنني الحصول على ترخيص مؤقت لـ GroupDocs.Editor لـ .NET؟
  يمكنك طلب ترخيص مؤقت من[صفحة شراء GroupDocs](https://purchase.groupdocs.com/temporary-license/).
 ### أين يمكنني العثور على الوثائق الخاصة بـ GroupDocs.Editor لـ .NET؟
- الوثائق الشاملة متاحة[هنا](https://reference.groupdocs.com/editor/net/).
+ الوثائق الشاملة متاحة[هنا](https://tutorials.groupdocs.com/editor/net/).
 ### هل يمكنني الحصول على الدعم إذا واجهت مشاكل؟
  نعم يمكنك طلب الدعم من[منتدى دعم مستندات المجموعة](https://forum.groupdocs.com/c/editor/20).

@@ -3,7 +3,6 @@ title: 設定計量許可證
 linktitle: 設定計量許可證
 second_title: GroupDocs.Editor .NET API
 description: 透過我們的綜合指南了解如何整合和使用 GroupDocs.Editor for .NET。在 .NET 應用程式中解鎖強大的文件編輯功能。
-type: docs
 weight: 12
 url: /zh-hant/net/quick-start-guide/set-metered-license/
 ---
@@ -69,15 +68,15 @@ editor.Save(editableDocument, "updated_sample.docx");
 Console.WriteLine("Document saved successfully.");
 ```
 ## 結論
-恭喜！您已在應用程式中成功整合並使用了 GroupDocs.Editor for .NET。從安裝庫到設定計量許可證和編輯文檔，您已經涵蓋了所有基本步驟。這個強大的工具可以顯著簡化 .NET 應用程式中的文件編輯工作流程。如需了解更多信息，請參閱[用於 .NET 文件的 GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+恭喜！您已在應用程式中成功整合並使用了 GroupDocs.Editor for .NET。從安裝庫到設定計量許可證和編輯文檔，您已經涵蓋了所有基本步驟。這個強大的工具可以顯著簡化 .NET 應用程式中的文件編輯工作流程。如需了解更多信息，請參閱[用於 .NET 文件的 GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).
 ## 常見問題解答
 ### 如何取得 GroupDocs.Editor 授權？
 您可以從以下機構獲得許可證[GroupDocs 購買頁面](https://purchase.groupdocs.com/buy)。如需臨時許可證，請訪問[這裡](https://purchase.groupdocs.com/temporary-license/).
 ### 我可以免費試用 GroupDocs.Editor 嗎？
 是的，您可以從以下位置下載免費試用版：[下載頁面](https://releases.groupdocs.com/)併申請臨時許可證。
 ### GroupDocs.Editor 支援哪些文件格式？
- GroupDocs.Editor 支援多種格式，包括 DOCX、PPTX、XLSX、TXT、HTML 等。如需完整列表，請查看[文件](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor 支援多種格式，包括 DOCX、PPTX、XLSX、TXT、HTML 等。如需完整列表，請查看[文件](https://tutorials.groupdocs.com/editor/net/).
 ### GroupDocs.Editor 是否有可用的社群支援？
 是的，您可以從以下方面獲得社區支持[GroupDocs.Editor 論壇](https://forum.groupdocs.com/c/editor/20).
 ### 如何開始使用適用於 .NET 的 GroupDocs.Editor？
-按照我們的逐步指南設定庫、取得許可證並開始編輯文件。有關詳細說明，請訪問[文件](https://reference.groupdocs.com/editor/net/).
+按照我們的逐步指南設定庫、取得許可證並開始編輯文件。有關詳細說明，請訪問[文件](https://tutorials.groupdocs.com/editor/net/).

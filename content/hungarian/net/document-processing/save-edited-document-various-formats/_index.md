@@ -3,7 +3,6 @@ title: A szerkesztett dokumentum mentése különböző formátumokba
 linktitle: A szerkesztett dokumentum mentése különböző formátumokba
 second_title: GroupDocs.Editor .NET API
 description: Ebből az átfogó, lépésenkénti útmutatóból megtudhatja, hogyan mentheti el a szerkesztett dokumentumokat különböző formátumokba a GroupDocs.Editor for .NET segítségével.
-type: docs
 weight: 11
 url: /hu/net/document-processing/save-edited-document-various-formats/
 ---
@@ -92,4 +91,4 @@ A GroupDocs.Editor a formátumok széles skáláját támogatja, beleértve a DO
 ### Hogyan szerezhetek ideiglenes licencet a GroupDocs.Editor számára?
  Kaphat ideiglenes engedélyt[itt](https://purchase.groupdocs.com/temporary-license/).
 ### Hol találok további dokumentációt és támogatást?
- A részletes dokumentáció elérhető[itt](https://reference.groupdocs.com/editor/net/) , és támogatást kaphat[itt](https://forum.groupdocs.com/c/editor/20).
+ A részletes dokumentáció elérhető[itt](https://tutorials.groupdocs.com/editor/net/) , és támogatást kaphat[itt](https://forum.groupdocs.com/c/editor/20).

@@ -3,7 +3,6 @@ title: استخراج معلومات الوثيقة
 linktitle: استخراج معلومات الوثيقة
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية استخراج معلومات المستند باستخدام GroupDocs.Editor لـ .NET من خلال برنامجنا التعليمي التفصيلي خطوة بخطوة. مثالي لإدارة أنواع المستندات المختلفة.
-type: docs
 weight: 10
 url: /ar/net/document-processing/extract-document-info/
 ---

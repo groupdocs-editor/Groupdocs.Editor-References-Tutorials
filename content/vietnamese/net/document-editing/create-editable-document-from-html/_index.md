@@ -3,7 +3,6 @@ title: Tạo tài liệu có thể chỉnh sửa từ HTML
 linktitle: Tạo tài liệu có thể chỉnh sửa từ HTML
 second_title: API GroupDocs.Editor .NET
 description: Chuyển đổi HTML thành tài liệu Word có thể chỉnh sửa bằng GroupDocs.Editor cho .NET với hướng dẫn từng bước này. Hoàn hảo để hợp lý hóa quy trình quản lý tài liệu của bạn.
-type: docs
 weight: 10
 url: /vi/net/document-editing/create-editable-document-from-html/
 ---

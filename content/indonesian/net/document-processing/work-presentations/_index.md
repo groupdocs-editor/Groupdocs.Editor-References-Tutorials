@@ -3,7 +3,6 @@ title: Bekerja dengan Presentasi
 linktitle: Bekerja dengan Presentasi
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengedit presentasi PowerPoint menggunakan GroupDocs.Editor untuk .NET. Ikuti panduan langkah demi langkah ini untuk menyederhanakan proses pengeditan dokumen Anda.
-type: docs
 weight: 16
 url: /id/net/document-processing/work-presentations/
 ---
@@ -132,4 +131,4 @@ Saat ini, GroupDocs.Editor memungkinkan Anda mengedit satu slide dalam satu wakt
 ### Bisakah saya menggunakan GroupDocs.Editor untuk .NET dalam aplikasi web?
 Ya, GroupDocs.Editor untuk .NET dapat diintegrasikan ke dalam aplikasi web untuk menyediakan kemampuan pengeditan dokumen.
 ### Di mana saya dapat menemukan dokumentasi dan dukungan yang lebih detail?
- Anda dapat menemukan dokumentasi terperinci[Di Sini](https://reference.groupdocs.com/editor/net/) . Untuk dukungan, kunjungi[forum dukungan](https://forum.groupdocs.com/c/editor/20).
+ Anda dapat menemukan dokumentasi terperinci[Di Sini](https://tutorials.groupdocs.com/editor/net/) . Untuk dukungan, kunjungi[forum dukungan](https://forum.groupdocs.com/c/editor/20).

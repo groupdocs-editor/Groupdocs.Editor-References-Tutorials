@@ -3,7 +3,6 @@ title: Traitement des documents
 linktitle: Traitement des documents
 second_title: API GroupDocs.Editor .NET
 description: Maîtrisez le traitement des documents dans .NET avec GroupDocs.Editor. Apprenez à extraire des informations, à les enregistrer dans différents formats et à travailler sans effort avec différents types de documents.
-type: docs
 weight: 24
 url: /fr/net/document-processing/
 ---

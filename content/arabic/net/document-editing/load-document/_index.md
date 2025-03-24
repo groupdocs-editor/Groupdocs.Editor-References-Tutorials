@@ -3,7 +3,6 @@ title: تحميل المستند
 linktitle: تحميل المستند
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية تحرير المستندات برمجيًا باستخدام GroupDocs.Editor لـ .NET. دليل خطوة بخطوة لتحميل المستندات والتعامل مع الملفات المحمية بكلمة مرور والمزيد.
-type: docs
 weight: 13
 url: /ar/net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 تهانينا! لقد تعلمت بنجاح كيفية تحميل المستندات باستخدام GroupDocs.Editor لـ .NET بطرق مختلفة. سواء كنت تتعامل مع الملفات المحلية أو المستندات المحمية بكلمة مرور أو تدفقات البايت، يوفر GroupDocs.Editor حلاً مرنًا وقويًا لاحتياجات تحرير المستندات الخاصة بك. تذكر أن تتخلص دائمًا من الموارد لضمان الأداء الأمثل وإدارة الموارد في تطبيقاتك.
 ## الأسئلة الشائعة
 ### ما تنسيقات الملفات التي يدعمها GroupDocs.Editor لـ .NET؟
- يدعم GroupDocs.Editor مجموعة واسعة من تنسيقات الملفات، بما في ذلك DOCX وXLSX وPPTX وHTML وغيرها الكثير. للحصول على القائمة الكاملة، راجع[توثيق](https://reference.groupdocs.com/editor/net/).
+ يدعم GroupDocs.Editor مجموعة واسعة من تنسيقات الملفات، بما في ذلك DOCX وXLSX وPPTX وHTML وغيرها الكثير. للحصول على القائمة الكاملة، راجع[توثيق](https://tutorials.groupdocs.com/editor/net/).
 ### كيف أتعامل مع المستندات المحمية بكلمة مرور؟
  يمكنك استخدام خيارات التحميل مثل`WordProcessingLoadOptions` لتحديد كلمة المرور عند تحميل المستندات المحمية بكلمة مرور.
 ### هل يمكنني استخدام GroupDocs.Editor في تطبيق ويب؟

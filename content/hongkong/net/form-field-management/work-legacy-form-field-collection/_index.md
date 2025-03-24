@@ -3,7 +3,6 @@ title: 使用舊表單欄位集合
 linktitle: 使用舊表單欄位集合
 second_title: GroupDocs.Editor .NET API
 description: 透過我們的詳細指南，了解如何使用 GroupDocs.Editor for .NET 管理舊表單欄位。非常適合處理文字欄位、複選框、日期等。
-type: docs
 weight: 12
 url: /zh-hant/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## 第 8 步：結論
 透過執行這些步驟，您可以使用 GroupDocs.Editor for .NET 有效管理文件中的舊表單欄位並與之互動。無論是文字欄位、複選框、日期、數字或下拉列表，本指南都提供了一種清晰簡潔的方法來處理每種類型。
 ## 結論
-使用正確的工具時，處理文件中的舊表單欄位會變得非常簡單。 GroupDocs.Editor for .NET 提供了一個強大的解決方案來有效管理這些欄位。透過遵循此逐步指南，您現在應該能夠輕鬆操作文件中的各種表單欄位。不要忘記探索[文件](https://reference.groupdocs.com/editor/net/)了解更多進階功能和選項。
+使用正確的工具時，處理文件中的舊表單欄位會變得非常簡單。 GroupDocs.Editor for .NET 提供了一個強大的解決方案來有效管理這些欄位。透過遵循此逐步指南，您現在應該能夠輕鬆操作文件中的各種表單欄位。不要忘記探索[文件](https://tutorials.groupdocs.com/editor/net/)了解更多進階功能和選項。
 ## 常見問題解答
 ### 1. 我可以將 GroupDocs.Editor for .NET 用於受密碼保護的文件嗎？
 是的，您可以在載入選項中指定密碼來處理受密碼保護的文件。
@@ -104,4 +103,4 @@ foreach (var formField in collection)
 ### 4. 我可以購買 GroupDocs.Editor for .NET 的授權嗎？
 是的，您可以從以下位置購買許可證[這裡](https://purchase.groupdocs.com/buy).
 ### 5. 在哪裡可以找到 GroupDocs.Editor for .NET 的文件？
-文件可用[這裡](https://reference.groupdocs.com/editor/net/).
+文件可用[這裡](https://tutorials.groupdocs.com/editor/net/).

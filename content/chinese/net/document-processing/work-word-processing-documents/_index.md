@@ -3,7 +3,6 @@ title: 处理文字处理文档
 linktitle: 处理文字处理文档
 second_title: GroupDocs.Editor .NET API
 description: 使用 GroupDocs.Editor for .NET 轻松编辑文字处理文档。按照我们详细的分步教程来提高您的文档管理技能。
-type: docs
 weight: 19
 url: /zh/net/document-processing/work-word-processing-documents/
 ---
@@ -117,7 +116,7 @@ Console.WriteLine("Document editing and saving process completed successfully.")
 现在，您已完成有关如何使用 GroupDocs.Editor for .NET 处理 Word 处理文档的全面分步指南。这款功能强大的工具可让您轻松地以编程方式操作和编辑文档，并提供多种选项来自定义您的文档处理工作流程。
 ## 常见问题解答
 ### 我可以使用 GroupDocs.Editor for .NET 编辑其他文档格式吗？
-是的，GroupDocs.Editor 支持各种文档格式，包括 PDF、HTML 等。检查[文档](https://reference.groupdocs.com/editor/net/)以获取受支持格式的完整列表。
+是的，GroupDocs.Editor 支持各种文档格式，包括 PDF、HTML 等。检查[文档](https://tutorials.groupdocs.com/editor/net/)以获取受支持格式的完整列表。
 ### 是否可以在没有许可证的情况下使用 GroupDocs.Editor？
 您可以使用免费试用版或申请临时许可证。如需长期使用，建议购买许可证。获取许可证[这里](https://purchase.groupdocs.com/buy).
 ### 如何处理导致 OutOfMemoryException 的大型文档？

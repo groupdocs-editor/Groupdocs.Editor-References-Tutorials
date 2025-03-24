@@ -1,7 +1,6 @@
 ---
 title: Tutorials en voorbeelden van GroupDocs.Editor voor .NET
 linktitle: GroupDocs.Editor voor .NET-zelfstudies
-type: docs
 weight: 10
 url: /nl/net/
 description: Beheer en bewerk documenten met GroupDocs.Editor .NET. Leer documentverwerking, documentbewerking, ophalen van HTML-inhoud, beheer van formuliervelden en meer!

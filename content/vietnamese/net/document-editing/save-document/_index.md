@@ -3,7 +3,6 @@ title: Lưu tài liệu
 linktitle: Lưu tài liệu
 second_title: API GroupDocs.Editor .NET
 description: Chỉnh sửa và lưu tài liệu dễ dàng bằng GroupDocs.Editor cho .NET. Hướng dẫn từng bước này giúp đơn giản hóa quy trình cho các nhà phát triển.
-type: docs
 weight: 14
 url: /vi/net/document-editing/save-document/
 ---
@@ -80,7 +79,7 @@ Bằng cách làm theo các bước này, bạn có thể tải, chỉnh sửa v
 Chỉnh sửa và lưu tài liệu theo chương trình chưa bao giờ dễ dàng hơn thế với GroupDocs.Editor cho .NET. Hướng dẫn này sẽ hướng dẫn bạn toàn bộ quá trình, từ tải tài liệu đến lưu tài liệu ở nhiều định dạng khác nhau. Với GroupDocs.Editor, bạn có một giải pháp linh hoạt và mạnh mẽ trong tầm tay, đơn giản hóa quá trình chỉnh sửa tài liệu.
 ## Câu hỏi thường gặp
 ### GroupDocs.Editor hỗ trợ những định dạng tệp nào?
-GroupDocs.Editor hỗ trợ nhiều định dạng tệp khác nhau, bao gồm DOCX, RTF, TXT, v.v. Để có danh sách đầy đủ, hãy xem[tài liệu](https://reference.groupdocs.com/editor/net/).
+GroupDocs.Editor hỗ trợ nhiều định dạng tệp khác nhau, bao gồm DOCX, RTF, TXT, v.v. Để có danh sách đầy đủ, hãy xem[tài liệu](https://tutorials.groupdocs.com/editor/net/).
 ### Tôi có thể dùng thử GroupDocs.Editor trước khi mua không?
  Vâng, bạn có thể nhận được một[dùng thử miễn phí](https://releases.groupdocs.com/) để kiểm tra các tính năng của GroupDocs.Editor.
 ### Có sự hỗ trợ nào nếu tôi gặp vấn đề không?

@@ -3,7 +3,6 @@ title: Разблокировка управления документами с
 linktitle: Учебные пособия по GroupDocs.Editor
 additionalTitle: Ссылки на API GroupDocs
 description: Освойте редактирование документов без особых усилий с помощью GroupDocs.Editor для .NET и Java. Оптимизируйте рабочий процесс, управляйте CSS, получайте HTML-контент и многое другое!
-type: docs
 weight: 11
 url: /ru/
 is_root: true

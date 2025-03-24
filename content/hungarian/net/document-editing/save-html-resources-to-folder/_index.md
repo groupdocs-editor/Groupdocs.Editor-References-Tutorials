@@ -3,7 +3,6 @@ title: Mentse a HTML-forrásokat mappába
 linktitle: Mentse a HTML-forrásokat mappába
 second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan bonthat ki HTML-forrásokat dokumentumokból a Groupdocs.Editor for .NET segítségével. Ez az átfogó oktatóanyag lépésről lépésre nyújt útmutatást a fejlesztőknek.
-type: docs
 weight: 13
 url: /hu/net/document-editing/save-html-resources-to-folder/
 ---

@@ -3,7 +3,6 @@ title: A GroupDocs.Editor for .NET bemutatása
 linktitle: A GroupDocs.Editor for .NET bemutatása
 second_title: GroupDocs.Editor .NET API
 description: Ebből a részletes, lépésenkénti útmutatóból megtudhatja, hogyan használhatja a GroupDocs.Editor for .NET programot dokumentumok programozott szerkesztésére.
-type: docs
 weight: 12
 url: /hu/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ A GroupDocs.Editor for .NET különféle formátumokat támogat, többek közöt
 ### Integrálható-e a GroupDocs.Editor felhőalapú tárolással?
 Igen, a GroupDocs.Editort integrálhatja különféle felhőalapú tárolási megoldásokkal a dokumentumok kezeléséhez.
 ### Hol találom a GroupDocs.Editor for .NET dokumentációját?
- dokumentáció elérhető[itt](https://reference.groupdocs.com/editor/net/).
+ dokumentáció elérhető[itt](https://tutorials.groupdocs.com/editor/net/).

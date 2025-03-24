@@ -3,7 +3,6 @@ title: 使用旧版表单字段集合
 linktitle: 使用旧版表单字段集合
 second_title: GroupDocs.Editor .NET API
 description: 通过我们的详细指南了解如何使用 GroupDocs.Editor for .NET 管理旧式表单字段。非常适合处理文本字段、复选框、日期等。
-type: docs
 weight: 12
 url: /zh/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## 步骤8：结论
 通过遵循这些步骤，您可以使用 GroupDocs.Editor for .NET 有效地管理和与文档中的旧表单字段进行交互。无论是文本字段、复选框、日期、数字还是下拉菜单，本指南都提供了一种清晰简洁的方式来处理每种类型。
 ## 结论
-使用正确的工具处理文档中的旧表单字段会变得非常简单。GroupDocs.Editor for .NET 提供了一个强大的解决方案来有效地管理这些字段。通过遵循本分步指南，您现在应该能够轻松地操作文档中的各种表单字段。别忘了探索[文档](https://reference.groupdocs.com/editor/net/)获得更多高级功能和选项。
+使用正确的工具处理文档中的旧表单字段会变得非常简单。GroupDocs.Editor for .NET 提供了一个强大的解决方案来有效地管理这些字段。通过遵循本分步指南，您现在应该能够轻松地操作文档中的各种表单字段。别忘了探索[文档](https://tutorials.groupdocs.com/editor/net/)获得更多高级功能和选项。
 ## 常见问题解答
 ### 1. 我可以使用 GroupDocs.Editor for .NET 来处理受密码保护的文档吗？
 是的，您可以在加载选项中指定密码来处理受密码保护的文档。
@@ -104,4 +103,4 @@ foreach (var formField in collection)
 ### 4. 我可以购买 GroupDocs.Editor for .NET 的许可证吗？
 是的，你可以从[这里](https://purchase.groupdocs.com/buy).
 ### 5. 在哪里可以找到 GroupDocs.Editor for .NET 的文档？
-文档可用[这里](https://reference.groupdocs.com/editor/net/).
+文档可用[这里](https://tutorials.groupdocs.com/editor/net/).

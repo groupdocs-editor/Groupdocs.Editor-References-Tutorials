@@ -3,7 +3,6 @@ title: GroupDocs.Editor for .NET の紹介
 linktitle: GroupDocs.Editor for .NET の紹介
 second_title: GroupDocs.Editor .NET API
 description: この詳細なステップバイステップ ガイドでは、GroupDocs.Editor for .NET を使用してプログラムでドキュメントを編集する方法を学習します。
-type: docs
 weight: 12
 url: /ja/net/document-editing/introduction-groupdocs-editor/
 ---
@@ -111,4 +110,4 @@ GroupDocs.Editor for .NET は、DOCX、PDF、HTML、RTF など、さまざまな
 ### GroupDocs.Editor をクラウド ストレージと統合することは可能ですか?
 はい、GroupDocs.Editor をさまざまなクラウド ストレージ ソリューションと統合してドキュメントを管理できます。
 ### GroupDocs.Editor for .NET のドキュメントはどこにありますか?
-ドキュメントは入手可能です[ここ](https://reference.groupdocs.com/editor/net/).
+ドキュメントは入手可能です[ここ](https://tutorials.groupdocs.com/editor/net/).

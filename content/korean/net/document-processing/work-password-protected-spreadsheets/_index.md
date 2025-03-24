@@ -3,7 +3,6 @@ title: 비밀번호로 보호된 스프레드시트 작업
 linktitle: 비밀번호로 보호된 스프레드시트 작업
 second_title: GroupDocs.Editor .NET API
 description: .NET용 GroupDocs.Editor를 사용하여 암호로 보호된 스프레드시트를 처리하는 방법을 알아보세요. 이 자세한 가이드는 안전한 Excel 파일을 열어서 저장하는 과정을 안내합니다.
-type: docs
 weight: 18
 url: /ko/net/document-processing/work-password-protected-spreadsheets/
 ---
@@ -108,4 +107,4 @@ Console.WriteLine("Successfully handled the password-protected spreadsheet. Edit
 ### 스프레드시트를 열고 쓸 때 비밀번호를 다르게 설정할 수 있나요?
 전적으로! 저장 옵션을 사용하여 문서 열기 및 쓰기 방지를 위한 별도의 비밀번호를 설정할 수 있습니다.
 ### 더 자세한 문서는 어디서 찾을 수 있나요?
- .NET용 GroupDocs.Editor에 대한 포괄적인 문서에 액세스할 수 있습니다.[여기](https://reference.groupdocs.com/editor/net/).
+ .NET용 GroupDocs.Editor에 대한 포괄적인 문서에 액세스할 수 있습니다.[여기](https://tutorials.groupdocs.com/editor/net/).

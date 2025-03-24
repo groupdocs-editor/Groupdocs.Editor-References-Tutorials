@@ -3,7 +3,6 @@ title: ดึงเนื้อหาเนื้อหา HTML
 linktitle: ดึงเนื้อหาเนื้อหา HTML
 second_title: GroupDocs.Editor .NET API
 description: ดึงเนื้อหาเนื้อหา HTML โดยใช้ GroupDocs.Editor สำหรับ .NET พร้อมด้วยคำแนะนำทีละขั้นตอนของเรา ปรับปรุงแอปพลิเคชัน .NET ของคุณได้อย่างง่ายดาย
-type: docs
 weight: 10
 url: /th/net/html-content-retrieval/retrieve-html-body-content/
 ---
@@ -62,4 +61,4 @@ GroupDocs.Editor รองรับรูปแบบไฟล์ที่หล
 ### ฉันสามารถใช้ GroupDocs.Editor กับ .NET Core ได้หรือไม่
 ใช่ GroupDocs.Editor เข้ากันได้กับ .NET Core ซึ่งให้ความยืดหยุ่นสำหรับการพัฒนาแอปพลิเคชันสมัยใหม่
 ### ฉันจะหาตัวอย่างและเอกสารประกอบเพิ่มเติมสำหรับ GroupDocs.Editor ได้จากที่ไหน
- คุณสามารถดูตัวอย่างเพิ่มเติมและเอกสารประกอบโดยละเอียดได้ที่[หน้าเอกสาร GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ คุณสามารถดูตัวอย่างเพิ่มเติมและเอกสารประกอบโดยละเอียดได้ที่[หน้าเอกสาร GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).

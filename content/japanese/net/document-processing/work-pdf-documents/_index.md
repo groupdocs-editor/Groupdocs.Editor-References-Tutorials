@@ -3,7 +3,6 @@ title: PDFドキュメントの操作
 linktitle: PDFドキュメントの操作
 second_title: GroupDocs.Editor .NET API
 description: このチュートリアルでは、GroupDocs.Editor for .NET を使用して PDF ドキュメントを編集する方法を学びます。コンテンツを変更し、大きなファイルを処理し、編集内容を安全に保存します。
-type: docs
 weight: 14
 url: /ja/net/document-processing/work-pdf-documents/
 ---

@@ -3,7 +3,6 @@ title: Werken met presentaties
 linktitle: Werken met presentaties
 second_title: GroupDocs.Editor .NET API
 description: Leer PowerPoint-presentaties bewerken met GroupDocs.Editor voor .NET. Volg deze stapsgewijze handleiding om uw documentbewerkingsproces te stroomlijnen.
-type: docs
 weight: 16
 url: /nl/net/document-processing/work-presentations/
 ---
@@ -132,4 +131,4 @@ Momenteel kunt u met GroupDocs.Editor één dia tegelijk bewerken. U kunt dia's 
 ### Kan ik GroupDocs.Editor voor .NET gebruiken in een webapplicatie?
 Ja, GroupDocs.Editor voor .NET kan worden geïntegreerd in webapplicaties om documentbewerkingsmogelijkheden te bieden.
 ### Waar kan ik meer gedetailleerde documentatie en ondersteuning vinden?
- U kunt gedetailleerde documentatie vinden[hier](https://reference.groupdocs.com/editor/net/) . Voor ondersteuning kunt u terecht op de[Helpforum](https://forum.groupdocs.com/c/editor/20).
+ U kunt gedetailleerde documentatie vinden[hier](https://tutorials.groupdocs.com/editor/net/) . Voor ondersteuning kunt u terecht op de[Helpforum](https://forum.groupdocs.com/c/editor/20).

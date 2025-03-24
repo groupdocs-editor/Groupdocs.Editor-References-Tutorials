@@ -1,7 +1,6 @@
 ---
 title: Εκπαιδευτικά προγράμματα και παραδείγματα GroupDocs.Editor για .NET
 linktitle: GroupDocs.Editor για .NET Tutorials
-type: docs
 weight: 10
 url: /el/net/
 description: Διαχειριστείτε και επεξεργαστείτε έγγραφα με το GroupDocs.Editor .NET. Μάθετε την επεξεργασία εγγράφων, την επεξεργασία εγγράφων, την ανάκτηση περιεχομένου HTML, τη διαχείριση πεδίου φόρμας και πολλά άλλα!

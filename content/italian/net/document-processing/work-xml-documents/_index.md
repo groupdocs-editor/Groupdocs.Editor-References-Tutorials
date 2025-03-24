@@ -3,7 +3,6 @@ title: Lavora con documenti XML
 linktitle: Lavora con documenti XML
 second_title: API GroupDocs.Editor .NET
 description: Scopri come modificare in modo efficiente i documenti XML utilizzando GroupDocs.Editor per .NET con la nostra guida passo passo, che copre tutti i passaggi e le opzioni essenziali.
-type: docs
 weight: 20
 url: /it/net/document-processing/work-xml-documents/
 ---

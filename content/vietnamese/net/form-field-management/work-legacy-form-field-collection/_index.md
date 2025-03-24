@@ -3,7 +3,6 @@ title: Làm việc với Bộ sưu tập trường biểu mẫu kế thừa
 linktitle: Làm việc với Bộ sưu tập trường biểu mẫu kế thừa
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách quản lý các trường biểu mẫu cũ bằng GroupDocs.Editor dành cho .NET với hướng dẫn chi tiết của chúng tôi. Hoàn hảo để xử lý các trường văn bản, hộp kiểm, ngày tháng, v.v.
-type: docs
 weight: 12
 url: /vi/net/form-field-management/work-legacy-form-field-collection/
 ---
@@ -93,7 +92,7 @@ foreach (var formField in collection)
 ## Bước 8: Kết luận
 Bằng cách làm theo các bước này, bạn có thể quản lý và tương tác một cách hiệu quả với các trường biểu mẫu cũ trong tài liệu của mình bằng GroupDocs.Editor cho .NET. Cho dù đó là trường văn bản, hộp kiểm, ngày tháng, số hay danh sách thả xuống, hướng dẫn này đều cung cấp cách rõ ràng và ngắn gọn để xử lý từng loại.
 ## Phần kết luận
- Làm việc với các trường biểu mẫu cũ trong tài liệu có thể đơn giản khi sử dụng đúng công cụ. GroupDocs.Editor cho .NET cung cấp giải pháp mạnh mẽ để quản lý các trường này một cách hiệu quả. Bằng cách làm theo hướng dẫn từng bước này, giờ đây bạn có thể thao tác các trường biểu mẫu khác nhau trong tài liệu của mình một cách dễ dàng. Đừng quên khám phá[tài liệu](https://reference.groupdocs.com/editor/net/)để biết thêm các tính năng và tùy chọn nâng cao.
+ Làm việc với các trường biểu mẫu cũ trong tài liệu có thể đơn giản khi sử dụng đúng công cụ. GroupDocs.Editor cho .NET cung cấp giải pháp mạnh mẽ để quản lý các trường này một cách hiệu quả. Bằng cách làm theo hướng dẫn từng bước này, giờ đây bạn có thể thao tác các trường biểu mẫu khác nhau trong tài liệu của mình một cách dễ dàng. Đừng quên khám phá[tài liệu](https://tutorials.groupdocs.com/editor/net/)để biết thêm các tính năng và tùy chọn nâng cao.
 ## Câu hỏi thường gặp
 ### 1. Tôi có thể sử dụng GroupDocs.Editor cho .NET với các tài liệu được bảo vệ bằng mật khẩu không?
 Có, bạn có thể chỉ định mật khẩu trong tùy chọn tải để xử lý các tài liệu được bảo vệ bằng mật khẩu.
@@ -104,4 +103,4 @@ Có, bạn có thể chỉ định mật khẩu trong tùy chọn tải để x�
 ### 4. Tôi có thể mua giấy phép GroupDocs.Editor cho .NET không?
  Có, bạn có thể mua giấy phép từ[đây](https://purchase.groupdocs.com/buy).
 ### 5. Tôi có thể tìm tài liệu về GroupDocs.Editor cho .NET ở đâu?
-Tài liệu có sẵn[đây](https://reference.groupdocs.com/editor/net/).
+Tài liệu có sẵn[đây](https://tutorials.groupdocs.com/editor/net/).

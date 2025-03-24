@@ -3,7 +3,6 @@ title: Sunumlarla Çalışma
 linktitle: Sunumlarla Çalışma
 second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET'i kullanarak PowerPoint sunumlarını düzenlemeyi öğrenin. Belge düzenleme sürecinizi kolaylaştırmak için bu adım adım kılavuzu izleyin.
-type: docs
 weight: 16
 url: /tr/net/document-processing/work-presentations/
 ---
@@ -132,4 +131,4 @@ GroupDocs.Editor, PPTX, PPTM ve daha fazlasını içeren çeşitli formatları d
 ### GroupDocs.Editor for .NET'i bir web uygulamasında kullanabilir miyim?
 Evet, GroupDocs.Editor for .NET, belge düzenleme yetenekleri sağlamak üzere web uygulamalarına entegre edilebilir.
 ### Daha ayrıntılı belge ve desteği nerede bulabilirim?
- Ayrıntılı belgeleri bulabilirsiniz[Burada](https://reference.groupdocs.com/editor/net/) . Destek için şu adresi ziyaret edin:[destek Forumu](https://forum.groupdocs.com/c/editor/20).
+ Ayrıntılı belgeleri bulabilirsiniz[Burada](https://tutorials.groupdocs.com/editor/net/) . Destek için şu adresi ziyaret edin:[destek Forumu](https://forum.groupdocs.com/c/editor/20).

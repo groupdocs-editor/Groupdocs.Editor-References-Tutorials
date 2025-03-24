@@ -3,7 +3,6 @@ title: 従量制ライセンスの設定
 linktitle: 従量制ライセンスの設定
 second_title: GroupDocs.Editor .NET API
 description: 包括的なガイドを使用して、GroupDocs.Editor for .NET を統合して使用する方法を学習します。.NET アプリケーション内で強力なドキュメント編集機能を活用できます。
-type: docs
 weight: 12
 url: /ja/net/quick-start-guide/set-metered-license/
 ---
@@ -69,15 +68,15 @@ editor.Save(editableDocument, "updated_sample.docx");
 Console.WriteLine("Document saved successfully.");
 ```
 ## 結論
-おめでとうございます。GroupDocs.Editor for .NET をアプリケーションに統合して使用できました。ライブラリのインストールから従量制ライセンスの設定、ドキュメントの編集まで、重要な手順をすべて網羅しました。この強力なツールにより、.NET アプリケーション内でのドキュメント編集ワークフローが大幅に効率化されます。詳細については、[.NET ドキュメント用の GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+おめでとうございます。GroupDocs.Editor for .NET をアプリケーションに統合して使用できました。ライブラリのインストールから従量制ライセンスの設定、ドキュメントの編集まで、重要な手順をすべて網羅しました。この強力なツールにより、.NET アプリケーション内でのドキュメント編集ワークフローが大幅に効率化されます。詳細については、[.NET ドキュメント用の GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).
 ## よくある質問
 ### GroupDocs.Editor ライセンスを取得するにはどうすればよいですか?
 ライセンスは、[GroupDocs 購入ページ](https://purchase.groupdocs.com/buy)一時ライセンスについては、[ここ](https://purchase.groupdocs.com/temporary-license/).
 ### GroupDocs.Editor を無料で試すことはできますか?
 はい、無料トライアルは以下からダウンロードできます。[ダウンロードページ](https://releases.groupdocs.com/)一時ライセンスを申請します。
 ### GroupDocs.Editor ではどのようなドキュメント形式がサポートされていますか?
- GroupDocs.EditorはDOCX、PPTX、XLSX、TXT、HTMLなど、さまざまな形式をサポートしています。完全なリストについては、[ドキュメンテーション](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.EditorはDOCX、PPTX、XLSX、TXT、HTMLなど、さまざまな形式をサポートしています。完全なリストについては、[ドキュメンテーション](https://tutorials.groupdocs.com/editor/net/).
 ### GroupDocs.Editor にはコミュニティ サポートがありますか?
 はい、コミュニティのサポートを受けることができます[GroupDocs.Editor フォーラム](https://forum.groupdocs.com/c/editor/20).
 ### GroupDocs.Editor for .NET を使い始めるにはどうすればよいですか?
-ライブラリの設定、ライセンスの取得、ドキュメントの編集を開始するには、ステップバイステップのガイドに従ってください。詳細な手順については、[ドキュメンテーション](https://reference.groupdocs.com/editor/net/).
+ライブラリの設定、ライセンスの取得、ドキュメントの編集を開始するには、ステップバイステップのガイドに従ってください。詳細な手順については、[ドキュメンテーション](https://tutorials.groupdocs.com/editor/net/).

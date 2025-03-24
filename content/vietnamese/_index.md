@@ -3,7 +3,6 @@ title: Mở khóa quản lý tài liệu với GroupDocs.Editor
 linktitle: Hướng dẫn về GroupDocs.Editor
 additionalTitle: Tài liệu tham khảo API GroupDocs
 description: Chỉnh sửa tài liệu một cách dễ dàng với GroupDocs.Editor cho .NET & Java. Hợp lý hóa quy trình làm việc, quản lý CSS, truy xuất nội dung HTML và hơn thế nữa!
-type: docs
 weight: 11
 url: /vi/
 is_root: true

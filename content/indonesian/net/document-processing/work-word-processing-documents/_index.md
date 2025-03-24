@@ -3,7 +3,6 @@ title: Bekerja dengan Dokumen Pemrosesan Kata
 linktitle: Bekerja dengan Dokumen Pemrosesan Kata
 second_title: GroupDocs.Editor .NET API
 description: Edit dokumen pemrosesan Word dengan mudah menggunakan GroupDocs.Editor untuk .NET. Ikuti tutorial langkah demi langkah kami yang terperinci untuk meningkatkan keterampilan manajemen dokumen Anda.
-type: docs
 weight: 19
 url: /id/net/document-processing/work-word-processing-documents/
 ---
@@ -117,7 +116,7 @@ Console.WriteLine("Document editing and saving process completed successfully.")
 Anda sekarang telah menyelesaikan panduan langkah demi langkah yang komprehensif tentang cara bekerja dengan dokumen pemrosesan Word menggunakan GroupDocs.Editor untuk .NET. Alat canggih ini memudahkan manipulasi dan pengeditan dokumen secara terprogram, menyediakan berbagai pilihan untuk menyesuaikan alur kerja pemrosesan dokumen Anda.
 ## FAQ
 ### Bisakah saya menggunakan GroupDocs.Editor untuk .NET untuk mengedit format dokumen lain?
- Ya, GroupDocs.Editor mendukung berbagai format dokumen termasuk PDF, HTML, dan lainnya. Periksalah[dokumentasi](https://reference.groupdocs.com/editor/net/) untuk daftar lengkap format yang didukung.
+ Ya, GroupDocs.Editor mendukung berbagai format dokumen termasuk PDF, HTML, dan lainnya. Periksalah[dokumentasi](https://tutorials.groupdocs.com/editor/net/) untuk daftar lengkap format yang didukung.
 ### Apakah mungkin menggunakan GroupDocs.Editor tanpa lisensi?
  Anda dapat menggunakan uji coba gratis atau meminta lisensi sementara. Untuk penggunaan jangka panjang, disarankan untuk membeli lisensi. Dapatkan lisensi[Di Sini](https://purchase.groupdocs.com/buy).
 ### Bagaimana cara menangani dokumen berukuran besar yang menyebabkan OutOfMemoryException?

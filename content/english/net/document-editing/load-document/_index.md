@@ -3,7 +3,6 @@ title: Load Document
 linktitle: Load Document
 second_title: GroupDocs.Editor .NET API
 description: Learn how to edit documents programmatically with GroupDocs.Editor for .NET. Step-by-step guide for loading documents, handling password-protected files, and more.
-type: docs
 weight: 13
 url: /net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 Congratulations! You’ve successfully learned how to load documents using GroupDocs.Editor for .NET in various ways. Whether you’re dealing with local files, password-protected documents, or byte streams, GroupDocs.Editor provides a flexible and powerful solution for your document editing needs. Remember to always dispose of resources to ensure optimal performance and resource management in your applications.
 ## FAQ's
 ### What file formats are supported by GroupDocs.Editor for .NET?
-GroupDocs.Editor supports a wide range of file formats, including DOCX, XLSX, PPTX, HTML, and many more. For a full list, refer to the [documentation](https://reference.groupdocs.com/editor/net/).
+GroupDocs.Editor supports a wide range of file formats, including DOCX, XLSX, PPTX, HTML, and many more. For a full list, refer to the [documentation](https://tutorials.groupdocs.com/editor/net/).
 ### How do I handle password-protected documents?
 You can use load options such as `WordProcessingLoadOptions` to specify the password when loading password-protected documents.
 ### Can I use GroupDocs.Editor in a web application?

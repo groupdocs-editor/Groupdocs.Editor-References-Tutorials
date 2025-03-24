@@ -3,7 +3,6 @@ title: Dokument erstellen
 linktitle: Dokument erstellen
 second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie in diesem umfassenden Schritt-für-Schritt-Tutorial, wie Sie Word-, Excel-, PowerPoint-, E-Book- und E-Mail-Dokumente mit GroupDocs.Editor für .NET bearbeiten.
-type: docs
 weight: 10
 url: /de/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ Sie können eine Rückruffunktion verwenden, um den bearbeiteten Dokumentstrom a
 ### Benötige ich eine Lizenz, um GroupDocs.Editor für .NET zu verwenden?
  Ja, Sie können eine Lizenz erhalten bei[Hier](https://purchase.groupdocs.com/buy)Es besteht auch die Möglichkeit einer temporären Lizenz.
 ### Wo finde ich ausführlichere Dokumentation?
- Eine ausführliche Dokumentation finden Sie auf der[GroupDocs.Editor für .NET-Dokumentationsseite](https://reference.groupdocs.com/editor/net/).
+ Eine ausführliche Dokumentation finden Sie auf der[GroupDocs.Editor für .NET-Dokumentationsseite](https://tutorials.groupdocs.com/editor/net/).

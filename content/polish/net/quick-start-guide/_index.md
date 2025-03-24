@@ -3,7 +3,6 @@ title: Skrócona instrukcja obsługi
 linktitle: Skrócona instrukcja obsługi
 second_title: Edytor GroupDocs.NET API
 description: Naucz się korzystać z GroupDocs.Editor dla platformy .NET dzięki naszym obszernym samouczkom. Ustaw licencje, integruj funkcje i odblokowuj zaawansowane możliwości edycji dokumentów.
-type: docs
 weight: 26
 url: /pl/net/quick-start-guide/
 ---

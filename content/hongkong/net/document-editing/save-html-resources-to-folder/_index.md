@@ -3,7 +3,6 @@ title: 將 HTML 資源儲存到資料夾
 linktitle: 將 HTML 資源儲存到資料夾
 second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 Groupdocs.Editor for .NET 從文件中擷取 HTML 資源。這個綜合教程為開發人員提供了逐步指導。
-type: docs
 weight: 13
 url: /zh-hant/net/document-editing/save-html-resources-to-folder/
 ---

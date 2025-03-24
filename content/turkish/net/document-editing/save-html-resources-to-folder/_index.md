@@ -3,7 +3,6 @@ title: HTML Kaynaklarını Klasöre Kaydet
 linktitle: HTML Kaynaklarını Klasöre Kaydet
 second_title: GroupDocs.Editor .NET API'si
 description: Groupdocs.Editor for .NET'i kullanarak belgelerden HTML kaynaklarını nasıl çıkaracağınızı öğrenin. Bu kapsamlı eğitim, geliştiricilere adım adım rehberlik sağlar.
-type: docs
 weight: 13
 url: /tr/net/document-editing/save-html-resources-to-folder/
 ---

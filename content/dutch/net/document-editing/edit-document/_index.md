@@ -3,7 +3,6 @@ title: Document bewerken
 linktitle: Document bewerken
 second_title: GroupDocs.Editor .NET API
 description: Leer moeiteloos documenten bewerken met GroupDocs.Editor voor .NET. Stapsgewijze handleiding voor tekstverwerkings- en spreadsheetbestanden.
-type: docs
 weight: 11
 url: /nl/net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 Een juiste verwijdering zorgt ervoor dat er geen geheugenlekken of prestatieproblemen in uw toepassing optreden.
 ## Conclusie
- Gefeliciteerd! U heeft nu een goed begrip van hoe u GroupDocs.Editor voor .NET kunt gebruiken om inhoud uit tekstverwerkingsdocumenten en spreadsheets te laden, bewerken en extraheren. Deze krachtige tool vereenvoudigt documentbewerkingstaken en kan naadloos worden geïntegreerd met uw .NET-applicaties. Voor meer details kunt u de[documentatie](https://reference.groupdocs.com/editor/net/), [download de nieuwste versie](https://releases.groupdocs.com/editor/net/) , of verkrijg een[tijdelijke licentie](https://purchase.groupdocs.com/temporary-license/).
+ Gefeliciteerd! U heeft nu een goed begrip van hoe u GroupDocs.Editor voor .NET kunt gebruiken om inhoud uit tekstverwerkingsdocumenten en spreadsheets te laden, bewerken en extraheren. Deze krachtige tool vereenvoudigt documentbewerkingstaken en kan naadloos worden geïntegreerd met uw .NET-applicaties. Voor meer details kunt u de[documentatie](https://tutorials.groupdocs.com/editor/net/), [download de nieuwste versie](https://releases.groupdocs.com/editor/net/) , of verkrijg een[tijdelijke licentie](https://purchase.groupdocs.com/temporary-license/).
 ## Veelgestelde vragen
 ### Kan ik PDF-documenten bewerken met GroupDocs.Editor voor .NET?
 Momenteel ondersteunt GroupDocs.Editor voor .NET voornamelijk de indelingen Tekstverwerking, Spreadsheet en Presentatie.

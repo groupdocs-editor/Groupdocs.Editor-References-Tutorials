@@ -3,7 +3,6 @@ title: Správa polí formuláře
 linktitle: Správa polí formuláře
 second_title: GroupDocs.Editor .NET API
 description: Ovládněte správu polí formuláře v .NET pomocí GroupDocs.Editor. Naučte se bezproblémově upravovat, opravovat, pracovat se staršími a odstraňovat kolekce polí formulářů.
-type: docs
 weight: 23
 url: /cs/net/form-field-management/
 ---

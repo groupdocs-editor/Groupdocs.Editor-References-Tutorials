@@ -3,7 +3,6 @@ title: Lưu tài liệu đã chỉnh sửa sang các định dạng khác nhau
 linktitle: Lưu tài liệu đã chỉnh sửa sang các định dạng khác nhau
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách lưu tài liệu đã chỉnh sửa sang nhiều định dạng khác nhau bằng GroupDocs.Editor cho .NET trong hướng dẫn từng bước toàn diện này.
-type: docs
 weight: 11
 url: /vi/net/document-processing/save-edited-document-various-formats/
 ---
@@ -92,4 +91,4 @@ GroupDocs.Editor hỗ trợ nhiều định dạng, bao gồm DOCX, PDF, HTML, v
 ### Làm cách nào để có được giấy phép tạm thời cho GroupDocs.Editor?
  Bạn có thể có được giấy phép tạm thời[đây](https://purchase.groupdocs.com/temporary-license/).
 ### Tôi có thể tìm thêm tài liệu và hỗ trợ ở đâu?
- Tài liệu chi tiết có sẵn[đây](https://reference.groupdocs.com/editor/net/) , và bạn có thể nhận được hỗ trợ[đây](https://forum.groupdocs.com/c/editor/20).
+ Tài liệu chi tiết có sẵn[đây](https://tutorials.groupdocs.com/editor/net/) , và bạn có thể nhận được hỗ trợ[đây](https://forum.groupdocs.com/c/editor/20).

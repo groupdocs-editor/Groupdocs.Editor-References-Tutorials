@@ -3,7 +3,6 @@ title: Uložit dokument
 linktitle: Uložit dokument
 second_title: GroupDocs.Editor .NET API
 description: Bez námahy upravujte a ukládejte dokumenty pomocí GroupDocs.Editor pro .NET. Tento průvodce krok za krokem zjednodušuje vývojářům proces.
-type: docs
 weight: 14
 url: /cs/net/document-editing/save-document/
 ---
@@ -80,7 +79,7 @@ Pomocí následujících kroků můžete efektivně načítat, upravovat a uklá
 Úpravy a ukládání dokumentů pomocí programu nebylo nikdy snazší s GroupDocs.Editor pro .NET. Tento průvodce vás provede celým procesem, od načtení dokumentu až po jeho uložení v různých formátech. S GroupDocs.Editor máte na dosah všestranné a robustní řešení, které zjednodušuje proces úprav dokumentů.
 ## FAQ
 ### Jaké formáty souborů podporuje GroupDocs.Editor?
-GroupDocs.Editor podporuje různé formáty souborů, včetně DOCX, RTF, TXT a mnoha dalších. Pro úplný seznam se podívejte na[dokumentace](https://reference.groupdocs.com/editor/net/).
+GroupDocs.Editor podporuje různé formáty souborů, včetně DOCX, RTF, TXT a mnoha dalších. Pro úplný seznam se podívejte na[dokumentace](https://tutorials.groupdocs.com/editor/net/).
 ### Mohu GroupDocs.Editor před zakoupením vyzkoušet?
  Ano, můžete získat a[zkušební verze zdarma](https://releases.groupdocs.com/) k testování funkcí GroupDocs.Editoru.
 ### Je k dispozici nějaká podpora v případě problémů?

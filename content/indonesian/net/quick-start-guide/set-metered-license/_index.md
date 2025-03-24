@@ -3,7 +3,6 @@ title: Tetapkan Lisensi Terukur
 linktitle: Tetapkan Lisensi Terukur
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengintegrasikan dan menggunakan GroupDocs.Editor untuk .NET dengan panduan komprehensif kami. Buka fitur pengeditan dokumen yang canggih dalam aplikasi .NET Anda.
-type: docs
 weight: 12
 url: /id/net/quick-start-guide/set-metered-license/
 ---
@@ -69,15 +68,15 @@ editor.Save(editableDocument, "updated_sample.docx");
 Console.WriteLine("Document saved successfully.");
 ```
 ## Kesimpulan
- Selamat! Anda telah berhasil mengintegrasikan dan menggunakan GroupDocs.Editor untuk .NET di aplikasi Anda. Dari menginstal perpustakaan hingga menyiapkan lisensi terukur dan mengedit dokumen, Anda telah membahas semua langkah penting. Alat canggih ini dapat secara signifikan menyederhanakan alur kerja pengeditan dokumen dalam aplikasi .NET Anda. Untuk informasi lebih lanjut, lihat[GroupDocs.Editor untuk dokumentasi .NET](https://reference.groupdocs.com/editor/net/).
+ Selamat! Anda telah berhasil mengintegrasikan dan menggunakan GroupDocs.Editor untuk .NET di aplikasi Anda. Dari menginstal perpustakaan hingga menyiapkan lisensi terukur dan mengedit dokumen, Anda telah membahas semua langkah penting. Alat canggih ini dapat secara signifikan menyederhanakan alur kerja pengeditan dokumen dalam aplikasi .NET Anda. Untuk informasi lebih lanjut, lihat[GroupDocs.Editor untuk dokumentasi .NET](https://tutorials.groupdocs.com/editor/net/).
 ## FAQ
 ### Bagaimana cara mendapatkan lisensi GroupDocs.Editor?
  Anda dapat memperoleh lisensi dari[Halaman pembelian GroupDocs](https://purchase.groupdocs.com/buy) . Untuk lisensi sementara, kunjungi[Di Sini](https://purchase.groupdocs.com/temporary-license/).
 ### Bisakah saya mencoba GroupDocs.Editor secara gratis?
  Ya, Anda dapat mengunduh uji coba gratis dari[Unduh Halaman](https://releases.groupdocs.com/) dan meminta izin sementara.
 ### Format dokumen apa yang didukung oleh GroupDocs.Editor?
- GroupDocs.Editor mendukung berbagai format termasuk DOCX, PPTX, XLSX, TXT, HTML, dan banyak lagi. Untuk daftar lengkap, periksa[dokumentasi](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor mendukung berbagai format termasuk DOCX, PPTX, XLSX, TXT, HTML, dan banyak lagi. Untuk daftar lengkap, periksa[dokumentasi](https://tutorials.groupdocs.com/editor/net/).
 ### Apakah ada dukungan komunitas yang tersedia untuk GroupDocs.Editor?
  Ya, Anda bisa mendapatkan dukungan komunitas dari[Forum GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
 ### Bagaimana cara memulai GroupDocs.Editor untuk .NET?
- Ikuti panduan langkah demi langkah kami untuk menyiapkan perpustakaan, mendapatkan lisensi, dan mulai mengedit dokumen. Untuk petunjuk rinci, kunjungi[dokumentasi](https://reference.groupdocs.com/editor/net/).
+ Ikuti panduan langkah demi langkah kami untuk menyiapkan perpustakaan, mendapatkan lisensi, dan mulai mengedit dokumen. Untuk petunjuk rinci, kunjungi[dokumentasi](https://tutorials.groupdocs.com/editor/net/).

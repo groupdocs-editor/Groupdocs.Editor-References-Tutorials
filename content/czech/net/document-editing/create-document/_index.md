@@ -3,7 +3,6 @@ title: Vytvořit dokument
 linktitle: Vytvořit dokument
 second_title: GroupDocs.Editor .NET API
 description: Naučte se upravovat dokumenty Word, Excel, PowerPoint, e-knihy a e-maily pomocí GroupDocs.Editor pro .NET s tímto komplexním výukovým programem krok za krokem.
-type: docs
 weight: 10
 url: /cs/net/document-editing/create-document/
 ---
@@ -163,4 +162,4 @@ Pomocí funkce zpětného volání můžete uložit upravený tok dokumentů na 
 ### Potřebuji licenci k používání GroupDocs.Editor pro .NET?
  Ano, můžete získat licenci od[tady](https://purchase.groupdocs.com/buy). Existuje také možnost dočasné licence.
 ### Kde najdu podrobnější dokumentaci?
- Podrobná dokumentace je k dispozici na[Stránka dokumentace GroupDocs.Editor pro .NET](https://reference.groupdocs.com/editor/net/).
+ Podrobná dokumentace je k dispozici na[Stránka dokumentace GroupDocs.Editor pro .NET](https://tutorials.groupdocs.com/editor/net/).

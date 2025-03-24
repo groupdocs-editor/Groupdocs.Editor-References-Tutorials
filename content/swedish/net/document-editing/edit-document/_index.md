@@ -3,7 +3,6 @@ title: Redigera dokument
 linktitle: Redigera dokument
 second_title: GroupDocs.Editor .NET API
 description: Lär dig att redigera dokument utan ansträngning med GroupDocs.Editor för .NET. Steg-för-steg-guide för ordbehandlings- och kalkylbladsfiler.
-type: docs
 weight: 11
 url: /sv/net/document-editing/edit-document/
 ---
@@ -105,7 +104,7 @@ editor2.Dispose();
 ```
 Korrekt kassering säkerställer att det inte finns några minnesläckor eller prestandaproblem i din applikation.
 ## Slutsats
- Grattis! Du har nu en gedigen förståelse för hur du använder GroupDocs.Editor för .NET för att ladda, redigera och extrahera innehåll från ordbehandlingsdokument och kalkylblad. Detta kraftfulla verktyg förenklar dokumentredigeringsuppgifter och integreras sömlöst med dina .NET-applikationer. För ytterligare information kan du utforska[dokumentation](https://reference.groupdocs.com/editor/net/), [ladda ner den senaste versionen](https://releases.groupdocs.com/editor/net/) , eller skaffa en[tillfällig licens](https://purchase.groupdocs.com/temporary-license/).
+ Grattis! Du har nu en gedigen förståelse för hur du använder GroupDocs.Editor för .NET för att ladda, redigera och extrahera innehåll från ordbehandlingsdokument och kalkylblad. Detta kraftfulla verktyg förenklar dokumentredigeringsuppgifter och integreras sömlöst med dina .NET-applikationer. För ytterligare information kan du utforska[dokumentation](https://tutorials.groupdocs.com/editor/net/), [ladda ner den senaste versionen](https://releases.groupdocs.com/editor/net/) , eller skaffa en[tillfällig licens](https://purchase.groupdocs.com/temporary-license/).
 ## FAQ's
 ### Kan jag redigera PDF-dokument med GroupDocs.Editor för .NET?
 För närvarande stöder GroupDocs.Editor för .NET i första hand ordbehandlings-, kalkylblads- och presentationsformat.

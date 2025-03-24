@@ -3,7 +3,6 @@ title: 載入文檔
 linktitle: 載入文檔
 second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 以程式設計方式編輯文件。載入文件、處理受密碼保護的文件等的逐步指南。
-type: docs
 weight: 13
 url: /zh-hant/net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 恭喜！您已經成功學習如何使用 GroupDocs.Editor for .NET 以各種方式載入文件。無論您是處理本機檔案、受密碼保護的文件還是位元組流，GroupDocs.Editor 都能為您的文件編輯需求提供靈活且強大的解決方案。請記住始終處置資源，以確保應用程式中的最佳效能和資源管理。
 ## 常見問題解答
 ### GroupDocs.Editor for .NET 支援哪些檔案格式？
- GroupDocs.Editor 支援多種檔案格式，包括 DOCX、XLSX、PPTX、HTML 等。如需完整列表，請參閱[文件](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor 支援多種檔案格式，包括 DOCX、XLSX、PPTX、HTML 等。如需完整列表，請參閱[文件](https://tutorials.groupdocs.com/editor/net/).
 ### 如何處理受密碼保護的文件？
 您可以使用載入選項，例如`WordProcessingLoadOptions`載入受密碼保護的文件時指定密碼。
 ### 我可以在 Web 應用程式中使用 GroupDocs.Editor 嗎？

@@ -3,7 +3,6 @@ title: 加载文档
 linktitle: 加载文档
 second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 以编程方式编辑文档。加载文档、处理受密码保护的文件等的分步指南。
-type: docs
 weight: 13
 url: /zh/net/document-editing/load-document/
 ---
@@ -76,7 +75,7 @@ System.Console.WriteLine("Spreadsheet document loaded successfully with load opt
 恭喜！您已成功学会了如何使用 GroupDocs.Editor for .NET 以各种方式加载文档。无论您处理的是本地文件、受密码保护的文档还是字节流，GroupDocs.Editor 都能为您的文档编辑需求提供灵活而强大的解决方案。请记住始终释放资源以确保您的应用程序具有最佳性能和资源管理。
 ## 常见问题解答
 ### GroupDocs.Editor for .NET 支持哪些文件格式？
- GroupDocs.Editor 支持多种文件格式，包括 DOCX、XLSX、PPTX、HTML 等。有关完整列表，请参阅[文档](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor 支持多种文件格式，包括 DOCX、XLSX、PPTX、HTML 等。有关完整列表，请参阅[文档](https://tutorials.groupdocs.com/editor/net/).
 ### 如何处理受密码保护的文档？
 您可以使用以下加载选项`WordProcessingLoadOptions`在加载受密码保护的文档时指定密码。
 ### 我可以在 Web 应用程序中使用 GroupDocs.Editor 吗？

@@ -3,7 +3,6 @@ title: Bewaar het bewerkte document in verschillende formaten
 linktitle: Bewaar het bewerkte document in verschillende formaten
 second_title: GroupDocs.Editor .NET API
 description: Leer hoe u bewerkte documenten in verschillende formaten kunt opslaan met GroupDocs.Editor voor .NET in deze uitgebreide stapsgewijze handleiding.
-type: docs
 weight: 11
 url: /nl/net/document-processing/save-edited-document-various-formats/
 ---
@@ -92,4 +91,4 @@ GroupDocs.Editor ondersteunt een breed scala aan formaten, waaronder DOCX, PDF, 
 ### Hoe krijg ik een tijdelijke licentie voor GroupDocs.Editor?
  U kunt een tijdelijke licentie verkrijgen[hier](https://purchase.groupdocs.com/temporary-license/).
 ### Waar kan ik meer documentatie en ondersteuning vinden?
- Gedetailleerde documentatie is beschikbaar[hier](https://reference.groupdocs.com/editor/net/) en u kunt ondersteuning krijgen[hier](https://forum.groupdocs.com/c/editor/20).
+ Gedetailleerde documentatie is beschikbaar[hier](https://tutorials.groupdocs.com/editor/net/) en u kunt ondersteuning krijgen[hier](https://forum.groupdocs.com/c/editor/20).

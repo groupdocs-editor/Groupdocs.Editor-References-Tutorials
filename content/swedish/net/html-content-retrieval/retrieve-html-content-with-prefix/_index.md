@@ -3,7 +3,6 @@ title: Hämta HTML-innehåll med prefix
 linktitle: Hämta HTML-innehåll med prefix
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du hämtar HTML-innehåll från dokument med GroupDocs.Editor för .NET med anpassade prefix för bilder och stilmallar. Steg-för-steg-guide ingår.
-type: docs
 weight: 11
 url: /sv/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine("HTML content of the input document with custom image and styl
 Det här kodavsnittet hämtar HTML-innehållet med de anpassade prefixen och skriver ut det till konsolen. Du kan vidarebearbeta eller spara detta HTML-innehåll efter behov.
 ## Slutsats
 Och där har du det! Genom att följa dessa steg kan du enkelt hämta HTML-innehåll från ett dokument med GroupDocs.Editor för .NET, komplett med anpassade prefix för bilder och stilmallar. Det här kraftfulla verktyget förenklar dokumenthanteringen, så att du kan fokusera på att integrera dokumentredigering i dina .NET-applikationer sömlöst.
- För mer detaljerad information, kolla in[GroupDocs.Editor för .NET-dokumentation](https://reference.groupdocs.com/editor/net/) . Om du har några frågor eller behöver mer hjälp, hör gärna av dig på[supportforum](https://forum.groupdocs.com/c/editor/20).
+ För mer detaljerad information, kolla in[GroupDocs.Editor för .NET-dokumentation](https://tutorials.groupdocs.com/editor/net/) . Om du har några frågor eller behöver mer hjälp, hör gärna av dig på[supportforum](https://forum.groupdocs.com/c/editor/20).
 ## FAQ's
 ### Vilka typer av dokument kan jag redigera med GroupDocs.Editor för .NET?
 GroupDocs.Editor stöder olika dokumentformat inklusive Word, Excel, PowerPoint, PDF och mer.

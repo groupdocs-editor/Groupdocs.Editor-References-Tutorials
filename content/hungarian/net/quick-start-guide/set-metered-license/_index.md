@@ -3,7 +3,6 @@ title: Állítsa be a mért licencet
 linktitle: Állítsa be a mért licencet
 second_title: GroupDocs.Editor .NET API
 description: Átfogó útmutatónkból megtudhatja, hogyan integrálhatja és használhatja a GroupDocs.Editor for .NET programot. Oldja fel a hatékony dokumentumszerkesztési funkciókat .NET-alkalmazásaiban.
-type: docs
 weight: 12
 url: /hu/net/quick-start-guide/set-metered-license/
 ---
@@ -69,15 +68,15 @@ editor.Save(editableDocument, "updated_sample.docx");
 Console.WriteLine("Document saved successfully.");
 ```
 ## Következtetés
- Gratulálunk! Sikeresen integrálta és használta a GroupDocs.Editor for .NET programot az alkalmazásában. A könyvtár telepítésétől a fizetős licenc beállításáig és a dokumentumok szerkesztéséig minden lényeges lépést megtett. Ez a hatékony eszköz jelentősen leegyszerűsítheti a dokumentumszerkesztési munkafolyamatokat a .NET-alkalmazásokon belül. További információkért lásd a[GroupDocs.Editor .NET dokumentációhoz](https://reference.groupdocs.com/editor/net/).
+ Gratulálunk! Sikeresen integrálta és használta a GroupDocs.Editor for .NET programot az alkalmazásában. A könyvtár telepítésétől a fizetős licenc beállításáig és a dokumentumok szerkesztéséig minden lényeges lépést megtett. Ez a hatékony eszköz jelentősen leegyszerűsítheti a dokumentumszerkesztési munkafolyamatokat a .NET-alkalmazásokon belül. További információkért lásd a[GroupDocs.Editor .NET dokumentációhoz](https://tutorials.groupdocs.com/editor/net/).
 ## GYIK
 ### Hogyan szerezhetek GroupDocs.Editor licencet?
  Engedélyt szerezhet a[GroupDocs vásárlási oldal](https://purchase.groupdocs.com/buy) . Ideiglenes engedélyért látogasson el ide[itt](https://purchase.groupdocs.com/temporary-license/).
 ### Ingyenesen kipróbálhatom a GroupDocs.Editort?
  Igen, letölthet egy ingyenes próbaverziót a webhelyről[letöltési oldal](https://releases.groupdocs.com/) és kérjen ideiglenes engedélyt.
 ### Milyen dokumentumformátumokat támogat a GroupDocs.Editor?
- A GroupDocs.Editor különféle formátumokat támogat, beleértve a DOCX, PPTX, XLSX, TXT, HTML és egyebeket. A teljes lista megtekintéséhez ellenőrizze a[dokumentáció](https://reference.groupdocs.com/editor/net/).
+ A GroupDocs.Editor különféle formátumokat támogat, beleértve a DOCX, PPTX, XLSX, TXT, HTML és egyebeket. A teljes lista megtekintéséhez ellenőrizze a[dokumentáció](https://tutorials.groupdocs.com/editor/net/).
 ### Elérhető közösségi támogatás a GroupDocs.Editor számára?
  Igen, közösségi támogatást kaphat a[GroupDocs.Editor fórum](https://forum.groupdocs.com/c/editor/20).
 ### Hogyan kezdhetem el a GroupDocs.Editor for .NET használatát?
- Kövesse lépésenkénti útmutatónkat a könyvtár beállításához, a licenc megszerzéséhez és a dokumentumok szerkesztésének megkezdéséhez. Részletes útmutatásért keresse fel a[dokumentáció](https://reference.groupdocs.com/editor/net/).
+ Kövesse lépésenkénti útmutatónkat a könyvtár beállításához, a licenc megszerzéséhez és a dokumentumok szerkesztésének megkezdéséhez. Részletes útmutatásért keresse fel a[dokumentáció](https://tutorials.groupdocs.com/editor/net/).

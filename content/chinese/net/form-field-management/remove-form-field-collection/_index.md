@@ -3,7 +3,6 @@ title: 移除表单字段集合
 linktitle: 移除表单字段集合
 second_title: GroupDocs.Editor .NET API
 description: 通过本分步指南了解如何使用 GroupDocs.Editor for .NET 从 Word 文档中删除表单字段。非常适合开发人员。
-type: docs
 weight: 13
 url: /zh/net/form-field-management/remove-form-field-collection/
 ---

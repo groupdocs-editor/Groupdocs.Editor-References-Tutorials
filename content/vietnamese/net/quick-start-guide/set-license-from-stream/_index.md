@@ -3,7 +3,6 @@ title: Đặt giấy phép từ luồng
 linktitle: Đặt giấy phép từ luồng
 second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách sử dụng Groupdocs.Editor cho .NET để chỉnh sửa tài liệu theo chương trình. Thực hiện theo toàn diện này để tích hợp liền mạch và các tính năng nâng cao.
-type: docs
 weight: 11
 url: /vi/net/quick-start-guide/set-license-from-stream/
 ---
@@ -146,7 +145,7 @@ using (FileStream inputStream = File.OpenRead("path/to/large/document.docx"))
 }
 ```
 ## Phần kết luận
- Groupdocs.Editor cho .NET là một công cụ linh hoạt và mạnh mẽ có thể hợp lý hóa đáng kể quy trình chỉnh sửa tài liệu của bạn. Với các tính năng mạnh mẽ và hỗ trợ nhiều định dạng tài liệu, việc tích hợp thư viện này vào các ứng dụng .NET chắc chắn sẽ nâng cao năng suất và khả năng của bạn. Đừng quên khám phá[tài liệu](https://reference.groupdocs.com/editor/net/) để biết thêm thông tin chi tiết và các tình huống sử dụng nâng cao.
+ Groupdocs.Editor cho .NET là một công cụ linh hoạt và mạnh mẽ có thể hợp lý hóa đáng kể quy trình chỉnh sửa tài liệu của bạn. Với các tính năng mạnh mẽ và hỗ trợ nhiều định dạng tài liệu, việc tích hợp thư viện này vào các ứng dụng .NET chắc chắn sẽ nâng cao năng suất và khả năng của bạn. Đừng quên khám phá[tài liệu](https://tutorials.groupdocs.com/editor/net/) để biết thêm thông tin chi tiết và các tình huống sử dụng nâng cao.
 ## Câu hỏi thường gặp
 ### Tôi có thể sử dụng Groupdocs.Editor cho .NET mà không cần giấy phép không?
  Không, bạn cần có giấy phép hợp lệ để sử dụng Groupdocs.Editor cho .NET. Tuy nhiên, bạn có thể yêu cầu một[giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/) để đánh giá.
@@ -157,4 +156,4 @@ Có, nó hỗ trợ chỉnh sửa các tệp PDF cùng với nhiều định d�
 ### Có thể bảo vệ tài liệu bằng mật khẩu bằng Groupdocs.Editor không?
 Có, bạn có thể đặt mật khẩu và các tùy chọn bảo mật khác khi lưu tài liệu.
 ### Groupdocs.Editor cho .NET hỗ trợ những định dạng tệp nào?
- Nó hỗ trợ nhiều định dạng, bao gồm DOCX, XLSX, PDF và nhiều định dạng khác. Tham khảo đến[tài liệu](https://reference.groupdocs.com/editor/net/) để có danh sách đầy đủ.
+ Nó hỗ trợ nhiều định dạng, bao gồm DOCX, XLSX, PDF và nhiều định dạng khác. Tham khảo đến[tài liệu](https://tutorials.groupdocs.com/editor/net/) để có danh sách đầy đủ.

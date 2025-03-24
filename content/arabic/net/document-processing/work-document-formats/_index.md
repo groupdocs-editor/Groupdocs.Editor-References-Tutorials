@@ -3,7 +3,6 @@ title: العمل مع تنسيقات المستندات
 linktitle: العمل مع تنسيقات المستندات
 second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية استخدام GroupDocs.Editor لـ .NET لتحرير تنسيقات المستندات المختلفة برمجيًا. دليل خطوة بخطوة مع أمثلة للتكامل السلس.
-type: docs
 weight: 13
 url: /ar/net/document-processing/work-document-formats/
 ---
@@ -159,4 +158,4 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 ### هل يمكنني استخدام GroupDocs.Editor مجانًا؟
  يمكنك استخدام أ[تجربة مجانية](https://releases.groupdocs.com/) بميزات محدودة أو الحصول على[ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/) للوصول الكامل.
 ### أين يمكنني العثور على المزيد من الموارد والدعم؟
- قم بزيارة[وثائق GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) للحصول على معلومات مفصلة، أو التحقق من[منتدى الدعم](https://forum.groupdocs.com/c/editor/20) للمساعدة.
+ قم بزيارة[وثائق GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) للحصول على معلومات مفصلة، أو التحقق من[منتدى الدعم](https://forum.groupdocs.com/c/editor/20) للمساعدة.

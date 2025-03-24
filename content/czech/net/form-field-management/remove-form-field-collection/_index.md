@@ -3,7 +3,6 @@ title: Odebrat kolekci polí formuláře
 linktitle: Odebrat kolekci polí formuláře
 second_title: GroupDocs.Editor .NET API
 description: V tomto podrobném průvodci se dozvíte, jak odstranit pole formuláře z dokumentů aplikace Word pomocí GroupDocs.Editor for .NET. Ideální pro vývojáře.
-type: docs
 weight: 13
 url: /cs/net/form-field-management/remove-form-field-collection/
 ---

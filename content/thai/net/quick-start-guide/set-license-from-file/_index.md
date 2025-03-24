@@ -3,7 +3,6 @@ title: ตั้งค่าใบอนุญาตจากไฟล์
 linktitle: ตั้งค่าใบอนุญาตจากไฟล์
 second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีใช้ GroupDocs.Editor สำหรับ .NET เพื่อการแก้ไขเอกสารในแอปพลิเคชันของคุณได้อย่างราบรื่น รวมคำแนะนำทีละขั้นตอน เคล็ดลับ และคำถามที่พบบ่อย
-type: docs
 weight: 10
 url: /th/net/quick-start-guide/set-license-from-file/
 ---
@@ -89,4 +88,4 @@ GroupDocs.Editor สำหรับ .NET รองรับรูปแบบท
 ### ฉันจะจัดการเอกสารขนาดใหญ่ด้วย GroupDocs.Editor สำหรับ .NET ได้อย่างไร
 GroupDocs.Editor สำหรับ .NET ได้รับการออกแบบมาเพื่อจัดการเอกสารขนาดใหญ่ได้อย่างมีประสิทธิภาพ อย่างไรก็ตาม เพื่อประสิทธิภาพสูงสุด ให้พิจารณาการจัดการทรัพยากรและการจัดการเอกสารในส่วนต่างๆ หากจำเป็น
 ### ฉันจะหาเอกสารและการสนับสนุนโดยละเอียดเพิ่มเติมได้ที่ไหน
- คุณสามารถดูเอกสารรายละเอียดได้ที่[หน้าเอกสาร GroupDocs.Editor](https://reference.groupdocs.com/editor/net/) และขอรับการสนับสนุนจาก[ฟอรัมสนับสนุน GroupDocs](https://forum.groupdocs.com/c/editor/20).
+ คุณสามารถดูเอกสารรายละเอียดได้ที่[หน้าเอกสาร GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/) และขอรับการสนับสนุนจาก[ฟอรัมสนับสนุน GroupDocs](https://forum.groupdocs.com/c/editor/20).

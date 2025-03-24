@@ -3,7 +3,6 @@ title: Ölçülü Lisansı Ayarla
 linktitle: Ölçülü Lisansı Ayarla
 second_title: GroupDocs.Editor .NET API'si
 description: Kapsamlı kılavuzumuzla GroupDocs.Editor for .NET'i nasıl entegre edeceğinizi ve kullanacağınızı öğrenin. .NET uygulamalarınızdaki güçlü belge düzenleme özelliklerinin kilidini açın.
-type: docs
 weight: 12
 url: /tr/net/quick-start-guide/set-metered-license/
 ---
@@ -69,15 +68,15 @@ editor.Save(editableDocument, "updated_sample.docx");
 Console.WriteLine("Document saved successfully.");
 ```
 ## Çözüm
- Tebrikler! GroupDocs.Editor for .NET'i uygulamanıza başarıyla entegre ettiniz ve kullandınız. Kitaplığın kurulumundan, ölçülü lisans kurulumuna ve belgeleri düzenlemeye kadar tüm önemli adımları tamamladınız. Bu güçlü araç, .NET uygulamalarınızdaki belge düzenleme iş akışlarınızı önemli ölçüde kolaylaştırabilir. Daha fazla bilgi için bkz.[.NET belgeleri için GroupDocs.Editor](https://reference.groupdocs.com/editor/net/).
+ Tebrikler! GroupDocs.Editor for .NET'i uygulamanıza başarıyla entegre ettiniz ve kullandınız. Kitaplığın kurulumundan, ölçülü lisans kurulumuna ve belgeleri düzenlemeye kadar tüm önemli adımları tamamladınız. Bu güçlü araç, .NET uygulamalarınızdaki belge düzenleme iş akışlarınızı önemli ölçüde kolaylaştırabilir. Daha fazla bilgi için bkz.[.NET belgeleri için GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).
 ## SSS'ler
 ### GroupDocs.Editor lisansını nasıl edinebilirim?
  adresinden lisans alabilirsiniz.[GroupDocs satın alma sayfası](https://purchase.groupdocs.com/buy) . Geçici lisans için şu adresi ziyaret edin:[Burada](https://purchase.groupdocs.com/temporary-license/).
 ### GroupDocs.Editor'ı ücretsiz deneyebilir miyim?
  Evet, ücretsiz deneme sürümünü şuradan indirebilirsiniz:[indirme sayfası](https://releases.groupdocs.com/) ve geçici bir lisans isteyin.
 ### GroupDocs.Editor hangi belge formatlarını destekler?
- GroupDocs.Editor, DOCX, PPTX, XLSX, TXT, HTML ve daha fazlasını içeren çeşitli formatları destekler. Tam liste için şurayı kontrol edin:[dokümantasyon](https://reference.groupdocs.com/editor/net/).
+ GroupDocs.Editor, DOCX, PPTX, XLSX, TXT, HTML ve daha fazlasını içeren çeşitli formatları destekler. Tam liste için şurayı kontrol edin:[dokümantasyon](https://tutorials.groupdocs.com/editor/net/).
 ### GroupDocs.Editor için herhangi bir topluluk desteği var mı?
  Evet, topluluk desteğini alabilirsiniz.[GroupDocs.Editör forumu](https://forum.groupdocs.com/c/editor/20).
 ### GroupDocs.Editor for .NET'i kullanmaya nasıl başlayabilirim?
- Kitaplığı kurmak, lisans almak ve belgeleri düzenlemeye başlamak için adım adım kılavuzumuzu izleyin. Ayrıntılı talimatlar için şu adresi ziyaret edin:[dokümantasyon](https://reference.groupdocs.com/editor/net/).
+ Kitaplığı kurmak, lisans almak ve belgeleri düzenlemeye başlamak için adım adım kılavuzumuzu izleyin. Ayrıntılı talimatlar için şu adresi ziyaret edin:[dokümantasyon](https://tutorials.groupdocs.com/editor/net/).

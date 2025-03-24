@@ -3,7 +3,6 @@ title: Düzenlenebilir Belgeden HTML İçeriğini Çıkarma
 linktitle: Düzenlenebilir Belgeden HTML İçeriğini Çıkarma
 second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET'i kullanarak belgelerden HTML içeriğini zahmetsizce çıkarın. Sorunsuz entegrasyon ve belge yönetimi için ayrıntılı kılavuzumuzu takip edin.
-type: docs
 weight: 12
 url: /tr/net/document-editing/extract-html-content-from-editable-document/
 ---
@@ -64,6 +63,6 @@ GroupDocs.Editor for .NET, Kelime İşleme, Elektronik Tablo, Sunum ve daha fazl
 ### GroupDocs.Editor for .NET için nasıl geçici lisans alabilirim?
  Geçici lisans talebinde bulunabilirsiniz.[GroupDocs satın alma sayfası](https://purchase.groupdocs.com/temporary-license/).
 ### GroupDocs.Editor for .NET belgelerini nerede bulabilirim?
- Kapsamlı belgeler mevcuttur[Burada](https://reference.groupdocs.com/editor/net/).
+ Kapsamlı belgeler mevcuttur[Burada](https://tutorials.groupdocs.com/editor/net/).
 ### Sorunla karşılaşırsam destek alabilir miyim?
  Evet, destek alabilirsiniz[GroupDocs destek forumu](https://forum.groupdocs.com/c/editor/20).

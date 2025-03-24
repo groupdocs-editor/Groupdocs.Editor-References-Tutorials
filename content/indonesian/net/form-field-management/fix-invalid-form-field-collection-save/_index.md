@@ -3,7 +3,6 @@ title: Perbaiki Pengumpulan Bidang Formulir yang Tidak Valid dan Simpan
 linktitle: Perbaiki Pengumpulan Bidang Formulir yang Tidak Valid dan Simpan
 second_title: GroupDocs.Editor .NET API
 description: Pelajari cara memperbaiki kolom formulir yang tidak valid di DOCX menggunakan Groupdocs.Editor untuk .NET. Ikuti panduan ini untuk memastikan dokumen Anda bebas dari kesalahan dan menyimpannya dengan aman.
-type: docs
 weight: 11
 url: /id/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## Kesimpulan
- Dan itu dia! Anda telah berhasil memperbaiki kolom formulir yang tidak valid dan menyimpan dokumen Anda menggunakan Groupdocs.Editor untuk .NET. Panduan langkah demi langkah ini seharusnya membuat prosesnya jelas dan mudah dikelola. Jika Anda mengalami masalah atau memiliki pertanyaan, silakan periksa[dokumentasi](https://reference.groupdocs.com/editor/net/) atau menjangkau[mendukung](https://forum.groupdocs.com/c/editor/20).
+ Dan itu dia! Anda telah berhasil memperbaiki kolom formulir yang tidak valid dan menyimpan dokumen Anda menggunakan Groupdocs.Editor untuk .NET. Panduan langkah demi langkah ini seharusnya membuat prosesnya jelas dan mudah dikelola. Jika Anda mengalami masalah atau memiliki pertanyaan, silakan periksa[dokumentasi](https://tutorials.groupdocs.com/editor/net/) atau menjangkau[mendukung](https://forum.groupdocs.com/c/editor/20).
 ## FAQ
 ### Bagaimana jika dokumen saya dilindungi kata sandi?
  Anda dapat menentukan kata sandi di`WordProcessingLoadOptions` untuk membuka dokumen.

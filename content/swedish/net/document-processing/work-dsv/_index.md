@@ -3,7 +3,6 @@ title: Arbeta med avgränsade separerade värden (DSV)
 linktitle: Arbeta med avgränsade separerade värden (DSV)
 second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du redigerar CSV- och TSV-filer med GroupDocs.Editor för .NET med denna steg-för-steg-guide. Förbättra dina .NET-projekt utan ansträngning.
-type: docs
 weight: 12
 url: /sv/net/document-processing/work-dsv/
 ---
@@ -111,4 +110,4 @@ Absolut, du kan ange önskad kodning i sparalternativen.
 ### Kan jag konvertera en CSV-fil till ett Excel-kalkylblad med GroupDocs.Editor för .NET?
 Ja, du kan spara en CSV-fil som ett Excel-kalkylblad genom att använda lämpliga sparaalternativ.
 ### Var kan jag hitta mer dokumentation om GroupDocs.Editor för .NET?
- Du kan hitta detaljerad dokumentation[här](https://reference.groupdocs.com/editor/net/)
+ Du kan hitta detaljerad dokumentation[här](https://tutorials.groupdocs.com/editor/net/)

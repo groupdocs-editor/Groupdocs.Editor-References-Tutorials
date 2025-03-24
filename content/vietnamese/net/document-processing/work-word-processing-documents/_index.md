@@ -3,7 +3,6 @@ title: Làm việc với tài liệu xử lý văn bản
 linktitle: Làm việc với tài liệu xử lý văn bản
 second_title: API GroupDocs.Editor .NET
 description: Dễ dàng chỉnh sửa tài liệu xử lý Word bằng GroupDocs.Editor cho .NET. Hãy làm theo hướng dẫn chi tiết từng bước của chúng tôi để nâng cao kỹ năng quản lý tài liệu của bạn.
-type: docs
 weight: 19
 url: /vi/net/document-processing/work-word-processing-documents/
 ---
@@ -117,7 +116,7 @@ Console.WriteLine("Document editing and saving process completed successfully.")
 Bây giờ bạn đã hoàn thành hướng dẫn từng bước toàn diện về cách làm việc với tài liệu xử lý Word bằng GroupDocs.Editor cho .NET. Công cụ mạnh mẽ này giúp bạn dễ dàng thao tác và chỉnh sửa tài liệu theo chương trình, cung cấp nhiều tùy chọn để tùy chỉnh quy trình xử lý tài liệu của bạn.
 ## Câu hỏi thường gặp
 ### Tôi có thể sử dụng GroupDocs.Editor for .NET để chỉnh sửa các định dạng tài liệu khác không?
- Có, GroupDocs.Editor hỗ trợ nhiều định dạng tài liệu khác nhau bao gồm PDF, HTML, v.v. Kiểm tra[tài liệu](https://reference.groupdocs.com/editor/net/) để biết danh sách đầy đủ các định dạng được hỗ trợ.
+ Có, GroupDocs.Editor hỗ trợ nhiều định dạng tài liệu khác nhau bao gồm PDF, HTML, v.v. Kiểm tra[tài liệu](https://tutorials.groupdocs.com/editor/net/) để biết danh sách đầy đủ các định dạng được hỗ trợ.
 ### Có thể sử dụng GroupDocs.Editor mà không cần giấy phép không?
  Bạn có thể sử dụng bản dùng thử miễn phí hoặc yêu cầu giấy phép tạm thời. Để sử dụng lâu dài, nên mua giấy phép. Nhận giấy phép[đây](https://purchase.groupdocs.com/buy).
 ### Làm cách nào để xử lý các tài liệu lớn gây ra OutOfMemoryException?

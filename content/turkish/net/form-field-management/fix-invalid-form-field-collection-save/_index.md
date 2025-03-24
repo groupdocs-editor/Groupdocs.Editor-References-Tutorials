@@ -3,7 +3,6 @@ title: Geçersiz Form Alanı Koleksiyonunu Düzelt ve Kaydet
 linktitle: Geçersiz Form Alanı Koleksiyonunu Düzelt ve Kaydet
 second_title: GroupDocs.Editor .NET API'si
 description: Groupdocs.Editor for .NET'i kullanarak DOCX'teki geçersiz form alanlarını nasıl düzelteceğinizi öğrenin. Belgelerinizin hatasız olduğundan emin olmak ve bunları güvenli bir şekilde kaydetmek için bu kılavuzu izleyin.
-type: docs
 weight: 11
 url: /tr/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
@@ -111,7 +110,7 @@ using (MemoryStream outputStream = new MemoryStream())
 Console.WriteLine("FixInvalidFormFieldCollectionAndSave routine has successfully finished");
 ```
 ## Çözüm
- İşte buyur! Geçersiz form alanlarını başarıyla düzelttiniz ve belgenizi Groupdocs.Editor for .NET'i kullanarak kaydettiniz. Bu adım adım kılavuzun süreci açık ve yönetilebilir hale getirmesi gerekirdi. Herhangi bir sorunla karşılaşırsanız veya sorularınız varsa, kontrol etmekten çekinmeyin.[dokümantasyon](https://reference.groupdocs.com/editor/net/) veya iletişime geçin[Destek](https://forum.groupdocs.com/c/editor/20).
+ İşte buyur! Geçersiz form alanlarını başarıyla düzelttiniz ve belgenizi Groupdocs.Editor for .NET'i kullanarak kaydettiniz. Bu adım adım kılavuzun süreci açık ve yönetilebilir hale getirmesi gerekirdi. Herhangi bir sorunla karşılaşırsanız veya sorularınız varsa, kontrol etmekten çekinmeyin.[dokümantasyon](https://tutorials.groupdocs.com/editor/net/) veya iletişime geçin[Destek](https://forum.groupdocs.com/c/editor/20).
 ## SSS'ler
 ### Belgem parola korumalıysa ne olur?
  Şifreyi şurada belirtebilirsiniz`WordProcessingLoadOptions` Belgeyi açmak için.

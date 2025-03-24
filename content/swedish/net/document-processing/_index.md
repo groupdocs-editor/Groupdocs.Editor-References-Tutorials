@@ -3,7 +3,6 @@ title: Dokumentbehandling
 linktitle: Dokumentbehandling
 second_title: GroupDocs.Editor .NET API
 description: Master dokumentbehandling i .NET med GroupDocs.Editor. Lär dig att extrahera information, spara i olika format och arbeta med olika dokumenttyper utan ansträngning.
-type: docs
 weight: 24
 url: /sv/net/document-processing/
 ---

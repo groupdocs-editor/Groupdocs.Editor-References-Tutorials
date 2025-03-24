@@ -3,7 +3,6 @@ title: Szerezzen be külső CSS tartalmat
 linktitle: Szerezzen be külső CSS tartalmat
 second_title: GroupDocs.Editor .NET API
 description: Ebből a lépésenkénti útmutatóból megtudhatja, hogyan használja a GroupDocs.Editor for .NET alkalmazást külső CSS-tartalom kinyerésére a dokumentumokból. Ideális dokumentumokat integráló fejlesztők számára.
-type: docs
 weight: 10
 url: /hu/net/css-handling/get-external-css-content/
 ---
@@ -67,6 +66,6 @@ A GroupDocs.Editor for .NET egy dokumentumszerkesztő API, amely lehetővé tesz
 ### Használhatom ingyenesen a GroupDocs.Editort?
  A GroupDocs.Editor ingyenes próbaverziót kínál, amelyet letölthet a webhelyről[GroupDocs ingyenes próbaoldal](https://releases.groupdocs.com/). A teljes funkciók eléréséhez fontolja meg a licenc vásárlását.
 ### Milyen fájlformátumokat támogat a GroupDocs.Editor?
- A GroupDocs.Editor a fájlformátumok széles skáláját támogatja, beleértve a DOCX, XLSX, PPTX, PDF, HTML és még sok más formátumot. Ellenőrizd a[dokumentáció](https://reference.groupdocs.com/editor/net/) a teljes listáért.
+ A GroupDocs.Editor a fájlformátumok széles skáláját támogatja, beleértve a DOCX, XLSX, PPTX, PDF, HTML és még sok más formátumot. Ellenőrizd a[dokumentáció](https://tutorials.groupdocs.com/editor/net/) a teljes listáért.
 ### Hogyan kaphatok támogatást a GroupDocs.Editor programhoz?
  Támogatást kaphat a[GroupDocs támogatási fórum](https://forum.groupdocs.com/c/editor/20) ahol kérdéseket tehet fel, és segítséget kaphat a közösségtől és a GroupDocs szakértőitől.

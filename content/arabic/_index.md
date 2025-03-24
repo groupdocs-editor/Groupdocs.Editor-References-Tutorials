@@ -3,7 +3,6 @@ title: فتح إدارة المستندات باستخدام GroupDocs.Editor
 linktitle: GroupDocs.برامج تعليمية للمحرر
 additionalTitle: مراجع واجهة برمجة تطبيقات GroupDocs
 description: يمكنك تحرير المستندات بسهولة باستخدام GroupDocs.Editor لـ .NET وJava. تبسيط سير العمل وإدارة CSS واسترداد محتوى HTML والمزيد!
-type: docs
 weight: 11
 url: /ar/
 is_root: true
