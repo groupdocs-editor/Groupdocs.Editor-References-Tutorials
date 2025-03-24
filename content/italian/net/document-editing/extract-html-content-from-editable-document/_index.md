@@ -6,6 +6,9 @@ description: Estrai senza sforzo il contenuto HTML dai documenti utilizzando Gro
 weight: 12
 url: /it/net/document-editing/extract-html-content-from-editable-document/
 ---
+
+# Estrai contenuto HTML da un documento modificabile
+
 ## introduzione
 Nell'era digitale di oggi, gestire e modificare i documenti in modo efficiente è fondamentale sia per le aziende che per i privati. GroupDocs.Editor per .NET offre una potente soluzione per modificare senza problemi una varietà di formati di documenti. Questa guida ti guiderà attraverso il processo di estrazione del contenuto HTML da un documento modificabile utilizzando GroupDocs.Editor per .NET. Alla fine, avrai una chiara comprensione di come implementare questa funzionalità nei tuoi progetti.
 ## Prerequisiti

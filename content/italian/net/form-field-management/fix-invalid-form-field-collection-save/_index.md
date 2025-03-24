@@ -6,6 +6,9 @@ description: Scopri come correggere i campi modulo non validi in DOCX utilizzand
 weight: 11
 url: /it/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# Correggi la raccolta di campi modulo non validi e salva
+
 ## introduzione
 Benvenuto! Se lavori con i campi modulo nei documenti e riscontri problemi con raccolte di campi modulo non valide, sei nel posto giusto. In questo tutorial, approfondiremo come correggere i campi del modulo non validi e salvare il documento utilizzando Groupdocs.Editor per .NET. Ti guideremo attraverso il processo passo dopo passo, assicurandoti di avere tutti i dettagli necessari per farlo funzionare senza problemi. Iniziamo!
 ## Prerequisiti

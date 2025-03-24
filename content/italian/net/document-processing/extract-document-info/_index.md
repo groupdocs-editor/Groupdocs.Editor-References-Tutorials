@@ -6,6 +6,9 @@ description: Scopri come estrarre le informazioni sui documenti utilizzando Grou
 weight: 10
 url: /it/net/document-processing/extract-document-info/
 ---
+
+# Estrai informazioni sul documento
+
 ## introduzione
 Benvenuti in questo tutorial completo sull'estrazione delle informazioni sui documenti utilizzando GroupDocs.Editor per .NET. In questa guida ti guideremo attraverso il processo passo dopo passo, assicurandoci che tu comprenda ogni parte in modo chiaro e conciso. Che tu sia uno sviluppatore esperto o che tu abbia appena iniziato, questo tutorial ti aiuterà a integrare perfettamente GroupDocs.Editor nei tuoi progetti .NET per gestire e manipolare i documenti in modo efficiente.
 ## Prerequisiti

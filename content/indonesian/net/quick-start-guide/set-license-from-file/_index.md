@@ -6,6 +6,9 @@ description: Pelajari cara menggunakan GroupDocs.Editor untuk .NET untuk pengedi
 weight: 10
 url: /id/net/quick-start-guide/set-license-from-file/
 ---
+
+# Tetapkan Lisensi dari File
+
 ## Perkenalan
 Apakah Anda siap mengubah pengalaman mengedit dokumen Anda dengan aplikasi .NET? Kunjungi GroupDocs.Editor untuk .NET. API canggih ini memungkinkan Anda mengintegrasikan kemampuan pengeditan dokumen ke dalam aplikasi Anda dengan lancar, membuatnya lebih mudah untuk memanipulasi dan mengonversi berbagai format dokumen. Dalam tutorial ini, kami akan memandu Anda melalui proses memulai GroupDocs.Editor untuk .NET, mulai dari menyiapkan lingkungan hingga menjalankan tugas pengeditan dokumen pertama Anda.
 ## Prasyarat

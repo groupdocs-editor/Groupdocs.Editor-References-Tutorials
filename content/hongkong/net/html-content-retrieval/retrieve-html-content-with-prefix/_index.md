@@ -6,6 +6,9 @@ description: 了解如何使用適用於 .NET 的 GroupDocs.Editor 以及圖像�
 weight: 11
 url: /zh-hant/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# 檢索帶有前綴的 HTML 內容
+
 ## 介紹
 歡迎來到我們的逐步教學，了解如何使用 GroupDocs.Editor for .NET 從文件中擷取 HTML 內容。無論您是經驗豐富的開發人員還是剛剛入門，本指南都將以易於理解的方式引導您完成整個過程。我們將涵蓋您需要了解的所有內容，從設定環境到成功執行程式碼。讓我們深入了解吧！
 ## 先決條件

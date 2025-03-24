@@ -6,6 +6,9 @@ description: Dowiedz się, jak obsługiwać arkusze kalkulacyjne chronione hasł
 weight: 18
 url: /pl/net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# Pracuj z arkuszami kalkulacyjnymi chronionymi hasłem
+
 ## Wstęp
 Czy masz trudności z zarządzaniem arkuszami kalkulacyjnymi chronionymi hasłem w aplikacjach .NET? Jeśli tak, jesteś we właściwym miejscu! W tym obszernym przewodniku przeprowadzimy Cię przez proces używania GroupDocs.Editor dla .NET do wydajnej obsługi arkuszy kalkulacyjnych chronionych hasłem. Pod koniec tego samouczka będziesz już dobrze przygotowany do łatwego otwierania, edytowania i zapisywania zaszyfrowanych plików Excel.
 ## Warunki wstępne

@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Editor for .NET 處理受密碼保護�
 weight: 18
 url: /zh-hant/net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# 使用受密碼保護的電子表格
+
 ## 介紹
 您是否正在努力管理 .NET 應用程式中受密碼保護的電子表格？如果是這樣，那麼您來對地方了！在本綜合指南中，我們將引導您完成使用 GroupDocs.Editor for .NET 高效處理受密碼保護的電子表格的過程。學完本教學後，您將能夠輕鬆開啟、編輯和儲存加密的 Excel 檔案。
 ## 先決條件

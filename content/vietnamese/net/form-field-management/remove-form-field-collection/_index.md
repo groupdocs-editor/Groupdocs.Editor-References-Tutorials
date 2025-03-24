@@ -6,6 +6,9 @@ description: Tìm hiểu cách xóa trường biểu mẫu khỏi tài liệu Wo
 weight: 13
 url: /vi/net/form-field-management/remove-form-field-collection/
 ---
+
+# Xóa bộ sưu tập trường biểu mẫu
+
 ## Giới thiệu
 Bạn đang tìm cách quản lý các trường biểu mẫu trong tài liệu của mình theo chương trình? GroupDocs.Editor cho .NET cung cấp một giải pháp mạnh mẽ để xử lý và thao tác các trường biểu mẫu ở nhiều định dạng tài liệu khác nhau. Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn các bước để xóa bộ sưu tập trường biểu mẫu khỏi tài liệu Word bằng thư viện mạnh mẽ này. 
 ## Điều kiện tiên quyết

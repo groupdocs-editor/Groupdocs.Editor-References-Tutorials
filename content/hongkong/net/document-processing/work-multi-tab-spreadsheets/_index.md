@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Editor 在 .NET 中處理多選項卡�
 weight: 17
 url: /zh-hant/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# 使用多選項卡電子表格
+
 ## 介紹
 處理多選項卡電子表格可能是一項艱鉅的任務，尤其是當您需要從同一文件中的不同工作表操作或提取資料時。如果您正在使用 .NET 並尋找強大的解決方案，那麼適用於 .NET 的 GroupDocs.Editor 是一個絕佳的選擇。在本教程中，我們將引導您完成使用 GroupDocs.Editor for .NET 處理多選項卡電子表格的過程。我們將涵蓋從設定環境到將每個選項卡保存為單獨文件的所有內容。
 ## 先決條件

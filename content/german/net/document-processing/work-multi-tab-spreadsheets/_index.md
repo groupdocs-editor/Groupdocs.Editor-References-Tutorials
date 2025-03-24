@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Editor mit Tabellenkalkulatione
 weight: 17
 url: /de/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# Arbeiten mit Tabellenkalkulationen mit mehreren Registerkarten
+
 ## Einführung
 Die Handhabung von Tabellen mit mehreren Registerkarten kann eine ziemliche Aufgabe sein, insbesondere wenn Sie Daten aus verschiedenen Tabellenblättern innerhalb desselben Dokuments bearbeiten oder extrahieren müssen. Wenn Sie mit .NET arbeiten und nach einer robusten Lösung suchen, ist GroupDocs.Editor für .NET eine ausgezeichnete Wahl. In diesem Tutorial führen wir Sie durch den Prozess der Arbeit mit Tabellen mit mehreren Registerkarten unter Verwendung von GroupDocs.Editor für .NET. Wir behandeln alles, vom Einrichten Ihrer Umgebung bis zum Speichern jeder Registerkarte als separate Datei.
 ## Voraussetzungen

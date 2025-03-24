@@ -6,6 +6,9 @@ description: Bez námahy upravujte a ukládejte dokumenty pomocí GroupDocs.Edit
 weight: 14
 url: /cs/net/document-editing/save-document/
 ---
+
+# Uložit dokument
+
 ## Úvod
 Chcete snadno upravovat a ukládat dokumenty pomocí GroupDocs.Editor pro .NET? Jste na správném místě! Tento tutoriál vás provede procesem krok za krokem a zajistí vám snadnou správu dokumentů. Ať už jste zkušený vývojář nebo začátečník, náš průvodce vám poskytne všechny informace, které potřebujete, abyste mohli začít.
 ## Předpoklady

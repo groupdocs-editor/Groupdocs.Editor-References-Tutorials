@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Editor를 사용하여 문서에서 HTML 콘텐�
 weight: 12
 url: /ko/net/document-editing/extract-html-content-from-editable-document/
 ---
+
+# 편집 가능한 문서에서 HTML 콘텐츠 추출
+
 ## 소개
 오늘날의 디지털 시대에 문서를 효율적으로 관리하고 편집하는 것은 기업과 개인 모두에게 중요합니다. .NET용 GroupDocs.Editor는 다양한 문서 형식을 원활하게 편집할 수 있는 강력한 솔루션을 제공합니다. 이 가이드에서는 .NET용 GroupDocs.Editor를 사용하여 편집 가능한 문서에서 HTML 콘텐츠를 추출하는 과정을 안내합니다. 결국에는 자신의 프로젝트에서 이 기능을 구현하는 방법을 명확하게 이해하게 될 것입니다.
 ## 전제조건

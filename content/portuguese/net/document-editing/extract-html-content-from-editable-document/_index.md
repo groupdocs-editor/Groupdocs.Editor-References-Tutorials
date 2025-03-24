@@ -6,6 +6,9 @@ description: Extraia facilmente conteúdo HTML de documentos usando GroupDocs.Ed
 weight: 12
 url: /pt/net/document-editing/extract-html-content-from-editable-document/
 ---
+
+# Extraia conteúdo HTML de documento editável
+
 ## Introdução
 Na era digital de hoje, a gestão e edição eficiente de documentos é crucial tanto para empresas como para indivíduos. GroupDocs.Editor for .NET oferece uma solução poderosa para editar perfeitamente uma variedade de formatos de documentos. Este guia orientará você no processo de extração de conteúdo HTML de um documento editável usando GroupDocs.Editor for .NET. Ao final, você terá uma compreensão clara de como implementar esse recurso em seus próprios projetos.
 ## Pré-requisitos

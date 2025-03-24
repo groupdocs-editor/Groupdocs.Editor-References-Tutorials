@@ -6,6 +6,9 @@ description: GroupDocs.Editor を使用して .NET でマルチタブ スプレ�
 weight: 17
 url: /ja/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# 複数タブのスプレッドシートを操作する
+
 ## 導入
 複数タブのスプレッドシートの処理は、特に同じドキュメント内の異なるシートからデータを操作または抽出する必要がある場合、非常に困難な作業になることがあります。.NET を使用していて、堅牢なソリューションを探している場合は、GroupDocs.Editor for .NET が最適です。このチュートリアルでは、GroupDocs.Editor for .NET を使用して複数タブのスプレッドシートを操作する手順を説明します。環境の設定から各タブを個別のファイルとして保存するまで、すべてをカバーします。
 ## 前提条件

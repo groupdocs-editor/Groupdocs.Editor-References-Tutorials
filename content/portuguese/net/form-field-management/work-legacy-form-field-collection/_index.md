@@ -6,6 +6,9 @@ description: Aprenda como gerenciar campos de formulário legados usando GroupDo
 weight: 12
 url: /pt/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# Trabalhar com coleção de campos de formulário herdados
+
 ## Introdução
 Bem-vindo a este guia abrangente sobre como trabalhar com coleções de campos de formulário legados usando GroupDocs.Editor for .NET. Esteja você lidando com campos de texto, caixas de seleção, campos de data ou menus suspensos, este tutorial orientará você em cada etapa para gerenciar esses campos com eficiência. Ao final deste guia, você terá um conhecimento sólido de como utilizar o GroupDocs.Editor para lidar com vários campos de formulário em seus documentos. Vamos mergulhar!
 ## Pré-requisitos

@@ -6,6 +6,9 @@ description: Belgeleri program aracılığıyla düzenlemek için Groupdocs.Edit
 weight: 11
 url: /tr/net/quick-start-guide/set-license-from-stream/
 ---
+
+# Lisansı Akıştan Ayarla
+
 ## giriiş
 .NET uygulamalarınızda belgeleri programlı olarak düzenlemenin güçlü bir yolunu mu arıyorsunuz? Başka yerde arama! Groupdocs.Editor for .NET, belge düzenleme özelliklerini uygulamalarınıza sorunsuz bir şekilde entegre etmenize olanak tanıyan güçlü bir belge düzenleme çözümüdür. İster Word belgelerini, ister Excel elektronik tablolarını veya diğer formatları kullanıyor olun, bu kılavuz, başlamak için bilmeniz gereken her şeyde size yol gösterecektir.
 ## Önkoşullar

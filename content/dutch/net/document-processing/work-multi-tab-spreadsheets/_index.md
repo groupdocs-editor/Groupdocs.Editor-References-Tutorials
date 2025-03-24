@@ -6,6 +6,9 @@ description: Leer hoe u kunt werken met spreadsheets met meerdere tabbladen in .
 weight: 17
 url: /nl/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# Werken met spreadsheets met meerdere tabbladen
+
 ## Invoering
 Het omgaan met spreadsheets met meerdere tabbladen kan een hele klus zijn, vooral als u gegevens uit verschillende werkbladen binnen hetzelfde document moet manipuleren of extraheren. Als u met .NET werkt en op zoek bent naar een robuuste oplossing, is GroupDocs.Editor voor .NET een uitstekende keuze. In deze zelfstudie leiden we u door het proces van het werken met spreadsheets met meerdere tabbladen met behulp van GroupDocs.Editor voor .NET. We behandelen alles, van het instellen van uw omgeving tot het opslaan van elk tabblad als een afzonderlijk bestand.
 ## Vereisten

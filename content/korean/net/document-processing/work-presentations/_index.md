@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Editor를 사용하여 PowerPoint 프레젠테이
 weight: 16
 url: /ko/net/document-processing/work-presentations/
 ---
+
+# 프리젠테이션 작업
+
 ## 소개
 오늘날의 디지털 시대에는 효과적인 문서 관리와 편집이 중요합니다. 개발자이든 프레젠테이션을 자주 다루는 사람이든 이러한 프로세스를 간소화하는 도구를 사용하여 작업하는 방법을 알면 시간과 노력을 절약할 수 있습니다. 그러한 도구 중 하나가 프레젠테이션을 포함한 문서를 프로그래밍 방식으로 편집할 수 있는 강력한 API인 .NET용 GroupDocs.Editor입니다. 이 튜토리얼에서는 환경 설정부터 프리젠테이션 파일 편집 및 저장까지 .NET용 GroupDocs.Editor를 사용하여 프리젠테이션 작업을 수행하는 단계를 안내합니다.
 ## 전제조건

@@ -6,6 +6,9 @@ description: Lär dig hur du redigerar dokument programmatiskt med GroupDocs.Edi
 weight: 13
 url: /sv/net/document-editing/load-document/
 ---
+
+# Ladda dokument
+
 ## Introduktion
 Att redigera dokument programmatiskt kan vara en skrämmande uppgift, särskilt om du har att göra med olika filformat och komplexa strukturer. Lyckligtvis gör GroupDocs.Editor för .NET den här uppgiften till en lek, och ger ett robust och lättanvänt API för redigering av ett brett utbud av dokumenttyper. I den här handledningen går vi igenom allt du behöver för att komma igång med GroupDocs.Editor för .NET, inklusive förutsättningarna, hur du importerar namnrymder och en detaljerad, steg-för-steg-guide för att ladda dokument med olika metoder.
 ## Förutsättningar

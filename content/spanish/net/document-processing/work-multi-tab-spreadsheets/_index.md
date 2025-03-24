@@ -6,6 +6,9 @@ description: Aprenda a trabajar con hojas de cálculo de varias pestañas en .NE
 weight: 17
 url: /es/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# Trabajar con hojas de cálculo de varias pestañas
+
 ## Introducción
 Manejar hojas de cálculo con varias pestañas puede ser toda una tarea, especialmente cuando necesitas manipular o extraer datos de diferentes hojas dentro del mismo documento. Si trabaja con .NET y busca una solución sólida, GroupDocs.Editor para .NET es una excelente opción. En este tutorial, lo guiaremos a través del proceso de trabajar con hojas de cálculo de múltiples pestañas usando GroupDocs.Editor para .NET. Cubriremos todo, desde configurar su entorno hasta guardar cada pestaña como un archivo separado.
 ## Requisitos previos

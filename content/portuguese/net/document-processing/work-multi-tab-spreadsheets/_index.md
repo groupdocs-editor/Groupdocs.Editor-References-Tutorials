@@ -6,6 +6,9 @@ description: Aprenda como trabalhar com planilhas com várias guias no .NET usan
 weight: 17
 url: /pt/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# Trabalhe com planilhas com várias guias
+
 ## Introdução
 Lidar com planilhas com várias guias pode ser uma tarefa e tanto, especialmente quando você precisa manipular ou extrair dados de planilhas diferentes no mesmo documento. Se você trabalha com .NET e procura uma solução robusta, GroupDocs.Editor for .NET é uma excelente escolha. Neste tutorial, orientaremos você no processo de trabalho com planilhas com várias guias usando GroupDocs.Editor for .NET. Abordaremos tudo, desde a configuração do seu ambiente até salvar cada guia como um arquivo separado.
 ## Pré-requisitos

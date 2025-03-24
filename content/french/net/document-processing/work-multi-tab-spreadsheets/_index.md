@@ -6,6 +6,9 @@ description: Apprenez à utiliser des feuilles de calcul multi-onglets dans .NET
 weight: 17
 url: /fr/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# Travailler avec des feuilles de calcul multi-onglets
+
 ## Introduction
 La gestion de feuilles de calcul à plusieurs onglets peut s'avérer une tâche ardue, en particulier lorsque vous devez manipuler ou extraire des données de différentes feuilles au sein du même document. Si vous travaillez avec .NET et recherchez une solution robuste, GroupDocs.Editor for .NET est un excellent choix. Dans ce didacticiel, nous vous guiderons tout au long du processus d'utilisation de feuilles de calcul multi-onglets à l'aide de GroupDocs.Editor for .NET. Nous couvrirons tout, de la configuration de votre environnement à l'enregistrement de chaque onglet dans un fichier séparé.
 ## Conditions préalables

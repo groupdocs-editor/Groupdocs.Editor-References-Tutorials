@@ -6,6 +6,9 @@ description: Bu adım adım kılavuzla GroupDocs.Editor for .NET'i kullanarak CS
 weight: 12
 url: /tr/net/document-processing/work-dsv/
 ---
+
+# Sınırlandırılmış Ayrılmış Değerlerle Çalışma (DSV)
+
 ## giriiş
 CSV veya TSV dosyaları gibi sınırlandırılmış ayrılmış değerlerle (DSV) çalışan bir geliştiriciyseniz, bu dosyaları programlı olarak düzenlemenin göz korkutucu bir görev olabileceğini biliyorsunuzdur. Ancak GroupDocs.Editor for .NET ile bu görev önemli ölçüde daha basit ve daha verimli hale gelir. Bu eğitimde, DSV dosyalarını okumak, düzenlemek ve kaydetmek için GroupDocs.Editor for .NET'in nasıl kullanılacağı konusunda size yol göstereceğiz. Süreci takip edilmesi kolay adımlara ayırarak projelerinizde uygulamanızı kolaylaştıracağız.
 ## Önkoşullar

@@ -6,6 +6,9 @@ description: 이미지 및 스타일시트에 대한 사용자 정의 접두어�
 weight: 11
 url: /ko/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# 접두사가 포함된 HTML 콘텐츠 검색
+
 ## 소개
 .NET용 GroupDocs.Editor를 사용하여 문서에서 HTML 콘텐츠를 검색하는 방법에 대한 단계별 자습서에 오신 것을 환영합니다. 숙련된 개발자이든 이제 막 시작하는 개발자이든 이 가이드는 따라하기 쉬운 방식으로 프로세스를 안내합니다. 환경 설정부터 코드의 성공적인 실행까지 알아야 할 모든 것을 다룹니다. 뛰어들어보자!
 ## 전제조건

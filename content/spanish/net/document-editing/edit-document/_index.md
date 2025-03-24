@@ -6,6 +6,9 @@ description: Aprenda a editar documentos sin esfuerzo con GroupDocs.Editor para 
 weight: 11
 url: /es/net/document-editing/edit-document/
 ---
+
+# Editar documento
+
 ## Introducción
 ¿Alguna vez se ha visto enredado en la complejidad de la edición de documentos dentro de sus aplicaciones .NET? ¡No temáis! Con GroupDocs.Editor para .NET, tiene un poderoso aliado para simplificar esta tarea. Esta guía completa le explicará cómo aprovechar esta sólida herramienta para editar documentos con facilidad. Ya sea que esté trabajando con documentos de procesamiento de textos u hojas de cálculo, al final de este tutorial estará navegando por GroupDocs.Editor como un profesional.
 ## Requisitos previos

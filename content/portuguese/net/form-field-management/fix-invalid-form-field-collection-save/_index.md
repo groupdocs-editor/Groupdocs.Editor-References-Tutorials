@@ -6,6 +6,9 @@ description: Aprenda como corrigir campos de formulário inválidos em DOCX usan
 weight: 11
 url: /pt/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# Corrigir coleção de campos de formulário inválidos e salvar
+
 ## Introdução
 Bem-vindo! Se você estiver trabalhando com campos de formulário em documentos e enfrentando problemas com coleções de campos de formulário inválidos, você está no lugar certo. Neste tutorial, veremos como corrigir campos de formulário inválidos e salvar seu documento usando Groupdocs.Editor for .NET. Iremos guiá-lo passo a passo pelo processo, garantindo que você tenha todos os detalhes necessários para que funcione perfeitamente. Vamos começar!
 ## Pré-requisitos

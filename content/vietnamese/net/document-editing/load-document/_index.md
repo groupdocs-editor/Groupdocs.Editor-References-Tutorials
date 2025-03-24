@@ -6,6 +6,9 @@ description: Tìm hiểu cách chỉnh sửa tài liệu theo chương trình b�
 weight: 13
 url: /vi/net/document-editing/load-document/
 ---
+
+# Tải tài liệu
+
 ## Giới thiệu
 Chỉnh sửa tài liệu theo chương trình có thể là một nhiệm vụ khó khăn, đặc biệt nếu bạn đang xử lý các định dạng tệp khác nhau và cấu trúc phức tạp. May mắn thay, GroupDocs.Editor dành cho .NET giúp công việc này trở nên dễ dàng, cung cấp API mạnh mẽ và dễ sử dụng để chỉnh sửa nhiều loại tài liệu. Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn mọi thứ bạn cần để bắt đầu với GroupDocs.Editor cho .NET, bao gồm các điều kiện tiên quyết, cách nhập vùng tên và hướng dẫn chi tiết từng bước để tải tài liệu bằng nhiều phương pháp khác nhau.
 ## Điều kiện tiên quyết

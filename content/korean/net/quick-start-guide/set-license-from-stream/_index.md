@@ -6,6 +6,9 @@ description: .NET용 Groupdocs.Editor를 사용하여 프로그래밍 방식으�
 weight: 11
 url: /ko/net/quick-start-guide/set-license-from-stream/
 ---
+
+# 스트림에서 라이선스 설정
+
 ## 소개
 .NET 애플리케이션에서 프로그래밍 방식으로 문서를 편집할 수 있는 강력한 방법을 찾고 계십니까? 더 이상 보지 마세요! .NET용 Groupdocs.Editor는 문서 편집 기능을 응용 프로그램에 원활하게 통합할 수 있는 강력한 문서 편집 솔루션입니다. Word 문서, Excel 스프레드시트 또는 기타 형식을 처리하든 이 가이드는 시작하기 위해 알아야 할 모든 것을 안내합니다.
 ## 전제조건

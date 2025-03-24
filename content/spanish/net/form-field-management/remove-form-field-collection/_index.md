@@ -6,6 +6,9 @@ description: Aprenda cómo eliminar campos de formulario de documentos de Word u
 weight: 13
 url: /es/net/form-field-management/remove-form-field-collection/
 ---
+
+# Eliminar colección de campos de formulario
+
 ## Introducción
 ¿Está buscando administrar campos de formulario en sus documentos mediante programación? GroupDocs.Editor para .NET ofrece una poderosa solución para manejar y manipular campos de formulario en varios formatos de documentos. En este tutorial, lo guiaremos a través de los pasos para eliminar colecciones de campos de formulario de un documento de Word utilizando esta sólida biblioteca. 
 ## Requisitos previos

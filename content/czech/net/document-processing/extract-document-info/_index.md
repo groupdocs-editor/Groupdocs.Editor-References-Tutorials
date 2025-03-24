@@ -6,6 +6,9 @@ description: Naučte se, jak extrahovat informace o dokumentu pomocí GroupDocs.
 weight: 10
 url: /cs/net/document-processing/extract-document-info/
 ---
+
+# Extrahujte informace o dokumentu
+
 ## Úvod
 Vítejte v tomto komplexním tutoriálu o extrahování informací o dokumentu pomocí GroupDocs.Editor pro .NET. V této příručce vás provedeme procesem krok za krokem, přičemž se ujistíme, že každé části rozumíte jasně a stručně. Ať už jste zkušený vývojář nebo teprve začínáte, tento tutoriál vám pomůže bezproblémově integrovat GroupDocs.Editor do vašich projektů .NET, abyste mohli efektivně spravovat a manipulovat s dokumenty.
 ## Předpoklady

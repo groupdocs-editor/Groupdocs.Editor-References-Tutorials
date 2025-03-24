@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan javíthatja ki az érvénytelen űrlapmezőket 
 weight: 11
 url: /hu/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# Javítsa ki az érvénytelen űrlapmező-gyűjteményt, és mentse
+
 ## Bevezetés
 Üdvözöljük! Ha űrlapmezőkkel dolgozik dokumentumokban, és problémákba ütközik az érvénytelen űrlapmező-gyűjteményekkel kapcsolatban, akkor jó helyen jár. Ebben az oktatóanyagban belemerülünk az érvénytelen űrlapmezők javításába és a dokumentum mentésébe a Groupdocs.Editor for .NET segítségével. Lépésről lépésre végigvezetjük a folyamaton, biztosítva, hogy minden részlet birtokában legyen a zökkenőmentes működéshez. Kezdjük el!
 ## Előfeltételek

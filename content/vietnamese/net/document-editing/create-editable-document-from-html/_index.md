@@ -6,6 +6,9 @@ description: Chuyển đổi HTML thành tài liệu Word có thể chỉnh sử
 weight: 10
 url: /vi/net/document-editing/create-editable-document-from-html/
 ---
+
+# Tạo tài liệu có thể chỉnh sửa từ HTML
+
 ## Giới thiệu
 Bạn đang muốn chuyển đổi các tệp HTML tĩnh của mình thành tài liệu Word động, có thể chỉnh sửa được? Với GroupDocs.Editor dành cho .NET, bạn có thể chuyển đổi liền mạch HTML sang nhiều định dạng có thể chỉnh sửa khác nhau một cách dễ dàng. Hướng dẫn toàn diện này sẽ hướng dẫn bạn từng bước trong toàn bộ quá trình, đảm bảo rằng bạn có thể hoàn thành nhiệm vụ này một cách dễ dàng.
 ## Điều kiện tiên quyết

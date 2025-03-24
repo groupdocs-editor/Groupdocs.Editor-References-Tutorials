@@ -6,6 +6,9 @@ description: 透過此逐步指南，了解如何使用 GroupDocs.Editor for .NE
 weight: 12
 url: /zh-hant/net/document-processing/work-dsv/
 ---
+
+# 使用分隔分隔值 (DSV)
+
 ## 介紹
 如果您是使用 CSV 或 TSV 檔案等分隔分隔值 (DSV) 的開發人員，您就會知道以程式方式編輯這些檔案可能是一項艱鉅的任務。然而，使用 GroupDocs.Editor for .NET，這項任務變得更加簡單和有效率。在本教程中，我們將引導您了解如何使用 GroupDocs.Editor for .NET 讀取、編輯和儲存 DSV 檔案。我們將把這個過程分解為易於遵循的步驟，讓您可以在專案中輕鬆實施。
 ## 先決條件

@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Editor for .NET 在您的应用程序�
 weight: 10
 url: /zh/net/quick-start-guide/set-license-from-file/
 ---
+
+# 从文件设置许可证
+
 ## 介绍
 您准备好使用 .NET 应用程序改变您的文档编辑体验了吗？GroupDocs.Editor for .NET 就是您的最佳选择。这个强大的 API 允许您将文档编辑功能无缝集成到您的应用程序中，使操作和转换各种文档格式变得前所未有的简单。在本教程中，我们将指导您完成 GroupDocs.Editor for .NET 的入门过程，从设置环境到执行您的第一个文档编辑任务。
 ## 先决条件

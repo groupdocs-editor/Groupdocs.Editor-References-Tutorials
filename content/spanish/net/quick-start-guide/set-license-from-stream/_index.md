@@ -6,6 +6,9 @@ description: Aprenda a utilizar Groupdocs.Editor para .NET para editar documento
 weight: 11
 url: /es/net/quick-start-guide/set-license-from-stream/
 ---
+
+# Establecer licencia desde Stream
+
 ## Introducción
 ¿Está buscando una forma potente de editar documentos mediante programación en sus aplicaciones .NET? ¡No busque más! Groupdocs.Editor para .NET es una sólida solución de edición de documentos que le permite integrar perfectamente funciones de edición de documentos en sus aplicaciones. Ya sea que maneje documentos de Word, hojas de cálculo de Excel u otros formatos, esta guía lo guiará a través de todo lo que necesita saber para comenzar.
 ## Requisitos previos

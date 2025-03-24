@@ -6,6 +6,9 @@ description: Naučte se pracovat s vícekartovými tabulkami v .NET pomocí Grou
 weight: 17
 url: /cs/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# Práce s vícetabulkovými tabulkami
+
 ## Úvod
 Manipulace s tabulkami s více kartami může být docela náročný úkol, zvláště když potřebujete manipulovat nebo extrahovat data z různých listů ve stejném dokumentu. Pokud pracujete s .NET a hledáte robustní řešení, GroupDocs.Editor pro .NET je vynikající volbou. V tomto tutoriálu vás provedeme procesem práce s vícekartovými tabulkami pomocí GroupDocs.Editor pro .NET. Pokryjeme vše od nastavení prostředí až po uložení každé karty jako samostatného souboru.
 ## Předpoklady

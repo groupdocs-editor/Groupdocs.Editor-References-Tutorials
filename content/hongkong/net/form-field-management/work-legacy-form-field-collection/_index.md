@@ -6,6 +6,9 @@ description: 透過我們的詳細指南，了解如何使用 GroupDocs.Editor f
 weight: 12
 url: /zh-hant/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# 使用舊表單欄位集合
+
 ## 介紹
 歡迎閱讀這份關於如何使用 GroupDocs.Editor for .NET 處理舊表單欄位集合的綜合指南。無論您正在處理文字欄位、複選框、日期欄位或下拉式選單，本教學都將引導您完成有效管理這些欄位的每個步驟。在本指南結束時，您將充分了解如何使用 GroupDocs.Editor 處理文件中的各種表單欄位。讓我們深入了解吧！
 ## 先決條件

@@ -6,6 +6,9 @@ description: Leer in deze tutorial hoe u PDF-documenten kunt bewerken met GroupD
 weight: 14
 url: /nl/net/document-processing/work-pdf-documents/
 ---
+
+# Werken met PDF-documenten
+
 ## Invoering
 Bent u op zoek naar een uitgebreide handleiding voor het manipuleren en bewerken van PDF-documenten met GroupDocs.Editor voor .NET? Je bent op de juiste plek! In deze zelfstudie begeleiden we u door het hele proces, van het opzetten van uw project tot het opslaan van uw bewerkte PDF-document. Of u nu een doorgewinterde ontwikkelaar bent of net begint, u zult deze handleiding nuttig en gemakkelijk te volgen vinden. Laten we erin duiken!
 ## Vereisten

@@ -6,6 +6,9 @@ description: Truy xuất nội dung HTML bằng GroupDocs.Editor cho .NET với 
 weight: 10
 url: /vi/net/html-content-retrieval/retrieve-html-body-content/
 ---
+
+# Truy xuất nội dung HTML
+
 ## Giới thiệu
 Bạn đã sẵn sàng cách mạng hóa cách xử lý việc chỉnh sửa tài liệu trong các ứng dụng .NET của mình chưa? Không cần tìm đâu xa ngoài GroupDocs.Editor dành cho .NET! Công cụ mạnh mẽ này cho phép chỉnh sửa liền mạch nhiều định dạng tài liệu khác nhau ngay trong ứng dụng của bạn. Cho dù bạn đang làm việc với Word, PDF hay HTML, GroupDocs.Editor đều giúp bạn dễ dàng chỉnh sửa và thao tác với tài liệu mà không cần các công cụ bên ngoài.
 ## Điều kiện tiên quyết

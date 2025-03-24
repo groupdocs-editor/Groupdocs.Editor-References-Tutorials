@@ -6,6 +6,9 @@ description: Découvrez comment récupérer du contenu HTML à l'aide de GroupDo
 weight: 22
 url: /fr/net/html-content-retrieval/
 ---
+
+# Récupération de contenu HTML
+
 Libérez la puissance de la récupération de contenu HTML dans vos applications .NET avec GroupDocs.Editor pour .NET. Nos didacticiels complets vous guideront tout au long du processus d'extraction du contenu du corps HTML et d'utilisation de préfixes personnalisés pour les images et les feuilles de style. Que vous cherchiez à améliorer la gestion des documents ou à rationaliser l'organisation des ressources, nos guides étape par étape garantissent une intégration transparente. Plongez et commencez à optimiser vos applications dès aujourd’hui !
 
 ## Récupérer le contenu du corps HTML

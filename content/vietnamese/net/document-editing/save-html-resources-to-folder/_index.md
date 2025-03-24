@@ -6,6 +6,9 @@ description: Tìm hiểu cách trích xuất tài nguyên HTML từ tài liệu 
 weight: 13
 url: /vi/net/document-editing/save-html-resources-to-folder/
 ---
+
+# Lưu tài nguyên HTML vào thư mục
+
 ## Giới thiệu
 Groupdocs.Editor cho .NET là một công cụ mạnh mẽ cho phép các nhà phát triển thao tác và chuyển đổi tài liệu trong ứng dụng .NET của họ một cách liền mạch. Cho dù bạn cần trích xuất tài nguyên HTML từ tài liệu hay thực hiện các tác vụ chỉnh sửa nâng cao, Groupdocs.Editor đều đơn giản hóa quy trình bằng API trực quan và tài liệu mở rộng.
 ## Điều kiện tiên quyết

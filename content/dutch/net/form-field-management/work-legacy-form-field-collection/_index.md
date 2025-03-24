@@ -6,6 +6,9 @@ description: Leer hoe u oudere formuliervelden beheert met GroupDocs.Editor voor
 weight: 12
 url: /nl/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# Werken met verouderde formulierveldverzameling
+
 ## Invoering
 Welkom bij deze uitgebreide handleiding over het werken met oudere formulierveldverzamelingen met behulp van GroupDocs.Editor voor .NET. Of u nu te maken heeft met tekstvelden, selectievakjes, datumvelden of vervolgkeuzemenu's, deze tutorial begeleidt u bij elke stap om deze velden efficiënt te beheren. Aan het einde van deze handleiding heeft u een goed begrip van hoe u GroupDocs.Editor kunt gebruiken voor het verwerken van verschillende formuliervelden in uw documenten. Laten we erin duiken!
 ## Vereisten

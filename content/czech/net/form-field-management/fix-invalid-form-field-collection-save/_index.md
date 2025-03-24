@@ -6,6 +6,9 @@ description: Přečtěte si, jak opravit neplatná pole formuláře v DOCX pomoc
 weight: 11
 url: /cs/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# Opravte neplatnou kolekci polí formuláře a uložte
+
 ## Úvod
 Vítejte! Pokud pracujete s poli formuláře v dokumentech a potýkáte se s problémy s neplatnými kolekcemi polí formuláře, jste na správném místě. V tomto tutoriálu se ponoříme do toho, jak opravit neplatná pole formuláře a uložit dokument pomocí Groupdocs.Editor pro .NET. Provedeme vás procesem krok za krokem a zajistíme, že budete mít všechny podrobnosti, které potřebujete k bezproblémovému fungování. Začněme!
 ## Předpoklady

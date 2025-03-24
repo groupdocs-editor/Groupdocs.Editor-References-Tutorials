@@ -6,6 +6,9 @@ description: Naučte se upravovat dokumenty programově pomocí GroupDocs.Editor
 weight: 13
 url: /cs/net/document-editing/load-document/
 ---
+
+# Načíst dokument
+
 ## Úvod
 Programové úpravy dokumentů mohou být skličující úkol, zvláště pokud máte co do činění s různými formáty souborů a složitými strukturami. Naštěstí GroupDocs.Editor pro .NET dělá tento úkol hračkou a poskytuje robustní a snadno použitelné rozhraní API pro úpravy široké škály typů dokumentů. V tomto tutoriálu vás provedeme vším, co potřebujete, abyste mohli začít s GroupDocs.Editor pro .NET, včetně nezbytných předpokladů, jak importovat jmenné prostory a podrobného průvodce načítáním dokumentů pomocí různých metod krok za krokem.
 ## Předpoklady

@@ -6,6 +6,9 @@ description: Lär dig hur du fixar ogiltiga formulärfält i DOCX med Groupdocs.
 weight: 11
 url: /sv/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# Åtgärda Insamling av ogiltiga formulärfält och spara
+
 ## Introduktion
 Välkommen! Om du arbetar med formulärfält i dokument och har problem med samlingar av ogiltiga formulärfält är du på rätt plats. I den här självstudien kommer vi att dyka in i hur du fixar ogiltiga formulärfält och sparar ditt dokument med Groupdocs.Editor för .NET. Vi guidar dig genom processen steg-för-steg, så att du har alla detaljer du behöver för att få det att fungera sömlöst. Låt oss börja!
 ## Förutsättningar

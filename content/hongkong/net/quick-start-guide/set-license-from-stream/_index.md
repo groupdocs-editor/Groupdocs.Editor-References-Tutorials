@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Editor for .NET 以程式設計方式�
 weight: 11
 url: /zh-hant/net/quick-start-guide/set-license-from-stream/
 ---
+
+# 從 Stream 設定許可證
+
 ## 介紹
 您是否正在尋找一種在 .NET 應用程式中以程式設計方式編輯文件的強大方法？別再猶豫了！ Groupdocs.Editor for .NET 是一個強大的文件編輯解決方案，可讓您將文件編輯功能無縫整合到您的應用程式中。無論您是處理 Word 文件、Excel 電子表格或其他格式，本指南都將引導您完成入門所需了解的所有內容。
 ## 先決條件

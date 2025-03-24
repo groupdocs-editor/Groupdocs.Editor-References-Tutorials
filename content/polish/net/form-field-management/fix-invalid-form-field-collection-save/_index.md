@@ -6,6 +6,9 @@ description: Dowiedz się, jak naprawić nieprawidłowe pola formularza w DOCX z
 weight: 11
 url: /pl/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# Napraw nieprawidłowy zbiór pól formularza i zapisz
+
 ## Wstęp
 Powitanie! Jeśli pracujesz z polami formularzy w dokumentach i napotykasz problemy z nieprawidłowymi zbiorami pól formularzy, jesteś we właściwym miejscu. W tym samouczku omówimy, jak naprawić nieprawidłowe pola formularza i zapisać dokument za pomocą Groupdocs.Editor dla .NET. Poprowadzimy Cię przez proces krok po kroku, upewniając się, że masz wszystkie szczegóły potrzebne do jego płynnego działania. Zacznijmy!
 ## Warunki wstępne

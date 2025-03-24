@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Editor for .NET 以编程方式编辑�
 weight: 11
 url: /zh/net/quick-start-guide/set-license-from-stream/
 ---
+
+# 从流设置许可证
+
 ## 介绍
 您是否正在寻找一种在 .NET 应用程序中以编程方式编辑文档的强大方法？别再找了！Groupdocs.Editor for .NET 是一款强大的文档编辑解决方案，可让您将文档编辑功能无缝集成到应用程序中。无论您处理的是 Word 文档、Excel 电子表格还是其他格式，本指南都会引导您了解入门所需的一切知识。
 ## 先决条件

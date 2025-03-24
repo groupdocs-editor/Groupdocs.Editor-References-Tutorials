@@ -6,6 +6,9 @@ description: Z tego przewodnika krok po kroku dowiesz się, jak usuwać pola for
 weight: 13
 url: /pl/net/form-field-management/remove-form-field-collection/
 ---
+
+# Usuń kolekcję pól formularza
+
 ## Wstęp
 Czy chcesz programowo zarządzać polami formularzy w swoich dokumentach? GroupDocs.Editor dla .NET oferuje zaawansowane rozwiązanie do obsługi i manipulowania polami formularzy w różnych formatach dokumentów. W tym samouczku przeprowadzimy Cię przez kroki usuwania kolekcji pól formularzy z dokumentu programu Word przy użyciu tej niezawodnej biblioteki. 
 ## Warunki wstępne

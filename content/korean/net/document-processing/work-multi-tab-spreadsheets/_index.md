@@ -6,6 +6,9 @@ description: GroupDocs.Editor를 사용하여 .NET에서 다중 탭 스프레드
 weight: 17
 url: /ko/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# 다중 탭 스프레드시트 작업
+
 ## 소개
 다중 탭 스프레드시트를 처리하는 것은 상당히 힘든 작업이 될 수 있습니다. 특히 동일한 문서 내의 여러 시트에서 데이터를 조작하거나 추출해야 하는 경우에는 더욱 그렇습니다. .NET으로 작업하면서 강력한 솔루션을 찾고 있다면 .NET용 GroupDocs.Editor가 탁월한 선택입니다. 이 튜토리얼에서는 .NET용 GroupDocs.Editor를 사용하여 다중 탭 스프레드시트로 작업하는 과정을 안내합니다. 환경 설정부터 각 탭을 별도의 파일로 저장하는 것까지 모든 것을 다룹니다.
 ## 전제조건

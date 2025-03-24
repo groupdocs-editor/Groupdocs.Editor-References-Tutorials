@@ -6,6 +6,9 @@ description: Aprenda como recuperar conteúdo HTML de documentos usando GroupDoc
 weight: 11
 url: /pt/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# Recuperar conteúdo HTML com prefixo
+
 ## Introdução
 Bem-vindo ao nosso tutorial passo a passo sobre como recuperar conteúdo HTML de um documento usando GroupDocs.Editor for .NET. Quer você seja um desenvolvedor experiente ou esteja apenas começando, este guia irá guiá-lo pelo processo de uma maneira fácil de seguir. Abordaremos tudo o que você precisa saber, desde a configuração do seu ambiente até a execução do código com sucesso. Vamos mergulhar!
 ## Pré-requisitos

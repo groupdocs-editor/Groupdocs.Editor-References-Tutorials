@@ -6,6 +6,9 @@ description: Tìm hiểu cách trích xuất thông tin tài liệu bằng Group
 weight: 10
 url: /vi/net/document-processing/extract-document-info/
 ---
+
+# Trích xuất thông tin tài liệu
+
 ## Giới thiệu
 Chào mừng bạn đến với hướng dẫn toàn diện về cách trích xuất thông tin tài liệu bằng GroupDocs.Editor cho .NET. Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn từng bước thực hiện quy trình, đảm bảo bạn hiểu từng phần một cách rõ ràng và chính xác. Cho dù bạn là nhà phát triển dày dạn kinh nghiệm hay chỉ mới bắt đầu, hướng dẫn này sẽ giúp bạn tích hợp liền mạch GroupDocs.Editor vào các dự án .NET của mình để quản lý và thao tác tài liệu hiệu quả.
 ## Điều kiện tiên quyết

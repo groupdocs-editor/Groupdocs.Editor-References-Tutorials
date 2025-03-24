@@ -6,6 +6,9 @@ description: Tìm hiểu cách quản lý các trường biểu mẫu cũ bằng
 weight: 12
 url: /vi/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# Làm việc với Bộ sưu tập trường biểu mẫu kế thừa
+
 ## Giới thiệu
 Chào mừng bạn đến với hướng dẫn toàn diện này về cách làm việc với các bộ sưu tập trường biểu mẫu cũ bằng GroupDocs.Editor cho .NET. Cho dù bạn đang xử lý các trường văn bản, hộp kiểm, trường ngày hay menu thả xuống, hướng dẫn này sẽ hướng dẫn bạn từng bước để quản lý các trường này một cách hiệu quả. Đến cuối hướng dẫn này, bạn sẽ hiểu rõ về cách sử dụng GroupDocs.Editor để xử lý các trường biểu mẫu khác nhau trong tài liệu của mình. Hãy đi sâu vào!
 ## Điều kiện tiên quyết

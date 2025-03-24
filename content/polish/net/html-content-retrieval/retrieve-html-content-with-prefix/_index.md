@@ -6,6 +6,9 @@ description: Dowiedz się, jak pobierać zawartość HTML z dokumentów za pomoc
 weight: 11
 url: /pl/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# Pobierz treść HTML z prefiksem
+
 ## Wstęp
 Witamy w naszym samouczku krok po kroku dotyczącym pobierania zawartości HTML z dokumentu za pomocą programu GroupDocs.Editor dla platformy .NET. Niezależnie od tego, czy jesteś doświadczonym programistą, czy dopiero zaczynasz, ten przewodnik w łatwy do zrozumienia sposób przeprowadzi Cię przez ten proces. Omówimy wszystko, co musisz wiedzieć, od skonfigurowania środowiska po pomyślne wykonanie kodu. Zanurzmy się!
 ## Warunki wstępne

@@ -6,6 +6,9 @@ description: Impara a modificare documenti di testo semplice utilizzando GroupDo
 weight: 15
 url: /it/net/document-processing/work-plain-text-documents/
 ---
+
+# Lavora con documenti di solo testo
+
 ## introduzione
 Stai cercando di semplificare il processo di modifica dei documenti in .NET? Non cercare oltre GroupDocs.Editor per .NET! Questa potente API ti consente di modificare facilmente un'ampia varietà di formati di documenti. In questo tutorial ti guideremo attraverso il processo di lavoro con documenti di testo semplice utilizzando GroupDocs.Editor per .NET. Alla fine, sarai in grado di gestire la modifica dei documenti di testo come un professionista. Pronti a tuffarvi? Iniziamo!
 ## Prerequisiti

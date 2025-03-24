@@ -6,6 +6,9 @@ description: Tìm hiểu cách chỉnh sửa tệp CSV và TSV bằng GroupDocs.
 weight: 12
 url: /vi/net/document-processing/work-dsv/
 ---
+
+# Làm việc với các giá trị được phân tách bằng dấu phân cách (DSV)
+
 ## Giới thiệu
 Nếu bạn là nhà phát triển làm việc với các giá trị được phân tách bằng dấu phân cách (DSV) như tệp CSV hoặc TSV thì bạn biết rằng việc chỉnh sửa các tệp này theo chương trình có thể là một nhiệm vụ khó khăn. Tuy nhiên, với GroupDocs.Editor cho .NET, tác vụ này trở nên đơn giản và hiệu quả hơn đáng kể. Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn cách sử dụng GroupDocs.Editor cho .NET để đọc, chỉnh sửa và lưu tệp DSV. Chúng tôi sẽ chia quy trình thành các bước dễ thực hiện, giúp bạn dễ dàng triển khai trong các dự án của mình.
 ## Điều kiện tiên quyết

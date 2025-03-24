@@ -6,6 +6,9 @@ description: Z tego przewodnika krok po kroku dowiesz się, jak używać program
 weight: 10
 url: /pl/net/css-handling/get-external-css-content/
 ---
+
+# Uzyskaj zewnętrzną zawartość CSS
+
 ## Wstęp
 W tym artykule przeprowadzimy Cię przez wszystko, czego potrzebujesz, aby rozpocząć pracę z GroupDocs.Editor dla .NET. Od konfiguracji środowiska po wyodrębnianie zewnętrznej zawartości CSS z dokumentów — omówimy wszystko. Zanurkujmy od razu!
 ## Warunki wstępne

@@ -6,6 +6,9 @@ description: Tìm hiểu cách sử dụng GroupDocs.Editor dành cho .NET để
 weight: 10
 url: /vi/net/quick-start-guide/set-license-from-file/
 ---
+
+# Đặt giấy phép từ tệp
+
 ## Giới thiệu
 Bạn đã sẵn sàng chuyển đổi trải nghiệm chỉnh sửa tài liệu của mình bằng các ứng dụng .NET chưa? Không cần tìm đâu xa ngoài GroupDocs.Editor dành cho .NET. API mạnh mẽ này cho phép bạn tích hợp liền mạch khả năng chỉnh sửa tài liệu vào ứng dụng của mình, giúp việc thao tác và chuyển đổi các định dạng tài liệu khác nhau trở nên dễ dàng hơn bao giờ hết. Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn qua quá trình bắt đầu với GroupDocs.Editor cho .NET, từ việc thiết lập môi trường cho đến thực hiện các tác vụ chỉnh sửa tài liệu đầu tiên của bạn.
 ## Điều kiện tiên quyết

@@ -6,6 +6,9 @@ description: 透過我們的逐步指南，學習使用 GroupDocs.Editor for .NE
 weight: 15
 url: /zh-hant/net/document-processing/work-plain-text-documents/
 ---
+
+# 處理純文字文檔
+
 ## 介紹
 您是否希望簡化 .NET 中的文件編輯流程？ .NET 的 GroupDocs.Editor 就是您的最佳選擇！這個強大的 API 允許您輕鬆編輯各種文件格式。在本教程中，我們將引導您完成使用 GroupDocs.Editor for .NET 處理純文字文件的流程。最後，您將能夠像專業人士一樣處理文字文檔編輯。準備好潛入了嗎？讓我們開始吧！
 ## 先決條件

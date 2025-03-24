@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan használhatja a Groupdocs.Editor for .NET-et do
 weight: 11
 url: /hu/net/quick-start-guide/set-license-from-stream/
 ---
+
+# Licenc beállítása a Streamből
+
 ## Bevezetés
 Hatékony módot keres dokumentumok programozott szerkesztésére .NET-alkalmazásaiban? Ne keressen tovább! A Groupdocs.Editor for .NET egy robusztus dokumentumszerkesztő megoldás, amely lehetővé teszi a dokumentumszerkesztő funkciók zökkenőmentes integrálását alkalmazásaiba. Akár Word-dokumentumokat, Excel-táblázatokat vagy más formátumokat kezel, ez az útmutató végigvezeti Önt mindenen, amit tudnia kell az induláshoz.
 ## Előfeltételek

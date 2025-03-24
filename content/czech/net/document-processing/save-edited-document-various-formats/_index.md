@@ -6,6 +6,9 @@ description: Zjistěte, jak uložit upravené dokumenty do různých formátů p
 weight: 11
 url: /cs/net/document-processing/save-edited-document-various-formats/
 ---
+
+# Uložit upravený dokument do různých formátů
+
 ## Úvod
 Chcete uložit upravené dokumenty do různých formátů pomocí GroupDocs.Editor pro .NET? Jste na správném místě! Tento komplexní průvodce vás provede celým procesem, od nastavení prostředí až po uložení upraveného dokumentu v různých formátech. Ponořme se do toho a udělejme z úprav a ukládání dokumentů hračku!
 ## Předpoklady

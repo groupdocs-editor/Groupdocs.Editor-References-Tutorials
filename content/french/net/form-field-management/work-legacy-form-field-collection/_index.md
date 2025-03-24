@@ -6,6 +6,9 @@ description: Découvrez comment gérer les anciens champs de formulaire à l'aid
 weight: 12
 url: /fr/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# Travailler avec la collection de champs de formulaire héritée
+
 ## Introduction
 Bienvenue dans ce guide complet sur la façon de travailler avec les anciennes collections de champs de formulaire à l'aide de GroupDocs.Editor pour .NET. Qu'il s'agisse de champs de texte, de cases à cocher, de champs de date ou de menus déroulants, ce didacticiel vous guidera à travers chaque étape pour gérer efficacement ces champs. À la fin de ce guide, vous aurez une solide compréhension de la façon d'utiliser GroupDocs.Editor pour gérer divers champs de formulaire dans vos documents. Allons-y !
 ## Conditions préalables

@@ -6,6 +6,9 @@ description: Scopri come modificare i documenti a livello di codice con GroupDoc
 weight: 13
 url: /it/net/document-editing/load-document/
 ---
+
+# Carica documento
+
 ## introduzione
 La modifica dei documenti a livello di codice può essere un compito arduo, soprattutto se hai a che fare con formati di file diversi e strutture complesse. Fortunatamente, GroupDocs.Editor per .NET rende questo compito un gioco da ragazzi, fornendo un'API robusta e facile da usare per modificare un'ampia gamma di tipi di documenti. In questo tutorial ti guideremo attraverso tutto ciò di cui hai bisogno per iniziare con GroupDocs.Editor per .NET, inclusi i prerequisiti, come importare gli spazi dei nomi e una guida dettagliata passo passo per caricare i documenti utilizzando vari metodi.
 ## Prerequisiti

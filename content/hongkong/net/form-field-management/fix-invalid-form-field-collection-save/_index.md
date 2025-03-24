@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Editor for .NET 修復 DOCX 中的無�
 weight: 11
 url: /zh-hant/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# 修復無效的表單欄位集合並儲存
+
 ## 介紹
 歡迎！如果您正在處理文件中的表單欄位並面臨無效表單欄位集合的問題，那麼您來對地方了。在本教程中，我們將深入探討如何修復無效的表單欄位並使用 Groupdocs.Editor for .NET 儲存文件。我們將逐步引導您完成整個過程，確保您掌握順利運行所需的所有詳細資訊。讓我們開始吧！
 ## 先決條件

@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Editor for .NET 以及图像和样式�
 weight: 11
 url: /zh/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# 检索带前缀的 HTML 内容
+
 ## 介绍
 欢迎阅读我们的分步教程，了解如何使用 GroupDocs.Editor for .NET 从文档中检索 HTML 内容。无论您是经验丰富的开发人员还是刚刚入门，本指南都将以易于理解的方式引导您完成整个过程。我们将介绍您需要了解的所有内容，从设置环境到成功执行代码。让我们开始吧！
 ## 先决条件

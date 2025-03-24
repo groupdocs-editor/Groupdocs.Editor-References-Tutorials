@@ -6,6 +6,9 @@ description: Zvyšte efektivitu úprav dokumentů v projektech .NET pomocí Grou
 weight: 10
 url: /cs/net/form-field-management/edit-form-field-collection/
 ---
+
+# Upravit kolekci polí formuláře
+
 ## Úvod
 Groupdocs.Editor for .NET poskytuje vývojářům robustní sadu funkcí pro práci s různými formáty dokumentů. Jednou z takových schopností je možnost bezproblémově upravovat kolekce polí formuláře v dokumentech. Ať už aktualizujete textová pole nebo implementujete ochranu dokumentů, Groupdocs.Editor zjednodušuje proces a zvyšuje efektivitu a produktivitu.
 ## Předpoklady

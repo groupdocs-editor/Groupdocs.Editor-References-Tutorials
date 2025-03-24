@@ -6,6 +6,9 @@ description: Learn to edit plain text documents using GroupDocs.Editor for .NET 
 weight: 15
 url: /net/document-processing/work-plain-text-documents/
 ---
+
+# Work with Plain Text Documents
+
 ## Introduction
 Are you looking to streamline your document editing process in .NET? Look no further than GroupDocs.Editor for .NET! This powerful API allows you to edit a wide variety of document formats with ease. In this tutorial, we'll guide you through the process of working with plain text documents using GroupDocs.Editor for .NET. By the end, you'll be equipped to handle text document editing like a pro. Ready to dive in? Let's get started!
 ## Prerequisites

@@ -6,6 +6,9 @@ description: Dowiedz się, jak edytować dokumenty w postaci zwykłego tekstu za
 weight: 15
 url: /pl/net/document-processing/work-plain-text-documents/
 ---
+
+# Pracuj z dokumentami zwykłego tekstu
+
 ## Wstęp
 Chcesz usprawnić proces edycji dokumentów w .NET? Nie szukaj dalej niż GroupDocs.Editor dla .NET! Ten potężny interfejs API pozwala z łatwością edytować szeroką gamę formatów dokumentów. W tym samouczku przeprowadzimy Cię przez proces pracy z dokumentami w formacie zwykłego tekstu przy użyciu programu GroupDocs.Editor dla platformy .NET. Na koniec będziesz w stanie poradzić sobie z edycją dokumentów tekstowych jak profesjonalista. Gotowy do nurkowania? Zacznijmy!
 ## Warunki wstępne

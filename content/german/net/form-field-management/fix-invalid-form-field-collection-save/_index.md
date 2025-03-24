@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie ungültige Formularfelder in DOCX mit Groupdo
 weight: 11
 url: /de/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# Ungültige Formularfeldsammlung korrigieren und speichern
+
 ## Einführung
 Willkommen! Wenn Sie mit Formularfeldern in Dokumenten arbeiten und Probleme mit ungültigen Formularfeldsammlungen haben, sind Sie hier richtig. In diesem Tutorial erfahren Sie, wie Sie ungültige Formularfelder reparieren und Ihr Dokument mit Groupdocs.Editor für .NET speichern. Wir führen Sie Schritt für Schritt durch den Prozess und stellen sicher, dass Sie alle Details haben, die Sie benötigen, damit alles reibungslos funktioniert. Lassen Sie uns anfangen!
 ## Voraussetzungen

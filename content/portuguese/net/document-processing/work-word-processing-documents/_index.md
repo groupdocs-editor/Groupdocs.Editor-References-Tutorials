@@ -6,6 +6,9 @@ description: Edite facilmente documentos de processamento de texto com GroupDocs
 weight: 19
 url: /pt/net/document-processing/work-word-processing-documents/
 ---
+
+# Trabalhe com documentos de processamento de texto
+
 ## Introdução
 Bem-vindo a este guia passo a passo sobre como trabalhar com documentos de processamento de texto usando GroupDocs.Editor for .NET. Quer você seja um desenvolvedor experiente ou esteja apenas começando, este tutorial fornecerá todas as informações necessárias para manipular e gerenciar documentos do Word com eficiência. GroupDocs.Editor for .NET é uma biblioteca poderosa projetada para lidar com tarefas complexas de edição de documentos. Ao final deste guia, você será capaz de carregar, editar e salvar perfeitamente documentos do Word em seus aplicativos .NET.
 ## Pré-requisitos

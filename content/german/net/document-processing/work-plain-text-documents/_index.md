@@ -6,6 +6,9 @@ description: Lernen Sie mit unserer Schritt-für-Schritt-Anleitung, reine Textdo
 weight: 15
 url: /de/net/document-processing/work-plain-text-documents/
 ---
+
+# Arbeiten mit Nur-Text-Dokumenten
+
 ## Einführung
 Möchten Sie Ihren Dokumentbearbeitungsprozess in .NET optimieren? Dann sind Sie bei GroupDocs.Editor für .NET genau richtig! Mit dieser leistungsstarken API können Sie eine Vielzahl von Dokumentformaten problemlos bearbeiten. In diesem Tutorial führen wir Sie durch den Prozess der Arbeit mit einfachen Textdokumenten mithilfe von GroupDocs.Editor für .NET. Am Ende sind Sie in der Lage, Textdokumente wie ein Profi zu bearbeiten. Bereit, loszulegen? Dann legen wir los!
 ## Voraussetzungen

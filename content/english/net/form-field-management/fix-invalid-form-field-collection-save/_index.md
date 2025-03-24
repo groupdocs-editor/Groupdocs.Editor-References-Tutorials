@@ -6,6 +6,9 @@ description: Learn how to fix invalid form fields in DOCX using Groupdocs.Editor
 weight: 11
 url: /net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# Fix Invalid Form Field Collection and Save
+
 ## Introduction
 Welcome! If you're working with form fields in documents and facing issues with invalid form field collections, you're in the right place. In this tutorial, we'll dive into how to fix invalid form fields and save your document using Groupdocs.Editor for .NET. We'll guide you through the process step-by-step, ensuring you have all the details you need to make it work seamlessly. Let's get started!
 ## Prerequisites

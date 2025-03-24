@@ -6,6 +6,9 @@ description: Apprenez à modifier des documents en texte brut à l'aide de Group
 weight: 15
 url: /fr/net/document-processing/work-plain-text-documents/
 ---
+
+# Travailler avec des documents en texte brut
+
 ## Introduction
 Cherchez-vous à rationaliser votre processus d’édition de documents dans .NET ? Ne cherchez pas plus loin que GroupDocs.Editor pour .NET ! Cette API puissante vous permet de modifier facilement une grande variété de formats de documents. Dans ce didacticiel, nous vous guiderons tout au long du processus d'utilisation de documents en texte brut à l'aide de GroupDocs.Editor for .NET. À la fin, vous serez équipé pour gérer l’édition de documents texte comme un pro. Prêt à plonger ? Commençons!
 ## Conditions préalables

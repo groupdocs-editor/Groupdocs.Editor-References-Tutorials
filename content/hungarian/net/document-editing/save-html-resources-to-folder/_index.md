@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan bonthat ki HTML-forrásokat dokumentumokból a 
 weight: 13
 url: /hu/net/document-editing/save-html-resources-to-folder/
 ---
+
+# Mentse a HTML-forrásokat mappába
+
 ## Bevezetés
 Groupdocs.Editor for .NET egy hatékony eszköz, amellyel a fejlesztők zökkenőmentesen kezelhetik és konvertálhatják a dokumentumokat .NET-alkalmazásaikon belül. Akár HTML-forrásokat kell kivonnia egy dokumentumból, akár speciális szerkesztési feladatokat kell végrehajtania, a Groupdocs.Editor leegyszerűsíti a folyamatot intuitív API-jával és kiterjedt dokumentációjával.
 ## Előfeltételek

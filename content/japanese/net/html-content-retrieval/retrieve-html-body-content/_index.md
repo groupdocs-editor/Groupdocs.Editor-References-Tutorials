@@ -6,6 +6,9 @@ description: ステップバイステップ ガイドに従って、GroupDocs.Ed
 weight: 10
 url: /ja/net/html-content-retrieval/retrieve-html-body-content/
 ---
+
+# HTML 本文コンテンツを取得する
+
 ## 導入
 .NET アプリケーションでのドキュメント編集方法に革命を起こす準備はできていますか? GroupDocs.Editor for .NET にお任せください。この強力なツールを使用すると、さまざまなドキュメント形式をアプリケーション内で直接シームレスに編集できます。Word、PDF、HTML のいずれで作業する場合でも、GroupDocs.Editor を使用すると、外部ツールを必要とせずにドキュメントを簡単に編集および操作できます。
 ## 前提条件

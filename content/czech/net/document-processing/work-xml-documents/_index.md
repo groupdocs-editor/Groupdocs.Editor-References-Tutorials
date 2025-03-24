@@ -6,6 +6,9 @@ description: Naučte se, jak efektivně upravovat dokumenty XML pomocí GroupDoc
 weight: 20
 url: /cs/net/document-processing/work-xml-documents/
 ---
+
+# Práce s dokumenty XML
+
 ## Úvod
 dnešním digitálním světě je efektivní správa a úprava dokumentů XML zásadní pro vývojáře i firmy. GroupDocs.Editor for .NET nabízí výkonné a všestranné řešení pro programovou úpravu souborů XML. Tento tutoriál vás provede procesem práce s dokumenty XML pomocí GroupDocs.Editor pro .NET, přičemž každý krok rozebere, aby byl snadný a srozumitelný.
 ## Předpoklady

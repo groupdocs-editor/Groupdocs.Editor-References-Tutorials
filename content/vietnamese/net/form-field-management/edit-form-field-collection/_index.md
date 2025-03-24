@@ -6,6 +6,9 @@ description: Nâng cao hiệu quả chỉnh sửa tài liệu trong các dự á
 weight: 10
 url: /vi/net/form-field-management/edit-form-field-collection/
 ---
+
+# Chỉnh sửa bộ sưu tập trường biểu mẫu
+
 ## Giới thiệu
 Groupdocs.Editor for .NET cung cấp cho các nhà phát triển một bộ tính năng mạnh mẽ để làm việc với nhiều định dạng tài liệu khác nhau. Một khả năng như vậy là khả năng chỉnh sửa các bộ sưu tập trường biểu mẫu trong tài liệu một cách liền mạch. Cho dù bạn đang cập nhật trường văn bản hay triển khai bảo vệ tài liệu, Groupdocs.Editor sẽ hợp lý hóa quy trình, nâng cao hiệu quả và năng suất.
 ## Điều kiện tiên quyết

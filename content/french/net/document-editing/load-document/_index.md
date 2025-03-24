@@ -6,6 +6,9 @@ description: Découvrez comment modifier des documents par programmation avec Gr
 weight: 13
 url: /fr/net/document-editing/load-document/
 ---
+
+# Charger un document
+
 ## Introduction
 L'édition de documents par programmation peut être une tâche ardue, surtout si vous avez affaire à différents formats de fichiers et structures complexes. Heureusement, GroupDocs.Editor pour .NET facilite cette tâche en fournissant une API robuste et facile à utiliser pour éditer un large éventail de types de documents. Dans ce didacticiel, nous vous expliquerons tout ce dont vous avez besoin pour démarrer avec GroupDocs.Editor pour .NET, y compris les conditions préalables, comment importer des espaces de noms et un guide détaillé, étape par étape, pour charger des documents à l'aide de diverses méthodes.
 ## Conditions préalables

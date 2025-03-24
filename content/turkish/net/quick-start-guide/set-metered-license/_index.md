@@ -6,6 +6,9 @@ description: Kapsamlı kılavuzumuzla GroupDocs.Editor for .NET'i nasıl entegre
 weight: 12
 url: /tr/net/quick-start-guide/set-metered-license/
 ---
+
+# Ölçülü Lisansı Ayarla
+
 ## giriiş
 GroupDocs.Editor for .NET'in kullanımına ilişkin adım adım kılavuzumuza hoş geldiniz! İster deneyimli bir geliştirici olun ister yeni başlıyor olun, bu eğitim bu güçlü kitaplığın tüm potansiyelinden yararlanmanıza yardımcı olacaktır. GroupDocs.Editor for .NET, .NET uygulamalarınızdaki çeşitli formatlardaki belgeleri zahmetsizce düzenlemenize olanak tanır. Şimdi ayrıntılı bir şekilde inceleyelim ve bu güçlü araçla nasıl başlayabileceğinizi keşfedelim.
 ## Önkoşullar

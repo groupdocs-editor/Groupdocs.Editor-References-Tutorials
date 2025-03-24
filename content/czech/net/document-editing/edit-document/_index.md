@@ -6,6 +6,9 @@ description: Naučte se snadno upravovat dokumenty s GroupDocs.Editor pro .NET. 
 weight: 11
 url: /cs/net/document-editing/edit-document/
 ---
+
+# Upravit dokument
+
 ## Úvod
 Zapletli jste se někdy do složitých úprav dokumentů ve vašich aplikacích .NET? Neboj se! S GroupDocs.Editor pro .NET máte mocného spojence, který vám tento úkol zjednoduší. Tento komplexní průvodce vás provede tím, jak využít tento robustní nástroj k snadné úpravě dokumentů. Ať už se zabýváte textovými dokumenty nebo tabulkami, na konci tohoto tutoriálu budete GroupDocs.Editor procházet jako profesionál.
 ## Předpoklady

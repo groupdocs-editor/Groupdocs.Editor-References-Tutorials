@@ -6,6 +6,9 @@ description: Dowiedz się, jak wyodrębnić informacje o dokumencie za pomocą p
 weight: 10
 url: /pl/net/document-processing/extract-document-info/
 ---
+
+# Wyodrębnij informacje o dokumencie
+
 ## Wstęp
 Witamy w tym kompleksowym samouczku dotyczącym wyodrębniania informacji o dokumentach przy użyciu programu GroupDocs.Editor dla platformy .NET. W tym przewodniku przeprowadzimy Cię przez ten proces krok po kroku, upewniając się, że rozumiesz każdą część jasno i zwięźle. Niezależnie od tego, czy jesteś doświadczonym programistą, czy dopiero zaczynasz, ten samouczek pomoże Ci bezproblemowo zintegrować GroupDocs.Editor z projektami .NET, aby efektywnie zarządzać dokumentami i nimi manipulować.
 ## Warunki wstępne

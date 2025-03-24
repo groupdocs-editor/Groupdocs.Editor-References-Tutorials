@@ -6,6 +6,9 @@ description: Aprenda a editar archivos CSV y TSV usando GroupDocs.Editor para .N
 weight: 12
 url: /es/net/document-processing/work-dsv/
 ---
+
+# Trabajar con valores separados delimitados (DSV)
+
 ## Introducción
 Si es un desarrollador que trabaja con valores separados delimitados (DSV), como archivos CSV o TSV, sabe que editar estos archivos mediante programación puede ser una tarea desalentadora. Sin embargo, con GroupDocs.Editor para .NET, esta tarea se vuelve significativamente más sencilla y eficiente. En este tutorial, le explicaremos cómo utilizar GroupDocs.Editor para .NET para leer, editar y guardar archivos DSV. Dividiremos el proceso en pasos fáciles de seguir, para que usted pueda implementarlo en sus proyectos.
 ## Requisitos previos

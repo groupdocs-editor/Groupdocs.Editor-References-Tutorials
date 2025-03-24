@@ -6,6 +6,9 @@ description: Mejore la eficiencia de la edición de documentos en proyectos .NET
 weight: 10
 url: /es/net/form-field-management/edit-form-field-collection/
 ---
+
+# Editar colección de campos de formulario
+
 ## Introducción
 Groupdocs.Editor para .NET proporciona a los desarrolladores un sólido conjunto de funciones para trabajar con varios formatos de documentos. Una de esas capacidades es la posibilidad de editar colecciones de campos de formulario dentro de documentos sin problemas. Ya sea que esté actualizando campos de texto o implementando protecciones de documentos, Groupdocs.Editor agiliza el proceso, mejorando la eficiencia y la productividad.
 ## Requisitos previos

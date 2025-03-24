@@ -6,6 +6,9 @@ description: Pelajari cara mengekstrak sumber daya HTML dari dokumen menggunakan
 weight: 13
 url: /id/net/document-editing/save-html-resources-to-folder/
 ---
+
+# Simpan Sumber Daya HTML ke Folder
+
 ## Perkenalan
 Groupdocs.Editor untuk .NET adalah alat canggih yang memungkinkan pengembang memanipulasi dan mengonversi dokumen dalam aplikasi .NET mereka dengan mulus. Baik Anda perlu mengekstrak sumber daya HTML dari dokumen atau melakukan tugas pengeditan lanjutan, Groupdocs.Editor menyederhanakan proses dengan API intuitif dan dokumentasi ekstensif.
 ## Prasyarat

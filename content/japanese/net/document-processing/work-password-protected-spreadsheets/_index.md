@@ -6,6 +6,9 @@ description: GroupDocs.Editor for .NET を使用して、パスワードで保�
 weight: 18
 url: /ja/net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# パスワードで保護されたスプレッドシートを操作する
+
 ## 導入
 .NET アプリケーションでパスワード保護されたスプレッドシートを管理するのに苦労していませんか? もしそうなら、ここが最適な場所です! この包括的なガイドでは、GroupDocs.Editor for .NET を使用してパスワード保護されたスプレッドシートを効率的に処理するプロセスについて説明します。 このチュートリアルの最後には、暗号化された Excel ファイルを簡単に開き、編集し、保存できるようになります。
 ## 前提条件

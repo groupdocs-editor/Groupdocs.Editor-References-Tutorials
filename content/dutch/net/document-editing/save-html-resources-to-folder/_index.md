@@ -6,6 +6,9 @@ description: Leer hoe u HTML-bronnen uit documenten kunt extraheren met Groupdoc
 weight: 13
 url: /nl/net/document-editing/save-html-resources-to-folder/
 ---
+
+# HTML-bronnen opslaan in map
+
 ## Invoering
 Groupdocs.Editor voor .NET is een krachtige tool waarmee ontwikkelaars documenten binnen hun .NET-applicaties naadloos kunnen manipuleren en converteren. Of u nu HTML-bronnen uit een document moet halen of geavanceerde bewerkingstaken moet uitvoeren, Groupdocs.Editor vereenvoudigt het proces met zijn intuïtieve API en uitgebreide documentatie.
 ## Vereisten

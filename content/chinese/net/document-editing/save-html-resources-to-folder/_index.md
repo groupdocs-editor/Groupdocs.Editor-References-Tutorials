@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Editor for .NET 从文档中提取 HTM
 weight: 13
 url: /zh/net/document-editing/save-html-resources-to-folder/
 ---
+
+# 保存 HTML 资源到文件夹
+
 ## 介绍
 Groupdocs.Editor for .NET 是一款功能强大的工具，可让开发人员无缝地操作和转换 .NET 应用程序中的文档。无论您需要从文档中提取 HTML 资源还是执行高级编辑任务，Groupdocs.Editor 都可以通过其直观的 API 和丰富的文档简化流程。
 ## 先决条件

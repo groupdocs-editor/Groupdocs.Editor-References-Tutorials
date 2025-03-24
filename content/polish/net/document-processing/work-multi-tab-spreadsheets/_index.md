@@ -6,6 +6,9 @@ description: Dowiedz się, jak pracować z arkuszami kalkulacyjnymi z wieloma za
 weight: 17
 url: /pl/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# Pracuj z arkuszami kalkulacyjnymi z wieloma zakładkami
+
 ## Wstęp
 Obsługa arkuszy kalkulacyjnych z wieloma zakładkami może być nie lada zadaniem, zwłaszcza gdy trzeba manipulować danymi lub wyodrębniać je z różnych arkuszy w tym samym dokumencie. Jeśli pracujesz z .NET i szukasz solidnego rozwiązania, GroupDocs.Editor dla .NET będzie doskonałym wyborem. W tym samouczku przeprowadzimy Cię przez proces pracy z arkuszami kalkulacyjnymi z wieloma zakładkami przy użyciu programu GroupDocs.Editor dla platformy .NET. Omówimy wszystko, od skonfigurowania środowiska po zapisanie każdej karty jako osobnego pliku.
 ## Warunki wstępne

@@ -6,6 +6,9 @@ description: Leer hoe u Groupdocs.Editor voor .NET kunt gebruiken om documenten 
 weight: 11
 url: /nl/net/quick-start-guide/set-license-from-stream/
 ---
+
+# Licentie instellen vanuit Stream
+
 ## Invoering
 Bent u op zoek naar een krachtige manier om documenten programmatisch te bewerken in uw .NET-applicaties? Zoek niet verder! Groupdocs.Editor voor .NET is een robuuste oplossing voor documentbewerking waarmee u functies voor documentbewerking naadloos in uw toepassingen kunt integreren. Of u nu met Word-documenten, Excel-spreadsheets of andere formaten werkt, deze handleiding begeleidt u bij alles wat u moet weten om aan de slag te gaan.
 ## Vereisten

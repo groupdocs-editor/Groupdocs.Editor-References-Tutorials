@@ -6,6 +6,9 @@ description: Lär dig hur du hanterar äldre formulärfält med hjälp av GroupD
 weight: 12
 url: /sv/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# Arbeta med Legacy Form Field Collection
+
 ## Introduktion
 Välkommen till den här omfattande guiden om hur man arbetar med äldre formulärfältsamlingar med GroupDocs.Editor för .NET. Oavsett om du har att göra med textfält, kryssrutor, datumfält eller rullgardinsmenyer, kommer den här handledningen att gå igenom varje steg för att hantera dessa fält effektivt. I slutet av den här guiden har du en gedigen förståelse för hur du använder GroupDocs.Editor för att hantera olika formulärfält i dina dokument. Låt oss dyka in!
 ## Förutsättningar

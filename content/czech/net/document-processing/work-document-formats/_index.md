@@ -6,6 +6,9 @@ description: Naučte se používat GroupDocs.Editor pro .NET k programové úpra
 weight: 13
 url: /cs/net/document-processing/work-document-formats/
 ---
+
+# Práce s formáty dokumentů
+
 ## Úvod
 Vítejte v našem podrobném průvodci používáním GroupDocs.Editoru pro .NET! Pokud jste vývojář, který chce vylepšit své aplikace o možnosti úprav dokumentů, jste na správném místě. Tento článek vás provede vším, co potřebujete vědět, od předpokladů až po praktické příklady, abyste mohli používat tuto výkonnou knihovnu.
 ## Předpoklady

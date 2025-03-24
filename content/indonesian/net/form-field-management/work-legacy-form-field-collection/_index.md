@@ -6,6 +6,9 @@ description: Pelajari cara mengelola bidang formulir lama menggunakan GroupDocs.
 weight: 12
 url: /id/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# Bekerja dengan Koleksi Bidang Formulir Warisan
+
 ## Perkenalan
 Selamat datang di panduan komprehensif tentang cara bekerja dengan kumpulan bidang formulir lama menggunakan GroupDocs.Editor untuk .NET. Baik Anda menangani bidang teks, kotak centang, bidang tanggal, atau menu tarik-turun, tutorial ini akan memandu Anda melalui setiap langkah untuk mengelola bidang ini secara efisien. Di akhir panduan ini, Anda akan memiliki pemahaman yang kuat tentang cara memanfaatkan GroupDocs.Editor untuk menangani berbagai bidang formulir di dokumen Anda. Ayo selami!
 ## Prasyarat

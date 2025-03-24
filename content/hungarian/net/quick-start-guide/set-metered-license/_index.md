@@ -6,6 +6,9 @@ description: Átfogó útmutatónkból megtudhatja, hogyan integrálhatja és ha
 weight: 12
 url: /hu/net/quick-start-guide/set-metered-license/
 ---
+
+# Állítsa be a mért licencet
+
 ## Bevezetés
 Üdvözöljük a GroupDocs.Editor for .NET használatáról szóló, lépésenkénti útmutatónkban! Akár tapasztalt fejlesztő vagy, akár csak kezdő, ez az oktatóanyag segít kihasználni a nagy teljesítményű könyvtárban rejlő lehetőségeket. A GroupDocs.Editor for .NET segítségével könnyedén szerkesztheti a különféle formátumú dokumentumokat .NET-alkalmazásaiban. Merüljön el, és fedezze fel, hogyan kezdheti el ezzel a robusztus eszközzel.
 ## Előfeltételek

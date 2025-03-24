@@ -6,6 +6,9 @@ description: Leer hoe u HTML-inhoud uit documenten kunt ophalen met GroupDocs.Ed
 weight: 11
 url: /nl/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# Haal HTML-inhoud met voorvoegsel op
+
 ## Invoering
 Welkom bij onze stapsgewijze zelfstudie over hoe u HTML-inhoud uit een document kunt ophalen met GroupDocs.Editor voor .NET. Of u nu een doorgewinterde ontwikkelaar bent of net begint, deze gids leidt u op een eenvoudig te volgen manier door het proces. We behandelen alles wat u moet weten, van het opzetten van uw omgeving tot het succesvol uitvoeren van de code. Laten we erin duiken!
 ## Vereisten

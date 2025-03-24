@@ -6,6 +6,9 @@ description: Převeďte HTML na upravitelné dokumenty Word pomocí GroupDocs.Ed
 weight: 10
 url: /cs/net/document-editing/create-editable-document-from-html/
 ---
+
+# Vytvořte upravitelný dokument z HTML
+
 ## Úvod
 Chcete transformovat své statické soubory HTML na dynamické, upravitelné dokumenty aplikace Word? S GroupDocs.Editor pro .NET můžete snadno převádět HTML do různých upravitelných formátů. Tento komplexní průvodce vás krok za krokem provede celým procesem a zajistí, že tento úkol zvládnete bez námahy.
 ## Předpoklady

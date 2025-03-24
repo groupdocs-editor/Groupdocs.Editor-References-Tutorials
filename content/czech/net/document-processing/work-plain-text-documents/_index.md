@@ -6,6 +6,9 @@ description: Naučte se upravovat dokumenty ve formátu prostého textu pomocí 
 weight: 15
 url: /cs/net/document-processing/work-plain-text-documents/
 ---
+
+# Práce s dokumenty ve formátu prostého textu
+
 ## Úvod
 Chcete zefektivnit proces úpravy dokumentů v .NET? Nehledejte nic jiného než GroupDocs.Editor pro .NET! Toto výkonné rozhraní API vám umožňuje snadno upravovat širokou škálu formátů dokumentů. V tomto tutoriálu vás provedeme procesem práce s dokumenty ve formátu prostého textu pomocí GroupDocs.Editor pro .NET. Nakonec budete připraveni zvládnout úpravy textových dokumentů jako profesionál. Jste připraveni se ponořit? Začněme!
 ## Předpoklady

@@ -6,6 +6,9 @@ description: Tìm hiểu cách tích hợp và sử dụng GroupDocs.Editor cho 
 weight: 12
 url: /vi/net/quick-start-guide/set-metered-license/
 ---
+
+# Đặt giấy phép đo lường
+
 ## Giới thiệu
 Chào mừng bạn đến với hướng dẫn từng bước của chúng tôi về cách sử dụng GroupDocs.Editor cho .NET! Cho dù bạn là nhà phát triển dày dạn kinh nghiệm hay mới bắt đầu, hướng dẫn này sẽ giúp bạn khai thác toàn bộ tiềm năng của thư viện mạnh mẽ này. GroupDocs.Editor cho .NET cho phép bạn chỉnh sửa tài liệu ở nhiều định dạng khác nhau trong ứng dụng .NET của mình một cách dễ dàng. Hãy cùng tìm hiểu và khám phá cách bạn có thể bắt đầu với công cụ mạnh mẽ này.
 ## Điều kiện tiên quyết

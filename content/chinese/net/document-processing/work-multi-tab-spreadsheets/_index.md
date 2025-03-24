@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Editor 在 .NET 中处理多标签电�
 weight: 17
 url: /zh/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# 使用多标签电子表格
+
 ## 介绍
 处理多标签电子表格可能是一项艰巨的任务，尤其是当您需要操作或提取同一文档中不同工作表中的数据时。如果您正在使用 .NET 并寻找强大的解决方案，GroupDocs.Editor for .NET 是一个绝佳的选择。在本教程中，我们将引导您完成使用 GroupDocs.Editor for .NET 处理多标签电子表格的过程。我们将介绍从设置环境到将每个标签保存为单独文件的所有内容。
 ## 先决条件

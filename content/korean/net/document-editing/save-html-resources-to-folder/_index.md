@@ -6,6 +6,9 @@ description: .NET용 Groupdocs.Editor를 사용하여 문서에서 HTML 리소�
 weight: 13
 url: /ko/net/document-editing/save-html-resources-to-folder/
 ---
+
+# HTML 리소스를 폴더에 저장
+
 ## 소개
 .NET용 Groupdocs.Editor는 개발자가 .NET 응용 프로그램 내에서 문서를 원활하게 조작하고 변환할 수 있게 해주는 강력한 도구입니다. 문서에서 HTML 리소스를 추출해야 하거나 고급 편집 작업을 수행해야 하는 경우 Groupdocs.Editor는 직관적인 API와 광범위한 문서를 통해 프로세스를 단순화합니다.
 ## 전제조건

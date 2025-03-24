@@ -6,6 +6,9 @@ description: Learn advanced usage of GroupDocs.Editor for .NET creating, editing
 weight: 11
 url: /net/document-editing/advanced-usage-of-editable-documents/
 ---
+
+# Advanced Usage of Editable Documents
+
 ## Introduction
 If you're a .NET developer looking to enhance your document editing capabilities, GroupDocs.Editor for .NET offers a powerful suite of tools. This comprehensive guide will walk you through the advanced usage of editable documents using GroupDocs.Editor, breaking down each step in detail to ensure you can harness its full potential.
 ## Prerequisites

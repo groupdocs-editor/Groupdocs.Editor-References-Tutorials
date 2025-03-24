@@ -6,6 +6,9 @@ description: Aprenda a manejar contenido CSS con prefijo usando Groupdocs.Editor
 weight: 11
 url: /es/net/css-handling/handle-css-content-with-prefix/
 ---
+
+# Manejar contenido CSS con prefijo
+
 ## Introducción
 En este tutorial, profundizaremos en cómo manejar contenido CSS con un prefijo usando Groupdocs.Editor para .NET. Esta poderosa herramienta le permite administrar y manipular documentos con facilidad. Ya sea que sea un desarrollador experimentado o recién esté comenzando, esta guía lo guiará a través de cada paso de una manera sencilla y atractiva.
 ## Requisitos previos

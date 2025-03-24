@@ -6,6 +6,9 @@ description: Converti HTML in documenti Word modificabili utilizzando GroupDocs.
 weight: 10
 url: /it/net/document-editing/create-editable-document-from-html/
 ---
+
+# Crea documento modificabile da HTML
+
 ## introduzione
 Stai cercando di trasformare i tuoi file HTML statici in documenti Word dinamici e modificabili? Con GroupDocs.Editor per .NET, puoi convertire facilmente HTML in vari formati modificabili. Questa guida completa ti guiderà attraverso l'intero processo passo dopo passo, assicurandoti di poter svolgere questo compito senza sforzo.
 ## Prerequisiti

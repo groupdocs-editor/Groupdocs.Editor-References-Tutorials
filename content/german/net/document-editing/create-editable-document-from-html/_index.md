@@ -6,6 +6,9 @@ description: Mit dieser Schritt-für-Schritt-Anleitung können Sie HTML mit Grou
 weight: 10
 url: /de/net/document-editing/create-editable-document-from-html/
 ---
+
+# Bearbeitbares Dokument aus HTML erstellen
+
 ## Einführung
 Möchten Sie Ihre statischen HTML-Dateien in dynamische, bearbeitbare Word-Dokumente umwandeln? Mit GroupDocs.Editor für .NET können Sie HTML problemlos in verschiedene bearbeitbare Formate konvertieren. Diese umfassende Anleitung führt Sie Schritt für Schritt durch den gesamten Prozess und stellt sicher, dass Sie diese Aufgabe mühelos erledigen können.
 ## Voraussetzungen

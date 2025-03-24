@@ -6,6 +6,9 @@ description: 透過此逐步指南，使用適用於 .NET 的 GroupDocs.Editor �
 weight: 10
 url: /zh-hant/net/document-editing/create-editable-document-from-html/
 ---
+
+# 從 HTML 建立可編輯文檔
+
 ## 介紹
 您是否希望將靜態 HTML 檔案轉換為動態、可編輯的 Word 文件？透過 GroupDocs.Editor for .NET，您可以輕鬆地將 HTML 無縫轉換為各種可編輯格式。本綜合指南將逐步引導您完成整個過程，確保您可以輕鬆完成此任務。
 ## 先決條件
