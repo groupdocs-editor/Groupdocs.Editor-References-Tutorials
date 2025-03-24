@@ -6,6 +6,9 @@ description: Scopri come utilizzare GroupDocs.Editor for .NET per modificare fac
 weight: 10
 url: /it/net/quick-start-guide/set-license-from-file/
 ---
+
+# Imposta la licenza dal file
+
 ## introduzione
 Sei pronto a trasformare la tua esperienza di modifica dei documenti con le applicazioni .NET? Non cercare oltre GroupDocs.Editor per .NET. Questa potente API ti consente di integrare perfettamente le funzionalità di modifica dei documenti nelle tue applicazioni, rendendo più semplice che mai la manipolazione e la conversione di vari formati di documenti. In questo tutorial ti guideremo attraverso il processo per iniziare con GroupDocs.Editor per .NET, dalla configurazione del tuo ambiente all'esecuzione delle prime attività di modifica dei documenti.
 ## Prerequisiti

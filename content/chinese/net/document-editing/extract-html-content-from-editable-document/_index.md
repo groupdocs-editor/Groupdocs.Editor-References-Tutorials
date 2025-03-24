@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Editor for .NET 轻松从文档中提取 HTML 内�
 weight: 12
 url: /zh/net/document-editing/extract-html-content-from-editable-document/
 ---
+
+# 从可编辑文档中提取 HTML 内容
+
 ## 介绍
 在当今的数字时代，高效地管理和编辑文档对于企业和个人都至关重要。GroupDocs.Editor for .NET 提供了一个强大的解决方案，可以无缝编辑各种文档格式。本指南将引导您完成使用 GroupDocs.Editor for .NET 从可编辑文档中提取 HTML 内容的过程。最后，您将清楚地了解如何在自己的项目中实现此功能。
 ## 先决条件

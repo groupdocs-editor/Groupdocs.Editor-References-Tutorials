@@ -6,6 +6,9 @@ description: Learn how to work with multi-tab spreadsheets in .NET using GroupDo
 weight: 17
 url: /net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# Work with Multi-Tab Spreadsheets
+
 ## Introduction
 Handling multi-tab spreadsheets can be quite a task, especially when you need to manipulate or extract data from different sheets within the same document. If you're working with .NET and looking for a robust solution, GroupDocs.Editor for .NET is an excellent choice. In this tutorial, we will walk you through the process of working with multi-tab spreadsheets using GroupDocs.Editor for .NET. We'll cover everything from setting up your environment to saving each tab as a separate file.
 ## Prerequisites

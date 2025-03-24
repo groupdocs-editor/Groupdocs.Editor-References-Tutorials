@@ -6,6 +6,9 @@ description: 포괄적인 가이드를 통해 .NET용 GroupDocs.Editor를 통합
 weight: 12
 url: /ko/net/quick-start-guide/set-metered-license/
 ---
+
+# 측정 라이센스 설정
+
 ## 소개
 .NET용 GroupDocs.Editor 사용에 대한 단계별 가이드에 오신 것을 환영합니다! 숙련된 개발자이든 이제 막 시작하는 개발자이든 이 튜토리얼은 이 강력한 라이브러리의 잠재력을 최대한 활용하는 데 도움이 될 것입니다. .NET용 GroupDocs.Editor를 사용하면 .NET 응용 프로그램 내에서 다양한 형식의 문서를 쉽게 편집할 수 있습니다. 이 강력한 도구를 시작하는 방법을 자세히 살펴보겠습니다.
 ## 전제조건

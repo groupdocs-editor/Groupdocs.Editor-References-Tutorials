@@ -6,6 +6,9 @@ description: Tìm hiểu cách sử dụng GroupDocs.Editor cho .NET để tríc
 weight: 10
 url: /vi/net/css-handling/get-external-css-content/
 ---
+
+# Nhận nội dung CSS bên ngoài
+
 ## Giới thiệu
 Trong bài viết này, chúng tôi sẽ hướng dẫn bạn mọi thứ bạn cần để bắt đầu với GroupDocs.Editor cho .NET. Từ việc thiết lập môi trường của bạn đến trích xuất nội dung CSS bên ngoài từ tài liệu, chúng tôi sẽ đề cập đến tất cả. Hãy đi sâu vào ngay!
 ## Điều kiện tiên quyết

@@ -6,6 +6,9 @@ description: Découvrez comment utiliser GroupDocs.Editor pour .NET pour modifie
 weight: 13
 url: /fr/net/document-processing/work-document-formats/
 ---
+
+# Travailler avec des formats de documents
+
 ## Introduction
 Bienvenue dans notre guide détaillé sur l'utilisation de GroupDocs.Editor pour .NET ! Si vous êtes un développeur cherchant à améliorer vos applications avec des fonctionnalités d'édition de documents, vous êtes au bon endroit. Cet article vous expliquera tout ce que vous devez savoir, des prérequis aux exemples pratiques, pour vous permettre d'être opérationnel avec cette puissante bibliothèque.
 ## Conditions préalables

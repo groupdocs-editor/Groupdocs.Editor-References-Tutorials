@@ -6,6 +6,9 @@ description: 단계별 가이드를 통해 .NET용 GroupDocs.Editor를 사용하
 weight: 10
 url: /ko/net/html-content-retrieval/retrieve-html-body-content/
 ---
+
+# HTML 본문 콘텐츠 검색
+
 ## 소개
 .NET 애플리케이션에서 문서 편집을 처리하는 방법을 혁신할 준비가 되셨습니까? .NET용 GroupDocs.Editor만 있으면 됩니다! 이 강력한 도구를 사용하면 응용 프로그램 내에서 직접 다양한 문서 형식을 원활하게 편집할 수 있습니다. Word, PDF, HTML 등 어떤 작업을 하든 GroupDocs.Editor를 사용하면 외부 도구 없이도 문서를 쉽게 편집하고 조작할 수 있습니다.
 ## 전제조건

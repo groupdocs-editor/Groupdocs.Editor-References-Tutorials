@@ -6,6 +6,9 @@ description: Discover how to retrieve HTML content using GroupDocs.Editor for .N
 weight: 22
 url: /net/html-content-retrieval/
 ---
+
+# HTML Content Retrieval
+
 Unlock the power of HTML content retrieval in your .NET applications with GroupDocs.Editor for .NET. Our comprehensive tutorials will guide you through the process of extracting HTML body content and using custom prefixes for images and stylesheets. Whether you're looking to enhance document management or streamline resource organization, our step-by-step guides ensure a seamless integration. Dive in and start optimizing your applications today!
 
 ## Retrieve HTML Body Content

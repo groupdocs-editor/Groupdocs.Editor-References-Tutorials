@@ -6,6 +6,9 @@ description: Dowiedz się, jak zarządzać starszymi polami formularzy za pomoc�
 weight: 12
 url: /pl/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# Pracuj ze starszą kolekcją pól formularzy
+
 ## Wstęp
 Witamy w tym obszernym przewodniku na temat pracy ze starszymi zbiorami pól formularzy przy użyciu programu GroupDocs.Editor dla platformy .NET. Niezależnie od tego, czy masz do czynienia z polami tekstowymi, polami wyboru, polami daty czy menu rozwijanymi, ten samouczek przeprowadzi Cię przez każdy krok, aby efektywnie zarządzać tymi polami. Pod koniec tego przewodnika będziesz mieć solidną wiedzę na temat korzystania z GroupDocs.Editor do obsługi różnych pól formularzy w dokumentach. Zanurzmy się!
 ## Warunki wstępne

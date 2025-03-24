@@ -6,6 +6,9 @@ description: Ebből a lépésenkénti útmutatóból megtudhatja, hogyan haszná
 weight: 10
 url: /hu/net/css-handling/get-external-css-content/
 ---
+
+# Szerezzen be külső CSS tartalmat
+
 ## Bevezetés
 Ebben a cikkben mindent végigvezetünk, amire szüksége van a GroupDocs.Editor for .NET használatához. A környezet beállításától a külső CSS-tartalom dokumentumokból való kinyeréséig mindenre kiterjedünk. Egyből merüljünk bele!
 ## Előfeltételek

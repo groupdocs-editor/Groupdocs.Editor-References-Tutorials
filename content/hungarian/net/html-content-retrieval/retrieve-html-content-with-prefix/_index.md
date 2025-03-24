@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan kérhet le HTML-tartalmat a dokumentumokból a 
 weight: 11
 url: /hu/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# HTML-tartalom lekérése előtaggal
+
 ## Bevezetés
 Üdvözöljük lépésenkénti oktatóanyagunkban arról, hogyan lehet HTML-tartalmat lekérni egy dokumentumból a GroupDocs.Editor for .NET segítségével. Akár tapasztalt fejlesztő, akár csak most kezdi, ez az útmutató könnyen követhető módon végigvezeti a folyamaton. Mindent lefedünk, amit tudnia kell, a környezet beállításától a kód sikeres végrehajtásáig. Merüljünk el!
 ## Előfeltételek

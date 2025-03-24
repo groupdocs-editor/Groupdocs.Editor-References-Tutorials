@@ -6,6 +6,9 @@ description: Tìm hiểu cách làm việc với bảng tính nhiều tab trong 
 weight: 17
 url: /vi/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# Làm việc với Bảng tính nhiều tab
+
 ## Giới thiệu
 Xử lý bảng tính nhiều tab có thể là một công việc khá khó khăn, đặc biệt khi bạn cần thao tác hoặc trích xuất dữ liệu từ các trang tính khác nhau trong cùng một tài liệu. Nếu bạn đang làm việc với .NET và đang tìm kiếm một giải pháp mạnh mẽ thì GroupDocs.Editor dành cho .NET là một lựa chọn tuyệt vời. Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình làm việc với bảng tính nhiều tab bằng GroupDocs.Editor cho .NET. Chúng tôi sẽ đề cập đến mọi thứ từ việc thiết lập môi trường của bạn đến lưu từng tab dưới dạng một tệp riêng biệt.
 ## Điều kiện tiên quyết

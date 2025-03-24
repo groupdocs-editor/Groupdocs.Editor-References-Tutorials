@@ -6,6 +6,9 @@ description: Aprenda cómo corregir campos de formulario no válidos en DOCX usa
 weight: 11
 url: /es/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# Reparar la colección de campos de formulario no válidos y guardar
+
 ## Introducción
 ¡Bienvenido! Si trabaja con campos de formulario en documentos y tiene problemas con colecciones de campos de formulario no válidos, está en el lugar correcto. En este tutorial, veremos cómo corregir campos de formulario no válidos y guardar su documento usando Groupdocs.Editor para .NET. Lo guiaremos a través del proceso paso a paso, asegurándonos de que tenga todos los detalles que necesita para que funcione sin problemas. ¡Empecemos!
 ## Requisitos previos

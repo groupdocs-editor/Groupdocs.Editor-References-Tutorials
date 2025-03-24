@@ -6,6 +6,9 @@ description: 응용 프로그램에서 원활한 문서 편집을 위해 .NET용
 weight: 10
 url: /ko/net/quick-start-guide/set-license-from-file/
 ---
+
+# 파일에서 라이센스 설정
+
 ## 소개
 .NET 애플리케이션으로 문서 편집 환경을 변화시킬 준비가 되셨습니까? .NET용 GroupDocs.Editor만 있으면 됩니다. 이 강력한 API를 사용하면 문서 편집 기능을 애플리케이션에 원활하게 통합할 수 있으므로 다양한 문서 형식을 그 어느 때보다 쉽게 조작하고 변환할 수 있습니다. 이 자습서에서는 환경 설정부터 첫 번째 문서 편집 작업 실행까지 .NET용 GroupDocs.Editor를 시작하는 과정을 안내합니다.
 ## 전제조건

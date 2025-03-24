@@ -6,6 +6,9 @@ description: Naučte se používat Groupdocs.Editor pro .NET k programové úpra
 weight: 11
 url: /cs/net/quick-start-guide/set-license-from-stream/
 ---
+
+# Nastavit licenci ze streamu
+
 ## Úvod
 Hledáte výkonný způsob, jak programově upravovat dokumenty ve svých aplikacích .NET? Už nehledejte! Groupdocs.Editor for .NET je robustní řešení pro úpravy dokumentů, které vám umožňuje bezproblémově integrovat funkce pro úpravy dokumentů do vašich aplikací. Ať už pracujete s dokumenty Wordu, excelovými tabulkami nebo jinými formáty, tato příručka vás provede vším, co potřebujete vědět, abyste mohli začít.
 ## Předpoklady

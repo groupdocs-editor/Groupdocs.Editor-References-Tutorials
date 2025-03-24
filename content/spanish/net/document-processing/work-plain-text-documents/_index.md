@@ -6,6 +6,9 @@ description: Aprenda a editar documentos de texto sin formato usando GroupDocs.E
 weight: 15
 url: /es/net/document-processing/work-plain-text-documents/
 ---
+
+# Trabajar con documentos de texto sin formato
+
 ## Introducción
 ¿Está buscando optimizar su proceso de edición de documentos en .NET? ¡No busque más, GroupDocs.Editor para .NET! Esta poderosa API le permite editar una amplia variedad de formatos de documentos con facilidad. En este tutorial, lo guiaremos a través del proceso de trabajar con documentos de texto sin formato usando GroupDocs.Editor para .NET. Al final, estará equipado para manejar la edición de documentos de texto como un profesional. ¿Listo para sumergirte? ¡Empecemos!
 ## Requisitos previos

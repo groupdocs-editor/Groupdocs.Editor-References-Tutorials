@@ -6,6 +6,9 @@ description: 透過我們的綜合指南了解如何整合和使用 GroupDocs.Ed
 weight: 12
 url: /zh-hant/net/quick-start-guide/set-metered-license/
 ---
+
+# 設定計量許可證
+
 ## 介紹
 歡迎使用我們關於使用 GroupDocs.Editor for .NET 的逐步指南！無論您是經驗豐富的開發人員還是新手，本教學都將幫助您充分利用這個強大庫的潛力。 GroupDocs.Editor for .NET 讓您可以輕鬆地在 .NET 應用程式中編輯各種格式的文件。讓我們深入探討如何開始使用這個強大的工具。
 ## 先決條件

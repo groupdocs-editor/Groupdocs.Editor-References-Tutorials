@@ -6,6 +6,9 @@ description: Könnyedén kivonhatja a HTML tartalmat a dokumentumokból a GroupD
 weight: 12
 url: /hu/net/document-editing/extract-html-content-from-editable-document/
 ---
+
+# Kivonja a HTML tartalmat a szerkeszthető dokumentumból
+
 ## Bevezetés
 Napjaink digitális korában a dokumentumok hatékony kezelése és szerkesztése kulcsfontosságú a vállalkozások és a magánszemélyek számára egyaránt. A GroupDocs.Editor for .NET hatékony megoldást kínál különféle dokumentumformátumok zökkenőmentes szerkesztésére. Ez az útmutató végigvezeti a HTML-tartalom szerkeszthető dokumentumból történő kinyerésének folyamatán a GroupDocs.Editor for .NET segítségével. A végére világosan megérti, hogyan alkalmazza ezt a funkciót saját projektjeiben.
 ## Előfeltételek

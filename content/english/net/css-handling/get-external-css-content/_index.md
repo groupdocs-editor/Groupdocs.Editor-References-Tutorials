@@ -6,6 +6,9 @@ description: Learn how to use GroupDocs.Editor for .NET to extract external CSS 
 weight: 10
 url: /net/css-handling/get-external-css-content/
 ---
+
+# Get External CSS Content
+
 ## Introduction
 In this article, we'll walk you through everything you need to get started with GroupDocs.Editor for .NET. From setting up your environment to extracting external CSS content from documents, we’ll cover it all. Let's dive right in!
 ## Prerequisites

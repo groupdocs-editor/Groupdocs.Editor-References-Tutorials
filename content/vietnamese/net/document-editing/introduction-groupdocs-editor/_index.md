@@ -6,6 +6,9 @@ description: Tìm hiểu cách sử dụng GroupDocs.Editor dành cho .NET để
 weight: 12
 url: /vi/net/document-editing/introduction-groupdocs-editor/
 ---
+
+# Giới thiệu về GroupDocs.Editor cho .NET
+
 ## Giới thiệu 
 Nếu bạn là nhà phát triển đang tìm cách tích hợp liền mạch các khả năng chỉnh sửa tài liệu vào các ứng dụng .NET của mình thì GroupDocs.Editor dành cho .NET là một công cụ mạnh mẽ nên cân nhắc. Thư viện đa năng này cho phép bạn tải, chỉnh sửa và lưu các định dạng tài liệu khác nhau theo chương trình. Cho dù bạn cần xử lý tài liệu Word, PDF hay tệp HTML, GroupDocs.Editor đều đơn giản hóa quy trình, giúp quy trình trở nên hiệu quả và đơn giản. Trong hướng dẫn này, chúng ta sẽ khám phá những kiến thức cơ bản về cách sử dụng GroupDocs.Editor cho .NET, hướng dẫn bạn từng bước một ví dụ thực tế.
 ## Điều kiện tiên quyết

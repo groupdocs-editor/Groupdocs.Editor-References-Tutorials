@@ -6,6 +6,9 @@ description: Trích xuất nội dung HTML từ tài liệu một cách dễ dà
 weight: 12
 url: /vi/net/document-editing/extract-html-content-from-editable-document/
 ---
+
+# Trích xuất nội dung HTML từ tài liệu có thể chỉnh sửa
+
 ## Giới thiệu
 Trong thời đại kỹ thuật số ngày nay, việc quản lý và chỉnh sửa tài liệu một cách hiệu quả là rất quan trọng đối với các doanh nghiệp cũng như cá nhân. GroupDocs.Editor cho .NET cung cấp một giải pháp mạnh mẽ để chỉnh sửa liền mạch nhiều định dạng tài liệu. Hướng dẫn này sẽ hướng dẫn bạn quy trình trích xuất nội dung HTML từ tài liệu có thể chỉnh sửa bằng GroupDocs.Editor cho .NET. Cuối cùng, bạn sẽ hiểu rõ cách triển khai tính năng này trong các dự án của riêng mình.
 ## Điều kiện tiên quyết

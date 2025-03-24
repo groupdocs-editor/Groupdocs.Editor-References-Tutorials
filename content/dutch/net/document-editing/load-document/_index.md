@@ -6,6 +6,9 @@ description: Leer hoe u documenten programmatisch kunt bewerken met GroupDocs.Ed
 weight: 13
 url: /nl/net/document-editing/load-document/
 ---
+
+# Document laden
+
 ## Invoering
 Het programmatisch bewerken van documenten kan een hele klus zijn, vooral als u te maken heeft met verschillende bestandsformaten en complexe structuren. Gelukkig maakt GroupDocs.Editor voor .NET deze taak een fluitje van een cent, omdat het een robuuste en gebruiksvriendelijke API biedt voor het bewerken van een breed scala aan documenttypen. In deze zelfstudie laten we u alles zien wat u nodig heeft om aan de slag te gaan met GroupDocs.Editor voor .NET, inclusief de vereisten, hoe u naamruimten importeert en een gedetailleerde, stapsgewijze handleiding voor het laden van documenten met behulp van verschillende methoden.
 ## Vereisten

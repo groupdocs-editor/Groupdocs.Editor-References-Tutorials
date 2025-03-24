@@ -6,6 +6,9 @@ description: Groupdocs.Editor for .NET'i kullanarak DOCX'teki geçersiz form ala
 weight: 11
 url: /tr/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# Geçersiz Form Alanı Koleksiyonunu Düzelt ve Kaydet
+
 ## giriiş
 Hoş geldin! Belgelerdeki form alanlarıyla çalışıyorsanız ve geçersiz form alanı koleksiyonlarıyla ilgili sorunlarla karşılaşıyorsanız doğru yerdesiniz. Bu öğreticide geçersiz form alanlarını nasıl düzelteceğinizi ve Groupdocs.Editor for .NET'i kullanarak belgenizi nasıl kaydedeceğinizi anlatacağız. Süreç boyunca size adım adım rehberlik edeceğiz ve sürecin sorunsuz çalışması için ihtiyacınız olan tüm ayrıntılara sahip olmanızı sağlayacağız. Başlayalım!
 ## Önkoşullar

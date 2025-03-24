@@ -6,6 +6,9 @@ description: Découvrez comment récupérer du contenu HTML à partir de documen
 weight: 11
 url: /fr/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# Récupérer du contenu HTML avec préfixe
+
 ## Introduction
 Bienvenue dans notre didacticiel étape par étape sur la façon de récupérer le contenu HTML d'un document à l'aide de GroupDocs.Editor pour .NET. Que vous soyez un développeur chevronné ou que vous débutiez tout juste, ce guide vous guidera tout au long du processus de manière facile à suivre. Nous couvrirons tout ce que vous devez savoir, de la configuration de votre environnement à l'exécution réussie du code. Allons-y !
 ## Conditions préalables

@@ -6,6 +6,9 @@ description: Erfahren Sie in unserem ausführlichen Handbuch, wie Sie mit GroupD
 weight: 12
 url: /de/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# Arbeiten mit der Legacy-Formularfeldsammlung
+
 ## Einführung
 Willkommen zu dieser umfassenden Anleitung zum Arbeiten mit älteren Formularfeldsammlungen mithilfe von GroupDocs.Editor für .NET. Egal, ob Sie mit Textfeldern, Kontrollkästchen, Datumsfeldern oder Dropdown-Menüs arbeiten, dieses Tutorial führt Sie Schritt für Schritt durch die effiziente Verwaltung dieser Felder. Am Ende dieser Anleitung verfügen Sie über ein solides Verständnis für die Verwendung von GroupDocs.Editor zur Handhabung verschiedener Formularfelder in Ihren Dokumenten. Lassen Sie uns loslegen!
 ## Voraussetzungen

@@ -6,6 +6,9 @@ description: Tìm hiểu cách xử lý bảng tính được bảo vệ bằng 
 weight: 18
 url: /vi/net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# Làm việc với Bảng tính được bảo vệ bằng mật khẩu
+
 ## Giới thiệu
 Bạn đang gặp khó khăn trong việc quản lý các bảng tính được bảo vệ bằng mật khẩu trong các ứng dụng .NET của mình? Nếu vậy, bạn đang ở đúng nơi! Trong hướng dẫn toàn diện này, chúng tôi sẽ hướng dẫn bạn quy trình sử dụng GroupDocs.Editor cho .NET để xử lý các bảng tính được bảo vệ bằng mật khẩu một cách hiệu quả. Đến cuối hướng dẫn này, bạn sẽ được trang bị đầy đủ để mở, chỉnh sửa và lưu các tệp Excel được mã hóa một cách dễ dàng.
 ## Điều kiện tiên quyết

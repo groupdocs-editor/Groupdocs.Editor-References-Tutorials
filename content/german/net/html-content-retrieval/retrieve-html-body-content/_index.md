@@ -6,6 +6,9 @@ description: Rufen Sie HTML-Textinhalte mit GroupDocs.Editor für .NET mit unser
 weight: 10
 url: /de/net/html-content-retrieval/retrieve-html-body-content/
 ---
+
+# HTML-Textinhalt abrufen
+
 ## Einführung
 Sind Sie bereit, die Dokumentbearbeitung in Ihren .NET-Anwendungen zu revolutionieren? Dann sind Sie mit GroupDocs.Editor für .NET genau richtig! Dieses leistungsstarke Tool ermöglicht die nahtlose Bearbeitung einer Vielzahl von Dokumentformaten direkt in Ihrer Anwendung. Egal, ob Sie mit Word, PDF oder HTML arbeiten, mit GroupDocs.Editor können Sie Dokumente ganz einfach bearbeiten und manipulieren, ohne externe Tools zu benötigen.
 ## Voraussetzungen

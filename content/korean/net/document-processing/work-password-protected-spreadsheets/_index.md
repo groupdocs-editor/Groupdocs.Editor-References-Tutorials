@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Editor를 사용하여 암호로 보호된 스프
 weight: 18
 url: /ko/net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# 비밀번호로 보호된 스프레드시트 작업
+
 ## 소개
 .NET 애플리케이션에서 비밀번호로 보호된 스프레드시트를 관리하는 데 어려움을 겪고 계십니까? 그렇다면, 당신은 바로 이곳에 있습니다! 이 종합 가이드에서는 .NET용 GroupDocs.Editor를 사용하여 암호로 보호된 스프레드시트를 효율적으로 처리하는 과정을 안내합니다. 이 튜토리얼을 마치면 암호화된 Excel 파일을 쉽게 열고, 편집하고, 저장할 수 있게 됩니다.
 ## 전제조건

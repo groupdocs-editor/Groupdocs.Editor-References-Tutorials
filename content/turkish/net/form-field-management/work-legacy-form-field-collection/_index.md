@@ -6,6 +6,9 @@ description: Ayrıntılı kılavuzumuzla GroupDocs.Editor for .NET'i kullanarak 
 weight: 12
 url: /tr/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# Eski Form Alanı Koleksiyonuyla Çalışma
+
 ## giriiş
 GroupDocs.Editor for .NET kullanılarak eski form alanı koleksiyonlarıyla nasıl çalışılacağına ilişkin bu kapsamlı kılavuza hoş geldiniz. İster metin alanları, onay kutuları, tarih alanları veya açılır menülerle ilgileniyor olun, bu eğitim, bu alanları verimli bir şekilde yönetmek için her adımda size yol gösterecektir. Bu kılavuzun sonunda, belgelerinizdeki çeşitli form alanlarını yönetmek için GroupDocs.Editor'ı nasıl kullanacağınıza dair sağlam bir anlayışa sahip olacaksınız. Hadi dalalım!
 ## Önkoşullar

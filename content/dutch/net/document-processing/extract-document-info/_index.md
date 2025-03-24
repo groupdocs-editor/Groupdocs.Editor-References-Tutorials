@@ -6,6 +6,9 @@ description: Leer hoe u documentinformatie kunt extraheren met GroupDocs.Editor 
 weight: 10
 url: /nl/net/document-processing/extract-document-info/
 ---
+
+# Documentinformatie extraheren
+
 ## Invoering
 Welkom bij deze uitgebreide tutorial over het extraheren van documentinformatie met GroupDocs.Editor voor .NET. In deze handleiding leiden we u stap voor stap door het proces, zodat u elk onderdeel duidelijk en beknopt begrijpt. Of u nu een doorgewinterde ontwikkelaar bent of net begint, deze tutorial helpt u GroupDocs.Editor naadloos te integreren in uw .NET-projecten om documenten efficiënt te beheren en te manipuleren.
 ## Vereisten

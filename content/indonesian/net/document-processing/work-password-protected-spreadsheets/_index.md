@@ -6,6 +6,9 @@ description: Pelajari cara menangani spreadsheet yang dilindungi kata sandi meng
 weight: 18
 url: /id/net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# Bekerja dengan Spreadsheet yang Dilindungi Kata Sandi
+
 ## Perkenalan
 Apakah Anda kesulitan mengelola spreadsheet yang dilindungi kata sandi di aplikasi .NET Anda? Jika demikian, Anda berada di tempat yang tepat! Dalam panduan komprehensif ini, kami akan memandu Anda melalui proses penggunaan GroupDocs.Editor untuk .NET guna menangani spreadsheet yang dilindungi kata sandi secara efisien. Di akhir tutorial ini, Anda akan diperlengkapi dengan baik untuk membuka, mengedit, dan menyimpan file Excel terenkripsi dengan mudah.
 ## Prasyarat

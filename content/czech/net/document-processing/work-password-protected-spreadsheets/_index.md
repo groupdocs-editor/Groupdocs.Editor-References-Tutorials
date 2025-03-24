@@ -6,6 +6,9 @@ description: Naučte se pracovat s tabulkami chráněnými heslem pomocí GroupD
 weight: 18
 url: /cs/net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# Práce s tabulkami chráněnými heslem
+
 ## Úvod
 Máte potíže se správou tabulek chráněných heslem ve svých aplikacích .NET? Pokud ano, jste na správném místě! V tomto komplexním průvodci vás provedeme procesem používání GroupDocs.Editoru pro .NET k efektivnímu zpracování tabulek chráněných heslem. Na konci tohoto tutoriálu budete dobře vybaveni k snadnému otevírání, úpravám a ukládání šifrovaných souborů aplikace Excel.
 ## Předpoklady

@@ -6,6 +6,9 @@ description: Leer hoe u ongeldige formuliervelden in DOCX kunt corrigeren met Gr
 weight: 11
 url: /nl/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# Herstel ongeldige formulierveldverzameling en sla op
+
 ## Invoering
 Welkom! Als u met formuliervelden in documenten werkt en problemen ondervindt met ongeldige formulierveldverzamelingen, bent u hier aan het juiste adres. In deze zelfstudie gaan we dieper in op het corrigeren van ongeldige formuliervelden en het opslaan van uw document met Groupdocs.Editor voor .NET. We begeleiden u stap voor stap door het proces, zodat u over alle details beschikt die u nodig heeft om het naadloos te laten werken. Laten we beginnen!
 ## Vereisten

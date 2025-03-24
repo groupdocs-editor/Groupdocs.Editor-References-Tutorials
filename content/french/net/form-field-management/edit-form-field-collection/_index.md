@@ -6,6 +6,9 @@ description: Améliorez l'efficacité de l'édition de documents dans les projet
 weight: 10
 url: /fr/net/form-field-management/edit-form-field-collection/
 ---
+
+# Modifier la collection de champs de formulaire
+
 ## Introduction
 Groupdocs.Editor pour .NET offre aux développeurs un ensemble robuste de fonctionnalités pour travailler avec différents formats de documents. L’une de ces fonctionnalités est la possibilité de modifier de manière transparente des collections de champs de formulaire dans des documents. Que vous mettiez à jour des champs de texte ou mettiez en œuvre des protections de documents, Groupdocs.Editor rationalise le processus, améliorant ainsi l'efficacité et la productivité.
 ## Conditions préalables

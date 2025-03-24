@@ -6,6 +6,9 @@ description: Naučte se, jak extrahovat zdroje HTML z dokumentů pomocí Groupdo
 weight: 13
 url: /cs/net/document-editing/save-html-resources-to-folder/
 ---
+
+# Uložte zdroje HTML do složky
+
 ## Úvod
 Groupdocs.Editor for .NET je výkonný nástroj, který umožňuje vývojářům bezproblémově manipulovat a převádět dokumenty v rámci jejich aplikací .NET. Ať už potřebujete extrahovat HTML zdroje z dokumentu nebo provádět pokročilé editační úlohy, Groupdocs.Editor zjednodušuje proces pomocí intuitivního API a rozsáhlé dokumentace.
 ## Předpoklady

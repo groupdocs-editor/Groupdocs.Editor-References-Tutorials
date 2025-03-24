@@ -6,6 +6,9 @@ description: Apprenez à modifier des présentations PowerPoint à l'aide de Gro
 weight: 16
 url: /fr/net/document-processing/work-presentations/
 ---
+
+# Travailler avec des présentations
+
 ## Introduction
 À l’ère numérique d’aujourd’hui, une gestion et une édition efficaces des documents sont cruciales. Que vous soyez un développeur ou quelqu'un qui traite fréquemment des présentations, savoir comment travailler avec des outils qui rationalisent ces processus peut vous faire gagner du temps et des efforts. L'un de ces outils est GroupDocs.Editor pour .NET, une API puissante qui vous permet de modifier des documents, y compris des présentations, par programmation. Ce didacticiel vous guidera à travers les étapes de travail avec des présentations à l'aide de GroupDocs.Editor pour .NET, de la configuration de votre environnement à la modification et à l'enregistrement de vos fichiers de présentation.
 ## Conditions préalables

@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Editor를 사용하여 프로그래밍 방식으�
 weight: 13
 url: /ko/net/document-editing/load-document/
 ---
+
+# 문서 로드
+
 ## 소개
 프로그래밍 방식으로 문서를 편집하는 것은 어려운 작업이 될 수 있습니다. 특히 다양한 파일 형식과 복잡한 구조를 다루는 경우 더욱 그렇습니다. 다행스럽게도 .NET용 GroupDocs.Editor는 다양한 문서 유형을 편집할 수 있는 강력하고 사용하기 쉬운 API를 제공하여 이 작업을 쉽게 수행합니다. 이 튜토리얼에서는 전제 조건, 네임스페이스를 가져오는 방법, 다양한 방법을 사용하여 문서를 로드하는 자세한 단계별 가이드를 포함하여 .NET용 GroupDocs.Editor를 시작하는 데 필요한 모든 것을 안내합니다.
 ## 전제조건

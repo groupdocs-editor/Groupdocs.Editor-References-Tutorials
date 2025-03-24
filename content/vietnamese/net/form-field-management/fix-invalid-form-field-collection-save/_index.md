@@ -6,6 +6,9 @@ description: Tìm hiểu cách sửa các trường biểu mẫu không hợp l�
 weight: 11
 url: /vi/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# Sửa lỗi Thu thập và lưu trường biểu mẫu không hợp lệ
+
 ## Giới thiệu
 Chào mừng! Nếu bạn đang làm việc với các trường biểu mẫu trong tài liệu và gặp phải vấn đề với bộ sưu tập trường biểu mẫu không hợp lệ thì bạn đã đến đúng nơi. Trong hướng dẫn này, chúng ta sẽ đi sâu vào cách sửa các trường biểu mẫu không hợp lệ và lưu tài liệu của bạn bằng Groupdocs.Editor cho .NET. Chúng tôi sẽ hướng dẫn bạn thực hiện quy trình này theo từng bước, đảm bảo bạn có tất cả thông tin chi tiết cần thiết để quy trình này hoạt động trơn tru. Bắt đầu nào!
 ## Điều kiện tiên quyết

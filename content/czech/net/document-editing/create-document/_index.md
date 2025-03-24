@@ -6,6 +6,9 @@ description: Naučte se upravovat dokumenty Word, Excel, PowerPoint, e-knihy a e
 weight: 10
 url: /cs/net/document-editing/create-document/
 ---
+
+# Vytvořit dokument
+
 ## Úvod
 Už vás nebaví problémy, které přináší programová úprava různých typů dokumentů? GroupDocs.Editor pro .NET je zde pro zjednodušení procesu. Tento výkonný nástroj umožňuje vývojářům snadno upravovat různé formáty dokumentů, jako je Word, Excel, PowerPoint, e-knihy a e-maily. V tomto tutoriálu se ponoříme hluboko do toho, jak používat GroupDocs.Editor pro .NET k vytváření a úpravám dokumentů. Tento proces rozdělíme do snadno pochopitelných kroků, díky kterým bude přístupný, i když jste v tom nováčkem.
 ## Předpoklady

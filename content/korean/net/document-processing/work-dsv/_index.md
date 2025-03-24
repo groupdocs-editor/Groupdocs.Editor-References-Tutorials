@@ -6,6 +6,9 @@ description: 이 단계별 가이드를 통해 .NET용 GroupDocs.Editor를 사�
 weight: 12
 url: /ko/net/document-processing/work-dsv/
 ---
+
+# DSV(구분된 구분 값) 작업
+
 ## 소개
 CSV 또는 TSV 파일과 같은 DSV(구분된 구분 값)를 사용하여 작업하는 개발자라면 이러한 파일을 프로그래밍 방식으로 편집하는 것이 어려운 작업이 될 수 있다는 것을 알고 있습니다. 그러나 .NET용 GroupDocs.Editor를 사용하면 이 작업이 훨씬 더 간단하고 효율적이 됩니다. 이 자습서에서는 .NET용 GroupDocs.Editor를 사용하여 DSV 파일을 읽고 편집하고 저장하는 방법을 안내합니다. 프로세스를 따라하기 쉬운 단계로 나누어 프로젝트에서 쉽게 구현할 수 있도록 하겠습니다.
 ## 전제조건

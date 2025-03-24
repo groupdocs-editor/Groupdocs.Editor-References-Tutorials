@@ -6,6 +6,9 @@ description: Learn how to retrieve HTML content from documents using GroupDocs.E
 weight: 11
 url: /net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# Retrieve HTML Content with Prefix
+
 ## Introduction
 Welcome to our step-by-step tutorial on how to retrieve HTML content from a document using GroupDocs.Editor for .NET. Whether you’re a seasoned developer or just getting started, this guide will walk you through the process in an easy-to-follow manner. We'll cover everything you need to know, from setting up your environment to executing the code successfully. Let's dive in!
 ## Prerequisites

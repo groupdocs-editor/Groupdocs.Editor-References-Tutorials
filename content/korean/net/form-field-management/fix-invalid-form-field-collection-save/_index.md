@@ -6,6 +6,9 @@ description: .NET용 Groupdocs.Editor를 사용하여 DOCX의 잘못된 양식 �
 weight: 11
 url: /ko/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# 잘못된 양식 필드 수집 수정 및 저장
+
 ## 소개
 환영! 문서의 양식 필드로 작업 중이고 잘못된 양식 필드 컬렉션 문제에 직면한 경우 올바른 위치에 오셨습니다. 이 튜토리얼에서는 잘못된 양식 필드를 수정하고 .NET용 Groupdocs.Editor를 사용하여 문서를 저장하는 방법을 자세히 살펴보겠습니다. 프로세스를 단계별로 안내하여 원활하게 작동하는 데 필요한 모든 세부 정보를 제공합니다. 시작하자!
 ## 전제조건

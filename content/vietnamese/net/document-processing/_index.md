@@ -7,6 +7,9 @@ weight: 24
 url: /vi/net/document-processing/
 ---
 
+# Xử lý văn bản
+
+
 Xử lý tài liệu là một khía cạnh quan trọng của nhiều dự án .NET và với GroupDocs.Editor dành cho .NET, việc làm chủ nó trở nên dễ dàng. Cho dù bạn đang xử lý việc trích xuất thông tin tài liệu, lưu tài liệu đã chỉnh sửa hay làm việc với nhiều định dạng tài liệu khác nhau, hướng dẫn của chúng tôi đều cung cấp hướng dẫn từng bước để hợp lý hóa quy trình làm việc của bạn.
 
 ## Trích xuất thông tin tài liệu

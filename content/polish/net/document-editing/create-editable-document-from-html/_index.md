@@ -6,6 +6,9 @@ description: Konwertuj HTML na edytowalne dokumenty Word za pomocą GroupDocs.Ed
 weight: 10
 url: /pl/net/document-editing/create-editable-document-from-html/
 ---
+
+# Utwórz edytowalny dokument z HTML
+
 ## Wstęp
 Czy chcesz przekształcić swoje statyczne pliki HTML w dynamiczne, edytowalne dokumenty programu Word? Dzięki GroupDocs.Editor dla .NET możesz z łatwością konwertować HTML na różne edytowalne formaty. Ten obszerny przewodnik przeprowadzi Cię krok po kroku przez cały proces, zapewniając, że wykonasz to zadanie bez wysiłku.
 ## Warunki wstępne

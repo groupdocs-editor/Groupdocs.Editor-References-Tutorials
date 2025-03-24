@@ -6,6 +6,9 @@ description: Részletes útmutatónkból megtudhatja, hogyan kezelheti a régi �
 weight: 12
 url: /hu/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# Dolgozzon a Legacy Form Field Collection segítségével
+
 ## Bevezetés
 Üdvözöljük ebben az átfogó útmutatóban, amely arról szól, hogyan dolgozhat a régi űrlapmező-gyűjteményekkel a GroupDocs.Editor for .NET használatával. Legyen szó szövegmezőről, jelölőnégyzetről, dátummezőről vagy legördülő menüről, ez az oktatóanyag végigvezeti Önt a mezők hatékony kezelésének lépésein. Az útmutató végére alapos ismerete lesz arról, hogyan használhatja a GroupDocs.Editort a dokumentumok különböző űrlapmezőinek kezelésére. Merüljünk el!
 ## Előfeltételek

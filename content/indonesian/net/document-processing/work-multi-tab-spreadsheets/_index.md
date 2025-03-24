@@ -6,6 +6,9 @@ description: Pelajari cara bekerja dengan spreadsheet multi-tab di .NET mengguna
 weight: 17
 url: /id/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# Bekerja dengan Spreadsheet Multi-Tab
+
 ## Perkenalan
 Menangani spreadsheet multi-tab bisa menjadi tugas yang cukup sulit, terutama ketika Anda perlu memanipulasi atau mengekstrak data dari lembar berbeda dalam dokumen yang sama. Jika Anda bekerja dengan .NET dan mencari solusi yang kuat, GroupDocs.Editor untuk .NET adalah pilihan yang sangat baik. Dalam tutorial ini, kami akan memandu Anda melalui proses bekerja dengan spreadsheet multi-tab menggunakan GroupDocs.Editor untuk .NET. Kami akan membahas semuanya mulai dari menyiapkan lingkungan Anda hingga menyimpan setiap tab sebagai file terpisah.
 ## Prasyarat

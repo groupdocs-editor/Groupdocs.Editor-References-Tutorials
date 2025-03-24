@@ -6,6 +6,9 @@ description: Pelajari cara mengambil konten HTML dari dokumen menggunakan GroupD
 weight: 11
 url: /id/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# Ambil Konten HTML dengan Awalan
+
 ## Perkenalan
 Selamat datang di tutorial langkah demi langkah kami tentang cara mengambil konten HTML dari dokumen menggunakan GroupDocs.Editor untuk .NET. Baik Anda seorang pengembang berpengalaman atau baru memulai, panduan ini akan memandu Anda melalui proses dengan cara yang mudah diikuti. Kami akan membahas semua yang perlu Anda ketahui, mulai dari menyiapkan lingkungan hingga mengeksekusi kode dengan sukses. Ayo selami!
 ## Prasyarat

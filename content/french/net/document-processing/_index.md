@@ -7,6 +7,9 @@ weight: 24
 url: /fr/net/document-processing/
 ---
 
+# Traitement des documents
+
+
 Le traitement des documents est un aspect essentiel de nombreux projets .NET, et avec GroupDocs.Editor for .NET, le maîtriser devient un jeu d'enfant. Qu'il s'agisse d'extraire des informations sur un document, d'enregistrer des documents modifiés ou de travailler avec différents formats de documents, nos didacticiels fournissent des conseils étape par étape pour rationaliser votre flux de travail.
 
 ## Extraire les informations du document

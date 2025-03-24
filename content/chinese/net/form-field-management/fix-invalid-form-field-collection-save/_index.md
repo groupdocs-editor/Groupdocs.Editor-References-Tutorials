@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Editor for .NET 修复 DOCX 中的无�
 weight: 11
 url: /zh/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# 修复无效的表单字段收集并保存
+
 ## 介绍
 欢迎！如果您正在处理文档中的表单字段，并且遇到无效表单字段集合的问题，那么您来对地方了。在本教程中，我们将深入介绍如何修复无效表单字段并使用 Groupdocs.Editor for .NET 保存文档。我们将逐步指导您完成该过程，确保您拥有使其无缝运行所需的所有详细信息。让我们开始吧！
 ## 先决条件

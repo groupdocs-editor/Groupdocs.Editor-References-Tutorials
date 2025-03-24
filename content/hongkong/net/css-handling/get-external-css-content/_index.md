@@ -6,6 +6,9 @@ description: 透過此逐步指南，了解如何使用 GroupDocs.Editor for .NE
 weight: 10
 url: /zh-hant/net/css-handling/get-external-css-content/
 ---
+
+# 取得外部 CSS 內容
+
 ## 介紹
 在本文中，我們將引導您完成開始使用 GroupDocs.Editor for .NET 所需的一切。從設定環境到從文件中提取外部 CSS 內容，我們將涵蓋這一切。讓我們開始吧！
 ## 先決條件

@@ -6,6 +6,9 @@ description: Scopri come lavorare con fogli di calcolo a più schede in .NET uti
 weight: 17
 url: /it/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# Lavora con fogli di calcolo multischeda
+
 ## introduzione
 Gestire fogli di calcolo con più schede può essere un compito piuttosto impegnativo, soprattutto quando è necessario manipolare o estrarre dati da fogli diversi all'interno dello stesso documento. Se lavori con .NET e cerchi una soluzione solida, GroupDocs.Editor per .NET è una scelta eccellente. In questo tutorial ti guideremo attraverso il processo di lavoro con fogli di calcolo multischeda utilizzando GroupDocs.Editor per .NET. Tratteremo tutto, dalla configurazione del tuo ambiente al salvataggio di ciascuna scheda come file separato.
 ## Prerequisiti

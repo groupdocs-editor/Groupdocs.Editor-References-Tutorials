@@ -6,6 +6,9 @@ description: Pelajari cara memperbaiki kolom formulir yang tidak valid di DOCX m
 weight: 11
 url: /id/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# Perbaiki Pengumpulan Bidang Formulir yang Tidak Valid dan Simpan
+
 ## Perkenalan
 Selamat datang! Jika Anda bekerja dengan bidang formulir di dokumen dan menghadapi masalah dengan kumpulan bidang formulir yang tidak valid, Anda berada di tempat yang tepat. Dalam tutorial ini, kita akan mendalami cara memperbaiki kolom formulir yang tidak valid dan menyimpan dokumen Anda menggunakan Groupdocs.Editor untuk .NET. Kami akan memandu Anda melalui proses langkah demi langkah, memastikan Anda memiliki semua detail yang diperlukan agar prosesnya berjalan lancar. Mari kita mulai!
 ## Prasyarat

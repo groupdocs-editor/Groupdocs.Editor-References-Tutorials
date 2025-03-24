@@ -6,6 +6,9 @@ description: Ezzel a lépésenkénti útmutatóval konvertálhat HTML-t szerkesz
 weight: 10
 url: /hu/net/document-editing/create-editable-document-from-html/
 ---
+
+# Szerkeszthető dokumentum létrehozása HTML-ből
+
 ## Bevezetés
 Statikus HTML-fájljait dinamikus, szerkeszthető Word-dokumentummá szeretné alakítani? A GroupDocs.Editor for .NET segítségével zökkenőmentesen, könnyedén konvertálhatja a HTML-t különféle szerkeszthető formátumokba. Ez az átfogó útmutató lépésről lépésre végigvezeti Önt a teljes folyamaton, biztosítva, hogy ezt a feladatot könnyedén elvégezhesse.
 ## Előfeltételek

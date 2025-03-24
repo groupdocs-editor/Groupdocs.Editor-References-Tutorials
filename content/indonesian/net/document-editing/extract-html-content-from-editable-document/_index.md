@@ -6,6 +6,9 @@ description: Ekstrak konten HTML dari dokumen dengan mudah menggunakan GroupDocs
 weight: 12
 url: /id/net/document-editing/extract-html-content-from-editable-document/
 ---
+
+# Ekstrak Konten HTML dari Dokumen yang Dapat Diedit
+
 ## Perkenalan
 Di era digital saat ini, mengelola dan mengedit dokumen secara efisien sangat penting bagi bisnis dan individu. GroupDocs.Editor untuk .NET menawarkan solusi canggih untuk mengedit berbagai format dokumen dengan lancar. Panduan ini akan memandu Anda melalui proses mengekstraksi konten HTML dari dokumen yang dapat diedit menggunakan GroupDocs.Editor untuk .NET. Pada akhirnya, Anda akan memiliki pemahaman yang jelas tentang cara menerapkan fitur ini dalam proyek Anda sendiri.
 ## Prasyarat

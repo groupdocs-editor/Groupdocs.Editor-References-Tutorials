@@ -6,6 +6,9 @@ description: Pomocí tohoto podrobného průvodce se dozvíte, jak používat Gr
 weight: 10
 url: /cs/net/css-handling/get-external-css-content/
 ---
+
+# Získejte externí obsah CSS
+
 ## Úvod
 V tomto článku vás provedeme vším, co potřebujete, abyste mohli začít s GroupDocs.Editor pro .NET. Pokryjeme vše od nastavení vašeho prostředí až po extrahování externího obsahu CSS z dokumentů. Pojďme se rovnou ponořit!
 ## Předpoklady

@@ -6,6 +6,9 @@ description: Groupdocs.Editor for .NET'i kullanarak belgelerden HTML kaynakları
 weight: 13
 url: /tr/net/document-editing/save-html-resources-to-folder/
 ---
+
+# HTML Kaynaklarını Klasöre Kaydet
+
 ## giriiş
 Groupdocs.Editor for .NET, geliştiricilerin .NET uygulamaları içindeki belgeleri sorunsuz bir şekilde değiştirmelerine ve dönüştürmelerine olanak tanıyan güçlü bir araçtır. İster bir belgeden HTML kaynaklarını ayıklamanız, ister gelişmiş düzenleme görevleri gerçekleştirmeniz gerekiyorsa, Groupdocs.Editor, sezgisel API'si ve kapsamlı belgeleriyle süreci basitleştirir.
 ## Önkoşullar

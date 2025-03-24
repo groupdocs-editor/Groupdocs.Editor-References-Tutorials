@@ -6,6 +6,9 @@ description: Görüntüler ve stil sayfaları için özel öneklerle GroupDocs.E
 weight: 11
 url: /tr/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# HTML İçeriğini Önekle Al
+
 ## giriiş
 GroupDocs.Editor for .NET'i kullanarak bir belgeden HTML içeriğinin nasıl alınacağına ilişkin adım adım eğitimimize hoş geldiniz. İster deneyimli bir geliştirici olun ister yeni başlıyor olun, bu kılavuz süreç boyunca takip edilmesi kolay bir şekilde size yol gösterecektir. Ortamınızı ayarlamaktan kodu başarıyla çalıştırmaya kadar bilmeniz gereken her şeyi ele alacağız. Hadi dalalım!
 ## Önkoşullar

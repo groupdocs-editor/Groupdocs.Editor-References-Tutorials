@@ -6,6 +6,9 @@ description: Pelajari cara menggunakan Groupdocs.Editor untuk .NET untuk mengedi
 weight: 11
 url: /id/net/quick-start-guide/set-license-from-stream/
 ---
+
+# Tetapkan Lisensi dari Stream
+
 ## Perkenalan
 Apakah Anda mencari cara ampuh untuk mengedit dokumen secara terprogram di aplikasi .NET Anda? Tidak perlu mencari lagi! Groupdocs.Editor untuk .NET adalah solusi pengeditan dokumen tangguh yang memungkinkan Anda mengintegrasikan fitur pengeditan dokumen ke dalam aplikasi Anda dengan lancar. Baik Anda menangani dokumen Word, spreadsheet Excel, atau format lainnya, panduan ini akan memandu Anda melalui semua yang perlu Anda ketahui untuk memulai.
 ## Prasyarat

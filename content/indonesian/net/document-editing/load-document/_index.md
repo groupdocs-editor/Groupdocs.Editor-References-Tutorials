@@ -6,6 +6,9 @@ description: Pelajari cara mengedit dokumen secara terprogram dengan GroupDocs.E
 weight: 13
 url: /id/net/document-editing/load-document/
 ---
+
+# Muat Dokumen
+
 ## Perkenalan
 Mengedit dokumen secara terprogram dapat menjadi tugas yang menakutkan, terutama jika Anda berurusan dengan berbagai format file dan struktur kompleks. Untungnya, GroupDocs.Editor untuk .NET membuat tugas ini mudah, menyediakan API yang kuat dan mudah digunakan untuk mengedit berbagai jenis dokumen. Dalam tutorial ini, kami akan memandu Anda melalui semua yang Anda perlukan untuk memulai GroupDocs.Editor untuk .NET, termasuk prasyarat, cara mengimpor namespace, dan panduan langkah demi langkah terperinci untuk memuat dokumen menggunakan berbagai metode.
 ## Prasyarat

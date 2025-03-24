@@ -6,6 +6,9 @@ description: Leer hoe u met wachtwoord beveiligde spreadsheets kunt omgaan met G
 weight: 18
 url: /nl/net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# Werk met met een wachtwoord beveiligde spreadsheets
+
 ## Invoering
 Heeft u moeite met het beheren van met een wachtwoord beveiligde spreadsheets in uw .NET-applicaties? Dan ben je hier aan het juiste adres! In deze uitgebreide handleiding begeleiden we u bij het gebruik van GroupDocs.Editor voor .NET om efficiënt met met een wachtwoord beveiligde spreadsheets om te gaan. Aan het einde van deze zelfstudie bent u goed uitgerust om eenvoudig gecodeerde Excel-bestanden te openen, bewerken en opslaan.
 ## Vereisten

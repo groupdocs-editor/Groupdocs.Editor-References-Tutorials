@@ -6,6 +6,9 @@ description: Aprenda como editar documentos XML com eficiência usando GroupDocs
 weight: 20
 url: /pt/net/document-processing/work-xml-documents/
 ---
+
+# Trabalhar com documentos XML
+
 ## Introdução
 No mundo digital de hoje, gerenciar e editar documentos XML de forma eficiente é crucial tanto para desenvolvedores quanto para empresas. GroupDocs.Editor for .NET oferece uma solução poderosa e versátil para editar arquivos XML programaticamente. Este tutorial irá guiá-lo através do processo de trabalho com documentos XML usando GroupDocs.Editor for .NET, detalhando cada etapa para torná-lo fácil e compreensível.
 ## Pré-requisitos

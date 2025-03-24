@@ -6,6 +6,9 @@ description: Tìm hiểu cách chỉnh sửa tài liệu văn bản thuần túy
 weight: 15
 url: /vi/net/document-processing/work-plain-text-documents/
 ---
+
+# Làm việc với tài liệu văn bản thuần túy
+
 ## Giới thiệu
 Bạn đang tìm cách hợp lý hóa quy trình chỉnh sửa tài liệu của mình trong .NET? Không cần tìm đâu xa ngoài GroupDocs.Editor dành cho .NET! API mạnh mẽ này cho phép bạn chỉnh sửa nhiều định dạng tài liệu một cách dễ dàng. Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình làm việc với các tài liệu văn bản thuần túy bằng GroupDocs.Editor cho .NET. Cuối cùng, bạn sẽ được trang bị để xử lý việc chỉnh sửa tài liệu văn bản như một người chuyên nghiệp. Sẵn sàng để đi sâu vào? Bắt đầu nào!
 ## Điều kiện tiên quyết

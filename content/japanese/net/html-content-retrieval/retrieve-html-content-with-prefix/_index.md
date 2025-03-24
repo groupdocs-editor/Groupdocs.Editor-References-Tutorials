@@ -6,6 +6,9 @@ description: GroupDocs.Editor for .NET を使用して、画像とスタイル�
 weight: 11
 url: /ja/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# プレフィックス付きのHTMLコンテンツを取得する
+
 ## 導入
 GroupDocs.Editor for .NET を使用してドキュメントから HTML コンテンツを取得する方法についてのステップバイステップのチュートリアルへようこそ。熟練した開発者でも、初心者でも、このガイドではプロセスをわかりやすく説明します。環境の設定からコードの正常な実行まで、知っておく必要のあるすべてのことを説明します。さあ、始めましょう!
 ## 前提条件

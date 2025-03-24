@@ -6,6 +6,9 @@ description: Tìm hiểu cách truy xuất nội dung HTML từ tài liệu bằ
 weight: 11
 url: /vi/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# Truy xuất nội dung HTML bằng tiền tố
+
 ## Giới thiệu
 Chào mừng bạn đến với hướng dẫn từng bước của chúng tôi về cách truy xuất nội dung HTML từ tài liệu bằng GroupDocs.Editor cho .NET. Cho dù bạn là nhà phát triển dày dạn hay chỉ mới bắt đầu, hướng dẫn này sẽ hướng dẫn bạn thực hiện quy trình một cách dễ thực hiện. Chúng tôi sẽ đề cập đến mọi thứ bạn cần biết, từ thiết lập môi trường cho đến thực thi mã thành công. Hãy đi sâu vào!
 ## Điều kiện tiên quyết

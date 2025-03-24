@@ -6,6 +6,9 @@ description: Groupdocs.Editor for .NET を使用して DOCX 内の無効なフ�
 weight: 11
 url: /ja/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# 無効なフォームフィールドコレクションを修正して保存する
+
 ## 導入
 ようこそ! ドキュメント内のフォーム フィールドを操作していて、無効なフォーム フィールド コレクションに関する問題に直面している場合は、適切な場所にいます。このチュートリアルでは、Groupdocs.Editor for .NET を使用して無効なフォーム フィールドを修正し、ドキュメントを保存する方法について詳しく説明します。このプロセスを段階的にガイドし、シームレスに動作させるために必要なすべての詳細を提供します。さあ、始めましょう!
 ## 前提条件

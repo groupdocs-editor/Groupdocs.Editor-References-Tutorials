@@ -6,6 +6,9 @@ description: Naučte se, jak načíst obsah HTML z dokumentů pomocí GroupDocs.
 weight: 11
 url: /cs/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# Načíst obsah HTML s předponou
+
 ## Úvod
 Vítejte v našem podrobném návodu, jak načíst obsah HTML z dokumentu pomocí GroupDocs.Editor pro .NET. Ať už jste zkušený vývojář nebo teprve začínáte, tato příručka vás provede procesem snadno pochopitelným způsobem. Pokryjeme vše, co potřebujete vědět, od nastavení vašeho prostředí až po úspěšné spuštění kódu. Pojďme se ponořit!
 ## Předpoklady

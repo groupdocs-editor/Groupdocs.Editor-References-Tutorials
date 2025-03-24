@@ -6,6 +6,9 @@ description: Lär dig hur du arbetar med kalkylblad med flera flikar i .NET med 
 weight: 17
 url: /sv/net/document-processing/work-multi-tab-spreadsheets/
 ---
+
+# Arbeta med kalkylblad med flera flikar
+
 ## Introduktion
 Att hantera kalkylblad med flera flikar kan vara en ganska stor uppgift, särskilt när du behöver manipulera eller extrahera data från olika ark i samma dokument. Om du arbetar med .NET och letar efter en robust lösning är GroupDocs.Editor för .NET ett utmärkt val. I den här självstudien går vi igenom processen att arbeta med kalkylblad med flera flikar med hjälp av GroupDocs.Editor för .NET. Vi kommer att täcka allt från att ställa in din miljö till att spara varje flik som en separat fil.
 ## Förutsättningar

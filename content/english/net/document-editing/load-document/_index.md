@@ -6,6 +6,9 @@ description: Learn how to edit documents programmatically with GroupDocs.Editor 
 weight: 13
 url: /net/document-editing/load-document/
 ---
+
+# Load Document
+
 ## Introduction
 Editing documents programmatically can be a daunting task, especially if you're dealing with different file formats and complex structures. Luckily, GroupDocs.Editor for .NET makes this task a breeze, providing a robust and easy-to-use API for editing a wide range of document types. In this tutorial, we’ll walk you through everything you need to get started with GroupDocs.Editor for .NET, including the prerequisites, how to import namespaces, and a detailed, step-by-step guide to loading documents using various methods.
 ## Prerequisites

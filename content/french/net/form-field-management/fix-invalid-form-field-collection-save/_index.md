@@ -6,6 +6,9 @@ description: Découvrez comment corriger les champs de formulaire non valides da
 weight: 11
 url: /fr/net/form-field-management/fix-invalid-form-field-collection-save/
 ---
+
+# Corrigez la collecte de champs de formulaire invalides et enregistrez
+
 ## Introduction
 Accueillir! Si vous travaillez avec des champs de formulaire dans des documents et que vous rencontrez des problèmes avec des collections de champs de formulaire non valides, vous êtes au bon endroit. Dans ce didacticiel, nous verrons comment corriger les champs de formulaire non valides et enregistrer votre document à l'aide de Groupdocs.Editor pour .NET. Nous vous guiderons pas à pas tout au long du processus, en veillant à ce que vous disposiez de tous les détails dont vous avez besoin pour que tout fonctionne sans problème. Commençons!
 ## Conditions préalables

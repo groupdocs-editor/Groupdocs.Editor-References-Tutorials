@@ -6,6 +6,9 @@ description: Uygulamalarınızda kusursuz belge düzenleme için GroupDocs.Edito
 weight: 10
 url: /tr/net/quick-start-guide/set-license-from-file/
 ---
+
+# Lisansı Dosyadan Ayarla
+
 ## giriiş
 .NET uygulamalarıyla belge düzenleme deneyiminizi dönüştürmeye hazır mısınız? .NET için GroupDocs.Editor'dan başka bir yere bakmayın. Bu güçlü API, belge düzenleme yeteneklerini uygulamalarınıza sorunsuz bir şekilde entegre etmenize olanak tanıyarak, çeşitli belge formatlarını değiştirmeyi ve dönüştürmeyi her zamankinden daha kolay hale getirir. Bu öğreticide, GroupDocs.Editor for .NET'i kullanmaya başlama sürecinde, ortamınızı ayarlamaktan ilk belge düzenleme görevlerinizi yürütmeye kadar size rehberlik edeceğiz.
 ## Önkoşullar

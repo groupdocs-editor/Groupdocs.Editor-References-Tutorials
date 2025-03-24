@@ -6,6 +6,9 @@ description: Získejte obsah HTML těla pomocí GroupDocs.Editor pro .NET s naš
 weight: 10
 url: /cs/net/html-content-retrieval/retrieve-html-body-content/
 ---
+
+# Načíst obsah HTML těla
+
 ## Úvod
 Jste připraveni na revoluci ve způsobu, jakým zpracováváte úpravy dokumentů ve svých aplikacích .NET? Nehledejte nic jiného než GroupDocs.Editor pro .NET! Tento výkonný nástroj umožňuje bezproblémovou editaci různých formátů dokumentů přímo ve vaší aplikaci. Ať už pracujete s Wordem, PDF nebo HTML, GroupDocs.Editor usnadňuje úpravy a manipulaci s dokumenty, aniž byste potřebovali externí nástroje.
 ## Předpoklady

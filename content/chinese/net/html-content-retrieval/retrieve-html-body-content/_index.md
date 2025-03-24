@@ -6,6 +6,9 @@ description: 按照我们的分步指南使用 GroupDocs.Editor for .NET 检索 
 weight: 10
 url: /zh/net/html-content-retrieval/retrieve-html-body-content/
 ---
+
+# 检索 HTML 正文内容
+
 ## 介绍
 您准备好彻底改变 .NET 应用程序中处理文档编辑的方式了吗？GroupDocs.Editor for .NET 就是您的最佳选择！这款功能强大的工具可直接在您的应用程序中无缝编辑各种文档格式。无论您使用的是 Word、PDF 还是 HTML，GroupDocs.Editor 都可让您轻松编辑和操作文档，而无需外部工具。
 ## 先决条件

@@ -6,6 +6,9 @@ description: Tìm hiểu cách sử dụng Groupdocs.Editor cho .NET để chỉ
 weight: 11
 url: /vi/net/quick-start-guide/set-license-from-stream/
 ---
+
+# Đặt giấy phép từ luồng
+
 ## Giới thiệu
 Bạn đang tìm kiếm một cách mạnh mẽ để chỉnh sửa tài liệu theo chương trình trong các ứng dụng .NET của mình? Đừng tìm đâu xa! Groupdocs.Editor cho .NET là một giải pháp chỉnh sửa tài liệu mạnh mẽ cho phép bạn tích hợp liền mạch các tính năng chỉnh sửa tài liệu vào ứng dụng của mình. Cho dù bạn đang xử lý tài liệu Word, bảng tính Excel hay các định dạng khác, hướng dẫn này sẽ hướng dẫn bạn mọi thứ bạn cần biết để bắt đầu.
 ## Điều kiện tiên quyết

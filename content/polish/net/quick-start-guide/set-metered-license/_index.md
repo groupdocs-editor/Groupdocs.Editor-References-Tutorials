@@ -6,6 +6,9 @@ description: Dowiedz się, jak zintegrować i używać GroupDocs.Editor dla .NET
 weight: 12
 url: /pl/net/quick-start-guide/set-metered-license/
 ---
+
+# Ustaw licencję taryfową
+
 ## Wstęp
 Witamy w naszym przewodniku krok po kroku dotyczącym korzystania z GroupDocs.Editor dla .NET! Niezależnie od tego, czy jesteś doświadczonym programistą, czy dopiero zaczynasz, ten samouczek pomoże Ci wykorzystać pełny potencjał tej potężnej biblioteki. GroupDocs.Editor dla .NET umożliwia bezproblemową edycję dokumentów w różnych formatach w aplikacjach .NET. Przyjrzyjmy się bliżej i zobaczmy, jak zacząć korzystać z tego niezawodnego narzędzia.
 ## Warunki wstępne

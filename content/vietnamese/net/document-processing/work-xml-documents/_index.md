@@ -6,6 +6,9 @@ description: Tìm hiểu cách chỉnh sửa tài liệu XML một cách hiệu 
 weight: 20
 url: /vi/net/document-processing/work-xml-documents/
 ---
+
+# Làm việc với tài liệu XML
+
 ## Giới thiệu
 Trong thế giới kỹ thuật số ngày nay, việc quản lý và chỉnh sửa tài liệu XML một cách hiệu quả là rất quan trọng đối với các nhà phát triển cũng như doanh nghiệp. GroupDocs.Editor cho .NET cung cấp một giải pháp mạnh mẽ và linh hoạt để chỉnh sửa các tệp XML theo chương trình. Hướng dẫn này sẽ hướng dẫn bạn qua quá trình làm việc với các tài liệu XML bằng GroupDocs.Editor cho .NET, chia nhỏ từng bước để làm cho nó dễ dàng và dễ hiểu.
 ## Điều kiện tiên quyết

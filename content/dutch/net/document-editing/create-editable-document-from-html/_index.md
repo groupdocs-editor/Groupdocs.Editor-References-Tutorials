@@ -6,6 +6,9 @@ description: Converteer HTML naar bewerkbare Word-documenten met GroupDocs.Edito
 weight: 10
 url: /nl/net/document-editing/create-editable-document-from-html/
 ---
+
+# Maak een bewerkbaar document van HTML
+
 ## Invoering
 Wilt u uw statische HTML-bestanden omzetten in dynamische, bewerkbare Word-documenten? Met GroupDocs.Editor voor .NET kunt u HTML eenvoudig en naadloos converteren naar verschillende bewerkbare formaten. Deze uitgebreide gids begeleidt u stap voor stap door het hele proces, zodat u deze taak moeiteloos kunt volbrengen.
 ## Vereisten

@@ -6,6 +6,9 @@ description: V tomto kurzu se dozvíte, jak upravovat dokumenty PDF pomocí Grou
 weight: 14
 url: /cs/net/document-processing/work-pdf-documents/
 ---
+
+# Práce s dokumenty PDF
+
 ## Úvod
 Hledáte komplexního průvodce pro manipulaci a úpravu dokumentů PDF pomocí GroupDocs.Editor pro .NET? Jste na správném místě! V tomto tutoriálu vás provedeme celým procesem, od nastavení projektu až po uložení upraveného dokumentu PDF. Ať už jste zkušený vývojář nebo teprve začínáte, tato příručka vám bude užitečná a snadno se budete řídit. Pojďme se ponořit!
 ## Předpoklady

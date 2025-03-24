@@ -6,6 +6,9 @@ description: Learn how to manage legacy form fields using GroupDocs.Editor for .
 weight: 12
 url: /net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# Work with Legacy Form Field Collection
+
 ## Introduction
 Welcome to this comprehensive guide on how to work with legacy form field collections using GroupDocs.Editor for .NET. Whether you're dealing with text fields, checkboxes, date fields, or dropdown menus, this tutorial will walk you through each step to manage these fields efficiently. By the end of this guide, you'll have a solid understanding of how to utilize GroupDocs.Editor for handling various form fields in your documents. Let's dive in!
 ## Prerequisites

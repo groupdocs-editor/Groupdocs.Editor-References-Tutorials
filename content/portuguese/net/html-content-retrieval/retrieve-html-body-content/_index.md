@@ -6,6 +6,9 @@ description: Recupere o conteúdo do corpo HTML usando GroupDocs.Editor for .NET
 weight: 10
 url: /pt/net/html-content-retrieval/retrieve-html-body-content/
 ---
+
+# Recuperar conteúdo do corpo HTML
+
 ## Introdução
 Você está pronto para revolucionar a forma como lida com a edição de documentos em seus aplicativos .NET? Não procure mais, GroupDocs.Editor para .NET! Esta ferramenta poderosa permite a edição perfeita de uma variedade de formatos de documentos diretamente no seu aplicativo. Esteja você trabalhando com Word, PDF ou HTML, o GroupDocs.Editor facilita a edição e manipulação de documentos sem a necessidade de ferramentas externas.
 ## Pré-requisitos

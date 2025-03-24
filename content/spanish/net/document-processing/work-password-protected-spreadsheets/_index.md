@@ -6,6 +6,9 @@ description: Aprenda a manejar hojas de cálculo protegidas con contraseña util
 weight: 18
 url: /es/net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# Trabajar con hojas de cálculo protegidas con contraseña
+
 ## Introducción
 ¿Tiene dificultades para administrar hojas de cálculo protegidas con contraseña en sus aplicaciones .NET? Si es así, ¡estás en el lugar correcto! En esta guía completa, lo guiaremos a través del proceso de uso de GroupDocs.Editor para .NET para manejar hojas de cálculo protegidas con contraseña de manera eficiente. Al final de este tutorial, estará bien equipado para abrir, editar y guardar archivos de Excel cifrados con facilidad.
 ## Requisitos previos

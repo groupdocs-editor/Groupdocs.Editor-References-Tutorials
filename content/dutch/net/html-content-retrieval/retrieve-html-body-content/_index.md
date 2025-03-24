@@ -6,6 +6,9 @@ description: Haal HTML-tekstinhoud op met GroupDocs.Editor voor .NET met onze st
 weight: 10
 url: /nl/net/html-content-retrieval/retrieve-html-body-content/
 ---
+
+# HTML-hoofdtekstinhoud ophalen
+
 ## Invoering
 Bent u klaar om een revolutie teweeg te brengen in de manier waarop u met documentbewerking in uw .NET-toepassingen omgaat? Zoek niet verder dan GroupDocs.Editor voor .NET! Met deze krachtige tool kunt u naadloos een verscheidenheid aan documentformaten direct binnen uw toepassing bewerken. Of u nu met Word, PDF of HTML werkt, GroupDocs.Editor maakt het gemakkelijk om documenten te bewerken en manipuleren zonder dat u externe hulpmiddelen nodig heeft.
 ## Vereisten

@@ -6,6 +6,9 @@ description: Aprenda como usar o GroupDocs.Editor for .NET para uma edição per
 weight: 10
 url: /pt/net/quick-start-guide/set-license-from-file/
 ---
+
+# Definir licença do arquivo
+
 ## Introdução
 Você está pronto para transformar sua experiência de edição de documentos com aplicativos .NET? Não procure mais, GroupDocs.Editor para .NET. Essa poderosa API permite integrar perfeitamente recursos de edição de documentos em seus aplicativos, tornando mais fácil do que nunca manipular e converter vários formatos de documentos. Neste tutorial, orientaremos você no processo de introdução ao GroupDocs.Editor for .NET, desde a configuração do seu ambiente até a execução das primeiras tarefas de edição de documentos.
 ## Pré-requisitos

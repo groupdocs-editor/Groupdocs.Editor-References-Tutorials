@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan kezelheti a jelszóval védett táblázatokat a
 weight: 18
 url: /hu/net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# Dolgozzon jelszóval védett táblázatokkal
+
 ## Bevezetés
 Nehezen kezeli a jelszóval védett táblázatokat .NET-alkalmazásaiban? Ha igen, akkor jó helyen jársz! Ebben az átfogó útmutatóban végigvezetjük a GroupDocs.Editor for .NET használatának folyamatán a jelszóval védett táblázatok hatékony kezeléséhez. Az oktatóanyag végére jól felkészült lesz a titkosított Excel-fájlok egyszerű megnyitására, szerkesztésére és mentésére.
 ## Előfeltételek

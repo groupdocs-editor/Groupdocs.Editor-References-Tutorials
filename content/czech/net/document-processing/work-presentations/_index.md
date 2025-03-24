@@ -6,6 +6,9 @@ description: Naučte se upravovat prezentace PowerPoint pomocí GroupDocs.Editor
 weight: 16
 url: /cs/net/document-processing/work-presentations/
 ---
+
+# Práce s prezentacemi
+
 ## Úvod
 dnešní digitální době je efektivní správa a editace dokumentů zásadní. Ať už jste vývojář nebo někdo, kdo se často zabývá prezentacemi, znalost práce s nástroji, které tyto procesy zjednodušují, vám může ušetřit čas a námahu. Jedním z takových nástrojů je GroupDocs.Editor for .NET, výkonné API, které umožňuje programově upravovat dokumenty, včetně prezentací. Tento tutoriál vás provede kroky práce s prezentacemi pomocí GroupDocs.Editor pro .NET, od nastavení prostředí až po úpravy a ukládání souborů prezentace.
 ## Předpoklady

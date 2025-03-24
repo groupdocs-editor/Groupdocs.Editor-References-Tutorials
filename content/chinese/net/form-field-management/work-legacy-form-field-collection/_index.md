@@ -6,6 +6,9 @@ description: 通过我们的详细指南了解如何使用 GroupDocs.Editor for 
 weight: 12
 url: /zh/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# 使用旧版表单字段集合
+
 ## 介绍
 欢迎阅读本指南，了解如何使用 GroupDocs.Editor for .NET 处理旧式表单字段集合。无论您处理的是文本字段、复选框、日期字段还是下拉菜单，本教程都将引导您完成每个步骤，以有效地管理这些字段。在本指南结束时，您将对如何利用 GroupDocs.Editor 处理文档中的各种表单字段有一个深入的理解。让我们开始吧！
 ## 先决条件

@@ -6,6 +6,9 @@ description: Aprenda a editar documentos de Word, Excel, PowerPoint, libros elec
 weight: 10
 url: /es/net/document-editing/create-document/
 ---
+
+# Crear documento
+
 ## Introducción
 ¿Está cansado de la molestia que conlleva editar diferentes tipos de documentos mediante programación? GroupDocs.Editor para .NET está aquí para simplificar el proceso. Esta poderosa herramienta permite a los desarrolladores editar varios formatos de documentos como Word, Excel, PowerPoint, libros electrónicos y correos electrónicos con facilidad. En este tutorial, profundizaremos en cómo usar GroupDocs.Editor para .NET para crear y editar documentos. Dividiremos el proceso en pasos fáciles de seguir, haciéndolo accesible incluso si eres nuevo en esto.
 ## Requisitos previos

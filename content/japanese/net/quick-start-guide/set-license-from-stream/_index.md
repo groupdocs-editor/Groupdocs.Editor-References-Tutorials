@@ -6,6 +6,9 @@ description: Groupdocs.Editor for .NET を使用してプログラムでドキ�
 weight: 11
 url: /ja/net/quick-start-guide/set-license-from-stream/
 ---
+
+# ストリームからライセンスを設定する
+
 ## 導入
 .NET アプリケーションでプログラムを使用してドキュメントを編集する強力な方法をお探しですか? もう探す必要はありません。Groupdocs.Editor for .NET は、ドキュメント編集機能をアプリケーションにシームレスに統合できる強力なドキュメント編集ソリューションです。Word ドキュメント、Excel スプレッドシート、その他の形式のいずれを処理する場合でも、このガイドでは、開始するために必要なすべての情報を説明します。
 ## 前提条件

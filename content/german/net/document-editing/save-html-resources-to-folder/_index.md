@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit Groupdocs.Editor für .NET HTML-Ressource
 weight: 13
 url: /de/net/document-editing/save-html-resources-to-folder/
 ---
+
+# HTML-Ressourcen im Ordner speichern
+
 ## Einführung
 Groupdocs.Editor für .NET ist ein leistungsstarkes Tool, mit dem Entwickler Dokumente in ihren .NET-Anwendungen nahtlos bearbeiten und konvertieren können. Egal, ob Sie HTML-Ressourcen aus einem Dokument extrahieren oder erweiterte Bearbeitungsaufgaben ausführen müssen, Groupdocs.Editor vereinfacht den Vorgang mit seiner intuitiven API und umfassenden Dokumentation.
 ## Voraussetzungen

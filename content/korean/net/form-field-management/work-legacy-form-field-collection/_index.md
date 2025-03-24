@@ -6,6 +6,9 @@ description: 자세한 가이드를 통해 .NET용 GroupDocs.Editor를 사용하
 weight: 12
 url: /ko/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# 레거시 양식 필드 컬렉션 작업
+
 ## 소개
 .NET용 GroupDocs.Editor를 사용하여 레거시 양식 필드 컬렉션으로 작업하는 방법에 대한 포괄적인 가이드에 오신 것을 환영합니다. 텍스트 필드, 체크박스, 날짜 필드 또는 드롭다운 메뉴를 처리하는 경우 이 튜토리얼에서는 이러한 필드를 효율적으로 관리하기 위한 각 단계를 안내합니다. 이 가이드를 마치면 문서의 다양한 양식 필드를 처리하기 위해 GroupDocs.Editor를 활용하는 방법을 확실하게 이해하게 될 것입니다. 뛰어들어보자!
 ## 전제조건

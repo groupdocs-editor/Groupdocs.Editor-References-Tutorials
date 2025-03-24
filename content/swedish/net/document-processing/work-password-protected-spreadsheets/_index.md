@@ -6,6 +6,9 @@ description: Lär dig hur du hanterar lösenordsskyddade kalkylblad med GroupDoc
 weight: 18
 url: /sv/net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# Arbeta med lösenordsskyddade kalkylblad
+
 ## Introduktion
 Har du svårt att hantera lösenordsskyddade kalkylblad i dina .NET-applikationer? I så fall är du på rätt plats! I den här omfattande guiden går vi igenom processen med att använda GroupDocs.Editor för .NET för att effektivt hantera lösenordsskyddade kalkylblad. I slutet av denna handledning kommer du att vara väl rustad för att enkelt öppna, redigera och spara krypterade Excel-filer.
 ## Förutsättningar

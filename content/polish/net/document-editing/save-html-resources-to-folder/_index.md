@@ -6,6 +6,9 @@ description: Dowiedz się, jak wyodrębnić zasoby HTML z dokumentów za pomocą
 weight: 13
 url: /pl/net/document-editing/save-html-resources-to-folder/
 ---
+
+# Zapisz zasoby HTML w folderze
+
 ## Wstęp
 Groupdocs.Editor dla .NET to potężne narzędzie, które umożliwia programistom płynne manipulowanie i konwertowanie dokumentów w aplikacjach .NET. Niezależnie od tego, czy chcesz wyodrębnić zasoby HTML z dokumentu, czy wykonać zaawansowane zadania edycyjne, Groupdocs.Editor upraszcza ten proces dzięki intuicyjnemu interfejsowi API i obszernej dokumentacji.
 ## Warunki wstępne

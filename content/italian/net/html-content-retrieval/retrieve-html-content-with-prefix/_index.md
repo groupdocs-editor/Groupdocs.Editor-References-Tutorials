@@ -6,6 +6,9 @@ description: Scopri come recuperare contenuto HTML dai documenti utilizzando Gro
 weight: 11
 url: /it/net/html-content-retrieval/retrieve-html-content-with-prefix/
 ---
+
+# Recupera contenuto HTML con prefisso
+
 ## introduzione
 Benvenuto nel nostro tutorial passo passo su come recuperare contenuto HTML da un documento utilizzando GroupDocs.Editor per .NET. Che tu sia uno sviluppatore esperto o che tu abbia appena iniziato, questa guida ti guiderà attraverso il processo in modo facile da seguire. Tratteremo tutto ciò che devi sapere, dalla configurazione del tuo ambiente all'esecuzione corretta del codice. Immergiamoci!
 ## Prerequisiti

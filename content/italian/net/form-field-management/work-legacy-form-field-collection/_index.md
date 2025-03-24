@@ -6,6 +6,9 @@ description: Scopri come gestire i campi del modulo legacy utilizzando GroupDocs
 weight: 12
 url: /it/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# Lavora con la raccolta di campi modulo legacy
+
 ## introduzione
 Benvenuti in questa guida completa su come lavorare con raccolte di campi modulo legacy utilizzando GroupDocs.Editor per .NET. Che tu abbia a che fare con campi di testo, caselle di controllo, campi data o menu a discesa, questo tutorial ti guiderà attraverso ogni passaggio per gestire questi campi in modo efficiente. Al termine di questa guida avrai una solida conoscenza di come utilizzare GroupDocs.Editor per gestire vari campi modulo nei tuoi documenti. Immergiamoci!
 ## Prerequisiti

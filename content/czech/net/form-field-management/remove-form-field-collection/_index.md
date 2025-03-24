@@ -6,6 +6,9 @@ description: V tomto podrobném průvodci se dozvíte, jak odstranit pole formul
 weight: 13
 url: /cs/net/form-field-management/remove-form-field-collection/
 ---
+
+# Odebrat kolekci polí formuláře
+
 ## Úvod
 Chcete spravovat pole formuláře ve svých dokumentech programově? GroupDocs.Editor for .NET nabízí výkonné řešení pro manipulaci a manipulaci s poli formulářů v různých formátech dokumentů. V tomto kurzu vás provedeme kroky k odstranění kolekcí polí formuláře z dokumentu aplikace Word pomocí této robustní knihovny. 
 ## Předpoklady

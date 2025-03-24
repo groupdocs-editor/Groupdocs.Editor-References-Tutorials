@@ -6,6 +6,9 @@ description: Naučte se, jak spravovat starší pole formuláře pomocí GroupDo
 weight: 12
 url: /cs/net/form-field-management/work-legacy-form-field-collection/
 ---
+
+# Práce s Legacy Form Field Collection
+
 ## Úvod
 Vítejte v tomto komplexním průvodci, jak pracovat se staršími kolekcemi polí formulářů pomocí GroupDocs.Editor pro .NET. Ať už máte co do činění s textovými poli, zaškrtávacími políčky, datovými poli nebo rozevíracími nabídkami, tento tutoriál vás provede každým krokem k efektivní správě těchto polí. Na konci této příručky budete dobře rozumět tomu, jak používat GroupDocs.Editor pro práci s různými poli formulářů ve vašich dokumentech. Pojďme se ponořit!
 ## Předpoklady

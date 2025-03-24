@@ -6,6 +6,9 @@ description: このステップバイステップ ガイドに従って、GroupD
 weight: 10
 url: /ja/net/document-editing/create-editable-document-from-html/
 ---
+
+# HTMLから編集可能なドキュメントを作成する
+
 ## 導入
 静的 HTML ファイルを動的で編集可能な Word 文書に変換したいとお考えですか? GroupDocs.Editor for .NET を使用すると、HTML をさまざまな編集可能な形式にシームレスかつ簡単に変換できます。この包括的なガイドでは、プロセス全体をステップごとに説明し、このタスクを簡単に実行できるようにします。
 ## 前提条件

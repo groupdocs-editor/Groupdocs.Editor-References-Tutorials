@@ -6,6 +6,9 @@ description: Aprenda como salvar documentos editados em vários formatos usando 
 weight: 11
 url: /pt/net/document-processing/save-edited-document-various-formats/
 ---
+
+# Salvar documento editado em vários formatos
+
 ## Introdução
 Você deseja salvar documentos editados em vários formatos usando GroupDocs.Editor for .NET? Você veio ao lugar certo! Este guia completo irá orientá-lo durante todo o processo, desde a configuração do seu ambiente até salvar o documento editado em vários formatos. Vamos mergulhar e tornar a edição e salvamento de documentos muito fácil!
 ## Pré-requisitos

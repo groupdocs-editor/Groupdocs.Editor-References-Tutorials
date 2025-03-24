@@ -6,6 +6,9 @@ description: Haal moeiteloos HTML-inhoud uit documenten met GroupDocs.Editor voo
 weight: 12
 url: /nl/net/document-editing/extract-html-content-from-editable-document/
 ---
+
+# Extraheer HTML-inhoud uit een bewerkbaar document
+
 ## Invoering
 In het huidige digitale tijdperk is het efficiënt beheren en bewerken van documenten van cruciaal belang voor zowel bedrijven als particulieren. GroupDocs.Editor voor .NET biedt een krachtige oplossing voor het naadloos bewerken van diverse documentformaten. Deze handleiding leidt u door het proces van het extraheren van HTML-inhoud uit een bewerkbaar document met behulp van GroupDocs.Editor voor .NET. Aan het einde heeft u een duidelijk inzicht in hoe u deze functie in uw eigen projecten kunt implementeren.
 ## Vereisten

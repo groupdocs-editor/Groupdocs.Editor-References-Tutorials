@@ -6,6 +6,9 @@ description: Aprenda como lidar com planilhas protegidas por senha usando GroupD
 weight: 18
 url: /pt/net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# Trabalhe com planilhas protegidas por senha
+
 ## Introdução
 Você está lutando para gerenciar planilhas protegidas por senha em seus aplicativos .NET? Se sim, você está no lugar certo! Neste guia abrangente, orientaremos você no processo de uso do GroupDocs.Editor for .NET para lidar com planilhas protegidas por senha com eficiência. Ao final deste tutorial, você estará bem equipado para abrir, editar e salvar arquivos criptografados do Excel com facilidade.
 ## Pré-requisitos

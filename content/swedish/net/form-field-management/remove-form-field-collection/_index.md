@@ -6,6 +6,9 @@ description: Lär dig hur du tar bort formulärfält från Word-dokument med Gro
 weight: 13
 url: /sv/net/form-field-management/remove-form-field-collection/
 ---
+
+# Ta bort formulärfältsamling
+
 ## Introduktion
 Vill du hantera formulärfält i dina dokument programmatiskt? GroupDocs.Editor för .NET erbjuder en kraftfull lösning för att hantera och manipulera formulärfält i olika dokumentformat. I den här självstudien guidar vi dig genom stegen för att ta bort formulärfältsamlingar från ett Word-dokument med hjälp av detta robusta bibliotek. 
 ## Förutsättningar

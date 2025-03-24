@@ -6,6 +6,9 @@ description: Découvrez comment modifier des documents PDF à l'aide de GroupDoc
 weight: 14
 url: /fr/net/document-processing/work-pdf-documents/
 ---
+
+# Travailler avec des documents PDF
+
 ## Introduction
 Recherchez-vous un guide complet pour manipuler et modifier des documents PDF à l'aide de GroupDocs.Editor for .NET ? Vous êtes au bon endroit ! Dans ce didacticiel, nous vous guiderons tout au long du processus, de la configuration de votre projet à l'enregistrement de votre document PDF modifié. Que vous soyez un développeur chevronné ou débutant, vous trouverez ce guide utile et facile à suivre. Allons-y !
 ## Conditions préalables

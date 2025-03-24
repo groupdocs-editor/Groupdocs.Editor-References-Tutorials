@@ -6,6 +6,9 @@ description: Learn how to use GroupDocs.Editor for .NET to edit documents progra
 weight: 12
 url: /net/document-editing/introduction-groupdocs-editor/
 ---
+
+# Introduction to GroupDocs.Editor for .NET
+
 ## Introduction 
 If you're a developer looking to seamlessly integrate document editing capabilities into your .NET applications, GroupDocs.Editor for .NET is a powerful tool to consider. This versatile library enables you to load, edit, and save various document formats programmatically. Whether you need to handle Word documents, PDFs, or HTML files, GroupDocs.Editor simplifies the process, making it efficient and straightforward. In this tutorial, we'll explore the basics of using GroupDocs.Editor for .NET, guiding you through a practical example step-by-step.
 ## Prerequisites

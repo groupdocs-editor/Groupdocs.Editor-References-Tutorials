@@ -6,6 +6,9 @@ description: Scopri come gestire i fogli di calcolo protetti da password utilizz
 weight: 18
 url: /it/net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# Lavora con fogli di calcolo protetti da password
+
 ## introduzione
 Hai difficoltà a gestire fogli di calcolo protetti da password nelle tue applicazioni .NET? Se è così, sei nel posto giusto! In questa guida completa ti guideremo attraverso il processo di utilizzo di GroupDocs.Editor per .NET per gestire in modo efficiente i fogli di calcolo protetti da password. Alla fine di questo tutorial sarai ben attrezzato per aprire, modificare e salvare facilmente file Excel crittografati.
 ## Prerequisiti

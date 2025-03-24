@@ -6,6 +6,9 @@ description: Bu adım adım kılavuzla, belgelerden harici CSS içeriğini ayık
 weight: 10
 url: /tr/net/css-handling/get-external-css-content/
 ---
+
+# Harici CSS İçeriği Alın
+
 ## giriiş
 Bu makalede, GroupDocs.Editor for .NET'i kullanmaya başlamanız için ihtiyacınız olan her şeyi size anlatacağız. Ortamınızı ayarlamaktan, belgelerden harici CSS içeriği çıkarmaya kadar her şeyi ele alacağız. Haydi hemen dalalım!
 ## Önkoşullar

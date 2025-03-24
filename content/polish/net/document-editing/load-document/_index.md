@@ -6,6 +6,9 @@ description: Dowiedz się, jak programowo edytować dokumenty za pomocą GroupDo
 weight: 13
 url: /pl/net/document-editing/load-document/
 ---
+
+# Załaduj dokument
+
 ## Wstęp
 Programowe edytowanie dokumentów może być trudnym zadaniem, szczególnie jeśli masz do czynienia z różnymi formatami plików i złożonymi strukturami. Na szczęście GroupDocs.Editor dla .NET ułatwia to zadanie, zapewniając solidny i łatwy w obsłudze interfejs API do edycji szerokiej gamy typów dokumentów. W tym samouczku przeprowadzimy Cię przez wszystko, czego potrzebujesz, aby rozpocząć pracę z GroupDocs.Editor dla .NET, w tym wymagania wstępne, sposób importowania przestrzeni nazw oraz szczegółowy przewodnik krok po kroku dotyczący ładowania dokumentów przy użyciu różnych metod.
 ## Warunki wstępne

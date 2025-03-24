@@ -6,6 +6,9 @@ description: Learn how to handle password-protected spreadsheets using GroupDocs
 weight: 18
 url: /net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# Work with Password-Protected Spreadsheets
+
 ## Introduction
 Are you struggling to manage password-protected spreadsheets in your .NET applications? If so, you're in the right place! In this comprehensive guide, we will walk you through the process of using GroupDocs.Editor for .NET to handle password-protected spreadsheets efficiently. By the end of this tutorial, you'll be well-equipped to open, edit, and save encrypted Excel files with ease.
 ## Prerequisites

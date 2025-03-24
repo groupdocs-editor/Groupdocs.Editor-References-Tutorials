@@ -6,6 +6,9 @@ description: Découvrez comment gérer des feuilles de calcul protégées par mo
 weight: 18
 url: /fr/net/document-processing/work-password-protected-spreadsheets/
 ---
+
+# Travailler avec des feuilles de calcul protégées par mot de passe
+
 ## Introduction
 Avez-vous du mal à gérer des feuilles de calcul protégées par mot de passe dans vos applications .NET ? Si c'est le cas, vous êtes au bon endroit ! Dans ce guide complet, nous vous guiderons tout au long du processus d'utilisation de GroupDocs.Editor for .NET pour gérer efficacement les feuilles de calcul protégées par mot de passe. À la fin de ce didacticiel, vous serez parfaitement équipé pour ouvrir, modifier et enregistrer facilement des fichiers Excel cryptés.
 ## Conditions préalables
