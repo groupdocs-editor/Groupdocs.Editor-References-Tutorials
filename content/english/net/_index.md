@@ -38,10 +38,6 @@ New to GroupDocs.Editor for .NET? Dive into our quick start guide and learn how 
 
 Ready to enhance your document management workflow? Explore our tutorials and examples of GroupDocs.Editor for .NET and unlock the full potential of document editing capabilities. Whether you're a beginner or an experienced developer, these resources provide comprehensive guidance to streamline your processes and boost productivity. Say goodbye to manual tasks and hello to efficient document management with GroupDocs.Editor for .NET.
 ## GroupDocs.Editor for .NET Tutorials 
-### [Document Editing](./document-editing/)
-Manage and edit documents with GroupDocs.Editor .NET. Learn how to create, edit, and save documents with ease. Enhance your document management workflow today!
-### [CSS Handling](./css-handling/)
-Learn how to handle CSS content effectively with GroupDocs.Editor for .NET. Extract external CSS content and handle CSS content with prefixes effortlessly.
 ### [HTML Content Retrieval](./html-content-retrieval/)
 Discover how to retrieve HTML content using GroupDocs.Editor for .NET. Step-by-step guides for retrieving body content and custom prefixes included.
 ### [Form Field Management](./form-field-management/)
@@ -87,3 +83,12 @@ Discover powerful capabilities for implementing complex document editing workflo
 
 ### [Licensing & Configuration](./licensing-configuration/)
 Configure GroupDocs.Editor properly in your projects with these licensing tutorials covering various deployment scenarios and environments.
+
+### [Document Saving and Export Tutorials for GroupDocs.Editor .NET](./document-saving/)
+Step-by-step tutorials for saving edited documents to various formats and implementing export capabilities using GroupDocs.Editor for .NET.
+
+### [HTML Document Editing Tutorials for GroupDocs.Editor .NET](./html-web-documents/)
+Learn to work with HTML content, web documents, and HTML resources using GroupDocs.Editor for .NET tutorials.
+
+### [Plain Text and DSV Document Editing Tutorials](./plain-text-dsv-documents/)
+Complete tutorials for editing plain text documents, CSV, TSV, and delimited text files using GroupDocs.Editor for .NET.
