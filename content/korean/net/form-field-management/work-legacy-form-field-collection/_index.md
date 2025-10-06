@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 자세한 가이드를 통해 .NET용 GroupDocs.Editor를 사용하여 기존 양식 필드를 관리하는 방법을 알아보세요. 텍스트 필드, 체크박스, 날짜 등을 처리하는 데 적합합니다.
 weight: 12
 url: /ko/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # 레거시 양식 필드 컬렉션 작업
 
 ## 소개

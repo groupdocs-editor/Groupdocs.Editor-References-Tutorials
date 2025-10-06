@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET'i kullanarak belgelerden HTML içeriğini zahmetsizce çıkarın. Sorunsuz entegrasyon ve belge yönetimi için ayrıntılı kılavuzumuzu takip edin.
 weight: 12
 url: /tr/net/document-editing/extract-html-content-from-editable-document/
+type: docs
 ---
-
 # Düzenlenebilir Belgeden HTML İçeriğini Çıkarma
 
 ## giriiş

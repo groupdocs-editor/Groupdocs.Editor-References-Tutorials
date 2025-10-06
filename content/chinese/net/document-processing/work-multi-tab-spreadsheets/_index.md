@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor 在 .NET 中处理多标签电子表格。其中包括分步指南、代码示例和最佳实践。
 weight: 17
 url: /zh/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # 使用多标签电子表格
 
 ## 介绍

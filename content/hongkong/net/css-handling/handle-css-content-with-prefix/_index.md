@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 在此詳細的逐步教學中，了解如何使用適用於 .NET 的 Groupdocs.Editor 處理帶有前綴的 CSS 內容。非常適合各個層級的開發人員。
 weight: 11
 url: /zh-hant/net/css-handling/handle-css-content-with-prefix/
+type: docs
 ---
-
 # 處理帶有前綴的 CSS 內容
 
 ## 介紹

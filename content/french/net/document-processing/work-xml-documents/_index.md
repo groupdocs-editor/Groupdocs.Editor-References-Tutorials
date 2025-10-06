@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Apprenez à modifier efficacement des documents XML à l'aide de GroupDocs.Editor pour .NET grâce à notre guide étape par étape, couvrant toutes les étapes et options essentielles.
 weight: 20
 url: /fr/net/document-processing/work-xml-documents/
+type: docs
 ---
-
 # Travailler avec des documents XML
 
 ## Introduction

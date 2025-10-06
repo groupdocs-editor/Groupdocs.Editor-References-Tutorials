@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: .NET के लिए GroupDocs.Editor के साथ प्रोग्रामेटिक रूप से दस्तावेज़ों को संपादित करना सीखें। दस्तावेज़ों को लोड करने, पासवर्ड-संरक्षित फ़ाइलों को संभालने, और बहुत कुछ के लिए चरण-दर-चरण मार्गदर्शिका।
 weight: 13
 url: /hi/net/document-editing/load-document/
+type: docs
 ---
-
 # दस्तावेज़ लोड करें
 
 ## परिचय

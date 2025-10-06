@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor .NET
 - editable documents
 - document management
-
+type: docs
 ---
-
-
 # Master GroupDocs.Editor .NET: Edit & Manage Documents Efficiently
 
 ## Introduction

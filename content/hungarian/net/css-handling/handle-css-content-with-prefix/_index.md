@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ebben a részletes, lépésenkénti oktatóanyagban megtudhatja, hogyan kezelheti az előtaggal ellátott CSS-tartalmakat a Groupdocs.Editor for .NET használatával. Tökéletes minden szintű fejlesztő számára.
 weight: 11
 url: /hu/net/css-handling/handle-css-content-with-prefix/
+type: docs
 ---
-
 # CSS-tartalom kezelése előtaggal
 
 ## Bevezetés

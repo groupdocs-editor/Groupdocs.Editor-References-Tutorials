@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να εργάζεστε με υπολογιστικά φύλλα πολλών καρτελών στο .NET χρησιμοποιώντας το GroupDocs.Editor. Περιλαμβάνονται οδηγός βήμα προς βήμα, παραδείγματα κώδικα και βέλτιστες πρακτικές.
 weight: 17
 url: /el/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # Εργαστείτε με υπολογιστικά φύλλα πολλαπλών καρτελών
 
 ## Εισαγωγή

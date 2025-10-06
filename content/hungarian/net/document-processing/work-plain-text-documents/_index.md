@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan szerkeszthet egyszerű szöveges dokumentumokat a GroupDocs.Editor for .NET segítségével lépésenkénti útmutatónkkal. Egyszerűsítse a .NET-dokumentumszerkesztési folyamatot.
 weight: 15
 url: /hu/net/document-processing/work-plain-text-documents/
+type: docs
 ---
-
 # Egyszerű szöveges dokumentumok használata
 
 ## Bevezetés

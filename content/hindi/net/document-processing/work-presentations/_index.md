@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: .NET के लिए GroupDocs.Editor का उपयोग करके PowerPoint प्रस्तुतियों को संपादित करना सीखें। अपने दस्तावेज़ संपादन प्रक्रिया को कारगर बनाने के लिए इस चरण-दर-चरण मार्गदर्शिका का पालन करें।
 weight: 16
 url: /hi/net/document-processing/work-presentations/
+type: docs
 ---
-
 # प्रस्तुतियों के साथ कार्य करें
 
 ## परिचय

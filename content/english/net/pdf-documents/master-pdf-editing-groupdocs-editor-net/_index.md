@@ -8,10 +8,8 @@ keywords:
 - PDF Editing in .NET
 - GroupDocs.Editor PDF
 - Edit PDF programmatically
-
+type: docs
 ---
-
-
 # Master PDF Editing in .NET Using GroupDocs.Editor: A Comprehensive Guide
 
 ## Introduction

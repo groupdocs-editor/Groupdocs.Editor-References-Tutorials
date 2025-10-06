@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية التعامل مع محتوى CSS بفعالية باستخدام GroupDocs.Editor لـ .NET. قم باستخراج محتوى CSS الخارجي والتعامل مع محتوى CSS باستخدام البادئات دون عناء.
 weight: 21
 url: /ar/net/css-handling/
+type: docs
 ---
-
 # التعامل مع CSS
 
 

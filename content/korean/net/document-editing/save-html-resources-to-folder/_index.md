@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: .NET용 Groupdocs.Editor를 사용하여 문서에서 HTML 리소스를 추출하는 방법을 알아보세요. 이 포괄적인 튜토리얼은 개발자를 위한 단계별 지침을 제공합니다.
 weight: 13
 url: /ko/net/document-editing/save-html-resources-to-folder/
+type: docs
 ---
-
 # HTML 리소스를 폴더에 저장
 
 ## 소개

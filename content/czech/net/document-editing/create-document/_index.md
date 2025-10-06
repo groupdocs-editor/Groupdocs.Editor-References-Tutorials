@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Naučte se upravovat dokumenty Word, Excel, PowerPoint, e-knihy a e-maily pomocí GroupDocs.Editor pro .NET s tímto komplexním výukovým programem krok za krokem.
 weight: 10
 url: /cs/net/document-editing/create-document/
+type: docs
 ---
-
 # Vytvořit dokument
 
 ## Úvod

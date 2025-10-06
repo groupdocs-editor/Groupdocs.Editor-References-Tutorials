@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีดึงเนื้อหา HTML จากเอกสารโดยใช้ GroupDocs.Editor สำหรับ .NET พร้อมคำนำหน้าแบบกำหนดเองสำหรับรูปภาพและสไตล์ชีต รวมคำแนะนำทีละขั้นตอน
 weight: 11
 url: /th/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # ดึงเนื้อหา HTML ด้วยคำนำหน้า
 
 ## การแนะนำ

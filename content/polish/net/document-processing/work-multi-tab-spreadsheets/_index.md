@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak pracować z arkuszami kalkulacyjnymi z wieloma zakładkami w platformie .NET przy użyciu programu GroupDocs.Editor. Zawiera przewodnik krok po kroku, przykłady kodu i najlepsze praktyki.
 weight: 17
 url: /pl/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # Pracuj z arkuszami kalkulacyjnymi z wieloma zakładkami
 
 ## Wstęp

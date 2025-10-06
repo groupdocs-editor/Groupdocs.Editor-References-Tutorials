@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีบันทึกเอกสารที่แก้ไขแล้วเป็นรูปแบบต่างๆ โดยใช้ GroupDocs.Editor สำหรับ .NET ในคำแนะนำทีละขั้นตอนที่ครอบคลุมนี้
 weight: 11
 url: /th/net/document-processing/save-edited-document-various-formats/
+type: docs
 ---
-
 # บันทึกเอกสารที่แก้ไขแล้วเป็นรูปแบบต่างๆ
 
 ## การแนะนำ

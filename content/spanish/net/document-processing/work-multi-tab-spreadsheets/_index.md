@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Aprenda a trabajar con hojas de cálculo de varias pestañas en .NET usando GroupDocs.Editor. Se incluyen guía paso a paso, ejemplos de código y mejores prácticas.
 weight: 17
 url: /es/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # Trabajar con hojas de cálculo de varias pestañas
 
 ## Introducción

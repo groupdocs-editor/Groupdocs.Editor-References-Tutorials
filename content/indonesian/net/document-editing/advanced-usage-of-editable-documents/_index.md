@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Pelajari penggunaan lanjutan GroupDocs.Editor untuk .NET dalam membuat, mengedit, dan mengekstrak sumber daya dari dokumen secara terprogram.
 weight: 11
 url: /id/net/document-editing/advanced-usage-of-editable-documents/
+type: docs
 ---
-
 # Penggunaan Lanjutan atas Dokumen yang Dapat Diedit
 
 ## Perkenalan

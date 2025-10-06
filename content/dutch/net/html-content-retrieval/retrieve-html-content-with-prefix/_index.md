@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Leer hoe u HTML-inhoud uit documenten kunt ophalen met GroupDocs.Editor voor .NET met aangepaste voorvoegsels voor afbeeldingen en stylesheets. Stap-voor-stap handleiding inbegrepen.
 weight: 11
 url: /nl/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # Haal HTML-inhoud met voorvoegsel op
 
 ## Invoering

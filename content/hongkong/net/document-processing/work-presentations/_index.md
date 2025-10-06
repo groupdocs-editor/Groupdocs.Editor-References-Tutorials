@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解使用 GroupDocs.Editor for .NET 編輯 PowerPoint 簡報。請按照此逐步指南簡化您的文件編輯流程。
 weight: 16
 url: /zh-hant/net/document-processing/work-presentations/
+type: docs
 ---
-
 # 處理簡報
 
 ## 介紹

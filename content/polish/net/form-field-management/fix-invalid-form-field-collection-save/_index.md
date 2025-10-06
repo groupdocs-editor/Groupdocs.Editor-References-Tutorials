@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak naprawić nieprawidłowe pola formularza w DOCX za pomocą Groupdocs.Editor dla .NET. Postępuj zgodnie z tym przewodnikiem, aby mieć pewność, że Twoje dokumenty są wolne od błędów i bezpiecznie je zapisywać.
 weight: 11
 url: /pl/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # Napraw nieprawidłowy zbiór pól formularza i zapisz
 
 ## Wstęp

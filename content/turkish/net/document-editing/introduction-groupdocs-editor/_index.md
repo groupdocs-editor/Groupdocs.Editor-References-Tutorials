@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Bu ayrıntılı adım adım kılavuzla belgeleri programlı olarak düzenlemek için GroupDocs.Editor for .NET'i nasıl kullanacağınızı öğrenin.
 weight: 12
 url: /tr/net/document-editing/introduction-groupdocs-editor/
+type: docs
 ---
-
 # .NET için GroupDocs.Editor'a giriş
 
 ## giriiş 

@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Scopri come rimuovere i campi modulo dai documenti Word utilizzando GroupDocs.Editor per .NET con questa guida passo passo. Ideale per gli sviluppatori.
 weight: 13
 url: /it/net/form-field-management/remove-form-field-collection/
+type: docs
 ---
-
 # Rimuovi raccolta campi modulo
 
 ## introduzione

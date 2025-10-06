@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 以及图像和样式表的自定义前缀从文档中检索 HTML 内容。包含分步指南。
 weight: 11
 url: /zh/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # 检索带前缀的 HTML 内容
 
 ## 介绍

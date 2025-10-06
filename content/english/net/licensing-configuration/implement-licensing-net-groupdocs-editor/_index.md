@@ -8,10 +8,8 @@ keywords:
 - Implement Licensing in .NET with GroupDocs.Editor
 - Set License using FileStream
 - GroupDocs.Editor for .NET
-
+type: docs
 ---
-
-
 # Implement Licensing in .NET with GroupDocs.Editor: A Step-by-Step Guide
 
 ## Introduction

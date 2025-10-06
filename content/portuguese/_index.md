@@ -6,8 +6,8 @@ description: Domine a edição de documentos sem esforço com GroupDocs.Editor p
 weight: 11
 url: /pt/
 is_root: true
+type: docs
 ---
-
 # Desbloqueando o gerenciamento de documentos com GroupDocs.Editor
 
 

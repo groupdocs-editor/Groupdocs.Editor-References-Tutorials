@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Aprenda a editar documentos sin esfuerzo con GroupDocs.Editor para .NET. Guía paso a paso para archivos de procesamiento de textos y hojas de cálculo.
 weight: 11
 url: /es/net/document-editing/edit-document/
+type: docs
 ---
-
 # Editar documento
 
 ## Introducción

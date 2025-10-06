@@ -5,8 +5,8 @@ weight: 10
 url: /net/
 description: Manage and edit documents with GroupDocs.Editor .NET. Learn document processing, document editing, HTML content retrieval, form field management, and more!
 is_root: true
+type: docs
 ---
-
 # Tutorials and Examples of GroupDocs.Editor for .NET
 
 

@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Aprenda como editar documentos programaticamente com GroupDocs.Editor for .NET. Guia passo a passo para carregar documentos, lidar com arquivos protegidos por senha e muito mais.
 weight: 13
 url: /pt/net/document-editing/load-document/
+type: docs
 ---
-
 # Carregar documento
 
 ## Introdução

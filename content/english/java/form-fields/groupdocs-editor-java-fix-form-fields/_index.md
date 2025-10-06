@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor Java
 - fix invalid form fields
 - automate document editing
-
+type: docs
 ---
-
-
 # How to Use GroupDocs.Editor Java to Fix Invalid Form Fields in Word Documents
 
 ## Introduction

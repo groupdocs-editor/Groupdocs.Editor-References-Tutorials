@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Groupdocs.Editor for .NET'i kullanarak DOCX'teki geçersiz form alanlarını nasıl düzelteceğinizi öğrenin. Belgelerinizin hatasız olduğundan emin olmak ve bunları güvenli bir şekilde kaydetmek için bu kılavuzu izleyin.
 weight: 11
 url: /tr/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # Geçersiz Form Alanı Koleksiyonunu Düzelt ve Kaydet
 
 ## giriiş

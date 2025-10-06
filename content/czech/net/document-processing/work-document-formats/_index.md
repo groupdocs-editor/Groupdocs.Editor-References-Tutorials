@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Naučte se používat GroupDocs.Editor pro .NET k programové úpravě různých formátů dokumentů. Podrobný průvodce s příklady bezproblémové integrace.
 weight: 13
 url: /cs/net/document-processing/work-document-formats/
+type: docs
 ---
-
 # Práce s formáty dokumentů
 
 ## Úvod

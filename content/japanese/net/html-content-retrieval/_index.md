@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用して HTML コンテンツを取得する方法について説明します。本文コンテンツとカスタム プレフィックスを取得するためのステップ バイ ステップ ガイドが含まれています。
 weight: 22
 url: /ja/net/html-content-retrieval/
+type: docs
 ---
-
 # HTML コンテンツの取得
 
 GroupDocs.Editor for .NET を使用すると、.NET アプリケーションで HTML コンテンツ取得のパワーを活用できます。包括的なチュートリアルでは、HTML 本文コンテンツの抽出プロセスと、画像やスタイルシートのカスタム プレフィックスの使用方法について説明します。ドキュメント管理を強化したい場合でも、リソース編成を合理化したい場合でも、ステップ バイ ステップのガイドでシームレスな統合が実現します。今すぐ使い始めて、アプリケーションの最適化を始めましょう。

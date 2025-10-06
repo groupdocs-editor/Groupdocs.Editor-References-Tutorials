@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengedit dokumen secara terprogram dengan GroupDocs.Editor untuk .NET. Panduan langkah demi langkah untuk memuat dokumen, menangani file yang dilindungi kata sandi, dan banyak lagi.
 weight: 13
 url: /id/net/document-editing/load-document/
+type: docs
 ---
-
 # Muat Dokumen
 
 ## Perkenalan

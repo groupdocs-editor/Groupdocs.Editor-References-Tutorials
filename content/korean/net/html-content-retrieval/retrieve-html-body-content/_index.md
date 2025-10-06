@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 단계별 가이드를 통해 .NET용 GroupDocs.Editor를 사용하여 HTML 본문 콘텐츠를 검색하세요. .NET 애플리케이션을 손쉽게 향상하세요.
 weight: 10
 url: /ko/net/html-content-retrieval/retrieve-html-body-content/
+type: docs
 ---
-
 # HTML 본문 콘텐츠 검색
 
 ## 소개

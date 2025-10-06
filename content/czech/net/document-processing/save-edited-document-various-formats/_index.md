@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Zjistěte, jak uložit upravené dokumenty do různých formátů pomocí GroupDocs.Editor pro .NET v tomto podrobném průvodci krok za krokem.
 weight: 11
 url: /cs/net/document-processing/save-edited-document-various-formats/
+type: docs
 ---
-
 # Uložit upravený dokument do různých formátů
 
 ## Úvod

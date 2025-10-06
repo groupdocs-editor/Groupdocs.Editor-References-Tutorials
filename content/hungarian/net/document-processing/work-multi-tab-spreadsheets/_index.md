@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan dolgozhat többlapos táblázatokkal .NET-ben a GroupDocs.Editor segítségével. Lépésről lépésre útmutató, kódpéldák és bevált gyakorlatok.
 weight: 17
 url: /hu/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # Dolgozzon többlapos táblázatokkal
 
 ## Bevezetés

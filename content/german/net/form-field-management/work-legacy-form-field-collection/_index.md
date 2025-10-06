@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie in unserem ausführlichen Handbuch, wie Sie mit GroupDocs.Editor für .NET ältere Formularfelder verwalten. Perfekt für die Handhabung von Textfeldern, Kontrollkästchen, Daten und mehr.
 weight: 12
 url: /de/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Arbeiten mit der Legacy-Formularfeldsammlung
 
 ## Einführung

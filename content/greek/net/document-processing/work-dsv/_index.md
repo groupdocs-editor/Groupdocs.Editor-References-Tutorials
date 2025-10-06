@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να επεξεργάζεστε αρχεία CSV και TSV χρησιμοποιώντας το GroupDocs.Editor για .NET με αυτόν τον οδηγό βήμα προς βήμα. Βελτιώστε τα έργα σας .NET χωρίς κόπο.
 weight: 12
 url: /el/net/document-processing/work-dsv/
+type: docs
 ---
-
 # Εργασία με οριοθετημένες διαχωρισμένες τιμές (DSV)
 
 ## Εισαγωγή

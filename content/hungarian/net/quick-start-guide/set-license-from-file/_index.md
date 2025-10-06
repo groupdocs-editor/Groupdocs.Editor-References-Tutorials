@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan használja a GroupDocs.Editor for .NET alkalmazást az alkalmazásokban történő zökkenőmentes dokumentumszerkesztéshez. Lépésről lépésre útmutató, tippek és GYIK mellékelve.
 weight: 10
 url: /hu/net/quick-start-guide/set-license-from-file/
+type: docs
 ---
-
 # Állítsa be a licencet a fájlból
 
 ## Bevezetés

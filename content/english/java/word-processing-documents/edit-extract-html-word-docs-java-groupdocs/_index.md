@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor Java
 - edit Word documents in Java
 - extract HTML from Word using Java
-
+type: docs
 ---
-
-
 # Master Editing and HTML Extraction of Word Documents in Java with GroupDocs.Editor
 
 ## Introduction

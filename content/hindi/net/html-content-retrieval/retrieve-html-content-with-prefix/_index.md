@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: .NET के लिए GroupDocs.Editor का उपयोग करके छवियों और स्टाइलशीट के लिए कस्टम उपसर्गों के साथ दस्तावेज़ों से HTML सामग्री प्राप्त करना सीखें। चरण-दर-चरण मार्गदर्शिका शामिल है।
 weight: 11
 url: /hi/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # उपसर्ग के साथ HTML सामग्री पुनर्प्राप्त करें
 
 ## परिचय

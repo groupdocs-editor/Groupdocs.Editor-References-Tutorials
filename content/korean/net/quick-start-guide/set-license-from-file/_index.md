@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 응용 프로그램에서 원활한 문서 편집을 위해 .NET용 GroupDocs.Editor를 사용하는 방법을 알아보세요. 단계별 가이드, 팁, FAQ가 포함되어 있습니다.
 weight: 10
 url: /ko/net/quick-start-guide/set-license-from-file/
+type: docs
 ---
-
 # 파일에서 라이센스 설정
 
 ## 소개

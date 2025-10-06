@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: दस्तावेज़ों को प्रोग्रामेटिक रूप से संपादित करने के लिए .NET के लिए Groupdocs.Editor का उपयोग करना सीखें। सहज एकीकरण और उन्नत सुविधाओं के लिए इस विस्तृत मार्गदर्शिका का पालन करें।
 weight: 11
 url: /hi/net/quick-start-guide/set-license-from-stream/
+type: docs
 ---
-
 # स्ट्रीम से लाइसेंस सेट करें
 
 ## परिचय

@@ -8,10 +8,8 @@ keywords:
 - Java XML editing
 - GroupDocs.Editor Java library
 - XML file manipulation
-
+type: docs
 ---
-
-
 # Mastering Java XML Editing and Saving with GroupDocs.Editor: A Comprehensive Guide for Developers
 
 ## Introduction

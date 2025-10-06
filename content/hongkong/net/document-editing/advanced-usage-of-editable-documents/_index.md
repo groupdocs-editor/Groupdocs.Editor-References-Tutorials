@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解 GroupDocs.Editor 的高級用法，以便以程式設計方式從文件中建立、編輯和提取資源。
 weight: 11
 url: /zh-hant/net/document-editing/advanced-usage-of-editable-documents/
+type: docs
 ---
-
 # 可編輯文檔的進階用法
 
 ## 介紹

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Groupdocs.Editor を使用して、.NET プロジェクトでのドキュメント編集効率を向上させます。フォーム フィールド コレクションをシームレスに変更します。
 weight: 10
 url: /ja/net/form-field-management/edit-form-field-collection/
+type: docs
 ---
-
 # フォームフィールドコレクションの編集
 
 ## 導入

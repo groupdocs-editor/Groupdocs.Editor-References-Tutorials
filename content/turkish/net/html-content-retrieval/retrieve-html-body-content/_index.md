@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Adım adım kılavuzumuzla GroupDocs.Editor for .NET'i kullanarak HTML gövde içeriğini alın. .NET uygulamalarınızı zahmetsizce geliştirin.
 weight: 10
 url: /tr/net/html-content-retrieval/retrieve-html-body-content/
+type: docs
 ---
-
 # HTML Gövde İçeriğini Alma
 
 ## giriiş

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: แก้ไขเอกสารการประมวลผล Word ได้อย่างง่ายดายด้วย GroupDocs.Editor สำหรับ .NET ปฏิบัติตามบทช่วยสอนแบบละเอียดทีละขั้นตอนของเราเพื่อพัฒนาทักษะการจัดการเอกสารของคุณ
 weight: 19
 url: /th/net/document-processing/work-word-processing-documents/
+type: docs
 ---
-
 # ทำงานกับเอกสารการประมวลผลคำ
 
 ## การแนะนำ

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Redigera ordbehandlingsdokument enkelt med GroupDocs.Editor för .NET. Följ vår detaljerade, steg-för-steg-handledning för att förbättra dina färdigheter i dokumenthantering.
 weight: 19
 url: /sv/net/document-processing/work-word-processing-documents/
+type: docs
 ---
-
 # Arbeta med ordbehandlingsdokument
 
 ## Introduktion

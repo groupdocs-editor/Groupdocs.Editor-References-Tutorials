@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor
 - .net
 - Document Processing
-
+type: docs
 ---
-
-
 # Edit Word Form Fields Using GroupDocs.Editor .NET
 
 ## Introduction

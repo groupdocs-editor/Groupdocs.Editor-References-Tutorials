@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: इस विस्तृत चरण-दर-चरण मार्गदर्शिका के साथ दस्तावेज़ों को प्रोग्रामेटिक रूप से संपादित करने के लिए GroupDocs.Editor for .NET का उपयोग करना सीखें।
 weight: 12
 url: /hi/net/document-editing/introduction-groupdocs-editor/
+type: docs
 ---
-
 # .NET के लिए GroupDocs.Editor का परिचय
 
 ## परिचय 

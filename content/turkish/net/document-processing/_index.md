@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor ile .NET'te belge işleme konusunda uzmanlaşın. Bilgi çıkarmayı, çeşitli formatlarda kaydetmeyi ve farklı belge türleriyle zahmetsizce çalışmayı öğrenin.
 weight: 24
 url: /tr/net/document-processing/
+type: docs
 ---
-
 # Belge oluşturuluyor
 
 

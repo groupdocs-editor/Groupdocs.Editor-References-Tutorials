@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: .NET용 GroupDocs.Editor를 사용하여 암호로 보호된 스프레드시트를 처리하는 방법을 알아보세요. 이 자세한 가이드는 안전한 Excel 파일을 열어서 저장하는 과정을 안내합니다.
 weight: 18
 url: /ko/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # 비밀번호로 보호된 스프레드시트 작업
 
 ## 소개

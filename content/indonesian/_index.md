@@ -6,8 +6,8 @@ description: Kuasai pengeditan dokumen dengan mudah menggunakan GroupDocs.Editor
 weight: 11
 url: /id/
 is_root: true
+type: docs
 ---
-
 # Membuka Kunci Manajemen Dokumen dengan GroupDocs.Editor
 
 

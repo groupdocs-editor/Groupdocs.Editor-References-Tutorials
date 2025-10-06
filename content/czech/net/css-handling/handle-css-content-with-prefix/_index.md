@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: V tomto podrobném návodu krok za krokem se dozvíte, jak zacházet s obsahem CSS s předponou pomocí Groupdocs.Editor pro .NET. Ideální pro vývojáře všech úrovní.
 weight: 11
 url: /cs/net/css-handling/handle-css-content-with-prefix/
+type: docs
 ---
-
 # Zvládejte obsah CSS s předponou
 
 ## Úvod

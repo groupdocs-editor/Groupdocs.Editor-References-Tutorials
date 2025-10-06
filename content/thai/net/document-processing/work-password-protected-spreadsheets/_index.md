@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีจัดการสเปรดชีตที่ป้องกันด้วยรหัสผ่านโดยใช้ GroupDocs.Editor สำหรับ .NET คำแนะนำโดยละเอียดนี้จะอธิบายขั้นตอนการเปิดเพื่อบันทึกไฟล์ Excel ที่ปลอดภัย
 weight: 18
 url: /th/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # ทำงานกับสเปรดชีตที่มีการป้องกันด้วยรหัสผ่าน
 
 ## การแนะนำ

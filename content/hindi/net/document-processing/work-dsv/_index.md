@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: इस चरण-दर-चरण मार्गदर्शिका के साथ .NET के लिए GroupDocs.Editor का उपयोग करके CSV और TSV फ़ाइलों को संपादित करना सीखें। अपने .NET प्रोजेक्ट्स को आसानी से बेहतर बनाएँ।
 weight: 12
 url: /hi/net/document-processing/work-dsv/
+type: docs
 ---
-
 # सीमांकित पृथक मान (DSV) के साथ कार्य करें
 
 ## परिचय

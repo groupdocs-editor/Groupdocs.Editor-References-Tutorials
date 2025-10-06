@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Edite facilmente documentos de processamento de texto com GroupDocs.Editor for .NET. Siga nosso tutorial detalhado passo a passo para aprimorar suas habilidades de gerenciamento de documentos.
 weight: 19
 url: /pt/net/document-processing/work-word-processing-documents/
+type: docs
 ---
-
 # Trabalhe com documentos de processamento de texto
 
 ## Introdução

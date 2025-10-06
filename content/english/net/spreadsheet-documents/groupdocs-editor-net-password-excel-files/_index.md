@@ -8,10 +8,8 @@ keywords:
 - password protect excel
 - GroupDocs.Editor for .NET
 - secure spreadsheet management
-
+type: docs
 ---
-
-
 # Password Protect Excel Files Using GroupDocs.Editor for .NET
 
 ## Introduction

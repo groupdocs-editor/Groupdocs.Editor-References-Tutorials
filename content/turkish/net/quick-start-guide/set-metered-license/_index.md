@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Kapsamlı kılavuzumuzla GroupDocs.Editor for .NET'i nasıl entegre edeceğinizi ve kullanacağınızı öğrenin. .NET uygulamalarınızdaki güçlü belge düzenleme özelliklerinin kilidini açın.
 weight: 12
 url: /tr/net/quick-start-guide/set-metered-license/
+type: docs
 ---
-
 # Ölçülü Lisansı Ayarla
 
 ## giriiş

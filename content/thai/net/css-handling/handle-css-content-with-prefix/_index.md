@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีจัดการเนื้อหา CSS ด้วยคำนำหน้าโดยใช้ Groupdocs.Editor สำหรับ .NET ในบทช่วยสอนทีละขั้นตอนโดยละเอียดนี้ เหมาะสำหรับนักพัฒนาทุกระดับ
 weight: 11
 url: /th/net/css-handling/handle-css-content-with-prefix/
+type: docs
 ---
-
 # จัดการเนื้อหา CSS ด้วยคำนำหน้า
 
 ## การแนะนำ

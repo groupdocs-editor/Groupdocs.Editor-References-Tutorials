@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية استخدام Groupdocs.Editor لـ .NET لتحرير المستندات برمجيًا. اتبع هذا الشامل للتكامل السلس والميزات المتقدمة.
 weight: 11
 url: /ar/net/quick-start-guide/set-license-from-stream/
+type: docs
 ---
-
 # قم بتعيين الترخيص من الدفق
 
 ## مقدمة

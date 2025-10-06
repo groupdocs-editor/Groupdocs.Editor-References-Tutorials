@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Leer hoe u platte-tekstdocumenten kunt bewerken met GroupDocs.Editor voor .NET met onze stapsgewijze handleiding. Vereenvoudig uw .NET-documentbewerkingsproces.
 weight: 15
 url: /nl/net/document-processing/work-plain-text-documents/
+type: docs
 ---
-
 # Werken met platte tekstdocumenten
 
 ## Invoering

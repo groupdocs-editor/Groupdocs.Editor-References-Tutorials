@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Kelola dan edit dokumen dengan GroupDocs.Editor .NET. Pelajari cara membuat, mengedit, dan menyimpan dokumen dengan mudah. Tingkatkan alur kerja manajemen dokumen Anda hari ini!
 weight: 20
 url: /id/net/document-editing/
+type: docs
 ---
-
 # Pengeditan Dokumen
 
 

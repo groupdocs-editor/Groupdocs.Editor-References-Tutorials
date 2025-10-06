@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعلم كيفية تحرير المستندات بسهولة باستخدام GroupDocs.Editor لـ .NET. دليل خطوة بخطوة لمعالجة النصوص وملفات جداول البيانات.
 weight: 11
 url: /ar/net/document-editing/edit-document/
+type: docs
 ---
-
 # تحرير المستند
 
 ## مقدمة

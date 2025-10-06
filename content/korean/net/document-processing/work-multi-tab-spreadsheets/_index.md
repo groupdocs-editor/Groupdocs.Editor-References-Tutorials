@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor를 사용하여 .NET에서 다중 탭 스프레드시트로 작업하는 방법을 알아보세요. 단계별 가이드, 코드 예제, 모범 사례가 포함되어 있습니다.
 weight: 17
 url: /ko/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # 다중 탭 스프레드시트 작업
 
 ## 소개

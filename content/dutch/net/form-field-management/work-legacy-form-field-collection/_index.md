@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Leer hoe u oudere formuliervelden beheert met GroupDocs.Editor voor .NET met onze gedetailleerde handleiding. Perfect voor het verwerken van tekstvelden, selectievakjes, datums en meer.
 weight: 12
 url: /nl/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Werken met verouderde formulierveldverzameling
 
 ## Invoering

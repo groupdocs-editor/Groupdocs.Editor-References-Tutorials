@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET'i kullanarak parola korumalı elektronik tabloları nasıl kullanacağınızı öğrenin. Bu ayrıntılı kılavuz, güvenli Excel dosyalarını kaydetmeye başlama konusunda size yol gösterir.
 weight: 18
 url: /tr/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # Parola Korumalı Elektronik Tablolarla Çalışma
 
 ## giriiş

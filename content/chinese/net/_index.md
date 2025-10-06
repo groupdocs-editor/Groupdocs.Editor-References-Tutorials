@@ -5,8 +5,8 @@ weight: 10
 url: /zh/net/
 description: 使用 GroupDocs.Editor .NET 管理和编辑文档。了解文档处理、文档编辑、HTML 内容检索、表单字段管理等！
 is_root: true
+type: docs
 ---
-
 # GroupDocs.Editor for .NET 的教程和示例
 
 

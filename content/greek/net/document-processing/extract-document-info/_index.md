@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να εξάγετε πληροφορίες εγγράφων χρησιμοποιώντας το GroupDocs.Editor για .NET με τον αναλυτικό, βήμα προς βήμα εκμάθησή μας. Ιδανικό για τη διαχείριση διαφόρων τύπων εγγράφων.
 weight: 10
 url: /el/net/document-processing/extract-document-info/
+type: docs
 ---
-
 # Απόσπασμα πληροφοριών εγγράφου
 
 ## Εισαγωγή

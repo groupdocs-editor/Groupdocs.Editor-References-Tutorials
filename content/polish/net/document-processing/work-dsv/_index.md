@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Z tego przewodnika krok po kroku dowiesz się, jak edytować pliki CSV i TSV przy użyciu programu GroupDocs.Editor dla platformy .NET. Ulepszaj swoje projekty .NET bez wysiłku.
 weight: 12
 url: /pl/net/document-processing/work-dsv/
+type: docs
 ---
-
 # Praca z wartościami rozdzielonymi rozdzielanymi (DSV)
 
 ## Wstęp

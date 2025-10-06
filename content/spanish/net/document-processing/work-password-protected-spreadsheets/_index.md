@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Aprenda a manejar hojas de cálculo protegidas con contraseña utilizando GroupDocs.Editor para .NET. Esta guía detallada lo guiará desde cómo abrir hasta cómo guardar archivos seguros de Excel.
 weight: 18
 url: /es/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # Trabajar con hojas de cálculo protegidas con contraseña
 
 ## Introducción

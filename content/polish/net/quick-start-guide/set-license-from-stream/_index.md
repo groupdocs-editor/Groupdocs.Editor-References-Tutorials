@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak używać programu Groupdocs.Editor dla platformy .NET do programowej edycji dokumentów. Skorzystaj z tego kompleksowego rozwiązania, aby uzyskać bezproblemową integrację i zaawansowane funkcje.
 weight: 11
 url: /pl/net/quick-start-guide/set-license-from-stream/
+type: docs
 ---
-
 # Ustaw licencję ze strumienia
 
 ## Wstęp

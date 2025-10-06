@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Améliorez l'efficacité de l'édition de documents dans les projets .NET avec Groupdocs.Editor. Modifiez les collections de champs de formulaire en toute transparence.
 weight: 10
 url: /fr/net/form-field-management/edit-form-field-collection/
+type: docs
 ---
-
 # Modifier la collection de champs de formulaire
 
 ## Introduction

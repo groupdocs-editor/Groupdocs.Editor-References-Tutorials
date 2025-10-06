@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Узнайте, как сохранять отредактированные документы в различных форматах с помощью GroupDocs.Editor для .NET, в этом подробном пошаговом руководстве.
 weight: 11
 url: /ru/net/document-processing/save-edited-document-various-formats/
+type: docs
 ---
-
 # Сохранение отредактированного документа в различных форматах
 
 ## Введение

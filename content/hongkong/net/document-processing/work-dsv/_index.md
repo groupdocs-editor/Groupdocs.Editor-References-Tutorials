@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 透過此逐步指南，了解如何使用 GroupDocs.Editor for .NET 編輯 CSV 和 TSV 檔案。輕鬆改進您的 .NET 專案。
 weight: 12
 url: /zh-hant/net/document-processing/work-dsv/
+type: docs
 ---
-
 # 使用分隔分隔值 (DSV)
 
 ## 介紹

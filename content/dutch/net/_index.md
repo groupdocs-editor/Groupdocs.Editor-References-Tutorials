@@ -5,8 +5,8 @@ weight: 10
 url: /nl/net/
 description: Beheer en bewerk documenten met GroupDocs.Editor .NET. Leer documentverwerking, documentbewerking, ophalen van HTML-inhoud, beheer van formuliervelden en meer!
 is_root: true
+type: docs
 ---
-
 # Tutorials en voorbeelden van GroupDocs.Editor voor .NET
 
 

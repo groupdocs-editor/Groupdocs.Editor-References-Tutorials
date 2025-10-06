@@ -3,8 +3,8 @@ title: Java Document Editing Tutorial & Processing API
 description: Build document automation solutions to load, edit, and save different document formats with GroupDocs.Editor for Java. Seamlessly integrate editing capabilities into your Java applications.
 weight: 2
 url: /java/
+type: docs
 ---
-
 # Document Editing for Java
 
 GroupDocs.Editor for Java is a powerful document editing API that enables developers to seamlessly integrate document editing capabilities into their Java applications. With this comprehensive library, you can load, edit, and save various document formats including Word, Excel, PowerPoint, PDF, and more without requiring external applications.

@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Elaborazione di documenti master in .NET con GroupDocs.Editor. Impara a estrarre informazioni, salvarle in vari formati e lavorare con diversi tipi di documenti senza sforzo.
 weight: 24
 url: /it/net/document-processing/
+type: docs
 ---
-
 # Elaborazione dei documenti
 
 

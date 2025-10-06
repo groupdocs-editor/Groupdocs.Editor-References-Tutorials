@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Получите содержимое тела HTML с помощью GroupDocs.Editor для .NET с помощью нашего пошагового руководства. Улучшайте свои приложения .NET без особых усилий.
 weight: 10
 url: /ru/net/html-content-retrieval/retrieve-html-body-content/
+type: docs
 ---
-
 # Получить HTML-содержимое тела
 
 ## Введение

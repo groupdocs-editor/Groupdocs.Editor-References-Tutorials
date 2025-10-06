@@ -8,10 +8,8 @@ keywords:
 - convert Word to HTML
 - GroupDocs.Editor .NET setup
 - extracting HTML from Word
-
+type: docs
 ---
-
-
 # Convert Word Documents to HTML with GroupDocs.Editor .NET
 
 ## Introduction

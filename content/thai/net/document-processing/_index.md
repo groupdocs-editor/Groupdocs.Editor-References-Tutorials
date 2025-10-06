@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: การประมวลผลเอกสารหลักใน .NET ด้วย GroupDocs.Editor เรียนรู้วิธีดึงข้อมูล บันทึกเป็นรูปแบบต่างๆ และทำงานกับเอกสารประเภทต่างๆ ได้อย่างง่ายดาย
 weight: 24
 url: /th/net/document-processing/
+type: docs
 ---
-
 # การประมวลผลเอกสาร
 
 

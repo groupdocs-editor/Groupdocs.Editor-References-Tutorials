@@ -8,10 +8,8 @@ keywords:
 - optimize DOCX
 - protect Word documents
 - fix invalid form fields
-
+type: docs
 ---
-
-
 # Optimize and Protect DOCX Files Using GroupDocs.Editor in .NET: An Advanced Guide
 
 ## Introduction

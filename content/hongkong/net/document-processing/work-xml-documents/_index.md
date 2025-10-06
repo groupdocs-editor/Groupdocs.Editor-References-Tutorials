@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 透過我們涵蓋所有基本步驟和選項的逐步指南，了解如何使用 GroupDocs.Editor for .NET 高效編輯 XML 文件。
 weight: 20
 url: /zh-hant/net/document-processing/work-xml-documents/
+type: docs
 ---
-
 # 處理 XML 文檔
 
 ## 介紹

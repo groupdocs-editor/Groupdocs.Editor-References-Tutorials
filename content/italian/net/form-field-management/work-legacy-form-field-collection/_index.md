@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Scopri come gestire i campi del modulo legacy utilizzando GroupDocs.Editor per .NET con la nostra guida dettagliata. Perfetto per gestire campi di testo, caselle di controllo, date e altro.
 weight: 12
 url: /it/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Lavora con la raccolta di campi modulo legacy
 
 ## introduzione

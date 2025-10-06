@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Scopri come gestire i fogli di calcolo protetti da password utilizzando GroupDocs.Editor per .NET. Questa guida dettagliata ti guida attraverso l'apertura e il salvataggio di file Excel protetti.
 weight: 18
 url: /it/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # Lavora con fogli di calcolo protetti da password
 
 ## introduzione

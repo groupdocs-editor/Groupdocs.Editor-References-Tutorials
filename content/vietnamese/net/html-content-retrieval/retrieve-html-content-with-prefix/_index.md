@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách truy xuất nội dung HTML từ tài liệu bằng GroupDocs.Editor cho .NET với tiền tố tùy chỉnh cho hình ảnh và biểu định kiểu. Hướng dẫn từng bước bao gồm.
 weight: 11
 url: /vi/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # Truy xuất nội dung HTML bằng tiền tố
 
 ## Giới thiệu

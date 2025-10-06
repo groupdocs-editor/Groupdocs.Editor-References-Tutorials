@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Letöltheti a HTML törzstartalmat a GroupDocs.Editor for .NET segítségével lépésenkénti útmutatónkkal. Bővítse .NET-alkalmazásait könnyedén.
 weight: 10
 url: /hu/net/html-content-retrieval/retrieve-html-body-content/
+type: docs
 ---
-
 # HTML törzstartalom lekérése
 
 ## Bevezetés

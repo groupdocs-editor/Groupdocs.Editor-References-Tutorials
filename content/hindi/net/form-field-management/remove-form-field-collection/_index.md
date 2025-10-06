@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: इस चरण-दर-चरण मार्गदर्शिका के साथ .NET के लिए GroupDocs.Editor का उपयोग करके Word दस्तावेज़ों से फ़ॉर्म फ़ील्ड निकालना सीखें। डेवलपर्स के लिए आदर्श।
 weight: 13
 url: /hi/net/form-field-management/remove-form-field-collection/
+type: docs
 ---
-
 # फ़ॉर्म फ़ील्ड संग्रह निकालें
 
 ## परिचय

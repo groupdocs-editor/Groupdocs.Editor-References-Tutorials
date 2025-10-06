@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor Java
 - edit Word documents with Java
 - Java document management
-
+type: docs
 ---
-
-
 # Mastering GroupDocs.Editor for Java: A Comprehensive Guide to Editing Word Documents
 
 **Unlock the Full Potential of Document Management with GroupDocs.Editor in Java**

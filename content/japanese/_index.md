@@ -6,8 +6,8 @@ description: GroupDocs.Editor for .NET & Java を使用すると、ドキュメ�
 weight: 11
 url: /ja/
 is_root: true
+type: docs
 ---
-
 # GroupDocs.Editor でドキュメント管理を解放する
 
 

@@ -8,10 +8,8 @@ keywords:
 - extract DOCX resources
 - GroupDocs.Editor .NET setup
 - save Word document assets
-
+type: docs
 ---
-
-
 # Efficiently Extract & Save Docx Resources with GroupDocs.Editor .NET
 
 In today's digital age, efficiently managing document resources can significantly enhance business operations and development workflows. Whether you need to extract images from a Word document or save fonts and CSS stylesheets for further processing, this comprehensive guide introduces the power of GroupDocs.Editor .NET. Learn how to seamlessly extract and save various resources from DOCX files.

@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Dễ dàng chỉnh sửa tài liệu xử lý Word bằng GroupDocs.Editor cho .NET. Hãy làm theo hướng dẫn chi tiết từng bước của chúng tôi để nâng cao kỹ năng quản lý tài liệu của bạn.
 weight: 19
 url: /vi/net/document-processing/work-word-processing-documents/
+type: docs
 ---
-
 # Làm việc với tài liệu xử lý văn bản
 
 ## Giới thiệu

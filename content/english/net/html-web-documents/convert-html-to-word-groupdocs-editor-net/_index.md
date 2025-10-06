@@ -8,10 +8,8 @@ keywords:
 - convert HTML to Word .NET
 - GroupDocs.Editor for .NET
 - editable DOCX documents
-
+type: docs
 ---
-
-
 # Convert HTML to Word with GroupDocs.Editor in .NET
 ## How to Transform an HTML File into an Editable DOCX Document Using GroupDocs.Editor for .NET
 ### Introduction

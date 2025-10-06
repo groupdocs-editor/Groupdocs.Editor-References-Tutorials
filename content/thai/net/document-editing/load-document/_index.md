@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีแก้ไขเอกสารโดยทางโปรแกรมด้วย GroupDocs.Editor สำหรับ .NET คำแนะนำทีละขั้นตอนสำหรับการโหลดเอกสาร การจัดการไฟล์ที่ป้องกันด้วยรหัสผ่าน และอื่นๆ
 weight: 13
 url: /th/net/document-editing/load-document/
+type: docs
 ---
-
 # โหลดเอกสาร
 
 ## การแนะนำ

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用して、パスワードで保護されたスプレッドシートを処理する方法を学びます。この詳細なガイドでは、安全な Excel ファイルを開いて保存するまでの手順を説明します。
 weight: 18
 url: /ja/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # パスワードで保護されたスプレッドシートを操作する
 
 ## 導入

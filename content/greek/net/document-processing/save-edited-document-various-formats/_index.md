@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να αποθηκεύετε επεξεργασμένα έγγραφα σε διάφορες μορφές χρησιμοποιώντας το GroupDocs.Editor για .NET σε αυτόν τον αναλυτικό οδηγό βήμα προς βήμα.
 weight: 11
 url: /el/net/document-processing/save-edited-document-various-formats/
+type: docs
 ---
-
 # Αποθηκεύστε το επεξεργασμένο έγγραφο σε διάφορες μορφές
 
 ## Εισαγωγή

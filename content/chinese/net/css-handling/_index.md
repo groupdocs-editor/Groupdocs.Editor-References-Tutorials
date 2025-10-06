@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 有效处理 CSS 内容。提取外部 CSS 内容并轻松处理带有前缀的 CSS 内容。
 weight: 21
 url: /zh/net/css-handling/
+type: docs
 ---
-
 # CSS 处理
 
 

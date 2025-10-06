@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Naučte se, jak extrahovat zdroje HTML z dokumentů pomocí Groupdocs.Editor pro .NET. Tento komplexní tutoriál poskytuje vývojářům podrobné pokyny.
 weight: 13
 url: /cs/net/document-editing/save-html-resources-to-folder/
+type: docs
 ---
-
 # Uložte zdroje HTML do složky
 
 ## Úvod

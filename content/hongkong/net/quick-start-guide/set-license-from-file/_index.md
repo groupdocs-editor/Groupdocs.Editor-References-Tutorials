@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 在應用程式中進行無縫文件編輯。包括逐步指南、提示和常見問題。
 weight: 10
 url: /zh-hant/net/quick-start-guide/set-license-from-file/
+type: docs
 ---
-
 # 從文件設定許可證
 
 ## 介紹

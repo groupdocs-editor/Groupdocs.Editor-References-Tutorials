@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Trích xuất nội dung HTML từ tài liệu một cách dễ dàng bằng GroupDocs.Editor cho .NET. Hãy làm theo hướng dẫn chi tiết của chúng tôi để tích hợp liền mạch và quản lý tài liệu.
 weight: 12
 url: /vi/net/document-editing/extract-html-content-from-editable-document/
+type: docs
 ---
-
 # Trích xuất nội dung HTML từ tài liệu có thể chỉnh sửa
 
 ## Giới thiệu

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: .NET के लिए Groupdocs.Editor का उपयोग करके DOCX में अमान्य फ़ॉर्म फ़ील्ड को ठीक करने का तरीका जानें। अपने दस्तावेज़ों को त्रुटि-रहित बनाने और उन्हें सुरक्षित रूप से सहेजने के लिए इस गाइड का पालन करें।
 weight: 11
 url: /hi/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # अमान्य फ़ॉर्म फ़ील्ड संग्रह को ठीक करें और सहेजें
 
 ## परिचय

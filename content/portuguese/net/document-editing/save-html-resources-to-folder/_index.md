@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Aprenda como extrair recursos HTML de documentos usando Groupdocs.Editor for .NET. Este tutorial abrangente fornece orientação passo a passo para desenvolvedores.
 weight: 13
 url: /pt/net/document-editing/save-html-resources-to-folder/
+type: docs
 ---
-
 # Salvar recursos HTML na pasta
 
 ## Introdução

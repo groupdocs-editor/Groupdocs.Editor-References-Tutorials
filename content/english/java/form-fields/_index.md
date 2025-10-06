@@ -3,8 +3,8 @@ title: "Form Fields Editing Tutorials with GroupDocs.Editor for Java"
 description: "Complete tutorials for working with document form fields, interactive forms, and form content using GroupDocs.Editor for Java."
 weight: 12
 url: "/java/form-fields/"
+type: docs
 ---
-
 # Form Fields Editing Tutorials with GroupDocs.Editor for Java
 
 Master form field processing with our detailed GroupDocs.Editor tutorials for Java. These practical guides demonstrate how to edit form fields in documents, work with legacy form fields, fix invalid form field collections, and implement form-specific editing features. Each tutorial provides working Java code examples for common form field scenarios, helping you build applications that can effectively handle interactive forms while maintaining field functionality and data integrity.

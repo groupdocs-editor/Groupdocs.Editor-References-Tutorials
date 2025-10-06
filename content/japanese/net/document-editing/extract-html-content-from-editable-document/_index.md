@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用して、ドキュメントから HTML コンテンツを簡単に抽出できます。シームレスな統合とドキュメント管理については、詳細なガイドに従ってください。
 weight: 12
 url: /ja/net/document-editing/extract-html-content-from-editable-document/
+type: docs
 ---
-
 # 編集可能なドキュメントから HTML コンテンツを抽出する
 
 ## 導入

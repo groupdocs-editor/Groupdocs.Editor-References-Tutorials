@@ -5,8 +5,8 @@ weight: 10
 url: /vi/net/
 description: Quản lý và chỉnh sửa tài liệu với GroupDocs.Editor .NET. Tìm hiểu cách xử lý tài liệu, chỉnh sửa tài liệu, truy xuất nội dung HTML, quản lý trường biểu mẫu và hơn thế nữa!
 is_root: true
+type: docs
 ---
-
 # Hướng dẫn và ví dụ về GroupDocs.Editor cho .NET
 
 

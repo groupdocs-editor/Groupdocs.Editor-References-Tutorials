@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ontdek hoe u HTML-inhoud kunt ophalen met GroupDocs.Editor voor .NET. Inclusief stapsgewijze handleidingen voor het ophalen van hoofdinhoud en aangepaste voorvoegsels.
 weight: 22
 url: /nl/net/html-content-retrieval/
+type: docs
 ---
-
 # HTML-inhoud ophalen
 
 Ontgrendel de kracht van het ophalen van HTML-inhoud in uw .NET-toepassingen met GroupDocs.Editor voor .NET. Onze uitgebreide tutorials begeleiden u bij het extraheren van HTML-hoofdtekstinhoud en het gebruik van aangepaste voorvoegsels voor afbeeldingen en stylesheets. Of u nu het documentbeheer wilt verbeteren of de organisatie van uw bronnen wilt stroomlijnen, onze stapsgewijze handleidingen zorgen voor een naadloze integratie. Duik erin en begin vandaag nog met het optimaliseren van uw applicaties!

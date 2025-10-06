@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: GroupDocs.Editor .NET के साथ दस्तावेज़ों को प्रबंधित और संपादित करें। आसानी से दस्तावेज़ बनाने, संपादित करने और सहेजने का तरीका जानें। आज ही अपने दस्तावेज़ प्रबंधन वर्कफ़्लो को बेहतर बनाएँ!
 weight: 20
 url: /hi/net/document-editing/
+type: docs
 ---
-
 # दस्तावेज़ संपादन
 
 

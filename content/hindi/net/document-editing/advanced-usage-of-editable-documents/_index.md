@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: .NET के लिए GroupDocs.Editor का उन्नत उपयोग सीखें, दस्तावेज़ों से प्रोग्रामेटिक रूप से संसाधन बनाएं, संपादित करें और निकालें।
 weight: 11
 url: /hi/net/document-editing/advanced-usage-of-editable-documents/
+type: docs
 ---
-
 # संपादन योग्य दस्तावेज़ों का उन्नत उपयोग
 
 ## परिचय

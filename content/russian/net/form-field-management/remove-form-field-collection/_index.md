@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Узнайте, как удалить поля формы из документов Word с помощью GroupDocs.Editor для .NET, с помощью этого пошагового руководства. Идеально подходит для разработчиков.
 weight: 13
 url: /ru/net/form-field-management/remove-form-field-collection/
+type: docs
 ---
-
 # Удаление коллекции полей формы
 
 ## Введение

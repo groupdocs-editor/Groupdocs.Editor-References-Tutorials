@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor .NET
 - text document editing
 - plain text file processing
-
+type: docs
 ---
-
-
 # Master Efficient Text Editing and Saving with GroupDocs.Editor for .NET
 
 ## Introduction

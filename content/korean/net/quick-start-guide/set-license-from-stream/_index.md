@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: .NET용 Groupdocs.Editor를 사용하여 프로그래밍 방식으로 문서를 편집하는 방법을 알아보세요. 원활한 통합과 고급 기능을 보려면 이 포괄적인 내용을 따르십시오.
 weight: 11
 url: /ko/net/quick-start-guide/set-license-from-stream/
+type: docs
 ---
-
 # 스트림에서 라이선스 설정
 
 ## 소개

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Könnyedén szerkessze a szövegszerkesztő dokumentumokat a GroupDocs.Editor for .NET segítségével. Kövesse részletes, lépésről lépésre bemutató oktatóanyagunkat, hogy javítsa dokumentumkezelési készségeit.
 weight: 19
 url: /hu/net/document-processing/work-word-processing-documents/
+type: docs
 ---
-
 # Szövegszerkesztő dokumentumok használata
 
 ## Bevezetés

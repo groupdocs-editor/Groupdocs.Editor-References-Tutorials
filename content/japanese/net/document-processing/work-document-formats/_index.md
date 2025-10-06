@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用してさまざまなドキュメント形式をプログラムで編集する方法を学びます。シームレスな統合のための例を説明したステップバイステップ ガイドです。
 weight: 13
 url: /ja/net/document-processing/work-document-formats/
+type: docs
 ---
-
 # ドキュメント形式の操作
 
 ## 導入

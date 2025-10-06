@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: .NET के लिए GroupDocs.Editor का उपयोग करके दस्तावेज़ों को आसानी से संपादित और सहेजें। यह चरण-दर-चरण मार्गदर्शिका डेवलपर्स के लिए प्रक्रिया को सरल बनाती है।
 weight: 14
 url: /hi/net/document-editing/save-document/
+type: docs
 ---
-
 # दस्तावेज़ सहेजें
 
 ## परिचय

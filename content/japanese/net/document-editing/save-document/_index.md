@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用すると、ドキュメントを簡単に編集して保存できます。このステップ バイ ステップ ガイドは、開発者のプロセスを簡素化します。
 weight: 14
 url: /ja/net/document-editing/save-document/
+type: docs
 ---
-
 # ドキュメントを保存
 
 ## 導入

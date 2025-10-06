@@ -3,8 +3,8 @@ title: "Presentation Document Editing Tutorials for GroupDocs.Editor Java"
 description: "Step-by-step tutorials for editing PowerPoint presentations, slides, and presentation elements using GroupDocs.Editor for Java."
 weight: 7
 url: "/java/presentation-documents/"
+type: docs
 ---
-
 # Presentation Document Editing Tutorials for GroupDocs.Editor Java
 
 Our presentation editing tutorials show you how to work with PowerPoint files using GroupDocs.Editor in Java. These step-by-step guides cover editing presentations, modifying slides and slide content, handling presentation elements like shapes and text boxes, and preserving animations and transitions. Each tutorial includes detailed Java code examples for common presentation editing scenarios, helping you build applications that can edit and process presentation documents while maintaining their visual appearance and functionality.

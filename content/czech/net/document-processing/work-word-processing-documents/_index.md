@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Bez námahy upravujte dokumenty pro zpracování textu pomocí GroupDocs.Editor pro .NET. Postupujte podle našeho podrobného výukového programu krok za krokem a zdokonalte své dovednosti v oblasti správy dokumentů.
 weight: 19
 url: /cs/net/document-processing/work-word-processing-documents/
+type: docs
 ---
-
 # Práce s dokumenty pro zpracování textu
 
 ## Úvod

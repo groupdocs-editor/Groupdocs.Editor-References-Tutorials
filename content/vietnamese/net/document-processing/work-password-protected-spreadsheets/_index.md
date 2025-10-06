@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách xử lý bảng tính được bảo vệ bằng mật khẩu bằng GroupDocs.Editor cho .NET. Hướng dẫn chi tiết này hướng dẫn bạn cách mở để lưu tệp Excel an toàn.
 weight: 18
 url: /vi/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # Làm việc với Bảng tính được bảo vệ bằng mật khẩu
 
 ## Giới thiệu

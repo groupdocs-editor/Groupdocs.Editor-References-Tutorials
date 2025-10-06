@@ -5,8 +5,8 @@ weight: 10
 url: /tr/net/
 description: GroupDocs.Editor .NET ile belgeleri yönetin ve düzenleyin. Belge işlemeyi, belge düzenlemeyi, HTML içeriği almayı, form alanı yönetimini ve daha fazlasını öğrenin!
 is_root: true
+type: docs
 ---
-
 # .NET için GroupDocs.Editor Öğreticileri ve Örnekleri
 
 

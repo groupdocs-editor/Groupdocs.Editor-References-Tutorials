@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Leer moeiteloos documenten bewerken met GroupDocs.Editor voor .NET. Stapsgewijze handleiding voor tekstverwerkings- en spreadsheetbestanden.
 weight: 11
 url: /nl/net/document-editing/edit-document/
+type: docs
 ---
-
 # Document bewerken
 
 ## Invoering

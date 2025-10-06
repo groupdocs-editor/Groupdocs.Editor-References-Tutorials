@@ -6,8 +6,8 @@ description: Освойте редактирование документов б
 weight: 11
 url: /ru/
 is_root: true
+type: docs
 ---
-
 # Разблокировка управления документами с помощью GroupDocs.Editor
 
 

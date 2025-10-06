@@ -8,10 +8,8 @@ keywords:
 - load word documents with groupdocs.editor
 - groupdocs editor net setup
 - editing word documents with groupdocs
-
+type: docs
 ---
-
-
 # How to Load a Word Document Using GroupDocs.Editor in .NET
 
 ## Introduction

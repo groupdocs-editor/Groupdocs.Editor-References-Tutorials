@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 以编程方式编辑文档。加载文档、处理受密码保护的文件等的分步指南。
 weight: 13
 url: /zh/net/document-editing/load-document/
+type: docs
 ---
-
 # 加载文档
 
 ## 介绍

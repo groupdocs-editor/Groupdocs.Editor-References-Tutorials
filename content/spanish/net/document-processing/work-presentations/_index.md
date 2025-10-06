@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Aprenda a editar presentaciones de PowerPoint usando GroupDocs.Editor para .NET. Siga esta guía paso a paso para agilizar el proceso de edición de documentos.
 weight: 16
 url: /es/net/document-processing/work-presentations/
+type: docs
 ---
-
 # Trabajar con presentaciones
 
 ## Introducción

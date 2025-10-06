@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Bu adım adım kılavuzla, belgelerden harici CSS içeriğini ayıklamak için GroupDocs.Editor for .NET'i nasıl kullanacağınızı öğrenin. Belgeyi entegre eden geliştiriciler için mükemmeldir.
 weight: 10
 url: /tr/net/css-handling/get-external-css-content/
+type: docs
 ---
-
 # Harici CSS İçeriği Alın
 
 ## giriiş

@@ -3,8 +3,8 @@ title: "Document Loading Tutorials with GroupDocs.Editor for Java"
 description: "Learn how to load documents from various sources in different formats with these GroupDocs.Editor for Java tutorials."
 weight: 2
 url: "/java/document-loading/"
+type: docs
 ---
-
 # Document Loading Tutorials with GroupDocs.Editor for Java
 
 Our document loading tutorials provide comprehensive guidance for opening files from different sources using GroupDocs.Editor in Java. These step-by-step guides demonstrate how to load documents from files, streams, and other storage locations with proper configuration for various document formats. Each tutorial includes complete code examples for different loading scenarios, helping you build robust document loading capabilities that handle diverse document sources and formats efficiently.

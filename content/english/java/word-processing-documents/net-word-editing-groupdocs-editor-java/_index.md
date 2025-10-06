@@ -8,10 +8,8 @@ keywords:
 - .NET Word Document Editing in Java
 - GroupDocs.Editor for Java
 - Java Word Processing Documents
-
+type: docs
 ---
-
-
 # Implementing .NET Word Document Editing with GroupDocs.Editor in Java: A Practical Guide
 
 ## Introduction

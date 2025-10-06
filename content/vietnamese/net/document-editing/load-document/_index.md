@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách chỉnh sửa tài liệu theo chương trình bằng GroupDocs.Editor cho .NET. Hướng dẫn từng bước để tải tài liệu, xử lý các tệp được bảo vệ bằng mật khẩu, v.v.
 weight: 13
 url: /vi/net/document-editing/load-document/
+type: docs
 ---
-
 # Tải tài liệu
 
 ## Giới thiệu

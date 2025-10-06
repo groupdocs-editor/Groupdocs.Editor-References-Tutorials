@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用してドキュメントを簡単に編集する方法を学びます。ワード プロセッサおよびスプレッドシート ファイルのステップ バイ ステップ ガイド。
 weight: 11
 url: /ja/net/document-editing/edit-document/
+type: docs
 ---
-
 # ドキュメントを編集
 
 ## 導入

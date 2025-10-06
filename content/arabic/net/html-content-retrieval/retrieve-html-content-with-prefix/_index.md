@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية استرداد محتوى HTML من المستندات باستخدام GroupDocs.Editor لـ .NET مع البادئات المخصصة للصور وأوراق الأنماط. يتضمن دليل خطوة بخطوة.
 weight: 11
 url: /ar/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # استرداد محتوى HTML باستخدام البادئة
 
 ## مقدمة

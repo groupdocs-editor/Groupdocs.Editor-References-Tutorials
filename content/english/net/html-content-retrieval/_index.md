@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Discover how to retrieve HTML content using GroupDocs.Editor for .NET. Step-by-step guides for retrieving body content and custom prefixes included.
 weight: 22
 url: /net/html-content-retrieval/
+type: docs
 ---
-
 # HTML Content Retrieval
 
 Unlock the power of HTML content retrieval in your .NET applications with GroupDocs.Editor for .NET. Our comprehensive tutorials will guide you through the process of extracting HTML body content and using custom prefixes for images and stylesheets. Whether you're looking to enhance document management or streamline resource organization, our step-by-step guides ensure a seamless integration. Dive in and start optimizing your applications today!

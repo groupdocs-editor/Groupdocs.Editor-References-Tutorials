@@ -3,8 +3,8 @@ title: "GroupDocs.Editor Licensing and Configuration Tutorials for Java"
 description: "Complete tutorials for setting up licensing, configuring GroupDocs.Editor, and implementing deployment options in Java applications."
 weight: 14
 url: "/java/licensing-configuration/"
+type: docs
 ---
-
 # GroupDocs.Editor Licensing and Configuration Tutorials for Java
 
 Our licensing and configuration tutorials provide comprehensive guidance for properly setting up GroupDocs.Editor in your Java applications. These step-by-step guides demonstrate how to apply licenses from files and streams, implement metered licensing, configure document loading and saving options, and optimize the library for different deployment scenarios. Each tutorial includes working Java code examples for proper configuration, helping you implement GroupDocs.Editor correctly in various application environments while ensuring license compliance.

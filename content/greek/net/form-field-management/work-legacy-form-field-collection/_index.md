@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να διαχειρίζεστε πεδία φόρμας παλαιού τύπου χρησιμοποιώντας το GroupDocs.Editor για .NET με τον λεπτομερή οδηγό μας. Ιδανικό για χειρισμό πεδίων κειμένου, πλαισίων ελέγχου, ημερομηνίες και πολλά άλλα.
 weight: 12
 url: /el/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Εργαστείτε με τη συλλογή πεδίων φορμών παλαιού τύπου
 
 ## Εισαγωγή

@@ -5,8 +5,8 @@ weight: 10
 url: /ar/net/
 description: إدارة المستندات وتحريرها باستخدام GroupDocs.Editor .NET. تعلم معالجة المستندات، وتحرير المستندات، واسترجاع محتوى HTML، وإدارة حقول النماذج، والمزيد!
 is_root: true
+type: docs
 ---
-
 # دروس وأمثلة لـ GroupDocs.Editor لـ .NET
 
 

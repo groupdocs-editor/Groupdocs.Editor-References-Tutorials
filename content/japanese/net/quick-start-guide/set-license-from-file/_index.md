@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: アプリケーションでシームレスにドキュメントを編集するために GroupDocs.Editor for .NET を使用する方法を学びます。ステップバイステップのガイド、ヒント、FAQ が含まれています。
 weight: 10
 url: /ja/net/quick-start-guide/set-license-from-file/
+type: docs
 ---
-
 # ファイルからライセンスを設定する
 
 ## 導入

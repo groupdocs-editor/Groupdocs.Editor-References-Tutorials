@@ -8,10 +8,8 @@ keywords:
 - GroupDocs Editor .NET
 - document editing
 - HTML to editable document
-
+type: docs
 ---
-
-
 # Efficiently Edit Documents Using GroupDocs.Editor .NET
 
 ## Introduction

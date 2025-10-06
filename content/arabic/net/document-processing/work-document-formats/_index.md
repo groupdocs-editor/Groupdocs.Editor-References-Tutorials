@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية استخدام GroupDocs.Editor لـ .NET لتحرير تنسيقات المستندات المختلفة برمجيًا. دليل خطوة بخطوة مع أمثلة للتكامل السلس.
 weight: 13
 url: /ar/net/document-processing/work-document-formats/
+type: docs
 ---
-
 # العمل مع تنسيقات المستندات
 
 ## مقدمة

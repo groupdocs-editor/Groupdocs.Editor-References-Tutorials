@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor .NET
 - document editing with GroupDocs
 - Word document conversion
-
+type: docs
 ---
-
-
 # Mastering Document Editing and Conversion with GroupDocs.Editor .NET
 
 ## Introduction

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 이미지 및 스타일시트에 대한 사용자 정의 접두어가 있는 .NET용 GroupDocs.Editor를 사용하여 문서에서 HTML 콘텐츠를 검색하는 방법을 알아보세요. 단계별 가이드가 포함되어 있습니다.
 weight: 11
 url: /ko/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # 접두사가 포함된 HTML 콘텐츠 검색
 
 ## 소개

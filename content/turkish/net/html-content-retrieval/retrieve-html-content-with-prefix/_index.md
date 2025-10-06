@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Görüntüler ve stil sayfaları için özel öneklerle GroupDocs.Editor for .NET'i kullanarak belgelerden HTML içeriğini nasıl alacağınızı öğrenin. Adım adım kılavuz dahildir.
 weight: 11
 url: /tr/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # HTML İçeriğini Önekle Al
 
 ## giriiş

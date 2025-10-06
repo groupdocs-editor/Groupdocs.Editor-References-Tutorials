@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية التعامل مع جداول البيانات المحمية بكلمة مرور باستخدام GroupDocs.Editor لـ .NET. يرشدك هذا الدليل التفصيلي إلى كيفية فتح ملفات Excel الآمنة.
 weight: 18
 url: /ar/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # العمل مع جداول البيانات المحمية بكلمة مرور
 
 ## مقدمة

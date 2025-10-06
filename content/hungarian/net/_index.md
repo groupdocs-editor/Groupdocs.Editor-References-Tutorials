@@ -5,8 +5,8 @@ weight: 10
 url: /hu/net/
 description: Dokumentumok kezelése és szerkesztése a GroupDocs.Editor .NET segítségével. Tanuljon meg dokumentumfeldolgozást, dokumentumszerkesztést, HTML-tartalom-visszakeresést, űrlapmező-kezelést és még sok mást!
 is_root: true
+type: docs
 ---
-
 # Oktatóanyagok és példák a GroupDocs.Editor for .NET-hez
 
 

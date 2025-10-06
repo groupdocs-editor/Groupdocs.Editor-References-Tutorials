@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Aprenda cómo eliminar campos de formulario de documentos de Word usando GroupDocs.Editor para .NET con esta guía paso a paso. Ideal para desarrolladores.
 weight: 13
 url: /es/net/form-field-management/remove-form-field-collection/
+type: docs
 ---
-
 # Eliminar colección de campos de formulario
 
 ## Introducción

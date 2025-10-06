@@ -6,8 +6,8 @@ description: Meistern Sie die mühelose Dokumentbearbeitung mit GroupDocs.Editor
 weight: 11
 url: /de/
 is_root: true
+type: docs
 ---
-
 # Dokumentenmanagement mit GroupDocs.Editor freischalten
 
 

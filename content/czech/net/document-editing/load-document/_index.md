@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Naučte se upravovat dokumenty programově pomocí GroupDocs.Editor pro .NET. Podrobný průvodce pro načítání dokumentů, manipulaci se soubory chráněnými heslem a další.
 weight: 13
 url: /cs/net/document-editing/load-document/
+type: docs
 ---
-
 # Načíst dokument
 
 ## Úvod

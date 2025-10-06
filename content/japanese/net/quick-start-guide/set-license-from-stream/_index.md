@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Groupdocs.Editor for .NET を使用してプログラムでドキュメントを編集する方法を学びます。シームレスな統合と高度な機能については、この包括的な手順に従ってください。
 weight: 11
 url: /ja/net/quick-start-guide/set-license-from-stream/
+type: docs
 ---
-
 # ストリームからライセンスを設定する
 
 ## 導入

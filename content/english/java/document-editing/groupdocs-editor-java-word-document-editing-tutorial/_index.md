@@ -8,10 +8,8 @@ keywords:
 - document editing with Java
 - programmatically edit Word documents
 - GroupDocs.Editor Java library
-
+type: docs
 ---
-
-
 # Master Document Editing with GroupDocs.Editor Java: A Comprehensive Tutorial for Word Processing
 
 ## Introduction

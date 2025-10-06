@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor
 - Java
 - Document Processing
-
+type: docs
 ---
-
-
 # Mastering GroupDocs.Editor Java: Loading and Saving Password-Protected Word Documents
 
 ## Introduction

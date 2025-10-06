@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du extraherar dokumentinformation med GroupDocs.Editor för .NET med vår detaljerade, steg-för-steg handledning. Perfekt för att hantera olika dokumenttyper.
 weight: 10
 url: /sv/net/document-processing/extract-document-info/
+type: docs
 ---
-
 # Extrahera dokumentinformation
 
 ## Introduktion

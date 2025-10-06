@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 詳細なガイドで、GroupDocs.Editor for .NET を使用して従来のフォーム フィールドを管理する方法を学びます。テキスト フィールド、チェックボックス、日付などの処理に最適です。
 weight: 12
 url: /ja/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # レガシーフォームフィールドコレクションの操作
 
 ## 導入

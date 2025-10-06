@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Naučte se, jak spravovat starší pole formuláře pomocí GroupDocs.Editor pro .NET s naším podrobným průvodcem. Ideální pro práci s textovými poli, zaškrtávacími políčky, daty a dalšími.
 weight: 12
 url: /cs/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Práce s Legacy Form Field Collection
 
 ## Úvod

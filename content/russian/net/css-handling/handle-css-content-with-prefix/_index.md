@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Узнайте, как обрабатывать содержимое CSS с префиксом с помощью Groupdocs.Editor для .NET, в этом подробном пошаговом руководстве. Идеально подходит для разработчиков всех уровней.
 weight: 11
 url: /ru/net/css-handling/handle-css-content-with-prefix/
+type: docs
 ---
-
 # Обработка содержимого CSS с помощью префикса
 
 ## Введение

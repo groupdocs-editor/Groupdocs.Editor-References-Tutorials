@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Leer hoe u met wachtwoord beveiligde spreadsheets kunt omgaan met GroupDocs.Editor voor .NET. Deze gedetailleerde handleiding leidt u door de stappen voor het opslaan van beveiligde Excel-bestanden.
 weight: 18
 url: /nl/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # Werk met met een wachtwoord beveiligde spreadsheets
 
 ## Invoering

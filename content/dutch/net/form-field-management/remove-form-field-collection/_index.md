@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Leer met deze stapsgewijze handleiding hoe u formuliervelden uit Word-documenten kunt verwijderen met GroupDocs.Editor voor .NET. Ideaal voor ontwikkelaars.
 weight: 13
 url: /nl/net/form-field-management/remove-form-field-collection/
+type: docs
 ---
-
 # Formulierveldverzameling verwijderen
 
 ## Invoering

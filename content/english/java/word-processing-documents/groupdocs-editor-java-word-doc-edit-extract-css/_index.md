@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor Java
 - edit Word documents in Java
 - extract CSS from Word Docs
-
+type: docs
 ---
-
-
 # Edit and Extract CSS from Word Documents Using GroupDocs.Editor Java: A Comprehensive Guide
 
 ## Introduction

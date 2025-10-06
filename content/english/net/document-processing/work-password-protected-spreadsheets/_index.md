@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Learn how to handle password-protected spreadsheets using GroupDocs.Editor for .NET. This detailed guide walks you through opening to saving secure Excel files.
 weight: 18
 url: /net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # Work with Password-Protected Spreadsheets
 
 ## Introduction

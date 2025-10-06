@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Apprenez à utiliser des feuilles de calcul multi-onglets dans .NET à l'aide de GroupDocs.Editor. Guide étape par étape, exemples de code et meilleures pratiques inclus.
 weight: 17
 url: /fr/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # Travailler avec des feuilles de calcul multi-onglets
 
 ## Introduction

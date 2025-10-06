@@ -3,8 +3,8 @@ title: "Word Processing Document Editing Tutorials with GroupDocs.Editor for Jav
 description: "Learn to edit Word documents, DOC, DOCX, RTF, and other word processing formats with these GroupDocs.Editor Java tutorials."
 weight: 5
 url: "/java/word-processing-documents/"
+type: docs
 ---
-
 # Word Processing Document Editing Tutorials with GroupDocs.Editor for Java
 
 Discover how to efficiently work with word processing documents using our comprehensive GroupDocs.Editor Java tutorials. These step-by-step guides teach you how to edit DOC, DOCX, RTF and other word processing formats, preserve formatting during editing, handle document sections and content controls, and implement advanced word processing features. Each tutorial provides practical Java code examples for common document editing tasks, helping you build more effective applications that can process and edit text documents with professional results.

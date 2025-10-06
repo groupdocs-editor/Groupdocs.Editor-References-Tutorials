@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du tar bort formulärfält från Word-dokument med GroupDocs.Editor för .NET med denna steg-för-steg-guide. Idealisk för utvecklare.
 weight: 13
 url: /sv/net/form-field-management/remove-form-field-collection/
+type: docs
 ---
-
 # Ta bort formulärfältsamling
 
 ## Introduktion

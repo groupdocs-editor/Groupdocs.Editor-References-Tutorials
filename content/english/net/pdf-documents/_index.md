@@ -3,8 +3,8 @@ title: "PDF Document Editing Tutorials with GroupDocs.Editor for .NET"
 description: "Learn to edit PDF documents, forms, and content in PDF files using GroupDocs.Editor for .NET tutorials."
 weight: 8
 url: "/net/pdf-documents/"
+type: docs
 ---
-
 # PDF Document Editing Tutorials with GroupDocs.Editor for .NET
 
 Master PDF document editing with our comprehensive GroupDocs.Editor tutorials for .NET developers. These practical guides show you how to edit PDF content, work with form fields, modify PDF structure and elements, and implement PDF-specific editing features. Each tutorial provides working C# code examples for effective PDF processing, helping you overcome the challenges of editing this complex format while preserving document appearance and functionality.

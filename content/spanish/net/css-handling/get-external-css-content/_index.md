@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Aprenda a utilizar GroupDocs.Editor para .NET para extraer contenido CSS externo de documentos con esta guía paso a paso. Perfecto para desarrolladores que integran documentos.
 weight: 10
 url: /es/net/css-handling/get-external-css-content/
+type: docs
 ---
-
 # Obtener contenido CSS externo
 
 ## Introducción

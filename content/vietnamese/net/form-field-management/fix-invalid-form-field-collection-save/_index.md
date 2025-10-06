@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách sửa các trường biểu mẫu không hợp lệ trong DOCX bằng Groupdocs.Editor cho .NET. Hãy làm theo hướng dẫn này để đảm bảo tài liệu của bạn không có lỗi và lưu chúng một cách an toàn.
 weight: 11
 url: /vi/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # Sửa lỗi Thu thập và lưu trường biểu mẫu không hợp lệ
 
 ## Giới thiệu

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 Groupdocs.Editor for .NET 修復 DOCX 中的無效表單欄位。請遵循本指南，確保您的文件沒有錯誤並安全保存。
 weight: 11
 url: /zh-hant/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # 修復無效的表單欄位集合並儲存
 
 ## 介紹

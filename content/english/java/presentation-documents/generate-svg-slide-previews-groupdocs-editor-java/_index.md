@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor for Java
 - SVG slide previews
 - Java presentations
-
+type: docs
 ---
-
-
 # Create SVG Slide Previews Using GroupDocs.Editor for Java
 
 ## Introduction

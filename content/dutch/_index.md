@@ -6,8 +6,8 @@ description: Beheers moeiteloos het bewerken van documenten met GroupDocs.Editor
 weight: 11
 url: /nl/
 is_root: true
+type: docs
 ---
-
 # Documentbeheer ontgrendelen met GroupDocs.Editor
 
 

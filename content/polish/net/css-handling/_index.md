@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak skutecznie obsługiwać zawartość CSS za pomocą GroupDocs.Editor dla platformy .NET. Wyodrębnij zewnętrzną zawartość CSS i bez wysiłku obsługuj zawartość CSS za pomocą przedrostków.
 weight: 21
 url: /pl/net/css-handling/
+type: docs
 ---
-
 # Obsługa CSS
 
 

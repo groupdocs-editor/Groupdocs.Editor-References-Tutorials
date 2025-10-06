@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 透過此逐步指南，了解如何使用 GroupDocs.Editor for .NET 從 Word 文件中刪除表單欄位。非常適合開發人員。
 weight: 13
 url: /zh-hant/net/form-field-management/remove-form-field-collection/
+type: docs
 ---
-
 # 刪除表單欄位集合
 
 ## 介紹

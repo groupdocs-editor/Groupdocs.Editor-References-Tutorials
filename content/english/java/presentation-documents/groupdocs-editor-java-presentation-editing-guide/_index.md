@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor for Java
 - presentation editing in Java
 - editing PPTX files with Java
-
+type: docs
 ---
-
-
 # Mastering Presentation Editing in Java: A Complete Guide to Using GroupDocs.Editor for PPTX Files
 
 ## Introduction

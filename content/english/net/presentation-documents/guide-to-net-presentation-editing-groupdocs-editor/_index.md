@@ -8,10 +8,8 @@ keywords:
 - .NET presentation editing
 - GroupDocs.Editor for .NET
 - editing presentation documents with .NET
-
+type: docs
 ---
-
-
 # Comprehensive Guide to Implementing .NET Presentation Editing with GroupDocs.Editor
 
 ## Introduction

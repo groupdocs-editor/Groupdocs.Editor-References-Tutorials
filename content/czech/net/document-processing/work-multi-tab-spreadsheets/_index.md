@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Naučte se pracovat s vícekartovými tabulkami v .NET pomocí GroupDocs.Editor. Součástí je podrobný průvodce, příklady kódu a osvědčené postupy.
 weight: 17
 url: /cs/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # Práce s vícetabulkovými tabulkami
 
 ## Úvod

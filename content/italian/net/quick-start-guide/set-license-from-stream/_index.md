@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Scopri come utilizzare Groupdocs.Editor for .NET per modificare i documenti a livello di codice. Segui questo articolo completo per un'integrazione perfetta e funzionalità avanzate.
 weight: 11
 url: /it/net/quick-start-guide/set-license-from-stream/
+type: docs
 ---
-
 # Imposta la licenza dallo streaming
 
 ## introduzione

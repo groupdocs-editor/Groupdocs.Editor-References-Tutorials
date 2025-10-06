@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: .NET के लिए Groupdocs.Editor का उपयोग करके दस्तावेज़ों से HTML संसाधन निकालने का तरीका जानें। यह व्यापक ट्यूटोरियल डेवलपर्स के लिए चरण-दर-चरण मार्गदर्शन प्रदान करता है।
 weight: 13
 url: /hi/net/document-editing/save-html-resources-to-folder/
+type: docs
 ---
-
 # HTML संसाधनों को फ़ोल्डर में सहेजें
 
 ## परिचय

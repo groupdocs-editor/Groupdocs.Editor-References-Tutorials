@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengedit presentasi PowerPoint menggunakan GroupDocs.Editor untuk .NET. Ikuti panduan langkah demi langkah ini untuk menyederhanakan proses pengeditan dokumen Anda.
 weight: 16
 url: /id/net/document-processing/work-presentations/
+type: docs
 ---
-
 # Bekerja dengan Presentasi
 
 ## Perkenalan

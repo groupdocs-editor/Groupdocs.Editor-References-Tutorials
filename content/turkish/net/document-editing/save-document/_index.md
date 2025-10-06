@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET'i kullanarak belgeleri zahmetsizce düzenleyin ve kaydedin. Bu adım adım kılavuz, geliştiriciler için süreci basitleştirir.
 weight: 14
 url: /tr/net/document-editing/save-document/
+type: docs
 ---
-
 # Belgeyi Kaydet
 
 ## giriiş

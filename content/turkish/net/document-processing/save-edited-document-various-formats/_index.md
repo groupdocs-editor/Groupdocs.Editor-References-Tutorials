@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Bu kapsamlı adım adım kılavuzda, GroupDocs.Editor for .NET'i kullanarak düzenlenen belgeleri çeşitli formatlarda nasıl kaydedeceğinizi öğrenin.
 weight: 11
 url: /tr/net/document-processing/save-edited-document-various-formats/
+type: docs
 ---
-
 # Düzenlenen Belgeyi Çeşitli Formatlarda Kaydetme
 
 ## giriiş

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du hanterar lösenordsskyddade kalkylblad med GroupDocs.Editor för .NET. Den här detaljerade guiden leder dig genom hur du öppnar för att spara säkra Excel-filer.
 weight: 18
 url: /sv/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # Arbeta med lösenordsskyddade kalkylblad
 
 ## Introduktion

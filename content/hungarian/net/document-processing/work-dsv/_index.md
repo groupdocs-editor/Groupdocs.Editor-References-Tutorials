@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ebből a lépésről lépésre szóló útmutatóból megtudhatja, hogyan szerkeszthet CSV- és TSV-fájlokat a GroupDocs.Editor for .NET használatával. Javítsa .NET-projektjeit könnyedén.
 weight: 12
 url: /hu/net/document-processing/work-dsv/
+type: docs
 ---
-
 # Munka elválasztott értékekkel (DSV)
 
 ## Bevezetés

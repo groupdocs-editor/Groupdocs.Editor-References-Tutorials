@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Узнайте, как управлять полями устаревшей формы с помощью GroupDocs.Editor для .NET, из нашего подробного руководства. Идеально подходит для обработки текстовых полей, флажков, дат и многого другого.
 weight: 12
 url: /ru/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Работа с коллекцией полей устаревшей формы
 
 ## Введение

@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Découvrez comment récupérer du contenu HTML à l'aide de GroupDocs.Editor pour .NET. Guides étape par étape pour récupérer le contenu du corps et les préfixes personnalisés inclus.
 weight: 22
 url: /fr/net/html-content-retrieval/
+type: docs
 ---
-
 # Récupération de contenu HTML
 
 Libérez la puissance de la récupération de contenu HTML dans vos applications .NET avec GroupDocs.Editor pour .NET. Nos didacticiels complets vous guideront tout au long du processus d'extraction du contenu du corps HTML et d'utilisation de préfixes personnalisés pour les images et les feuilles de style. Que vous cherchiez à améliorer la gestion des documents ou à rationaliser l'organisation des ressources, nos guides étape par étape garantissent une intégration transparente. Plongez et commencez à optimiser vos applications dès aujourd’hui !

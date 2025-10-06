@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: このステップバイステップ ガイドでは、GroupDocs.Editor for .NET を使用して Word 文書からフォーム フィールドを削除する方法を学習します。開発者に最適です。
 weight: 13
 url: /ja/net/form-field-management/remove-form-field-collection/
+type: docs
 ---
-
 # フォームフィールドコレクションを削除する
 
 ## 導入

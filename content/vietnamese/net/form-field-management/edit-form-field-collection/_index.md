@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Nâng cao hiệu quả chỉnh sửa tài liệu trong các dự án .NET với Groupdocs.Editor. Sửa đổi bộ sưu tập trường biểu mẫu một cách liền mạch.
 weight: 10
 url: /vi/net/form-field-management/edit-form-field-collection/
+type: docs
 ---
-
 # Chỉnh sửa bộ sưu tập trường biểu mẫu
 
 ## Giới thiệu

@@ -6,8 +6,8 @@ description: .NET ve Java için GroupDocs.Editor ile belge düzenlemede zahmetsi
 weight: 11
 url: /tr/
 is_root: true
+type: docs
 ---
-
 # GroupDocs.Editor ile Belge Yönetiminin Kilidini Açma
 
 

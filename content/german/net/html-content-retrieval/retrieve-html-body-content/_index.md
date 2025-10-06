@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Rufen Sie HTML-Textinhalte mit GroupDocs.Editor für .NET mit unserer Schritt-für-Schritt-Anleitung ab. Verbessern Sie Ihre .NET-Anwendungen mühelos.
 weight: 10
 url: /de/net/html-content-retrieval/retrieve-html-body-content/
+type: docs
 ---
-
 # HTML-Textinhalt abrufen
 
 ## Einführung

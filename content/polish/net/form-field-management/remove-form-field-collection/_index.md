@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Z tego przewodnika krok po kroku dowiesz się, jak usuwać pola formularzy z dokumentów programu Word za pomocą programu GroupDocs.Editor dla platformy .NET. Idealny dla programistów.
 weight: 13
 url: /pl/net/form-field-management/remove-form-field-collection/
+type: docs
 ---
-
 # Usuń kolekcję pól formularza
 
 ## Wstęp

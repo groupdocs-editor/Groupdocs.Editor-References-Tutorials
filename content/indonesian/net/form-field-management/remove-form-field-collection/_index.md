@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Pelajari cara menghapus bidang formulir dari dokumen Word menggunakan GroupDocs.Editor untuk .NET dengan panduan langkah demi langkah ini. Ideal untuk pengembang.
 weight: 13
 url: /id/net/form-field-management/remove-form-field-collection/
+type: docs
 ---
-
 # Hapus Koleksi Bidang Formulir
 
 ## Perkenalan

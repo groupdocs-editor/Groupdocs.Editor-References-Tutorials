@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak pobierać zawartość HTML z dokumentów za pomocą narzędzia GroupDocs.Editor dla platformy .NET z niestandardowymi przedrostkami obrazów i arkuszy stylów. W zestawie instrukcja krok po kroku.
 weight: 11
 url: /pl/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # Pobierz treść HTML z prefiksem
 
 ## Wstęp

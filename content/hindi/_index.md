@@ -6,8 +6,8 @@ description: .NET और Java के लिए GroupDocs.Editor के साथ
 weight: 11
 url: /hi/
 is_root: true
+type: docs
 ---
-
 # GroupDocs.Editor के साथ दस्तावेज़ प्रबंधन अनलॉक करना
 
 

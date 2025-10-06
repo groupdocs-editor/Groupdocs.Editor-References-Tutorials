@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 通过我们的详细指南了解如何使用 GroupDocs.Editor for .NET 管理旧式表单字段。非常适合处理文本字段、复选框、日期等。
 weight: 12
 url: /zh/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # 使用旧版表单字段集合
 
 ## 介绍

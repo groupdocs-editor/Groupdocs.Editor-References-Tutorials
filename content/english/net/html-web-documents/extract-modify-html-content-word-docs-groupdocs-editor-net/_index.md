@@ -8,10 +8,8 @@ keywords:
 - GroupDocs Editor .NET
 - HTML content in Word
 - modify HTML body
-
+type: docs
 ---
-
-
 # How to Extract and Modify HTML Content in Word Documents Using GroupDocs.Editor .NET
 
 ## Introduction

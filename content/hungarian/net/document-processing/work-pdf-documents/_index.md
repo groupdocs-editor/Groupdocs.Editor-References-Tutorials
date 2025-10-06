@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ebből az oktatóanyagból megtudhatja, hogyan szerkeszthet PDF-dokumentumokat a GroupDocs.Editor for .NET használatával. Módosítsa a tartalmat, kezelje a nagy fájlokat, és biztonságosan mentse el szerkesztéseit.
 weight: 14
 url: /hu/net/document-processing/work-pdf-documents/
+type: docs
 ---
-
 # Dolgozzon PDF dokumentumokkal
 
 ## Bevezetés

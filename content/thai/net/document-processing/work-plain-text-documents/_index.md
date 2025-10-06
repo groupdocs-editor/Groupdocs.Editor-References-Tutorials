@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีแก้ไขเอกสารข้อความธรรมดาโดยใช้ GroupDocs.Editor สำหรับ .NET พร้อมคำแนะนำทีละขั้นตอนของเรา ลดความซับซ้อนของกระบวนการแก้ไขเอกสาร .NET ของคุณ
 weight: 15
 url: /th/net/document-processing/work-plain-text-documents/
+type: docs
 ---
-
 # ทำงานกับเอกสารข้อความธรรมดา
 
 ## การแนะนำ

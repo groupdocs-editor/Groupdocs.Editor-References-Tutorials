@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية حفظ المستندات التي تم تحريرها بتنسيقات مختلفة باستخدام GroupDocs.Editor لـ .NET في هذا الدليل الشامل خطوة بخطوة.
 weight: 11
 url: /ar/net/document-processing/save-edited-document-various-formats/
+type: docs
 ---
-
 # حفظ المستند المحرر بتنسيقات مختلفة
 
 ## مقدمة

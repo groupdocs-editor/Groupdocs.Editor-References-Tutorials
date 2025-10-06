@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Découvrez comment gérer les anciens champs de formulaire à l'aide de GroupDocs.Editor pour .NET avec notre guide détaillé. Parfait pour gérer les champs de texte, les cases à cocher, les dates et bien plus encore.
 weight: 12
 url: /fr/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Travailler avec la collection de champs de formulaire héritée
 
 ## Introduction

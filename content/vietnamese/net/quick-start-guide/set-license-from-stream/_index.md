@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách sử dụng Groupdocs.Editor cho .NET để chỉnh sửa tài liệu theo chương trình. Thực hiện theo toàn diện này để tích hợp liền mạch và các tính năng nâng cao.
 weight: 11
 url: /vi/net/quick-start-guide/set-license-from-stream/
+type: docs
 ---
-
 # Đặt giấy phép từ luồng
 
 ## Giới thiệu

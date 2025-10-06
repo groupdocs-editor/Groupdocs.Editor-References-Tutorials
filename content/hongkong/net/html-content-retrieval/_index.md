@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 擷取 HTML 內容。包含檢索正文內容和自訂前綴的逐步指南。
 weight: 22
 url: /zh-hant/net/html-content-retrieval/
+type: docs
 ---
-
 # HTML 內容檢索
 
 使用 GroupDocs.Editor for .NET 釋放 .NET 應用程式中 HTML 內容擷取的強大功能。我們的綜合教學將引導您完成提取 HTML 正文內容以及使用圖像和樣式表的自訂前綴的過程。無論您是想增強文件管理還是簡化資源組織，我們的逐步指南都能確保無縫整合。立即投入並開始優化您的應用程式！

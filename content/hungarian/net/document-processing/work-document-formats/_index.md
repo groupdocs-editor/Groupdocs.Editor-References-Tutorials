@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan használhatja a GroupDocs.Editor for .NET-et különféle dokumentumformátumok programozott szerkesztéséhez. Lépésről lépésre útmutató példákkal a zökkenőmentes integráció érdekében.
 weight: 13
 url: /hu/net/document-processing/work-document-formats/
+type: docs
 ---
-
 # Dolgozzon dokumentumformátumokkal
 
 ## Bevezetés

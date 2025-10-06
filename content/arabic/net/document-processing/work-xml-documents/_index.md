@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية تحرير مستندات XML بكفاءة باستخدام GroupDocs.Editor لـ .NET من خلال دليلنا خطوة بخطوة، الذي يغطي جميع الخطوات والخيارات الأساسية.
 weight: 20
 url: /ar/net/document-processing/work-xml-documents/
+type: docs
 ---
-
 # العمل مع مستندات XML
 
 ## مقدمة

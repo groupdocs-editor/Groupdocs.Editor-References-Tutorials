@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie in dieser umfassenden Schritt-für-Schritt-Anleitung, wie Sie bearbeitete Dokumente mit GroupDocs.Editor für .NET in verschiedenen Formaten speichern.
 weight: 11
 url: /de/net/document-processing/save-edited-document-various-formats/
+type: docs
 ---
-
 # Bearbeitetes Dokument in verschiedenen Formaten speichern
 
 ## Einführung

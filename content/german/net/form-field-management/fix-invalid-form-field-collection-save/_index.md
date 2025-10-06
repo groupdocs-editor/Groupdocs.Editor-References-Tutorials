@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie, wie Sie ungültige Formularfelder in DOCX mit Groupdocs.Editor für .NET korrigieren. Folgen Sie dieser Anleitung, um sicherzustellen, dass Ihre Dokumente fehlerfrei sind und sicher gespeichert werden.
 weight: 11
 url: /de/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # Ungültige Formularfeldsammlung korrigieren und speichern
 
 ## Einführung

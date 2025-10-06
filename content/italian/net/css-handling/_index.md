@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Scopri come gestire i contenuti CSS in modo efficace con GroupDocs.Editor per .NET. Estrai contenuti CSS esterni e gestisci i contenuti CSS con prefissi senza sforzo.
 weight: 21
 url: /it/net/css-handling/
+type: docs
 ---
-
 # Gestione CSS
 
 

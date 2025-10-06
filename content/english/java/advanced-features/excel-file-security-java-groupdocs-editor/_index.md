@@ -8,10 +8,8 @@ keywords:
 - Excel file security in Java
 - GroupDocs.Editor for Java
 - Java document password protection
-
+type: docs
 ---
-
-
 # Excel File Security in Java Using GroupDocs.Editor
 
 Master the art of securing Excel files in Java with GroupDocs.Editor. This comprehensive guide will walk you through implementing advanced features such as password protection, handling incorrect passwords, and adding write protection when saving your files.

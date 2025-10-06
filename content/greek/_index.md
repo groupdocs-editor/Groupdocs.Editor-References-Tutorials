@@ -6,8 +6,8 @@ description: Κύρια επεξεργασία εγγράφων χωρίς κό�
 weight: 11
 url: /el/
 is_root: true
+type: docs
 ---
-
 # Ξεκλείδωμα διαχείρισης εγγράφων με το GroupDocs.Editor
 
 

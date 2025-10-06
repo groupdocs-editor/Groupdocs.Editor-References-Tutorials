@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie, wie Sie mit GroupDocs.Editor für .NET HTML-Inhalte aus Dokumenten mit benutzerdefinierten Präfixen für Bilder und Stylesheets abrufen. Schritt-für-Schritt-Anleitung enthalten.
 weight: 11
 url: /de/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # Abrufen von HTML-Inhalten mit Präfix
 
 ## Einführung

@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách trích xuất thông tin tài liệu bằng GroupDocs.Editor cho .NET với hướng dẫn chi tiết từng bước của chúng tôi. Hoàn hảo để quản lý các loại tài liệu khác nhau.
 weight: 10
 url: /vi/net/document-processing/extract-document-info/
+type: docs
 ---
-
 # Trích xuất thông tin tài liệu
 
 ## Giới thiệu

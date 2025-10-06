@@ -8,10 +8,8 @@ keywords:
 - loading Word documents in Java
 - GroupDocs.Editor setup
 - document automation in Java
-
+type: docs
 ---
-
-
 # Comprehensive Tutorial: Loading Word Documents with GroupDocs.Editor in Java
 
 ## Introduction

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Bu adım adım kılavuzla GroupDocs.Editor for .NET'i kullanarak HTML'yi düzenlenebilir Word belgelerine dönüştürün. Belge yönetimi iş akışınızı kolaylaştırmak için mükemmeldir.
 weight: 10
 url: /tr/net/document-editing/create-editable-document-from-html/
+type: docs
 ---
-
 # HTML'den Düzenlenebilir Belge Oluşturun
 
 ## giriiş

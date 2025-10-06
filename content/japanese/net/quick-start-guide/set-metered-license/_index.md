@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 包括的なガイドを使用して、GroupDocs.Editor for .NET を統合して使用する方法を学習します。.NET アプリケーション内で強力なドキュメント編集機能を活用できます。
 weight: 12
 url: /ja/net/quick-start-guide/set-metered-license/
+type: docs
 ---
-
 # 従量制ライセンスの設定
 
 ## 導入

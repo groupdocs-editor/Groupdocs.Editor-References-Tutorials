@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ezzel a lépésenkénti útmutatóval konvertálhat HTML-t szerkeszthető Word-dokumentummá a GroupDocs.Editor for .NET segítségével. Tökéletes a dokumentumkezelési munkafolyamat egyszerűsítésére.
 weight: 10
 url: /hu/net/document-editing/create-editable-document-from-html/
+type: docs
 ---
-
 # Szerkeszthető dokumentum létrehozása HTML-ből
 
 ## Bevezetés

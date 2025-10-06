@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Adım adım kılavuzumuzla GroupDocs.Editor for .NET'i kullanarak düz metin belgelerini düzenlemeyi öğrenin. .NET belge düzenleme sürecinizi basitleştirin.
 weight: 15
 url: /tr/net/document-processing/work-plain-text-documents/
+type: docs
 ---
-
 # Düz Metin Belgeleriyle Çalışma
 
 ## giriiş

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 通过我们详细的分步教程学习如何使用 GroupDocs.Editor for .NET 提取文档信息。非常适合管理各种文档类型。
 weight: 10
 url: /zh/net/document-processing/extract-document-info/
+type: docs
 ---
-
 # 提取文档信息
 
 ## 介绍

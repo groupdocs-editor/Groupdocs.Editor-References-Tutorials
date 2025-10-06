@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Aprenda a administrar campos de formularios heredados usando GroupDocs.Editor para .NET con nuestra guía detallada. Perfecto para manejar campos de texto, casillas de verificación, fechas y más.
 weight: 12
 url: /es/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Trabajar con la colección de campos de formulario heredados
 
 ## Introducción

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: Groupdocs.Editor के साथ .NET प्रोजेक्ट में दस्तावेज़ संपादन दक्षता बढ़ाएँ। फ़ॉर्म फ़ील्ड संग्रह को सहजता से संशोधित करें।
 weight: 10
 url: /hi/net/form-field-management/edit-form-field-collection/
+type: docs
 ---
-
 # फ़ॉर्म फ़ील्ड संग्रह संपादित करें
 
 ## परिचय

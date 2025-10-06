@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: .NET용 Groupdocs.Editor를 사용하여 DOCX의 잘못된 양식 필드를 수정하는 방법을 알아보세요. 문서에 오류가 없는지 확인하고 안전하게 저장하려면 이 가이드를 따르세요.
 weight: 11
 url: /ko/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # 잘못된 양식 필드 수집 수정 및 저장
 
 ## 소개

@@ -8,10 +8,8 @@ keywords:
 - GroupDocs Editor Java
 - Word document resources extraction
 - Java API for Word processing
-
+type: docs
 ---
-
-
 # Edit & Extract Resources from Word Documents Using GroupDocs.Editor for Java
 
 ## Introduction

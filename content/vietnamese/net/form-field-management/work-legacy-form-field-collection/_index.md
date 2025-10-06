@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách quản lý các trường biểu mẫu cũ bằng GroupDocs.Editor dành cho .NET với hướng dẫn chi tiết của chúng tôi. Hoàn hảo để xử lý các trường văn bản, hộp kiểm, ngày tháng, v.v.
 weight: 12
 url: /vi/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Làm việc với Bộ sưu tập trường biểu mẫu kế thừa
 
 ## Giới thiệu

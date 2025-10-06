@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Управляйте и редактируйте документы с помощью GroupDocs.Editor .NET. Узнайте, как с легкостью создавать, редактировать и сохранять документы. Улучшите свой рабочий процесс управления документами уже сегодня!
 weight: 20
 url: /ru/net/document-editing/
+type: docs
 ---
-
 # Редактирование документов
 
 

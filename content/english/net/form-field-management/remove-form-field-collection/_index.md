@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Learn how to remove form fields from Word documents using GroupDocs.Editor for .NET with this step-by-step guide. Ideal for developers.
 weight: 13
 url: /net/form-field-management/remove-form-field-collection/
+type: docs
 ---
-
 # Remove Form Field Collection
 
 ## Introduction

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Förbättra dokumentredigeringseffektiviteten i .NET-projekt med Groupdocs.Editor. Ändra formulärfältsamlingar sömlöst.
 weight: 10
 url: /sv/net/form-field-management/edit-form-field-collection/
+type: docs
 ---
-
 # Redigera formulärfältsamling
 
 ## Introduktion

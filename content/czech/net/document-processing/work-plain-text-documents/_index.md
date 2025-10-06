@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Naučte se upravovat dokumenty ve formátu prostého textu pomocí GroupDocs.Editor pro .NET pomocí našeho podrobného průvodce. Zjednodušte si proces úprav dokumentů .NET.
 weight: 15
 url: /cs/net/document-processing/work-plain-text-documents/
+type: docs
 ---
-
 # Práce s dokumenty ve formátu prostého textu
 
 ## Úvod

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 詳細なステップバイステップのチュートリアルで、GroupDocs.Editor for .NET を使用してドキュメント情報を抽出する方法を学びます。さまざまな種類のドキュメントを管理するのに最適です。
 weight: 10
 url: /ja/net/document-processing/extract-document-info/
+type: docs
 ---
-
 # ドキュメント情報の抽出
 
 ## 導入

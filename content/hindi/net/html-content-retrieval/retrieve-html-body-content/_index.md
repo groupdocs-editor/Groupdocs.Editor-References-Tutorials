@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: हमारे चरण-दर-चरण गाइड के साथ .NET के लिए GroupDocs.Editor का उपयोग करके HTML बॉडी सामग्री प्राप्त करें। अपने .NET अनुप्रयोगों को आसानी से बढ़ाएँ।
 weight: 10
 url: /hi/net/html-content-retrieval/retrieve-html-body-content/
+type: docs
 ---
-
 # HTML बॉडी सामग्री पुनः प्राप्त करें
 
 ## परिचय

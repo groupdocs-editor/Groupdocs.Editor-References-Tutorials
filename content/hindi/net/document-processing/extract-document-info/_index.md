@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: हमारे विस्तृत, चरण-दर-चरण ट्यूटोरियल के साथ .NET के लिए GroupDocs.Editor का उपयोग करके दस्तावेज़ जानकारी निकालना सीखें। विभिन्न दस्तावेज़ प्रकारों के प्रबंधन के लिए बिल्कुल सही।
 weight: 10
 url: /hi/net/document-processing/extract-document-info/
+type: docs
 ---
-
 # दस्तावेज़ जानकारी निकालें
 
 ## परिचय

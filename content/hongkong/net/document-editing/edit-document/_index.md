@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 輕鬆編輯文件。文字處理和電子表格文件的逐步指南。
 weight: 11
 url: /zh-hant/net/document-editing/edit-document/
+type: docs
 ---
-
 # 編輯文檔
 
 ## 介紹

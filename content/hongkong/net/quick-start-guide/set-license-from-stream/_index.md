@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 Groupdocs.Editor for .NET 以程式設計方式編輯文件。遵循此全面的無縫整合和高級功能。
 weight: 11
 url: /zh-hant/net/quick-start-guide/set-license-from-stream/
+type: docs
 ---
-
 # 從 Stream 設定許可證
 
 ## 介紹

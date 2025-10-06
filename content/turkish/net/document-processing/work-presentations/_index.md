@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET'i kullanarak PowerPoint sunumlarını düzenlemeyi öğrenin. Belge düzenleme sürecinizi kolaylaştırmak için bu adım adım kılavuzu izleyin.
 weight: 16
 url: /tr/net/document-processing/work-presentations/
+type: docs
 ---
-
 # Sunumlarla Çalışma
 
 ## giriiş

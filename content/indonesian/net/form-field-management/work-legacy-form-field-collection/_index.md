@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengelola bidang formulir lama menggunakan GroupDocs.Editor untuk .NET dengan panduan terperinci kami. Sempurna untuk menangani bidang teks, kotak centang, tanggal, dan banyak lagi.
 weight: 12
 url: /id/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Bekerja dengan Koleksi Bidang Formulir Warisan
 
 ## Perkenalan

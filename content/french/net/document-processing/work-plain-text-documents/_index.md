@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Apprenez à modifier des documents en texte brut à l'aide de GroupDocs.Editor pour .NET grâce à notre guide étape par étape. Simplifiez votre processus d'édition de documents .NET.
 weight: 15
 url: /fr/net/document-processing/work-plain-text-documents/
+type: docs
 ---
-
 # Travailler avec des documents en texte brut
 
 ## Introduction

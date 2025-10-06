@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Bu eğitimle GroupDocs.Editor for .NET'i kullanarak PDF belgelerini nasıl düzenleyeceğinizi öğrenin. İçeriği değiştirin, büyük dosyaları işleyin ve düzenlemelerinizi güvenli bir şekilde kaydedin.
 weight: 14
 url: /tr/net/document-processing/work-pdf-documents/
+type: docs
 ---
-
 # PDF Belgeleriyle Çalışma
 
 ## giriiş

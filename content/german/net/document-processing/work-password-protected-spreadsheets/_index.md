@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie, wie Sie mit GroupDocs.Editor für .NET kennwortgeschützte Tabellenkalkulationen verwalten. Diese ausführliche Anleitung führt Sie durch das Öffnen und Speichern sicherer Excel-Dateien.
 weight: 18
 url: /de/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # Arbeiten mit kennwortgeschützten Tabellen
 
 ## Einführung

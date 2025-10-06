@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Redigera och spara dokument enkelt med GroupDocs.Editor för .NET. Denna steg-för-steg-guide förenklar processen för utvecklare.
 weight: 14
 url: /sv/net/document-editing/save-document/
+type: docs
 ---
-
 # Spara dokument
 
 ## Introduktion

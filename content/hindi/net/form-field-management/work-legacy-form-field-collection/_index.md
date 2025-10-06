@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: हमारे विस्तृत गाइड के साथ .NET के लिए GroupDocs.Editor का उपयोग करके लीगेसी फ़ॉर्म फ़ील्ड को प्रबंधित करना सीखें। टेक्स्ट फ़ील्ड, चेकबॉक्स, दिनांक और बहुत कुछ संभालने के लिए बिल्कुल सही।
 weight: 12
 url: /hi/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # लीगेसी फ़ॉर्म फ़ील्ड संग्रह के साथ कार्य करें
 
 ## परिचय

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Bu kapsamlı adım adım eğitimle GroupDocs.Editor for .NET'i kullanarak Word, Excel, PowerPoint, E-kitap ve E-posta belgelerini nasıl düzenleyeceğinizi öğrenin.
 weight: 10
 url: /tr/net/document-editing/create-document/
+type: docs
 ---
-
 # Belge Oluştur
 
 ## giriiş

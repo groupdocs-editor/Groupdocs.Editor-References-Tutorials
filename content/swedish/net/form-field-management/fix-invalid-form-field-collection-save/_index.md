@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du fixar ogiltiga formulärfält i DOCX med Groupdocs.Editor för .NET. Följ den här guiden för att säkerställa att dina dokument är felfria och spara dem på ett säkert sätt.
 weight: 11
 url: /sv/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # Åtgärda Insamling av ogiltiga formulärfält och spara
 
 ## Introduktion

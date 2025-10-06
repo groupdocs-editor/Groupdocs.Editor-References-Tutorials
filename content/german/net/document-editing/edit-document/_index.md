@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Lernen Sie, mit GroupDocs.Editor für .NET mühelos Dokumente zu bearbeiten. Schritt-für-Schritt-Anleitung für Textverarbeitungs- und Tabellenkalkulationsdateien.
 weight: 11
 url: /de/net/document-editing/edit-document/
+type: docs
 ---
-
 # Dokument bearbeiten
 
 ## Einführung

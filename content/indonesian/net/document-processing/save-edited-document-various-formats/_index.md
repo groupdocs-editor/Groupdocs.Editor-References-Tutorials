@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Pelajari cara menyimpan dokumen yang diedit ke berbagai format menggunakan GroupDocs.Editor untuk .NET dalam panduan langkah demi langkah yang komprehensif ini.
 weight: 11
 url: /id/net/document-processing/save-edited-document-various-formats/
+type: docs
 ---
-
 # Simpan Dokumen yang Diedit ke Berbagai Format
 
 ## Perkenalan

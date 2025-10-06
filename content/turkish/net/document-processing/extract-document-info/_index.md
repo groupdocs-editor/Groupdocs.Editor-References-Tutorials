@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Ayrıntılı, adım adım eğitimimizle GroupDocs.Editor for .NET'i kullanarak belge bilgilerini nasıl çıkaracağınızı öğrenin. Çeşitli belge türlerini yönetmek için mükemmeldir.
 weight: 10
 url: /tr/net/document-processing/extract-document-info/
+type: docs
 ---
-
 # Belge Bilgilerini Çıkart
 
 ## giriiş

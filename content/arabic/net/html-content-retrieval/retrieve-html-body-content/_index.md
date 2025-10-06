@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: يمكنك استرداد محتوى نص HTML باستخدام GroupDocs.Editor لـ .NET من خلال دليلنا خطوة بخطوة. قم بتحسين تطبيقات .NET الخاصة بك بسهولة.
 weight: 10
 url: /ar/net/html-content-retrieval/retrieve-html-body-content/
+type: docs
 ---
-
 # استرداد محتوى نص HTML
 
 ## مقدمة

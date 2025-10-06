@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 使用 GroupDocs.Editor .NET 管理和编辑文档。了解如何轻松创建、编辑和保存文档。立即增强您的文档管理工作流程！
 weight: 20
 url: /zh/net/document-editing/
+type: docs
 ---
-
 # 文档编辑
 
 

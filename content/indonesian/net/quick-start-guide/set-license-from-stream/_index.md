@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Pelajari cara menggunakan Groupdocs.Editor untuk .NET untuk mengedit dokumen secara terprogram. Ikuti panduan komprehensif ini untuk integrasi yang lancar dan fitur-fitur canggih.
 weight: 11
 url: /id/net/quick-start-guide/set-license-from-stream/
+type: docs
 ---
-
 # Tetapkan Lisensi dari Stream
 
 ## Perkenalan

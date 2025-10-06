@@ -3,8 +3,8 @@ title: "Form Fields Editing Tutorials with GroupDocs.Editor for .NET"
 description: "Complete tutorials for working with document form fields, interactive forms, and form content using GroupDocs.Editor for .NET."
 weight: 12
 url: "/net/form-fields/"
+type: docs
 ---
-
 # Form Fields Editing Tutorials with GroupDocs.Editor for .NET
 
 Master form field processing with our detailed GroupDocs.Editor tutorials for .NET. These practical guides demonstrate how to edit form fields in documents, work with legacy form fields, fix invalid form field collections, and implement form-specific editing features. Each tutorial provides working C# code examples for common form field scenarios, helping you build applications that can effectively handle interactive forms while maintaining field functionality and data integrity.

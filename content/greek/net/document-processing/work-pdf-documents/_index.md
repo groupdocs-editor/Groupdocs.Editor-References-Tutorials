@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να επεξεργάζεστε έγγραφα PDF χρησιμοποιώντας το GroupDocs.Editor για .NET με αυτόν τον οδηγό. Τροποποιήστε το περιεχόμενο, χειριστείτε μεγάλα αρχεία και αποθηκεύστε τις αλλαγές σας με ασφάλεια.
 weight: 14
 url: /el/net/document-processing/work-pdf-documents/
+type: docs
 ---
-
 # Εργαστείτε με έγγραφα PDF
 
 ## Εισαγωγή

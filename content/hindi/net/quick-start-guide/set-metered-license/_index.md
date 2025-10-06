@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: हमारे व्यापक गाइड के साथ .NET के लिए GroupDocs.Editor को एकीकृत और उपयोग करना सीखें। अपने .NET अनुप्रयोगों के भीतर शक्तिशाली दस्तावेज़ संपादन सुविधाओं को अनलॉक करें।
 weight: 12
 url: /hi/net/quick-start-guide/set-metered-license/
+type: docs
 ---
-
 # मीटर्ड लाइसेंस सेट करें
 
 ## परिचय

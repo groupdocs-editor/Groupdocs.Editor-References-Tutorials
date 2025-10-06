@@ -8,10 +8,8 @@ keywords:
 - convert HTML to DOCX Java
 - GroupDocs.Editor setup
 - Java document conversion
-
+type: docs
 ---
-
-
 # Convert HTML to DOCX in Java Using GroupDocs.Editor: A Complete Guide
 
 Welcome to this comprehensive guide on converting HTML files into Word processing documents (DOCX) using the GroupDocs.Editor library for Java. If you've ever needed a seamless way to transform web content into editable word formats, this tutorial is perfect for you. Here, we will explore how to use GroupDocs.Editor in Java to load an HTML file, initialize it with the Editor class, and save it as a DOCX file efficiently.

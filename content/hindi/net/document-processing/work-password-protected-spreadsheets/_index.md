@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: .NET के लिए GroupDocs.Editor का उपयोग करके पासवर्ड-संरक्षित स्प्रेडशीट को संभालना सीखें। यह विस्तृत गाइड आपको सुरक्षित Excel फ़ाइलों को खोलने से लेकर सहेजने तक की जानकारी देती है।
 weight: 18
 url: /hi/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # पासवर्ड-संरक्षित स्प्रेडशीट के साथ कार्य करें
 
 ## परिचय

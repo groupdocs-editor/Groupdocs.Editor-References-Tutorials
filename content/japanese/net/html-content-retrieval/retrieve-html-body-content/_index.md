@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: ステップバイステップ ガイドに従って、GroupDocs.Editor for .NET を使用して HTML 本文コンテンツを取得します。.NET アプリケーションを簡単に強化できます。
 weight: 10
 url: /ja/net/html-content-retrieval/retrieve-html-body-content/
+type: docs
 ---
-
 # HTML 本文コンテンツを取得する
 
 ## 導入

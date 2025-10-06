@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Pobierz treść HTML za pomocą GroupDocs.Editor dla .NET, korzystając z naszego przewodnika krok po kroku. Ulepsz swoje aplikacje .NET bez wysiłku.
 weight: 10
 url: /pl/net/html-content-retrieval/retrieve-html-body-content/
+type: docs
 ---
-
 # Pobierz treść HTML
 
 ## Wstęp

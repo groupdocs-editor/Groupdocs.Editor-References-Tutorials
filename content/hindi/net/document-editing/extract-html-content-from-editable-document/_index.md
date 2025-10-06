@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: .NET के लिए GroupDocs.Editor का उपयोग करके दस्तावेज़ों से HTML सामग्री को आसानी से निकालें। सहज एकीकरण और दस्तावेज़ प्रबंधन के लिए हमारी विस्तृत मार्गदर्शिका का पालन करें।
 weight: 12
 url: /hi/net/document-editing/extract-html-content-from-editable-document/
+type: docs
 ---
-
 # संपादन योग्य दस्तावेज़ से HTML सामग्री निकालें
 
 ## परिचय

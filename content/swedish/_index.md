@@ -6,8 +6,8 @@ description: Bemästra dokumentredigering utan ansträngning med GroupDocs.Edito
 weight: 11
 url: /sv/
 is_root: true
+type: docs
 ---
-
 # Låsa upp dokumenthantering med GroupDocs.Editor
 
 

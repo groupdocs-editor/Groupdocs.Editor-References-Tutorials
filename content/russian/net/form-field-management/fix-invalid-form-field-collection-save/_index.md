@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Узнайте, как исправить недопустимые поля формы в DOCX с помощью Groupdocs.Editor для .NET. Следуйте этому руководству, чтобы обеспечить отсутствие ошибок в ваших документах и надежно их сохранить.
 weight: 11
 url: /ru/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # Исправить неверный сбор полей формы и сохранить
 
 ## Введение

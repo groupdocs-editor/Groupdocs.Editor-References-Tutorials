@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak odzyskać zawartość HTML za pomocą GroupDocs.Editor dla .NET. Dołączone instrukcje krok po kroku dotyczące pobierania treści i niestandardowych przedrostków.
 weight: 22
 url: /pl/net/html-content-retrieval/
+type: docs
 ---
-
 # Pobieranie treści HTML
 
 Odblokuj możliwości wyszukiwania treści HTML w aplikacjach .NET dzięki GroupDocs.Editor dla .NET. Nasze wszechstronne samouczki poprowadzą Cię przez proces wyodrębniania treści HTML i używania niestandardowych przedrostków dla obrazów i arkuszy stylów. Niezależnie od tego, czy chcesz usprawnić zarządzanie dokumentami, czy usprawnić organizację zasobów, nasze szczegółowe przewodniki zapewnią bezproblemową integrację. Zanurz się i zacznij optymalizować swoje aplikacje już dziś!

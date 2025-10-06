@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor
 - .net
 - Document Processing
-
+type: docs
 ---
-
-
 # Mastering Metadata Extraction in .NET with GroupDocs.Editor
 
 ## Introduction

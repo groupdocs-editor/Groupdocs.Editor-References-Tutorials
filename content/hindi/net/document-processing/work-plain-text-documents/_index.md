@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: हमारे चरण-दर-चरण मार्गदर्शिका के साथ .NET के लिए GroupDocs.Editor का उपयोग करके सादे पाठ दस्तावेज़ों को संपादित करना सीखें। अपने .NET दस्तावेज़ संपादन प्रक्रिया को सरल बनाएं।
 weight: 15
 url: /hi/net/document-processing/work-plain-text-documents/
+type: docs
 ---
-
 # सादे पाठ दस्तावेज़ों के साथ कार्य करें
 
 ## परिचय

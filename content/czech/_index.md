@@ -6,8 +6,8 @@ description: Ovládněte úpravy dokumentů bez námahy s GroupDocs.Editor pro .
 weight: 11
 url: /cs/
 is_root: true
+type: docs
 ---
-
 # Odemknutí správy dokumentů pomocí GroupDocs.Editor
 
 

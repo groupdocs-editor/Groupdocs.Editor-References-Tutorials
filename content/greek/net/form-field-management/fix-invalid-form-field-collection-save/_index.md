@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς μπορείτε να διορθώσετε μη έγκυρα πεδία φόρμας στο DOCX χρησιμοποιώντας το Groupdocs.Editor για .NET. Ακολουθήστε αυτόν τον οδηγό για να βεβαιωθείτε ότι τα έγγραφά σας είναι χωρίς σφάλματα και να τα αποθηκεύσετε με ασφάλεια.
 weight: 11
 url: /el/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # Διορθώστε τη συλλογή πεδίων μη έγκυρης φόρμας και αποθηκεύστε
 
 ## Εισαγωγή

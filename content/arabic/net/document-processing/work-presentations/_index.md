@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعلم كيفية تحرير عروض PowerPoint التقديمية باستخدام GroupDocs.Editor لـ .NET. اتبع هذا الدليل التفصيلي خطوة بخطوة لتبسيط عملية تحرير المستندات الخاصة بك.
 weight: 16
 url: /ar/net/document-processing/work-presentations/
+type: docs
 ---
-
 # العمل مع العروض التقديمية
 
 ## مقدمة

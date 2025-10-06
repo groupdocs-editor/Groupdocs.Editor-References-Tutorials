@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách chỉnh sửa tài liệu Word, Excel, PowerPoint, Ebook và Email bằng GroupDocs.Editor cho .NET với hướng dẫn từng bước toàn diện này.
 weight: 10
 url: /vi/net/document-editing/create-document/
+type: docs
 ---
-
 # Tạo tài liệu
 
 ## Giới thiệu

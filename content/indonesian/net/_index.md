@@ -5,8 +5,8 @@ weight: 10
 url: /id/net/
 description: Kelola dan edit dokumen dengan GroupDocs.Editor .NET. Pelajari pemrosesan dokumen, pengeditan dokumen, pengambilan konten HTML, manajemen bidang formulir, dan banyak lagi!
 is_root: true
+type: docs
 ---
-
 # Tutorial dan Contoh GroupDocs.Editor untuk .NET
 
 

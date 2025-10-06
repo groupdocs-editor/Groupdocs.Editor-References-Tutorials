@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Bez námahy upravujte a ukládejte dokumenty pomocí GroupDocs.Editor pro .NET. Tento průvodce krok za krokem zjednodušuje vývojářům proces.
 weight: 14
 url: /cs/net/document-editing/save-document/
+type: docs
 ---
-
 # Uložit dokument
 
 ## Úvod

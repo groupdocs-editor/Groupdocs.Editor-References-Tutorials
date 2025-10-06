@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: इस चरण-दर-चरण मार्गदर्शिका के साथ .NET के लिए GroupDocs.Editor का उपयोग करके HTML को संपादन योग्य Word दस्तावेज़ों में बदलें। आपके दस्तावेज़ प्रबंधन वर्कफ़्लो को सुव्यवस्थित करने के लिए बिल्कुल सही।
 weight: 10
 url: /hi/net/document-editing/create-editable-document-from-html/
+type: docs
 ---
-
 # HTML से संपादन योग्य दस्तावेज़ बनाएँ
 
 ## परिचय

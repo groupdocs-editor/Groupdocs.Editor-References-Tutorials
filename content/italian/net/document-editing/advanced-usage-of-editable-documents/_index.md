@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Scopri l'utilizzo avanzato di GroupDocs.Editor per .NET creando, modificando ed estraendo risorse dai documenti a livello di codice.
 weight: 11
 url: /it/net/document-editing/advanced-usage-of-editable-documents/
+type: docs
 ---
-
 # Utilizzo avanzato di documenti modificabili
 
 ## introduzione

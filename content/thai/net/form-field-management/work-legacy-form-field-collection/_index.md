@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีจัดการฟิลด์แบบฟอร์มเดิมโดยใช้ GroupDocs.Editor สำหรับ .NET พร้อมคำแนะนำโดยละเอียดของเรา เหมาะสำหรับการจัดการช่องข้อความ ช่องทำเครื่องหมาย วันที่ และอื่นๆ
 weight: 12
 url: /th/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # ทำงานร่วมกับคอลเลกชันฟิลด์ฟอร์มดั้งเดิม
 
 ## การแนะนำ

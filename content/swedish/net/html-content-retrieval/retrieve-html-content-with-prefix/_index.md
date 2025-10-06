@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du hämtar HTML-innehåll från dokument med GroupDocs.Editor för .NET med anpassade prefix för bilder och stilmallar. Steg-för-steg-guide ingår.
 weight: 11
 url: /sv/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # Hämta HTML-innehåll med prefix
 
 ## Introduktion

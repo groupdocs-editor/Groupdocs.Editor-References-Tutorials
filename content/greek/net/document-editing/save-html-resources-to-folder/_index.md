@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να εξάγετε πόρους HTML από έγγραφα χρησιμοποιώντας το Groupdocs.Editor για .NET. Αυτό το περιεκτικό σεμινάριο παρέχει βήμα προς βήμα καθοδήγηση για προγραμματιστές.
 weight: 13
 url: /el/net/document-editing/save-html-resources-to-folder/
+type: docs
 ---
-
 # Αποθήκευση πόρων HTML στο φάκελο
 
 ## Εισαγωγή

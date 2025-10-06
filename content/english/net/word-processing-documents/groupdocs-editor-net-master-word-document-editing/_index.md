@@ -8,10 +8,8 @@ keywords:
 - GroupDocs Editor for .NET
 - edit Word documents programmatically
 - automate document workflows
-
+type: docs
 ---
-
-
 # Mastering Document Editing: Load and Edit a Word Document Using GroupDocs.Editor for .NET
 
 ## Introduction

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Přečtěte si, jak opravit neplatná pole formuláře v DOCX pomocí Groupdocs.Editor pro .NET. Postupujte podle tohoto průvodce, abyste se ujistili, že vaše dokumenty jsou bez chyb a bezpečně je uložte.
 weight: 11
 url: /cs/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # Opravte neplatnou kolekci polí formuláře a uložte
 
 ## Úvod

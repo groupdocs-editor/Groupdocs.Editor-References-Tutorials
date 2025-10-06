@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Научитесь редактировать обычные текстовые документы с помощью GroupDocs.Editor для .NET с помощью нашего пошагового руководства. Упростите процесс редактирования документов .NET.
 weight: 15
 url: /ru/net/document-processing/work-plain-text-documents/
+type: docs
 ---
-
 # Работа с обычными текстовыми документами
 
 ## Введение

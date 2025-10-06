@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET ile Kelime işlem belgelerini zahmetsizce düzenleyin. Belge yönetimi becerilerinizi geliştirmek için ayrıntılı, adım adım eğitimimizi izleyin.
 weight: 19
 url: /tr/net/document-processing/work-word-processing-documents/
+type: docs
 ---
-
 # Kelime İşleme Belgeleriyle Çalışmak
 
 ## giriiş

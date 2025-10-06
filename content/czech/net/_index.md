@@ -5,8 +5,8 @@ weight: 10
 url: /cs/net/
 description: Spravujte a upravujte dokumenty pomocí GroupDocs.Editor .NET. Naučte se zpracování dokumentů, úpravy dokumentů, načítání obsahu HTML, správu polí formulářů a další!
 is_root: true
+type: docs
 ---
-
 # Návody a příklady GroupDocs.Editoru pro .NET
 
 

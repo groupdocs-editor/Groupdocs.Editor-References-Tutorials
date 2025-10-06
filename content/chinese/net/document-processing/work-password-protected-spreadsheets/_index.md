@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 处理受密码保护的电子表格。本详细指南将引导您打开并保存安全的 Excel 文件。
 weight: 18
 url: /zh/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # 使用受密码保护的电子表格
 
 ## 介绍

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengambil konten HTML dari dokumen menggunakan GroupDocs.Editor untuk .NET dengan awalan khusus untuk gambar dan stylesheet. Panduan langkah demi langkah disertakan.
 weight: 11
 url: /id/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # Ambil Konten HTML dengan Awalan
 
 ## Perkenalan

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: إدارة المستندات وتحريرها باستخدام GroupDocs.Editor .NET. تعرف على كيفية إنشاء المستندات وتحريرها وحفظها بسهولة. عزز سير عمل إدارة المستندات لديك اليوم!
 weight: 20
 url: /ar/net/document-editing/
+type: docs
 ---
-
 # تحرير المستندات
 
 

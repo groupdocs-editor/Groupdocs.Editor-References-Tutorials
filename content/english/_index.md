@@ -7,8 +7,8 @@ keywords: document editor API, document editing, .NET document API, Java documen
 weight: 11
 url: /
 is_root: true
+type: docs
 ---
-
 # GroupDocs.Editor: Complete Document Editing API for .NET & Java
 
 ## Overview: Powerful Document Editing for Your Applications

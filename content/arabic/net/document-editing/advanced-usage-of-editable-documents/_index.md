@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعرف على الاستخدام المتقدم لـ GroupDocs.Editor لإنشاء الموارد من المستندات وتحريرها واستخراجها من المستندات برمجيًا.
 weight: 11
 url: /ar/net/document-editing/advanced-usage-of-editable-documents/
+type: docs
 ---
-
 # الاستخدام المتقدم للمستندات القابلة للتحرير
 
 ## مقدمة

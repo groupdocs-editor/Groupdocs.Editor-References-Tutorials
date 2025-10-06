@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: قم بتحرير المستندات وحفظها بسهولة باستخدام GroupDocs.Editor لـ .NET. يعمل هذا الدليل التفصيلي على تبسيط العملية للمطورين.
 weight: 14
 url: /ar/net/document-editing/save-document/
+type: docs
 ---
-
 # حفظ المستند
 
 ## مقدمة

@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Scopri come gestire il contenuto CSS con prefisso utilizzando Groupdocs.Editor per .NET in questo tutorial dettagliato passo dopo passo. Perfetto per sviluppatori di tutti i livelli.
 weight: 11
 url: /it/net/css-handling/handle-css-content-with-prefix/
+type: docs
 ---
-
 # Gestisci il contenuto CSS con il prefisso
 
 ## introduzione

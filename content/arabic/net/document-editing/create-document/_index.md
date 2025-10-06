@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية تحرير مستندات Word وExcel وPowerPoint والكتب الإلكترونية والبريد الإلكتروني باستخدام GroupDocs.Editor لـ .NET باستخدام هذا البرنامج التعليمي الشامل خطوة بخطوة.
 weight: 10
 url: /ar/net/document-editing/create-document/
+type: docs
 ---
-
 # إنشاء مستند
 
 ## مقدمة

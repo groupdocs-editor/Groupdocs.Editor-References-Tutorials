@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ezzel az átfogó, lépésenkénti oktatóanyaggal megtudhatja, hogyan szerkeszthet Word, Excel, PowerPoint, Ebook és E-mail dokumentumokat a GroupDocs.Editor for .NET segítségével.
 weight: 10
 url: /hu/net/document-editing/create-document/
+type: docs
 ---
-
 # Dokumentum létrehozása
 
 ## Bevezetés

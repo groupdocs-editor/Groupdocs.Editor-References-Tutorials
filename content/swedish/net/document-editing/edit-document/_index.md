@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Lär dig att redigera dokument utan ansträngning med GroupDocs.Editor för .NET. Steg-för-steg-guide för ordbehandlings- och kalkylbladsfiler.
 weight: 11
 url: /sv/net/document-editing/edit-document/
+type: docs
 ---
-
 # Redigera dokument
 
 ## Introduktion

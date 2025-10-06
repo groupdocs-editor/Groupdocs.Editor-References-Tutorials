@@ -5,8 +5,8 @@ weight: 10
 url: /hi/net/
 description: GroupDocs.Editor .NET के साथ दस्तावेज़ों को प्रबंधित और संपादित करें। दस्तावेज़ प्रसंस्करण, दस्तावेज़ संपादन, HTML सामग्री पुनर्प्राप्ति, फ़ॉर्म फ़ील्ड प्रबंधन, और बहुत कुछ सीखें!
 is_root: true
+type: docs
 ---
-
 # .NET के लिए GroupDocs.Editor के ट्यूटोरियल और उदाहरण
 
 

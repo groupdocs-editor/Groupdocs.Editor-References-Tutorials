@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Узнайте, как работать с электронными таблицами с несколькими вкладками в .NET с помощью GroupDocs.Editor. Включены пошаговое руководство, примеры кода и рекомендации.
 weight: 17
 url: /ru/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # Работа с таблицами с несколькими вкладками
 
 ## Введение

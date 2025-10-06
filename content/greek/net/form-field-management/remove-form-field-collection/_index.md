@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να αφαιρείτε πεδία φόρμας από έγγραφα του Word χρησιμοποιώντας το GroupDocs.Editor για .NET με αυτόν τον αναλυτικό οδηγό. Ιδανικό για προγραμματιστές.
 weight: 13
 url: /el/net/form-field-management/remove-form-field-collection/
+type: docs
 ---
-
 # Κατάργηση συλλογής πεδίων φόρμας
 
 ## Εισαγωγή

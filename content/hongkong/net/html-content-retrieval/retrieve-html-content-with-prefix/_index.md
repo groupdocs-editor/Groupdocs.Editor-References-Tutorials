@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解如何使用適用於 .NET 的 GroupDocs.Editor 以及圖像和樣式表的自訂前綴從文件中擷取 HTML 內容。包括逐步指南。
 weight: 11
 url: /zh-hant/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # 檢索帶有前綴的 HTML 內容
 
 ## 介紹

@@ -8,10 +8,8 @@ keywords:
 - Java HTML to Word conversion
 - GroupDocs.Editor for Java
 - document transformation
-
+type: docs
 ---
-
-
 # Java HTML to Word Conversion: Mastering GroupDocs.Editor for Seamless Document Transformation
 
 ## Introduction

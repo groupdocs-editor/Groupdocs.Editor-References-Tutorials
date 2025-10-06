@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Növelje a dokumentumszerkesztés hatékonyságát .NET-projektekben a Groupdocs.Editor segítségével. Az űrlapmező-gyűjtemények zökkenőmentes módosítása.
 weight: 10
 url: /hu/net/form-field-management/edit-form-field-collection/
+type: docs
 ---
-
 # Űrlapmező-gyűjtemény szerkesztése
 
 ## Bevezetés

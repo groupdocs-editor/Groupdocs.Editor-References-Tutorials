@@ -8,10 +8,8 @@ keywords:
 - extract HTML from Word documents
 - custom prefixes in GroupDocs.Editor
 - HTML manipulation with GroupDocs for .NET
-
+type: docs
 ---
-
-
 # Extract & Prefix HTML from Word Documents Using GroupDocs.Editor .NET
 
 ## Introduction

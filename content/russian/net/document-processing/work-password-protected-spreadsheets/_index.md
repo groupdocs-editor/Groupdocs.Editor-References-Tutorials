@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Узнайте, как работать с электронными таблицами, защищенными паролем, с помощью GroupDocs.Editor для .NET. Это подробное руководство поможет вам сохранить защищенные файлы Excel.
 weight: 18
 url: /ru/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # Работа с электронными таблицами, защищенными паролем
 
 ## Введение

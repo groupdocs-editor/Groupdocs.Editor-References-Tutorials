@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: プログラムによってドキュメントからリソースを作成、編集、抽出する GroupDocs.Editor for .NET の高度な使用方法を学習します。
 weight: 11
 url: /ja/net/document-editing/advanced-usage-of-editable-documents/
+type: docs
 ---
-
 # 編集可能なドキュメントの高度な使用法
 
 ## 導入

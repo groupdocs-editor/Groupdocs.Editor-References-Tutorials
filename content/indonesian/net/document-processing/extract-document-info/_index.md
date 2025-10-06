@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengekstrak informasi dokumen menggunakan GroupDocs.Editor untuk .NET dengan tutorial langkah demi langkah kami yang mendetail. Sempurna untuk mengelola berbagai jenis dokumen.
 weight: 10
 url: /id/net/document-processing/extract-document-info/
+type: docs
 ---
-
 # Ekstrak Info Dokumen
 
 ## Perkenalan

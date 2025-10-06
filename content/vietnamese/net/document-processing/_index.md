@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Xử lý tài liệu thành thạo trong .NET với GroupDocs.Editor. Tìm hiểu cách trích xuất thông tin, lưu vào nhiều định dạng khác nhau và làm việc với các loại tài liệu khác nhau một cách dễ dàng.
 weight: 24
 url: /vi/net/document-processing/
+type: docs
 ---
-
 # Xử lý văn bản
 
 

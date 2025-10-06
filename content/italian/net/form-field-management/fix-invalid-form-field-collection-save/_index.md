@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Scopri come correggere i campi modulo non validi in DOCX utilizzando Groupdocs.Editor per .NET. Segui questa guida per assicurarti che i tuoi documenti siano privi di errori e salvarli in modo sicuro.
 weight: 11
 url: /it/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # Correggi la raccolta di campi modulo non validi e salva
 
 ## introduzione

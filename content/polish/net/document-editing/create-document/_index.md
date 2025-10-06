@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak edytować dokumenty Word, Excel, PowerPoint, Ebook i e-mail za pomocą GroupDocs.Editor dla .NET, dzięki temu kompleksowemu samouczkowi krok po kroku.
 weight: 10
 url: /pl/net/document-editing/create-document/
+type: docs
 ---
-
 # Utwórz dokument
 
 ## Wstęp

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: इस चरण-दर-चरण मार्गदर्शिका के साथ दस्तावेज़ों से बाहरी CSS सामग्री निकालने के लिए .NET के लिए GroupDocs.Editor का उपयोग करना सीखें। दस्तावेज़ एकीकृत करने वाले डेवलपर्स के लिए बिल्कुल सही।
 weight: 10
 url: /hi/net/css-handling/get-external-css-content/
+type: docs
 ---
-
 # बाहरी CSS सामग्री प्राप्त करें
 
 ## परिचय

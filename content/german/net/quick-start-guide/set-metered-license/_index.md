@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Erfahren Sie in unserem umfassenden Handbuch, wie Sie GroupDocs.Editor für .NET integrieren und verwenden. Schalten Sie leistungsstarke Dokumentbearbeitungsfunktionen in Ihren .NET-Anwendungen frei.
 weight: 12
 url: /de/net/quick-start-guide/set-metered-license/
+type: docs
 ---
-
 # Gemessene Lizenz festlegen
 
 ## Einführung

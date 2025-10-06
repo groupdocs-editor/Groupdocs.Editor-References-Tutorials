@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor .NET
 - .NET document loading
 - WordProcessingLoadOptions
-
+type: docs
 ---
-
-
 # Mastering Document Loading in .NET with GroupDocs.Editor
 ## Introduction
 Struggling to efficiently load and edit documents in your .NET applications? With GroupDocs.Editor for .NET, seamlessly manage document loading processes using straightforward code examples. This comprehensive guide will walk you through how to utilize this powerful library to load documents both with and without specific options.

@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor .NET license implementation
 - applying license file in .NET
 - GroupDocs licensing troubleshooting
-
+type: docs
 ---
-
-
 # Comprehensive Guide: Implementing GroupDocs.Editor .NET License from File
 
 ## Introduction

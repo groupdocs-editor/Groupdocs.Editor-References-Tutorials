@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Poznaj zaawansowane wykorzystanie programu GroupDocs.Editor dla platformy .NET do programowego tworzenia, edytowania i wyodrębniania zasobów z dokumentów.
 weight: 11
 url: /pl/net/document-editing/advanced-usage-of-editable-documents/
+type: docs
 ---
-
 # Zaawansowane wykorzystanie edytowalnych dokumentów
 
 ## Wstęp

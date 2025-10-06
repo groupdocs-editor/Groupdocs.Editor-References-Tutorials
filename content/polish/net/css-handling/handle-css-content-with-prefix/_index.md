@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Z tego szczegółowego samouczka krok po kroku dowiesz się, jak obsługiwać zawartość CSS z prefiksem przy użyciu programu Groupdocs.Editor dla platformy .NET. Idealny dla programistów na wszystkich poziomach.
 weight: 11
 url: /pl/net/css-handling/handle-css-content-with-prefix/
+type: docs
 ---
-
 # Obsługuj zawartość CSS za pomocą prefiksu
 
 ## Wstęp

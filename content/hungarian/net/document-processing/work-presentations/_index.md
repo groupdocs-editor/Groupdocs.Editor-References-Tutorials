@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ismerje meg a PowerPoint prezentációk szerkesztését a GroupDocs.Editor for .NET segítségével. Kövesse ezt a lépésenkénti útmutatót a dokumentumszerkesztési folyamat egyszerűsítéséhez.
 weight: 16
 url: /hu/net/document-processing/work-presentations/
+type: docs
 ---
-
 # Munka a prezentációkkal
 
 ## Bevezetés

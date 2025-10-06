@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 단계별 가이드를 통해 .NET용 GroupDocs.Editor를 사용하여 일반 텍스트 문서를 편집하는 방법을 알아보세요. .NET 문서 편집 프로세스를 단순화하세요.
 weight: 15
 url: /ko/net/document-processing/work-plain-text-documents/
+type: docs
 ---
-
 # 일반 텍스트 문서 작업
 
 ## 소개

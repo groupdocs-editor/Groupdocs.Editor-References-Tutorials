@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor license Java
 - set license GroupDocs.Editor InputStream
 - Java document editing licensing
-
+type: docs
 ---
-
-
 # How to Set a License for GroupDocs.Editor in Java Using InputStream
 
 ## Introduction

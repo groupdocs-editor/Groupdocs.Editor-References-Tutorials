@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีแก้ไขช่องแบบฟอร์มที่ไม่ถูกต้องใน DOCX โดยใช้ Groupdocs.Editor สำหรับ .NET ปฏิบัติตามคำแนะนำนี้เพื่อให้แน่ใจว่าเอกสารของคุณปราศจากข้อผิดพลาดและบันทึกไว้อย่างปลอดภัย
 weight: 11
 url: /th/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # แก้ไขการรวบรวมและบันทึกฟิลด์แบบฟอร์มที่ไม่ถูกต้อง
 
 ## การแนะนำ

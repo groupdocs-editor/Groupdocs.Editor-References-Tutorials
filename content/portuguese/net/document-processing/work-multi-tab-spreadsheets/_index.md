@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Aprenda como trabalhar com planilhas com várias guias no .NET usando GroupDocs.Editor. Guia passo a passo, exemplos de código e práticas recomendadas incluídas.
 weight: 17
 url: /pt/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # Trabalhe com planilhas com várias guias
 
 ## Introdução

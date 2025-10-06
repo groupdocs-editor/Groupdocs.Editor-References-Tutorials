@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 在本全面的分步指南中了解如何使用 GroupDocs.Editor for .NET 将编辑后的文档保存为各种格式。
 weight: 11
 url: /zh/net/document-processing/save-edited-document-various-formats/
+type: docs
 ---
-
 # 将编辑的文档保存为各种格式
 
 ## 介绍

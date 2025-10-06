@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية إصلاح حقول النموذج غير الصالحة في DOCX باستخدام Groupdocs.Editor لـ .NET. اتبع هذا الدليل للتأكد من أن مستنداتك خالية من الأخطاء وحفظها بشكل آمن.
 weight: 11
 url: /ar/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # إصلاح مجموعة حقول النموذج غير الصالحة وحفظها
 
 ## مقدمة

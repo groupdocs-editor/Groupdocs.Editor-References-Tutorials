@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Temukan cara mengambil konten HTML menggunakan GroupDocs.Editor untuk .NET. Panduan langkah demi langkah untuk mengambil konten isi dan awalan khusus disertakan.
 weight: 22
 url: /id/net/html-content-retrieval/
+type: docs
 ---
-
 # Pengambilan Konten HTML
 
 Buka kekuatan pengambilan konten HTML di aplikasi .NET Anda dengan GroupDocs.Editor untuk .NET. Tutorial komprehensif kami akan memandu Anda melalui proses mengekstraksi konten isi HTML dan menggunakan awalan khusus untuk gambar dan stylesheet. Baik Anda ingin meningkatkan manajemen dokumen atau menyederhanakan organisasi sumber daya, panduan langkah demi langkah kami memastikan integrasi yang lancar. Selami dan mulai optimalkan aplikasi Anda hari ini!

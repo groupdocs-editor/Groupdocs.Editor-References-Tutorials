@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET ile belgeleri zahmetsizce düzenlemeyi öğrenin. Kelime İşleme ve Elektronik Tablo dosyaları için adım adım kılavuz.
 weight: 11
 url: /tr/net/document-editing/edit-document/
+type: docs
 ---
-
 # Belgeyi Düzenle
 
 ## giriiş

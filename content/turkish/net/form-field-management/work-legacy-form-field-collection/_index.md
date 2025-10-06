@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Ayrıntılı kılavuzumuzla GroupDocs.Editor for .NET'i kullanarak eski form alanlarını nasıl yöneteceğinizi öğrenin. Metin alanlarını, onay kutularını, tarihleri ve daha fazlasını yönetmek için mükemmeldir.
 weight: 12
 url: /tr/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Eski Form Alanı Koleksiyonuyla Çalışma
 
 ## giriiş

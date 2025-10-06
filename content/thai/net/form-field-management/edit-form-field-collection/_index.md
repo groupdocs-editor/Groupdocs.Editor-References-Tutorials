@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: เพิ่มประสิทธิภาพการแก้ไขเอกสารในโครงการ .NET ด้วย Groupdocs.Editor แก้ไขคอลเลกชันฟิลด์แบบฟอร์มได้อย่างราบรื่น
 weight: 10
 url: /th/net/form-field-management/edit-form-field-collection/
+type: docs
 ---
-
 # แก้ไขการรวบรวมฟิลด์แบบฟอร์ม
 
 ## การแนะนำ

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Learn how to manage legacy form fields using GroupDocs.Editor for .NET with our detailed guide. Perfect for handling text fields, checkboxes, dates, and more.
 weight: 12
 url: /net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Work with Legacy Form Field Collection
 
 ## Introduction

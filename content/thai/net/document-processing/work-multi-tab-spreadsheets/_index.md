@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีทำงานกับสเปรดชีตแบบหลายแท็บใน .NET โดยใช้ GroupDocs.Editor รวมคำแนะนำทีละขั้นตอน ตัวอย่างโค้ด และแนวทางปฏิบัติที่ดีที่สุด
 weight: 17
 url: /th/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # ทำงานกับสเปรดชีตแบบหลายแท็บ
 
 ## การแนะนำ

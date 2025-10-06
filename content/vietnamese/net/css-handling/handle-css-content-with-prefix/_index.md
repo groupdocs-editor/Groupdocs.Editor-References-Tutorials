@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách xử lý nội dung CSS có tiền tố bằng Groupdocs.Editor cho .NET trong hướng dẫn chi tiết từng bước này. Hoàn hảo cho các nhà phát triển ở mọi cấp độ.
 weight: 11
 url: /vi/net/css-handling/handle-css-content-with-prefix/
+type: docs
 ---
-
 # Xử lý nội dung CSS bằng tiền tố
 
 ## Giới thiệu

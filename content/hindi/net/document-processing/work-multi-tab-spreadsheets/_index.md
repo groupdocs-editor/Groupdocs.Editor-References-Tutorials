@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: GroupDocs.Editor का उपयोग करके .NET में मल्टी-टैब स्प्रेडशीट के साथ काम करना सीखें। चरण-दर-चरण मार्गदर्शिका, कोड उदाहरण और सर्वोत्तम अभ्यास शामिल हैं।
 weight: 17
 url: /hi/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # मल्टी-टैब स्प्रेडशीट के साथ कार्य करें
 
 ## परिचय

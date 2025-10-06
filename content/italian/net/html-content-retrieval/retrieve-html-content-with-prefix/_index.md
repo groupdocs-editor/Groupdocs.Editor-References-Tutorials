@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Scopri come recuperare contenuto HTML dai documenti utilizzando GroupDocs.Editor per .NET con prefissi personalizzati per immagini e fogli di stile. Guida passo passo inclusa.
 weight: 11
 url: /it/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # Recupera contenuto HTML con prefisso
 
 ## introduzione

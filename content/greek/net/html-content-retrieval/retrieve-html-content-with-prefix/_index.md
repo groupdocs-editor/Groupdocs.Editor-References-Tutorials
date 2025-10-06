@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να ανακτάτε περιεχόμενο HTML από έγγραφα χρησιμοποιώντας το GroupDocs.Editor για .NET με προσαρμοσμένα προθέματα για εικόνες και φύλλα στυλ. Περιλαμβάνεται οδηγός βήμα προς βήμα.
 weight: 11
 url: /el/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # Ανάκτηση περιεχομένου HTML με πρόθεμα
 
 ## Εισαγωγή

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 使用 GroupDocs.Editor 掌握 .NET 中的文件處理。學習輕鬆提取資訊、保存為各種格式以及處理不同的文件類型。
 weight: 24
 url: /zh-hant/net/document-processing/
+type: docs
 ---
-
 # 文件處理
 
 

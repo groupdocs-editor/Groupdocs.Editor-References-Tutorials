@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor for .NET ile belgeleri programlı olarak nasıl düzenleyeceğinizi öğrenin. Belgelerin yüklenmesi, parola korumalı dosyaların işlenmesi ve daha fazlası için adım adım kılavuz.
 weight: 13
 url: /tr/net/document-editing/load-document/
+type: docs
 ---
-
 # Belgeyi Yükle
 
 ## giriiş

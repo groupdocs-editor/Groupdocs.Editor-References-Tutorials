@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ebből a lépésről lépésre szóló útmutatóból megtudhatja, hogyan távolíthat el űrlapmezőket Word-dokumentumokból a GroupDocs.Editor for .NET segítségével. Ideális fejlesztőknek.
 weight: 13
 url: /hu/net/form-field-management/remove-form-field-collection/
+type: docs
 ---
-
 # Űrlapmező-gyűjtemény eltávolítása
 
 ## Bevezetés

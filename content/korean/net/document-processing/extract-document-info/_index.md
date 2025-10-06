@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 상세한 단계별 튜토리얼을 통해 .NET용 GroupDocs.Editor를 사용하여 문서 정보를 추출하는 방법을 알아보세요. 다양한 문서 유형을 관리하는 데 적합합니다.
 weight: 10
 url: /ko/net/document-processing/extract-document-info/
+type: docs
 ---
-
 # 문서 정보 추출
 
 ## 소개

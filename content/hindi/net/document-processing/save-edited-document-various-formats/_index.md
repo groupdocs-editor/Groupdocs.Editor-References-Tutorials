@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: इस व्यापक चरण-दर-चरण मार्गदर्शिका में GroupDocs.Editor for .NET का उपयोग करके संपादित दस्तावेज़ों को विभिन्न प्रारूपों में सहेजना सीखें।
 weight: 11
 url: /hi/net/document-processing/save-edited-document-various-formats/
+type: docs
 ---
-
 # संपादित दस्तावेज़ को विभिन्न प्रारूपों में सहेजें
 
 ## परिचय

@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Z tego samouczka dowiesz się, jak edytować dokumenty PDF przy użyciu programu GroupDocs.Editor dla platformy .NET. Modyfikuj treść, obsługuj duże pliki i bezpiecznie zapisuj swoje zmiany.
 weight: 14
 url: /pl/net/document-processing/work-pdf-documents/
+type: docs
 ---
-
 # Pracuj z dokumentami PDF
 
 ## Wstęp

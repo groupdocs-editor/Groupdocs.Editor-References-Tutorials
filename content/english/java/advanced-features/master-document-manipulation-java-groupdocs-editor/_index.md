@@ -9,10 +9,8 @@ keywords:
 - loading Word documents with GroupDocs.Editor
 - editing Word documents using Java
 - saving Word documents with GroupDocs.Editor
-
+type: docs
 ---
-
-
 # Mastering Document Manipulation in Java with GroupDocs.Editor
 
 ## Introduction

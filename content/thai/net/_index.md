@@ -5,8 +5,8 @@ weight: 10
 url: /th/net/
 description: จัดการและแก้ไขเอกสารด้วย GroupDocs.Editor .NET เรียนรู้การประมวลผลเอกสาร การแก้ไขเอกสาร การดึงเนื้อหา HTML การจัดการฟิลด์แบบฟอร์ม และอื่นๆ อีกมากมาย!
 is_root: true
+type: docs
 ---
-
 # บทช่วยสอนและตัวอย่าง GroupDocs.Editor สำหรับ .NET
 
 

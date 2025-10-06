@@ -8,10 +8,8 @@ keywords:
 - PDF editing with GroupDocs.Editor
 - GroupDocs Editor .NET
 - edit password-protected PDF
-
+type: docs
 ---
-
-
 # Efficient PDF Editing with GroupDocs.Editor .NET: Load Options and Pagination Features
 
 ## Introduction

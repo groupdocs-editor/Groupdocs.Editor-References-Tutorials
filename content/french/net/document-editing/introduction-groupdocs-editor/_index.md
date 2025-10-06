@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Découvrez comment utiliser GroupDocs.Editor pour .NET pour modifier des documents par programmation avec ce guide détaillé étape par étape.
 weight: 12
 url: /fr/net/document-editing/introduction-groupdocs-editor/
+type: docs
 ---
-
 # Introduction à GroupDocs.Editor pour .NET
 
 ## Introduction 

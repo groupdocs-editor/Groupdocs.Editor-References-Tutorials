@@ -6,8 +6,8 @@ description: 使用適用於 .NET 和 Java 的 GroupDocs.Editor 輕鬆掌握文�
 weight: 11
 url: /zh-hant/
 is_root: true
+type: docs
 ---
-
 # 使用 GroupDocs.Editor 解鎖文件管理
 
 

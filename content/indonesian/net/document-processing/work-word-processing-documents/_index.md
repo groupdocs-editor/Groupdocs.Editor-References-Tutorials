@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Edit dokumen pemrosesan Word dengan mudah menggunakan GroupDocs.Editor untuk .NET. Ikuti tutorial langkah demi langkah kami yang terperinci untuk meningkatkan keterampilan manajemen dokumen Anda.
 weight: 19
 url: /id/net/document-processing/work-word-processing-documents/
+type: docs
 ---
-
 # Bekerja dengan Dokumen Pemrosesan Kata
 
 ## Perkenalan

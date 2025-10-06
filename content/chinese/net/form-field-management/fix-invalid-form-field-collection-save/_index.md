@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 Groupdocs.Editor for .NET 修复 DOCX 中的无效表单字段。按照本指南确保您的文档没有错误并安全保存。
 weight: 11
 url: /zh/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # 修复无效的表单字段收集并保存
 
 ## 介绍

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: GroupDocs.Editor'ı kullanarak .NET'te çok sekmeli elektronik tablolarla nasıl çalışılacağını öğrenin. Adım adım kılavuz, kod örnekleri ve en iyi uygulamalar dahildir.
 weight: 17
 url: /tr/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # Çok Sekmeli Elektronik Tablolarla Çalışma
 
 ## giriiş

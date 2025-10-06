@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Pelajari cara menangani spreadsheet yang dilindungi kata sandi menggunakan GroupDocs.Editor untuk .NET. Panduan terperinci ini memandu Anda membuka untuk menyimpan file Excel yang aman.
 weight: 18
 url: /id/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # Bekerja dengan Spreadsheet yang Dilindungi Kata Sandi
 
 ## Perkenalan

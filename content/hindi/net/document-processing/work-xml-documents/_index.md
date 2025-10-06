@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: हमारे चरण-दर-चरण मार्गदर्शिका के साथ .NET के लिए GroupDocs.Editor का उपयोग करके XML दस्तावेज़ों को कुशलतापूर्वक संपादित करना सीखें, जिसमें सभी आवश्यक चरण और विकल्प शामिल हैं।
 weight: 20
 url: /hi/net/document-processing/work-xml-documents/
+type: docs
 ---
-
 # XML दस्तावेज़ों के साथ कार्य करें
 
 ## परिचय

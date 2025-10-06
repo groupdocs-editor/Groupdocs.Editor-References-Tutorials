@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 使用 GroupDocs.Editor for .NET 轻松从文档中提取 HTML 内容。按照我们的详细指南进行无缝集成和文档管理。
 weight: 12
 url: /zh/net/document-editing/extract-html-content-from-editable-document/
+type: docs
 ---
-
 # 从可编辑文档中提取 HTML 内容
 
 ## 介绍

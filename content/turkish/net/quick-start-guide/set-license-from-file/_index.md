@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Uygulamalarınızda kusursuz belge düzenleme için GroupDocs.Editor for .NET'i nasıl kullanacağınızı öğrenin. Adım adım kılavuz, ipuçları ve SSS'ler dahildir.
 weight: 10
 url: /tr/net/quick-start-guide/set-license-from-file/
+type: docs
 ---
-
 # Lisansı Dosyadan Ayarla
 
 ## giriiş

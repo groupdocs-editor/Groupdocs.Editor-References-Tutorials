@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 了解如何使用 GroupDocs.Editor for .NET 以编程方式编辑各种文档格式。带有无缝集成示例的分步指南。
 weight: 13
 url: /zh/net/document-processing/work-document-formats/
+type: docs
 ---
-
 # 使用文档格式
 
 ## 介绍

@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Découvrez comment enregistrer des documents modifiés dans différents formats à l'aide de GroupDocs.Editor for .NET dans ce guide complet étape par étape.
 weight: 11
 url: /fr/net/document-processing/save-edited-document-various-formats/
+type: docs
 ---
-
 # Enregistrer le document modifié dans différents formats
 
 ## Introduction

@@ -3,8 +3,8 @@ title: "GroupDocs.Editor Licensing and Configuration Tutorials for .NET"
 description: "Complete tutorials for setting up licensing, configuring GroupDocs.Editor, and implementing deployment options in .NET applications."
 weight: 14
 url: "/net/licensing-configuration/"
+type: docs
 ---
-
 # GroupDocs.Editor Licensing and Configuration Tutorials for .NET
 
 Our licensing and configuration tutorials provide comprehensive guidance for properly setting up GroupDocs.Editor in your .NET applications. These step-by-step guides demonstrate how to apply licenses from files and streams, implement metered licensing, configure document loading and saving options, and optimize the library for different deployment scenarios. Each tutorial includes working C# code examples for proper configuration, helping you implement GroupDocs.Editor correctly in various application environments while ensuring license compliance.

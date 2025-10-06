@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية العمل مع جداول البيانات متعددة علامات التبويب في .NET باستخدام GroupDocs.Editor. تم تضمين دليل خطوة بخطوة وأمثلة التعليمات البرمجية وأفضل الممارسات.
 weight: 17
 url: /ar/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # العمل مع جداول البيانات متعددة علامات التبويب
 
 ## مقدمة

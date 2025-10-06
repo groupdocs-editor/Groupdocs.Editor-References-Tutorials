@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: แก้ไขและบันทึกเอกสารได้อย่างง่ายดายโดยใช้ GroupDocs.Editor สำหรับ .NET คำแนะนำทีละขั้นตอนนี้ทำให้กระบวนการสำหรับนักพัฒนาง่ายขึ้น
 weight: 14
 url: /th/net/document-editing/save-document/
+type: docs
 ---
-
 # บันทึกเอกสาร
 
 ## การแนะนำ

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 透過我們的詳細指南，了解如何使用 GroupDocs.Editor for .NET 管理舊表單欄位。非常適合處理文字欄位、複選框、日期等。
 weight: 12
 url: /zh-hant/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # 使用舊表單欄位集合
 
 ## 介紹

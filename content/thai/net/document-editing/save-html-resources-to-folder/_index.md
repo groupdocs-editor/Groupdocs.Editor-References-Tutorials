@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: เรียนรู้วิธีแยกทรัพยากร HTML ออกจากเอกสารโดยใช้ Groupdocs.Editor สำหรับ .NET บทช่วยสอนที่ครอบคลุมนี้ให้คำแนะนำทีละขั้นตอนสำหรับนักพัฒนา
 weight: 13
 url: /th/net/document-editing/save-html-resources-to-folder/
+type: docs
 ---
-
 # บันทึกทรัพยากร HTML ลงในโฟลเดอร์
 
 ## การแนะนำ

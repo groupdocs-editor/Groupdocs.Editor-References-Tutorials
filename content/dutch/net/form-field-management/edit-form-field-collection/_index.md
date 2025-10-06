@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Verbeter de efficiëntie van documentbewerking in .NET-projecten met Groupdocs.Editor. Wijzig formulierveldverzamelingen naadloos.
 weight: 10
 url: /nl/net/form-field-management/edit-form-field-collection/
+type: docs
 ---
-
 # Formulierveldverzameling bewerken
 
 ## Invoering

@@ -9,10 +9,8 @@ keywords:
 - extract external CSS Word docs
 - .NET
 - CSS extraction from Word
-
+type: docs
 ---
-
-
 # Extract External CSS from Word Documents with GroupDocs.Editor .NET
 
 ## Introduction

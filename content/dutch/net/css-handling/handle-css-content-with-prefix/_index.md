@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Leer hoe u met CSS-inhoud met voorvoegsel omgaat met Groupdocs.Editor voor .NET in deze gedetailleerde stapsgewijze zelfstudie. Perfect voor ontwikkelaars van alle niveaus.
 weight: 11
 url: /nl/net/css-handling/handle-css-content-with-prefix/
+type: docs
 ---
-
 # Behandel CSS-inhoud met voorvoegsel
 
 ## Invoering

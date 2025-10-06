@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Lär dig hur du hanterar äldre formulärfält med hjälp av GroupDocs.Editor för .NET med vår detaljerade guide. Perfekt för att hantera textfält, kryssrutor, datum och mer.
 weight: 12
 url: /sv/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Arbeta med Legacy Form Field Collection
 
 ## Introduktion

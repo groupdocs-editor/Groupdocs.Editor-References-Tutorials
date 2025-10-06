@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Konvertera HTML till redigerbara Word-dokument med GroupDocs.Editor för .NET med denna steg-för-steg-guide. Perfekt för att effektivisera ditt arbetsflöde för dokumenthantering.
 weight: 10
 url: /sv/net/document-editing/create-editable-document-from-html/
+type: docs
 ---
-
 # Skapa redigerbart dokument från HTML
 
 ## Introduktion

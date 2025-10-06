@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Haal HTML-tekstinhoud op met GroupDocs.Editor voor .NET met onze stapsgewijze handleiding. Verbeter uw .NET-applicaties moeiteloos.
 weight: 10
 url: /nl/net/html-content-retrieval/retrieve-html-body-content/
+type: docs
 ---
-
 # HTML-hoofdtekstinhoud ophalen
 
 ## Invoering

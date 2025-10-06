@@ -8,10 +8,8 @@ keywords:
 - GroupDocs Editor Java
 - Java document editing
 - Word document automation in Java
-
+type: docs
 ---
-
-
 # Master Document Editing in Java: GroupDocs.Editor Guide for Word & Excel Files
 Unlock the full potential of document editing in your Java applications using GroupDocs.Editor. Learn how to seamlessly load, modify, and save Word and Excel documents with ease.
 

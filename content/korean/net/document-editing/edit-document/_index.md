@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: .NET용 GroupDocs.Editor를 사용하여 손쉽게 문서를 편집하는 방법을 알아보세요. 워드 프로세싱 및 스프레드시트 파일에 대한 단계별 가이드입니다.
 weight: 11
 url: /ko/net/document-editing/edit-document/
+type: docs
 ---
-
 # 문서 편집
 
 ## 소개

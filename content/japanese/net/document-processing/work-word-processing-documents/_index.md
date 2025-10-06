@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用すると、Word 処理ドキュメントを簡単に編集できます。詳細なステップバイステップのチュートリアルに従って、ドキュメント管理スキルを高めてください。
 weight: 19
 url: /ja/net/document-processing/work-word-processing-documents/
+type: docs
 ---
-
 # ワープロ文書の操作
 
 ## 導入

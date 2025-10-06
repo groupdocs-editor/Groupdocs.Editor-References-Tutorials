@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Részletes útmutatónkból megtudhatja, hogyan kezelheti a régi űrlapmezőket a GroupDocs.Editor for .NET használatával. Tökéletes a szövegmezők, jelölőnégyzetek, dátumok és egyebek kezelésére.
 weight: 12
 url: /hu/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Dolgozzon a Legacy Form Field Collection segítségével
 
 ## Bevezetés

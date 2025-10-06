@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية تحرير المستندات برمجيًا باستخدام GroupDocs.Editor لـ .NET. دليل خطوة بخطوة لتحميل المستندات والتعامل مع الملفات المحمية بكلمة مرور والمزيد.
 weight: 13
 url: /ar/net/document-editing/load-document/
+type: docs
 ---
-
 # تحميل المستند
 
 ## مقدمة

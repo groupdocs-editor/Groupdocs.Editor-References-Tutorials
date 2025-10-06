@@ -3,8 +3,8 @@ title: "HTML Document Editing Tutorials for GroupDocs.Editor .NET"
 description: "Learn to work with HTML content, web documents, and HTML resources using GroupDocs.Editor for .NET tutorials."
 weight: 11
 url: "/net/html-web-documents/"
+type: docs
 ---
-
 # HTML Document Editing Tutorials for GroupDocs.Editor .NET
 
 Our HTML document tutorials show you how to work with web content using GroupDocs.Editor in .NET. These step-by-step guides cover creating editable documents from HTML files, handling HTML resources like CSS and images, extracting specific HTML content, and saving HTML content with proper resource management. Each tutorial provides detailed C# code examples for HTML processing scenarios, helping you build applications that can effectively edit web-based content while maintaining proper structure and resource references.

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Pelajari cara memperbaiki kolom formulir yang tidak valid di DOCX menggunakan Groupdocs.Editor untuk .NET. Ikuti panduan ini untuk memastikan dokumen Anda bebas dari kesalahan dan menyimpannya dengan aman.
 weight: 11
 url: /id/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # Perbaiki Pengumpulan Bidang Formulir yang Tidak Valid dan Simpan
 
 ## Perkenalan

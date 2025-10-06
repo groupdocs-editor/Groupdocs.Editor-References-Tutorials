@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: .NET के लिए GroupDocs.Editor का उपयोग करके विभिन्न दस्तावेज़ स्वरूपों को प्रोग्रामेटिक रूप से संपादित करना सीखें। सहज एकीकरण के लिए उदाहरणों के साथ चरण-दर-चरण मार्गदर्शिका।
 weight: 13
 url: /hi/net/document-processing/work-document-formats/
+type: docs
 ---
-
 # दस्तावेज़ प्रारूपों के साथ कार्य करें
 
 ## परिचय

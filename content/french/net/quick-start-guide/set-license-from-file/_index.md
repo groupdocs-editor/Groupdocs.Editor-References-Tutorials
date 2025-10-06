@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Découvrez comment utiliser GroupDocs.Editor pour .NET pour une édition transparente de documents dans vos applications. Guide étape par étape, conseils et FAQ inclus.
 weight: 10
 url: /fr/net/quick-start-guide/set-license-from-file/
+type: docs
 ---
-
 # Définir la licence à partir du fichier
 
 ## Introduction

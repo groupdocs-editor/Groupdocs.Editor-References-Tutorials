@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: .NET용 GroupDocs.Editor를 사용하여 HTML 콘텐츠를 검색하는 방법을 알아보세요. 본문 콘텐츠 및 사용자 정의 접두사를 검색하기 위한 단계별 가이드가 포함되어 있습니다.
 weight: 22
 url: /ko/net/html-content-retrieval/
+type: docs
 ---
-
 # HTML 콘텐츠 검색
 
 .NET용 GroupDocs.Editor를 사용하여 .NET 응용 프로그램에서 HTML 콘텐츠 검색 기능을 활용해 보세요. 우리의 포괄적인 튜토리얼은 HTML 본문 콘텐츠를 추출하고 이미지와 스타일시트에 대한 사용자 정의 접두사를 사용하는 과정을 안내합니다. 문서 관리를 강화하거나 리소스 구성을 간소화하려는 경우 당사의 단계별 가이드가 원활한 통합을 보장합니다. 지금 당장 애플리케이션 최적화를 시작해 보세요!

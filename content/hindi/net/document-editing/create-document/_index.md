@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: इस व्यापक चरण-दर-चरण ट्यूटोरियल के साथ .NET के लिए GroupDocs.Editor का उपयोग करके Word, Excel, PowerPoint, Ebook और ईमेल दस्तावेज़ों को संपादित करना सीखें।
 weight: 10
 url: /hi/net/document-editing/create-document/
+type: docs
 ---
-
 # दस्तावेज़ बनाएँ
 
 ## परिचय

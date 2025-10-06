@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor for Java
 - Java document editing
 - Word form fields
-
+type: docs
 ---
-
-
 # Mastering Java Document Editing: Load & Edit Form Fields in Word Files Using GroupDocs.Editor
 
 ## Introduction

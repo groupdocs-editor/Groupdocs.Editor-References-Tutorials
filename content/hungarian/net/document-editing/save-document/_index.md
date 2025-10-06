@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Könnyedén szerkesztheti és mentheti a dokumentumokat a GroupDocs.Editor for .NET segítségével. Ez a lépésenkénti útmutató leegyszerűsíti a folyamatot a fejlesztők számára.
 weight: 14
 url: /hu/net/document-editing/save-document/
+type: docs
 ---
-
 # Dokumentum mentése
 
 ## Bevezetés

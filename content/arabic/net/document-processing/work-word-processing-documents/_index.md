@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: قم بتحرير مستندات معالجة Word بسهولة باستخدام GroupDocs.Editor لـ .NET. اتبع برنامجنا التعليمي المفصل خطوة بخطوة لتعزيز مهاراتك في إدارة المستندات.
 weight: 19
 url: /ar/net/document-processing/work-word-processing-documents/
+type: docs
 ---
-
 # العمل مع مستندات معالجة النصوص
 
 ## مقدمة

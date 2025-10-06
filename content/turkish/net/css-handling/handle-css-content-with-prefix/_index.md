@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Bu ayrıntılı adım adım eğitimde Groupdocs.Editor for .NET'i kullanarak ön ek içeren CSS içeriğini nasıl işleyeceğinizi öğrenin. Her seviyedeki geliştiriciler için mükemmeldir.
 weight: 11
 url: /tr/net/css-handling/handle-css-content-with-prefix/
+type: docs
 ---
-
 # CSS İçeriğini Önekle İşleme
 
 ## giriiş

@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách chỉnh sửa bản trình bày PowerPoint bằng GroupDocs.Editor cho .NET. Hãy làm theo hướng dẫn từng bước này để hợp lý hóa quy trình chỉnh sửa tài liệu của bạn.
 weight: 16
 url: /vi/net/document-processing/work-presentations/
+type: docs
 ---
-
 # Làm việc với bài thuyết trình
 
 ## Giới thiệu

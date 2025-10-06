@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Découvrez comment gérer le contenu CSS avec préfixe à l'aide de Groupdocs.Editor for .NET dans ce didacticiel détaillé étape par étape. Parfait pour les développeurs de tous niveaux.
 weight: 11
 url: /fr/net/css-handling/handle-css-content-with-prefix/
+type: docs
 ---
-
 # Gérer le contenu CSS avec préfixe
 
 ## Introduction

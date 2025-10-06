@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Získejte obsah HTML těla pomocí GroupDocs.Editor pro .NET s naším podrobným průvodcem. Vylepšete své aplikace .NET bez námahy.
 weight: 10
 url: /cs/net/html-content-retrieval/retrieve-html-body-content/
+type: docs
 ---
-
 # Načíst obsah HTML těla
 
 ## Úvod

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Könnyedén kivonhatja a HTML tartalmat a dokumentumokból a GroupDocs.Editor for .NET segítségével. Kövesse részletes útmutatónkat a zökkenőmentes integrációhoz és dokumentumkezeléshez.
 weight: 12
 url: /hu/net/document-editing/extract-html-content-from-editable-document/
+type: docs
 ---
-
 # Kivonja a HTML tartalmat a szerkeszthető dokumentumból
 
 ## Bevezetés

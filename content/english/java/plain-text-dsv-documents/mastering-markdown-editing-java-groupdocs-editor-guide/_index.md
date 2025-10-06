@@ -8,10 +8,8 @@ keywords:
 - Markdown editing in Java
 - GroupDocs.Editor setup
 - Java document processing
-
+type: docs
 ---
-
-
 # Mastering Markdown Editing in Java with GroupDocs.Editor: A Complete Guide
 
 ## Introduction

@@ -3,8 +3,8 @@ title: "Spreadsheet Document Editing Tutorials for GroupDocs.Editor Java"
 description: "Complete tutorials for editing Excel workbooks, worksheets, formulas, and spreadsheet content using GroupDocs.Editor for Java."
 weight: 6
 url: "/java/spreadsheet-documents/"
+type: docs
 ---
-
 # Spreadsheet Document Editing Tutorials for GroupDocs.Editor Java
 
 Learn how to edit spreadsheet documents with our GroupDocs.Editor Java spreadsheet tutorials. These detailed guides demonstrate how to work with Excel documents, edit cells and formulas, handle multi-tab workbooks, process password-protected spreadsheets, and maintain calculation capabilities. Each tutorial includes working Java code examples that show how to implement spreadsheet editing features in your applications while preserving data integrity and spreadsheet functionality.

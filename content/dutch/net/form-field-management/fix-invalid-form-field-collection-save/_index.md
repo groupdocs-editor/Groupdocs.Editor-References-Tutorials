@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Leer hoe u ongeldige formuliervelden in DOCX kunt corrigeren met Groupdocs.Editor voor .NET. Volg deze handleiding om ervoor te zorgen dat uw documenten foutloos zijn en ze veilig opslaan.
 weight: 11
 url: /nl/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # Herstel ongeldige formulierveldverzameling en sla op
 
 ## Invoering

@@ -9,10 +9,8 @@ keywords:
 - GroupDocs.Editor for Java
 - Java document editing
 - Word processing in Java
-
+type: docs
 ---
-
-
 # Implementing Word Document Editing with GroupDocs.Editor in Java: A Comprehensive Guide
 
 ## Introduction

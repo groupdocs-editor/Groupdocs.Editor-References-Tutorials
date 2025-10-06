@@ -8,10 +8,8 @@ keywords:
 - GroupDocs Editor for Java
 - edit Word documents programmatically
 - Java document management
-
+type: docs
 ---
-
-
 # Mastering Document Editing in Java with GroupDocs.Editor
 
 In today's digital age, efficient document management is essential for business operations. Businesses often need to programmatically edit documents like DOCX files and integrate these capabilities into their applications seamlessly. **GroupDocs.Editor for Java** provides a robust solution for editing Word documents directly from your Java application.

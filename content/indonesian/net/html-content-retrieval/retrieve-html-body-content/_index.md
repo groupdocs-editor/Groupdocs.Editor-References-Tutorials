@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ambil konten isi HTML menggunakan GroupDocs.Editor untuk .NET dengan panduan langkah demi langkah kami. Tingkatkan aplikasi .NET Anda dengan mudah.
 weight: 10
 url: /id/net/html-content-retrieval/retrieve-html-body-content/
+type: docs
 ---
-
 # Ambil Konten Tubuh HTML
 
 ## Perkenalan

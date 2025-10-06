@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan kérhet le HTML-tartalmat a dokumentumokból a GroupDocs.Editor for .NET segítségével, egyéni előtagokkal a képekhez és stíluslapokhoz. Lépésről lépésre útmutató mellékelve.
 weight: 11
 url: /hu/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # HTML-tartalom lekérése előtaggal
 
 ## Bevezetés

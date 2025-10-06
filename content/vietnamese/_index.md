@@ -6,8 +6,8 @@ description: Chỉnh sửa tài liệu một cách dễ dàng với GroupDocs.Ed
 weight: 11
 url: /vi/
 is_root: true
+type: docs
 ---
-
 # Mở khóa quản lý tài liệu với GroupDocs.Editor
 
 

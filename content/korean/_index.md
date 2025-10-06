@@ -6,8 +6,8 @@ description: .NET 및 Java용 GroupDocs.Editor를 사용하여 손쉽게 문서 
 weight: 11
 url: /ko/
 is_root: true
+type: docs
 ---
-
 # GroupDocs.Editor로 문서 관리 잠금 해제
 
 

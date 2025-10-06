@@ -8,10 +8,8 @@ keywords:
 - document metadata extraction
 - GroupDocs.Editor for Java
 - automate document processing
-
+type: docs
 ---
-
-
 # Mastering Document Metadata Extraction with GroupDocs.Editor for Java
 
 Are you tired of manually extracting details from documents like Word or Excel files? Whether you're a developer automating tasks or an IT professional managing diverse formats, mastering metadata extraction is essential. This comprehensive guide will help you use **GroupDocs.Editor for Java** to efficiently extract and manage document metadata across various file types. By the end of this tutorial, you'll have practical skills in handling Word documents, spreadsheets, password-protected files, and text-based formats.

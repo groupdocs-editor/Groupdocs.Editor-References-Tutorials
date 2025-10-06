@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية إدارة حقول النماذج القديمة باستخدام GroupDocs.Editor لـ .NET من خلال دليلنا التفصيلي. مثالي للتعامل مع حقول النص ومربعات الاختيار والتواريخ والمزيد.
 weight: 12
 url: /ar/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # العمل مع مجموعة حقول النموذج القديم
 
 ## مقدمة

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengedit dokumen dengan mudah menggunakan GroupDocs.Editor untuk .NET. Panduan langkah demi langkah untuk file Pemrosesan Kata dan Spreadsheet.
 weight: 11
 url: /id/net/document-editing/edit-document/
+type: docs
 ---
-
 # Sunting Dokumen
 
 ## Perkenalan

@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak zarządzać starszymi polami formularzy za pomocą GroupDocs.Editor dla .NET, korzystając z naszego szczegółowego przewodnika. Idealny do obsługi pól tekstowych, pól wyboru, dat i nie tylko.
 weight: 12
 url: /pl/net/form-field-management/work-legacy-form-field-collection/
+type: docs
 ---
-
 # Pracuj ze starszą kolekcją pól formularzy
 
 ## Wstęp

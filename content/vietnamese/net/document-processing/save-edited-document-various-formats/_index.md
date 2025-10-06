@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách lưu tài liệu đã chỉnh sửa sang nhiều định dạng khác nhau bằng GroupDocs.Editor cho .NET trong hướng dẫn từng bước toàn diện này.
 weight: 11
 url: /vi/net/document-processing/save-edited-document-various-formats/
+type: docs
 ---
-
 # Lưu tài liệu đã chỉnh sửa sang các định dạng khác nhau
 
 ## Giới thiệu

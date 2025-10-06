@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Převeďte HTML na upravitelné dokumenty Word pomocí GroupDocs.Editor pro .NET pomocí tohoto podrobného průvodce. Ideální pro zefektivnění pracovního postupu správy dokumentů.
 weight: 10
 url: /cs/net/document-editing/create-editable-document-from-html/
+type: docs
 ---
-
 # Vytvořte upravitelný dokument z HTML
 
 ## Úvod

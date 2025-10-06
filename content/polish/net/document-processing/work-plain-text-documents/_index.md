@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak edytować dokumenty w postaci zwykłego tekstu za pomocą programu GroupDocs.Editor dla platformy .NET, korzystając z naszego przewodnika krok po kroku. Uprość proces edycji dokumentów .NET.
 weight: 15
 url: /pl/net/document-processing/work-plain-text-documents/
+type: docs
 ---
-
 # Pracuj z dokumentami zwykłego tekstu
 
 ## Wstęp

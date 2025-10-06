@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor for .NET
 - document editing .NET
 - resource management .NET
-
+type: docs
 ---
-
-
 # Mastering Document Editing and Resource Management with GroupDocs.Editor .NET
 
 ## Introduction

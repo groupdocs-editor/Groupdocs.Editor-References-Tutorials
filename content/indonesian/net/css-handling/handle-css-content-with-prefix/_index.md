@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Pelajari cara menangani konten CSS dengan awalan menggunakan Groupdocs.Editor untuk .NET dalam tutorial langkah demi langkah yang mendetail ini. Sempurna untuk pengembang dari semua tingkatan.
 weight: 11
 url: /id/net/css-handling/handle-css-content-with-prefix/
+type: docs
 ---
-
 # Tangani Konten CSS dengan Awalan
 
 ## Perkenalan

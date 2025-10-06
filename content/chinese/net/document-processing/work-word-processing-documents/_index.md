@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 使用 GroupDocs.Editor for .NET 轻松编辑文字处理文档。按照我们详细的分步教程来提高您的文档管理技能。
 weight: 19
 url: /zh/net/document-processing/work-word-processing-documents/
+type: docs
 ---
-
 # 处理文字处理文档
 
 ## 介绍

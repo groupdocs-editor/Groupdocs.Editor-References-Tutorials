@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Learn how to fix invalid form fields in DOCX using Groupdocs.Editor for .NET. Follow this guide to ensure your documents are error-free and save them securely.
 weight: 11
 url: /net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # Fix Invalid Form Field Collection and Save
 
 ## Introduction

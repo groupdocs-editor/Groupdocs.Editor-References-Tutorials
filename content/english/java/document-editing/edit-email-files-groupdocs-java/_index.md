@@ -8,10 +8,8 @@ keywords:
 - edit email files Java
 - GroupDocs.Editor setup
 - email file manipulation
-
+type: docs
 ---
-
-
 # How to Load and Edit Email Files Using GroupDocs.Editor for Java
 ## Introduction
 In today's digital age, managing email files efficiently is crucial for businesses and individuals alike. Whether you're archiving communications or extracting specific information from emails, having the right tools can make a significant difference. This tutorial introduces an effective way to load and edit email files using **GroupDocs.Editor for Java**, a powerful library designed for developers who need to manipulate documents seamlessly.

@@ -6,8 +6,8 @@ description: 使用 GroupDocs.Editor for .NET 和 Java 轻松掌握文档编辑�
 weight: 11
 url: /zh/
 is_root: true
+type: docs
 ---
-
 # 使用 GroupDocs.Editor 解锁文档管理
 
 

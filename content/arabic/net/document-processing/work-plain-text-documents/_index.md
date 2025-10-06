@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: تعرف على كيفية تحرير المستندات النصية العادية باستخدام GroupDocs.Editor لـ .NET من خلال دليلنا التفصيلي خطوة بخطوة. قم بتبسيط عملية تحرير مستندات .NET الخاصة بك.
 weight: 15
 url: /ar/net/document-processing/work-plain-text-documents/
+type: docs
 ---
-
 # العمل مع المستندات النصية العادية
 
 ## مقدمة

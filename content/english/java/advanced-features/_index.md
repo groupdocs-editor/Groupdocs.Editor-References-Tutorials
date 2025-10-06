@@ -3,8 +3,8 @@ title: "Advanced GroupDocs.Editor Features Tutorials for Java"
 description: "Step-by-step tutorials for implementing advanced document editing features, optimizations, and specialized capabilities using GroupDocs.Editor for Java."
 weight: 13
 url: "/java/advanced-features/"
+type: docs
 ---
-
 # Advanced GroupDocs.Editor Features Tutorials for Java
 
 Explore advanced capabilities with our comprehensive GroupDocs.Editor advanced feature tutorials for Java developers. These detailed guides cover implementing document editing workflows, handling resources, working with complex document structures, and leveraging GroupDocs.Editor's specialized capabilities. Each tutorial includes practical Java code examples for sophisticated editing scenarios, helping you build powerful document processing solutions that take full advantage of the library's advanced functionality.

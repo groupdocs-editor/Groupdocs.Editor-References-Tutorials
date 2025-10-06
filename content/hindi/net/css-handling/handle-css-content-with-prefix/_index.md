@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: इस विस्तृत चरण-दर-चरण ट्यूटोरियल में .NET के लिए Groupdocs.Editor का उपयोग करके प्रीफ़िक्स के साथ CSS सामग्री को संभालना सीखें। सभी स्तरों के डेवलपर्स के लिए बिल्कुल सही।
 weight: 11
 url: /hi/net/css-handling/handle-css-content-with-prefix/
+type: docs
 ---
-
 # प्रीफ़िक्स के साथ CSS सामग्री को संभालें
 
 ## परिचय

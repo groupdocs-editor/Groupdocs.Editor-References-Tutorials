@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Pelajari cara mengedit dokumen teks biasa menggunakan GroupDocs.Editor untuk .NET dengan panduan langkah demi langkah kami. Sederhanakan proses pengeditan dokumen .NET Anda.
 weight: 15
 url: /id/net/document-processing/work-plain-text-documents/
+type: docs
 ---
-
 # Bekerja dengan Dokumen Teks Biasa
 
 ## Perkenalan

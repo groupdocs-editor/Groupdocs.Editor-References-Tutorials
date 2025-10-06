@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Leer geavanceerd gebruik van GroupDocs.Editor voor .NET bij het programmatisch maken, bewerken en extraheren van bronnen uit documenten.
 weight: 11
 url: /nl/net/document-editing/advanced-usage-of-editable-documents/
+type: docs
 ---
-
 # Geavanceerd gebruik van bewerkbare documenten
 
 ## Invoering

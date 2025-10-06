@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να χειρίζεστε περιεχόμενο CSS με πρόθεμα χρησιμοποιώντας το Groupdocs.Editor για .NET σε αυτόν τον αναλυτικό, βήμα προς βήμα εκμάθηση. Ιδανικό για προγραμματιστές όλων των επιπέδων.
 weight: 11
 url: /el/net/css-handling/handle-css-content-with-prefix/
+type: docs
 ---
-
 # Χειριστείτε το περιεχόμενο CSS με πρόθεμα
 
 ## Εισαγωγή

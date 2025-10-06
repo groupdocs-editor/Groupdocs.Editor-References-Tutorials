@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: ステップバイステップ ガイドを使用して、GroupDocs.Editor for .NET を使用してプレーン テキスト ドキュメントを編集する方法を学びます。.NET ドキュメントの編集プロセスを簡素化します。
 weight: 15
 url: /ja/net/document-processing/work-plain-text-documents/
+type: docs
 ---
-
 # プレーンテキスト文書の操作
 
 ## 導入

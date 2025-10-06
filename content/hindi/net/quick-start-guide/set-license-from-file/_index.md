@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET एपीआई
 description: अपने अनुप्रयोगों में सहज दस्तावेज़ संपादन के लिए GroupDocs.Editor for .NET का उपयोग करना सीखें। चरण-दर-चरण मार्गदर्शिका, युक्तियाँ और FAQs शामिल हैं।
 weight: 10
 url: /hi/net/quick-start-guide/set-license-from-file/
+type: docs
 ---
-
 # फ़ाइल से लाइसेंस सेट करें
 
 ## परिचय

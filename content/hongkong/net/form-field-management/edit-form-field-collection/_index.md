@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 使用 Groupdocs.Editor 提高 .NET 專案中的文件編輯效率。無縫修改表單欄位集合。
 weight: 10
 url: /zh-hant/net/form-field-management/edit-form-field-collection/
+type: docs
 ---
-
 # 編輯表單欄位集合
 
 ## 介紹

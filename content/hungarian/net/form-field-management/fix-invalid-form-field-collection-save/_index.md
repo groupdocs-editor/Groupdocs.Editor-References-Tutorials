@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Ismerje meg, hogyan javíthatja ki az érvénytelen űrlapmezőket a DOCX-ben a Groupdocs.Editor for .NET segítségével. Kövesse ezt az útmutatót, hogy dokumentumai hibamentesek legyenek, és biztonságosan mentse azokat.
 weight: 11
 url: /hu/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # Javítsa ki az érvénytelen űrlapmező-gyűjteményt, és mentse
 
 ## Bevezetés

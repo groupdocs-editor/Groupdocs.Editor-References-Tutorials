@@ -8,10 +8,8 @@ keywords:
 - GroupDocs.Editor .NET
 - spreadsheet tab extraction
 - multi-tab spreadsheet management
-
+type: docs
 ---
-
-
 # Mastering Spreadsheet Tab Extraction in .NET with GroupDocs.Editor
 
 ## Introduction

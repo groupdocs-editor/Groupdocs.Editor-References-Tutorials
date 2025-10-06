@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Tìm hiểu cách xóa trường biểu mẫu khỏi tài liệu Word bằng GroupDocs.Editor dành cho .NET với hướng dẫn từng bước này. Lý tưởng cho các nhà phát triển.
 weight: 13
 url: /vi/net/form-field-management/remove-form-field-collection/
+type: docs
 ---
-
 # Xóa bộ sưu tập trường biểu mẫu
 
 ## Giới thiệu

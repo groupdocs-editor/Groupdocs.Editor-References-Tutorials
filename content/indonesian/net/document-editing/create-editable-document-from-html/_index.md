@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Konversikan HTML menjadi dokumen Word yang dapat diedit menggunakan GroupDocs.Editor untuk .NET dengan panduan langkah demi langkah ini. Sempurna untuk menyederhanakan alur kerja manajemen dokumen Anda.
 weight: 10
 url: /id/net/document-editing/create-editable-document-from-html/
+type: docs
 ---
-
 # Buat Dokumen yang Dapat Diedit dari HTML
 
 ## Perkenalan

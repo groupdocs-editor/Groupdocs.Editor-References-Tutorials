@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Groupdocs.Editor for .NET を使用して DOCX 内の無効なフォーム フィールドを修正する方法を学びます。このガイドに従って、ドキュメントにエラーがないことを確認し、安全に保存します。
 weight: 11
 url: /ja/net/form-field-management/fix-invalid-form-field-collection-save/
+type: docs
 ---
-
 # 無効なフォームフィールドコレクションを修正して保存する
 
 ## 導入

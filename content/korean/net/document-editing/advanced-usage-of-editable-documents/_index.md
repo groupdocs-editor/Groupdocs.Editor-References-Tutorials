@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 프로그래밍 방식으로 문서에서 리소스를 생성, 편집 및 추출하는 .NET용 GroupDocs.Editor의 고급 사용법을 알아보세요.
 weight: 11
 url: /ko/net/document-editing/advanced-usage-of-editable-documents/
+type: docs
 ---
-
 # 편집 가능한 문서의 고급 활용
 
 ## 소개

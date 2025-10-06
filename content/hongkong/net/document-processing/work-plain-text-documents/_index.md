@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 透過我們的逐步指南，學習使用 GroupDocs.Editor for .NET 編輯純文字文件。簡化您的 .NET 文件編輯流程。
 weight: 15
 url: /zh-hant/net/document-processing/work-plain-text-documents/
+type: docs
 ---
-
 # 處理純文字文檔
 
 ## 介紹

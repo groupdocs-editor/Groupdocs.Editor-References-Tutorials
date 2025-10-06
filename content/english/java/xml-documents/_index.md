@@ -3,8 +3,8 @@ title: "XML Document Editing Tutorials for GroupDocs.Editor Java"
 description: "Step-by-step tutorials for editing XML documents, structure, and content using GroupDocs.Editor for Java."
 weight: 10
 url: "/java/xml-documents/"
+type: docs
 ---
-
 # XML Document Editing Tutorials for GroupDocs.Editor Java
 
 Learn how to process XML documents with our detailed GroupDocs.Editor tutorials for Java developers. These comprehensive guides demonstrate how to edit XML content, modify XML structure, validate XML during editing, and implement XML-specific editing features. Each tutorial includes working Java code examples that show how to handle this structured format while preserving document validity and relationships between elements, helping you build applications with powerful XML editing capabilities.

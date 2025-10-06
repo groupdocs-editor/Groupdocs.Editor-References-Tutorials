@@ -3,8 +3,8 @@ title: "Document Loading Tutorials with GroupDocs.Editor for .NET"
 description: "Learn how to load documents from various sources in different formats with these GroupDocs.Editor for .NET tutorials."
 weight: 2
 url: "/net/document-loading/"
+type: docs
 ---
-
 # Document Loading Tutorials with GroupDocs.Editor for .NET
 
 Our document loading tutorials provide comprehensive guidance for opening files from different sources using GroupDocs.Editor in .NET. These step-by-step guides demonstrate how to load documents from files, streams, and other storage locations with proper configuration for various document formats. Each tutorial includes complete code examples for different loading scenarios, helping you build robust document loading capabilities that handle diverse document sources and formats efficiently.

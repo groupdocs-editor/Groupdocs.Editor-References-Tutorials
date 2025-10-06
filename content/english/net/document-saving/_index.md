@@ -3,8 +3,8 @@ title: "Document Saving and Export Tutorials for GroupDocs.Editor .NET"
 description: "Step-by-step tutorials for saving edited documents to various formats and implementing export capabilities using GroupDocs.Editor for .NET."
 weight: 4
 url: "/net/document-saving/"
+type: docs
 ---
-
 # Document Saving and Export Tutorials for GroupDocs.Editor .NET
 
 Our document saving tutorials provide detailed guidance for exporting edited content to various document formats with GroupDocs.Editor in .NET. Follow these practical guides to learn how to save documents after editing, convert between different formats, preserve document styles and structures, and implement format-specific saving options. These tutorials include complete C# code examples for common document saving operations, helping you build applications that can output documents in the formats your users need.

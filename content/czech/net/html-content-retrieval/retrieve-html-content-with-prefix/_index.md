@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Naučte se, jak načíst obsah HTML z dokumentů pomocí GroupDocs.Editor pro .NET s vlastními předponami pro obrázky a šablony stylů. Včetně průvodce krok za krokem.
 weight: 11
 url: /cs/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # Načíst obsah HTML s předponou
 
 ## Úvod

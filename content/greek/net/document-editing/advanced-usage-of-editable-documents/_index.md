@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Μάθετε προηγμένη χρήση του GroupDocs.Editor για .NET δημιουργία, επεξεργασία και εξαγωγή πόρων από έγγραφα μέσω προγραμματισμού.
 weight: 11
 url: /el/net/document-editing/advanced-usage-of-editable-documents/
+type: docs
 ---
-
 # Προηγμένη χρήση επεξεργάσιμων εγγράφων
 
 ## Εισαγωγή

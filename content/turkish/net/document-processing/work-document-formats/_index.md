@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API'si
 description: Çeşitli belge formatlarını programlı olarak düzenlemek için GroupDocs.Editor for .NET'i nasıl kullanacağınızı öğrenin. Sorunsuz entegrasyon için örnekler içeren adım adım kılavuz.
 weight: 13
 url: /tr/net/document-processing/work-document-formats/
+type: docs
 ---
-
 # Belge Formatlarıyla Çalışma
 
 ## giriiş

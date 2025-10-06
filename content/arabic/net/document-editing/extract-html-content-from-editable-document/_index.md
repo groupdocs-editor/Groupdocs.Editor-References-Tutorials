@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: قم باستخراج محتوى HTML من المستندات بسهولة باستخدام GroupDocs.Editor لـ .NET. اتبع دليلنا التفصيلي للتكامل السلس وإدارة المستندات.
 weight: 12
 url: /ar/net/document-editing/extract-html-content-from-editable-document/
+type: docs
 ---
-
 # استخراج محتوى HTML من مستند قابل للتحرير
 
 ## مقدمة

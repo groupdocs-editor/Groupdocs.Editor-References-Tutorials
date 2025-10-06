@@ -6,8 +6,8 @@ description: A GroupDocs.Editor for .NET és Java segítségével könnyedén sz
 weight: 11
 url: /hu/
 is_root: true
+type: docs
 ---
-
 # Dokumentumkezelés feloldása a GroupDocs.Editor segítségével
 
 

@@ -8,10 +8,8 @@ keywords:
 - load Word document GroupDocs.Editor Java
 - edit Word documents programmatically
 - integrate GroupDocs.Editor with Java applications
-
+type: docs
 ---
-
-
 # How to Load a Word Document Using GroupDocs.Editor in Java: A Comprehensive Guide
 
 ## Introduction

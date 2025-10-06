@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: 透過我們的綜合指南了解如何整合和使用 GroupDocs.Editor for .NET。在 .NET 應用程式中解鎖強大的文件編輯功能。
 weight: 12
 url: /zh-hant/net/quick-start-guide/set-metered-license/
+type: docs
 ---
-
 # 設定計量許可證
 
 ## 介紹

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Узнайте, как получить содержимое HTML из документов с помощью GroupDocs.Editor для .NET с настраиваемыми префиксами для изображений и таблиц стилей. Пошаговое руководство включено.
 weight: 11
 url: /ru/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # Получить HTML-контент с префиксом
 
 ## Введение

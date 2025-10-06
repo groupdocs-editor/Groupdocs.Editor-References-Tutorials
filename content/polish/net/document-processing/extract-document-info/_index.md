@@ -5,8 +5,8 @@ second_title: Edytor GroupDocs.NET API
 description: Dowiedz się, jak wyodrębnić informacje o dokumencie za pomocą programu GroupDocs.Editor dla platformy .NET, korzystając ze szczegółowego samouczka krok po kroku. Idealny do zarządzania różnymi typami dokumentów.
 weight: 10
 url: /pl/net/document-processing/extract-document-info/
+type: docs
 ---
-
 # Wyodrębnij informacje o dokumencie
 
 ## Wstęp

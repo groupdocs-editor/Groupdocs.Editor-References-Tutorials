@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Μάθετε πώς να χειρίζεστε υπολογιστικά φύλλα που προστατεύονται με κωδικό πρόσβασης χρησιμοποιώντας το GroupDocs.Editor για .NET. Αυτός ο λεπτομερής οδηγός σας καθοδηγεί στο άνοιγμα στην αποθήκευση ασφαλών αρχείων Excel.
 weight: 18
 url: /el/net/document-processing/work-password-protected-spreadsheets/
+type: docs
 ---
-
 # Εργαστείτε με υπολογιστικά φύλλα που προστατεύονται με κωδικό πρόσβασης
 
 ## Εισαγωγή

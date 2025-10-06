@@ -5,8 +5,8 @@ second_title: API GroupDocs.Editor .NET
 description: Scopri come lavorare con fogli di calcolo a più schede in .NET utilizzando GroupDocs.Editor. Guida passo passo, esempi di codice e best practice incluse.
 weight: 17
 url: /it/net/document-processing/work-multi-tab-spreadsheets/
+type: docs
 ---
-
 # Lavora con fogli di calcolo multischeda
 
 ## introduzione

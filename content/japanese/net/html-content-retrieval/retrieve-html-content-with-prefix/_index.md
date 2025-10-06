@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: GroupDocs.Editor for .NET を使用して、画像とスタイルシートのカスタム プレフィックスを使用してドキュメントから HTML コンテンツを取得する方法を学びます。ステップ バイ ステップ ガイドが含まれています。
 weight: 11
 url: /ja/net/html-content-retrieval/retrieve-html-content-with-prefix/
+type: docs
 ---
-
 # プレフィックス付きのHTMLコンテンツを取得する
 
 ## 導入

@@ -5,8 +5,8 @@ second_title: GroupDocs.Editor .NET API
 description: Научитесь редактировать презентации PowerPoint с помощью GroupDocs.Editor для .NET. Следуйте этому пошаговому руководству, чтобы упростить процесс редактирования документов.
 weight: 16
 url: /ru/net/document-processing/work-presentations/
+type: docs
 ---
-
 # Работа с презентациями
 
 ## Введение
