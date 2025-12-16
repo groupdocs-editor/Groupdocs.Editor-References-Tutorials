@@ -1,15 +1,16 @@
 ---
-title: "process xml java – Document Editing Tutorial & API"
-description: "Learn how to process XML Java files, convert to HTML Java, edit Word document Java, apply Java password protection, and manage Java form fields using GroupDocs.Editor for Java document automation."
-weight: 2
-url: /java/
-type: docs
 date: 2025-12-16
+description: GroupDocs.Editor for Java 문서 자동화를 사용하여 XML Java 파일을 처리하고, HTML Java로
+  변환하며, Word 문서 Java를 편집하고, Java 비밀번호 보호를 적용하고, Java 양식 필드를 관리하는 방법을 배웁니다.
+title: XML 처리 Java – 문서 편집 튜토리얼 및 API
+type: docs
+url: /ko/java/
+weight: 2
 ---
 
-# process xml java – Document Editing Tutorial & API
+# process xml java – 문서 편집 튜토리얼 & API
 
-In this guide we’ll show you how to **process XML Java** documents using GroupDocs.Editor for Java, a powerful library that also lets you **convert to HTML Java**, **edit Word document Java**, and handle **Java password protection** and **Java form fields** for robust **document automation Java**. Whether you’re building a content‑management system, an automated reporting engine, or a collaborative editing platform, this tutorial gives you the step‑by‑step knowledge you need.
+이 가이드에서는 GroupDocs.Editor for Java을 사용하여 **process XML Java** 문서를 처리하는 방법을 보여드립니다. 이 강력한 라이브러리는 **convert to HTML Java**, **edit Word document Java**, **Java password protection**, **Java form fields** 등을 지원하여 견고한 **document automation Java**을 구현할 수 있습니다. 콘텐츠 관리 시스템, 자동 보고 엔진, 협업 편집 플랫폼을 구축하든, 이 튜토리얼은 단계별 지식을 제공합니다.
 
 ## Quick Answers
 - **Can GroupDocs.Editor process XML in Java?** Yes – it parses, edits, and saves XML with full fidelity.  
@@ -19,13 +20,13 @@ In this guide we’ll show you how to **process XML Java** documents using Group
 - **What version of Java is required?** Java 8 or higher is recommended.
 
 ## What is “process xml java”?
-Processing XML in Java means reading, modifying, and writing XML content programmatically. With GroupDocs.Editor, you can treat XML files like any other document type, leveraging a consistent API for loading, editing, and exporting.
+Processing XML in Java는 XML 콘텐츠를 프로그래밍 방식으로 읽고, 수정하고, 쓰는 것을 의미합니다. GroupDocs.Editor를 사용하면 XML 파일을 다른 문서 유형과 동일하게 취급할 수 있으며, 로드, 편집, 내보내기를 위한 일관된 API를 활용할 수 있습니다.
 
 ## Why use GroupDocs.Editor for Java?
-- **Unified API** – work with Word, Excel, PowerPoint, PDF, XML, and plain‑text files through the same code base.  
-- **No external dependencies** – no need for Microsoft Office or Adobe Acrobat on the server.  
-- **Rich feature set** – convert to HTML Java for web‑based editing, apply Java password protection, and manipulate Java form fields.  
-- **Scalable document automation Java** – ideal for batch processing, cloud services, and enterprise workflows.
+- **Unified API** – Word, Excel, PowerPoint, PDF, XML, plain‑text 파일을 동일한 코드 베이스로 작업합니다.  
+- **No external dependencies** – 서버에 Microsoft Office나 Adobe Acrobat이 필요 없습니다.  
+- **Rich feature set** – 웹 기반 편집을 위한 convert to HTML Java, Java password protection 적용, Java form fields 조작을 지원합니다.  
+- **Scalable document automation Java** – 배치 처리, 클라우드 서비스, 엔터프라이즈 워크플로에 이상적입니다.
 
 ## Prerequisites
 - Java 8 or newer installed.  
@@ -33,12 +34,12 @@ Processing XML in Java means reading, modifying, and writing XML content program
 - A valid GroupDocs.Editor for Java license (free trial available).  
 
 ## Introduction to GroupDocs.Editor for Java
-GroupDocs.Editor for Java offers a robust set of features to manipulate documents programmatically. You can convert documents to HTML for editing in any WYSIWYG editor, then convert them back to their original format while preserving formatting and structure. The API supports password protection, resource extraction, and numerous customization options to enhance your document management workflows.
+GroupDocs.Editor for Java는 문서를 프로그래밍 방식으로 조작하기 위한 강력한 기능 세트를 제공합니다. 문서를 HTML로 변환하여任意의 WYSIWYG 편집기에서 편집한 뒤, 원본 형식으로 다시 변환하면서 서식과 구조를 보존할 수 있습니다. API는 비밀번호 보호, 리소스 추출, 다양한 커스터마이징 옵션을 지원하여 문서 관리 워크플로를 향상시킵니다.
 
-Whether you're developing document automation solutions, content management systems, or collaborative editing platforms, GroupDocs.Editor for Java provides the tools you need to efficiently process documents in your applications.
+문서 자동화 솔루션, 콘텐츠 관리 시스템, 협업 편집 플랫폼을 개발하든, GroupDocs.Editor for Java는 애플리케이션에서 문서를 효율적으로 처리하는 데 필요한 도구를 제공합니다.
 
 ## How to process XML Java with GroupDocs.Editor
-Below is a concise workflow you can follow in your Java project:
+아래는 Java 프로젝트에서 따라 할 수 있는 간결한 워크플로입니다:
 
 1. **Load the XML document** – use `Editor.load()` with the file path or stream.  
 2. **Convert to HTML (optional)** – call `convertToHtml()` if you need a web‑based editor.  
@@ -110,6 +111,4 @@ A: GroupDocs.Editor offers perpetual, subscription, and cloud‑based licensing 
 
 **Last Updated:** 2025-12-16  
 **Tested With:** GroupDocs.Editor for Java 23.11  
-**Author:** GroupDocs  
-
----
+**Author:** GroupDocs
