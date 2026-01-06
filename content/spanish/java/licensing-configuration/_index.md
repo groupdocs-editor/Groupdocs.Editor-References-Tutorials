@@ -1,15 +1,16 @@
 ---
-title: "Set GroupDocs License Java – Licensing & Configuration Guide"
-description: "Learn how to set GroupDocs license Java, configure GroupDocs.Editor, and implement deployment options in Java applications."
-weight: 14
-url: "/java/licensing-configuration/"
-type: docs
 date: 2026-01-06
+description: Aprenda a establecer la licencia de GroupDocs en Java, configurar GroupDocs.Editor
+  e implementar opciones de despliegue en aplicaciones Java.
+title: Establecer la licencia de GroupDocs Java – Guía de licenciamiento y configuración
+type: docs
+url: /es/java/licensing-configuration/
+weight: 14
 ---
 
 # Set GroupDocs License Java – Licensing & Configuration Guide
 
-Our licensing and configuration tutorials provide comprehensive guidance for properly **set GroupDocs license Java** in your Java applications. These step‑by‑step guides demonstrate how to apply licenses from files and streams, implement metered licensing, configure document loading and saving options, and optimize the library for different deployment scenarios. Each tutorial includes working Java code examples for proper configuration, helping you implement GroupDocs.Editor correctly in various application environments while ensuring license compliance.
+Nuestros tutoriales de licenciamiento y configuración proporcionan una guía completa para **establecer la licencia de GroupDocs en Java** en sus aplicaciones Java. Estas guías paso a paso demuestran cómo aplicar licencias desde archivos y streams, implementar licenciamiento medido, configurar opciones de carga y guardado de documentos, y optimizar la biblioteca para diferentes escenarios de despliegue. Cada tutorial incluye ejemplos de código Java funcionales para una configuración adecuada, ayudándole a implementar GroupDocs.Editor correctamente en varios entornos de aplicación mientras garantiza el cumplimiento de la licencia.
 
 ## Quick Answers
 - **What does “set GroupDocs license java” accomplish?**  

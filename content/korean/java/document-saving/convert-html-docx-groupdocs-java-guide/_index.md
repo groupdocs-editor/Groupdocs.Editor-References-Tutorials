@@ -1,17 +1,18 @@
 ---
-title: "Convert HTML to DOCX in Java Using GroupDocs.Editor&#58; A Complete Guide"
-description: "Learn how to convert html to docx using GroupDocs.Editor for Java. This guide walks through setup, implementation, and performance tips for seamless conversion."
-date: "2026-01-06"
-weight: 1
-url: "/java/document-saving/convert-html-docx-groupdocs-java-guide/"
+date: '2026-01-06'
+description: GroupDocs.Editor for Java를 사용하여 HTML을 DOCX로 변환하는 방법을 배워보세요. 이 가이드는 원활한
+  변환을 위한 설정, 구현 및 성능 팁을 단계별로 안내합니다.
 keywords:
 - convert HTML to DOCX Java
 - GroupDocs.Editor setup
 - Java document conversion
+title: 'Java에서 GroupDocs.Editor를 사용하여 HTML을 DOCX로 변환하기: 완전 가이드'
 type: docs
+url: /ko/java/document-saving/convert-html-docx-groupdocs-java-guide/
+weight: 1
 ---
 
-# Convert HTML to DOCX in Java Using GroupDocs.Editor: A Complete Guide
+# Java에서 GroupDocs.Editor를 사용하여 HTML을 DOCX로 변환하기: 완전 가이드
 
 If you need to **convert html to docx** quickly and reliably, you’ve come to the right place. In this tutorial we’ll walk through everything you need—from setting up GroupDocs.Editor in a Java project to loading an HTML file, initializing the editor, and finally saving the result as a DOCX document. Whether you’re building a content‑migration tool, a document‑management system, or just automating a one‑off conversion, these steps will give you a solid, production‑ready foundation.
 
