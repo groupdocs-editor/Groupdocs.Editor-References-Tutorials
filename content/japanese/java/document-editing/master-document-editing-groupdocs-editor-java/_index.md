@@ -1,19 +1,19 @@
 ---
-title: "How to Create Editable Document with GroupDocs.Editor for Java"
-description: "Learn how to create editable document and edit Word files using GroupDocs.Editor for Java. Includes setup, resource extraction, and automate report generation."
-date: "2025-12-21"
-weight: 1
-url: "/java/document-editing/master-document-editing-groupdocs-editor-java/"
+date: '2025-12-21'
+description: GroupDocs.Editor for Java を使用して、編集可能なドキュメントの作成と Word ファイルの編集方法を学びます。セットアップ、リソース抽出、レポート生成の自動化が含まれます。
 keywords:
 - GroupDocs.Editor for Java
 - document editing in Java
 - Java document management
+title: Java 用 GroupDocs.Editor で編集可能なドキュメントを作成する方法
 type: docs
+url: /ja/java/document-editing/master-document-editing-groupdocs-editor-java/
+weight: 1
 ---
 
-# Create Editable Document with GroupDocs.Editor Java
+# GroupDocs.Editor Javaで編集可能なドキュメントを作成する
 
-In today’s fast‑moving enterprises, the ability to **create editable document** files programmatically is a game‑changer. Whether you need to **edit Word** templates, **extract images from Word**, or **convert Word to HTML** for a web portal, GroupDocs.Editor for Java gives you a reliable, high‑performance way to automate those tasks. In this guide we’ll walk through everything you need—from environment setup to advanced editing—so you can start building solutions that **automate report generation** in minutes.
+今日のスピーディーに変化する企業環境において、プログラムで **create editable document** ファイルを作成できる能力はゲームチェンジャーです。**edit Word** テンプレートの編集、**extract images from Word**、または Web ポータル向けに **convert Word to HTML** が必要な場合でも、GroupDocs.Editor for Java は信頼性が高く高性能な方法でこれらのタスクを自動化します。このガイドでは、環境設定から高度な編集まで必要なすべてを順に解説し、数分で **automate report generation** を実現できるソリューションの構築を開始できるようにします。
 
 ## Quick Answers
 - **What is the primary class to load a Word file?** `Editor`  
@@ -23,7 +23,7 @@ In today’s fast‑moving enterprises, the ability to **create editable documen
 - **Do I need a license for development?** A free trial or temporary license works for testing; a full license is required for production  
 
 ## What is “create editable document”?
-Creating an editable document means loading a source file (e.g., .docx) into a format that can be manipulated—usually HTML—so you can modify text, images, styles, or links programmatically before saving the result.
+編集可能なドキュメントを作成するとは、ソースファイル（例: .docx）を操作可能な形式（通常は HTML）にロードし、テキスト、画像、スタイル、リンクなどをプログラムで変更できるようにした上で、結果を保存することを指します。
 
 ## Why use GroupDocs.Editor for Java?
 - **Full‑featured Word support** – edit, extract, and convert without Microsoft Office.  
