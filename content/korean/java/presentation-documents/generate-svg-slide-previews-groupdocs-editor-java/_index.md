@@ -1,19 +1,20 @@
 ---
-title: "Convert PPTX to SVG: Create Slide Previews Using GroupDocs.Editor for Java"
-description: "Learn how to convert PPTX to SVG and java generate SVG images with GroupDocs.Editor, boosting document management and collaboration."
-date: "2026-01-13"
-weight: 1
-url: "/java/presentation-documents/generate-svg-slide-previews-groupdocs-editor-java/"
+date: '2026-01-13'
+description: GroupDocs.Editor를 사용하여 PPTX를 SVG로 변환하고 Java로 SVG 이미지를 생성하는 방법을 배우고, 문서
+  관리 및 협업을 강화하세요.
 keywords:
 - GroupDocs.Editor for Java
 - SVG slide previews
 - Java presentations
+title: 'PPTX를 SVG로 변환: GroupDocs.Editor for Java를 사용하여 슬라이드 미리보기 만들기'
 type: docs
+url: /ko/java/presentation-documents/generate-svg-slide-previews-groupdocs-editor-java/
+weight: 1
 ---
 
-# Convert PPTX to SVG: Create Slide Previews Using GroupDocs.Editor for Java
+# PPTX를 SVG로 변환: GroupDocs.Editor for Java를 사용하여 슬라이드 미리보기 만들기
 
-Efficiently managing and presenting documents can be challenging, especially when working with presentations. **If you need to convert PPTX to SVG**, this guide shows you a fast, reliable way to generate scalable slide previews directly from Java code. By the end of this tutorial, you’ll understand how to load a presentation, extract its metadata, and **java generate SVG images** for each slide—perfect for document management systems, collaboration tools, or educational platforms.
+문서를 효율적으로 관리하고 프레젠테이션을 제공하는 것은 특히 프레젠테이션 작업 시 어려울 수 있습니다. **If you need to convert PPTX to SVG**, 이 가이드는 Java 코드에서 직접 확장 가능한 슬라이드 미리보기를 빠르고 안정적으로 생성하는 방법을 보여줍니다. 튜토리얼이 끝날 때쯤 프레젠테이션을 로드하고 메타데이터를 추출하며 각 슬라이드에 대해 **java generate SVG images** 를 생성하는 방법을 이해하게 될 것입니다—문서 관리 시스템, 협업 도구 또는 교육 플랫폼에 적합합니다.
 
 ## Quick Answers
 - **What does “convert PPTX to SVG” mean?** It transforms each PowerPoint slide into a scalable vector graphic (SVG) file.  
