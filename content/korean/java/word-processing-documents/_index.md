@@ -1,14 +1,16 @@
 ---
-title: "Extract Images from Word Docs with GroupDocs.Editor for Java"
-description: "Learn how to extract images from Word documents and edit Word sections, content controls, and convert Word to HTML using GroupDocs.Editor for Java."
-weight: 5
-url: "/java/word-processing-documents/"
-type: docs
 date: 2026-01-16
+description: GroupDocs.Editor for Java를 사용하여 Word 문서에서 이미지를 추출하고, Word 섹션 및 콘텐츠 컨트롤을
+  편집하며, Word를 HTML로 변환하는 방법을 배우세요.
+title: GroupDocs.Editor for Java를 사용하여 Word 문서에서 이미지 추출
+type: docs
+url: /ko/java/word-processing-documents/
+weight: 5
 ---
-# Extract Images from Word Docs with GroupDocs.Editor for Java
 
-If you need to **extract images from word** files programmatically, you’ve come to the right place. In this guide we’ll walk through how GroupDocs.Editor for Java makes it simple to pull out embedded pictures, edit Word sections, manage content controls, and even convert Word documents to HTML—all while keeping the original formatting intact. Whether you’re building a document‑management system, a migration tool, or a custom reporting engine, these tutorials give you the practical code you need to get the job done.
+# Word 문서에서 이미지 추출하기 - GroupDocs.Editor for Java
+
+프로그램matically **extract images from word** 파일을 추출해야 한다면, 바로 여기가 정답입니다. 이 가이드에서는 GroupDocs.Editor for Java가 임베드된 그림을 쉽게 추출하고, Word 섹션을 편집하며, 콘텐츠 컨트롤을 관리하고, 심지어 Word 문서를 HTML로 변환하는 방법을 단계별로 설명합니다—모두 원본 포맷을 그대로 유지합니다. 문서 관리 시스템, 마이그레이션 도구, 맞춤형 보고 엔진을 구축하든, 이 튜토리얼은 작업을 완료하는 데 필요한 실용적인 코드를 제공합니다.
 
 ## Quick Answers
 - **Can I extract images from a DOCX file?** Yes, GroupDocs.Editor provides a straightforward API to pull out all embedded images.  
@@ -123,6 +125,4 @@ A: No. GroupDocs.Editor is a pure Java solution and does not require Office inst
 
 **Last Updated:** 2026-01-16  
 **Tested With:** GroupDocs.Editor 23.12 for Java  
-**Author:** GroupDocs  
-
----
+**Author:** GroupDocs
