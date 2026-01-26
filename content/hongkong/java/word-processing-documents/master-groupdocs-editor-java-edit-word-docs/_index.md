@@ -1,19 +1,19 @@
 ---
-title: "Convert DOCX to HTML using GroupDocs.Editor Java – Guide"
-description: "Learn how to convert DOCX to HTML with GroupDocs.Editor Java, edit Word documents, and manage document workflows efficiently."
-date: "2026-01-26"
-weight: 1
-url: "/java/word-processing-documents/master-groupdocs-editor-java-edit-word-docs/"
+date: '2026-01-26'
+description: 學習如何使用 GroupDocs.Editor Java 將 DOCX 轉換為 HTML、編輯 Word 文件，並高效管理文件工作流程。
 keywords:
 - GroupDocs.Editor Java
 - edit Word documents with Java
 - Java document management
+title: 使用 GroupDocs.Editor Java 將 DOCX 轉換為 HTML – 指南
 type: docs
+url: /zh-hant/java/word-processing-documents/master-groupdocs-editor-java-edit-word-docs/
+weight: 1
 ---
 
 # Convert DOCX to HTML with GroupDocs.Editor for Java
 
-In this comprehensive tutorial you’ll discover how to **convert DOCX to HTML** using the powerful GroupDocs.Editor library for Java. Whether you need to transform Word files for web publishing, integrate document conversion into a content management system, or automate bulk processing, this guide walks you through every step—from setting up the environment to retrieving HTML content with image prefixes. Let’s dive in and see how you can streamline your document workflows.
+在本完整教學中，您將學會如何使用功能強大的 GroupDocs.Editor for Java 套件 **將 DOCX 轉換為 HTML**。無論是要將 Word 檔案轉為網頁發布、將文件轉換整合至內容管理系統，或是自動化大量處理，本指南都會一步步說明——從環境設定到取得帶有圖片前置字串的 HTML 內容。讓我們一起深入了解，如何簡化您的文件工作流程。
 
 ## Quick Answers
 - **What does “convert DOCX to HTML” mean?** It transforms a Word .docx file into an HTML representation, preserving text, styles, and images.  
