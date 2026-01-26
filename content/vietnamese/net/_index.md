@@ -1,52 +1,146 @@
 ---
-title: Hướng dẫn và ví dụ về GroupDocs.Editor cho .NET
-linktitle: GroupDocs.Editor cho Hướng dẫn .NET
-weight: 10
-url: /vi/net/
-description: Quản lý và chỉnh sửa tài liệu với GroupDocs.Editor .NET. Tìm hiểu cách xử lý tài liệu, chỉnh sửa tài liệu, truy xuất nội dung HTML, quản lý trường biểu mẫu và hơn thế nữa!
+date: 2026-01-26
+description: Tìm hiểu cách lưu tài liệu dưới dạng PDF, chuyển đổi Word sang HTML,
+  chỉnh sửa bài thuyết trình PowerPoint, trích xuất phần thân HTML và xử lý CSS bên
+  ngoài bằng GroupDocs.Editor cho .NET.
 is_root: true
+linktitle: GroupDocs.Editor for .NET Tutorials
+title: Lưu tài liệu dưới dạng PDF bằng GroupDocs.Editor cho .NET – Hướng dẫn & Ví
+  dụ
 type: docs
+url: /vi/net/
+weight: 10
 ---
-# Hướng dẫn và ví dụ về GroupDocs.Editor cho .NET
 
+# Save Document as PDF with GroupDocs.Editor for .NET
 
-Bạn đã sẵn sàng khai thác toàn bộ tiềm năng của GroupDocs.Editor cho .NET chưa? Đi sâu vào các hướng dẫn và ví dụ toàn diện của chúng tôi, đồng thời tìm hiểu cách quản lý và chỉnh sửa tài liệu một cách dễ dàng. Cho dù bạn là người mới bắt đầu hay nhà phát triển có kinh nghiệm, những hướng dẫn này bao gồm nhiều chủ đề để nâng cao quy trình quản lý tài liệu của bạn.
+Unlock the full potential of **GroupDocs.Editor for .NET** and learn how to **save document as PDF** in a few simple steps. Whether you’re just getting started or you’re an experienced developer, these tutorials cover everything you need—from converting Word to HTML to editing PowerPoint presentations and handling external CSS. Let’s dive in and see how you can streamline your document workflow.
 
-## Chỉnh sửa tài liệu
+## Quick Answers
+- **How do I save a document as PDF?** Use the `Save` method with `PdfSaveOptions` in GroupDocs.Editor.
+- **Can I convert Word to HTML?** Yes, the library provides `ConvertToHtml` for seamless conversion.
+- **Is editing PowerPoint possible?** Absolutely—use the PowerPoint editing API to modify slides.
+- **How do I extract the HTML body?** Call `GetHtmlBody()` to retrieve only the body content.
+- **Can I handle external CSS?** The CSS handling utilities let you load and prefix external styles automatically.
 
- Khám phá sức mạnh của việc chỉnh sửa tài liệu với GroupDocs.Editor cho .NET. Hướng dẫn của chúng tôi bao gồm mọi thứ từ tạo, chỉnh sửa và lưu tài liệu đến nâng cao quy trình quản lý tài liệu của bạn. Tìm hiểu cách hợp lý hóa quy trình của bạn và tăng năng suất một cách dễ dàng.[Đọc thêm](./document-editing/)
+## What is “save document as pdf”?
+Saving a document as PDF converts any supported file (DOCX, PPTX, XML, etc.) into a universally viewable PDF format while preserving layout, fonts, and images.
 
-## Xử lý CSS
+## Why use GroupDocs.Editor for .NET to save PDFs?
+- **High fidelity** – retains original formatting.
+- **Cross‑format support** – works with Word, PowerPoint, Excel, XML, and plain‑text files.
+- **Built‑in conversion tools** – convert Word to HTML, edit PowerPoint presentations, and extract HTML body content without extra libraries.
+- **Robust CSS handling** – manage external CSS and apply prefixes automatically.
 
- Xử lý nội dung CSS dễ dàng bằng GroupDocs.Editor cho .NET. Tìm hiểu cách trích xuất nội dung CSS bên ngoài và xử lý nội dung CSS bằng tiền tố một cách liền mạch. Hướng dẫn từng bước của chúng tôi giúp bạn quản lý CSS hiệu quả và hợp lý hóa quy trình quản lý tài liệu của mình.[Đọc thêm](./css-handling/)
+## Prerequisites
+- .NET 6+ (or .NET Core 3.1 / .NET Framework 4.6.1)
+- Valid GroupDocs.Editor for .NET license
+- Basic knowledge of C# and Visual Studio
 
-## Truy xuất nội dung HTML
+## Document Editing
 
-Khám phá những bí mật về truy xuất nội dung HTML bằng GroupDocs.Editor cho .NET. Hướng dẫn của chúng tôi cung cấp hướng dẫn từng bước về cách truy xuất nội dung nội dung và làm việc với tiền tố tùy chỉnh. Cho dù bạn là người mới bắt đầu hay nhà phát triển có kinh nghiệm, những hướng dẫn này đều có thể đáp ứng nhu cầu của bạn.[Đọc thêm](./html-content-retrieval/)
+Discover the power of document editing with GroupDocs.Editor for .NET. Our tutorials cover everything from creating, editing, and saving documents to enhancing your document management workflow. Learn how to **convert Word to HTML**, edit content, and then **save document as PDF** seamlessly. [Read more](./document-editing/)
 
-## Quản lý trường biểu mẫu
+## CSS Handling
 
- Quản lý trường biểu mẫu chính trong .NET với GroupDocs.Editor. Tìm hiểu cách chỉnh sửa, sửa chữa, làm việc với các bộ sưu tập trường biểu mẫu một cách liền mạch. Hướng dẫn của chúng tôi cung cấp hướng dẫn toàn diện cho các nhà phát triển đang tìm cách hợp lý hóa quy trình quản lý trường biểu mẫu của họ.[Đọc thêm](./form-field-management/)
+Effortlessly handle CSS content with GroupDocs.Editor for .NET. Learn how to extract external CSS content and **handle external css** with prefixes seamlessly. Our step‑by‑step guides empower you to manage CSS effectively and streamline your document management workflow. [Read more](./css-handling/)
 
-## Xử lý văn bản
+## HTML Content Retrieval
 
- Đưa kỹ năng xử lý tài liệu của bạn lên một tầm cao mới với GroupDocs.Editor for .NET. Tìm hiểu cách trích xuất thông tin, lưu vào nhiều định dạng khác nhau và làm việc với các loại tài liệu khác nhau một cách dễ dàng. Hướng dẫn của chúng tôi giúp bạn trở thành chuyên gia xử lý tài liệu.[Đọc thêm](./document-processing/)
+Unlock the secrets of HTML content retrieval with GroupDocs.Editor for .NET. Our tutorials provide step‑by‑step guidance on retrieving body content, **extract html body**, and working with custom prefixes. Whether you're a beginner or an experienced developer, these tutorials have you covered. [Read more](./html-content-retrieval/)
 
-## Hướng dẫn nhanh
+## Form Field Management
 
-Bạn mới sử dụng GroupDocs.Editor cho .NET? Đi sâu vào hướng dẫn bắt đầu nhanh của chúng tôi và tìm hiểu cách sử dụng GroupDocs.Editor một cách dễ dàng. Từ việc đặt giấy phép cho đến tích hợp các tính năng, các hướng dẫn toàn diện của chúng tôi sẽ đơn giản hóa quá trình học tập và giúp bạn mở khóa các khả năng chỉnh sửa tài liệu mạnh mẽ.[Đọc thêm](./quick-start-guide/)
+Master form field management in .NET with GroupDocs.Editor. Learn to edit, fix, work with legacy, and remove form field collections seamlessly. Our tutorials provide comprehensive guidance for developers seeking to streamline their form field management workflow. [Read more](./form-field-management/)
 
-Sẵn sàng để nâng cao quy trình quản lý tài liệu của bạn? Khám phá các hướng dẫn và ví dụ của chúng tôi về GroupDocs.Editor cho .NET và khám phá toàn bộ tiềm năng của khả năng chỉnh sửa tài liệu. Cho dù bạn là người mới bắt đầu hay nhà phát triển có kinh nghiệm, những tài nguyên này đều cung cấp hướng dẫn toàn diện để hợp lý hóa quy trình của bạn và tăng năng suất. Hãy tạm biệt các tác vụ thủ công và chào đón cách quản lý tài liệu hiệu quả với GroupDocs.Editor dành cho .NET.
-## GroupDocs.Editor cho Hướng dẫn .NET 
-### [Chỉnh sửa tài liệu](./document-editing/)
-Quản lý và chỉnh sửa tài liệu với GroupDocs.Editor .NET. Tìm hiểu cách tạo, chỉnh sửa và lưu tài liệu một cách dễ dàng. Nâng cao quy trình quản lý tài liệu của bạn ngay hôm nay!
-### [Xử lý CSS](./css-handling/)
-Tìm hiểu cách xử lý nội dung CSS hiệu quả với GroupDocs.Editor cho .NET. Trích xuất nội dung CSS bên ngoài và xử lý nội dung CSS bằng tiền tố một cách dễ dàng.
-### [Truy xuất nội dung HTML](./html-content-retrieval/)
-Khám phá cách truy xuất nội dung HTML bằng GroupDocs.Editor cho .NET. Bao gồm hướng dẫn từng bước để truy xuất nội dung nội dung và tiền tố tùy chỉnh.
-### [Quản lý trường biểu mẫu](./form-field-management/)
-Quản lý trường biểu mẫu chính trong .NET với GroupDocs.Editor. Tìm hiểu cách chỉnh sửa, sửa chữa, làm việc với các bộ sưu tập trường biểu mẫu một cách liền mạch.
-### [Xử lý văn bản](./document-processing/)
-Xử lý tài liệu thành thạo trong .NET với GroupDocs.Editor. Tìm hiểu cách trích xuất thông tin, lưu vào nhiều định dạng khác nhau và làm việc với các loại tài liệu khác nhau một cách dễ dàng.
-### [Hướng dẫn nhanh](./quick-start-guide/)
-Tìm hiểu cách sử dụng GroupDocs.Editor cho .NET với các hướng dẫn toàn diện của chúng tôi. Đặt giấy phép, tích hợp tính năng và mở khóa khả năng chỉnh sửa tài liệu mạnh mẽ.
+## Document Processing
+
+Take your document processing skills to the next level with GroupDocs.Editor for .NET. Learn to extract information, save to various formats—including **save document as PDF**—and work with different document types effortlessly. Our tutorials empower you to become a document processing expert. [Read more](./document-processing/)
+
+## Quick Start Guide
+
+New to GroupDocs.Editor for .NET? Dive into our quick start guide and learn how to use GroupDocs.Editor with ease. From setting licenses to integrating features, our comprehensive tutorials simplify the learning process and help you unlock powerful document editing capabilities, including support **edit powerpoint presentation** and **edit xml document**. [Read more](./quick-start-guide/)
+
+Ready to enhance your document management workflow? Explore our tutorials and examples of GroupDocs.Editor for .NET and unlock the full potential of document editing capabilities. Whether you're a beginner or an experienced developer, these resources provide comprehensive guidance to streamline your processes and boost productivity. Say goodbye to manual tasks and hello to efficient document management with GroupDocs.Editor for .NET.
+
+## GroupDocs.Editor for .NET Tutorials 
+
+### [HTML Content Retrieval](./html-content-retrieval/)
+Discover how to retrieve HTML content using GroupDocs.Editor for .NET. Step‑by‑step guides for retrieving body content and custom prefixes included.
+
+### [Form Field Management](./form-field-management/)
+Master form field management in .NET with GroupDocs.Editor. Learn to edit, fix, work with legacy, and remove form field collections seamlessly.
+
+### [Document Processing](./document-processing/)
+Master document processing in .NET with GroupDocs.Editor. Learn to extract info, save to various formats—including PDF—and work with different document types effortlessly.
+
+### [Quick Start Guide](./quick-start-guide/)
+Learn to use GroupDocs.Editor for .NET with our comprehensive tutorials. Set licenses, integrate features, and unlock powerful document editing capabilities.
+
+### [Document Loading](./document-loading/)
+Explore different approaches for loading documents into GroupDocs.Editor for .NET. These tutorials cover loading from files, streams, and various sources with proper configuration.
+
+### [Document Editing](./document-editing/)
+Learn core editing capabilities with GroupDocs.Editor for .NET. These tutorials demonstrate how to edit documents, modify content, and implement document editing workflows in your applications.
+
+### [HTML Manipulation](./html-manipulation/)
+Discover how to work with HTML content in GroupDocs.Editor for .NET. Learn to extract HTML body content, manipulate HTML structures, and handle HTML resources effectively.
+
+### [CSS Handling](./css-handling/)
+Learn how to handle CSS content effectively with GroupDocs.Editor for .NET. Extract external CSS content and handle CSS content with prefixes effortlessly.
+
+### [Word Processing Documents](./word-processing-documents/)
+Explore specialized editing features for Word documents (DOCX, DOC, RTF, etc.) with GroupDocs.Editor for .NET. Learn format‑specific techniques and best practices.
+
+### [Spreadsheet Documents](./spreadsheet-documents/)
+Discover how to edit Excel and other spreadsheet formats with GroupDocs.Editor. These tutorials cover cell editing, formula handling, and multi‑tab worksheet processing.
+
+### [Presentation Documents](./presentation-documents/)
+Learn to edit PowerPoint presentations and other slide formats effectively. These tutorials show how to modify slides, manage presentation elements, and preserve animations.
+
+### [PDF Documents](./pdf-documents/)
+Master PDF editing capabilities with GroupDocs.Editor for .NET. These tutorials demonstrate how to modify PDF content, handle forms, and maintain PDF‑specific features.
+
+### [XML Documents](./xml-documents/)
+Learn specialized approaches for editing XML content while maintaining structure and validity with GroupDocs.Editor for .NET.
+
+### [Form Fields](./form-fields/)
+Master form field manipulation with GroupDocs.Editor. These tutorials cover editing form fields, fixing invalid collections, and managing legacy form fields.
+
+### [Advanced Features](./advanced-features/)
+Discover powerful capabilities for implementing complex document editing workflows, optimizations, and specialized features in GroupDocs.Editor for .NET.
+
+### [Licensing & Configuration](./licensing-configuration/)
+Configure GroupDocs.Editor properly in your projects with these licensing tutorials covering various deployment scenarios and environments.
+
+### [Document Saving and Export Tutorials for GroupDocs.Editor .NET](./document-saving/)
+Step‑by‑step tutorials for saving edited documents to various formats and implementing export capabilities using GroupDocs.Editor for .NET.
+
+### [HTML Document Editing Tutorials for GroupDocs.Editor .NET](./html-web-documents/)
+Learn to work with HTML content, web documents, and HTML resources using GroupDocs.Editor for .NET tutorials.
+
+### [Plain Text and DSV Document Editing Tutorials](./plain-text-dsv-documents/)
+Complete tutorials for editing plain text documents, CSV, TSV, and delimited text files using GroupDocs.Editor for .NET.
+
+## Frequently Asked Questions
+
+**Q: Can I use GroupDocs.Editor to save a DOCX file as PDF?**  
+A: Yes, simply load the DOCX with `Editor` and call `Save` with `PdfSaveOptions` to generate a PDF.
+
+**Q: How do I convert a Word document to HTML before saving as PDF?**  
+A: Use the `ConvertToHtml` method, optionally edit the HTML, then pass it to the PDF converter.
+
+**Q: Is it possible to edit a PowerPoint presentation and then export it as PDF?**  
+A: Absolutely—use the PowerPoint editing API to modify slides and then save the result as PDF.
+
+**Q: What if I need to extract only the body part of an HTML document?**  
+A: Call `GetHtmlBody()` which returns the inner HTML without `<head>` or `<body>` tags.
+
+**Q: How can I handle external CSS files when processing HTML?**  
+A: The CSS handling utilities let you load external CSS, apply a prefix, and embed it directly into the document.
+
+---
+
+**Cập nhật lần cuối:** 2026-01-26  
+**Kiểm tra với:** GroupDocs.Editor for .NET 23.12  
+**Tác giả:** GroupDocs
