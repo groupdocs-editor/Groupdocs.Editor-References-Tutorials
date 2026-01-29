@@ -1,10 +1,13 @@
 ---
-title: "Extract Document Metadata – Advanced GroupDocs.Editor Features Tutorials for .NET"
-description: "Step-by-step guides to extract document metadata, master advanced document editing, protect DOCX files, and build document processing solutions with GroupDocs.Editor for .NET."
-weight: 13
-url: "/net/advanced-features/"
-type: docs
 date: 2026-01-29
+description: Stapsgewijze handleidingen om documentmetadata te extraheren, geavanceerde
+  documentbewerking onder de knie te krijgen, DOCX‑bestanden te beveiligen en documentverwerkingsoplossingen
+  te bouwen met GroupDocs.Editor voor .NET.
+title: Documentmetadata extraheren – Geavanceerde GroupDocs.Editor-functies tutorials
+  voor .NET
+type: docs
+url: /nl/net/advanced-features/
+weight: 13
 ---
 
 # Extract Document Metadata – Advanced GroupDocs.Editor Features Tutorials for .NET

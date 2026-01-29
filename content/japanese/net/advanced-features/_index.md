@@ -1,13 +1,13 @@
 ---
-title: "Extract Document Metadata – Advanced GroupDocs.Editor Features Tutorials for .NET"
-description: "Step-by-step guides to extract document metadata, master advanced document editing, protect DOCX files, and build document processing solutions with GroupDocs.Editor for .NET."
-weight: 13
-url: "/net/advanced-features/"
-type: docs
 date: 2026-01-29
+description: GroupDocs.Editor for .NET を使用した、ドキュメントメタデータの抽出、上級文書編集の習得、DOCX ファイルの保護、そしてドキュメント処理ソリューションの構築に関するステップバイステップのガイド。
+title: ドキュメントメタデータの抽出 – .NET 用高度な GroupDocs.Editor 機能チュートリアル
+type: docs
+url: /ja/net/advanced-features/
+weight: 13
 ---
 
-# Extract Document Metadata – Advanced GroupDocs.Editor Features Tutorials for .NET
+# ドキュメントメタデータの抽出 – .NET 用 Advanced GroupDocs.Editor 機能チュートリアル
 
 Welcome to the central hub for **extract document metadata** and other advanced capabilities of GroupDocs.Editor for .NET. Whether you’re looking to pull metadata from Word, Excel, or PDF files, protect DOCX documents, or build end‑to‑end document processing pipelines, this collection of tutorials provides clear, production‑ready examples. Let’s explore how you can elevate your document‑handling solutions with the library’s powerful features.
 
@@ -70,6 +70,4 @@ A: Custom properties are fully supported; you can read and write them using the 
 
 **Last Updated:** 2026-01-29  
 **Tested With:** GroupDocs.Editor 23.12 for .NET  
-**Author:** GroupDocs  
-
----
+**Author:** GroupDocs
