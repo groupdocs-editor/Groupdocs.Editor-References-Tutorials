@@ -1,19 +1,20 @@
 ---
-title: "Load Word Document .NET with GroupDocs.Editor – Edit Word Files"
-description: "Learn how to load word document .net and populate word form fields using GroupDocs.Editor for .NET, plus edit word documents .net efficiently."
-date: "2026-01-29"
-weight: 1
-url: "/net/advanced-features/groupdocs-editor-net-word-documents-processing/"
+date: '2026-01-29'
+description: Leer hoe je een Word‑document in .NET laadt en Word‑formuliervelden invult
+  met GroupDocs.Editor voor .NET, en bewerk Word‑documenten in .NET efficiënt.
 keywords:
 - GroupDocs.Editor .NET
 - Word document processing
 - Edit Word documents in .NET
+title: Laad Word-document .NET met GroupDocs.Editor – Bewerk Word-bestanden
 type: docs
+url: /nl/net/advanced-features/groupdocs-editor-net-word-documents-processing/
+weight: 1
 ---
 
 # Load Word Document .NET with GroupDocs.Editor – Edit Word Files
 
-In modern .NET applications, **load word document .net** quickly and reliably is a common requirement—whether you’re automating contracts, invoices, or internal forms. In this tutorial you’ll see how GroupDocs.Editor for .NET makes it straightforward to load, read, and **edit word documents .net**, while also giving you the tools to **populate word form fields** programmatically.
+In moderne .NET‑applicaties is **load word document .net** snel en betrouwbaar een veelvoorkomende eis—of je nu contracten, facturen of interne formulieren automatiseert. In deze tutorial zie je hoe GroupDocs.Editor voor .NET het eenvoudig maakt om Word‑documenten te laden, lezen en **edit word documents .net**, en biedt het tevens de tools om **populate word form fields** programmatisch te vullen.
 
 ## Quick Answers
 - **What library handles Word files in .NET?** GroupDocs.Editor for .NET  
