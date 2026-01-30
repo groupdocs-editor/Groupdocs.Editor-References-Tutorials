@@ -15,18 +15,18 @@ weight: 1
 
 この包括的なガイドへようこそ。GroupDocs.Editor for Java を使用して **edit word document java** を効率的に行う方法をご紹介します。デジタル時代において、ドキュメントを簡単に管理できることは、企業でも個人でも必須です。機密情報のパスワード保護が必要な場合や、配布前に内容を修正したい場合など、これらの機能をマスターすればワークフローを大幅に効率化できます。
 
-## Quick Answers
+## クイックアンサー
 - **Java で Word ドキュメントを編集できるライブラリは？** GroupDocs.Editor for Java。
 - **パスワードで保護されたファイルを開けますか？** はい – `WordProcessingLoadOptions` にパスワードを指定します。
 - **保存時のメモリ使用量を減らすには？** `WordProcessingSaveOptions` で `optimizeMemoryUsage(true)` を設定します。
 - **本番環境でライセンスは必要ですか？** 有効な GroupDocs.Editor ライセンスが必要です。
 - **マクロと読み取り専用保護をサポートする形式は？** DOCM 形式。
 
-## Prerequisites
+## 前提条件
 
 開始する前に、Java プログラミングの基本を理解していることを確認してください。Maven プロジェクトの設定や Java におけるファイル I/O 操作に慣れているとスムーズです。また、開発環境が Java 8 以降に設定されていることを確認し、GroupDocs.Editor とシームレスに連携できるようにしてください。
 
-### Required Libraries and Dependencies
+### 必要なライブラリと依存関係
 
 このチュートリアルでは GroupDocs.Editor ライブラリのバージョン 25.3 を使用します。Maven でプロジェクトに追加するには、以下の設定を pom.xml に記述してください。
 
@@ -50,11 +50,11 @@ weight: 1
 
 あるいは、[GroupDocs.Editor for Java のリリース](https://releases.groupdocs.com/editor/java/) から直接ライブラリをダウンロードすることもできます。
 
-### License Acquisition
+### ライセンスの取得
 
 評価制限なしで GroupDocs.Editor をフル活用するには、無料トライアルの取得またはライセンスの購入をご検討ください。機能を十分に試すための一時ライセンスは、[このリンク](https://purchase.groupdocs.com/temporary-license) から取得できます。
 
-## Setting Up GroupDocs.Editor for Java
+## GroupDocs.Editor for Java のセットアップ
 
 GroupDocs.Editor をインストールしたら、環境の初期化と設定を行います:
 1. 上記の Maven 依存関係を追加するか、JAR ファイルをダウンロードしてプロジェクトに組み込みます。
@@ -63,15 +63,15 @@ GroupDocs.Editor をインストールしたら、環境の初期化と設定を
 
 これらの手順が完了すれば、GroupDocs.Editor を使ったドキュメント管理機能の実装を開始できます。
 
-## Implementation Guide
+## 実装ガイド
 
 プロセスは大きく 3 つのセクションに分かれます: ドキュメントの読み込みとパスワード処理、編集オプションの設定、コンテンツの編集と保存。各機能を順に見ていきましょう。
 
-### Feature 1: Document Loading and Password Handling
+### 機能 1: ドキュメントの読み込みとパスワード処理
 
-**Overview:** このセクションでは、GroupDocs.Editor for Java を使用して **load password protected doc** を行う方法を示します。機密文書のアクセス制御が必要な場合に必須です。
+**概要:** このセクションでは、GroupDocs.Editor for Java を使用して **load password protected doc** を行う方法を示します。機密文書のアクセス制御が必要な場合に必須です。
 
-#### Step 1: Define the Path to Your Document
+#### ステップ 1: ドキュメントへのパスを定義する
 
 まず、Word ドキュメントの場所を指定します。
 
@@ -79,7 +79,7 @@ GroupDocs.Editor をインストールしたら、環境の初期化と設定を
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.docx";
 ```
 
-#### Step 2: Create an InputStream
+#### ステップ 2: 入力ストリームを作成する
 
 次に、ドキュメントを読み込むためのファイル入力ストリームを初期化します。
 
@@ -87,7 +87,7 @@ String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.docx";
 InputStream fs = new FileInputStream(inputFilePath);
 ```
 
-#### Step 3: Set Load Options with Password Protection
+#### ステップ 3: パスワード保護付きの読み込みオプションを設定する
 
 パスワードで保護されたドキュメントを扱うため、ロードオプションを設定します。
 
@@ -96,7 +96,7 @@ WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 loadOptions.setPassword("some_password_to_open_a_document");
 ```
 
-#### Step 4: Load the Document Using Editor
+#### ステップ 4: エディターを使用してドキュメントを読み込む
 
 最後に、`Editor` クラスを使用してドキュメントを開き、操作できるようにします。
 
@@ -104,11 +104,11 @@ loadOptions.setPassword("some_password_to_open_a_document");
 Editor editor = new Editor(fs, loadOptions);
 ```
 
-### Feature 2: Document Editing Options
+### 機能 2: ドキュメント編集オプション
 
-**Overview:** フォント抽出や言語情報など、編集オプションを設定することでドキュメント処理機能を強化できます。
+**概要:** フォント抽出や言語情報など、編集オプションを設定することでドキュメント処理機能を強化できます。
 
-#### Step 1: Create Editing Options
+#### ステップ 1: 編集オプションを作成する
 
 まず、編集オプションオブジェクトを初期化します。
 
@@ -116,7 +116,7 @@ Editor editor = new Editor(fs, loadOptions);
 WordProcessingEditOptions editOptions = new WordProcessingEditOptions();
 ```
 
-#### Step 2: Enable Font Extraction
+#### ステップ 2: フォント抽出を有効にする
 
 埋め込みフォントを使用できるように、以下のオプションを有効化します。
 
@@ -124,7 +124,7 @@ WordProcessingEditOptions editOptions = new WordProcessingEditOptions();
 editOptions.setFontExtraction(FontExtractionOptions.ExtractEmbeddedWithoutSystem);
 ```
 
-#### Step 3: Extract Language Information
+#### ステップ 3: 言語情報を抽出する
 
 多言語ドキュメントの処理に役立つ言語情報の抽出を有効にします。
 
@@ -132,7 +132,7 @@ editOptions.setFontExtraction(FontExtractionOptions.ExtractEmbeddedWithoutSystem
 editOptions.setEnableLanguageInformation(true);
 ```
 
-#### Step 4: Enable Pagination Mode
+#### ステップ 4: ページネーションモードを有効にする
 
 長文ドキュメントの編集を容易にするため、ページングモードをオンにします。
 
@@ -140,11 +140,11 @@ editOptions.setEnableLanguageInformation(true);
 editOptions.setEnablePagination(true);
 ```
 
-### Feature 3: Content Editing and Document Saving
+### 機能 3: コンテンツの編集とドキュメントの保存
 
-**Overview:** このセクションでは、ドキュメントのコンテンツを変更し、形式やパスワード保護などの設定で保存する方法を示します。
+**概要:** このセクションでは、ドキュメントのコンテンツを変更し、形式やパスワード保護などの設定で保存する方法を示します。
 
-#### Step 1: Extract Original Content
+#### ステップ 1: 元のコンテンツを抽出する
 
 まず、元のコンテンツとリソースを抽出します。
 
@@ -162,7 +162,7 @@ String editedContent = originalContent.replace("document", "edited document");
 EditableDocument afterEdit = EditableDocument.fromMarkup(editedContent, allResources);
 ```
 
-#### Step 3: Set Up Save Options
+#### ステップ3: 保存オプションを設定する
 
 形式やパスワードなど、保存時の設定を構成します。
 
@@ -176,7 +176,7 @@ saveOptions.setOptimizeMemoryUsage(true);
 saveOptions.setProtection(new WordProcessingProtection(WordProcessingProtectionType.ReadOnly, "write_password"));
 ```
 
-#### Step 4: Save the Edited Document
+#### ステップ4: 編集したドキュメントを保存する
 
 最後に、編集済みドキュメントを出力ファイルに書き込みます。
 
@@ -189,7 +189,7 @@ try (FileOutputStream outputFile = new FileOutputStream(outputPath)) {
 }
 ```
 
-## Practical Applications
+## 実用的な応用
 
 GroupDocs.Editor for Java はさまざまな分野で活用できます:
 1. **Secure Document Handling:** 編集および保存プロセスでパスワード保護された機密文書を安全に取り扱います。  
@@ -198,14 +198,14 @@ GroupDocs.Editor for Java はさまざまな分野で活用できます:
 
 Java アプリケーションに GroupDocs.Editor を組み込むことで、Word ドキュメントのセキュリティと効率性を同時に向上させられます。
 
-## Performance Considerations
+## パフォーマンスに関する考慮事項
 
 GroupDocs.Editor のパフォーマンスを最適化するポイント:
 - **メモリ使用量を最小化** するために、保存オプションで `optimizeMemoryUsage(true)` を設定します。（キーワード: optimize memory usage java）
 - 大容量ファイルを一度にメモリに読み込むのは避け、可能であればチャンク単位で処理します。
 - 新機能やバグ修正を享受するため、常に最新バージョンの GroupDocs.Editor にアップデートしてください。
 
-## Frequently Asked Questions
+## よくある質問
 
 **Q: パスワードで保護されたドキュメントを開くにはどうすればよいですか？**  
 A: `WordProcessingLoadOptions` を使用し、`setPassword("your_password")` を `Editor` インスタンス作成前に呼び出します。
@@ -222,7 +222,7 @@ A: もちろんです。`editOptions.setFontExtraction(FontExtractionOptions.Ext
 **Q: 本番環境で GroupDocs.Editor を使用するために特別なライセンスは必要ですか？**  
 A: 本番デプロイには有効な GroupDocs.Editor ライセンスが必須です。評価用の一時ライセンスは取得可能です。
 
-## Conclusion
+## まとめ
 
 本ガイドでは、GroupDocs.Editor for Java を使用して **edit word document java** を行う方法—パスワード保護されたファイルの読み込み、編集オプションのカスタマイズ、メモリ最適化設定での保存—を解説しました。これらの手順に従うことで、Java アプリケーションに強力で安全なドキュメント編集機能を組み込み、生産性とデータ保護の両方を向上させることができます。
 
