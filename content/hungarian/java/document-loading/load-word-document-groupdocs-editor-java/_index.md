@@ -149,22 +149,6 @@ Fájlok 10 MB-nál nagyobb mérete esetén vegye figyelembe:
 ## Következtetés
 Most már elsajátította, hogyan **load word document java**‑t használva a GroupDocs.Editor‑t, és készen áll a szerkesztésre, mentésre és a tartalom kinyerésére. Ez a könyvtár egy robusztus **java dokumentumszerkesztő könyvtár**, amely a kis kódrészletektől a hatalmas vállalati szintű fájlokig skálázható. Fedezze fel a következő lépéseket – a szerkesztett dokumentumok mentése, formátumok konvertálása vagy a meglévő háttérszolgáltatások integrálása.
 
-## GyIK szekció
-**Q1: A GroupDocs.Editor kompatibilis minden Java környezettel?**  
-Igen, amennyiben megfelel a JDK verziókövetelménynek (8+), a GroupDocs.Editor működik standard JVM‑eken, Docker konténereken és felhő‑alapú futtatókörnyezetekben.
-
-**Q2: Hogyan kezelem a jelszóval védett Word dokumentumokat?**  
-A `WordProcessingLoadOptions` segítségével adhatja meg a jelszavakat a védett fájlok zökkenőmentes eléréséhez.
-
-**Q3: Szerkeszthetek nagy Word dokumentumokat hatékonyan a GroupDocs.Editor‑rel?**  
-Igen, az erőforrások hatékony kezelése és az `Editor` példányok felszabadítása mellett nagy dokumentumokat is feldolgozhat jelentős teljesítménycsökkenés nélkül.
-
-**Q4: Milyen integrációs lehetőségek léteznek a GroupDocs.Editor számára?**  
-Jól integrálható webalkalmazásokkal, CMS platformokkal, mikro‑szolgáltatásokkal és asztali segédprogramokkal.
-
-**Q5: Hogyan szabadítsam fel megfelelően az `Editor` példányokat a memória szivárgások elkerülése érdekében?**  
-Mindig hívja meg a `.dispose()` metódust az `Editor` objektumon, vagy csomagolja be try‑with‑resources blokkba.
-
 ## Gyakran Ismételt Kérdések
 
 **Q: A ingyenes próba korlátozza a dokumentum méretét?**  

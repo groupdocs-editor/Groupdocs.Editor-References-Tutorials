@@ -146,22 +146,6 @@ Editor editor = new Editor(filePath, loadOptions);
 ## 结论
 您已经掌握了如何使用 GroupDocs.Editor **加载 Word 文档（Java）**，并准备进一步开展编辑、保存和内容提取工作。该库是一个强大的 **Java 文档编辑库，能够从小片段扩展到大型企业级文件。接下来可以探索保存编辑后文档、格式转换，或将其集成到现有后端服务中。
 
-## FAQ 部分
-**Q1：GroupDocs.Editor 是否兼容所有 Java 环境？**  
-是的，只要满足 JDK 版本要求（8+），GroupDocs.Editor 可在标准 JVM、Docker 容器以及云运行时环境中运行。
-
-**Q2：如何处理受密码保护的 Word 文档？**  
-可以使用 `WordProcessingLoadOptions` 指定密码，从而无缝访问受保护文件。
-
-**Q3：能否高效编辑大型 Word 文档？**  
-可以，通过有效管理资源并在使用后释放 `Editor` 实例，能够在不显著影响性能的情况下处理大文件。
-
-**Q4：GroupDocs.Editor 有哪些集成可能性？**  
-它可与 Web 应用、CMS 平台、微服务以及桌面工具良好集成。
-
-**Q5：如何正确释放 `Editor` 实例以避免内存泄漏？**  
-始终调用 `.dispose()`，或将其放入 try‑with‑resources 块中。
-
 ## 常见问答
 
 **Q：免费试用对文档大小有任何限制吗？**  

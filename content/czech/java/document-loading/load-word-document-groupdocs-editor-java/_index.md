@@ -148,22 +148,6 @@ Při práci se soubory nad 10 MB zvažte:
 ## Závěr
 Nyní jste zvládli, jak **načíst Word dokument v Javě** pomocí GroupDocs.Editor a jste připraveni rozšířit své dovednosti o úpravy, ukládání a extrakci obsahu. Tato knihovna slouží jako robustní **java knihovna pro úpravu dokumentů**, která škáluje od malých úryvků po masivní soubory úrovně podniku. Prozkoumejte další kroky — ukládání upravených dokumentů, konverzi formátů nebo integraci s vašimi stávajícími backend službami.
 
-## Sekce FAQ
-**Q1: Je GroupDocs.Editor kompatibilní se všemi Java prostředími?**  
-Ano, pokud splňujete požadavek na verzi JDK (8+), GroupDocs.Editor funguje napříč standardními JVM, Docker kontejnery a cloudovými runtime.
-
-**Q2: Jak mohu pracovat se soubory Word chráněnými heslem?**  
-Můžete zadat hesla pomocí `WordProcessingLoadOptions` pro bezproblémový přístup k zabezpečeným souborům.
-
-**Q3: Mohu efektivně upravovat velké Word dokumenty pomocí GroupDocs.Editor?**  
-Ano, při efektivní správě zdrojů a uvolňování instancí `Editor` můžete zpracovávat velké dokumenty bez výrazných výkonových penalizací.
-
-**Q4: Jaké možnosti integrace existují pro GroupDocs.Editor?**  
-Dobře se integruje s webovými aplikacemi, CMS platformami, mikro‑servisy a desktopovými nástroji.
-
-**Q5: Jak správně uvolnit instance `Editor`, aby nedocházelo k únikům paměti?**  
-Vždy zavolejte `.dispose()` na objektu `Editor` nebo jej obalte do bloku try‑with‑resources.
-
 ## Často kladené otázky
 
 **Q: Ukládá bezplatná zkušební verze nějaká omezení na velikost dokumentu?**  

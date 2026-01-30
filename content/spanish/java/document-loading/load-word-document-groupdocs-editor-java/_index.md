@@ -148,22 +148,6 @@ Al trabajar con archivos de más de 10 MB, considera:
 ## Conclusión
 Ahora dominas cómo **cargar word document java** usando GroupDocs.Editor y estás listo para expandirte a la edición, guardado y extracción de contenido. Esta biblioteca sirve como una robusta **biblioteca de edición de documentos Java** que escala desde fragmentos pequeños hasta archivos masivos a nivel empresarial. Explora los siguientes pasos—guardar documentos editados, convertir formatos o integrar con tus servicios backend existentes.
 
-## Sección de preguntas frecuentes
-**Q1: ¿GroupDocs.Editor es compatible con todos los entornos Java?**  
-Sí, siempre que cumplas con el requisito de versión del JDK (8+), GroupDocs.Editor funciona en JVM estándar, contenedores Docker y entornos basados en la nube.
-
-**Q2: ¿Cómo manejo documentos Word protegidos con contraseña?**  
-Puedes especificar contraseñas usando `WordProcessingLoadOptions` para acceder a archivos protegidos sin problemas.
-
-**Q3: ¿Puedo editar documentos Word grandes de manera eficiente con GroupDocs.Editor?**  
-Sí, gestionando los recursos de forma eficaz y disponiendo de las instancias `Editor`, puedes procesar documentos grandes sin penalizaciones de rendimiento significativas.
-
-**Q4: ¿Qué posibilidades de integración existen para GroupDocs.Editor?**  
-Se integra bien con aplicaciones web, plataformas CMS, micro‑servicios y utilidades de escritorio.
-
-**Q5: ¿Cómo dispongo correctamente de las instancias `Editor` para evitar fugas de memoria?**  
-Siempre llama a `.dispose()` en el objeto `Editor` o envuélvelo en un bloque try‑with‑resources.
-
 ## Preguntas frecuentes
 **P: ¿La prueba gratuita impone algún límite al tamaño del documento?**  
 R: La prueba permite la funcionalidad completa, pero archivos extremadamente grandes pueden ser más lentos debido a la falta de optimizaciones de una licencia de nivel de producción.
