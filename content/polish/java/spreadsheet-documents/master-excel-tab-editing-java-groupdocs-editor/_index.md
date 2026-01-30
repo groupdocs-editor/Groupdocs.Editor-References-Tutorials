@@ -17,32 +17,32 @@ weight: 1
 
 W dzisiejszym szybkim środowisku biznesowym możliwość **create editable worksheet** plików programowo oszczędza niezliczone godziny. Niezależnie od tego, czy musisz zaktualizować raport finansowy, dopracować listę inwentarzową, czy wygenerować niestandardowy pulpit sprzedaży, edycja konkretnych zakładek Excel z poziomu Javy pozwala automatyzować powtarzalne zadania i utrzymywać spójność danych. W tym przewodniku przeprowadzimy Cię przez ładowanie arkusza kalkulacyjnego, tworzenie edytowalnego arkusza dla każdej zakładki, a następnie **save Excel worksheet Java**‑style plików w potrzebnym formacie.
 
-## Quick Answers
-- **What library lets you create editable worksheet in Java?** GroupDocs.Editor for Java.  
-- **Can I edit individual tabs without loading the whole workbook?** Yes – use `SpreadsheetEditOptions` with a worksheet index.  
-- **Which formats can I save to?** XLSM, XLSB, and other `SpreadsheetFormats` supported by GroupDocs.  
-- **Do I need a license for development?** A free trial works for evaluation; a full license is required for production.  
-- **What Java version is required?** JDK 1.8 or newer.
+## Szybkie odpowiedzi
+- **Jaka biblioteka umożliwia utworzenie edytowalnego arkusza w Javie?** GroupDocs.Editor dla Javy.
+- **Czy mogę edytować poszczególne zakładki bez ładowania całego skoroszytu?** Tak – użyj `SpreadsheetEditOptions` z indeksem arkusza.
+- **W jakich formatach mogę zapisywać?** XLSM, XLSB i inne „Formaty arkusza kalkulacyjnego” obsługiwane przez GroupDocs.
+- **Czy potrzebuję licencji na rozwój?** Bezpłatny okres próbny służy do oceny; do produkcji wymagana jest pełna licencja.
+- **Jaka wersja Java jest wymagana?** JDK1.8 lub nowsza.
 
-## What is **create editable worksheet**?
-Tworzenie **create editable worksheet** oznacza konwersję konkretnej zakładki Excel do formatu, który API GroupDocs.Editor może modyfikować (HTML, DOCX itp.). Dzięki temu możesz programowo zmieniać wartości komórek, formuły lub stylizację bez ręcznego otwierania Excela.
+## Co to jest **tworzenie edytowalnego arkusza**?
+Tworzenie **utwórz edytowalny arkusz** oznacza konkretną zakładkę Excel do formatu, który API GroupDocs.Editor może modyfikować (HTML, DOCX itp.). Dzięki temu można programowo zmienić wartości komórek, formuły lub stylizację bez ręcznego otwierania Excela.
 
-## Why use GroupDocs.Editor for programmatic Excel editing?
-- **Speed:** Edit only the needed tab, avoiding the overhead of loading the entire workbook.  
-- **Flexibility:** Save each edited tab in a different format (XLSM, XLSB, etc.).  
-- **Reliability:** The library handles complex Excel features (charts, macros) that raw POI code often struggles with.  
+## Dlaczego warto używać GroupDocs.Editor do programowej edycji w Excelu?
+- **Prędkość:** Edytuj tylko potrzebną kartę, unikając obciążenia związanego z ładowaniem całego skoroszytu.
+- **Elastyczność:** Zapisz każdą edytowaną kartę w innym formacie (XLSM, XLSB itp.).
+- **Niezawodność:** Biblioteka obsługuje złożone funkcje Excela (wykresy, makra), z którymi surowy kod POI często ma problemy.
 
-## Prerequisites
-Before we dive in, make sure you have:
+## Wymagania wstępne
+Zanim przejdziemy dalej, upewnij się, że masz:
 
-- **Java Development Kit (JDK) 1.8+** installed.  
-- **An IDE** such as IntelliJ IDEA or Eclipse.  
-- **Maven** (or the ability to add JARs manually).  
+- zainstalowany **Java Development Kit (JDK) 1.8+**.
+- **IDE**, taki jak IntelliJ IDEA lub Eclipse.
+- **Maven** (lub możliwość ręcznego dodawania plików JAR).
 
-### Required Libraries and Versions
-To use GroupDocs.Editor for Java effectively, ensure your project includes the necessary dependencies. You can use Maven or download directly from the official site:
+### Wymagane biblioteki i wersje
+Aby efektywnie korzystać z GroupDocs.Editor dla Javy, upewnij się, że Twój projekt zawiera niezbędne zależności. Możesz użyć Mavena lub pobrać go bezpośrednio z oficjalnej strony:
 
-**Maven Setup:**
+**Konfiguracja Mavena:**
 
 ```xml
 <repositories>
@@ -62,174 +62,175 @@ To use GroupDocs.Editor for Java effectively, ensure your project includes the n
 </dependencies>
 ```
 
-**Direct Download:**  
-Alternatively, download the latest version from [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+**Pobieranie bezpośrednie:**
+Alternatywnie, pobierz najnowszą wersję z [GroupDocs.Editor dla wydań Java](https://releases.groupdocs.com/editor/java/).
 
-### Environment Setup
-Ensure you have a working Java development environment (JDK 1.8 or later) and an IDE like IntelliJ IDEA or Eclipse to follow along with this tutorial.
+### Konfiguracja środowiska
+Upewnij się, że masz działające środowisko programistyczne Java (JDK1.8 lub nowsze) oraz IDE, takie jak IntelliJ IDEA lub Eclipse, aby móc korzystać z tego samouczka.
 
-### Knowledge Prerequisites
-A basic understanding of Java programming, I/O operations in Java, and familiarity with handling Excel files will be beneficial as we dive into the code examples.
+### Wymagania wstępne dotyczące wiedzy
+Podstawowa znajomość programowania w Javie, operacji wejścia/wyjścia w Javie oraz znajomość obsługi plików Excela będą przydatne podczas omawiania przykładów kodu.
 
-## Setting Up GroupDocs.Editor for Java
-Let’s begin by configuring your project and obtaining a license.
+## Konfigurowanie GroupDocs.Editor dla Javy
+Zacznijmy od skonfigurowania projektu i uzyskania licencji.
 
-1. **Install GroupDocs.Editor** – add the Maven dependency or place the JAR on your classpath.  
-2. **License Acquisition** – start with a free trial license, then upgrade when you move to production. You can obtain a temporary key from [GroupDocs](https://purchase.groupdocs.com/temporary-license).  
-3. **Basic Initialization** – after the library is ready, you’ll create an `Editor` instance and load your Excel file.
+1. **Zainstaluj GroupDocs.Editor** – dodaj zależność Maven lub umieść plik JAR w ścieżce klas.
+2. **Nabycie licencji** – zacznij od bezpłatnej licencji próbnej, a następnie zaktualizuj ją po przejściu do środowiska produkcyjnego. Klucz tymczasowy można uzyskać od [GroupDocs](https://purchase.groupdocs.com/temporary-license).
+3. **Podstawowa inicjalizacja** – po przygotowaniu biblioteki utworzysz instancję `Editor` i załadujesz plik Excela.
 
-## Implementation Guide
-Below we break down each step needed to **create editable worksheet** objects and then **save Excel worksheet Java** files.
+## Przewodnik implementacji
+Poniżej przedstawiamy każdy krok potrzebny do **utworzenia edytowalnych obiektów arkusza kalkulacyjnego**, a następnie **zapisania plików Java arkusza kalkulacyjnego Excela**.
 
-### Load Spreadsheet and Create Editor Instance
-**Overview:** Load a spreadsheet file into the GroupDocs.Editor instance.
+### Wczytaj arkusz kalkulacyjny i utwórz instancję edytora
+**Omówienie:** Wczytaj plik arkusza kalkulacyjnego do instancji GroupDocs.Editor.
 
-#### Step 1: Define Input File Path
-Specify the path to your Excel document. Replace `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` with your actual file location:
+#### Krok 1: Zdefiniuj ścieżkę do pliku wejściowego
+Określ ścieżkę do dokumentu Excela. Zastąp `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` rzeczywistą lokalizacją pliku:
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
 ```
 
-#### Step 2: Load the Spreadsheet into an InputStream
-Use Java’s `FileInputStream` to read the Excel file:
+#### Krok 2: Załaduj arkusz kalkulacyjny do strumienia wejściowego
+Użyj `FileInputStream` Javy, aby odczytać plik Excela:
 
 ```java
 InputStream inputStream = new FileInputStream(inputFilePath);
 ```
 
-#### Step 3: Create an Editor Instance
-Initialize the Editor with the input stream and load options:
+#### Krok 3: Utwórz instancję edytora
+Zainicjuj edytor strumieniem wejściowym i wczytaj opcje:
 
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
 ```
-*Explanation:* The `Editor` instance acts as a central object to interact with your spreadsheet.
+*Wyjaśnienie:* Instancja `Editor` działa jako centralny obiekt do interakcji z arkuszem kalkulacyjnym.
 
-### Edit First Tab of a Spreadsheet
-**Overview:** Create an editable document for the first tab in the Excel file.
+### Edycja pierwszej karty arkusza kalkulacyjnego
+**Omówienie:** Utwórz edytowalny dokument dla pierwszej karty w pliku Excela.
 
-#### Step 1: Define Edit Options
-Specify which worksheet you want to edit using its index (0‑based):
+#### Krok 1: Zdefiniuj opcje edycji
+Określ arkusz, który chcesz edytować, używając jego indeksu (od 0):
 
 ```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
 ```
 
-#### Step 2: Create an EditableDocument for the First Tab
-Generate an editable document from the specified tab:
+#### Krok 2: Utwórz dokument edytowalny dla pierwszej zakładki
+Wygeneruj dokument edytowalny z określonej zakładki:
 
 ```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 ```
-*Explanation:* This step transforms the first worksheet into a modifiable format.
+*Wyjaśnienie:* Ten krok przekształca pierwszy arkusz kalkulacyjny do formatu modyfikowalnego.
 
-### Edit Second Tab of a Spreadsheet
-**Overview:** Learn how to edit the second tab in your spreadsheet similarly to the first.
+### Edycja drugiej zakładki arkusza kalkulacyjnego
+**Omówienie:** Dowiedz się, jak edytować drugą zakładkę w arkuszu kalkulacyjnym, podobnie jak pierwszą.
 
-#### Step 1: Define Edit Options
-Set the index for the second tab:
+#### Krok 1: Zdefiniuj opcje edycji
+Ustaw indeks dla drugiej zakładki:
 
 ```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
 ```
 
-#### Step 2: Create an EditableDocument for the Second Tab
-Create a document object for editing:
+#### Krok 2: Utwórz dokument edytowalny dla drugiej karty
+Utwórz obiekt dokumentu do edycji:
 
 ```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 ```
-*Explanation:* This approach allows you to focus on specific tabs without loading the entire spreadsheet.
+*Wyjaśnienie:* To podejście pozwala skupić się na konkretnych kartach bez ładowania całego arkusza kalkulacyjnego.
 
-### Save First Tab to a New File
-**Overview:** Export the edited first tab into a new file format.
+### Zapisz pierwszą kartę do nowego pliku
+**Omówienie:** Wyeksportuj edytowaną pierwszą kartę do nowego formatu pliku.
 
-#### Step 1: Define Save Options
-Choose the desired output format, such as XLSM:
+#### Krok 1: Zdefiniuj opcje zapisu
+Wybierz żądany format wyjściowy, taki jak XLSM:
 
 ```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
 ```
 
-#### Step 2: Save the First Tab
-Persist your changes to a file:
+#### Krok 2: Zapisz pierwszą kartę
+Zapisz zmiany w pliku:
 
 ```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 ```
-*Explanation:* This step saves the edited tab as a separate file in your specified directory.
+*Wyjaśnienie:* Ten krok zapisuje edytowaną kartę jako osobny plik w określonym katalogu.
 
-### Save Second Tab to a New File
-**Overview:** Similar to saving the first tab, this feature shows how to save the second tab in another format.
+### Zapisz drugą kartę w nowym pliku
+**Omówienie:** Podobnie jak w przypadku zapisywania pierwszej karty, ta funkcja pokazuje, jak zapisać drugą kartę w innym formacie.
 
-#### Step 1: Define Save Options
-Select XLSB as the output format for variety:
+#### Krok 1: Zdefiniuj opcje zapisu
+Wybierz XLSB jako format wyjściowy dla różnych formatów:
 
 ```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
 ```
 
-#### Step 2: Save the Second Tab
-Export your changes to a file:
-
+#### Krok 2: Zapisz drugą kartę
+Eksportuj zmiany do pliku:
 ```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
 ```
-*Explanation:* This allows you to maintain different versions of your data in various formats.
+*Wyjaśnienie:* Pozwala to na przechowywanie różnych wersji danych w różnych formatach.
 
-## Practical Applications
-The ability to programmatically edit and **save Excel worksheet Java** files has numerous real‑world uses:
+## Praktyczne zastosowania
+Możliwość programowej edycji i **zapisywania plików arkuszy kalkulacyjnych Excel Java** ma wiele praktycznych zastosowań:
 
-1. **Financial Analysis:** Automate extraction and modification of quarterly reports.  
-2. **Inventory Management:** Update stock levels on‑the‑fly without manual spreadsheet edits.  
-3. **Data Reporting:** Generate customized reports by editing only the relevant sections before distribution.
+1. **Analiza finansowa:** Automatyzacja wyodrębniania i modyfikowania raportów kwartalnych.
 
-## Performance Considerations
-When using GroupDocs.Editor for Java, keep these tips in mind:
+2. **Zarządzanie zapasami:** Aktualizowanie stanów magazynowych na bieżąco bez ręcznej edycji arkuszy kalkulacyjnych.
 
-- **Manage Resources Efficiently:** Close streams after operations to prevent memory leaks.  
-- **Batch Processing:** For large datasets, process data in batches rather than loading the entire workbook into memory.  
-- **Optimize Load Options:** Use specific load options to reduce overhead when only certain features are needed.
+3. **Raportowanie danych:** Generowanie niestandardowych raportów poprzez edycję tylko odpowiednich sekcji przed dystrybucją.
 
-## Common Issues & Troubleshooting
-| Symptom | Likely Cause | Fix |
+## Zagadnienia dotyczące wydajności
+Korzystając z GroupDocs.Editor dla Javy, należy pamiętać o następujących wskazówkach:
+
+- **Efektywne zarządzanie zasobami:** Zamykanie strumieni po operacjach w celu zapobiegania wyciekom pamięci.
+- **Przetwarzanie wsadowe:** W przypadku dużych zestawów danych należy przetwarzać dane w partiach, zamiast ładować cały skoroszyt do pamięci.
+- **Optymalizacja opcji ładowania:** Użyj określonych opcji ładowania, aby zmniejszyć obciążenie, gdy potrzebne są tylko określone funkcje.
+
+## Typowe problemy i rozwiązywanie problemów
+| Objaw | Prawdopodobna przyczyna | Rozwiązanie |
 |---------|--------------|-----|
-| `NullPointerException` on `editor.edit()` | InputStream not reset after previous operation | Re‑open the stream or use `inputStream.reset()` if supported. |
-| Saved file is corrupted | Mismatched `SpreadsheetFormats` with actual content | Ensure the chosen format matches the content (e.g., use XLSM only if macros exist). |
-| License error | Using trial key in production | Replace with a valid production license file or string. |
+| Wyjątek `NullPointerException` w `editor.edit()` | Strumień wejściowy nie został zresetowany po poprzedniej operacji | Otwórz ponownie strumień lub użyj `inputStream.reset()`, jeśli jest obsługiwany. |
+| Zapisany plik jest uszkodzony | Niezgodność formatów `SpreadsheetFormats` z rzeczywistą zawartością | Upewnij się, że wybrany format jest zgodny z zawartością (np. używaj XLSM tylko wtedy, gdy istnieją makra). |
+| Błąd licencji | Używanie klucza próbnego w środowisku produkcyjnym | Zastąp go prawidłowym plikiem lub ciągiem licencji produkcyjnej. |
 
-## Frequently Asked Questions
+## Często zadawane pytania
 
-**Q: Can I edit more than two tabs in the same workbook?**  
-A: Absolutely. Create additional `SpreadsheetEditOptions` instances with the appropriate `setWorksheetIndex` value for each tab you want to edit.
+**P: Czy mogę edytować więcej niż dwie karty w tym samym skoroszycie?**
+O: Oczywiście. Utwórz dodatkowe instancje `SpreadsheetEditOptions` z odpowiednią wartością `setWorksheetIndex` dla każdej karty, którą chcesz edytować.
 
-**Q: Is it possible to edit a protected worksheet?**  
-A: Yes, provide the password via `SpreadsheetLoadOptions.setPassword("yourPassword")` before initializing the `Editor`.
+**P: Czy można edytować chroniony arkusz kalkulacyjny?**
+O: Tak, podaj hasło za pomocą `SpreadsheetLoadOptions.setPassword("yourPassword")` przed zainicjowaniem `Editor`.
 
-**Q: Does GroupDocs.Editor support formula recalculation after edits?**  
-A: The library preserves existing formulas; however, automatic recalculation is not performed. You can trigger recalculation using Excel after loading the saved file.
+**P: Czy GroupDocs.Editor obsługuje ponowne obliczanie formuł po edycjach?**
+O: Biblioteka zachowuje istniejące formuły, jednak automatyczne ponowne obliczanie nie jest wykonywane. Możesz uruchomić ponowne obliczanie za pomocą programu Excel po załadowaniu zapisanego pliku.
 
-**Q: What if I need to edit a very large workbook (hundreds of MBs)?**  
-A: Consider processing one worksheet at a time and disposing of the `EditableDocument` objects after saving to keep memory usage low.
+**P: Co zrobić, jeśli muszę edytować bardzo duży skoroszyt (setki MB)?**
+O: Rozważ przetwarzanie jednego arkusza kalkulacyjnego na raz i usuwanie obiektów `EditableDocument` po zapisaniu, aby zminimalizować zużycie pamięci.
 
-**Q: Are there any limitations on the number of rows/columns I can edit?**  
-A: The limits are the same as native Excel (1,048,576 rows × 16,384 columns). Performance may degrade with extremely large sheets, so batch processing is recommended.
+**P: Czy istnieją jakieś ograniczenia liczby wierszy/kolumn, które mogę edytować?**
+O: Limity są takie same jak w natywnym programie Excel (1 048 576 wierszy × 16 384 kolumny). Wydajność może spaść w przypadku bardzo dużych arkuszy, dlatego zalecane jest przetwarzanie wsadowe.
 
-## Conclusion
-You’ve now learned how to **create editable worksheet** objects for individual Excel tabs, make changes programmatically, and **save Excel worksheet Java** files in the format you need. By integrating these steps into your Java applications, you can automate repetitive spreadsheet tasks, improve data accuracy, and accelerate business workflows.
+## Podsumowanie
+Nauczyłeś się już, jak **tworzyć edytowalne obiekty arkusza** dla poszczególnych kart programu Excel, wprowadzać zmiany programowo i **zapisywać pliki arkusza kalkulacyjnego Excel w formacie Java** w wymaganym formacie. Integrując te kroki z aplikacjami Java, możesz zautomatyzować powtarzające się zadania związane z arkuszami kalkulacyjnymi, poprawić dokładność danych i przyspieszyć przepływy pracy w firmie.
 
-**Next steps:** Explore advanced features such as handling charts, macros, or converting worksheets to PDF/HTML for web display. The GroupDocs.Editor API offers extensive capabilities to streamline your document processing pipeline.
+**Kolejne kroki:** Poznaj zaawansowane funkcje, takie jak obsługa wykresów, makr czy konwersja arkuszy kalkulacyjnych do formatu PDF/HTML w celu wyświetlania w Internecie. Interfejs API GroupDocs.Editor oferuje rozbudowane możliwości usprawniające proces przetwarzania dokumentów.
 
 ---
 
-**Last Updated:** 2026-01-13  
-**Tested With:** GroupDocs.Editor 25.3 for Java  
-**Author:** GroupDocs  
+**Ostatnia aktualizacja:** 2026-01-13
+**Testowano z:** GroupDocs.Editor 25.3 dla Javy
+**Autor:** GroupDocs 
 
 ---

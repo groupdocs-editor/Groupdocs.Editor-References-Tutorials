@@ -7,7 +7,7 @@ keywords:
 - GroupDocs.Editor for Java
 - SVG slide previews
 - Java presentations
-title: 'PPTX konvertálása SVG-re: Diakép előnézetek létrehozása a GroupDocs.Editor
+title: 'PPTX konvertálása SVG-re - Diakép előnézetek létrehozása a GroupDocs.Editor
   for Java segítségével'
 type: docs
 url: /hu/java/presentation-documents/generate-svg-slide-previews-groupdocs-editor-java/

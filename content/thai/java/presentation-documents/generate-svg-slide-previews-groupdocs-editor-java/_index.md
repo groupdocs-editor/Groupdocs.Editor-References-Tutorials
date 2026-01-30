@@ -6,7 +6,7 @@ keywords:
 - GroupDocs.Editor for Java
 - SVG slide previews
 - Java presentations
-title: 'แปลง PPTX เป็น SVG: สร้างภาพตัวอย่างสไลด์โดยใช้ GroupDocs.Editor สำหรับ Java'
+title: 'แปลง PPTX เป็น SVG - สร้างภาพตัวอย่างสไลด์โดยใช้ GroupDocs.Editor สำหรับ Java'
 type: docs
 url: /th/java/presentation-documents/generate-svg-slide-previews-groupdocs-editor-java/
 weight: 1
@@ -32,15 +32,15 @@ weight: 1
 - **เน้นประสิทธิภาพ** — คุณสามารถสร้างภาพตัวอย่างแบบเรียลไทม์โดยไม่ต้องเปิดการนำเสนอเต็มรูปแบบ.  
 - **ข้ามแพลตฟอร์ม** — ทำงานได้บน Windows, Linux, และ macOS อย่างเท่าเทียม
 
-## Prerequisites
-ก่อนเริ่มทำงาน ให้ตรวจสอบว่าคุณมี:
-- **GroupDocs.Editor** เวอร์ชัน 25.3 หรือใหม่กว่า.  
-- Java Development Kit (JDK) ติดตั้งแล้ว (เวอร์ชัน 8 หรือใหม่กว่า).  
-- IDE เช่น IntelliJ IDEA หรือ Eclipse และ Maven สำหรับการจัดการ dependencies (ไม่บังคับแต่แนะนำ).
+## ข้อกำหนดเบื้องต้น
+เรามีให้คุณฟัง:
+- **GroupDocs.Editor** ปฏิทิน25.3หรือใหม่กว่า.
+- Java Development Kit (JDK) เบาะแล้ว ( 8 หรือใหม่กว่า).
+- IDE = IntelliJ IDEA หรือ Eclipse และ Maven สำหรับการจัดการการพึ่งพา (ไม่บังคับแต่แนะนำ)
 
-## Setting Up GroupDocs.Editor for Java
+## การตั้งค่า GroupDocs.Editor สำหรับ Java
 
-### Using Maven
+### การใช้ Maven
 เพิ่ม repository และ dependency ลงในไฟล์ `pom.xml` ของคุณ:
 
 ```xml
@@ -61,15 +61,15 @@ weight: 1
 </dependencies>
 ```
 
-### Direct Download
-หากคุณต้องการตั้งค่าด้วยตนเอง ให้ดาวน์โหลด JAR ล่าสุดจากหน้าดาวน์โหลดอย่างเป็นทางการ: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+### ดาวน์โหลดโดยตรง
+ดาวน์โหลดไดร์เวอร์ดาวน์โหลดดาวน์โหลด JAR ล่าสุดจากหน้าดาวน์โหลดอย่างเป็นทางการ: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/)
 
-#### License Acquisition
-- **Free Trial:** ทดสอบคุณสมบัติทั้งหมดโดยไม่มีค่าใช้จ่าย.  
-- **Temporary License:** ทดลองใช้ฟังก์ชันทั้งหมดในช่วงเวลาจำกัด.  
-- **Full Purchase:** เปิดใช้งานการใช้ในผลิตภัณฑ์ได้ไม่จำกัด.
+#### การได้มาซึ่งใบอนุญาต
+- **ทดลองใช้ฟรี:** ทดสอบคุณสมบัติทั้งหมดโดยไม่มีค่าใช้จ่าย
+- **ใบอนุญาตชั่วคราว:** ฟังก์ชั่นทั้งหมดที่มีจำกัด
+- **การซื้อเต็มจำนวน:** สามารถใช้ในผลิตภัณฑ์ได้ไม่จำกัด
 
-### Basic Initialization and Setup
+### การเริ่มต้นและการตั้งค่าพื้นฐาน
 ด้านล่างเป็นตัวอย่างขั้นต่ำที่แสดงวิธีสร้างอ็อบเจ็กต์ `Editor` ด้วยไฟล์การนำเสนอ โค้ดส่วนนี้จะใช้ต่อไปเมื่อเราสร้างภาพตัวอย่าง SVG.
 
 ```java
@@ -86,19 +86,19 @@ public class InitGroupDocs {
 }
 ```
 
-## Implementation Guide
-เราจะอธิบายขั้นตอนทั้งหมดที่จำเป็นสำหรับการ **convert PPTX to SVG** และ **java generate SVG images** สำหรับทุกสไลด์.
+## คู่มือการใช้งาน
+คำอธิบายขั้นตอนทั้งหมดของการรับชม **แปลง PPTX เป็น SVG** และ **java สร้างภาพ SVG** ของวิดีโอ
 
-### Load Presentation File
-**ภาพรวม:** โหลดไฟล์ PowerPoint เพื่อให้เราสามารถเข้าถึงหน้าต่าง ๆ และเมตาเดต้าได้.
+### โหลดไฟล์นำเสนอ
+**ได้:** ดาวน์โหลดไฟล์ PowerPoint เพื่อให้เราสามารถอ่านหน้าต่างและเมตาเดต้าได้
 
-#### Step 1: Import Required Classes
+#### ขั้นตอนที่ 1: นำเข้าคลาสที่จำเป็น
 ```java
 import com.groupdocs.editor.Editor;
 ```
 
-#### Step 2: Initialize Editor with File Path
-สร้างอินสแตนซ์ `Editor` โดยส่งพาธของไฟล์การนำเสนอของคุณ:
+#### ขั้นตอนที่ 2: เริ่มต้นโปรแกรมแก้ไขด้วยเส้นทางไฟล์
+สำหรับ Create `Editor` โดยส่งพาธของไฟล์ของคุณ:
 
 ```java
 String inputPath = "YOUR_DOCUMENT_DIRECTORY/FormatingExample.pptx";
@@ -106,16 +106,16 @@ Editor editor = new Editor(inputPath);
 editor.dispose();
 ```
 
-### Retrieve Document Information
-**ภาพรวม:** ดึงเมตาเดต้า (เช่น จำนวนสไลด์) เพื่อทราบว่าต้องสร้างไฟล์ SVG จำนวนเท่าใด.
+### ดึงข้อมูลเอกสาร
+**กิน:** ดึงเมตาเดต้า (เช่นจำนวนของสไลด์) ที่ต้องสร้างไฟล์ SVG เรื่องของเครื่องเล่น.
 
-#### Step 1: Import Metadata Classes
+#### ขั้นตอนที่ 1: นำเข้าคลาสข้อมูลเมตา
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.metadata.IDocumentInfo;
 ```
 
-#### Step 2: Obtain Document Info
+#### ขั้นตอนที่ 2: รวบรวมข้อมูลเอกสาร
 โหลดเอกสารเข้าสู่ `Editor` และดึงข้อมูล:
 
 ```java
@@ -125,33 +125,33 @@ IDocumentInfo infoUncasted = editor.getDocumentInfo(null);
 editor.dispose();
 ```
 
-### Cast Document Information to Presentation Type
+### ป้อนข้อมูลเอกสารการคัดเลือกนักแสดงสำหรับรูปแบบการนำเสนอ
 **ภาพรวม:** แปลง `IDocumentInfo` ทั่วไปเป็น `PresentationDocumentInfo` เพื่อให้เราสามารถใช้เมธอดที่เฉพาะเจาะจงกับสไลด์ได้.
 
-#### Step 1: Import Casting Classes
+#### ขั้นตอนที่ 1: นำเข้าคลาสการคัดเลือกนักแสดง
 ```java
 import com.groupdocs.editor.metadata.IDocumentInfo;
 import com.groupdocs.editor.metadata.PresentationDocumentInfo;
 ```
 
-#### Step 2: Perform the Cast
+#### ขั้นตอนที่ 2: ดำเนินการคัดเลือกนักแสดง
 ```java
 // Assume infoUncasted is obtained as shown previously
 IDocumentInfo infoUncasted = null; // Placeholder
 PresentationDocumentInfo infoSlides = (PresentationDocumentInfo) infoUncasted;
 ```
 
-### Generate Slide Previews as SVG Images
+### สร้างภาพตัวอย่างสไลด์เป็นไฟล์ SVG
 **ภาพรวม:** นี่คือหัวใจของกระบวนการ **convert PPTX to SVG** เราจะวนลูปแต่ละสไลด์ สร้างภาพตัวอย่าง SVG และบันทึกลงดิสก์.
 
-#### Step 1: Import Necessary Classes
+#### ขั้นตอนที่ 1: นำเข้าคลาสที่จำเป็น
 ```java
 import com.groupdocs.editor.metadata.PresentationDocumentInfo;
 import com.groupdocs.editor.htmlcss.resources.images.vector.SvgImage;
 import java.io.File;
 ```
 
-#### Step 2: Generate and Save SVG Previews
+#### ขั้นตอนที่ 2: สร้างและบันทึกภาพตัวอย่าง SVG
 ```java
 // Assume infoSlides is obtained as shown previously
 PresentationDocumentInfo infoSlides = null; // Placeholder for actual retrieval logic
@@ -165,41 +165,41 @@ for (int i = 0; i < slidesCount; i++) {
 }
 ```
 
-## Practical Applications
-1. **Document Management Systems:** แสดงภาพย่อ SVG เพื่อการนำทางอย่างรวดเร็วในคลังสไลด์ขนาดใหญ่.  
-2. **Collaboration Tools:** ให้ผู้ตรวจสอบดูเนื้อหาสไลด์โดยไม่ต้องดาวน์โหลด PPTX เต็มรูปแบบ.  
-3. **Educational Platforms:** แสดงภาพรวมของสไลด์บนหน้าหลักสูตรโดยใช้แบนด์วิธต่ำ.
+## การใช้งานจริง
+1. **ระบบการจัดการเอกสาร:** แสดงภาพขนาดย่อ SVG อย่างรวดเร็วในคลังวิดีโอขนาดใหญ่
+2. **เครื่องมือการทำงานร่วมกัน:** อนุญาตให้ผู้ตรวจสอบดูเนื้อหาสไลด์ดาวน์โหลดดาวน์โหลด PPTX และอีกมากมาย
+3. **แพลตฟอร์มการศึกษา:** แสดงสไลด์บนหน้าหลักสูตรแบนด์วิธต่ำ.
 
-## Performance Considerations
-- **Dispose early:** เรียก `editor.dispose()` ทันทีที่เสร็จสิ้นการประมวลผลเพื่อปล่อยทรัพยากรเนทีฟ.  
-- **Batch processing:** สำหรับการนำเสนอที่มีหลายร้อยสไลด์ ให้สร้าง SVG เป็นกลุ่มเล็ก ๆ เพื่อควบคุมการใช้หน่วยความจำให้คาดเดาได้.  
-- **Stay updated:** อัปเกรดเป็นเวอร์ชันล่าสุดของ GroupDocs.Editor อย่างสม่ำเสมอเพื่อปรับปรุงประสิทธิภาพและแก้ไขบั๊ก.
+## ข้อควรพิจารณาด้านประสิทธิภาพ
+- **ทิ้งตั้งแต่เนิ่นๆ:** เรียก `editor.dispose()` ทันทีที่ทำตามคำแนะนำเพื่อให้ปล่อยทรัพยากรเนทีฟ
+- **การประมวลผลเป็นชุด:** สำหรับพื้นที่ที่มีสไลด์สามารถสร้าง SVG ในส่วนเล็กๆ เพื่อควบคุมการใช้งานต่างๆ ให้กับพื้นที่ได้
+- **อัปเดตอยู่เสมอ:** อัปเกรดเป็นอย่างต่อเนื่อง GroupDocs.Editor ปรับปรุงประสิทธิภาพและแก้ไขบั๊ก.
 
-## Common Issues & Solutions
-| Issue | Cause | Fix |
+## ปัญหาและแนวทางแก้ไขทั่วไป
+| ปัญหา | สาเหตุ | แก้ไข |
 |-------|-------|-----|
-| **OutOfMemoryError** | การประมวลผลการนำเสนอขนาดใหญ่ทั้งหมดในครั้งเดียว | ประมวลผลสไลด์เป็นชุด; เรียก `System.gc()` หลังจากแต่ละชุดหากจำเป็น. |
-| **Missing fonts in SVG** | แบบอักษรไม่ได้ฝังใน PPTX หรือไม่ได้ติดตั้งบนเซิร์ฟเวอร์ | ติดตั้งแบบอักษรที่จำเป็นบนเซิร์ฟเวอร์หรือฝังลงใน PPTX ต้นฉบับ. |
-| **Incorrect file path** | ใช้เส้นทางสัมพัทธ์อย่างไม่ถูกต้อง | ใช้เส้นทางแบบเต็มหรือกำหนดค่าไดเรกทอรีทำงานของ IDE ของคุณ. |
+| **ข้อผิดพลาด OutOfMemory** | ข้อสังเกตที่ยิ่งใหญ่ในครั้งเดียว | เพิ่มเติมสไลด์เป็นชุด; เรียก `System.gc()` หลังจากนั้นแต่ละชุดหากจำเป็น |
+| **ไม่มีแบบอักษรใน SVG** | ไม่ได้ฝังใน PPTX หรือไม่ได้ติดตั้งบนเซิร์ฟเวอร์ | บันทึกความทรงจำบนเซิร์ฟเวอร์หรือฝังลงใน PPTX ต้นฉบับ |
+| **เส้นทางไฟล์ไม่ถูกต้อง** | ใช้เส้นทางสัมพัทธ์อย่างเป็นธรรมชาติ | ใช้เส้นทางแบบเต็มหรือแบบเรียลไทม์ทำงานใน IDE ของคุณ |
 
-## Frequently Asked Questions
+## คำถามที่พบบ่อย
 
-**Q: วิธีที่ดีที่สุดในการจัดการไฟล์ PPTX ที่มีการป้องกันด้วยรหัสผ่านคืออะไร?**  
+**ถาม: สำหรับไฟล์ PPTX นั้นคือการป้องกันด้วยรหัสผ่านคืออะไร?**
 A: ส่งรหัสผ่านไปยังคอนสตรัคเตอร์ `Editor` ที่รับอ็อบเจ็กต์ `LoadOptions`.
 
-**Q: ฉันสามารถแปลงเฉพาะส่วนของสไลด์ได้หรือไม่?**  
-A: ได้ — ปรับช่วงของลูป (`for (int i = start; i < end; i++)`) เพื่อกำหนดสไลด์ที่ต้องการ.
+**คำถาม: แปลงเฉพาะไฟล์วีดีโอได้หรือไม่?**
+ตอบ: ได้ — ทัวร์ช่วงของเทือกเขาแห่งนี้ (`สำหรับ (int i = start; i < end; i++)`) เพื่อกำหนดสไลด์ที่ต้องการ
 
-**Q: GroupDocs.Editor รองรับรูปแบบผลลัพธ์อื่นนอกจาก SVG หรือไม่?**  
-A: แน่นอน; คุณสามารถสร้างภาพตัวอย่าง PNG, JPEG หรือ PDF โดยใช้การเรียก API ที่คล้ายกัน.
+**ถาม: GroupDocs.Editor ขึ้นอยู่กับรูปแบบผลลัพธ์อื่นๆ นอกเหนือจาก SVG ใช่ไหม**
+ตอบ: แน่นอน; รวบรวมภาพตัวอย่าง PNG, JPEG หรือ PDF เพื่อการเรียก API แต่อย่างใด
 
-**Q: มีขีดจำกัดจำนวนสไลด์ที่ฉันสามารถแปลงได้หรือไม่?**  
-A: ไม่มีขีดจำกัดแน่นอน แต่เด็คที่ใหญ่มากอาจต้องการหน่วยความจำเพิ่ม; ควรพิจารณาการประมวลผลเป็นชุด.
+**คำถาม: มีผู้ชมจำนวนคลิปที่พบกับการแปลงอย่างไร?**
+ตอบ: ไม่จำเป็นต้องแน่นอนแต่เด็คที่ใหญ่มากอาจต้องการเพิ่ม; การพิจารณาพิพากษาเป็นชุด.
 
-**Q: ฉันจะทำให้แน่ใจว่า SVG ที่สร้างขึ้นเป็นเว็บ‑เซฟได้อย่างไร?**  
-A: ไลบรารีทำการทำความสะอาดเนื้อหา SVG โดยอัตโนมัติ แต่คุณสามารถตรวจสอบเพิ่มเติมโดยใช้ SVG linter หากจำเป็น.
+**ถาม: ฉันทำหน้าที่ดูแล SVG เพื่อเป็นเว็บ‑เซฟอาหารที่ได้มา?**
+ตอบ: ไลบรารีทำเนื้อหา SVG ส่วนใหญ่แต่เพียงอย่างเดียว SVG linter หากต้องการความจำเป็น
 
-## Resources
+## ทรัพยากร
 - [เอกสาร](https://docs.groupdocs.com/editor/java/)
 - [อ้างอิง API](https://reference.groupdocs.com/editor/java/)
 - [ดาวน์โหลด GroupDocs.Editor สำหรับ Java](https://releases.groupdocs.com/editor/java/)

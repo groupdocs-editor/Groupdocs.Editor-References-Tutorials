@@ -1,5 +1,5 @@
 ---
-title: "Convert PPTX to SVG: Create Slide Previews Using GroupDocs.Editor for Java"
+title: "Convert PPTX to SVG - Create Slide Previews Using GroupDocs.Editor for Java"
 description: "Learn how to convert PPTX to SVG and java generate SVG images with GroupDocs.Editor, boosting document management and collaboration."
 date: "2026-01-13"
 weight: 1

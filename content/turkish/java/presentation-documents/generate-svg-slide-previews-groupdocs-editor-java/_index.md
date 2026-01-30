@@ -6,7 +6,7 @@ keywords:
 - GroupDocs.Editor for Java
 - SVG slide previews
 - Java presentations
-title: 'PPTX''i SVG''ye Dönüştür: Java için GroupDocs.Editor ile Slayt Önizlemeleri
+title: 'PPTX''i SVG''ye Dönüştür - Java için GroupDocs.Editor ile Slayt Önizlemeleri
   Oluştur'
 type: docs
 url: /tr/java/presentation-documents/generate-svg-slide-previews-groupdocs-editor-java/

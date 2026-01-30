@@ -6,7 +6,7 @@ keywords:
 - GroupDocs.Editor for Java
 - SVG slide previews
 - Java presentations
-title: 'Convertir PPTX a SVG: Crear vistas previas de diapositivas usando GroupDocs.Editor
+title: 'Convertir PPTX a SVG - Crear vistas previas de diapositivas usando GroupDocs.Editor
   para Java'
 type: docs
 url: /es/java/presentation-documents/generate-svg-slide-previews-groupdocs-editor-java/
