@@ -162,13 +162,13 @@ editor.save(editedDoc, "outputFilePath.docx", saveOptions);
 ## Conclusie
 Je hebt nu een solide, end‑to‑end voorbeeld van hoe je **Word‑documenten** in Java kunt **automatiseren** met GroupDocs.Editor. Door een DOCX te laden, om te zetten naar bewerkbare HTML, programmatische wijzigingen aan te brengen en het weer op te slaan, kun je krachtige document‑automatiserings‑pijplijnen bouwen die de opmaak behouden en opschalen naarimenteer met extra bewerkingsopties, en integreer de workflow in je bestaande Java‑services voor naadloos documentbeheer.
 
+**Bronnen**  
+- **Documentatie:** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
+- **API‑referentie:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
+- **Download:** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)
+
 ---
 
 **Laatst bijgewerkt:** 2026-01-19  
 **Getest met:** GroupDocs.Editor 25.3  
 **Auteur:** GroupDocs  
-
-**Bronnen**  
-- **Documentatie:** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
-- **API‑referentie:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
-- **Download:** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)

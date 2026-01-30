@@ -141,13 +141,13 @@ A: Да — используйте `WordProcessingLoadOptions` с парамет
 
 Изучайте полный API, экспериментируйте с дополнительными параметрами редактирования и интегрируйте рабочий процесс в ваши существующие Java‑сервисы для бесшовного управления документами.
 
+**Ресурсы**  
+- **Документация:** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
+- **Справочник API:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
+- **Скачать:** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)
+
 ---
 
 **Последнее обновление:** 2026-01-19  
 **Тестировано с:** GroupDocs.Editor 25.3  
 **Автор:** GroupDocs  
-
-**Ресурсы**  
-- **Документация:** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
-- **Справочник API:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
-- **Скачать:** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)

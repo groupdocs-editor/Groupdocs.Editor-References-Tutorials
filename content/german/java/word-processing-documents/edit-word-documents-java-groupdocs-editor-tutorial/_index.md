@@ -163,11 +163,11 @@ Sie haben nun ein solides, durchgängiges Beispiel, wie Sie **Word‑Dokumente**
 
 Entdecken Sie die vollständige API, experimentieren Sie mit---
 
-**Zuletzt aktualisiert:** 2026-01-19  
-**Getestet mit:** GroupDocs.Editor 25.3  
-**Autor:** GroupDocs  
-
 **Ressourcen**  
 - **Dokumentation:** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
 - **API‑Referenz:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
 - **Download:** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)
+
+**Zuletzt aktualisiert:** 2026-01-19  
+**Getestet mit:** GroupDocs.Editor 25.3  
+**Autor:** GroupDocs  

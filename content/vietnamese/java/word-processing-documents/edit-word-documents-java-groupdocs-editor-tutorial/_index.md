@@ -18,7 +18,7 @@ weight: 1
 
 Việc **tự động hóa tài liệu word** bằng lập trình có thể tiết kiệm hàng giờ chỉnh sửa thủ công, đặc biệt khi bạn cần giữ nguyên bố cục gốc. Trong hướng dẫn này, bạn sẽ học cách **tải, chỉnh sửa và lưu các tệp Word** bằng **GroupDocs.Editor for Java**, chuyển đổi DOCX sang HTML có thể chỉnh sửa và ngược lại mà không mất định dạng. Dù bạn đang xây dựng hệ thống quản lý nội dung hay một công cụ báo cáo, các bước dưới đây sẽ chỉ cho bạn **cách chỉnh sửa word** từ mã Java.
 
-## Quick Answers
+## Câu trả lời nhanh
 - **Thư viện nào cho phép tôi tự động hóa tài liệu word trong Java?** GroupDocs.Editor for Java.  
 - **Tôi có thể chỉnh sửa DOCX dưới dạng HTML không?** Có – trình chỉnh sửa chuyển đổi tài liệu sang markup HTML để dễ thao tác.  
 - **Tôi có cần giấy phép cho việc sử dụng trong môi trường sản xuất không?** Cần có giấy phép GroupDocs.Editor hợp lệ cho các triển khai không dùng bản thử nghiệm.  
@@ -34,7 +34,7 @@ GroupDocs.Editor chuyển đổi các tệp Word sang định dạng thân thi�
 - **Khả năng mở rộng** – tích hợp vào dịch vụ web, công việc batch, hoặc micro‑services.  
 - **Đa nền tảng** – chạy trên bất kỳ hệ điều hành nào hỗ trợ JDK.
 
-## Prerequisites
+## Điều kiện tiên quyết
 -)** 8+  
 - **IDE phụ thuộc vào file `pom.xml` của bạn:
 
@@ -56,19 +56,19 @@ GroupDocs.Editor chuyển đổi các tệp Word sang định dạng thân thi�
 </dependencies>
 ```
 
-### Direct Download
-Nếu bạn muốn xử lý thủ công, tải JAR mới nhất từ **[GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/)**.
+### Tải xuống trực tiếp
+Nếu bạn muốn xử lý thủ công, hãy tải xuống JAR mới nhất từ ​​**[GroupDocs.Editor for Java Releases](https://releases.groupdocs.com/editor/java/)**.
 
-### License Acquisition
-- **Free Trial** – khám phá tất cả tính năng mà không cần cam kết.  
-- **Temporary License** – kéo dài thời gian đánh giá.  
-- **Full License** – mở khóa các khả năng sẵn sàng cho môi trường sản xuất.
+### Mua lại giấy phép
+- **Dùng thử miễn phí** – khám phá tất cả các tính năng không cần cam kết.
+- **Giấy phép tạm thời** – kéo dài thời gian đánh giá.
+- **Giấy phép đầy đủ** – mở khóa các khả năng có sẵn cho môi trường sản xuất.
 
-## Cách chỉnh sửa tài liệu word bằng GroupDocs.Editor
+## Cách chỉnh sửa từ tài liệu bằng GroupDocs.Editor
 
-### Load and edit a DOCX file
+### Tải và chỉnh sửa tệp DOCX
 
-#### 1. Initialize the editor (load docx java)
+#### 1. Khởi tạo trình soạn thảo (tải docx java)
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -80,7 +80,7 @@ WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-#### 2. Create editing options (edit word document java)
+#### 2. Tạo tùy chọn chỉnh sửa (chỉnh sửa tài liệu Word bằng Java)
 
 ```java
 import com.groupdocs.editor.options.WordProcessingEditOptions;
@@ -89,7 +89,7 @@ WordProcessingEditOptions editOptions = new WordProcessingEditOptions();
 EditableDocument beforeEdit = editor.edit(editOptions);
 ```
 
-#### 3. Extract HTML, modify it, and **convert word html java** style
+#### 3. Trích xuất HTML, chỉnh sửa và **chuyển đổi HTML của Word sang Java**
 
 ```java
 String allEmbeddedInsideString = beforeEdit.getEmbeddedHtml();
@@ -98,7 +98,7 @@ String allEmbeddedInsideString = beforeEdit.getEmbeddedHtml();
 String allEmbeddedInsideStringEdited = allEmbeddedInsideString.replace("Subtitle", "New Subtitle");
 ```
 
-#### 4. Save the edited document back to DOCX
+#### 4. Lưu tài liệu đã chỉnh sửa trở lại định dạng DOCX
 
 ```java
 import com.groupdocs.editor.EditableDocument;
@@ -110,30 +110,30 @@ WordProcessingSaveOptions saveOptions = new WordProcessingSaveOptions();
 editor.save(editedDoc, "outputFilePath.docx", saveOptions);
 ```
 
-### Tips for successful automation
-- **Xác thực đường dẫn tệp** – đường dẫn tuyệt đối hoặc tương đối được giải quyết đúng sẽ tránh `FileNotFoundException`.  
-- **Khớp phiên bản thư viện** – phiên bản editor trong `pom.xml` phải phù hợp với JAR runtime của bạn.  
+### Mẹo để tự động hóa thành công
+- **Xác thực đường dẫn tệp** – đường dẫn tuyệt đối hoặc đối số được giải quyết đúng sẽ tránh `FileNotFoundException`.
+- **Khớp phiên bản thư viện** – phiên bản editor trong `pom.xml` phải phù hợp với thời gian chạy JAR của bạn.
 - **Xử lý ngoại lệ** – bao bọc các lời gọi trong khối try‑catch để bắt chi tiết `EditorException`.
 
-## Practical Applications
-- **Tự động tạo báo cáo** – lấy dữ liệu từ cơ sở dữ liệu, chèn vào mẫu Word và cung cấp DOCX hoàn thiện.  
-- **Tích hợp CMS** – cho phép người dùng chỉnh sửa tệp Word qua giao diện web chạy phía server với GroupDocs.Editor.  
-- **Cập nhật tài liệu hàng loạt** – áp dụng thay đổi thương hiệu cho hàng trăm hợp đồng bằng một script duy nhất.
+## Ứng dụng thực tế
+- **Tự động tạo báo cáo** – lấy dữ liệu từ cơ sở dữ liệu, chèn vào mẫu Word và cung cấp DOCX hoàn thiện.
+- **CMS hợp nhất** – cho phép người dùng chỉnh sửa tệp Word thông qua máy chủ giao diện web với GroupDocs.Editor.
+- **Cập nhật hàng loạt tài liệu** – áp dụng thay đổi hiệu quả cho hàng trăm hợp lý bằng một tập lệnh duy nhất.
 
-## Performance Considerations
-- **Quản lý bộ nhớ** – đóng instance `Editor` sau khi xử lý để giải phóng tài nguyên.  
-- **Xử lý bất đồng bộ** – đối với các batch lớn, chạy mỗi tệp trong một luồng riêng hoặc sử dụng hàng đợi tác vụ.  
-- **Profiling** – giám sát việc sử dụng heap bằng VisualVM hoặc công cụ tương tự khi xử lý các tệp DOCX rất lớn.
+## Cân nhắc về hiệu suất
+- **Quản lý bộ nhớ** – đóng phiên bản `Editor` sau khi xử lý để giải nén tài nguyên.
+- **Xử lý bất đồng bộ ** – đối với các lô lớn, chạy từng tệp trong một luồng riêng biệt hoặc sử dụng tác vụ hàng đợi.
+- **Profiling** – giám sát công việc sử dụng heap bằng VisualVM hoặc công cụ tương thích khi xử lý các tệp DOCX rất lớn.
 
-## Common Issues & Solutions
+## Các vấn đề thường gặp & Giải pháp
 
 | Vấn đề | Giải pháp |
 |-------|----------|
-| **File not found** | Kiểm tra lại đường dẫn; sử dụng `Paths.get(...).toAbsolutePath()` để rõ ràng. |
-| **Out‑of‑memory errors** | Tăng heap JVM (`-Xmx2g`) hoặc xử lý tệp theo các phần nhỏ hơn. |
-| **Missing styles after save** | Đảm bảo bạn sử dụng `WordProcessingSaveOptions` mà không có các override tùy chỉnh làm mất kiểu dáng. |
+| **Không tìm thấy tệp** | Kiểm tra lại đường dẫn; use `Paths.get(...).toAbsolutePath()` để rõ ràng. |
+| **Lỗi hết bộ nhớ** | Tăng heap JVM (`-Xmx2g`) hoặc xử lý tệp theo các phần nhỏ hơn. |
+| **Thiếu kiểu sau khi lưu** | Đảm bảo bạn sử dụng `WordProcessingSaveOptions` mà không có kiểu tùy chỉnh bị mất nào được ghi đè. |
 
-## Frequently Asked Questions
+## Câu hỏi thường gặp
 
 **Q: GroupDocs.Editor có tương thích với tất cả các định dạng Word không?**  
 A: Có – nó hỗ trợ DOCX, DOCM, DOTX và các định dạng Word hiện đại khác.
@@ -161,13 +161,13 @@ Bây giờ bạn đã có một ví dụ toàn diện, từ đầu đến cuối
 
 Khám phá toàn bộ API, thử nghiệm các tùy chọn chỉnh sửa bổ sung, và tích hợp quy trình làm việc vào các dịch vụ Java hiện có của bạn để quản lý tài liệu một cách liền mạch.
 
+**Resources**  
+- **Tài liệu:** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
+- **Tham khảo API:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
+- **Tải xuống:** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)
+
 ---
 
 **Last Updated:** 2026-01-19  
 **Tested With:** GroupDocs.Editor 25.3  
 **Author:** GroupDocs  
-
-**Resources**  
-- **Tài liệu:** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
-- **Tham khảo API:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
-- **Tải xuống:** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)

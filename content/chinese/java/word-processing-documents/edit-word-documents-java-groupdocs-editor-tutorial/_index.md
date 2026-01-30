@@ -160,13 +160,13 @@ A: 有——使用 `WordProcessingLoadOptions` 并将 `PreserveCustomXml` 设置
 您现在拥有一个完整、端到端的示例，展示如何使用 GroupDocs.Editor 在 Java 中 **自动化 Word 文档**。通过加载 DOCX，将其转换为可编辑的 HTML，进行编程修改，然后再保存回去，您可以构建强大的文档自动化流水线，保持格式完整并可扩展至数千个文件。  
 探索完整的 API，尝试更多编辑选项，并将工作流集成到您现有的 Java 服务中，实现无缝的文档管理。
 
+**资源**  
+- **文档：** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
+- **API 参考：** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
+- **下载：** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)
+
 ---
 
 **最后更新：** 2026-01-19  
 **测试版本：** GroupDocs.Editor 25.3  
 **作者：** GroupDocs  
-
-**资源**  
-- **文档：** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
-- **API 参考：** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
-- **下载：** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)

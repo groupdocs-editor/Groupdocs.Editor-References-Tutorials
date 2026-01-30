@@ -164,13 +164,13 @@ Masz teraz kompletny, od‑a‑do‑końca przykład, jak **automatyzować dokum
 
 Zapoznaj się z pełnym API, wypróbuj dodatkowe opcje edycji i włącz workflow do istniejących usług Java, aby uzyskać płynne zarządzanie dokumentami.
 
+**Resources**  
+- **Documentation:** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
+- **API Reference:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
+- **Download:** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)
+
 ---
 
 **Last Updated:** 2026-01-19  
 **Tested With:** GroupDocs.Editor 25.3  
 **Author:** GroupDocs  
-
-**Resources**  
-- **Documentation:** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
-- **API Reference:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
-- **Download:** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)

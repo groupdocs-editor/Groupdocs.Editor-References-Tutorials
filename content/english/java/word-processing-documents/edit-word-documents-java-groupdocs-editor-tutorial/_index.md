@@ -166,13 +166,13 @@ You now have a solid, end‑to‑end example of how to **automate word documents
 
 Explore the full API, experiment with additional edit options, and integrate the workflow into your existing Java services for seamless document management.
 
+**Resources**  
+- **Documentation:** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
+- **API Reference:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
+- **Download:** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)
+
 ---
 
 **Last Updated:** 2026-01-19  
 **Tested With:** GroupDocs.Editor 25.3  
 **Author:** GroupDocs  
-
-**Resources**  
-- **Documentation:** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
-- **API Reference:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
-- **Download:** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)

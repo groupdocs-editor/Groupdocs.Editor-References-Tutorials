@@ -155,13 +155,13 @@ R: Sí un DOCX, convertir cambios que mantienen el formato intacto y escalan a m
 
 Explora la API completa, experimenta con opciones de edición adicionales e integra el flujo de trabajo en tus servicios Java existentes para una gestión de documentos sin interrupciones.
 
+**Recursos**  
+- **Documentación:** [Documentación de GroupDocs.Editor Java](https://docs.groupdocs.com/editor/java/)  
+- **Referencia API:** [Referencia API de GroupDocs](https://reference.groupdocs.com/editor/java/)  
+- **Descarga:** [Descargas de GroupDocs](https://releases.groupdocs.com/editor/java/)
+
 ---
 
 **Última actualización:** 2026-01-19  
 **Probado con:** GroupDocs.Editor 25.3  
 **Autor:** GroupDocs  
-
-**Recursos**  
-- **Documentación:** [Documentación de GroupDocs.Editor Java](https://docs.groupdocs.com/editor/java/)  
-- **Referencia API:** [Referencia API de GroupDocs](https://reference.groupdocs.com/editor/java/)  
-- **Descarga:** [Descargas de GroupDocs](https://releases.groupdocs.com/editor/java/)

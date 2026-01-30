@@ -150,13 +150,13 @@ editor.save(editedDoc, "outputFilePath.docx", saveOptions);
 ## Συμπέρασμα
 Τώρα έχετε ένα ολοκληρωμένο παράδειγμα για το πώς να **ς αγωγούς αυτοματοποίησης εγγράφ και κειραματιστείτε με πρόσθετες επιλογές επεξεργασίας και ενσωματώστε τη ροή εργασίας στις υπάρχουσες υπηρεσίες Java για απρόσκοπτη διαχείριση εγγράφων.
 
+## Πόροι
+- **Τεκμηρίωση:** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
+- **Αναφορά API:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
+- **Λήψη:** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)
+
 ---
 
 **Last Updated:** 2026-01-19  
 **Tested With:** GroupDocs.Editor 25.3  
 **Author:** GroupDocs  
-
-## Πόροι
-- **Τεκμηρίωση:** [GroupDocs.Editor Java Documentation](https://docs.groupdocs.com/editor/java/)  
-- **Αναφορά API:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
-- **Λήψη:** [GroupDocs Releases](https://releases.groupdocs.com/editor/java/)

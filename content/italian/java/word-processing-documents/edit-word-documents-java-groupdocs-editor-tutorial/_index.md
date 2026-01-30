@@ -151,13 +151,13 @@ Ora disponi di un esempio completo, end‑to‑end, su come **automatizzare i do
 
 Esplora l'API completa, sperimenta con opzioni di modifica aggiuntive e integra il flusso di lavoro nei tuoi servizi Java esistenti per una gestione dei documenti senza interruzioni.
 
+**Risorse**  
+- **Documentazione:** [Documentazione di GroupDocs.Editor Java](https://docs.groupdocs.com/editor/java/)  
+- **Riferimento API:** [Riferimento API di GroupDocs](https://reference.groupdocs.com/editor/java/)  
+- **Download:** [Rilasci di GroupDocs](https://releases.groupdocs.com/editor/java/)
+
 ---
 
 **Ultimo aggiornamento:** 2026-01-19  
 **Testato con:** GroupDocs.Editor 25.3  
 **Autore:** GroupDocs  
-
-**Risorse**  
-- **Documentazione:** [Documentazione di GroupDocs.Editor Java](https://docs.groupdocs.com/editor/java/)  
-- **Riferimento API:** [Riferimento API di GroupDocs](https://reference.groupdocs.com/editor/java/)  
-- **Download:** [Rilasci di GroupDocs](https://releases.groupdocs.com/editor/java/)
