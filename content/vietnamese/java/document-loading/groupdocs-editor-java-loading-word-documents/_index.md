@@ -148,12 +148,6 @@ Bạn đã có một quy trình hoàn chỉnh, sẵn sàng cho production để 
 
 Tiếp theo, khám phá các tính năng nâng cao như **convert word formats java**, tùy chỉnh style, và tích hợp với các dịch vụ lưu trữ đám mây.
 
----
-
-**Last Updated:** 2026-01-01  
-**Tested With:** GroupDocs.Editor 25.3 for Java  
-**Author:** GroupDocs  
-
 **Resources**  
 - **Documentation:** [GroupDocs Editor Documentation](https://docs.groupdocs.com/editor/java/)  
 - **API Reference:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
@@ -161,5 +155,11 @@ Tiếp theo, khám phá các tính năng nâng cao như **convert word formats j
 - **Free Trial:** [Try it free](https://releases.groupdocs.com/editor/java/)  
 - **Temporary License:** [Obtain a temporary license](https://purchase.groupdocs.com/temporary-license)  
 - **Support Forum:** [Join the discussion on GroupDocs forum](https://forum.groupdocs.com/c/editor/)  
+
+---
+
+**Last Updated:** 2026-01-01  
+**Tested With:** GroupDocs.Editor 25.3 for Java  
+**Author:** GroupDocs  
 
 ---

@@ -161,12 +161,6 @@ A: ライブラリは大容量ファイルに対応していますが、JVM ヒ�
 
 次に、**convert word formats java** やカスタムスタイリング、クラウドストレージサービスとの統合といった高度な機能を検討してください。
 
----
-
-**Last Updated:** 2026-01-01  
-**Tested With:** GroupDocs.Editor 25.3 for Java  
-**Author:** GroupDocs  
-
 **Resources**  
 - **Documentation:** [GroupDocs Editor Documentation](https://docs.groupdocs.com/editor/java/)  
 - **API Reference:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
@@ -174,3 +168,9 @@ A: ライブラリは大容量ファイルに対応していますが、JVM ヒ�
 - **Free Trial:** [Try it free](https://releases.groupdocs.com/editor/java/)  
 - **Temporary License:** [Obtain a temporary license](https://purchase.groupdocs.com/temporary-license)  
 - **Support Forum:** [Join the discussion on GroupDocs forum](https://forum.groupdocs.com/c/editor/)
+
+---
+
+**Last Updated:** 2026-01-01  
+**Tested With:** GroupDocs.Editor 25.3 for Java  
+**Author:** GroupDocs  

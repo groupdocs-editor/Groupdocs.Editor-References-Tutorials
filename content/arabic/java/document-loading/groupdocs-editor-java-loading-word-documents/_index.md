@@ -150,12 +150,6 @@ Editor editor = new Editor(inputPath, loadOptions);
 
 بعد ذلك، استكشف الميزات المتقدمة مثل **convert word formats java**، التنسيق المخصص، والتكامل مع خدمات التخزين السحابي.
 
----
-
-**آخر تحديث:** 2026-01-01  
-**تم الاختبار مع:** GroupDocs.Editor 25.3 for Java  
-**المؤلف:** GroupDocs  
-
 ## الموارد
 - **التوثيق:** [GroupDocs Editor Documentation](https://docs.groupdocs.com/editor/java/)  
 - **مرجع API:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
@@ -163,3 +157,9 @@ Editor editor = new Editor(inputPath, loadOptions);
 - **تجربة مجانية:** [Try it free](https://releases.groupdocs.com/editor/java/)  
 - **الحصول على ترخيص مؤقت:** [Obtain a temporary license](https://purchase.groupdocs.com/temporary-license)  
 - **انضم إلى المناقشة في منتدى GroupDocs:** [Join the discussion on GroupDocs forum](https://forum.groupdocs.com/c/editor/)
+
+---
+
+**آخر تحديث:** 2026-01-01  
+**تم الاختبار مع:** GroupDocs.Editor 25.3 for Java  
+**المؤلف:** GroupDocs  

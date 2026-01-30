@@ -151,12 +151,6 @@ Masz teraz kompletny, gotowy do produkcji przepływ pracy dla **masowej edycji p
 
 Następnie odkryj zaawansowane funkcje, takie jak **convert word formats java**, niestandardowe style oraz integrację z usługami przechowywania w chmurze.
 
----
-
-**Ostatnia aktualizacja:** 2026-01-01  
-**Testowane z:** GroupDocs.Editor 25.3 for Java  
-**Autor:** GroupDocs  
-
 **Zasoby**  
 - **Dokumentacja:** [GroupDocs Editor Documentation](https://docs.groupdocs.com/editor/java/)  
 - **Referencja API:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
@@ -164,5 +158,11 @@ Następnie odkryj zaawansowane funkcje, takie jak **convert word formats java**,
 - **Bezpłatna wersja próbna:** [Try it free](https://releases.groupdocs.com/editor/java/)  
 - **Licencja tymczasowa:** [Obtain a temporary license](https://purchase.groupdocs.com/temporary-license)  
 - **Forum wsparcia:** [Join the discussion on GroupDocs forum](https://forum.groupdocs.com/c/editor/)  
+
+---
+
+**Ostatnia aktualizacja:** 2026-01-01  
+**Testowane z:** GroupDocs.Editor 25.3 for Java  
+**Autor:** GroupDocs  
 
 ---

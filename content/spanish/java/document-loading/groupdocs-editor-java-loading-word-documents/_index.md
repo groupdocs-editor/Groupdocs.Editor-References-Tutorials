@@ -152,12 +152,6 @@ Ahora dispones de un flujo de trabajo completo y listo para producción para **e
 
 A continuación, explora funciones avanzadas como **convertir formatos word java**, estilos personalizados e integración con servicios de almacenamiento en la nube.
 
----
-
-**Última actualización:** 2026-01-01  
-**Probado con:** GroupDocs.Editor 25.3 for Java  
-**Autor:** GroupDocs  
-
 **Recursos**  
 - **Documentación:** [GroupDocs Editor Documentation](https://docs.groupdocs.com/editor/java/)  
 - **Referencia API:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
@@ -165,3 +159,9 @@ A continuación, explora funciones avanzadas como **convertir formatos word java
 - **Prueba gratuita:** [Try it free](https://releases.groupdocs.com/editor/java/)  
 - **Licencia temporal:** [Obtain a temporary license](https://purchase.groupdocs.com/temporary-license)  
 - **Foro de soporte:** [Join the discussion on GroupDocs forum](https://forum.groupdocs.com/c/editor/)
+
+---
+
+**Última actualización:** 2026-01-01  
+**Probado con:** GroupDocs.Editor 25.3 for Java  
+**Autor:** GroupDocs  

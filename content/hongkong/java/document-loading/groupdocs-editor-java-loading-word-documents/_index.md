@@ -149,12 +149,6 @@ A: 此函式庫可處理大型檔案，但請留意 JVM 堆積使用情況，對
 
 接下來，您可以探索進階功能，例如 **convert word formats java**、自訂樣式，以及與雲端儲存服務的整合。
 
----
-
-**最後更新：** 2026-01-01  
-**測試版本：** GroupDocs.Editor 25.3 for Java  
-**作者：** GroupDocs  
-
 **資源**  
 - **Documentation:** [GroupDocs Editor Documentation](https://docs.groupdocs.com/editor/java/)  
 - **API Reference:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
@@ -162,3 +156,9 @@ A: 此函式庫可處理大型檔案，但請留意 JVM 堆積使用情況，對
 - **Free Trial:** [Try it free](https://releases.groupdocs.com/editor/java/)  
 - **Temporary License:** [Obtain a temporary license](https://purchase.groupdocs.com/temporary-license)  
 - **Support Forum:** [Join the discussion on GroupDocs forum](https://forum.groupdocs.com/c/editor/)
+
+---
+
+**最後更新：** 2026-01-01  
+**測試版本：** GroupDocs.Editor 25.3 for Java  
+**作者：** GroupDocs  

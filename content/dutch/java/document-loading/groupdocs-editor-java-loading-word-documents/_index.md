@@ -151,12 +151,6 @@ Je hebt nu een volledige, productie‑klare workflow voor **batch edit word file
 
 Vervolgens kun je geavanceerde functies verkennen zoals **convert word formats java**, aangepaste styling, en integratie met cloud‑opslagservices.
 
----
-
-**Last Updated:** 2026-01-01  
-**Tested With:** GroupDocs.Editor 25.3 for Java  
-**Author:** GroupDocs  
-
 **Bronnen**  
 - **Documentatie:** [GroupDocs Editor Documentation](https://docs.groupdocs.com/editor/java/)  
 - **API‑referentie:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
@@ -164,3 +158,9 @@ Vervolgens kun je geavanceerde functies verkennen zoals **convert word formats j
 - **Gratis proefversie:** [Try it free](https://releases.groupdocs.com/editor/java/)  
 - **Tijdelijke licentie:** [Obtain a temporary license](https://purchase.groupdocs.com/temporary-license)  
 - **Supportforum:** [Join the discussion on GroupDocs forum](https://forum.groupdocs.com/c/editor/)
+
+---
+
+**Last Updated:** 2026-01-01  
+**Tested With:** GroupDocs.Editor 25.3 for Java  
+**Author:** GroupDocs  

@@ -145,10 +145,6 @@ Editor editor = new Editor(inputPath, loadOptions);
 现在，您已经拥有使用 GroupDocs.Editor 在 Java 中 **batch edit word files** 的完整、可投入生产的工作流。从设置 Maven 依赖到加载、编辑以及处理多个文档，您已具备构建强大 java 文档自动化解决方案的能力。  
 接下来，探索高级功能，如 **convert word formats java**、自定义样式以及与云存储服务的集成。
 
-**最后更新：** 2026-01-01  
-**测试环境：** GroupDocs.Editor 25.3 for Java  
-**作者：** GroupDocs  
-
 **资源**  
 - **文档：** [GroupDocs Editor Documentation](https://docs.groupdocs.com/editor/java/)  
 - **API 参考：** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
@@ -156,3 +152,7 @@ Editor editor = new Editor(inputPath, loadOptions);
 - **免费试用：** [Try it free](https://releases.groupdocs.com/editor/java/)  
 - **临时许可证：** [Obtain a temporary license](https://purchase.groupdocs.com/temporary-license)  
 - **支持论坛：** [Join the discussion on GroupDocs forum](https://forum.groupdocs.com/c/editor/)
+
+**最后更新：** 2026-01-01  
+**测试环境：** GroupDocs.Editor 25.3 for Java  
+**作者：** GroupDocs  

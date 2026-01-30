@@ -146,12 +146,6 @@ A: Η βιβλιοθήκη λειτουργεί με μεγάλα αρχεία, 
 
 Στη συνέχεια, εξερευνήστε προχωρημένα χαρακτηριστικά όπως **convert word formats java**, προσαρμοσμένο στυλ, και ενσωμάτωση με υπηρεσίες αποθήκευσης στο cloud.
 
----
-
-**Τελευταία Ενημέρωση:** 2026-01-01  
-**Δοκιμάστηκε Με:** GroupDocs.Editor 25.3 for Java  
-**Συγγραφέας:** GroupDocs  
-
 **Πόροι**  
 - **Τεκμηρίωση:** [GroupDocs Editor Documentation](https://docs.groupdocs.com/editor/java/)  
 - **Αναφορά API:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
@@ -159,3 +153,9 @@ A: Η βιβλιοθήκη λειτουργεί με μεγάλα αρχεία, 
 - **Δωρεάν Δοκιμή:** [Try it free](https://releases.groupdocs.com/editor/java/)  
 - **Προσωρινή Άδεια:** [Obtain a temporary license](https://purchase.groupdocs.com/temporary-license)  
 - **Φόρουμ Υποστήριξης:** [Join the discussion on GroupDocs forum](https://forum.groupdocs.com/c/editor/)
+
+---
+
+**Τελευταία Ενημέρωση:** 2026-01-01  
+**Δοκιμάστηκε Με:** GroupDocs.Editor 25.3 for Java  
+**Συγγραφέας:** GroupDocs  

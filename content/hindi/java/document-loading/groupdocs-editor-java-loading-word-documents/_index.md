@@ -147,10 +147,6 @@ A: लाइब्रेरी बड़े फ़ाइलों के सा�
 
 अगला, **convert word formats java**, कस्टम स्टाइलिंग, और क्लाउड स्टोरेज सेवाओं के एकीकरण जैसी उन्नत सुविधाओं का अन्वेषण करें।
 
-**अंतिम अपडेट:** 2026-01-01  
-**परीक्षित संस्करण:** GroupDocs.Editor 25.3 for Java  
-**लेखक:** GroupDocs  
-
 ## संसाधन
 - **Documentation:** [GroupDocs Editor Documentation](https://docs.groupdocs.com/editor/java/)  
 - **API Reference:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
@@ -158,3 +154,7 @@ A: लाइब्रेरी बड़े फ़ाइलों के सा�
 - **Free Trial:** [Try it free](https://releases.groupdocs.com/editor/java/)  
 - **Temporary License:** [Obtain a temporary license](https://purchase.groupdocs.com/temporary-license)  
 - **Support Forum:** [Join the discussion on GroupDocs forum](https://forum.groupdocs.com/c/editor/)
+
+**अंतिम अपडेट:** 2026-01-01  
+**परीक्षित संस्करण:** GroupDocs.Editor 25.3 for Java  
+**लेखक:** GroupDocs  

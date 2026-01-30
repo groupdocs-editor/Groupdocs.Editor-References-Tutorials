@@ -145,12 +145,6 @@ A: 라이브러리는 대용량 파일을 지원하지만, JVM 힙 사용량을 
 
 다음으로 **convert word formats java**, 사용자 정의 스타일링, 클라우드 스토리지 서비스와의 통합과 같은 고급 기능을 살펴보세요.
 
----
-
-**마지막 업데이트:** 2026-01-01  
-**테스트 환경:** GroupDocs.Editor 25.3 for Java  
-**작성자:** GroupDocs  
-
 **리소스**  
 - **문서:** [GroupDocs Editor Documentation](https://docs.groupdocs.com/editor/java/)  
 - **API 레퍼런스:** [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
@@ -158,3 +152,9 @@ A: 라이브러리는 대용량 파일을 지원하지만, JVM 힙 사용량을 
 - **무료 체험:** [Try it free](https://releases.groupdocs.com/editor/java/)  
 - **임시 라이선스:** [Obtain a temporary license](https://purchase.groupdocs.com/temporary-license)  
 - **지원 포럼:** [Join the discussion on GroupDocs forum](https://forum.groupdocs.com/c/editor/)
+
+---
+
+**마지막 업데이트:** 2026-01-01  
+**테스트 환경:** GroupDocs.Editor 25.3 for Java  
+**작성자:** GroupDocs  
