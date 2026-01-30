@@ -12,40 +12,47 @@ url: /ko/java/document-saving/convert-html-docx-groupdocs-java-guide/
 weight: 1
 ---
 
-# Java에서 GroupDocs.Editor를 사용하여 HTML을 DOCX로 변환하기: 완전 가이드
+# Java에서 GroupDocs.Editor를 사용하여 HTML을 DOCX로 변환하기: 완벽 가이드
 
-If you need to **convert html to docx** quickly and reliably, you’ve come to the right place. In this tutorial we’ll walk through everything you need—from setting up GroupDocs.Editor in a Java project to loading an HTML file, initializing the editor, and finally saving the result as a DOCX document. Whether you’re building a content‑migration tool, a document‑management system, or just automating a one‑off conversion, these steps will give you a solid, production‑ready foundation.
+HTML을 DOCX로 빠르고 안정적으로 변환해야 한다면, 이 튜토리얼이 도움이 될 것입니다. 이 튜토리얼에서는 Java 프로젝트에 GroupDocs.Editor를 설정하는 것부터 HTML 파일을 불러오고, 에디터를 초기화하고, 최종적으로 결과를 DOCX 문서로 저장하는 모든 과정을 안내합니다. 콘텐츠 마이그레이션 도구, 문서 관리 시스템을 구축하든, 일회성 변환 작업을 자동화하든, 이 단계를 통해 탄탄하고 안정적인 기반을 마련할 수 있습니다.
 
-## Quick Answers
-- **What does this tutorial cover?** Converting HTML files to DOCX using GroupDocs.Editor for Java.  
-- **Which library version is required?** GroupDocs.Editor 25.3 or newer.  
-- **Do I need a license?** A trial license works for testing; a full license is required for production.  
-- **Can I batch‑process multiple files?** Yes—wrap the shown steps in a loop for bulk conversion.  
-- **What IDEs are supported?** Any Java IDE (IntelliJ IDEA, Eclipse, VS Code, etc.).
+## 주요 질문
+- **이 튜토리얼의 내용은 무엇인가요?** Java용 GroupDocs.Editor를 사용하여 HTML 파일을 DOCX로 변환하는 방법을 설명합니다.
 
-## What You'll Learn:
-- How to set up your environment using Maven or direct download  
-- Loading HTML files into editable documents  
-- Initializing GroupDocs.Editor's `Editor` class  
-- Saving editable documents in Word processing formats  
-- Practical applications and performance considerations  
+- **필요한 라이브러리 버전은 무엇인가요?** GroupDocs.Editor 25.3 이상 버전이 필요합니다.
 
-## Why convert html to docx?
-Converting web content to a Word format makes it editable, searchable, and easier to share in corporate environments. It also lets you preserve styling, tables, and images while giving end users the familiar DOCX editing experience.
+- **라이선스가 필요한가요?** 테스트용으로는 평가판 라이선스를 사용할 수 있으며, 실제 운영 환경에서는 정식 라이선스가 필요합니다.
 
-## Prerequisites
+- **여러 파일을 일괄 처리할 수 있나요?** 네, 일괄 변환을 위해 표시된 단계를 반복문으로 묶으세요.
 
-Before we get started, ensure you have the following:
+- **어떤 IDE가 지원되나요?** 모든 Java IDE(IntelliJ IDEA, Eclipse, VSCode 등)를 지원합니다.
 
-1. **Java Development Kit (JDK)** – any recent JDK (8 or newer).  
-2. **GroupDocs.Editor Library** – version 25.3 or later.  
-3. **IDE** – IntelliJ IDEA, Eclipse, or any Java‑compatible editor.
+## 학습 내용:
+- Maven 또는 직접 다운로드를 사용하여 개발 환경을 설정하는 방법
+- HTML 파일을 편집 가능한 문서로 불러오는 방법
+- GroupDocs.Editor의 `Editor` 클래스 초기화
+- 편집 가능한 문서를 워드 프로세싱 형식으로 저장하는 방법
+- 실제 적용 사례 및 성능 고려 사항
 
-### Required Libraries and Dependencies
+## HTML을 docx로 변환하는 이유
 
-To use GroupDocs.Editor in Java, you can either add it to your project via Maven or download the JAR files directly:
+웹 콘텐츠를 Word 형식으로 변환하면 기업 환경에서 편집, 검색 및 공유가 더욱 쉬워집니다. 또한 스타일, 표, 이미지를 유지하면서 최종 사용자에게 익숙한 DOCX 편집 환경을 제공할 수 있습니다.
 
-**Maven Setup**
+## 필수 조건
+
+시작하기 전에 다음 사항을 확인하세요.
+
+1. **Java Development Kit(JDK)** – 최신 JDK(8 이상)
+
+2. **GroupDocs.Editor 라이브러리** – 버전 25.3 이상
+
+3. **IDE** – IntelliJ IDEA, Eclipse 또는 Java와 호환되는 기타 에디터
+
+### 필수 라이브러리 및 종속성
+
+Java에서 GroupDocs.Editor를 사용하려면 Maven을 통해 프로젝트에 추가하거나 JAR 파일을 직접 다운로드할 수 있습니다.
+
+**Maven 설정**
 
 ```xml
 <repositories>
@@ -65,52 +72,52 @@ To use GroupDocs.Editor in Java, you can either add it to your project via Maven
 </dependencies>
 ```
 
-**Direct Download**
+**직접 다운로드**
 
-Alternatively, you can download the latest version from [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+또는 [GroupDocs.Editor for Java 릴리스](https://releases.groupdocs.com/editor/java/)에서 최신 버전을 다운로드할 수 있습니다.
 
-### License Acquisition
+### 라이선스 구매
 
-You can try out GroupDocs.Editor with a free trial license or obtain a temporary license. For long‑term use, consider purchasing a full license.
+GroupDocs.Editor는 무료 평가판 라이선스 또는 임시 라이선스를 통해 사용해 볼 수 있습니다. 장기적으로 사용하려면 정식 라이선스 구매를 고려해 보세요.
 
-## Setting Up GroupDocs.Editor for Java
+## GroupDocs.Editor for Java 설정
 
-Begin by setting up your environment to use the GroupDocs.Editor library. If you're using Maven, include the above XML snippets in your `pom.xml`. If downloading directly, ensure that the JAR files are included in your project's build path.
+먼저 GroupDocs.Editor 라이브러리를 사용하기 위한 환경을 설정하세요. Maven을 사용하는 경우 위의 XML 스니펫을 `pom.xml` 파일에 추가하세요. 직접 다운로드하는 경우 JAR 파일이 프로젝트의 빌드 경로에 포함되어 있는지 확인하세요.
 
-### Basic Initialization and Setup
+### 기본 초기화 및 설정
 
-To initialize GroupDocs.Editor for Java, ensure that all required libraries are properly referenced in your project:
+GroupDocs.Editor for Java를 초기화하려면 프로젝트에 필요한 모든 라이브러리가 올바르게 참조되었는지 확인하세요.
 
 ```java
 import com.groupdocs.editor.Editor;
 ```
 
-Once you have the setup ready, we can proceed to implement the specific features needed to **convert html to docx**.
+설정이 완료되면 **HTML을 docx로 변환**하는 데 필요한 특정 기능을 구현하는 단계로 진행할 수 있습니다.
 
-## How to convert html to docx using GroupDocs.Editor
+## GroupDocs.Editor를 사용하여 HTML을 docx로 변환하는 방법
 
-Below is a step‑by‑step walkthrough that shows exactly how each piece fits together.
+아래는 각 단계가 어떻게 진행되는지 자세히 보여주는 단계별 안내입니다.
 
-### Step 1: Load HTML File into Editable Document
+### 1단계: HTML 파일을 편집 가능한 문서로 불러오기
 
-This feature allows us to load an HTML file and prepare it for editing.
+이 기능을 사용하면 HTML 파일을 불러와 편집할 수 있도록 준비할 수 있습니다.
 
-#### Overview
-You will transform your static HTML content into a dynamic, editable document using GroupDocs.Editor.
+#### 개요
+GroupDocs.Editor를 사용하여 정적인 HTML 콘텐츠를 동적이고 편집 가능한 문서로 변환합니다.
 
-#### Step‑by‑Step
+#### 단계별 안내
 
-**1. Define the Path**
+**1. 경로 지정**
 
-First, specify where your HTML file is located.
+먼저 HTML 파일의 위치를 ​​지정합니다.
 
 ```java
 String htmlFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.html";
 ```
 
-**2. Load into EditableDocument**
+**2. EditableDocument에 로드**
 
-Use `EditableDocument.fromFile()` to load your HTML content.
+`EditableDocument.fromFile()`을 사용하여 HTML 콘텐츠를 로드합니다.
 
 ```java
 import com.groupdocs.editor.EditableDocument;
@@ -118,18 +125,18 @@ import com.groupdocs.editor.EditableDocument;
 EditableDocument document = EditableDocument.fromFile(htmlFilePath, null);
 ```
 
-The method reads the HTML file and makes it ready for conversion.
+이 메서드는 HTML 파일을 읽어 변환 준비를 완료합니다.
 
-### Step 2: Initialize Editor with HTML File Path
+### 2단계: HTML 파일 경로로 Editor 초기화
 
-Now we create an `Editor` instance that will handle the conversion.
+이제 변환을 처리할 `Editor` 인스턴스를 생성합니다.
 
-#### Overview
-Initializing the `Editor` gives you full control over saving the document in different formats.
+#### 개요
+`Editor`를 초기화하면 문서를 다양한 형식으로 저장하는 방법을 완벽하게 제어할 수 있습니다.
 
-#### Step‑by‑Step
+#### 단계별 설명
 
-**1. Define and Initialize**
+**1. 정의 및 초기화**
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -138,18 +145,18 @@ String htmlFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.html";
 Editor editor = new Editor(htmlFilePath);
 ```
 
-The `Editor` object is now prepared to work with the loaded HTML.
+이제 `Editor` 객체가 로드된 HTML을 처리할 준비가 되었습니다.
 
-### Step 3: Save Editable Document as Word Processing Format (DOCX)
+### 3단계: 편집 가능한 문서를 워드 프로세싱 형식(DOCX)으로 저장
 
-Finally, we convert and save the editable HTML content into a DOCX file.
+마지막으로, 편집 가능한 HTML 콘텐츠를 DOCX 파일로 변환하여 저장합니다.
 
-#### Overview
-This section demonstrates saving the loaded document in Word processing formats using GroupDocs.Editor's capabilities.
+#### 개요
+이 섹션에서는 GroupDocs.Editor의 기능을 사용하여 로드된 문서를 워드 프로세싱 형식으로 저장하는 방법을 보여줍니다.
 
-#### Step‑by‑Step
+#### 단계별 설명
 
-**1. Define Save Options**
+**1. 저장 옵션 정의**
 
 ```java
 import com.groupdocs.editor.options.WordProcessingSaveOptions;
@@ -158,72 +165,81 @@ import com.groupdocs.editor.formats.WordProcessingFormats;
 WordProcessingSaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
 ```
 
-**2. Specify Output Path**
+**2. 출력 경로 지정**
 
 ```java
 String fileName = Constants.removeExtension(Path.getFileName(htmlFilePath));
 String savePath = "YOUR_OUTPUT_DIRECTORY/" + fileName + ".docx";
 ```
 
-**3. Save the Document**
+**3. 문서 저장**
 
 ```java
 editor.save(document, savePath, saveOptions);
 ```
 
-After this call, you’ll have a fully editable DOCX file that mirrors the original HTML layout.
+이 호출 후에는 원본 HTML 레이아웃을 그대로 반영하는 편집 가능한 DOCX 파일이 생성됩니다.
 
-## Practical Applications
+## 실제 적용 사례
 
-1. **Content Migration** – Convert static web pages into editable Word documents for archiving or redesign.  
-2. **Document Management Systems (DMS)** – Many DMS platforms require DOCX; this workflow bridges the gap.  
-3. **Collaborative Editing** – Teams can edit converted content directly in Microsoft Word or Google Docs.
+1. **콘텐츠 마이그레이션** – 정적 웹 페이지를 보관 또는 재설계를 위해 편집 가능한 Word 문서로 변환합니다.
 
-## Performance Considerations
+2. **문서 관리 시스템(DMS)** – 많은 DMS 플랫폼에서 DOCX 형식을 요구합니다. 이 워크플로는 이러한 요구 사항을 충족합니다.
 
-- **Optimize Memory Usage** – Close `EditableDocument` instances when they are no longer needed.  
-- **Batch Processing** – Wrap the conversion steps in a loop to handle multiple files efficiently.  
-- **Thread Safety** – Create a separate `Editor` instance per thread if you’re running conversions in parallel.
+3. **공동 편집** – 팀 구성원은 변환된 콘텐츠를 Microsoft Word 또는 Google Docs에서 직접 편집할 수 있습니다.
 
-## Common Issues and Solutions
+## 성능 고려 사항
 
-| Issue | Cause | Fix |
-|-------|-------|-----|
-| Out‑of‑Memory error on large HTML files | Whole file loaded into memory | Process files in smaller chunks or increase JVM heap size (`-Xmx2g`). |
-| Missing images after conversion | Image paths are relative and not accessible | Use absolute paths or embed images in the HTML before conversion. |
-| Styles not preserved | CSS external files not referenced | Inline critical CSS or ensure external stylesheets are reachable. |
+- **메모리 사용 최적화** – 더 이상 필요하지 않은 `EditableDocument` 인스턴스를 닫습니다.
 
-## Frequently Asked Questions
+- **일괄 처리** – 여러 파일을 효율적으로 처리하기 위해 변환 단계를 루프로 묶습니다.
 
-**Q: Is GroupDocs.Editor free?**  
-A: You can try it with a trial license; a full license is required for production use.
+- **스레드 안전성** – 병렬로 변환을 실행하는 경우 스레드별로 별도의 `Editor` 인스턴스를 생성합니다.
 
-**Q: What file formats does GroupDocs.Editor support?**  
-A: It supports DOCX, PDF, HTML, and many other popular document types.
+## 일반적인 문제 및 해결 방법
 
-**Q: How do I handle large documents efficiently?**  
-A: Process them in batches, close resources promptly, and consider increasing JVM memory.
+| 문제 | 원인 | 해결 방법 |
 
-**Q: Can I integrate this with other Java frameworks?**  
-A: Yes, the library works with Spring, Jakarta EE, and any standard Java application.
+-------|-------|-----|
 
-**Q: Are there any performance limits?**  
-A: Performance depends on your hardware and JVM settings; testing with realistic workloads is recommended.
+| 대용량 HTML 파일에서 메모리 부족 오류 발생 | 파일 전체가 메모리에 로드됨 | 파일을 더 작은 단위로 처리하거나 JVM 힙 크기를 늘리세요(`-Xmx2g`). |
 
-## Additional Resources
-- [GroupDocs.Editor Documentation](https://docs.groupdocs.com/editor/java/)
-- [API Reference](https://reference.groupdocs.com/editor/java/)
-- [Download GroupDocs.Editor](https://releases.groupdocs.com/editor/java/)
-- [Free Trial Version](https://releases.groupdocs.com/editor/java/)
-- [Temporary License Information](https://purchase.groupdocs.com/temporary-license)
-- [Support Forum](https://forum.groupdocs.com/c/editor/)
+| 변환 후 이미지 누락 | 이미지 경로가 상대 경로로 되어 있어 접근할 수 없음 | 절대 경로를 사용하거나 변환 전에 HTML에 이미지를 포함하세요. |
 
-If you encounter any issues, refer to the [GroupDocs support forum](https://forum.groupdocs.com/c/editor/) for assistance.
+| 스타일이 유지되지 않음 | 외부 CSS 파일이 참조되지 않음 | 중요한 CSS를 인라인으로 작성하거나 외부 스타일시트에 접근할 수 있는지 확인하세요. |
+
+## 자주 묻는 질문
+
+**Q: GroupDocs.Editor는 무료인가요?**
+A: 평가판 라이선스로 사용해 볼 수 있으며, 실제 사용에는 정식 라이선스가 필요합니다.
+
+**Q: GroupDocs.Editor는 어떤 파일 형식을 지원하나요?**
+A: DOCX, PDF, HTML 및 기타 여러 인기 있는 문서 형식을 지원합니다.
+
+**Q: 대용량 문서를 효율적으로 처리하는 방법은 무엇인가요?**
+A: 문서를 일괄 처리하고, 리소스를 신속하게 닫고, JVM 메모리 크기를 늘리는 것을 고려하세요.
+
+
+**질문: 다른 Java 프레임워크와 통합할 수 있나요?**
+답변: 네, 이 라이브러리는 Spring, Jakarta EE 및 모든 표준 Java 애플리케이션과 호환됩니다.
+
+**질문: 성능 제한이 있나요?**
+답변: 성능은 하드웨어 및 JVM 설정에 따라 달라지므로 실제 작업 부하로 테스트하는 것이 좋습니다.
+
+## 추가 자료
+- [GroupDocs.Editor 문서](https://docs.groupdocs.com/editor/java/)
+- [API 참조](https://reference.groupdocs.com/editor/java/)
+- [GroupDocs.Editor 다운로드](https://releases.groupdocs.com/editor/java/)
+- [무료 체험판](https://releases.groupdocs.com/editor/java/)
+- [임시 라이선스 정보](https://purchase.groupdocs.com/temporary-license)
+- [지원 포럼](https://forum.groupdocs.com/c/editor/)
+
+문제가 발생하면 [GroupDocs 지원 포럼](https://forum.groupdocs.com/c/editor/)에서 도움을 받으세요.
 
 ---
 
-**Last Updated:** 2026-01-06  
-**Tested With:** GroupDocs.Editor 25.3 for Java  
-**Author:** GroupDocs  
+**최종 업데이트:** 2026년 1월 6일
+**테스트 환경:** GroupDocs.Editor25.3 for Java
+**제작자:** GroupDocs 
 
 ---

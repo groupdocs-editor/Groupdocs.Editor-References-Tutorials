@@ -14,40 +14,40 @@ url: /tr/java/document-saving/convert-html-docx-groupdocs-java-guide/
 weight: 1
 ---
 
-# Convert HTML to DOCX in Java Using GroupDocs.Editor: A Complete Guide
+# GroupDocs.Editor Kullanarak HTML'yi Java'da DOCX'e Dönüştürün: Tam Bir Kılavuz
 
-Hızlı ve güvenilir bir şekilde **convert html to docx** yapmanız gerekiyorsa, doğru yerdesiniz. Bu öğreticide, bir Java projesinde GroupDocs.Editor'ı kurmaktan HTML dosyasını yüklemeye, editörü başlatmaya ve sonunda sonucu bir DOCX belgesi olarak kaydetmeye kadar ihtiyacınız olan her şeyi adım adım göstereceğiz. İster içerik‑göç aracı, ister belge‑yönetim sistemi geliştirin, ister tek seferlik bir dönüşümü otomatikleştirin, bu adımlar size sağlam, üretim‑hazır bir temel sağlayacak.
+Hızlı ve güvenilir bir şekilde **html'yi docx'a dönüştürme** yapılması gerekiyorsa, doğru yerdesiniz. Bu öğreticide, bir Java projesinde GroupDocs.Editor'ı kopyalayan HTML kodlarını yüklemeye, bilgisayarı başlatmaya ve sonunda bir DOCX belgesi olarak kaydetmeye kadar ihtiyacınız olan her şeyi adım adım gösteririz. İster içerik‑göç aracı, ister belge‑yönetim sistemi geliştirin, ister tek seferlik bir otomatikleştirin, bu adımları size sağlam, üretim‑hazır bir temel sağlayın.
 
-## Quick Answers
-- **Bu öğretici neyi kapsıyor?** Java için GroupDocs.Editor kullanarak HTML dosyalarını DOCX'e dönüştürme.  
-- **Gerekli kütüphane sürümü nedir?** GroupDocs.Editor 25.3 veya daha yeni.  
-- **Lisans gerekli mi?** Test için deneme lisansı çalışır; üretim için tam lisans gereklidir.  
-- **Birden fazla dosyayı toplu işleyebilir miyim?** Evet—gösterilen adımları bir döngü içinde sararak toplu dönüşüm yapabilirsiniz.  
-- **Hangi IDE'ler destekleniyor?** Herhangi bir Java IDE (IntelliJ IDEA, Eclipse, VS Code vb.).
+## Hızlı Yanıtlar
+- **Bu eğitimi kapsıyor mu?** Java için GroupDocs.Editor kullanarak HTML dosyalarını DOCX'e dönüştürür.
+- **Gerekli sürüm sürümü nedir?** GroupDocs.Editor25.3 veya daha yeni.
+- **Lisans gerekli mi?** Test için deneme lisansı çalışır; üretim için tam lisans gereklidir.
+- **Birden fazladan toplu işleyebilir miyim?** Evet—gösterilen adımlar bir döngü içinde sararak toplu dönüşüm yapabilirsiniz.
+- **Hangi IDE'ler destekleniyor mu?** Herhangi bir Java IDE (IntelliJ IDEA, Eclipse, VSCode vb.).
 
-## What You'll Learn:
-- Maven veya doğrudan indirme kullanarak ortamınızı nasıl kuracağınız
-- HTML dosyalarını düzenlenebilir belgelere yükleme
+## Ne Öğreneceksiniz:
+- Maven veya doğrudan indirme kullanarak ortamınızı nasıl kuracağınızı
+- HTML düzeni bozulabilir belgelerine yükleme
 - GroupDocs.Editor'ın `Editor` sınıfını başlatma
-- Düzenlenebilir belgeleri Word işleme formatlarında kaydetme
+- Düzenlenebilir özellikler Kelime işleme formatlarında kaydetme
 - Pratik uygulamalar ve performans değerlendirmeleri
 
-## Why convert html to docx?
-Web içeriğini Word formatına dönüştürmek, onu düzenlenebilir, aranabilir ve kurumsal ortamlarda paylaşımı daha kolay hâle getirir. Ayrıca stil, tablo ve görselleri korurken, son kullanıcılara tanıdık DOCX düzenleme deneyimini sunar.
+## Neden html'yi docx'e dönüştürmelisiniz?
+Web düzgünlüğü Word formatına dönüşür, onu düzenlenebilir, aranabilir ve kurumsal paylaşım daha kolay hale gelir. Ayrıca stil, tablo ve görselleri korurken, son kullanıcıya ait DOCX düzenleme deneyimi sunar.
 
-## Prerequisites
+## Önkoşullar
 
-Başlamadan önce, aşağıdakilere sahip olduğunuzdan emin olun:
+Başlamadan önce aşağıdakilere sahip olduğunuzdan emin olun:
 
-1. **Java Development Kit (JDK)** – herhangi bir güncel JDK (8 veya daha yeni).  
-2. **GroupDocs.Editor Kütüphanesi** – sürüm 25.3 veya üzeri.  
-3. **IDE** – IntelliJ IDEA, Eclipse veya herhangi bir Java‑uyumlu editör.
+1. **Java Development Kit (JDK)** – herhangi bir güncel JDK (8veya daha yeni).
+2. **GroupDocs.Editor Kütüphanesi** – sürüm25.3 veya üzeri.
+3. **IDE** – IntelliJ IDEA, Eclipse veya herhangi bir Java uyumlu editör.
 
-### Required Libraries and Dependencies
+### Gerekli Kitaplıklar ve Bağımlılıklar
 
-Java'da GroupDocs.Editor kullanmak için, projeye Maven aracılığıyla ekleyebilir veya JAR dosyalarını doğrudan indirebilirsiniz:
+Java'da GroupDocs.Editor kullanmak için, projeye Maven aracılığıyla veya JAR içinden doğrudan indirmeler:
 
-**Maven Setup**
+**Maven Kurulumu**
 
 ```xml
 <repositories>
@@ -67,19 +67,19 @@ Java'da GroupDocs.Editor kullanmak için, projeye Maven aracılığıyla ekleyeb
 </dependencies>
 ```
 
-**Direct Download**
+**Doğrudan İndirme**
 
-Alternatif olarak, en son sürümü [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) adresinden indirebilirsiniz.
+Alternatif olarak, son sürümü [GroupDocs.Editor for Java sürümleri](https://releases.groupdocs.com/editor/java/) adresinden indirebilirsiniz.
 
-### License Acquisition
+### Lisans Alma
 
-GroupDocs.Editor'ı ücretsiz deneme lisansı ile deneyebilir veya geçici bir lisans edinebilirsiniz. Uzun vadeli kullanım için tam lisans satın almayı düşünün.
+GroupDocs.Editor'ı ücretsiz deneme lisansı ile deney yapabilir veya geçici bir lisans edinebilirsiniz. Uzun vadede kullanım için tam lisans satın almayı düşünün.
 
-## Setting Up GroupDocs.Editor for Java
+## Java için GroupDocs.Editor'u Kurma
 
-GroupDocs.Editor kütüphanesini kullanmak için ortamınızı kurarak başlayın. Maven kullanıyorsanız, yukarıdaki XML parçacıklarını `pom.xml` dosyanıza ekleyin. Doğrudan indiriyorsanız, JAR dosyalarının projenizin derleme yoluna dahil edildiğinden emin olun.
+GroupDocs.Editor kütüphanesini kullanmak için ortamınızı kurarak başlayın. Maven kullanıyorsanız, XML işlemlerini `pom.xml` dosyanıza ekleyin. Doğrudan indiriyorsanız, JAR pencerelerinin projenizin parçalarını dahil ederek emin olun.
 
-### Basic Initialization and Setup
+### Temel Başlatma ve Kurulum
 
 Java için GroupDocs.Editor'ı başlatmak amacıyla, gerekli tüm kütüphanelerin projenizde doğru şekilde referans verildiğinden emin olun:
 
@@ -89,27 +89,27 @@ import com.groupdocs.editor.Editor;
 
 Kurulum hazır olduğunda, **convert html to docx** için gerekli özel özellikleri uygulamaya geçebiliriz.
 
-## How to convert html to docx using GroupDocs.Editor
+## GroupDocs.Editor kullanarak html'yi docx'e dönüştürme
 
-Aşağıda, her parçanın nasıl bir araya geldiğini adım adım gösteren bir rehber bulacaksınız.
+Aşağıda, her parçanın nasıl bir araya geldiği adım adım gösteren bir rehber bulacaksınız.
 
-### Step 1: Load HTML File into Editable Document
+### Adım 1: HTML Dosyasını Düzenlenebilir Belgeye Yükleyin
 
-Bu özellik, bir HTML dosyasını yüklememizi ve düzenleme için hazırlamamızı sağlar.
+Bu özellik, bir HTML miktarımızı yüklememizi ve düzenleme için hazırlamamızı sağlar.
 
-#### Overview
+#### Genel Bakış
 Statik HTML içeriğinizi GroupDocs.Editor kullanarak dinamik, düzenlenebilir bir belgeye dönüştüreceksiniz.
 
-#### Step‑by‑Step
+#### Adım Adım
 
-**1. Define the Path**
+**1. Yolu Tanımlayın**
 İlk olarak, HTML dosyanızın nerede bulunduğunu belirtin.
 
 ```java
 String htmlFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.html";
 ```
 
-**2. Load into EditableDocument**
+**2. EditableDocument'e yükleyin**
 `EditableDocument.fromFile()` metodunu kullanarak HTML içeriğinizi yükleyin.
 
 ```java
@@ -120,16 +120,16 @@ EditableDocument document = EditableDocument.fromFile(htmlFilePath, null);
 
 Metod, HTML dosyasını okur ve dönüşüm için hazır hâle getirir.
 
-### Step 2: Initialize Editor with HTML File Path
+### Adım 2: Düzenleyiciyi HTML Dosya Yoluyla Başlatın
 
-Şimdi dönüşümü yönetecek bir `Editor` örneği oluşturuyoruz.
+Şimdiki zamanı yönetecek bir `Editör` örneği oluşturuyoruz.
 
-#### Overview
-`Editor`'ı başlatmak, belgeyi farklı formatlarda kaydetme üzerinde tam kontrol sağlar.
+#### Genel Bakış
+`Editör`ü çalıştırır, belgeyi farklı formatlarda kaydetmesini sağlar ve tam kontrol sağlar.
 
-#### Step‑by‑Step
+#### Adım Adım
 
-**1. Define and Initialize**
+**1. Tanımla ve Başlat**
 ```java
 import com.groupdocs.editor.Editor;
 
@@ -139,16 +139,16 @@ Editor editor = new Editor(htmlFilePath);
 
 `Editor` nesnesi artık yüklenen HTML ile çalışmaya hazır.
 
-### Step 3: Save Editable Document as Word Processing Format (DOCX)
+### Adım 3: Düzenlenebilir Belgeyi Kelime İşleme Formatı (DOCX) olarak kaydedin
 
-Son olarak, düzenlenebilir HTML içeriğini bir DOCX dosyasına dönüştürüp kaydediyoruz.
+Son olarak, düzenlenebilir HTML'nin bir DOCX dosyasına dönüştürülüp kaydedilmesini sağlıyoruz.
 
-#### Overview
-Bu bölüm, yüklenen belgeyi GroupDocs.Editor'ın yetenekleriyle Word işleme formatlarında kaydetmeyi gösterir.
+#### Genel Bakış
+Bu bölüm, yüklenen belgeyi GroupDocs.Editor'ın kapasitesiyle Word işleme formatlarında kaydetmeyi gösterir.
 
-#### Step‑by‑Step
+#### Adım Adım
 
-**1. Define Save Options**
+**1. Kaydetme Seçeneklerini Tanımlayın**
 ```java
 import com.groupdocs.editor.options.WordProcessingSaveOptions;
 import com.groupdocs.editor.formats.WordProcessingFormats;
@@ -156,57 +156,57 @@ import com.groupdocs.editor.formats.WordProcessingFormats;
 WordProcessingSaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
 ```
 
-**2. Specify Output Path**
+**2. Çıkış Yolunu Belirtin**
 ```java
 String fileName = Constants.removeExtension(Path.getFileName(htmlFilePath));
 String savePath = "YOUR_OUTPUT_DIRECTORY/" + fileName + ".docx";
 ```
 
-**3. Save the Document**
+**3. Belgeyi Kaydet**
 ```java
 editor.save(document, savePath, saveOptions);
 ```
 
 Bu çağrıdan sonra, orijinal HTML düzenini yansıtan tamamen düzenlenebilir bir DOCX dosyanız olacak.
 
-## Practical Applications
+## Pratik Uygulamalar
 
-1. **İçerik Göçü** – Statik web sayfalarını arşivleme veya yeniden tasarım için düzenlenebilir Word belgelerine dönüştürme.  
-2. **Belge Yönetim Sistemleri (DMS)** – Birçok DMS platformu DOCX gerektirir; bu iş akışı boşluğu doldurur.  
+1. **İçerik Göçü** – Statik web sayfalarını arşivleme veya yeniden tasarım için düzenlenebilir Word'e dönüştürme.
+2. **Belge Yönetim Sistemleri (DMS)** – Birçok DMS platformu DOCX gerektirir; bu iş hacmi boşluklarını doldurur.
 3. **Ortak Düzenleme** – Takımlar, dönüştürülen içeriği doğrudan Microsoft Word veya Google Docs'ta düzenleyebilir.
 
-## Performance Considerations
+## Performansla İlgili Hususlar
 
-- **Bellek Kullanımını Optimize Et** – `EditableDocument` örneklerini artık ihtiyaç duyulmadığında kapatın.  
-- **Toplu İşleme** – Dönüşüm adımlarını bir döngü içinde sararak birden çok dosyayı verimli şekilde işleyin.  
-- **İş Parçacığı Güvenliği** – Paralel dönüşüm çalıştırıyorsanız, her iş parçacığı için ayrı bir `Editor` örneği oluşturun.
+- **Bellek Kullanımını Optimize Et** – `EditableDocument` örneklerini artık ihtiyaç duyulmadığında kapatın.
+- **Toplu İşleme** – Dönüşüm adımlarını bir döngü içinde sararak anında çok verimli bir şekilde işleyin.
+- **İş Parçacığı Güvenliği** – Paralel dönüşümü çalıştırıyorsanız, her iş parçasıcığı için ayrı bir `Editör` örneği oluşturulur.
 
-## Common Issues and Solutions
+## Yaygın Sorunlar ve Çözümler
 
 | Sorun | Neden | Çözüm |
-|-------|-------|-----|
-| Büyük HTML dosyalarında Bellek Dışı Hata | Tüm dosya belleğe yüklendi | Dosyaları daha küçük parçalar halinde işleyin veya JVM yığın boyutunu artırın (`-Xmx2g`). |
-| Dönüşüm sonrası eksik görseller | Görsel yolları göreceli ve erişilemez | Mutlak yollar kullanın veya dönüştürmeden önce görselleri HTML'ye gömün. |
-| Stil korunmadı | CSS dış dosyalar referans verilmemiş | Kritik CSS'i satır içi yapın veya dış stil sayfalarının erişilebilir olduğundan emin olun. |
+|----------|----------|-----|
+| Büyük HTML belgelerinde Bellek Dışı Hata | Tüm dosya belleğe yüklendi | Dosyaları daha küçük parçalar halinde işleyin veya JVM yığın değişimini artırın (`-Xmx2g`). |
+| Dönüşümün ardından eksik görseller | Görsel yollar boyunca ve erişilemez | Mutlak yolları kullanın veya dönüştürden önce görselleri HTML'ye gömün. |
+| Hala korunmadı | CSS dış dosyaları referans verilmemiş | Kritik CSS'i satır içi yapın veya dış stil sayfalarının erişilebilir olduğundan emin olun. |
 
-## Frequently Asked Questions
+## Sıkça Sorulan Sorular
 
-**S: GroupDocs.Editor ücretsiz mi?**  
-C: Deneme lisansı ile deneyebilirsiniz; üretim kullanımı için tam lisans gereklidir.
+**S: GroupDocs.Editor ücretsiz mi?**
+C: Deneme lisansı ile devamı; üretim kullanımı için tam lisans gereklidir.
 
-**S: GroupDocs.Editor hangi dosya formatlarını destekliyor?**  
-C: DOCX, PDF, HTML ve birçok popüler belge türünü destekler.
+**S: GroupDocs.Editor hangi dosya formatlarını içeriyor?**
+C: DOCX, PDF, HTML ve birçok popüler belgenin saklanması.
 
-**S: Büyük belgeleri verimli bir şekilde nasıl yönetebilirim?**  
+**S: Büyük maliyetleri verimli bir şekilde nasıl yönetebilirim?**
 C: Belgeleri toplu olarak işleyin, kaynakları hızlıca kapatın ve JVM belleğini artırmayı düşünün.
 
-**S: Bunu diğer Java çerçeveleriyle entegre edebilir miyim?**  
+**S: Bunu diğer Java çerçeveleriyle entegre edebilir miyim?**
 C: Evet, kütüphane Spring, Jakarta EE ve herhangi bir standart Java uygulamasıyla çalışır.
 
-**S: Performans sınırlamaları var mı?**  
-C: Performans donanımınıza ve JVM ayarlarınıza bağlıdır; gerçekçi iş yükleriyle test edilmesi önerilir.
+**S: Performans sınırlamaları var mı?**
+C: Performans sisteminize ve JVM ayarlarınıza bağlıdır; iş süreçlerinin yükleriyle test edilmesi önerilir.
 
-## Additional Resources
+## Ek Kaynaklar
 - [GroupDocs.Editor Documentation](https://docs.groupdocs.com/editor/java/)
 - [API Reference](https://reference.groupdocs.com/editor/java/)
 - [Download GroupDocs.Editor](https://releases.groupdocs.com/editor/java/)
