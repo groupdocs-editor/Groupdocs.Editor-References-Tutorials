@@ -6,7 +6,7 @@ keywords:
 - GroupDocs.Editor for Java
 - Java document editing
 - Word form fields
-title: 'كيفية استخدام GroupDocs: تحميل وتعديل حقول نماذج Word باستخدام Java'
+title: 'كيفية استخدام GroupDocs - تحميل وتعديل حقول نماذج Word باستخدام Java'
 type: docs
 url: /ar/java/document-editing/java-document-editing-groupdocs-editor-tutorial/
 weight: 1

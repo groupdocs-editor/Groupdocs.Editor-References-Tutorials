@@ -6,7 +6,7 @@ keywords:
 - GroupDocs.Editor for Java
 - Java document editing
 - Word form fields
-title: 'Cách sử dụng GroupDocs: Tải và chỉnh sửa các trường biểu mẫu Word bằng Java'
+title: 'Cách sử dụng GroupDocs - Tải và chỉnh sửa các trường biểu mẫu Word bằng Java'
 type: docs
 url: /vi/java/document-editing/java-document-editing-groupdocs-editor-tutorial/
 weight: 1

@@ -7,7 +7,7 @@ keywords:
 - GroupDocs.Editor for Java
 - Java document editing
 - Word form fields
-title: 'Как использовать GroupDocs: загрузка и редактирование полей формы Word с помощью
+title: 'Как использовать GroupDocs - загрузка и редактирование полей формы Word с помощью
   Java'
 type: docs
 url: /ru/java/document-editing/java-document-editing-groupdocs-editor-tutorial/

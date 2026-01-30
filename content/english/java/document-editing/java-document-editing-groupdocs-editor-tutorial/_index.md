@@ -1,5 +1,5 @@
 ---
-title: "How to Use GroupDocs: Load & Edit Word Form Fields with Java"
+title: "How to Use GroupDocs - Load & Edit Word Form Fields with Java"
 description: "Learn how to use groupdocs with Java to load Word documents and extract form fields, enabling efficient document automation and editing."
 date: "2025-12-20"
 weight: 1

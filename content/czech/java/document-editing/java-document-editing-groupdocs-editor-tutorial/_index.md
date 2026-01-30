@@ -6,7 +6,7 @@ keywords:
 - GroupDocs.Editor for Java
 - Java document editing
 - Word form fields
-title: 'Jak používat GroupDocs: Načíst a upravit formulářová pole Wordu v Javě'
+title: 'Jak používat GroupDocs - Načíst a upravit formulářová pole Wordu v Javě'
 type: docs
 url: /cs/java/document-editing/java-document-editing-groupdocs-editor-tutorial/
 weight: 1

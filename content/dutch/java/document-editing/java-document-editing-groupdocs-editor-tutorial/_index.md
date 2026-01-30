@@ -7,7 +7,7 @@ keywords:
 - GroupDocs.Editor for Java
 - Java document editing
 - Word form fields
-title: 'Hoe GroupDocs te gebruiken: Word‑formuliervelden laden en bewerken met Java'
+title: 'Hoe GroupDocs te gebruiken - Word‑formuliervelden laden en bewerken met Java'
 type: docs
 url: /nl/java/document-editing/java-document-editing-groupdocs-editor-tutorial/
 weight: 1

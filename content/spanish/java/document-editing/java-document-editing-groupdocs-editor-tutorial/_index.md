@@ -7,7 +7,7 @@ keywords:
 - GroupDocs.Editor for Java
 - Java document editing
 - Word form fields
-title: 'Cómo usar GroupDocs: cargar y editar campos de formulario de Word con Java'
+title: 'Cómo usar GroupDocs - cargar y editar campos de formulario de Word con Java'
 type: docs
 url: /es/java/document-editing/java-document-editing-groupdocs-editor-tutorial/
 weight: 1

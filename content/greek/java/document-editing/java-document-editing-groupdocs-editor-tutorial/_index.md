@@ -7,7 +7,7 @@ keywords:
 - GroupDocs.Editor for Java
 - Java document editing
 - Word form fields
-title: 'Πώς να χρησιμοποιήσετε το GroupDocs: Φόρτωση & επεξεργασία πεδίων φόρμας Word
+title: 'Πώς να χρησιμοποιήσετε το GroupDocs - Φόρτωση & επεξεργασία πεδίων φόρμας Word
   με Java'
 type: docs
 url: /el/java/document-editing/java-document-editing-groupdocs-editor-tutorial/

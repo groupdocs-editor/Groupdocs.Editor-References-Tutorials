@@ -5,7 +5,7 @@ keywords:
 - GroupDocs.Editor for Java
 - Java document editing
 - Word form fields
-title: 如何使用 GroupDocs：使用 Java 加载和编辑 Word 表单字段
+title: 如何使用 GroupDocs - 使用 Java 加载和编辑 Word 表单字段
 type: docs
 url: /zh/java/document-editing/java-document-editing-groupdocs-editor-tutorial/
 weight: 1

@@ -7,7 +7,7 @@ keywords:
 - GroupDocs.Editor for Java
 - Java document editing
 - Word form fields
-title: 'Hogyan használjuk a GroupDocs-ot: Word űrlapmezők betöltése és szerkesztése
+title: 'Hogyan használjuk a GroupDocs-ot - Word űrlapmezők betöltése és szerkesztése
   Java-val'
 type: docs
 url: /hu/java/document-editing/java-document-editing-groupdocs-editor-tutorial/
