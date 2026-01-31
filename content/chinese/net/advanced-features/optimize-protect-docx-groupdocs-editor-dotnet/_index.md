@@ -5,7 +5,7 @@ keywords:
 - protect word document
 - optimize DOCX
 - fix invalid form fields
-title: 使用 GroupDocs.Editor for .NET 保护 Word 文档并优化 DOCX：高级指南
+title: 使用 GroupDocs.Editor for .NET 保护 Word 文档并优化 DOCX - 高级指南
 type: docs
 url: /zh/net/advanced-features/optimize-protect-docx-groupdocs-editor-dotnet/
 weight: 1
@@ -199,13 +199,11 @@ using (MemoryStream outputStream = new MemoryStream())
 
 ## 常见问题
 
-**Q1：GroupDocs.Editor 是否兼容所有 .NET 版本？**  
-A1：是的，它支持广泛的 .NET Framework 和 .NET Core 版本。请始终查看 [official compatibility page](https://docs.groupdocs.com/editor/net/) 以获取具体信息。
+**Q：GroupDocs.Editor 是否兼容所有 .NET 版本？**  
+A：是的，它支持广泛的 .NET Framework 和 .NET Core 版本。请始终查看 [official compatibility page](https://docs.groupdocs.com/editor/net/) 以获取具体信息。
 
-**Q2：内存优化如何影响文档处理时间？**  
-A2：内存优化可能会略微增加处理时间，但对于高效处理大型文档至关重要。
-
-## 其他常见问题
+**Q：内存优化如何影响文档处理时间？**  
+A：内存优化可能会略微增加处理时间，但对于高效处理大型文档至关重要。
 
 **Q：我可以同时使用只读和表单字段编辑权限来保护文档吗？**  
 A：可以，您可以将 `WordProcessingProtectionType.AllowOnlyFormFields` 与密码结合使用，以限制其他编辑，同时仍允许表单交互。

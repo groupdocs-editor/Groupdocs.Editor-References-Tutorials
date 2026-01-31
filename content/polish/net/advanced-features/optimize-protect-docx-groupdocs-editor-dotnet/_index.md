@@ -8,7 +8,7 @@ keywords:
 - optimize DOCX
 - fix invalid form fields
 title: 'Zabezpiecz dokument Word i zoptymalizuj DOCX przy użyciu GroupDocs.Editor
-  dla .NET: Zaawansowany przewodnik'
+  dla .NET - Zaawansowany przewodnik'
 type: docs
 url: /pl/net/advanced-features/optimize-protect-docx-groupdocs-editor-dotnet/
 weight: 1
@@ -199,13 +199,11 @@ Gotowy, aby zastosować te umiejętności w praktyce? Spróbuj wdrożyć to rozw
 
 ## Sekcja FAQ
 
-**Q1: Czy GroupDocs.Editor jest kompatybilny ze wszystkimi wersjami .NET?**  
-A1: Tak, obsługuje szeroki zakres wersji .NET Framework i .NET Core. Zawsze sprawdzaj [official compatibility page](https://docs.groupdocs.com/editor/net/) pod kątem szczegółów.
+**Q: Czy GroupDocs.Editor jest kompatybilny ze wszystkimi wersjami .NET?**  
+A: Tak, obsługuje szeroki zakres wersji .NET Framework i .NET Core. Zawsze sprawdzaj [official compatibility page](https://docs.groupdocs.com/editor/net/) pod kątem szczegółów.
 
-**Q2: Jak optymalizacja pamięci wpływa na czas przetwarzania dokumentu?**  
-A2: Optymalizacja pamięci może nieco wydłużyć czas przetwarzania, ale jest kluczowa dla efektywnego obsługiwania dużych dokumentów.
-
-## Dodatkowe często zadawane pytania
+**Q: Jak optymalizacja pamięci wpływa na czas przetwarzania dokumentu?**  
+A: Optymalizacja pamięci może nieco wydłużyć czas przetwarzania, ale jest kluczowa dla efektywnego obsługiwania dużych dokumentów.
 
 **Q: Czy mogę chronić dokument jednocześnie z uprawnieniami tylko do odczytu i edycji pól formularzy?**  
 A: Tak, możesz połączyć `WordProcessingProtectionType.AllowOnlyFormFields` z hasłem, aby ograniczyć inne edycje, jednocześnie pozwalając na interakcję z formularzem.

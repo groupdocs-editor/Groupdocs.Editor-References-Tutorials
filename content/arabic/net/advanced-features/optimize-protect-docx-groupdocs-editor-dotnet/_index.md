@@ -6,7 +6,7 @@ keywords:
 - protect word document
 - optimize DOCX
 - fix invalid form fields
-title: 'حماية مستند Word وتحسين DOCX باستخدام GroupDocs.Editor لـ .NET: دليل متقدم'
+title: 'حماية مستند Word وتحسين DOCX باستخدام GroupDocs.Editor لـ .NET - دليل متقدم'
 type: docs
 url: /ar/net/advanced-features/optimize-protect-docx-groupdocs-editor-dotnet/
 weight: 1
@@ -195,13 +195,11 @@ using (MemoryStream outputStream = new MemoryStream())
 
 ## قسم الأسئلة المتكررة
 
-**س1: هل GroupDocs.Editor متوافق مع جميع إصدارات .NET؟**  
-ج1: نعم، يدعم مجموعة واسعة من إصدارات .NET Framework و .NET Core. تحقق دائمًا من [official compatibility page](https://docs.groupdocs.com/editor/net/) للحصول على التفاصيل.
+**س: هل GroupDocs.Editor متوافق مع جميع إصدارات .NET؟**  
+ج: نعم، يدعم مجموعة واسعة من إصدارات .NET Framework و .NET Core. تحقق دائمًا من [official compatibility page](https://docs.groupdocs.com/editor/net/) للحصول على التفاصيل.
 
-**س2: كيف يؤثر تحسين الذاكرة على زمن معالجة المستند؟**  
-ج2: قد يزيد تحسين الذاكرة قليلاً من أوقات المعالجة لكنه ضروري للتعامل مع المستندات الكبيرة بفعالية.
-
-## أسئلة متكررة إضافية
+**س: كيف يؤثر تحسين الذاكرة على زمن معالجة المستند؟**  
+ج: قد يزيد تحسين الذاكرة قليلاً من أوقات المعالجة لكنه ضروري للتعامل مع المستندات الكبيرة بفعالية.
 
 **س: هل يمكنني حماية مستند بصلاحيات قراءة‑فقط وتحرير حقول النماذج؟**  
 ج: نعم، يمكنك دمج `WordProcessingProtectionType.AllowOnlyFormFields` مع كلمة مرور لتقييد التعديلات الأخرى مع السماح بالتفاعل مع الحقول.

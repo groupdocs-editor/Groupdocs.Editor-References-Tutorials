@@ -6,7 +6,7 @@ keywords:
 - protect word document
 - optimize DOCX
 - fix invalid form fields
-title: 'GroupDocs.Editor for .NET를 사용하여 Word 문서 보호 및 DOCX 최적화: 고급 가이드'
+title: 'GroupDocs.Editor for .NET를 사용하여 Word 문서 보호 및 DOCX 최적화 - 고급 가이드'
 type: docs
 url: /ko/net/advanced-features/optimize-protect-docx-groupdocs-editor-dotnet/
 weight: 1
@@ -197,13 +197,11 @@ using (MemoryStream outputStream = new MemoryStream())
 
 ## FAQ 섹션
 
-**Q1: GroupDocs.Editor가 모든 .NET 버전과 호환되나요?**  
-A1: 예, .NET Framework와 .NET Core의 다양한 버전을 지원합니다. 자세한 내용은 [official compatibility page](https://docs.groupdocs.com/editor/net/)를 항상 확인하세요.
+**Q: GroupDocs.Editor가 모든 .NET 버전과 호환되나요?**  
+A: 예, .NET Framework와 .NET Core의 다양한 버전을 지원합니다. 자세한 내용은 [official compatibility page](https://docs.groupdocs.com/editor/net/)를 항상 확인하세요.
 
-**Q2: 메모리 최적화가 문서 처리 시간에 어떤 영향을 미치나요?**  
-A2: 메모리 최적화는 처리 시간을 약간 늘릴 수 있지만, 대용량 문서를 효율적으로 처리하는 데 필수적입니다.
-
-## 추가 자주 묻는 질문
+**Q: 메모리 최적화가 문서 처리 시간에 어떤 영향을 미치나요?**  
+A: 메모리 최적화는 처리 시간을 약간 늘릴 수 있지만, 대용량 문서를 효율적으로 처리하는 데 필수적입니다.
 
 **Q: 읽기 전용과 폼 필드 편집 권한을 동시에 적용하여 문서를 보호할 수 있나요?**  
 A: 예, `WordProcessingProtectionType.AllowOnlyFormFields`를 비밀번호와 결합하면 다른 편집을 제한하면서도 폼 상호 작용을 허용할 수 있습니다.

@@ -9,65 +9,65 @@ weight: 13
 
 # ドキュメントメタデータの抽出 – .NET 用 Advanced GroupDocs.Editor 機能チュートリアル
 
-Welcome to the central hub for **extract document metadata** and other advanced capabilities of GroupDocs.Editor for .NET. Whether you’re looking to pull metadata from Word, Excel, or PDF files, protect DOCX documents, or build end‑to‑end document processing pipelines, this collection of tutorials provides clear, production‑ready examples. Let’s explore how you can elevate your document‑handling solutions with the library’s powerful features.
+GroupDocs.Editor for .NET の **ドキュメントメタデータの抽出** をはじめとする高度な機能のハブへようこそ。Word、Excel、PDF ファイルからメタデータを取得したり、DOCX ドキュメントを保護したり、エンドツーエンドのドキュメント処理パイプラインを構築したりする場合でも、このチュートリアル集は、分かりやすくすぐに使える例を提供します。ライブラリの強力な機能を活用して、ドキュメント処理ソリューションをどのように向上させることができるか、ぜひご覧ください。
 
-## Quick Answers
-- **What is extract document metadata?** It’s the process of reading embedded information (author, creation date, custom properties) from a file without opening it in a full editor.  
-- **Why use GroupDocs.Editor for this task?** It supports over 100 formats, works on .NET Framework and .NET Core, and offers a unified API for both metadata extraction and editing.  
-- **Can I protect a DOCX while extracting metadata?** Yes—metadata can be read before you apply protection using the “how to protect docx” workflow.  
-- **Do I need a license for production?** A valid GroupDocs.Editor license is required for commercial deployments; a free trial is available for evaluation.  
-- **What .NET versions are supported?** .NET Framework 4.5+, .NET Core 3.1+, .NET 5/6/7.
+## クイックアンサー
+- **ドキュメントメタデータの抽出とは何ですか？** ファイルをフルエディターで開かずに、埋め込まれた情報（作成者、作成日、カスタムプロパティ）を読み取るプロセスです。
+- **このタスクに GroupDocs.Editor を使用する理由は何ですか？** 100 を超える形式をサポートし、.NET Framework と .NET Core で動作し、メタデータの抽出と編集の両方に統合された API を提供します。
+- **メタデータの抽出中に DOCX を保護できますか？** はい。「docx の保護方法」ワークフローを使用して、保護を適用する前にメタデータを読み取ることができます。
+- **本番環境での使用にはライセンスが必要ですか？** 商用展開には有効な GroupDocs.Editor ライセンスが必要です。評価用に無料トライアルをご利用いただけます。
+- **サポートされている .NET バージョンはどれですか？** .NETFramework4.5 以上、.NETCore3.1 以上、.NET5/6/7。
 
-## What is “extract document metadata”?
-Extracting document metadata means programmatically retrieving properties such as title, author, keywords, and custom fields that are stored inside a file’s header. This information is essential for indexing, search, compliance, and automated workflows.
+## 「ドキュメントメタデータの抽出」とは何ですか？
+ドキュメントメタデータの抽出とは、ファイルのヘッダー内に格納されているタイトル、作成者、キーワード、カスタムフィールドなどのプロパティをプログラムで取得することを意味します。この情報は、インデックス作成、検索、コンプライアンス、自動化ワークフローに不可欠です。
 
-## Why focus on advanced document editing?
-Advanced document editing lets you modify content, protect files, and handle complex structures (tables, images, form fields) without losing formatting. Combining metadata extraction with editing capabilities enables you to **build document processing** pipelines that are both intelligent and secure.
+## 高度なドキュメント編集に重点を置く理由は何ですか？
+高度なドキュメント編集により、コンテンツの変更、ファイルの保護、複雑な構造（表、画像、フォームフィールド）の処理を書式を維持したまま行うことができます。メタデータ抽出と編集機能を組み合わせることで、インテリジェントかつ安全な **ドキュメント処理** パイプラインを構築できます。
 
-## Prerequisites
-- Visual Studio 2022 or later (or any .NET‑compatible IDE)  
-- GroupDocs.Editor for .NET NuGet package installed  
-- A valid GroupDocs.Editor license (or temporary trial license)  
+## 前提条件
+- Visual Studio 2022 以降（または .NET 互換の IDE）
+- GroupDocs.Editor for .NET NuGet パッケージがインストールされている
+- 有効な GroupDocs.Editor ライセンス（または一時的な試用ライセンス）
 
-## Available Tutorials
+## 利用可能なチュートリアル
 
-### [Master Document Processing with GroupDocs.Editor .NET&#58; Load and Edit Word Documents](./groupdocs-editor-net-word-documents-processing/)
-Learn how to efficiently load, read, and edit Word documents using GroupDocs.Editor for .NET. Perfect for developers seeking advanced document processing solutions.
+### [GroupDocs.Editor .NET によるマスタードキュメント処理：Word 文書の読み込みと編集](./groupdocs-editor-net-word-documents-processing/)
+GroupDocs.Editor for .NET を使用して、Word 文書を効率的に読み込み、読み取り、編集する方法を学習します。高度なドキュメント処理ソリューションを求める開発者に最適です。
 
-### [Master Metadata Extraction in .NET with GroupDocs.Editor&#58; A Comprehensive Guide](./groupdocs-editor-net-metadata-extraction-guide/)
-Learn how to efficiently extract and manage metadata from various document formats using GroupDocs.Editor for .NET. This guide covers Word, Excel, and text files.
+### [GroupDocs.Editor による .NET でのマスターメタデータ抽出：包括的ガイド](./groupdocs-editor-net-metadata-extraction-guide/)
+GroupDocs.Editor for .NET を使用して、さまざまなドキュメント形式からメタデータを効率的に抽出し、管理する方法を学習します。このガイドでは、Word、Excel、テキストファイルについて説明します。
 
-### [Optimize and Protect DOCX Files Using GroupDocs.Editor in .NET&#58; Advanced Guide](./optimize-protect-docx-groupdocs-editor-dotnet/)
-Learn how to optimize, protect, and fix invalid form fields in DOCX files using GroupDocs.Editor for .NET. Boost your document management workflow with this comprehensive guide.
+### [GroupDocs.Editor for .NET を使用した DOCX ファイルの最適化と保護：上級ガイド](./optimize-protect-docx-groupdocs-editor-dotnet/)
+GroupDocs.Editor for .NET を使用して、DOCX ファイル内の無効なフォームフィールドを最適化、保護、修正する方法を学びます。この包括的なガイドで、ドキュメント管理ワークフローを強化しましょう。
 
-## Additional Resources
+## 追加リソース
 
-- [GroupDocs.Editor for .net Documentation](https://docs.groupdocs.com/editor/net/)
-- [GroupDocs.Editor for .net API Reference](https://reference.groupdocs.com/editor/net/)
-- [Download GroupDocs.Editor for .net](https://releases.groupdocs.com/editor/net/)
-- [GroupDocs.Editor Forum](https://forum.groupdocs.com/c/editor)
-- [Free Support](https://forum.groupdocs.com/)
-- [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- [GroupDocs.Editor for .net ドキュメント](https://docs.groupdocs.com/editor/net/)
+- [GroupDocs.Editor for .net API リファレンス](https://reference.groupdocs.com/editor/net/)
+- [GroupDocs.Editor for .net のダウンロード](https://releases.groupdocs.com/editor/net/)
+- [GroupDocs.Editor フォーラム](https://forum.groupdocs.com/c/editor)
+- [無料サポート](https://forum.groupdocs.com/)
+- [一時ライセンス](https://purchase.groupdocs.com/temporary-license/)
 
-## Frequently Asked Questions
+## よくある質問
 
-**Q: How do I extract metadata from a password‑protected PDF?**  
-A: Use the `LoadOptions` object to supply the password when opening the document, then call the metadata extraction API.
+**Q: パスワードで保護された PDF からメタデータを抽出するにはどうすればよいですか？**
+A: ドキュメントを開く際に `LoadOptions` オブジェクトを使用してパスワードを入力し、メタデータ抽出 API を呼び出します。
 
-**Q: Can I edit a document after extracting its metadata?**  
-A: Absolutely. The library lets you read metadata first, then perform any editing operations such as “edit word document .net” scenarios.
+**Q: メタデータを抽出した後、ドキュメントを編集できますか？**
+A: はい。ライブラリを使用すると、まずメタデータを読み取り、その後「Word 文書の .NET 編集」などの編集操作を実行できます。
 
-**Q: What is the best way to protect a DOCX after editing?**  
-A: Follow the “how to protect docx” guide—apply password protection via the `ProtectionOptions` class after you finish all edits.
+**Q: 編集後に DOCX ファイルを保護する最適な方法は何ですか？**
+A: 「docx ファイルの保護方法」ガイドに従ってください。すべての編集が完了したら、`ProtectionOptions` クラスを使用してパスワード保護を適用してください。
 
-**Q: Is it possible to batch‑process multiple files for metadata extraction?**  
-A: Yes. Wrap the extraction logic in a loop or use Parallel.ForEach for high‑throughput scenarios.
+**Q: メタデータ抽出のために複数のファイルを一括処理することはできますか？**
+A: はい。抽出ロジックをループで囲むか、高スループットのシナリオでは Parallel.ForEach を使用してください。
 
-**Q: Does GroupDocs.Editor support custom metadata fields?**  
-A: Custom properties are fully supported; you can read and write them using the same metadata API.
+**Q: GroupDocs.Editor はカスタムメタデータフィールドをサポートしていますか？**
+A: カスタムプロパティは完全にサポートされており、同じメタデータ API を使用して読み書きできます。
 
 ---
 
-**Last Updated:** 2026-01-29  
-**Tested With:** GroupDocs.Editor 23.12 for .NET  
-**Author:** GroupDocs
+**最終更新日:** 2026年1月29日
+**テスト環境:** GroupDocs.Editor 23.12 for .NET
+**作成者:** GroupDocs

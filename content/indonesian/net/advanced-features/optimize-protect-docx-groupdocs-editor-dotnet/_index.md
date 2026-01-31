@@ -8,7 +8,7 @@ keywords:
 - optimize DOCX
 - fix invalid form fields
 title: 'Lindungi Dokumen Word dan Optimalkan DOCX menggunakan GroupDocs.Editor untuk
-  .NET: Panduan Lanjutan'
+  .NET - Panduan Lanjutan'
 type: docs
 url: /id/net/advanced-features/optimize-protect-docx-groupdocs-editor-dotnet/
 weight: 1
@@ -199,13 +199,11 @@ Siap menerapkan keterampilan ini? Cobalah mengimplementasikan solusi ini dalam p
 
 ## FAQ Section
 
-**Q1: Is GroupDocs.Editor compatible with all .NET versions?**  
-A1: Ya, ia mendukung berbagai versi .NET Framework dan .NET Core. Selalu periksa [official compatibility page](https://docs.groupdocs.com/editor/net/) untuk detail spesifik.
+**Q: Is GroupDocs.Editor compatible with all .NET versions?**  
+A: Ya, ia mendukung berbagai versi .NET Framework dan .NET Core. Selalu periksa [official compatibility page](https://docs.groupdocs.com/editor/net/) untuk detail spesifik.
 
-**Q2: How does memory optimization affect document processing time?**  
-A2: Optimisasi memori dapat sedikit meningkatkan waktu pemrosesan tetapi sangat penting untuk menangani dokumen besar secara efisien.
-
-## Additional Frequently Asked Questions
+**Q: How does memory optimization affect document processing time?**  
+A: Optimisasi memori dapat sedikit meningkatkan waktu pemrosesan tetapi sangat penting untuk menangani dokumen besar secara efisien.
 
 **Q: Can I protect a document with both read‑only and form‑field editing permissions?**  
 A: Ya, Anda dapat menggabungkan `WordProcessingProtectionType.AllowOnlyFormFields` dengan kata sandi untuk membatasi penyuntingan lain sambil tetap mengizinkan interaksi formulir.

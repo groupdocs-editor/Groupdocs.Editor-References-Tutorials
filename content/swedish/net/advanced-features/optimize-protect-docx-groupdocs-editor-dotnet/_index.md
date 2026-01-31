@@ -6,7 +6,7 @@ keywords:
 - protect word document
 - optimize DOCX
 - fix invalid form fields
-title: 'Skydda Word-dokument och optimera DOCX med GroupDocs.Editor för .NET: Avancerad
+title: 'Skydda Word-dokument och optimera DOCX med GroupDocs.Editor för .NET - Avancerad
   guide'
 type: docs
 url: /sv/net/advanced-features/optimize-protect-docx-groupdocs-editor-dotnet/
@@ -198,13 +198,11 @@ Redo att sätta dessa färdigheter i praktiken? Prova att implementera denna lö
 
 ## FAQ‑avsnitt
 
-**Q1: Är GroupDocs.Editor kompatibel med alla .NET‑versioner?**  
-A1: Ja, den stöder ett brett spektrum av .NET Framework‑ och .NET Core‑versioner. Kontrollera alltid den [officiella kompatibilitetssidan](https://docs.groupdocs.com/editor/net/) för detaljer.
+**Q: Är GroupDocs.Editor kompatibel med alla .NET‑versioner?**  
+A: Ja, den stöder ett brett spektrum av .NET Framework‑ och .NET Core‑versioner. Kontrollera alltid den [officiella kompatibilitetssidan](https://docs.groupdocs.com/editor/net/) för detaljer.
 
-**Q2: Hur påverkar minnesoptimering bearbetningstiden för dokument?**  
-A2: Minnesoptimering kan något öka bearbetningstiden men är avgörande för att hantera stora dokument effektivt.
-
-## Ytterligare vanliga frågor
+**Q: Hur påverkar minnesoptimering bearbetningstiden för dokument?**  
+A: Minnesoptimering kan något öka bearbetningstiden men är avgörande för att hantera stora dokument effektivt.
 
 **Q: Kan jag skydda ett dokument med både skrivskydd och behörighet för formulärfält?**  
 A: Ja, du kan kombinera `WordProcessingProtectionType.AllowOnlyFormFields` med ett lösenord för att begränsa andra redigeringar samtidigt som formulärinteraktion tillåts.

@@ -8,7 +8,7 @@ keywords:
 - optimize DOCX
 - fix invalid form fields
 title: 'GroupDocs.Editor for .NET kullanarak Word Belgesini Koruyun ve DOCX''i Optimize
-  Edin: İleri Düzey Kılavuz'
+  Edin - İleri Düzey Kılavuz'
 type: docs
 url: /tr/net/advanced-features/optimize-protect-docx-groupdocs-editor-dotnet/
 weight: 1
@@ -201,13 +201,11 @@ Bu becerileri uygulamaya koymaya hazır mısınız? Bu çözümü bir sonraki pr
 
 ## SSS Bölümü
 
-**S1: GroupDocs.Editor tüm .NET sürümleriyle uyumlu mu?**  
-C1: Evet, geniş bir .NET Framework ve .NET Core sürüm yelpazesini destekler. Her zaman [official compatibility page](https://docs.groupdocs.com/editor/net/) adresindeki resmi uyumluluk sayfasını kontrol edin.
+**S: GroupDocs.Editor tüm .NET sürümleriyle uyumlu mu?**  
+C: Evet, geniş bir .NET Framework ve .NET Core sürüm yelpazesini destekler. Her zaman [official compatibility page](https://docs.groupdocs.com/editor/net/) adresindeki resmi uyumluluk sayfasını kontrol edin.
 
-**S2: Bellek optimizasyonu belge işleme süresini nasıl etkiler?**  
-C2: Bellek optimizasyonu işleme süresini hafifçe artırabilir ancak büyük belgeleri verimli bir şekilde işlemek için kritiktir.
-
-## Ek Sık Sorulan Sorular
+**S: Bellek optimizasyonu belge işleme süresini nasıl etkiler?**  
+C: Bellek optimizasyonu işleme süresini hafifçe artırabilir ancak büyük belgeleri verimli bir şekilde işlemek için kritiktir.
 
 **S: Bir belgeyi hem yalnızca‑okunur hem de form‑alanı düzenleme izinleriyle koruyabilir miyim?**  
 C: Evet, `WordProcessingProtectionType.AllowOnlyFormFields` ile bir şifreyi birleştirerek diğer düzenlemeleri kısıtlayabilir ve yine de form etkileşimine izin verebilirsiniz.

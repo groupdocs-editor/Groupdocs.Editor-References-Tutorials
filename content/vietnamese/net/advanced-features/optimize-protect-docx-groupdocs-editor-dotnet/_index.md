@@ -7,7 +7,7 @@ keywords:
 - protect word document
 - optimize DOCX
 - fix invalid form fields
-title: 'Bảo vệ tài liệu Word và tối ưu DOCX bằng GroupDocs.Editor cho .NET: Hướng
+title: 'Bảo vệ tài liệu Word và tối ưu DOCX bằng GroupDocs.Editor cho .NET - Hướng
   dẫn nâng cao'
 type: docs
 url: /vi/net/advanced-features/optimize-protect-docx-groupdocs-editor-dotnet/
@@ -199,13 +199,13 @@ Sẵn sàng áp dụng những kỹ năng này? Hãy triển khai giải pháp t
 
 ## Phần Câu hỏi thường gặp
 
-**Q1: GroupDocs.Editor có tương thích với mọi phiên bản .NET không?**  
-A1: Có, nó hỗ trợ đa dạng các phiên bản .NET Framework và .NET Core. Luôn kiểm tra [trang tương thích chính thức](https://docs.groupdocs.com/editor/net/) để biết chi tiết.
+**Q: GroupDocs.Editor có tương thích với mọi phiên bản .NET không?**  
+A: Có, nó hỗ trợ đa dạng các phiên bản .NET Framework và .NET Core. Luôn kiểm tra [trang tương thích chính thức](https://docs.groupdocs.com/editor/net/) để biết chi tiết.
 
-**Q2: Tối ưu bộ nhớ ảnh hưởng như thế nào đến thời gian xử lý tài liệu?**  
-A2: Tối ưu bộ nhớ có thể làm tăng nhẹ thời gian xử lý, nhưng rất quan trọng để xử lý các tài liệu lớn một cách hiệu quả.
+**Q: Tối ưu bộ nhớ ảnh hưởng như thế nào đến thời gian xử lý tài liệu?**  
+A: Tối ưu bộ nhớ có thể làm tăng nhẹ thời gian xử lý, nhưng rất quan trọng để xử lý các tài liệu lớn một cách hiệu quả.
 
-## Các câu hỏi thường gặp bổQ: Tôi có thể bảo vệ tài liệu vừa với quyền chỉ‑đọc vừa cho phép chỉnh sửa trường biểu mẫu không?**  
+**Q: Tôi có thể bảo vệ tài liệu vừa với quyền chỉ‑đọc vừa cho phép chỉnh sửa trường biểu mẫu không?**  
 A: Có, bạn có thể kết hợp `WordProcessingProtectionType.AllowOnlyFormFields` với mật khẩu để hạn chế các chỉnh sửa khác trong khi vẫn cho phép tương tác với các trường biểu mẫu.
 
 **Q: Điều gì sẽ xảy ra nếu tên trường biểu mẫu đã là duy nhất?**  
