@@ -1,51 +1,62 @@
 ---
-title: "How to Convert Word to HTML and Edit Word Documents in Java with GroupDocs.Editor"
-description: "Learn how to convert word to html and edit Word documents in Java using GroupDocs.Editor. Extract HTML from Word files effortlessly."
-date: "2026-02-16"
-weight: 1
-url: "/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/"
+date: '2026-02-16'
+description: Ismerje meg, hogyan konvertálhatja a Word dokumentumokat HTML-re, és
+  szerkesztheti a Word fájlokat Java-ban a GroupDocs.Editor segítségével. Kényelmesen
+  nyerjen ki HTML-t a Word fájlokból.
 keywords:
 - GroupDocs.Editor Java
 - edit Word documents in Java
 - extract HTML from Word using Java
+title: Hogyan konvertáljunk Word-et HTML-re, és szerkesszünk Word dokumentumokat Java-ban
+  a GroupDocs.Editor használatával
 type: docs
+url: /hu/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/
+weight: 1
 ---
 
-# Convert Word to HTML and Edit Word Documents in Java with GroupDocs.Editor
+.
 
-If you need to **convert word to html** while also being able to edit Word files programmatically, you’ve come to the right place. In this tutorial we’ll walk through the complete process of loading a `.docx`, making changes, and extracting the HTML representation using GroupDocs.Editor for Java. By the end you’ll be comfortable with both **edit word document java** scenarios and **java extract html content** techniques.
+Implementation Guide etc.
+
+Translate each heading and text.
+
+Will produce final markdown with Hungarian.
+
+Let's craft final answer.# Word konvertálása HTML-re és Word dokumentumok szerkesztése Java-ban a GroupDocs.Editor segítségével
+
+Ha **convert word to html** funkcióra van szükséged, miközben programozottan is szerkeszteni szeretnéd a Word fájlokat, jó helyen jársz. Ebben az útmutatóban végigvezetünk a teljes folyamaton: egy `.docx` betöltése, módosítások végrehajtása, és a HTML reprezentáció kinyerése a GroupDocs.Editor for Java segítségével. A végére magabiztos leszel mind a **edit word document java** szituációkban, mind a **java extract html content** technikákban.
 
 ## Quick Answers
-- **Can I convert Word to HTML with GroupDocs.Editor?** Yes, the API provides a direct `edit` method that returns HTML content.  
-- **Do I need a license for production use?** A valid GroupDocs.Editor license is required for commercial deployments.  
-- **Which Java version is supported?** Java 8 or higher; the library is compatible with JDK 11 and newer.  
-- **Is it possible to edit password‑protected documents?** Absolutely – just supply the password in `WordProcessingLoadOptions`.  
-- **How large a document can I process?** Files up to several hundred megabytes are supported; for very large files consider processing in chunks.
+- **Can I convert Word to HTML with GroupDocs.Editor?** Igen, az API egy közvetlen `edit` metódust biztosít, amely HTML tartalmat ad vissza.  
+- **Do I need a license for production use?** Egy érvényes GroupDocs.Editor licenc szükséges a kereskedelmi telepítésekhez.  
+- **Which Java version is supported?** Java 8 vagy újabb; a könyvtár kompatibilis a JDK 11‑el és újabb verziókkal.  
+- **Is it possible to edit password‑protected documents?** Teljesen lehetséges – csak add meg a jelszót a `WordProcessingLoadOptions`‑ban.  
+- **How large a document can I process?** Több száz megabájt méretű fájlok is támogatottak; nagyon nagy fájlok esetén fontold meg a darabolt feldolgozást.
 
 ## What is “convert word to html”?
-Converting a Word document to HTML means transforming the rich‑text layout, styles, and embedded objects into standard web markup. This enables you to display document content in browsers, embed it in web applications, or further process it with HTML‑based tools.
+A Word dokumentum HTML-re konvertálása azt jelenti, hogy a gazdag szöveges elrendezést, stílusokat és beágyazott objektumokat szabványos webes jelölésre alakítjuk át. Ez lehetővé teszi a dokumentum tartalmának böngészőkben való megjelenítését, webalkalmazásokba ágyazását, vagy további feldolgozását HTML‑alapú eszközökkel.
 
 ## Why use GroupDocs.Editor for edit word document java?
-GroupDocs.Editor abstracts the complexities of the Office Open XML format, giving you a clean Java API to:
+A GroupDocs.Editor elrejti az Office Open XML formátum bonyolultságát, és egy tiszta Java API‑t biztosít, amellyel:
 
-- Load `.docx` or `.doc` files directly from streams.  
-- Edit the document in an **editable word document java** format (internally a DOM you can manipulate).  
-- Extract clean, standards‑compliant HTML without needing Microsoft Office installed.
+- `.docx` vagy `.doc` fájlok közvetlen betöltése adatfolyamokból.  
+- A dokumentum szerkesztése **editable word document java** formátumban (belsőleg egy manipulálható DOM).  
+- Tiszta, szabványos HTML kinyerése Microsoft Office telepítése nélkül.
 
 ## Prerequisites
 
-Before we dive into the code, make sure you have the following:
+Mielőtt a kódba merülnénk, győződj meg róla, hogy a következőkkel rendelkezel:
 
 ### Required Libraries and Dependencies
-- **GroupDocs.Editor** – available via Maven Central or direct download.
+- **GroupDocs.Editor** – elérhető a Maven Centralon vagy közvetlen letöltésként.
 
 ### Environment Setup Requirements
-- JDK 8 or newer installed.
-- An IDE such as IntelliJ IDEA or Eclipse.
+- JDK 8 vagy újabb telepítve.  
+- IDE, például IntelliJ IDEA vagy Eclipse.
 
 ### Knowledge Prerequisites
-- Familiarity with Java I/O.
-- Basic understanding of Maven project structure.
+- Java I/O ismerete.  
+- Alapvető ismeretek a Maven projektstruktúráról.
 
 ## Setting Up GroupDocs.Editor for Java
 
@@ -76,11 +87,11 @@ Add the repository and dependency to your `pom.xml` exactly as shown:
 If you prefer not to use Maven, grab the latest JAR from [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 ### License Acquisition Steps
-- **Free Trial** – explore core features without a license.  
-- **Temporary License** – obtain a time‑limited key for extended testing.  
-- **Purchase** – acquire a full license for production workloads.
+- **Free Trial** – licenc nélkül felfedezheted a fő funkciókat.  
+- **Temporary License** – időkorlátos kulcs beszerzése a kiterjesztett teszteléshez.  
+- **Purchase** – teljes licenc beszerzése a termelési feladatokhoz.
 
-Once the library is on your classpath, you can create an `Editor` instance:
+Miután a könyvtár a classpath‑on van, létrehozhatsz egy `Editor` példányt:
 
 ```java
 import com.groupdocs.editor.Editor;
