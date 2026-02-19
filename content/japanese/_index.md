@@ -1,14 +1,14 @@
 ---
 additionalTitle: GroupDocs API References | Document Editing Solutions
-date: 2025-12-19
-description: GroupDocs.Editor APIをご体験ください – .NET および Java アプリで Word、Excel、PowerPoint、PDF
-  などの変換、編集、処理を行う、業界トップクラスのドキュメント編集 APIです。今すぐ強力なエディタの構築を始めましょう。
+date: 2026-02-19
+description: GroupDocs.Editor APIをご体験ください – .NET と Java アプリで Word、Excel、PowerPoint、PDF
+  などの変換、編集、処理を実現する、業界トップクラスのドキュメント編集 API です。GroupDocs.Editor API を使って、今すぐ強力なエディタの構築を始めましょう。
 is_root: true
 keywords: document editor API, document editing, .NET document API, Java document
   API, Word editing, Excel editing, PowerPoint editing, PDF editing, HTML conversion,
   document conversion, document processing
 linktitle: GroupDocs.Editor Tutorials & Documentation
-title: GroupDocs.Editor API – .NET と Java 用の完全なドキュメント編集
+title: GroupDocs.Editor API – .NET および Java 用の完全な文書編集
 type: docs
 url: /ja/
 weight: 11
@@ -16,135 +16,138 @@ weight: 11
 
 # GroupDocs.Editor API – .NET と Java 用の完全なドキュメント編集
 
-Welcome to the comprehensive **GroupDocs.Editor API** documentation and tutorials hub! The GroupDocs.Editor API enables you to edit, convert, and process documents programmatically within your .NET and Java applications. Our solution allows you to:
+Welcome to the comprehensive **GroupDocs.Editor API** documentation and tutorials hub! Whether you're a seasoned developer or just getting started, this central resource gives you everything you need to integrate high‑fidelity document editing, conversion, and processing into your .NET and Java applications.
 
-- **Convert documents to HTML** を任意の WYSIWYG エディタで編集できるように変換  
-- **Transform documents back** を元の形式に完璧な忠実度で復元  
-- **Process a wide range of formats** （Word、Excel、PowerPoint、PDF、XML など）を処理  
-- **Implement secure document editing** をパスワード保護と権限管理で実装  
+このハブでは、チュートリアル、コードサンプル、ベストプラクティスガイドへの明確なナビゲーションが提供されており、**GroupDocs.Editor API の使い方** が複雑なドキュメントワークフローをシンプルにし、Microsoft Office や Adobe 製品への依存を減らし、ソリューションの市場投入までの時間を短縮できることを示します。
 
-Whether you're building content management systems, document automation tools, or collaborative editing platforms, the GroupDocs.Editor API provides the foundation for seamless document processing.
+## Quick Overview
 
-## GroupDocs.Editor API とは？
+- **All‑in‑one editing pipeline** – Load a document, convert it to editable HTML, make changes, and save it back without losing formatting.  
+- **Cross‑platform support** – Run on Windows, Linux, or macOS with the same API surface.  
+- **Secure processing** – Built‑in password protection, encryption, and permission handling.  
+- **Extensive format coverage** – From classic Office files to PDFs, XML, plain text, and delimited formats.
+
+## What is the GroupDocs.Editor API?
 
 The GroupDocs.Editor API is a **document editing API** that lets developers programmatically load, modify, and save a broad spectrum of file types without requiring Microsoft Office or Adobe Acrobat. It handles **document conversion**, preserves layout, and supports advanced features such as form fields and encryption.
 
-## GroupDocs.Editor API を選ぶ理由
+## Why Choose the GroupDocs.Editor API?
 
-- **Format Versatility** – Word、Excel、PowerPoint、PDF、XML、TXT などを編集  
-- **High Fidelity** – 完璧なドキュメントの書式と構造を維持  
-- **No External Dependencies** – Microsoft Office や Adobe 製品は不要  
-- **Cross‑Platform Compatibility** – Windows、Linux、macOS で動作  
-- **Comprehensive API** – 複雑なドキュメント操作のための豊富な機能  
-- **Excellent Performance** – 速度と効率性を最適化  
-- **Detailed Documentation** – ステップバイステップのチュートリアルと例  
+- **Format Versatility** – Edit Word, Excel, PowerPoint, PDF, XML, TXT, and more.  
+- **High Fidelity** – Maintain perfect document formatting and structure.  
+- **No External Dependencies** – No need for Microsoft Office or Adobe products.  
+- **Cross‑Platform Compatibility** – Works on Windows, Linux, and macOS.  
+- **Comprehensive API** – Rich functionality for complex document manipulation.  
+- **Excellent Performance** – Optimized for speed and efficiency.  
+- **Detailed Documentation** – Step‑by‑step tutorials and examples.
 
-## GroupDocs.Editor の開始方法
+## Who Can Benefit?
 
-### [GroupDocs.Editor for .NET チュートリアル](./net/)
+- **CMS developers** building in‑app document editors.  
+- **Automation engineers** creating batch document generation pipelines.  
+- **Enterprise teams** needing secure, server‑side document processing.  
+- **SaaS providers** delivering collaborative editing experiences.  
+- **Reporting solutions** that generate and modify PDFs, spreadsheets, or presentations on the fly.
 
-GroupDocs.Editor for .NET は、開発者が正確かつ効率的にドキュメントを作成、変更、変換できるようにします。当社の包括的な .NET API は、すべての主要なドキュメント形式をサポートし、外部依存なしで高度な編集機能を提供します。
+## Get Started with GroupDocs.Editor
 
-#### .NET の主な機能
+### [GroupDocs.Editor for .NET Tutorials](./net/)
 
-- HTML 変換を含む完全なドキュメント編集パイプライン  
-- ラウンドトリップ変換時の高度な書式保持  
-- CSS の取り扱いと操作に関する包括的なサポート  
-- フォームフィールドの管理とインタラクティブ要素の編集  
-- 暗号化オプションを備えた安全なドキュメント処理  
+GroupDocs.Editor for .NET empowers developers to create, modify, and convert documents with precision and efficiency. Our comprehensive .NET API supports all major document formats and provides advanced editing capabilities without external dependencies.
 
-#### .NET チュートリアルカテゴリ:
+#### Key Features for .NET
+- Complete document editing pipeline with HTML conversion  
+- Advanced formatting preservation during round‑trip conversions  
+- Comprehensive support for CSS handling and manipulation  
+- Form field management and interactive element editing  
+- Secure document processing with encryption options  
 
-- [**CSS ハンドリング**](./net/css-handling/) - 完璧なドキュメントスタイリングのための CSS 操作をマスター  
-- [**HTML コンテンツ取得**](./net/html-content-retrieval/) - HTML コンテンツを効率的に抽出・処理  
-- [**フォームフィールド管理**](./net/form-field-management/) - インタラクティブなフォーム要素を制御  
-- [**ドキュメント処理**](./net/document-processing/) - コアなドキュメント操作技術  
-- [**クイックスタートガイド**](./net/quick-start-guide/) - 数分でセットアップ  
-- [**ドキュメントロード**](./net/document-loading/) - さまざまなソースからドキュメントをロード  
-- [**ドキュメント編集**](./net/document-editing/) - ドキュメントの内容と構造を変更  
-- [**HTML 操作**](./net/html-manipulation/) - 高度な HTML 処理  
-- [**ワードプロセッシング ドキュメント**](./net/word-processing-documents/) - DOCX、DOC、RTF の編集チュートリアル  
-- [**スプレッドシート ドキュメント**](./net/spreadsheet-documents/) - Excel ファイル操作ガイド  
-- [**プレゼンテーション ドキュメント**](./net/presentation-documents/) - PowerPoint 編集テクニック  
-- [**PDF ドキュメント**](./net/pdf-documents/) - PDF の作成と変更  
-- [**XML ドキュメント**](./net/xml-documents/) - XML の処理と変換  
-- [**フォームフィールド**](./net/form-fields/) - インタラクティブフォームの実装  
-- [**高度な機能**](./net/advanced-features/) - エキスパートレベルの機能  
-- [**ライセンスと構成**](./net/licensing-configuration/) - 設定とデプロイのガイダンス  
-- [**ドキュメント保存とエクスポート**](./net/document-saving/) - さまざまな形式へエクスポート  
-- [**HTML ドキュメント編集**](./net/html-web-documents/) - Web ドキュメントの処理  
-- [**プレーンテキストと DSV ドキュメント編集**](./net/plain-text-dsv-documents/) - テキストおよび区切りファイル  
+#### .NET Tutorial Categories:
 
-### [GroupDocs.Editor for Java チュートリアル](./java/)
+- [**CSS Handling**](./net/css-handling/) - Master CSS manipulation for perfect document styling  
+- [**HTML Content Retrieval**](./net/html-content-retrieval/) - Extract and process HTML content efficiently  
+- [**Form Field Management**](./net/form-field-management/) - Control interactive form elements  
+- [**Document Processing**](./net/document-processing/) - Core document manipulation techniques  
+- [**Quick Start Guide**](./net/quick-start-guide/) - Get up and running in minutes  
+- [**Document Loading**](./net/document-loading/) - Load documents from various sources  
+- [**Document Editing**](./net/document-editing/) - Modify document content and structure  
+- [**HTML Manipulation**](./net/html-manipulation/) - Advanced HTML processing  
+- [**Word Processing Documents**](./net/word-processing-documents/) - DOCX, DOC, RTF editing tutorials  
+- [**Spreadsheet Documents**](./net/spreadsheet-documents/) - Excel file manipulation guides  
+- [**Presentation Documents**](./net/presentation-documents/) - PowerPoint editing techniques  
+- [**PDF Documents**](./net/pdf-documents/) - PDF creation and modification  
+- [**XML Documents**](./net/xml-documents/) - XML processing and conversion  
+- [**Form Fields**](./net/form-fields/) - Interactive form implementation  
+- [**Advanced Features**](./net/advanced-features/) - Expert‑level functionality  
+- [**Licensing & Configuration**](./net/licensing-configuration/) - Setup and deployment guidance  
+- [**Document Saving and Export**](./net/document-saving/) - Export to various formats  
+- [**HTML Document Editing**](./net/html-web-documents/) - Web document processing  
+- [**Plain Text and DSV Document Editing**](./net/plain-text-dsv-documents/) - Text and delimited files  
 
-GroupDocs.Editor for Java は、Java アプリケーション向けに強力なドキュメント編集機能を提供します。当社の Java API は、プラットフォームを超えてシームレスなドキュメント操作を実現し、エンタープライズレベルのソリューションや Web アプリケーションに最適です。
+### [GroupDocs.Editor for Java Tutorials](./java/)
 
-#### Java の主な機能
+GroupDocs.Editor for Java delivers robust document editing capabilities for Java applications. Our Java API enables seamless document manipulation across platforms, making it ideal for enterprise‑level solutions and web applications.
 
-- プラットフォームに依存しないドキュメント編集ソリューション  
-- すべての業務ドキュメントタイプに対する包括的な形式サポート  
-- 暗号化とアクセス制御による安全な処理  
-- リソース抽出とコンテンツ最適化  
-- 高性能ドキュメント処理エンジン  
+#### Key Features for Java
+- Platform‑independent document editing solution  
+- Comprehensive format support for all business document types  
+- Secure processing with encryption and access control  
+- Resource extraction and content optimization  
+- High‑performance document processing engine  
 
-#### Java チュートリアルカテゴリ:
+#### Java Tutorial Categories:
 
-- [**ドキュメントロード チュートリアル**](./java/document-loading/) - ファイル、ストリームなどからドキュメントをロード  
-- [**ドキュメント編集 チュートリアル**](./java/document-editing/) - 正確かつ制御されたドキュメント編集  
-- [**ドキュメント保存とエクスポート チュートリアル**](./java/document-saving/) - さまざまな形式でドキュメントを保存  
-- [**ワードプロセッシング ドキュメント編集**](./java/word-processing-documents/) - Microsoft Word ドキュメントの操作  
-- [**スプレッドシート ドキュメント編集**](./java/spreadsheet-documents/) - Excel ワークブックの処理  
-- [**プレゼンテーション ドキュメント編集**](./java/presentation-documents/) - PowerPoint スライドの操作  
-- [**プレーンテキストと DSV ドキュメント編集**](./java/plain-text-dsv-documents/) - テキストファイルの取り扱い  
-- [**XML ドキュメント編集**](./java/xml-documents/) - XML 処理テクニック  
-- [**フォームフィールド編集**](./java/form-fields/) - インタラクティブなフォーム管理  
-- [**高度な機能チュートリアル**](./java/advanced-features/) - エキスパートテクニック  
-- [**ライセンスと構成**](./java/licensing-configuration/) - デプロイガイダンス  
+- [**Document Loading Tutorials**](./java/document-loading/) - Load documents from files, streams, and more  
+- [**Document Editing Tutorials**](./java/document-editing/) - Edit documents with precision and control  
+- [**Document Saving and Export Tutorials**](./java/document-saving/) - Save documents in various formats  
+- [**Word Processing Document Editing**](./java/word-processing-documents/) - Microsoft Word document manipulation  
+- [**Spreadsheet Document Editing**](./java/spreadsheet-documents/) - Excel workbook processing  
+- [**Presentation Document Editing**](./java/presentation-documents/) - PowerPoint slide manipulation  
+- [**Plain Text and DSV Document Editing**](./java/plain-text-dsv-documents/) - Text file handling  
+- [**XML Document Editing**](./java/xml-documents/) - XML processing techniques  
+- [**Form Fields Editing**](./java/form-fields/) - Interactive form management  
+- [**Advanced Features Tutorials**](./java/advanced-features/) - Expert techniques  
+- [**Licensing and Configuration**](./java/licensing-configuration/) - Deployment guidance  
 
-## 一般的なユースケース
+## Common Use Cases
 
-- **Content Management Systems** – CMS プラットフォームでドキュメント編集を実装  
-- **Document Automation** – ドキュメント生成と処理を自動化  
-- **Collaborative Editing** – 複数ユーザーによるドキュメント共同編集を実現  
-- **Format Conversion** – 高忠実度でドキュメント形式間の変換  
-- **Document Assembly** – 複数のソースから複雑なドキュメントを作成  
-- **Reporting Solutions** – プログラムでレポートを生成・編集  
-- **Web‑Based Document Editors** – カスタムオンライン編集ソリューションを構築  
+- **Content Management Systems** – Implement document editing in CMS platforms  
+- **Document Automation** – Automate document generation and processing  
+- **Collaborative Editing** – Enable multi‑user document collaboration  
+- **Format Conversion** – Convert between document formats with high fidelity  
+- **Document Assembly** – Create complex documents from multiple sources  
+- **Reporting Solutions** – Generate and edit reports programmatically  
+- **Web‑Based Document Editors** – Build custom online editing solutions  
 
-## よくある質問
+## Frequently Asked Questions
 
-### サポートされているドキュメント形式は何ですか？
+### What document formats are supported?
+GroupDocs.Editor supports a wide range of formats including DOCX, DOC, XLSX, XLS, PPTX, PPT, PDF, HTML, XML, RTF, ODT, ODS, ODP, TXT, CSV, and many more.
 
-GroupDocs.Editor は、DOCX、DOC、XLSX、XLS、PPTX、PPT、PDF、HTML、XML、RTF、ODT、ODS、ODP、TXT、CSV など、幅広い形式をサポートしています。
+### Do I need Microsoft Office installed?
+No, GroupDocs.Editor operates independently without requiring Microsoft Office or any other external applications.
 
-### Microsoft Office のインストールは必要ですか？
+### Can I implement GroupDocs.Editor in web applications?
+Absolutely! GroupDocs.Editor is perfect for web applications, allowing you to build browser‑based document editing solutions.
 
-いいえ、GroupDocs.Editor は Microsoft Office やその他の外部アプリケーションを必要とせずに独立して動作します。
+### Is GroupDocs.Editor secure?
+Yes, GroupDocs.Editor includes security features such as password protection, encryption, and permission management.
 
-### GroupDocs.Editor を Web アプリケーションに組み込むことはできますか？
+### How can I get started?
+Start by exploring our [Quick Start Guide](./net/quick-start-guide/) or download a free trial from the [GroupDocs website](https://products.groupdocs.com/editor/).
 
-もちろんです！GroupDocs.Editor は Web アプリケーションに最適で、ブラウザベースのドキュメント編集ソリューションを構築できます。
+## Get Support and Resources
 
-### GroupDocs.Editor は安全ですか？
-
-はい、GroupDocs.Editor にはパスワード保護、暗号化、権限管理などのセキュリティ機能が含まれています。
-
-### どのように始めればよいですか？
-
-まずは [クイックスタートガイド](./net/quick-start-guide/) をご覧いただくか、[GroupDocs のウェブサイト](https://products.groupdocs.com/editor/) から無料トライアルをダウンロードしてください。
-
-## サポートとリソースを取得
-
-- [ドキュメント](https://docs.groupdocs.com/editor/)
-- [API リファレンス](https://apireference.groupdocs.com/editor)
-- [GitHub のサンプル](https://github.com/groupdocs-editor)
-- [無料サポートフォーラム](https://forum.groupdocs.com/c/editor)
-- [有料サポートヘルプデスク](https://helpdesk.groupdocs.com/)
-- [ブログ](https://blog.groupdocs.com/category/editor/)
-- [無料トレーニングウェビナー](https://groupdocs.com/webinars)
+- [Documentation](https://docs.groupdocs.com/editor/)
+- [API Reference](https://apireference.groupdocs.com/editor)
+- [Examples on GitHub](https://github.com/groupdocs-editor)
+- [Free Support Forum](https://forum.groupdocs.com/c/editor)
+- [Paid Support Helpdesk](https://helpdesk.groupdocs.com/)
+- [Blog](https://blog.groupdocs.com/category/editor/)
+- [Free Training Webinars](https://groupdocs.com/webinars)
 
 ---
 
-**最終更新日:** 2025-12-19  
-**テスト環境:** GroupDocs.Editor 最新リリース (2025)  
-**作者:** GroupDocs
+**Last Updated:** 2026-02-19  
+**Tested With:** GroupDocs.Editor latest release (2026)  
+**Author:** GroupDocs
