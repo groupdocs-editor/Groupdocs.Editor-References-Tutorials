@@ -1,42 +1,44 @@
 ---
-date: '2025-12-21'
-description: Erfahren Sie, wie Sie ein bearbeitbares Dokument erstellen und Word‑Dateien
-  mit GroupDocs.Editor für Java bearbeiten. Enthält Einrichtung, Ressourcenextraktion
-  und automatisierte Berichtserstellung.
+date: '2026-02-21'
+description: Erfahren Sie, wie Sie Bilder aus Word extrahieren, Word in HTML konvertieren
+  und editierbare Dokumente mit GroupDocs.Editor für Java erstellen. Enthält Anleitungen
+  zur Einrichtung, Ressourcenextraktion und Tipps zur Stapelverarbeitung.
 keywords:
 - GroupDocs.Editor for Java
 - document editing in Java
 - Java document management
-title: Wie man ein bearbeitbares Dokument mit GroupDocs.Editor für Java erstellt
+title: Wie man Bilder aus Word extrahiert und ein bearbeitbares Dokument mit GroupDocs.Editor
+  für Java erstellt
 type: docs
 url: /de/java/document-editing/master-document-editing-groupdocs-editor-java/
 weight: 1
 ---
 
-# Erstellen eines editierbaren Dokuments mit GroupDocs.Editor Java
+# Bilder aus Word extrahieren und bearbeitbares Dokument mit GroupDocs.Editor Java erstellen
 
-In den heutigen, schnelllebigen Unternehmen ist die Möglichkeit, **editierbare Dokumente** programmgesteuert zu erstellen, ein echter Wendepunkt. Egal, ob Sie **Word**‑Vorlagen **bearbeiten**, **Bilder aus Word extrahieren** oder **Word in HTML** für ein Web‑Portal **konvertieren** müssen – GroupDocs.Editor für Java bietet Ihnen einen zuverlässigen, leistungsstarken Weg, diese Aufgaben zu automatisieren. In diesem Leitfaden führen wir Sie durch alles, was Sie benötigen – von der Umgebungseinrichtung bis hin zu fortgeschrittenen Bearbeitungen – damit Sie in wenigen Minuten Lösungen bauen können, die **die Berichtserstellung automatisieren**.
+In den heutigen schnelllebigen Unternehmen ist die Möglichkeit, **Bilder aus Word**‑Dateien programmgesteuert zu extrahieren, ein echter Wendepunkt. Egal, ob Sie **Word in HTML konvertieren**, **HTML aus Word erzeugen** oder **Word‑Dokument in Java bearbeiten** möchten, GroupDocs.Editor für Java bietet Ihnen eine zuverlässige, leistungsstarke Möglichkeit, diese Aufgaben zu automatisieren. In diesem Leitfaden führen wir Sie durch alles, was Sie benötigen – von der Einrichtung der Umgebung bis hin zur erweiterten Bearbeitung – damit Sie in wenigen Minuten Lösungen erstellen können, die **die Berichtserstellung automatisieren** und **Word‑Dokumente stapelweise verarbeiten**.
 
 ## Schnellantworten
-- **Welche Hauptklasse wird verwendet, um eine Word‑Datei zu laden?** `Editor`  
+- **Was ist die primäre Klasse zum Laden einer Word‑Datei?** `Editor`  
 - **Welche Methode liefert das HTML‑Markup zum Bearbeiten?** `edit()` gibt ein `EditableDocument` zurück  
 - **Wie extrahiere ich Bilder aus einem Word‑Dokument?** Verwenden Sie `getAllResources()` auf dem `EditableDocument`  
 - **Kann ich den bearbeiteten Inhalt wieder auf die Festplatte speichern?** Ja, rufen Sie `save()` auf dem `EditableDocument` auf  
-- **Benötige ich eine Lizenz für die Entwicklung?** Eine kostenlose Test‑ oder temporäre Lizenz reicht für Tests; für die Produktion ist eine Voll‑Lizenz erforderlich  
+- **Benötige ich eine Lizenz für die Entwicklung?** Eine kostenlose Testversion oder temporäre Lizenz reicht für Tests; für die Produktion ist eine Voll‑Lizenz erforderlich  
 
-## Was bedeutet „editierbares Dokument erstellen“?
-Ein editierbares Dokument zu erstellen bedeutet, eine Quelldatei (z. B. .docx) in ein Format zu laden, das manipuliert werden kann – meist HTML – sodass Sie Text, Bilder, Stile oder Links programmgesteuert ändern können, bevor Sie das Ergebnis speichern.
+## Was bedeutet „Bilder aus Word extrahieren“?
+Das Extrahieren von Bildern aus Word bedeutet, eine `.docx`‑Datei zu laden, sie in eine bearbeitbare HTML‑Darstellung zu konvertieren und anschließend jedes eingebettete Bild, jede Schriftart oder jedes Stylesheet herauszuziehen. Dadurch erhalten Sie die vollständige Kontrolle über jede Ressource, sodass Sie sie separat speichern, auf einem CDN erneut hosten oder in ein anderes Dokument einbetten können.
 
 ## Warum GroupDocs.Editor für Java verwenden?
-- **Voll‑umfängliche Word‑Unterstützung** – Bearbeiten, extrahieren und konvertieren ohne Microsoft Office.  
+- **Vollständige Word‑Unterstützung** – Bearbeiten, extrahieren und konvertieren ohne Microsoft Office.  
 - **Nahtlose HTML‑Konvertierung** – ideal für webbasierte Editoren oder CMS‑Integrationen.  
-- **Robuste Ressourcenverwaltung** – Bilder, Schriften und CSS in einem Aufruf erhalten.  
-- **Skalierbare Performance** – perfekt für Batch‑Verarbeitung und groß angelegte Berichtserstellung.  
+- **Robuste Ressourcenverwaltung** – Bilder, Schriftarten und CSS in einem Aufruf erhalten.  
+- **Skalierbare Leistung** – ideal für Stapelverarbeitung und groß angelegte Berichtserstellung.  
+- **Praktische Java‑API** – funktioniert nahtlos mit Java 8+ und gängigen IDEs.  
 
 ## Voraussetzungen
-- Java Development Kit (JDK) 8 oder neuer.  
+- Java Development Kit (JDK) 8 oder neuer.  
 - Eine IDE wie IntelliJ IDEA oder Eclipse.  
-- Grundkenntnisse in Java und Erfahrung mit Maven.
+- Grundkenntnisse in Java und Vertrautheit mit Maven.
 
 ### Erforderliche Bibliotheken
 Binden Sie die GroupDocs.Editor‑Bibliothek in Ihr Projekt ein. Verwenden Sie Maven, um sie als Abhängigkeit hinzuzufügen:
@@ -62,14 +64,14 @@ Binden Sie die GroupDocs.Editor‑Bibliothek in Ihr Projekt ein. Verwenden Sie M
 Alternativ können Sie die neueste Version direkt von [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) herunterladen.
 
 ### Lizenzbeschaffung
-Um GroupDocs.Editor zu nutzen, können Sie mit einer kostenlosen Testversion beginnen, eine temporäre Lizenz anfordern oder eine Voll‑Lizenz erwerben. Die Bibliothek funktioniert sofort für Evaluierungen, und das Umschalten auf eine Produktionslizenz besteht lediglich darin, die Lizenzdatei zu aktualisieren.
+Um GroupDocs.Editor zu nutzen, können Sie mit einer kostenlosen Testversion beginnen, eine temporäre Lizenz anfordern oder eine Voll‑Lizenz erwerben. Die Bibliothek funktioniert sofort für Evaluierungen, und der Wechsel zu einer Produktionslizenz besteht lediglich darin, die Lizenzdatei zu aktualisieren.
 
-## Wie man ein editierbares Dokument mit GroupDocs.Editor Java erstellt
+## So erstellen Sie ein bearbeitbares Dokument mit GroupDocs.Editor Java
 
 ### Installation
-1. **Abhängigkeit hinzufügen** – stellen Sie sicher, dass die `pom.xml` das oben gezeigte Maven‑Snippet enthält.  
-2. **JAR herunterladen** – falls Sie die manuelle Einrichtung bevorzugen, holen Sie sich das neueste JAR von der offiziellen [GroupDocs‑Seite](https://releases.groupdocs.com/editor/java/).  
-3. **Lizenz konfigurieren** – platzieren Sie Ihre `GroupDocs.Editor.lic`‑Datei im Ressourcen‑Ordner oder setzen Sie sie programmgesteuert.
+1. **Abhängigkeit hinzufügen** – stellen Sie sicher, dass die `pom.xml` das obige Maven‑Snippet enthält.  
+2. **JAR herunterladen** – wenn Sie die manuelle Einrichtung bevorzugen, holen Sie sich die neueste JAR von der offiziellen [GroupDocs‑Seite](https://releases.groupdocs.com/editor/java/).  
+3. **Lizenz konfigurieren** – legen Sie Ihre `GroupDocs.Editor.lic`‑Datei im Ressourcen‑Ordner ab oder setzen Sie sie programmgesteuert.
 
 ### Grundlegende Initialisierung
 Sobald die Umgebung bereit ist, können Sie die Klasse `Editor` mit dem Pfad zu Ihrer Word‑Datei instanziieren:
@@ -81,13 +83,11 @@ import com.groupdocs.editor.Editor;
 Editor editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx");
 ```
 
-Diese einfache Zeile liefert Ihnen einen voll funktionsfähigen Editor, der das Laden, Bearbeiten und Speichern des Dokuments übernimmt.
+Diese einfache Zeile liefert Ihnen einen voll funktionsfähigen Editor, der das Laden, Bearbeiten und Speichern des Dokuments ermöglicht.
 
-## Implementierungs‑Leitfaden
+## Schritt‑für‑Schritt‑Anleitung
 
-### Erstellen und Bearbeiten editierbarer Dokumente
-
-#### Überblick
+### Schritt 1: Dokument als EditableDocument laden
 Das Laden eines Dokuments als `EditableDocument` ist der erste Schritt zu jeder Modifikation.
 
 ```java
@@ -99,16 +99,14 @@ Editor editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx");
 EditableDocument beforeEdit = editor.edit();
 ```
 
-- **`Editor`** – übernimmt Datei‑I/O und Format‑Erkennung.  
-- **`EditableDocument`** – repräsentiert das Dokument in einer editierbaren HTML‑Form.
+- **`Editor`** – verwaltet Datei‑I/O und Format‑Erkennung.  
+- **`EditableDocument`** – stellt das Dokument in einer bearbeitbaren HTML‑Form dar.
 
-#### Wie man Word‑Inhalte bearbeitet (how to edit word)
-Sie können nun den HTML‑String manipulieren, Platzhalter ersetzen oder Stile aktualisieren. Nach den Änderungen rufen Sie `save()` auf, um sie zu persistieren.
+### Schritt 2: Word‑Inhalt bearbeiten (wie man Word bearbeitet)
+Sie können nun den HTML‑String manipulieren, Platzhalter ersetzen oder Stile aktualisieren. Nach den Änderungen rufen Sie `save()` auf, um sie zu speichern.
 
-### Extrahieren von Dokument‑Ressourcen
-
-#### Überblick
-GroupDocs.Editor erleichtert das Herausziehen eingebetteter Ressourcen wie Bilder, Schriften und CSS‑Dateien.
+### Schritt 3: Bilder und andere Ressourcen extrahieren
+GroupDocs.Editor erleichtert das Herausziehen jeder eingebetteten Ressource, was genau dem **Extrahieren von Bildern aus Word** entspricht.
 
 ```java
 import com.groupdocs.editor.htmlcss.resources.IHtmlResource;
@@ -123,25 +121,21 @@ List<String> stylesheets = beforeEdit.getCssContent();
 ```
 
 - **`getEmbeddedHtml()`** – gibt das vollständige HTML‑Markup zurück.  
-- **`getAllResources()`** – liefert eine Liste aller Bilder, Schriften oder Stylesheets, die im ursprünglichen Word‑File eingebettet sind.  
-- **`extract images from word** – iterieren Sie einfach über `allResources` und filtern Sie Objekte vom Typ `ImageResource`.
+- **`getAllResources()`** – liefert eine Liste aller im ursprünglichen Word‑File eingebetteten Bilder, Schriftarten oder Stylesheets.  
+- **`extract images from word`** – einfach `allResources` iterieren, um Objekte vom Typ `ImageResource` zu finden.
 
-### Anpassen externer Links im HTML‑Markup
-
-#### Überblick
-Enthält Ihr Dokument Links, die auf einen benutzerdefinierten Handler (z. B. ein CDN) zeigen sollen, können Sie diese zur Laufzeit umschreiben.
+### Schritt 4: Externe Links im HTML‑Markup anpassen
+Wenn Ihr Dokument Links enthält, die auf einen benutzerdefinierten Handler (z. B. ein CDN) zeigen sollen, können Sie diese unterwegs umschreiben.
 
 ```java
 String customImagesRequesthandlerUri = "http://example.com/ImagesHandler/id=";
 String htmlMarkup = beforeEdit.getContentString(customImagesRequesthandlerUri);
 ```
 
-- **`getContentString()`** – fügt das angegebene URI‑Präfix zu allen Bild‑Referenzen hinzu, sodass Sie steuern können, von wo die Bilder geladen werden.
+- **`getContentString()`** – fügt das angegebene URI‑Präfix zu allen Bildreferenzen ein, sodass Sie steuern können, von wo die Bilder bereitgestellt werden.
 
-### Speichern des editierbaren Dokuments auf die Festplatte
-
-#### Überblick
-Nach allen Änderungen und Ressourcen‑Anpassungen schreiben Sie das Ergebnis zurück in eine HTML‑Datei (oder konvertieren später erneut nach DOCX).
+### Schritt 5: Das bearbeitete Dokument auf die Festplatte speichern
+Nach allen Bearbeitungen und Ressourcenanpassungen schreiben Sie das Ergebnis zurück in eine HTML‑Datei (oder konvertieren es später erneut zu DOCX).
 
 ```java
 // Save the edited document as an HTML file
@@ -150,21 +144,17 @@ beforeEdit.save("YOUR_OUTPUT_DIRECTORY/output.html");
 
 - **`save()`** – speichert das bearbeitete HTML und alle verknüpften Ressourcen im angegebenen Ordner.
 
-### Überprüfen des Entsorgungs‑Status von EditableDocument
-
-#### Überblick
-Ein korrektes Ressourcen‑Management ist besonders wichtig, wenn viele Dateien in einem Batch‑Job verarbeitet werden.
+### Schritt 6: Den Entsorgungsstatus prüfen
+Eine ordnungsgemäße Ressourcenverwaltung ist entscheidend, besonders beim **Stapelverarbeiten von Word‑Dokumenten**.
 
 ```java
 String res = !beforeEdit.isDisposed() ? "not" : "already";
 ```
 
-- **`isDisposed()`** – gibt `true` zurück, wenn die nativen Ressourcen des Dokuments freigegeben wurden. Größere Dokumente sollten immer nach der Verarbeitung entsorgt werden.
+- **`isDisposed()`** – gibt `true` zurück, wenn die nativen Ressourcen des Dokuments freigegeben wurden. Entsorgen Sie große Dokumente immer, wenn Sie fertig sind.
 
-### Erstellen eines EditableDocument aus HTML
-
-#### Überblick
-Sie können auch von einer bestehenden HTML‑Datei oder rohem Markup starten – praktisch für **convert word to html**‑Szenarien.
+### Schritt 7: Ein EditableDocument aus HTML erstellen
+Sie können auch von einer bestehenden HTML‑Datei oder rohem Markup starten, was für **Word‑zu‑HTML‑Konvertierung**‑Szenarien praktisch ist.
 
 ```java
 import com.groupdocs.editor.EditableDocument;
@@ -175,40 +165,46 @@ EditableDocument afterEditFromMarkup = EditableDocument.fromMarkup(htmlMarkup, a
 ```
 
 - **`fromFile()`** – lädt eine HTML‑Datei, die zuvor mit `save()` gespeichert wurde.  
-- **`fromMarkup()`** – erzeugt ein `EditableDocument` direkt aus einem String und seiner Ressourcen‑Liste.
+- **`fromMarkup()`** – erstellt ein `EditableDocument` direkt aus einem String und seiner Ressourcenliste.
 
-## Praktische Anwendungsfälle
-GroupDocs.Editor Java glänzt in realen Projekten:
+## Wie man Word mit GroupDocs.Editor zu HTML konvertiert
+Die Methode `edit()` konvertiert die geladene `.docx`‑Datei automatisch in eine HTML‑Darstellung. Sie können dann `getEmbeddedHtml()` oder `getContentString()` verwenden, um die **HTML‑Ausgabe aus Word generieren** zu erhalten, die in Webseiten, E‑Mails eingebettet oder für spätere Verwendung gespeichert werden kann.
 
-1. **Content‑Management‑Systeme (CMS)** – betten Sie einen „Dokument bearbeiten“-Button ein, der einen webbasierten Editor öffnet, der das von Ihnen erzeugte HTML nutzt.  
-2. **Kollaborative Bearbeitungsplattformen** – lassen Sie mehrere Benutzer dieselbe Word‑Vorlage bearbeiten und fügen Sie die Änderungen automatisch zusammen.  
-3. **Automatisierte Berichtserstellung** – füllen Sie Platzhalter in einer Word‑Vorlage mit Daten aus einer Datenbank, exportieren Sie das Ergebnis nach HTML für E‑Mails oder zurück nach DOCX für den Download.
+## Stapelverarbeitung von Word‑Dokumenten mit GroupDocs.Editor
+Wenn Sie Dutzende oder Hunderte von Vorlagen verarbeiten müssen, verpacken Sie die obigen Schritte in einer Schleife oder einer `CompletableFuture`‑Pipeline. Denken Sie daran, nach jedem Dokument `dispose()` aufzurufen (oder die Garbage Collection es erledigen zu lassen), um den Speicherverbrauch gering zu halten.
 
-## Leistungs‑Überlegungen
-- **Früh entsorgen** – rufen Sie `beforeEdit.dispose()` (oder lassen Sie den GC arbeiten) nach dem Speichern auf, um nativen Speicher freizugeben.  
-- **Batch‑Verarbeitung** – nutzen Sie Java‑`CompletableFuture`, um mehrere Dokumente parallel zu bearbeiten, ohne den UI‑Thread zu blockieren.  
-- **Große Dateien** – streamen Sie Ressourcen, anstatt das gesamte Dokument in den Speicher zu laden, wann immer es möglich ist.
+## Häufige Probleme und Lösungen
+- **Große Dokumente verursachen OutOfMemoryError** – streamen Sie Ressourcen, anstatt alles in den Speicher zu laden; entsorgen Sie jedes `EditableDocument`, sobald Sie fertig sind.  
+- **Bilder erscheinen nach der Konvertierung nicht** – stellen Sie sicher, dass Sie das korrekte URI‑Präfix an `getContentString()` übergeben oder die extrahierten Ressourcen in den Zielordner kopieren.  
+- **Lizenz wird nicht erkannt** – prüfen Sie, ob die `GroupDocs.Editor.lic`‑Datei im Klassenpfad liegt oder setzen Sie die Lizenz programmgesteuert, bevor Sie den `Editor` erstellen.
+
+## Häufig gestellte Fragen
+
+**F: Kann ich PDFs mit GroupDocs.Editor Java bearbeiten?**  
+A: Ja, GroupDocs.Editor unterstützt verschiedene Formate, einschließlich PDF. Siehe die [API‑Referenz](https://reference.groupdocs.com/editor/java/) für spezifische Methoden.
+
+**F: Wie gehe ich effizient mit großen Dokumenten um?**  
+A: Nutzen Sie Ressourcenverwaltungs‑Techniken, wie das sofortige Entsorgen von `EditableDocument`‑Instanzen und die parallele Verarbeitung von Dateien mit Java‑`CompletableFuture`.
+
+**F: Ist GroupDocs.Editor mit allen Java‑IDEs kompatibel?**  
+A: Ja, es funktioniert mit gängigen IDEs wie IntelliJ IDEA und Eclipse.
+
+**F: Was ist der beste Weg, **Bilder aus Word** zu extrahieren, wenn viele Dateien verarbeitet werden?**  
+A: Durchlaufen Sie `EditableDocument.getAllResources()` und filtern Sie nach `ImageResource`‑Objekten; speichern Sie sie in einem eigenen Ordner oder laden Sie sie währenddessen zu einem CDN hoch.
+
+**F: Kann ich das bearbeitete HTML zurück in eine DOCX‑Datei konvertieren?**  
+A: Absolut. Verwenden Sie nach Ihren Änderungen `EditableDocument.saveAsDocx("path/to/output.docx")`.
 
 ## Fazit
-Sie haben nun einen vollständigen End‑zu‑Ende‑Leitfaden, wie Sie **editierbare Dokumente** erstellen, **Word**‑Inhalte **bearbeiten**, **Bilder aus Word extrahieren** und **Word nach HTML konvertieren** mit GroupDocs.Editor für Java. Diese Techniken befähigen Sie, leistungsstarke dokumenten‑zentrierte Anwendungen zu bauen und **die Berichtserstellung** mit Zuversicht zu automatisieren.
+Sie haben nun eine vollständige Schritt‑für‑Schritt‑Anleitung, wie Sie **Bilder aus Word** extrahieren, **Word‑Inhalte** bearbeiten, **Word zu HTML** konvertieren und **bearbeitbare Dokumente** mit GroupDocs.Editor für Java erzeugen. Diese Techniken befähigen Sie, leistungsstarke dokumenten‑zentrierte Anwendungen zu erstellen und **die Berichtserstellung** mit Zuversicht zu automatisieren.
 
 ### Nächste Schritte
-- Versuchen Sie, eine Vorlage mit dynamischen Platzhaltern (z. B. `{{CustomerName}}`) zu bearbeiten.  
+- Versuchen Sie, eine Vorlage mit dynamischen Platzhaltern zu bearbeiten (z. B. `{{CustomerName}}`).  
 - Erkunden Sie die API zum Zurück‑Speichern nach DOCX (`EditableDocument.saveAsDocx()`).  
-- Integrieren Sie den Workflow in einen Spring‑Boot‑Service für die on‑demand‑Dokumentenerstellung.
-
-## FAQ‑Abschnitt
-**Q1: Kann ich PDFs mit GroupDocs.Editor Java bearbeiten?**  
-A1: Ja, GroupDocs.Editor unterstützt verschiedene Formate, einschließlich PDF. Weitere Details finden Sie in der [API‑Referenz](https://reference.groupdocs.com/editor/java/).
-
-**Q2: Wie gehe ich effizient mit großen Dokumenten um?**  
-A1: Nutzen Sie Ressourcen‑Management‑Techniken und optimieren Sie Ihren Code, um große Dateien ohne Leistungseinbußen zu verarbeiten.
-
-**Q3: Ist GroupDocs.Editor mit allen Java‑IDEs kompatibel?**  
-A1: Ja, es ist mit gängigen IDEs wie IntelliJ IDEA und Eclipse kompatibel.
+- Integrieren Sie den Workflow in einen Spring‑Boot‑Service für die bedarfsgerechte Dokumentenerstellung.
 
 ---
 
-**Zuletzt aktualisiert:** 2025-12-21  
-**Getestet mit:** GroupDocs.Editor 25.3 für Java  
+**Zuletzt aktualisiert:** 2026-02-21  
+**Getestet mit:** GroupDocs.Editor 25.3 für Java  
 **Autor:** GroupDocs
