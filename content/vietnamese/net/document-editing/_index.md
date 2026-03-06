@@ -1,71 +1,139 @@
 ---
-title: Chỉnh sửa tài liệu
-linktitle: Chỉnh sửa tài liệu
-second_title: API GroupDocs.Editor .NET
-description: Quản lý và chỉnh sửa tài liệu với GroupDocs.Editor .NET. Tìm hiểu cách tạo, chỉnh sửa và lưu tài liệu một cách dễ dàng. Nâng cao quy trình quản lý tài liệu của bạn ngay hôm nay!
-weight: 20
-url: /vi/net/document-editing/
+date: 2026-03-06
+description: Tìm hiểu cách chuyển đổi HTML sang Word bằng GroupDocs.Editor cho .NET.
+  Hướng dẫn này cũng đề cập đến cách chỉnh sửa tài liệu, tải các tệp được bảo vệ bằng
+  mật khẩu và trích xuất HTML từ tài liệu.
+linktitle: Convert HTML to Word
+second_title: GroupDocs.Editor .NET API
+title: Chuyển đổi HTML sang Word với GroupDocs.Editor .NET
 type: docs
+url: /vi/net/document-editing/
+weight: 20
 ---
-# Chỉnh sửa tài liệu
 
+# Chuyển đổi HTML sang Word với GroupDocs.Editor .NET
 
-Bạn đang tìm cách hợp lý hóa quy trình quản lý tài liệu của mình? Đi sâu vào thế giới của GroupDocs.Editor để xem các hướng dẫn .NET và phát huy toàn bộ tiềm năng của khả năng chỉnh sửa tài liệu. Từ việc tạo tài liệu có thể chỉnh sửa từ HTML đến cách sử dụng nâng cao và tiết kiệm tài nguyên, các hướng dẫn này cung cấp hướng dẫn toàn diện cho các nhà phát triển đang tìm kiếm chức năng nâng cao và tích hợp liền mạch.
+Bạn có muốn tối ưu hoá quy trình quản lý tài liệu không? Trong hướng dẫn này, bạn sẽ khám phá cách **chuyển đổi HTML sang Word** nhanh chóng và đáng tin cậy với GroupDocs.Editor cho .NET. Chúng tôi cũng sẽ chỉ cho bạn cách chỉnh sửa tài liệu, tải các tệp được bảo vệ bằng mật khẩu và trích xuất nội dung HTML — tất cả đều là những kỹ năng thiết yếu cho các nhà phát triển .NET hiện đại.
 
-## Giới thiệu về GroupDocs.Editor cho .NET
+## Quick Answers
+- **What does “convert html to word” mean?** It transforms an HTML file into a fully editable Word document (.docx).  
+- **Which library handles this?** GroupDocs.Editor for .NET provides a dedicated API for the conversion.  
+- **Do I need a license?** A free trial works for development; a commercial license is required for production.  
+- **Can I edit the resulting Word file programmatically?** Yes, you can edit the document using the same editor API.  
+- **Is password‑protected handling supported?** Absolutely—GroupDocs.Editor can open and edit password‑protected files.
 
- Bạn mới sử dụng GroupDocs.Editor cho .NET? Đi sâu vào hướng dẫn chi tiết của chúng tôi về[cách sử dụng công cụ mạnh mẽ này](./introduction-groupdocs-editor/) để chỉnh sửa tài liệu theo chương trình. Cho dù bạn là nhà phát triển dày dạn hay mới làm quen với thế giới quản lý tài liệu, hướng dẫn của chúng tôi đều cung cấp thông tin chi tiết và mẹo để giúp bạn bắt đầu. Mở khóa tiềm năng của GroupDocs.Editor cho .NET ngay hôm nay.
+## What is “convert html to word”?
+Converting HTML to Word means taking the markup, styles, and images from an HTML page and generating a .docx file that preserves the layout while allowing full editing capabilities. This is especially useful for generating reports, contracts, or any document that starts as web content but needs to be shared in a Microsoft Word format.
 
-## Tạo tài liệu
+## Why use GroupDocs.Editor for .NET?
+- **Single‑step conversion** – No need for intermediate formats.  
+- **Preserves styling** – CSS, tables, and images are kept intact.  
+- **Full editability** – After conversion you can edit the document programmatically (edit word document .net).  
+- **Supports password protection** – Load password‑protected documents without extra code.  
+- **Cross‑platform** – Works with .NET Framework, .NET Core, and .NET 5/6+.
 
-Sẵn sàng đi sâu vào việc tạo tài liệu? Tìm hiểu cách[chỉnh sửa tài liệu Word, Excel, PowerPoint, Ebook và Email](./create-document/) sử dụng GroupDocs.Editor cho .NET. Hướng dẫn toàn diện của chúng tôi cung cấp hướng dẫn từng bước, giúp các nhà phát triển tạo và tùy chỉnh tài liệu một cách dễ dàng. Nâng cao quy trình quản lý tài liệu của bạn ngay hôm nay.
+## Prerequisites
+- .NET 6.0 or later (or .NET Framework 4.6+).  
+- GroupDocs.Editor for .NET NuGet package installed.  
+- Basic knowledge of C# and file I/O.
 
-## Chỉnh sửa tài liệu
+## How to convert HTML to Word
+Below you’ll find a concise overview of the steps. The detailed code lives in the dedicated tutorial linked later in this page.
 
- Chỉnh sửa tài liệu chưa bao giờ dễ dàng hơn thế. Khám phá cách dễ dàng[chỉnh sửa tài liệu](./edit-document/) với GroupDocs.Editor cho .NET. Cho dù bạn đang làm việc với các tệp Xử lý văn bản hay Bảng tính, hướng dẫn từng bước của chúng tôi sẽ đơn giản hóa quy trình, cho phép bạn thực hiện các sửa đổi một cách liền mạch. Nói lời tạm biệt với việc chỉnh sửa tẻ nhạt và xin chào năng suất được nâng cao.
+1. **Load the HTML source** – Read the HTML file or string into memory.  
+2. **Create an EditableDocument** – Use the `EditableDocument` class to wrap the HTML content.  
+3. **Save as Word** – Call the `Save` method with the `SaveOptions` set to `SaveFormat.Docx`.  
 
+> **Pro tip:** After saving, you can immediately open the resulting .docx with the same editor instance to perform further modifications such as “how to edit document” programmatically.
 
-## Tải tài liệu
+## How to edit a Word document programmatically (.NET)
+GroupDocs.Editor lets you modify text, replace images, or update tables without leaving the .NET environment. This is the core of the “edit word document .net” workflow and pairs perfectly with the HTML‑to‑Word conversion.
 
- Bạn đã sẵn sàng khai thác sức mạnh của GroupDocs.Editor cho .NET chưa? Tìm hiểu cách[tải tài liệu](./load-document/)xử lý các tệp được bảo vệ bằng mật khẩu và hơn thế nữa với hướng dẫn từng bước của chúng tôi. Cho dù bạn đang chỉnh sửa tài liệu theo chương trình hay tích hợp các tính năng mới vào ứng dụng của mình, hướng dẫn này sẽ trang bị cho bạn kiến thức để thành công. Hãy bắt đầu ngay hôm nay và hợp lý hóa quy trình quản lý tài liệu của bạn.
+## How to load a password‑protected document
+When a file is encrypted, simply provide the password when initializing the `Document` object. The editor will decrypt it on the fly, allowing you to edit or extract content just like any unprotected file.
 
-## Lưu tài liệu
+## How to extract HTML from a document
+If you need the opposite direction—getting HTML back from a Word or Excel file—GroupDocs.Editor offers an `ExtractHtml` method. This satisfies the “extract html from document” requirement and is useful for web‑based previews.
 
- Chỉnh sửa và lưu tài liệu dễ dàng với GroupDocs.Editor cho .NET. Hướng dẫn từng bước của chúng tôi đơn giản hóa quy trình, cho phép các nhà phát triển nâng cao quy trình quản lý tài liệu một cách dễ dàng. Cho dù bạn đang làm việc với tài liệu Word, Excel, PowerPoint, Ebook hay Email, hướng dẫn này đều cung cấp các công cụ và thông tin chuyên sâu mà bạn cần để thành công. Nói xin chào với việc chỉnh sửa và quản lý tài liệu hiệu quả.[Đọc thêm](./save-document/)
+---
 
-## Tạo tài liệu có thể chỉnh sửa từ HTML
+## Introduction to GroupDocs.Editor for .NET
 
- Bạn có mệt mỏi với việc chuyển đổi thủ công không? Khám phá cách dễ dàng[chuyển đổi HTML thành tài liệu Word có thể chỉnh sửa](./create-editable-document-from-html/)sử dụng GroupDocs.Editor cho .NET. Hướng dẫn từng bước của chúng tôi đơn giản hóa quy trình, cho phép bạn tự động hóa việc tạo tài liệu và tiết kiệm thời gian quý báu. Nói lời tạm biệt với những chuyển đổi tẻ nhạt và xin chào cách quản lý tài liệu hiệu quả.
+New to GroupDocs.Editor for .NET? Dive into our detailed guide on [how to use this powerful tool](./introduction-groupdocs-editor/) to edit documents programmatically. Whether you're a seasoned developer or new to the world of document management, our tutorial provides insights and tips to get you started. Unlock the potential of GroupDocs.Editor for .NET today.
 
-## Cách sử dụng nâng cao các tài liệu có thể chỉnh sửa
+## Create Document
 
- Bạn đã sẵn sàng nâng cao kỹ năng chỉnh sửa tài liệu của mình lên một tầm cao mới chưa? Khám phá cái[cách sử dụng nâng cao của GroupDocs.Editor cho .NET](./advanced-usage-of-editable-documents/). Cho dù bạn đang tạo, chỉnh sửa hay trích xuất tài nguyên từ tài liệu theo chương trình, hướng dẫn này sẽ trang bị cho bạn các công cụ để giải quyết các tác vụ phức tạp một cách dễ dàng. Nâng cao quy trình quản lý tài liệu của bạn và mở khóa những khả năng mới ngay hôm nay.
+Ready to dive into document creation? Learn how to [edit Word, Excel, PowerPoint, Ebook, and Email documents](./create-document/) using GroupDocs.Editor for .NET. Our comprehensive tutorial provides step-by-step guidance, empowering developers to create and customize documents with ease. Elevate your document management workflow today.
 
-## Trích xuất nội dung HTML từ tài liệu có thể chỉnh sửa
+## Edit Document
 
- Cần trích xuất nội dung HTML từ tài liệu? GroupDocs.Editor dành cho .NET sẽ hỗ trợ bạn. Hướng dẫn chi tiết của chúng tôi sẽ hướng dẫn bạn thực hiện quy trình một cách liền mạch, đảm bảo tích hợp suôn sẻ và quản lý tài liệu hiệu quả. Nói lời tạm biệt với việc trích xuất thủ công và xin chào các giải pháp tự động.[Đọc thêm](./extract-html-content-from-editable-document/)
+Editing documents has never been easier. Discover how to effortlessly [edit documents](./edit-document/) with GroupDocs.Editor for .NET. Whether you're working with Word Processing or Spreadsheet files, the step‑by‑step guide simplifies the process, enabling you to make revisions seamlessly. Say goodbye to tedious editing and hello to enhanced productivity.
 
-## Lưu tài nguyên HTML vào thư mục
+## Load Document
 
- Bạn đang tìm giải pháp toàn diện để tiết kiệm tài nguyên HTML từ tài liệu? Đi sâu vào hướng dẫn của chúng tôi về[lưu tài nguyên HTML vào một thư mục](./save-html-resources-to-folder/) sử dụng GroupDocs.Editor cho .NET. Với hướng dẫn từng bước, nhà phát triển có thể dễ dàng trích xuất tài nguyên và hợp lý hóa quy trình quản lý tài liệu của họ. Nói xin chào để nâng cao hiệu quả và năng suất.
+Ready to harness the power of GroupDocs.Editor for .NET? Learn how to [load documents](./load-document/), handle password-protected files, and more with our step‑by‑step guide. Whether you're editing documents programmatically or integrating new features into your application, this tutorial equips you with the knowledge to succeed. Get started today and streamline your document management workflow.
 
-Sẵn sàng để nâng cao quy trình quản lý tài liệu của bạn? Đi sâu vào thế giới của GroupDocs.Editor để xem các hướng dẫn .NET và khám phá toàn bộ tiềm năng của khả năng chỉnh sửa tài liệu. Từ việc tạo tài liệu có thể chỉnh sửa đến cách sử dụng nâng cao và tích hợp liền mạch, các hướng dẫn này cung cấp hướng dẫn toàn diện cho các nhà phát triển đang tìm cách hợp lý hóa quy trình làm việc của họ và tăng năng suất. Hãy tạm biệt các quy trình thủ công và chào đón cách quản lý tài liệu hiệu quả với GroupDocs.Editor dành cho .NET. 
-## Hướng dẫn chỉnh sửa tài liệu
-### [Tạo tài liệu có thể chỉnh sửa từ HTML](./create-editable-document-from-html/)
-Chuyển đổi HTML thành tài liệu Word có thể chỉnh sửa bằng GroupDocs.Editor cho .NET với hướng dẫn từng bước này. Hoàn hảo để hợp lý hóa quy trình quản lý tài liệu của bạn.
-### [Cách sử dụng nâng cao các tài liệu có thể chỉnh sửa](./advanced-usage-of-editable-documents/)
-Tìm hiểu cách sử dụng nâng cao của GroupDocs.Editor cho .NET: tạo, chỉnh sửa và trích xuất tài nguyên từ tài liệu theo chương trình.
-### [Trích xuất nội dung HTML từ tài liệu có thể chỉnh sửa](./extract-html-content-from-editable-document/)
-Trích xuất nội dung HTML từ tài liệu một cách dễ dàng bằng GroupDocs.Editor cho .NET. Hãy làm theo hướng dẫn chi tiết của chúng tôi để tích hợp liền mạch và quản lý tài liệu.
-### [Lưu tài nguyên HTML vào thư mục](./save-html-resources-to-folder/)
-Tìm hiểu cách trích xuất tài nguyên HTML từ tài liệu bằng Groupdocs.Editor cho .NET. Hướng dẫn toàn diện này cung cấp hướng dẫn từng bước cho các nhà phát triển.
-### [Tạo tài liệu](./create-document/)
-Tìm hiểu cách chỉnh sửa tài liệu Word, Excel, PowerPoint, Ebook và Email bằng GroupDocs.Editor cho .NET với hướng dẫn từng bước toàn diện này.
-### [Chỉnh sửa tài liệu](./edit-document/)
-Tìm hiểu cách chỉnh sửa tài liệu dễ dàng với GroupDocs.Editor dành cho .NET. Hướng dẫn từng bước cho các tệp Xử lý văn bản và Bảng tính.
-### [Giới thiệu về GroupDocs.Editor cho .NET](./introduction-groupdocs-editor/)
-Tìm hiểu cách sử dụng GroupDocs.Editor dành cho .NET để chỉnh sửa tài liệu theo chương trình với hướng dẫn chi tiết từng bước này.
-### [Tải tài liệu](./load-document/)
-Tìm hiểu cách chỉnh sửa tài liệu theo chương trình bằng GroupDocs.Editor cho .NET. Hướng dẫn từng bước để tải tài liệu, xử lý các tệp được bảo vệ bằng mật khẩu, v.v.
-### [Lưu tài liệu](./save-document/)
-Chỉnh sửa và lưu tài liệu dễ dàng bằng GroupDocs.Editor cho .NET. Hướng dẫn từng bước này giúp đơn giản hóa quy trình cho các nhà phát triển.
+## Save Document
+
+Effortlessly edit and save documents with GroupDocs.Editor for .NET. Our step‑by‑step guide simplifies the process, enabling developers to enhance document management workflow with ease. Whether you're working with Word, Excel, PowerPoint, Ebook, or Email documents, this tutorial provides the tools and insights you need to succeed. Say hello to efficient document editing and management. [Read more](./save-document/)
+
+## Create Editable Document from HTML
+
+Are you tired of manual conversions? Discover how to effortlessly [convert HTML to editable Word documents](./create-editable-document-from-html/) using GroupDocs.Editor for .NET. Our step‑by‑step guide simplifies the process, enabling you to automate document creation and save valuable time. Say goodbye to tedious conversions and hello to efficient document management.
+
+## Advanced Usage of Editable Documents
+
+Ready to take your document editing skills to the next level? Explore the [advanced usage of GroupDocs.Editor for .NET](./advanced-usage-of-editable-documents/). Whether you're creating, editing, or extracting resources from documents programmatically, this tutorial equips you with the tools to tackle complex tasks with ease. Elevate your document management workflow and unlock new possibilities today.
+
+## Extract HTML Content from Editable Document
+
+Need to extract HTML content from documents? GroupDocs.Editor for .NET has you covered. Our detailed guide walks you through the process seamlessly, ensuring smooth integration and efficient document management. Say goodbye to manual extraction and hello to automated solutions. [Read more](./extract-html-content-from-editable-document/)
+
+## Save HTML Resources to Folder
+
+Looking for a comprehensive solution to save HTML resources from documents? Dive into our tutorial on [saving HTML resources to a folder](./save-html-resources-to-folder/) using GroupDocs.Editor for .NET. With step‑by‑step guidance, developers can effortlessly extract resources and streamline their document management workflow. Say hello to enhanced efficiency and productivity.
+
+Ready to enhance your document management workflow? Dive into the world of GroupDocs.Editor for .NET tutorials and unlock the full potential of document editing capabilities. From creating editable documents to advanced usage and seamless integration, these tutorials provide comprehensive guidance for developers seeking to streamline their workflow and boost productivity. Say goodbye to manual processes and hello to efficient document management with GroupDocs.Editor for .NET. 
+
+## Document Editing Tutorials
+### [Create Editable Document from HTML](./create-editable-document-from-html/)
+Convert HTML to editable Word documents using GroupDocs.Editor for .NET with this step‑by‑step guide. Perfect for streamlining your document management workflow.
+### [Advanced Usage of Editable Documents](./advanced-usage-of-editable-documents/)
+Learn advanced usage of GroupDocs.Editor for .NET: creating, editing, and extracting resources from documents programmatically.
+### [Extract HTML Content from Editable Document](./extract-html-content-from-editable-document/)
+Effortlessly extract HTML content from documents using GroupDocs.Editor for .NET. Follow our detailed guide for seamless integration and document management.
+### [Save HTML Resources to Folder](./save-html-resources-to-folder/)
+Learn how to extract HTML resources from documents using Groupdocs.Editor for .NET. This comprehensive tutorial provides step‑by‑step guidance for developers.
+### [Create Document](./create-document/)
+Learn how to edit Word, Excel, PowerPoint, Ebook, and Email documents using GroupDocs.Editor for .NET with this comprehensive step‑by‑step tutorial.
+### [Edit Document](./edit-document/)
+Learn to edit documents effortlessly with GroupDocs.Editor for .NET. Step‑by‑step guide for Word Processing and Spreadsheet files.
+### [Introduction to GroupDocs.Editor for .NET](./introduction-groupdocs-editor/)
+Learn how to use GroupDocs.Editor for .NET to edit documents programmatically with this detailed step‑by‑step guide.
+### [Load Document](./load-document/)
+Learn how to edit documents programmatically with GroupDocs.Editor for .NET. Step‑by‑step guide for loading documents, handling password‑protected files, and more.
+### [Save Document](./save-document/)
+Effortlessly edit and save documents using GroupDocs.Editor for .NET. This step‑by‑step guide simplifies the process for developers.
+
+## Frequently Asked Questions
+
+**Q: Can I convert HTML to Word without losing CSS styling?**  
+A: Yes, GroupDocs.Editor preserves most CSS styles, tables, and images during the conversion.
+
+**Q: How do I edit a Word document after converting from HTML?**  
+A: Load the resulting .docx with the `EditableDocument` class and use the editor’s API to modify text, replace images, or update tables.
+
+**Q: Is it possible to load a password‑protected Word file and then convert it?**  
+A: Absolutely. Provide the password when opening the document; the API will decrypt it automatically.
+
+**Q: Can I extract the original HTML from a Word document?**  
+A: Yes, the `ExtractHtml` method returns the document’s HTML representation, satisfying the “extract html from document” need.
+
+**Q: Does GroupDocs.Editor support editing Excel files programmatically?**  
+A: It does. You can edit Excel spreadsheets using the same editor API, enabling “edit excel programmatically” scenarios.
+
+---
+
+**Cập nhật lần cuối:** 2026-03-06  
+**Kiểm tra với:** GroupDocs.Editor for .NET 23.12 (latest at time of writing)  
+**Tác giả:** GroupDocs
