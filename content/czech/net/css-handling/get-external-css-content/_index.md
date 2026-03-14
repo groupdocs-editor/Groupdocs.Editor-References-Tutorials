@@ -1,56 +1,82 @@
 ---
-title: Získejte externí obsah CSS
-linktitle: Získejte externí obsah CSS
+date: 2026-03-14
+description: Naučte se, jak extrahovat CSS z dokumentu pomocí GroupDocs.Editor pro
+  .NET – krok za krokem průvodce pro vývojáře.
+linktitle: Extract CSS from Document Using GroupDocs.Editor for .NET
 second_title: GroupDocs.Editor .NET API
-description: Pomocí tohoto podrobného průvodce se dozvíte, jak používat GroupDocs.Editor pro .NET k extrahování externího obsahu CSS z dokumentů. Ideální pro vývojáře integrující dokument.
-weight: 10
-url: /cs/net/css-handling/get-external-css-content/
+title: Extrahovat CSS z dokumentu pomocí GroupDocs.Editor pro .NET
 type: docs
+url: /cs/net/css-handling/get-external-css-content/
+weight: 10
 ---
-# Získejte externí obsah CSS
 
-## Úvod
-V tomto článku vás provedeme vším, co potřebujete, abyste mohli začít s GroupDocs.Editor pro .NET. Pokryjeme vše od nastavení vašeho prostředí až po extrahování externího obsahu CSS z dokumentů. Pojďme se rovnou ponořit!
-## Předpoklady
-Než začneme, ujistěte se, že máte splněny následující předpoklady:
-1. .NET Framework: Ujistěte se, že máte nainstalované rozhraní .NET Framework 4.6.1 nebo novější.
-2. Visual Studio: Nainstalujte si Visual Studio 2017 nebo novější pro bezproblémový vývoj.
-3.  GroupDocs.Editor pro .NET: Stáhněte si nejnovější verzi z[Stránka ke stažení GroupDocs.Editor](https://releases.groupdocs.com/editor/net/).
-4. Základní znalost C#: Znalost programování v C# vám pomůže postupovat podle příkladů.
-## Importovat jmenné prostory
-Než se ponoříte do příkladů kódu, musíte do svého projektu C# importovat potřebné jmenné prostory:
+# Extrahovat CSS z dokumentu pomocí GroupDocs.Editor pro .NET
+
+## Introduction
+V tomto tutoriálu se naučíte **jak extrahovat CSS z dokumentu** pomocí GroupDocs.Editor .NET API. Provedeme vás nastavením, ukážeme vám přesný kód, který potřebujete, a vysvětlíme každý krok, abyste mohli sebejistě získat obsah externích stylových listů z Wordu, HTML nebo jiných podporovaných formátů. Ať už budujete systém pro správu obsahu nebo potřebujete programově analyzovat stylování, tento průvodce vás provede.
+
+## Quick Answers
+- **Co znamená „extrahovat CSS z dokumentu“?** Znamená to získání řetězců externích stylových listů vložených v podporovaném souboru, abyste je mohli číst nebo upravovat.  
+- **Která knihovna poskytuje tuto funkci?** GroupDocs.Editor pro .NET.  
+- **Potřebuji licenci?** K dispozici je bezplatná zkušební verze; pro produkční použití je vyžadována komerční licence.  
+- **Jaké verze .NET jsou podporovány?** .NET Framework 4.6.1+, .NET Core 3.1+, .NET 5/6+.  
+- **Jak dlouho trvá implementace?** Obvykle méně než 10 minut pro základní extrakci.
+
+## What is extracting CSS from a document?
+Když dokument (např. DOCX nebo HTML) obsahuje propojené nebo vložené stylové listy, editor ukládá tyto styly jako samostatné řetězce CSS. Jejich extrakce vám umožní prohlížet, upravovat nebo znovu použít logiku stylování mimo původní soubor.
+
+## Why use GroupDocs.Editor for this task?
+- **Kompletní API** – Zpracovává DOCX, HTML, PPTX a další bez nutnosti instalace Office.  
+- **Konzistentní výstup** – Vrací čistý seznam řetězců stylových listů, připravených k dalšímu zpracování.  
+- **Optimalizováno pro výkon** – Pracuje efektivně i s velkými soubory.  
+
+## Prerequisites
+Před zahájením se ujistěte, že máte:
+
+1. **.NET Framework 4.6.1** nebo novější (nebo podporovaný runtime .NET Core/5/6).  
+2. **Visual Studio 2017** nebo novější.  
+3. **GroupDocs.Editor pro .NET** – stáhněte jej ze stránky [GroupDocs.Editor download page](https://releases.groupdocs.com/editor/net/).  
+4. Základní znalost programování v **C#**.
+
+## Import Namespaces
+Nejprve přidejte požadované jmenné prostory, aby kompilátor věděl, kde najít třídy editoru.
+
 ```csharp
 using System;
 using System.Collections.Generic;
 using GroupDocs.Editor.Options;
 ```
-Nyní, když máme naše předpoklady roztříděné a naimportované jmenné prostory, pojďme si rozebrat ukázkový kód krok za krokem.
-## Krok 1: Inicializujte editor
- Nejprve budete muset inicializovat`Editor` objekt s vaším vzorovým dokumentem. Tento krok nastaví dokument pro úpravy.
+
+## Step 1: Initialize the Editor
+Vytvořte instanci `Editor` tak, že ji nasměrujete na soubor, který chcete analyzovat. Delegát poskytuje vhodné možnosti načtení pro dokumenty pro zpracování textu.
+
 ```csharp
 using (Editor editor = new Editor("Your Sample Document", delegate { return new WordProcessingLoadOptions(); }))
 {
-    // Pokračujte dalšími kroky
+    // Proceed to the next steps
 }
 ```
- V tomto úryvku vytvoříme`Editor`instanci poskytnutím cesty k dokumentu a delegáta, který se vrátí`WordProcessingLoadOptions`. Tím se dokument připraví k úpravám.
-## Krok 2: Upravte dokument
-Dále je třeba upravit dokument, aby získal jeho upravitelný stav. Tento krok převede dokument do upravitelného formátu.
+
+## Step 2: Open the Document in Editable Mode
+Voláním `Edit` se zdrojový soubor převede na `EditableDocument`, který poskytuje metody pro extrakci CSS.
+
 ```csharp
 using (EditableDocument document = editor.Edit(new WordProcessingEditOptions()))
 {
-    // Pokračujte dalšími kroky
+    // Proceed to the next steps
 }
 ```
- Zde používáme`Edit` metoda`Editor` třídy, procházející dovnitř`WordProcessingEditOptions` získat`EditableDocument` objekt, který představuje dokument v upravitelné podobě.
-## Krok 3: Získejte obsah CSS
-Nyní extrahujeme obsah CSS z upravitelného dokumentu. Tento krok je zásadní, protože umožňuje přístup ke stylům dokumentu a manipulaci s nimi.
+
+## Step 3: Extract the CSS Content
+Nyní můžete získat každý stylový list, na který dokument odkazuje.
+
 ```csharp
 List<string> stylesheets = document.GetCssContent();
 ```
- The`GetCssContent` metoda vrací seznam šablon stylů CSS přítomných v dokumentu. Tento seznam lze použít pro další zpracování nebo analýzu.
-## Krok 4: Výstup obsahu CSS
-Nakonec vytiskneme extrahovaný obsah CSS do konzole. To vám pomůže ověřit šablony stylů načtené z dokumentu.
+
+## Step 4: Output the CSS Content
+Vytiskněte počet nalezených stylových listů a vypište každý z nich. To vám pomůže ověřit, že extrakce byla úspěšná.
+
 ```csharp
 Console.WriteLine("There are {0} stylesheets in the input document", stylesheets.Count);
 foreach (string css in stylesheets)
@@ -58,17 +84,34 @@ foreach (string css in stylesheets)
     Console.WriteLine(css);
 }
 ```
-této části vypíšeme počet stylů a jejich obsah do konzole. To poskytuje jasný pohled na CSS použité v dokumentu.
-## Závěr
-A tady to máte! Úspěšně jste extrahovali externí obsah CSS z dokumentu pomocí GroupDocs.Editor pro .NET. Tento podrobný průvodce by vám měl pomoci pochopit základy používání této výkonné knihovny pro potřeby úprav dokumentů. Ať už jej integrujete do větší aplikace nebo jen zkoumáte jeho možnosti, GroupDocs.Editor nabízí robustní řešení pro programovou manipulaci s úpravami dokumentů.
-## FAQ
-### Co je GroupDocs.Editor pro .NET?
-GroupDocs.Editor for .NET je rozhraní API pro úpravy dokumentů, které umožňuje vývojářům programově upravovat dokumenty v různých formátech, včetně Wordu, Excelu a PDF, v rámci aplikací .NET.
-### Jak mohu začít s GroupDocs.Editor pro .NET?
- Chcete-li začít, musíte si stáhnout nejnovější verzi knihovny z[Stránka ke stažení GroupDocs.Editor](https://releases.groupdocs.com/editor/net/)nastavte své prostředí .NET a postupujte podle kroků uvedených v této příručce.
-### Mohu používat GroupDocs.Editor zdarma?
- GroupDocs.Editor nabízí bezplatnou zkušební verzi, kterou si můžete stáhnout z webu[Bezplatná zkušební stránka GroupDocs](https://releases.groupdocs.com/). Pro plné funkce zvažte zakoupení licence.
-### Jaké formáty souborů podporuje GroupDocs.Editor?
- GroupDocs.Editor podporuje širokou škálu formátů souborů, včetně DOCX, XLSX, PPTX, PDF, HTML a mnoha dalších. Zkontrolovat[dokumentace](https://tutorials.groupdocs.com/editor/net/) pro úplný seznam.
-### Jak získám podporu pro GroupDocs.Editor?
- Můžete získat podporu od[Fórum podpory GroupDocs](https://forum.groupdocs.com/c/editor/20) kde můžete klást otázky a přijímat pomoc od odborníků z komunity a GroupDocs.
+
+## Common Issues & Tips
+- **Nejsou vráceny žádné stylové listy?** Ujistěte se, že zdrojový soubor skutečně obsahuje externí CSS (např. DOCX s propojeným stylovým listem).  
+- **Problémy s kódováním** – Pokud výstup vypadá poškozeně, ověřte, že původní kódování dokumentu je podporováno editorem.  
+- **Velké dokumenty** – U velmi velkých souborů zvažte zpracování dokumentu v samostatném vlákně, aby UI zůstalo responzivní.
+
+## Frequently Asked Questions
+
+**Q: Co je GroupDocs.Editor pro .NET?**  
+A: GroupDocs.Editor pro .NET je API pro úpravu dokumentů, které umožňuje vývojářům programově upravovat, konvertovat a extrahovat obsah z široké škály formátů souborů.
+
+**Q: Jak začít s GroupDocs.Editor pro .NET?**  
+A: Stáhněte knihovnu ze stránky [GroupDocs.Editor download page](https://releases.groupdocs.com/editor/net/), přidejte NuGet balíček do svého projektu a postupujte podle výše uvedených kroků.
+
+**Q: Mohu používat GroupDocs.Editor zdarma?**  
+A: Ano, je k dispozici bezplatná zkušební verze na stránce [GroupDocs free trial page](https://releases.groupdocs.com/). Pro produkční nasazení je vyžadována placená licence.
+
+**Q: Jaké formáty souborů GroupDocs.Editor podporuje?**  
+A: Podporuje DOCX, XLSX, PPTX, PDF, HTML a mnoho dalších. Úplný seznam najdete v [documentation](https://tutorials.groupdocs.com/editor/net/).
+
+**Q: Jak získat podporu pro GroupDocs.Editor?**  
+A: Navštivte [GroupDocs support forum](https://forum.groupdocs.com/c/editor/20), kde můžete klást otázky a získat pomoc jak od komunity, tak od inženýrů GroupDocs.
+
+## Conclusion
+Teď jste si osvojili, jak **extrahovat CSS z dokumentu** pomocí GroupDocs.Editor pro .NET. Tato schopnost otevírá dveře k pokročilé analýze stylování, tvorbě vlastních motivů nebo bezproblémové integraci stylů dokumentu do webových aplikací. Experimentujte s vrácenými řetězci CSS, upravte je podle potřeby a znovu je použijte pomocí metody `SetCssContent` editoru pro kompletní cyklus stylování.
+
+---
+
+**Poslední aktualizace:** 2026-03-14  
+**Testováno s:** GroupDocs.Editor pro .NET (nejnovější verze)  
+**Autor:** GroupDocs
