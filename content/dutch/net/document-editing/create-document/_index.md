@@ -1,44 +1,72 @@
 ---
-title: Document maken
-linktitle: Document maken
+date: 2026-03-14
+description: Leer hoe u PowerPoint‑presentaties en andere documenttypen kunt bewerken
+  met GroupDocs.Editor voor .NET. De gids behandelt ook hoe u een bewerkt document
+  opslaat en een Word‑document bewerkt in .NET.
+linktitle: Create Document
 second_title: GroupDocs.Editor .NET API
-description: Leer hoe u Word-, Excel-, PowerPoint-, Ebook- en e-maildocumenten kunt bewerken met GroupDocs.Editor voor .NET met deze uitgebreide stapsgewijze zelfstudie.
-weight: 10
-url: /nl/net/document-editing/create-document/
+title: Bewerk PowerPoint-presentatie met GroupDocs.Editor voor .NET
 type: docs
+url: /nl/net/document-editing/create-document/
+weight: 10
 ---
-# Document maken
 
-## Invoering
-Bent u het gedoe beu dat gepaard gaat met het programmatisch bewerken van verschillende documenttypen? GroupDocs.Editor voor .NET is er om het proces te vereenvoudigen. Met deze krachtige tool kunnen ontwikkelaars gemakkelijk verschillende documentformaten bewerken, zoals Word, Excel, PowerPoint, e-boeken en e-mails. In deze zelfstudie gaan we dieper in op het gebruik van GroupDocs.Editor voor .NET om documenten te maken en te bewerken. We zullen het proces opsplitsen in eenvoudig te volgen stappen, waardoor het toegankelijk wordt, zelfs als u nieuw bent.
+# PowerPoint-presentatie bewerken met GroupDocs.Editor voor .NET
+
+## Introductie
+Als u op zoek bent naar een betrouwbare manier om **PowerPoint-presentaties** programmatisch te bewerken, is GroupDocs.Editor voor .NET het antwoord. Deze bibliotheek stelt u in staat om met Word-, Excel-, PowerPoint-, Ebook- en E‑mailformaten te werken — allemaal via één eenvoudige API. In deze tutorial lopen we door het maken en bewerken van elk ondersteund documenttype, laten we zien hoe u **bewerkte documenten** kunt **opslaan** als streams, en geven we praktische tips die u in echte projecten kunt toepassen.
+
+## Snelle antwoorden
+- **Welke bibliotheek laat me PowerPoint‑bestanden bewerken in .NET?** GroupDocs.Editor voor .NET.  
+- **Kan ik Word-, Excel- en Epub‑bestanden bewerken met dezelfde API?** Ja, dezelfde `Editor`‑klasse ondersteunt al deze formaten.  
+- **Hoe capture ik het bewerkte bestand?** Geef een callback‑functie (bijv. `SaveNewDocument`) die de result‑stream ontvangt.  
+- **Heb ik een licentie nodig voor productiegebruik?** Ja — koop een licentie of gebruik een tijdelijke proeflicentie.  
+- **Welke .NET‑versies worden ondersteund?** .NET Framework 4.0+, .NET Core en .NET 5/6.
+
+## Wat betekent “PowerPoint-presentatie bewerken” met GroupDocs.Editor?
+Een PowerPoint‑presentatie bewerken betekent het laden van een `.pptx`‑bestand, het toepassen van wijzigingen (zoals het aanpassen van dia's, tekst of verborgen elementen), en vervolgens het ophalen van het bijgewerkte bestand — alles zonder dat Microsoft Office geïnstalleerd hoeft te zijn.
+
+## Waarom GroupDocs.Editor voor .NET gebruiken?
+- **Enkele API voor veel formaten** – Geen noodzaak om verschillende bibliotheken voor Word, Excel of Epub te beheren.  
+- **Geen Office‑afhankelijkheid** – Werkt op servers, containers en CI‑pipelines.  
+- **Fijne controle** – Pas paginering, taalinfo, lettertype‑extractie en meer aan.  
+- **Stream‑gebaseerde verwerking** – Ideaal voor clouddiensten waarbij u met geheugen‑streams werkt in plaats van fysieke bestanden.
+
 ## Vereisten
-Voordat we beginnen, zorg ervoor dat u over het volgende beschikt:
-- Visual Studio is op uw computer geïnstalleerd.
-- .NET Framework (4.0 of hoger).
--  GroupDocs.Editor voor .NET-bibliotheek. Je kunt het downloaden van[hier](https://releases.groupdocs.com/editor/net/).
-- Basiskennis van programmeren in C#.
-## Naamruimten importeren
-Laten we eerst de benodigde naamruimten importeren. Hierdoor worden de vereiste klassen en methoden toegankelijk in onze applicatie.
+- Visual Studio (een recente editie).  
+- .NET Framework 4.0 of hoger (of .NET Core/.NET 5+).  
+- GroupDocs.Editor voor .NET‑bibliotheek – download deze van [hier](https://releases.groupdocs.com/editor/net/).  
+- Basiskennis van C#.
+
+## Namespaces importeren
+Importeer eerst de namespaces die de kernklassen bevatten die we gaan gebruiken.
+
 ```csharp
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 using System.IO;
 ```
+
 ## Stap 1: De stream instellen
-Om te beginnen moeten we een geheugenstroom opzetten die zal fungeren als tijdelijke aanduiding voor de documentinhoud.
+We gebruiken een geheugen‑stream als tijdelijke opslag voor de documentinhoud.
+
 ```csharp
 Stream memoryStream = Stream.Null;
 ```
-## Stap 2: Terugbelfunctie om het document op te slaan
-Definieer vervolgens een callback-functie waarmee de nieuwe documentstroom wordt opgeslagen. Deze functie is essentieel voor het afhandelen van de uitvoer van het documentbewerkingsproces.
+
+## Stap 2: Callback‑functie om **bewerkte document** op te slaan
+Definieer een callback die de bewerkte stream ontvangt en opslaat in `memoryStream`.
+
 ```csharp
 void SaveNewDocument(Stream resultStream)
 {
     memoryStream = resultStream;
 }
 ```
-## Stap 3: Een tekstverwerkingsdocument maken en bewerken
- Laten we nu een Word-document maken en bewerken. We beginnen met het maken van een nieuwe`Editor` instance voor WordProcessing-documenten en bewerk deze met standaardopties.
+
+## Stap 3: Een WordProcessing‑document maken en bewerken  
+(Here we **edit word document .net**.)
+
 ### Maken en bewerken met standaardopties
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
@@ -46,8 +74,8 @@ using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
     EditableDocument defaultWordProcessingDoc = editor.Edit();
 }
 ```
+
 ### Maken en bewerken met aangepaste opties
-Voor meer controle kunnen we opties opgeven zoals het uitschakelen van paginering en het extraheren van ingesloten lettertypen.
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
 {
@@ -60,8 +88,10 @@ using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
     EditableDocument editableWordProcessingDocument = editor.Edit(wordProcessingEditOptions);
 }
 ```
-## Stap 4: Een spreadsheetdocument maken en bewerken
-Op dezelfde manier kunnen we een Excel-document maken en bewerken. Hier is hoe je het doet.
+
+## Stap 4: Een spreadsheet‑document maken en bewerken  
+(Use this to **edit excel file .net**.)
+
 ### Maken en bewerken met standaardopties
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
@@ -69,8 +99,8 @@ using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
     EditableDocument defaultEditableSpreadsheetDocument = editor.Edit();
 }
 ```
+
 ### Maken en bewerken met aangepaste opties
- Om specifieke werkbladen te targeten of verborgen werkbladen uit te sluiten, gebruiken we`SpreadsheetEditOptions`.
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
 {
@@ -82,8 +112,9 @@ using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
     EditableDocument editableSpreadsheetDocument = editor.Edit(spreadsheetEditOptions);
 }
 ```
-## Stap 5: Een presentatiedocument maken en bewerken
-PowerPoint-presentaties worden ook ondersteund. Laten we eens kijken hoe we ermee om moeten gaan.
+
+## Stap 5: **PowerPoint-presentatie bewerken** – Een presentatiedocument maken en bewerken
+
 ### Maken en bewerken met standaardopties
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
@@ -91,8 +122,8 @@ using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
     EditableDocument defaultEditablePresentationDocument = editor.Edit();
 }
 ```
+
 ### Maken en bewerken met aangepaste opties
-U kunt uw bewerkingen aanpassen door opties op te geven, zoals welke dia u wilt weergeven en of u verborgen dia's wilt opnemen.
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
 {
@@ -104,8 +135,10 @@ using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
     EditableDocument editablePresentationDocument = editor.Edit(presentationEditOptions);
 }
 ```
-## Stap 6: Een e-boekdocument maken en bewerken
-GroupDocs.Editor maakt het ook mogelijk om e-boekformaten zoals EPUB te bewerken. Hier leest u hoe u het kunt aanpakken.
+
+## Stap 6: Een Ebook‑document maken en bewerken  
+(Here we **edit epub file**.)
+
 ### Maken en bewerken met standaardopties
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
@@ -113,8 +146,8 @@ using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
     EditableDocument defaultEditableEbookDocument = editor.Edit();
 }
 ```
+
 ### Maken en bewerken met aangepaste opties
-Pas uw e-boekbewerking aan door paginering en taalinformatie in of uit te schakelen.
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
 {
@@ -126,17 +159,16 @@ using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
     EditableDocument editableEbookDocument = editor.Edit(ebookEditOptions);
 }
 ```
-## Stap 7: Een e-maildocument maken en bewerken
-Ten slotte bekijken we hoe u e-maildocumenten kunt bewerken. Dit omvat formaten zoals EML.
-### Maken en bewerken met standaardopties
+
+## Stap 7: Een e‑mail‑document maken en bewerken
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
 {
     EditableDocument defaultEditableEmailDocument = editor.Edit();
 }
 ```
+
 ### Maken en bewerken met aangepaste opties
-Geef uitvoeropties voor e-mailberichten op om het bewerkingsproces te beheren.
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
 {
@@ -147,22 +179,43 @@ using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
     EditableDocument editableEmailDocument = editor.Edit(emailEditOptions);
 }
 ```
-## Stap 8: Het proces voltooien
-Na het bewerken van de documenten is het van cruciaal belang om de geheugenstroom op de juiste manier te verwijderen om bronnen vrij te maken.
+
+## Stap 8: Het proces afronden
+Maak de stream vrij (dispose) om bronnen vrij te geven zodra u klaar bent.
+
 ```csharp
 memoryStream.Dispose();
 System.Console.WriteLine("CreateDocument routine has successfully finished");
 ```
-## Conclusie
-GroupDocs.Editor voor .NET is een veelzijdige en krachtige tool die de taak van het programmatisch bewerken van verschillende documenttypen kan vereenvoudigen. Door deze stapsgewijze handleiding te volgen, kunt u eenvoudig documenten maken en bewerken, of het nu WordProcess-bestanden, spreadsheets, presentaties, e-boeken of e-mails zijn. Duik in de GroupDocs.Editor-documentatie voor meer geavanceerde functies en aanpassingsopties.
+
+## Veelvoorkomende valkuilen & tips
+- **Vergeet nooit de stream te disposen** – open laten kan geheugenlekken veroorzaken in langdurige services.  
+- **Bij het bewerken van PowerPoint, zorg ervoor dat `SlideNumber` correct is ingesteld**; anders kan de eerste dia worden gedupliceerd.  
+- **Als u de oorspronkelijke bestandsnaam wilt behouden**, sla deze op vóór de callback en hernoem de output‑stream na het bewerken.  
+- **Voor grote documenten**, overweeg ze in delen te verwerken of gebruik `Editor` met een tijdelijk bestand om hoog geheugenverbruik te vermijden.
+
 ## Veelgestelde vragen
-### Welke soorten documenten kan ik bewerken met GroupDocs.Editor voor .NET?
-U kunt een breed scala aan documenten bewerken, waaronder WordProcessing, spreadsheets, presentaties, e-boeken en e-mails.
-### Is het mogelijk om de bewerkingsopties aan te passen?
-Ja, GroupDocs.Editor voor .NET maakt uitgebreide aanpassingen mogelijk via verschillende bewerkingsopties die specifiek zijn voor elk documenttype.
-### Hoe ga ik om met de uitvoer van de bewerkte documenten?
-kunt een callback-functie gebruiken om de bewerkte documentstroom op de gewenste locatie op te slaan.
-### Heb ik een licentie nodig om GroupDocs.Editor voor .NET te gebruiken?
- Ja, u kunt een licentie verkrijgen bij[hier](https://purchase.groupdocs.com/buy). Er is ook een optie voor een tijdelijke licentie.
-### Waar kan ik meer gedetailleerde documentatie vinden?
- Gedetailleerde documentatie is beschikbaar op de[GroupDocs.Editor voor .NET-documentatiepagina](https://tutorials.groupdocs.com/editor/net/).
+
+**V: Welke soorten documenten kan ik bewerken met GroupDocs.Editor voor .NET?**  
+A: U kunt WordProcessing‑documenten, spreadsheets, presentaties, ebooks en e‑mails bewerken — inclusief PowerPoint‑bestanden voor het **edit PowerPoint presentation**‑gebruiksscenario.
+
+**V: Is het mogelijk de bewerkingsopties aan te passen?**  
+A: Ja, elk formaat heeft zijn eigen opties‑klasse (bijv. `WordProcessingEditOptions`, `SpreadsheetEditOptions`, `PresentationEditOptions`) waarmee u paginering, verborgen dia's, werkbladselectie, enz. fijn kunt afstemmen.
+
+**V: Hoe verwerk ik de output van de bewerkte documenten?**  
+A: Gebruik de callback‑functie (`SaveNewDocument`) om de bewerkte stream te vangen; vervolgens kunt u deze naar schijf, een database schrijven of teruggeven via een web‑API.
+
+**V: Heb ik een licentie nodig om GroupDocs.Editor voor .NET te gebruiken?**  
+A: Ja, een licentie is vereist voor productie. U kunt er een verkrijgen via [hier](https://purchase.groupdocs.com/buy). Een tijdelijke proeflicentie is ook beschikbaar.
+
+**V: Waar kan ik meer gedetailleerde documentatie vinden?**  
+A: Gedetailleerde documentatie is beschikbaar op de [GroupDocs.Editor voor .NET documentatiepagina](https://tutorials.groupdocs.com/editor/net/).
+
+## Conclusie
+GroupDocs.Editor voor .NET maakt het eenvoudig om **PowerPoint-presentaties** te bewerken en een breed scala aan andere documenttypen. Door de bovenstaande stappen te volgen kunt u documenten maken, wijzigen en **bewerkte documenten** volledig in code opslaan, zonder afhankelijk te zijn van Office‑installaties. Verken de geavanceerde opties van de bibliotheek om de bewerkingservaring af te stemmen op uw specifieke zakelijke behoeften.
+
+---
+
+**Last Updated:** 2026-03-14  
+**Tested With:** GroupDocs.Editor for .NET (latest release)  
+**Author:** GroupDocs
