@@ -1,57 +1,62 @@
 ---
-date: '2026-01-13'
-description: GroupDocs.Editor kullanarak Java’da PPTX’i PPTM’e nasıl dönüştüreceğinizi
-  öğrenin. Bu rehber ayrıca PPTX Java projelerini verimli bir şekilde nasıl düzenleyeceğinizi
-  gösterir.
+date: '2026-03-17'
+description: GroupDocs.Editor kullanarak Java’da PPTX dosyalarını nasıl düzenleyeceğinizi
+  ve PPTX’i PPTM’e nasıl dönüştüreceğinizi öğrenin. Bu kılavuz, programatik PowerPoint
+  düzenleme, metin değiştirme ve toplu PPTX dosyası dönüştürme konularında size rehberlik
+  eder.
 keywords:
 - GroupDocs.Editor for Java
 - presentation editing in Java
 - editing PPTX files with Java
-title: Java'da GroupDocs.Editor ile PPTX'i PPTM'e Dönüştür
+title: Java ve GroupDocs ile PPTX'i Düzenleme ve PPTM'e Dönüştürme
 type: docs
 url: /tr/java/presentation-documents/groupdocs-editor-java-presentation-editing-guide/
 weight: 1
 ---
 
-# PPTX'i Java'da GroupDocs.Editor ile PPTM'e Dönüştürme
+ block placeholders as they are.
 
-## Giriş
+Will translate bullet points, etc.
 
-Bugünün hızlı tempolu dijital dünyasında, **PPTX'i PPTM'e dönüştürmek** hızlı bir şekilde büyük bir verimlilik artışı sağlar, özellikle **PPTX Java** projelerini düzenlemeniz gerektiğinde. İster bir müşteri sunumu için slayt destesi güncelliyor olun, ister şifre korumalı dosyalarla çalışıyor olun, GroupDocs.Editor for Java, sunumları yüklemek, düzenlemek ve kaydetmek için temiz, programatik bir yol sunar. Bu öğretici, bir PPTX dosyasını yüklemekten PPTM formatına dönüştürmeye kadar her adımı size gösterir—böylece sunum düzenlemeyi doğrudan Java uygulamalarınıza entegre edebilirsiniz.
+Let's craft.
 
-### Hızlı Yanıtlar
-- **Bu kılavuzun temel amacı nedir?** PPTX'i PPTM'e dönüştürmeyi ve GroupDocs.Editor for Java kullanarak sunumları düzenlemeyi göstermek.  
-- **Bir lisansa ihtiyacım var mı?** Evet, üretim kullanımı için GroupDocs'tan bir deneme veya kalıcı lisans gereklidir.  
-- **Şifre korumalı dosyaları yönetebilir miyim?** Kesinlikle—yükleme seçenekleri şifreyi belirtmenizi sağlar.  
+# PPTX Dosyalarını Düzenleme ve Java ile PPTM'ye Dönüştürme – GroupDocs ile
+
+Günümüzün hızlı dijital dünyasında birçok geliştirici **pptx dosyalarını nasıl düzenleyeceklerini** programatik olarak soruyor. Metin değiştirmek, makro eklemek ya da sadece **PPTX'i PPTM'ye dönüştürmek** isteseniz, bu öğretici GroupDocs.Editor for Java ile bu hedeflere adım adım nasıl ulaşacağınızı gösteriyor. Bir sunumu nasıl yükleyeceğinizi, değişiklik yapacağınızı ve sonuçları makro‑etkin bir PPTM olarak kaydedeceğinizi göreceksiniz – sunucuda Microsoft Office kurulu olmasına gerek kalmadan.
+
+## Hızlı Yanıtlar
+- **Bu kılavuzun temel amacı nedir?** GroupDocs.Editor for Java kullanarak PPTX dosyalarını düzenlemeyi ve PPTX'i PPTM'ye dönüştürmeyi göstermek.  
+- **Lisans gerekli mi?** Evet, üretim ortamında kullanmak için GroupDocs'tan bir deneme ya da kalıcı lisans gerekir.  
+- **Şifre korumalı dosyalarla çalışabilir miyim?** Kesinlikle—yükleme seçenekleriyle şifreyi belirtebilirsiniz.  
 - **Hangi Java sürümü destekleniyor?** Java 8 veya üzeri (JDK 11+ önerilir).  
-- **Kütüphaneyi eklemenin tek yolu Maven mi?** Hayır, JAR'ı doğrudan da indirebilirsiniz.
+- **Maven tek yol mu?** Hayır, JAR dosyasını doğrudan da indirebilirsiniz.
 
-## “convert PPTX to PPTM” nedir?
+## “PPTX'i PPTM'ye dönüştürmek” nedir?
 
-Bir PPTX dosyasını PPTM'e dönüştürmek, dosya formatını standart bir PowerPoint sunumundan makro‑etkin bir sürüme (PPTM) değiştirir. Bu, VBA makroları eklemeniz gerektiğinde veya PPTX'in desteklemediği gelişmiş özellikleri korumanız gerektiğinde faydalıdır.
+Bir PPTX dosyasını PPTM'ye dönüştürmek, dosya formatını standart PowerPoint sunumundan makro‑etkin bir sürüme (PPTM) değiştirmektir. VBA makroları eklemeniz ya da PPTX'in desteklemediği gelişmiş özellikleri korumanız gerektiğinde bu faydalıdır.
 
-## PPTX'i düzenlemek için neden GroupDocs.Editor for Java kullanmalı?
+## PPTX'i düzenlemek için GroupDocs.Editor for Java neden tercih edilmeli?
 
 GroupDocs.Editor, Office Open XML formatının karmaşıklığını soyutlayan yüksek seviyeli bir API sunar. Şunları yapmanızı sağlar:
 
-- Sunumları (şifre korumalı olanlar dahil) tek bir çağrı ile yükleyin.  
-- Tek tek slaytları düzenleyin, metni değiştirin ve kaynakları yönetin.  
-- Sonucu PPTM olarak kaydedin, gerekirse yeni bir şifre uygulayın.  
+- Tek bir çağrıyla sunumları (şifre korumalı olanlar dahil) yükleme.  
+- **Programatik PowerPoint düzenleme**: slaytları değiştirme, metin değiştirme ve kaynakları manipüle etme.  
+- Sonucu PPTM olarak kaydetme, gerekirse yeni bir şifre uygulama.  
 
-Bunların tümü, sunucuda Microsoft Office yüklü olmadan yapılabilir.
+Tüm bunlar, sunucuda Microsoft Office kurulu olmadan gerçekleştirilebilir.
 
-## Önkoşullar
+## Ön Koşullar
 
 - **GroupDocs.Editor for Java** – sürüm 25.3 ve üzeri.  
 - **Java Development Kit (JDK)** – 8 ve üzeri.  
 - IntelliJ IDEA veya Eclipse gibi bir IDE.  
-- Geçerli bir GroupDocs lisansı (ücretsiz deneme veya satın alınmış).  
+- Geçerli bir GroupDocs lisansı (ücretsiz deneme ya da satın alınmış).  
 
 Deneme lisansını [GroupDocs web sitesinden](https://purchase.groupdocs.com/temporary-license) alabilirsiniz.
 
-## GroupDocs.Editor for Java'ı Kurma
+## GroupDocs.Editor for Java Kurulumu
 
-Kütüphaneyi projenize Maven aracılığıyla veya JAR'ı doğrudan indirerek ekleyebilirsiniz.
+Kütüphaneyi projenize Maven ile ya da JAR dosyasını doğrudan indirerek ekleyebilirsiniz.
 
 ### Maven Kullanarak
 `pom.xml` dosyanıza aşağıdaki yapılandırmayı ekleyin:
@@ -75,7 +80,7 @@ Kütüphaneyi projenize Maven aracılığıyla veya JAR'ı doğrudan indirerek e
 ```
 
 ### Doğrudan İndirme
-Alternatif olarak, resmi sürüm sayfasından en son JAR'ı indirin: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+Alternatif olarak, resmi sürüm sayfasından en yeni JAR dosyasını indirin: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 Kütüphane sınıf yolunuza eklendikten sonra bir `Editor` örneği oluşturabilirsiniz:
 
@@ -85,24 +90,24 @@ import com.groupdocs.editor.Editor;
 Editor editor = new Editor();
 ```
 
-## Uygulama Kılavuzu
+## PPTX Nasıl Düzenlenir (ve PPTM'ye Dönüştürülür)
 
-### Özellik 1: Sunum Yükleme (şifre korumalı dosyalar dahil)
+### Özellik 1: Sunumu Yükleme (şifre korumalı dosyalar dahil)
 
 #### Genel Bakış
-Bir sunumu yüklemek, **PPTX'i PPTM'e dönüştürmeden** veya içeriğini düzenlemeden önceki ilk adımdır.
+Sunumu yüklemek, **PPTX'i PPTM'ye dönüştürmeden** ya da içeriğini düzenlemeden önceki ilk adımdır.
 
-#### Adım‑Adım Uygulama
+#### Adım Adım Uygulama
 
 **1. Dosyanızın Yolunu Tanımlayın**  
-Çalışmak istediğiniz PPTX'in konumunu ayarlayın:
+Üzerinde çalışmak istediğiniz PPTX'in konumunu ayarlayın:
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample_pptx.pptx";
 ```
 
 **2. Bir InputStream Oluşturun**  
-Dosyayı bir akış olarak açın:
+Dosyayı akış olarak açın:
 
 ```java
 import java.io.FileInputStream;
@@ -112,7 +117,7 @@ InputStream fs = new FileInputStream(inputFilePath);
 ```
 
 **3. Yükleme Seçeneklerini Ayarlayın**  
-Dosya korumalıysa, şifreyi sağlayın:
+Dosya korumalıysa şifreyi sağlayın:
 
 ```java
 import com.groupdocs.editor.options.PresentationLoadOptions;
@@ -122,20 +127,20 @@ loadOptions.setPassword("some_password_to_open_a_document");
 ```
 
 **4. Sunumu Yükleyin**  
-Akışı ve seçenekleri kullanarak `Editor` sınıfını kullanın:
+Akış ve seçeneklerle `Editor` sınıfını kullanın:
 
 ```java
 Editor editor = new Editor(fs, loadOptions);
 ```
 
-**Pro ipucu:** Kaynak sızıntılarını önlemek için `InputStream`'i her zaman bir `finally` bloğunda kapatın veya try‑with‑resources kullanın.
+**İpucu:** `InputStream`i her zaman bir `finally` bloğunda kapatın ya da kaynak sızıntılarını önlemek için try‑with‑resources kullanın.
 
 ### Özellik 2: Belirli Bir Slaytı Düzenleme (edit pptx java)
 
 #### Genel Bakış
-Değişiklikler için tek bir slaytı hedefleyin—**edit pptx java** senaryosu için mükemmeldir.
+Tek bir slaytı hedefleyerek değişiklik yapın—**edit pptx java** senaryosu için ideal.
 
-#### Adım‑Adım Uygulama
+#### Adım Adım Uygulama
 
 **1. Düzenleme Seçeneklerini Ayarlayın**  
 Hangi slaytı düzenleyeceğinizi seçin (0‑tabanlı indeks):
@@ -149,8 +154,8 @@ editOptions.setSlideNumber(0); // Edit the first slide
 editOptions.setShowHiddenSlides(true);
 ```
 
-**2. Düzenlenebilir Bir Belge Alın**  
-Slaytın düzenlenebilir temsilini alın:
+**2. Düzenlenebilir Belgeyi Alın**  
+Slaytın düzenlenebilir temsilini elde edin:
 
 ```java
 import com.groupdocs.editor.EditableDocument;
@@ -169,12 +174,12 @@ List<IHtmlResource> allResources = beforeEdit.getAllResources();
 ### Özellik 3: Sunum Slaytının İçeriğini Değiştirme
 
 #### Genel Bakış
-Metni değiştirin veya yeni HTML'i doğrudan slayt işaretlemesine ekleyin.
+Metni değiştirin ya da yeni HTML'i doğrudan slayt işaretlemesine ekleyin.
 
-#### Adım‑Adım Uygulama
+#### Adım Adım Uygulama
 
 **1. Metni Değiştir**  
-Basit bir metin değişimi için:
+Basit bir metin ikamesi için:
 
 ```java
 String editedContent = beforeEdit.getContent().replace("New text", "edited text");
@@ -190,9 +195,9 @@ EditableDocument afterEdit = EditableDocument.fromMarkup(editedContent, allResou
 ### Özellik 4: Düzenlenmiş Sunumu Kaydetme (convert PPTX to PPTM)
 
 #### Genel Bakış
-Son olarak, düzenlenmiş slayt setini bir PPTM dosyası olarak kaydedin, isteğe bağlı olarak bir şifreyle koruyun.
+Son olarak, düzenlenmiş slayt setini bir PPTM dosyası olarak kaydedin; isteğe bağlı olarak şifreyle koruyun.
 
-#### Adım‑Adım Uygulama
+#### Adım Adım Uygulama
 
 **1. Kaydetme Seçeneklerini Başlatın**  
 PPTM formatını ve yeni bir şifreyi belirtin:
@@ -206,7 +211,7 @@ saveOptions.setPassword("password");
 ```
 
 **2. Çıktı Akışını Hazırlayın**  
-Oluşan dosyanın nereye yazılacağını tanımlayın:
+Sonucun yazılacağı yeri tanımlayın:
 
 ```java
 import java.io.ByteArrayOutputStream;
@@ -232,52 +237,63 @@ try (FileOutputStream outputFile = new FileOutputStream(outputPath)) {
 }
 ```
 
-**İpucu:** Kaydettikten sonra, dosyanın makro‑etkin formatının beklendiği gibi çalıştığını doğrulamak için PowerPoint'te açabilirsiniz.
+**İpucu:** Kaydettikten sonra dosyayı PowerPoint'te açarak makro‑etkin formatın beklendiği gibi çalıştığını doğrulayabilirsiniz.
+
+## PPTX Slaytlarında Metin Değiştirme
+
+Yukarıdaki snippet (`replace text pptx`) bir slaytın HTML'inde herhangi bir dizeyi değiştirmek için basit bir yol gösterir. Birden fazla slaytta yer tutucuları güncellemek gibi daha karmaşık senaryolar için her `EditableDocument` üzerinde döngü kurup aynı `replace` mantığını uygulayabilirsiniz.
+
+## Toplu PPTX Dönüştürme
+
+**pptx dosyalarını toplu olarak pptm'ye dönüştürmek** istiyorsanız, yükleme‑düzenleme‑kaydetme adımlarını bir klasördeki PPTX dosyaları üzerinde dönen bir döngüye yerleştirin. Tek bir `Editor` örneğini yeniden kullanmak yükü azaltır ve toplu işleme hızını artırır.
 
 ## Pratik Uygulamalar
 
-GroupDocs.Editor Java API, gerçek dünyadaki senaryolarda parlıyor:
+GroupDocs.Editor Java API, gerçek dünya senaryolarında şu alanlarda öne çıkar:
 
-- **Kurumsal eğitim:** Yeni politikalarla slayt destelerini hızlıca güncelleyin.  
-- **Pazarlama kampanyaları:** Etkileşimli demolar için makro‑etkin sunumlar oluşturun.  
-- **Eğitim:** Sınavlar için VBA makroları içeren ders slaytlarının oluşturulmasını otomatikleştirin.
+- **Kurumsal eğitim:** Yeni politikalarla slayt destelerini hızlıca güncelleme.  
+- **Pazarlama kampanyaları:** Etkileşimli demolar için makro‑etkin sunumlar üretme.  
+- **Eğitim:** Sınavlar için VBA makroları içeren ders slaytlarını otomatik oluşturma.  
 
 ## Performans Düşünceleri
 
 Büyük PPTX dosyalarıyla çalışırken:
 
-- `OutOfMemoryError` hatasını önlemek için JVM yığın boyutunu (`-Xmx2g` veya daha yüksek) artırın.  
-- İşlem yükünü azaltmak için toplu işleme aynı `Editor` örneğini yeniden kullanın.  
+- JVM heap boyutunu artırın (`-Xmx2g` veya daha yüksek) ve `OutOfMemoryError` almayı önleyin.  
+- Toplu işleme için aynı `Editor` örneğini yeniden kullanarak ek yükü azaltın.  
 - Kütüphaneyi güncel tutun; yeni sürümler performans iyileştirmeleri içerir.
 
-## Sıkça Sorulan Sorular
+## Sık Sorulan Sorular
 
-**S: PPTX'i slaytları düzenlemeden PPTM'e dönüştürebilir miyim?**  
-C: Evet. PPTX'i `PresentationLoadOptions` ile yükleyin, ardından PPTM formatıyla `PresentationSaveOptions` kullanarak kaydedin—ara adım düzenleme gerekmez.
+**S: PPTX'i slaytları düzenlemeden PPTM'ye dönüştürebilir miyim?**  
+C: Evet. `PresentationLoadOptions` ile PPTX'i yükleyin, ardından PPTM formatı ile `PresentationSaveOptions` kullanarak kaydedin—ara bir düzenleme adımına gerek yok.
 
 **S: Kütüphane diğer PowerPoint formatlarını (PPT, PPSX, vb.) destekliyor mu?**  
-C: GroupDocs.Editor, PPT, PPTX, PPSX ve PPTM formatlarını yükleyebilir ve kaydedebilir. Kaydederken uygun `PresentationFormats` enum'ını kullanın.
+C: GroupDocs.Editor PPT, PPTX, PPSX ve PPTM formatlarını yükleyip kaydedebilir. Kaydederken uygun `PresentationFormats` enum değerini kullanın.
 
-**S: Şifresi olmayan bir sunumu nasıl ele alırım ama çıktıya bir şifre eklemek istiyorum?**  
-C: İstenen şifreyi sadece `PresentationSaveOptions` içinde sağlayın; `PresentationLoadOptions` içinde ayarlamanıza gerek yok.
+**S: Şifresi olmayan bir sunumu çıktı dosyasına şifre eklemek istiyorum, ne yapmalıyım?**  
+C: İstenen şifreyi sadece `PresentationSaveOptions` içinde belirtin; `PresentationLoadOptions` içinde ayarlamanıza gerek yok.
 
-**S: Tek bir işlemde birden fazla slaytı düzenlemek mümkün mü?**  
-C: Evet. Slayt numaraları üzerinde döngü yapın, her bir `EditableDocument`'i alın, değişiklikleri uygulayın ve kaydetmeden önce sonuçları birleştirin.
+**S: Birden fazla slaytı tek bir işlemde düzenleyebilir miyim?**  
+C: Evet. Slayt numaraları üzerinde döngü kurarak her `EditableDocument`'i alın, değişiklikleri uygulayın ve kaydetmeden önce sonuçları birleştirin.
 
-**S: Mevcut bir slaytı düzenlemek yerine yeni bir slayt eklemem gerekirse?**  
-C: Editörün API'sini kullanarak yeni bir slayt oluşturun (örneğin, eklemek için `PresentationEditOptions.setSlideNumber(-1)`) ve ardından istediğiniz işaretlemeyi ekleyin.
+**S: Var olan bir slaytı düzenlemek yerine yeni bir slayt eklemek istiyorum, nasıl?**  
+C: Editör API'sını kullanarak yeni bir slayt oluşturun (ör. `PresentationEditOptions.setSlideNumber(-1)` ile ekleme) ve istenen işaretlemeyi ekleyin.
+
+**S: Tek bir servis içinde pptx'i pptm'ye toplu olarak nasıl dönüştürebilirim?**  
+C: Kaynak klasörünüzdeki her PPTX'i aynı `Editor` örneğiyle yükleyin ve `PresentationSaveOptions(PresentationFormats.Pptm)` ile kaydedin. Akışları zamanında kapatmayı unutmayın.
 
 ## Sonuç
 
-Bu kılavuzu izleyerek, GroupDocs.Editor kullanarak **PPTX'i PPTM'e dönüştürmeyi** ve **PPTX Java** projelerini **düzenlemeyi** artık biliyorsunuz. Sunumları yükleyebilir, tek tek slaytları değiştirebilir, metni değiştirebilir ve sonucu makro‑etkin bir PPTM dosyası olarak kaydedebilirsiniz—hepsi programatik ve güvenli bir şekilde.
+Bu kılavuzu izleyerek **pptx dosyalarını nasıl düzenleyeceğinizi** ve **GroupDocs.Editor for Java kullanarak PPTX'i PPTM'ye nasıl dönüştüreceğinizi** öğrendiniz. Sunumları yükleyebilir, tek tek slaytları değiştirebilir, metin ikamesi yapabilir ve sonucu makro‑etkin bir PPTM dosyası olarak kaydedebilirsiniz—hepsi programatik ve güvenli bir şekilde.
 
 **Sonraki adımlar:**  
 - PPTM dosyasına VBA makroları eklemeyi deneyin.  
-- Tek bir Java hizmetinde birden fazla sunumun toplu dönüşümünü keşfedin.  
-- Görüntü işleme ve özel stil gibi gelişmiş özellikler için tam GroupDocs.Editor belgelerini inceleyin.
+- Tek bir Java servisi içinde birden fazla sunumu toplu olarak dönüştürmeyi keşfedin.  
+- Görüntü işleme ve özel stil gibi ileri özellikler için tam GroupDocs.Editor dokümantasyonuna göz atın.
 
 ---
 
-**Son Güncelleme:** 2026-01-13  
+**Son Güncelleme:** 2026-03-17  
 **Test Edilen Versiyon:** GroupDocs.Editor 25.3 for Java  
 **Yazar:** GroupDocs
