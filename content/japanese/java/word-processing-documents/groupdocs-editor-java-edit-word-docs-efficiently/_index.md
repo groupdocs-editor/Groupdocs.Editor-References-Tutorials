@@ -1,19 +1,20 @@
 ---
-title: "Convert DOCX to DOCM in Java Using GroupDocs.Editor – Guide"
-description: "Learn how to convert docx to docm and edit Word documents in Java with GroupDocs.Editor. This tutorial covers programmatic DOCX editing, template customization, and exporting to TXT."
-date: "2026-03-20"
-weight: 1
-url: "/java/word-processing-documents/groupdocs-editor-java-edit-word-docs-efficiently/"
+date: '2026-03-20'
+description: GroupDocs.Editor を使用して Java で docx を docm に変換し、Word 文書を編集する方法を学びましょう。このチュートリアルでは、プログラムによる
+  DOCX 編集、テンプレートのカスタマイズ、TXT へのエクスポートについて解説します。
 keywords:
 - GroupDocs.Editor Java
 - edit Word documents
 - Java application document editing
+title: JavaでGroupDocs.Editorを使用してDOCXをDOCMに変換する – ガイド
 type: docs
+url: /ja/java/word-processing-documents/groupdocs-editor-java-edit-word-docs-efficiently/
+weight: 1
 ---
 
-# Convert DOCX to DOCM in Java with GroupDocs.Editor
+# JavaでGroupDocs.Editorを使用してDOCXをDOCMに変換する
 
-In today’s fast‑moving business environment, being able to **convert docx to docm** directly from your Java code can dramatically cut down manual effort and eliminate compatibility headaches. Whether you need to update a quarterly report, customize a contract template, or generate personalized letters, programmatic editing gives you the speed and reliability that point‑and‑click tools often lack. This guide walks you through loading a DOCX file, programmatically modifying its content, and saving the result in several popular formats—including DOCM—using GroupDocs.Editor for Java.
+今日のスピーディなビジネス環境では、Javaコードから直接 **convert docx to docm** ができることにより、手作業の手間を大幅に削減し、互換性の問題を解消できます。四半期レポートの更新、契約書テンプレートのカスタマイズ、個別レターの生成など、プログラムによる編集は、ポイント＆クリックツールが持つ速度と信頼性の欠如を補います。このガイドでは、DOCX ファイルの読み込み、コンテンツのプログラム的な変更、そして GroupDocs.Editor for Java を使用して DOCM を含む複数の一般的な形式で保存する手順を解説します。
 
 ## Quick Answers
 - **What library lets me edit Word docs in Java?** GroupDocs.Editor for Java.  
