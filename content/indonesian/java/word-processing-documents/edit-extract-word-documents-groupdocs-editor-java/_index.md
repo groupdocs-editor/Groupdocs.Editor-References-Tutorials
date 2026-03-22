@@ -1,14 +1,13 @@
 ---
-date: '2026-01-21'
-description: Pelajari cara mengedit file docx serta mengekstrak gambar, font, dan
-  stylesheet menggunakan GroupDocs.Editor untuk Java. Panduan ini juga mencakup pemrosesan
-  batch dokumen Word.
+date: '2026-03-22'
+description: Pelajari cara mengekstrak gambar dari DOCX dan mengedit dokumen Word
+  dengan Java menggunakan GroupDocs.Editor. Termasuk pemrosesan batch dan ekstraksi
+  sumber daya.
 keywords:
 - GroupDocs.Editor for Java
 - edit Word documents Java
 - extract resources from Word files
-title: Cara Mengedit DOCX dan Mengekstrak Sumber Daya Menggunakan GroupDocs.Editor
-  untuk Java – Panduan Komprehensif
+title: Ekstrak Gambar dari DOCX dan Edit Dokumen Word dengan GroupDocs
 type: docs
 url: /id/java/word-processing-documents/edit-extract-word-documents-groupdocs-editor-java/
 weight: 1
@@ -18,37 +17,41 @@ weight: 1
 
 ## Pendahuluan
 
-Jika Anda perlu **cara mengedit docx** secara programatik sekaligus mengekstrak aset yang tertanam, Anda berada di tempat yang tepat. Dalam tutorial ini kami akan menjelaskan cara menggunakan **GroupDocs.Editor for Java** untuk mengedit dokumen Word, mengekstrak gambar, font, dan stylesheet, serta menangani pemrosesan batch dari banyak file. Baik Anda sedang membangun portal manajemen konten, pipeline aset digital, atau mesin pelaporan khusus, teknik ini akan menghemat waktu Anda dan menjaga kode tetap bersih.
+Jika Anda perlu **extract images from docx** file secara programatis sambil juga mengambil aset yang disematkan, Anda berada di tempat yang tepat. Dalam tutorial ini kami akan menjelaskan cara menggunakan **GroupDocs.Editor for Java** untuk mengedit dokumen Word, mengekstrak gambar, font, dan stylesheet, serta menangani pemrosesan batch dari banyak file. Baik Anda membangun portal manajemen konten, pipeline aset digital, atau mesin pelaporan khusus, teknik ini akan menghemat waktu Anda dan menjaga kode tetap bersih.
 
 ### Jawaban Cepat
-- **Bagaimana cara mengedit docx?** Gunakan `Editor.edit()` dengan `WordProcessingEditOptions`.
-- **Bagaimana cara mengekstrak gambar dari docx?** Panggil `document.getImages()` dan simpan setiap `IImageResource`.
-- **Apakah saya dapat mengekstrak font dari docx?** Ya—gunakan `document.getFonts()` dan simpan objek `FontResourceBase`.
-- **Apakah pemrosesan batch didukung?** Proses daftar file dalam loop; GroupDocs.Editor menangani masing‑masing secara independen.
-- **Apakah saya memerlukan lisensi?** Lisensi sementara atau percobaan diperlukan untuk penggunaan produksi.
+- **How to edit docx?** Gunakan `Editor.edit()` dengan `WordProcessingEditOptions`.
+- **How to extract images from docx?** Panggil `document.getImages()` dan simpan setiap `IImageResource`.
+- **Can I extract fonts from docx?** Ya—gunakan `document.getFonts()` dan simpan objek `FontResourceBase`.
+- **Is batch processing supported?** Proses daftar file dalam loop; GroupDocs.Editor menangani masing‑masing secara independen.
+- **Do I need a license?** Lisensi sementara atau percobaan diperlukan untuk penggunaan produksi.
 
-## Apa itu “cara mengedit docx” dengan GroupDocs.Editor?
+## Mengapa mengekstrak gambar dari docx?
 
-GroupDocs.Editor menyediakan API tingkat tinggi yang menyederhanakan kompleksitas format Office Open XML. Dengan memuat file `.docx` ke dalam instance `Editor`, Anda mendapatkan akses baca‑tulis penuh ke konten dokumen dan sumber daya yang tertanam.
+Mengekstrak gambar memberi Anda akses langsung ke aset visual yang disematkan dalam file Word. Ini sangat berguna ketika Anda perlu menggunakan kembali grafik untuk galeri web, memigrasikan aset ke sistem manajemen aset digital, atau sekadar mengarsipkannya secara terpisah dari konten dokumen.
+
+## Apa itu “how to edit docx” dengan GroupDocs.Editor?
+
+GroupDocs.Editor menyediakan API tingkat tinggi yang menyederhanakan kompleksitas format Office Open XML. Dengan memuat file `.docx` ke dalam instance `Editor`, Anda mendapatkan akses baca‑tulis penuh ke konten dokumen dan sumber daya yang disematkan.
 
 ## Mengapa mengedit aplikasi Java dokumen Word dengan GroupDocs.Editor?
 
-- **Tidak memerlukan instalasi Office** – Berfungsi di lingkungan server mana pun.
-- **Ekstraksi sumber daya lengkap** – Mengambil gambar, font, dan stylesheet CSS dengan beberapa baris kode.
-- **Pemrosesan batch skalabel** – Menangani puluhan file dalam satu kali jalankan tanpa kebocoran memori.
-- **Lintas platform** – Kompatibel dengan JDK 8+ dan proyek berbasis Maven apa pun.
+- **No Office installation needed** – Berfungsi di lingkungan server‑side apa pun.  
+- **Rich resource extraction** – Mengambil gambar, font, dan stylesheet CSS dengan beberapa baris kode.  
+- **Scalable batch processing** – Menangani puluhan file dalam satu run tanpa kebocoran memori.  
+- **Cross‑platform** – Kompatibel dengan JDK 8+ dan proyek berbasis Maven apa pun.
 
 ## Prasyarat
 
-- **Java Development Kit (JDK)** 8 atau lebih tinggi
-- **Maven** untuk manajemen dependensi
-- Pemahaman dasar tentang struktur proyek Java
+- **Java Development Kit (JDK)** 8 atau lebih tinggi  
+- **Maven** untuk manajemen dependensi  
+- Pemahaman dasar tentang struktur proyek Java  
 
 ## Menyiapkan GroupDocs.Editor untuk Java
 
 ### Pengaturan Maven
 
-Add the repository and dependency to your `pom.xml`:
+Tambahkan repositori dan dependensi ke `pom.xml` Anda:
 
 ```xml
 <repositories>
@@ -74,26 +77,26 @@ Jika Anda lebih memilih tidak menggunakan Maven, unduh versi terbaru GroupDocs.E
 
 #### Akuisisi Lisensi
 
-Untuk mulai menggunakan GroupDocs.Editor, dapatkan lisensi percob dapat meminta lisensi sementara di [situs web GroupDocs](https://purchase.groupdocs.com/temporary-license). Ikuti instruksi yang diberikan untuk menerapkan lisensi dalam kode Anda.
+Untuk mulai menggunakan GroupDocs.Editor, dapatkan lisensi percobaan gratis atau lisensi sementara. Anda dapat meminta lisensi sementara di [situs GroupDocs](https://purchase.groupdocs.com/temporary-license). Ikuti instruksi yang diberikan untuk menerapkan lisensi dalam kode Anda.
 
 ### Inisialisasi dan Pengaturan Dasar
 
-Dengan pustaka ditambahkan, buat instance `Editor` yang menunjuk ke file Word Anda:
+Setelah pustaka ditambahkan, buat instance `Editor` yang menunjuk ke file Word Anda:
 
 ```java
 Editor editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx", new WordProcessingLoadOptions());
 ```
 
-Sekarang Anda siap untuk **mengedit dokumen word java**.
+Sekarang Anda siap untuk **edit word document java** style.
 
 ## Panduan Implementasi
 
-Kita akan membagi implementasi menjadi fitur-fitur terpisah, masing‑masing berfokus pada fungsionalitas spesifik GroupDocs.Editor untuk Java.
+Kami akan membagi implementasi menjadi fitur-fitur terpisah, masing‑masing berfokus pada fungsionalitas spesifik GroupDocs.Editor untuk Java.
 
 ### Cara Mengedit DOCX dengan GroupDocs.Editor untuk Java
 
-#### Gambaran Umum
-Muat dan edit dokumen adalah langkah pertama. Fitur ini memungkinkan pengguna melihat dan memodifikasi konten langsung dalam aplikasi mereka.
+#### Ringkasan
+Memuat dan mengedit dokumen adalah langkah pertama. Fitur ini memungkinkan pengguna melihat dan memodifikasi konten langsung di dalam aplikasi mereka.
 
 ##### Langkah 1: Buat Objek `Editor`
 ```java
@@ -102,7 +105,7 @@ Editor editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx", new WordProces
 ```
 
 ##### Langkah 2: Edit Dokumen
-Gunakan metode `edit()` untuk mendapatkan `EditableDocument` yang dapat Anda manipulasi:
+Gunakan metode `edit()` untuk memperoleh `EditableDocument` yang dapat Anda manipulasi:
 
 ```java
 EditableDocument document = editor.edit(new WordProcessingEditOptions());
@@ -110,7 +113,7 @@ EditableDocument document = editor.edit(new WordProcessingEditOptions());
 
 ### Cara Mengekstrak Gambar dari DOCX
 
-#### Gambaran Umum
+#### Ringkasan
 Mengekstrak gambar sangat penting ketika Anda perlu menggunakan kembali atau mengarsipkan visual secara terpisah dari teks.
 
 ##### Langkah 1: Ambil Gambar
@@ -119,10 +122,10 @@ Mengekstrak gambar sangat penting ketika Anda perlu menggunakan kembali atau men
 List<IImageResource> images = document.getImages();
 ```
 
-### Simpan Gambar ke Folder
+#### Simpan Gambar ke Folder
 
-#### Gambaran Umum
-Setelah ekstraksi, Anda dapat menyimpan gambar di mana pun Anda membutuhkannya.
+#### Ringkasan
+Setelah ekstraksi, Anda dapat menyimpan gambar di mana saja Anda membutuhkannya.
 
 ##### Langkah 2: Simpan Gambar yang Diekstrak
 ```java
@@ -136,8 +139,8 @@ for (IImageResource oneImage : images) {
 
 ### Cara Mengekstrak Font dari DOCX
 
-#### Gambaran Umum
-Font sering kali tertanam untuk branding; mengekstraknya memungkinkan Anda mempertahankan konsistensi visual di berbagai platform.
+#### Ringkasan
+Font sering disematkan untuk branding; mengekstraknya memungkinkan Anda mempertahankan konsistensi visual di seluruh platform.
 
 ##### Langkah 1: Ambil Font
 ```java
@@ -145,9 +148,9 @@ Font sering kali tertanam untuk branding; mengekstraknya memungkinkan Anda mempe
 List<FontResourceBase> fonts = document.getFonts();
 ```
 
-### Simpan Font ke Folder
+#### Simpan Font ke Folder
 
-#### Gambaran Umum
+#### Ringkasan
 Simpan font yang diekstrak untuk penggunaan selanjutnya dalam alat desain atau dokumen lain.
 
 ##### Langkah 2: Simpan Font yang Diekstrak
@@ -160,7 +163,8 @@ for (FontResourceBase oneFont : fonts) {
 
 ### Cara Mengekstrak Stylesheet dari DOCX
 
- (CSS) menentukan tata letak visual. Mengeluarkannya memungkinkan Anda menggunakan kembali gaya dalam web atau format dokumen lain.
+#### Ringkasan
+Stylesheet (CSS) menentukan tata letak visual. Mengeluarkannya memungkinkan Anda menggunakan kembali gaya di web atau format dokumen lain.
 
 ##### Langkah 1: Ambil Stylesheet
 ```java
@@ -168,9 +172,9 @@ for (FontResourceBase oneFont : fonts) {
 List<CssText> stylesheets = document.getCss();
 ```
 
-### Simpan Stylesheet ke Folder
+#### Simpan Stylesheet ke Folder
 
-#### Gambaran Umum
+#### Ringkasan
 Menyimpan file CSS memberi Anda kontrol penuh atas styling dokumen di luar Word.
 
 ##### Langkah 2: Simpan Stylesheet yang Diekstrak
@@ -183,30 +187,49 @@ for (CssText oneStylesheet : stylesheets) {
 
 ## Aplikasi Praktis
 
-1. **Manajemen Aset Digital** – Ekstrak. **Konsistensi Merek** – Ekstrak font untuk menjamin branding seragam di semua dokumen kor bagi pembuatan laporaneditor.close()` atau biarkan garbage collector JVM membebaskan sumber daya setelah Batch** – Proses file secara berurutan atau dengan thread pool, namun pantau penggunaan memori.
-- **Penyesuaian Opsi Muat** – Sesuaikan `WordProcessingLoadOptions` (mis., nonaktifkan fitur yang tidak diperlukan) untuk dokumen**  
+1. **Digital Asset Management** – Ekstrak gambar untuk repositori terpusat.  
+2. **Brand Consistency** – Ambil font untuk menjamin konsistensi merek di semua dokumen perusahaan.  
+3. **Custom Document Templates** – Gunakan kembali stylesheet yang diekstrak untuk membangun template konsisten bagi pembuatan laporan otomatis.  
+4. **Batch Process Word Docs** – Loop melalui folder berisi file `.docx`, menerapkan alur kerja edit‑dan‑ekstrak yang sama pada setiap file.  
+
+## Pertimbangan Kinerja
+
+Saat bekerja dengan GroupDocs.Editor, perhatikan tips berikut:
+
+- **Resource Management** – Panggil `editor.close()` atau biarkan garbage collector JVM membebaskan sumber daya setelah setiap dokumen.  
+- **Batch Processing** – Proses file secara berurutan atau dengan thread pool, namun pantau penggunaan memori.  
+- **Load Options Tuning** – Sesuaikan `WordProcessingLoadOptions` (mis., nonaktifkan fitur yang tidak diperlukan) untuk dokumen besar.  
+
+## Pertanyaan yang Sering Diajukan
+
+**Q: Apakah GroupDocs.Editor kompatibel dengan semua versi Java?**  
 A: Ya, ia bekerja dengan JDK 8 dan yang lebih baru.
 
-**Q: Bisakah saya mengedit dokumen yang dilindungi kata sandi?**  
-A: Tentu saja. Berikan kata sandi melalui `WordProcessingLoadOptions`.
+**Q: Bisakah saya mengedit dokumen yang dilindungi password?**  
+A: Tentu saja. Berikan password melalui `WordProcessingLoadOptions`.
 
-**Q: Bagaimana ekstraksi sumber daya menguntungkan alur file.
+**Q: Bagaimana mengekstrak sumber daya menguntungkan alur kerja saya?**  
+A: Ini memusatkan aset, menyederhanakan pembaruan branding, dan memungkinkan penggunaan kembali di berbagai platform.
 
-.Editor, Azure Blob, atau Google Cloud Storage langsung ke dalam `Editor`.
+**Q: Apa implikasi kinerja dari pemrosesan batch?**  
+A: Pembersihan sumber daya yang tepat dan opsi pemuatan yang optimal menjaga penggunaan memori tetap rendah bahkan saat menangani puluhan file.
+
+**Q: Bisakah GroupDocs.Editor terintegrasi dengan layanan penyimpanan cloud?**  
+A: Ya, Anda dapat streaming file dari AWS S3, Azure Blob, atau Google Cloud Storage langsung ke `Editor`.
 
 ## Sumber Daya
 
 - [Dokumentasi](https://docs.groupdocs.com/editor/java/)
 - [Referensi API](https://reference.groupdocs.com/editor/java/)
 - [Unduh Versi Terbaru](https://releases.groupdocs.com/editor/java/)
-- [Percobaan Gratis](https://releases.groupdocs.com/editor/java/)
+- [Uji Coba Gratis](https://releases.groupdocs.com/editor/java/)
 - [Lisensi Sementara](https://purchase.groupdocs.com/temporary-license)
 - [Forum Dukungan](https://forum.groupdocs.com/c/editor/)
 
-Dengan mengikuti panduan ini, Anda kini memiliki fondasi yang kuat untuk **cara mengedit docx** dan mengekstrak semua sumber daya terkait menggunakan GroupDocs.Editor untuk Java. Jangan ragu untuk bereksperimen dengan fitur API tambahan seperti pemeriksaan ejaan, pelacakan perubahan, atau konversi HTML khusus untuk memperluas solusi Anda.
+Dengan mengikuti panduan ini, Anda kini memiliki fondasi yang kuat untuk **how to edit docx** file dan mengekstrak semua sumber daya terkait menggunakan GroupDocs.Editor untuk Java. Jangan ragu untuk bereksperimen dengan fitur API tambahan seperti pemeriksaan ejaan, pelacakan perubahan, atau konversi HTML khusus untuk memperluas solusi Anda.
 
 ---
 
-**Terakhir Diperbarui:** 2026-01-21  
-**Diuji Dengan:** GroupDocs.Editor 25.3 for Java  
-**Penulis:** GroupDocs
+**Last Updated:** 2026-03-22  
+**Tested With:** GroupDocs.Editor 25.3 for Java  
+**Author:** GroupDocs

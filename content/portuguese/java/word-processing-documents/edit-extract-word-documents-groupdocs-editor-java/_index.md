@@ -1,14 +1,12 @@
 ---
-date: '2026-01-21'
-description: Aprenda a editar arquivos docx e extrair imagens, fontes e folhas de
-  estilo usando o GroupDocs.Editor para Java. Este guia também aborda o processamento
-  em lote de documentos Word.
+date: '2026-03-22'
+description: Aprenda a extrair imagens de DOCX e editar documentos Word com Java usando
+  o GroupDocs.Editor. Inclui processamento em lote e extração de recursos.
 keywords:
 - GroupDocs.Editor for Java
 - edit Word documents Java
 - extract resources from Word files
-title: Como editar DOCX e extrair recursos usando o GroupDocs.Editor para Java – Um
-  guia abrangente
+title: Extrair imagens de DOCX e editar documentos Word com GroupDocs
 type: docs
 url: /pt/java/word-processing-documents/edit-extract-word-documents-groupdocs-editor-java/
 weight: 1
@@ -18,19 +16,35 @@ weight: 1
 
 ## Introdução
 
-Se você precisa **como editar docx** programaticamente enquanto também extrai recursos incorporados, está no lugar certo. Neste tutorial, vamos percorrer o uso do **GroupDocs.Editor for Java** para editar documentos Word, extrair imagens, fontes e folhas de estilo, e.edit()` com `Wordair **Posso extrair fontes de docx?** Sim—use `document.getFonts()` e salve os objetos `FontResourceBase`.
-- **O processamento em lote é suportado?** Processe uma lista de arquivos em um loop; o GroupDocs.Editor lida com cada um independentemente.
-- **Preciso de uma licença?** Uma licença temporária ou de avaliação é necessária para uso em produção.
+Se você precisa **extrair imagens de docx** programaticamente enquanto também extrai recursos incorporados, está no lugar certo. Neste tutorial vamos percorrer o uso do **GroupDocs.Editor for Java** para editar documentos Word, extrair imagens, fontes e folhas de estilo, e até lidar com processamento em lote de vários arquivos. Seja construindo um portal de gerenciamento de conteúdo, um pipeline de ativos digitais ou um mecanismo de relatórios personalizado, essas técnicas economizarão seu tempo e manterão seu código limpo.
+
+### Respostas Rápidas
+- **Como editar docx?** Use `Editor.edit()` com `WordProcessingEditOptions`.
+- **Como extrair imagens de docx?** Chame `document.getImages()` e salve cada `IImageResource`.
+- **Posso extrair fontes de docx?** Sim—use `document.getFonts()` e salve os objetos `FontResourceBase`.
+- **O processamento em lote é suportado?** Processar uma lista de arquivos em um loop; o GroupDocs.Editor lida com cada um independentemente.
+- **Preciso de licença?** Uma licença temporária ou de avaliação é necessária para uso em produção.
+
+## Por que extrair imagens de docx?
+
+Extrair imagens fornece acesso direto aos recursos visuais incorporados em um arquivo Word. Isso é especialmente útil quando você precisa reutilizar gráficos para galerias web, migrar ativos para um sistema de gerenciamento de ativos digitais, ou simplesmente arquivá‑los separadamente do conteúdo do documento.
 
 ## O que é “como editar docx” com GroupDocs.Editor?
 
-O GroupDocs.Editor fornece uma API de alto nível que abstrai você escrita ao conteúdo do documento e aos seus recursos incorporados.
+O GroupDocs.Editor fornece uma API de alto nível que abstrai as complexidades do formato Office Open XML. Ao carregar um arquivo `.docx` em uma instância de `Editor`, você obtém acesso total de leitura e escrita ao conteúdo do documento e seus recursos incorporados.
 
 ## Por que editar documentos Word em aplicações Java com GroupDocs.Editor?
 
-- **Nenhuma instalação do Office necessária** – Funciona em8+## Pré-requisitos
+- **Nenhuma instalação do Office necessária** – Funciona em qualquer ambiente server‑side.  
+- **Extração rica de recursos** – Extraia imagens, fontes e folhas de estilo CSS com poucas linhas de código.  
+- **Processamento em lote escalável** – Manipule dezenas de arquivos em uma única execução sem vazamentos de memória.  
+- **Cross‑platform** – Compatível com JDK 8+ e qualquer projeto baseado em Maven.
 
-- **Java Development básica com a estrutura de projetos Java
+## Pré-requisitos
+
+- **Java Development Kit (JDK)** 8 ou superior  
+- **Maven** para gerenciamento de dependências  
+- Familiaridade básica com a estrutura de projetos Java  
 
 ## Configurando GroupDocs.Editor para Java
 
@@ -58,7 +72,7 @@ Add the repository and dependency to your `pom.xml`:
 
 ### Download Direto
 
-Se prefer versão mais recente do GroupDocs.Editor para Java em [GroupDocs releases](https://releases.groupdocs.com/editor/java/).
+Se preferir não usar Maven, baixe a versão mais recente do GroupDocs.Editor para Java em [GroupDocs releases](https://releases.groupdocs.com/editor/java/).
 
 #### Aquisição de Licença
 
@@ -66,7 +80,7 @@ Para começar a usar o GroupDocs.Editor, obtenha uma licença de avaliação gra
 
 ### Inicialização e Configuração Básicas
 
-Com a biblioteca adicionada, crie uma instância de `Editor` apontando para o seu arquivo Word:
+Com a biblioteca adicionada, crie uma instância de `Editor` apontando para seu arquivo Word:
 
 ```java
 Editor editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx", new WordProcessingLoadOptions());
@@ -81,7 +95,7 @@ Dividiremos a implementação em recursos distintos, cada um focado em uma funci
 ### Como Editar DOCX com GroupDocs.Editor para Java
 
 #### Visão Geral
-Carregar e editar um documento é o primeiro passo. Esse recurso permite que os usuários visualizem e modifiquem o conteúdo diretamente dentro de sua aplicação.
+Carregar e editar um documento é o primeiro passo. Esse recurso permite que os usuários visualizem e modifiquem o conteúdo diretamente em sua aplicação.
 
 ##### Etapa 1: Crie um Objeto `Editor`
 ```java
@@ -99,7 +113,7 @@ EditableDocument document = editor.edit(new WordProcessingEditOptions());
 ### Como Extrair Imagens de DOCX
 
 #### Visão Geral
-Extrair imagens é crucial quando você precisa reutilizar ou arquivar elementos visuais separadamente do texto.
+Extrair imagens é crucial quando você precisa reutilizar ou arquivar recursos visuais separadamente do texto.
 
 ##### Etapa 1: Recuperar Imagens
 ```java
@@ -107,7 +121,7 @@ Extrair imagens é crucial quando você precisa reutilizar ou arquivar elementos
 List<IImageResource> images = document.getImages();
 ```
 
-### Salvar Imagens em Pasta
+#### Salvar Imagens em Pasta
 
 #### Visão Geral
 Após a extração, você pode armazenar as imagens onde precisar.
@@ -125,7 +139,7 @@ for (IImageResource oneImage : images) {
 ### Como Extrair Fontes de DOCX
 
 #### Visão Geral
-As fontes são frequentemente incorporadas para branding; extraí‑las permite manter a consistência visual entre plataformas.
+Fontes são frequentemente incorporadas para branding; extraí‑las permite manter a consistência visual entre plataformas.
 
 ##### Etapa 1: Recuperar Fontes
 ```java
@@ -133,7 +147,7 @@ As fontes são frequentemente incorporadas para branding; extraí‑las permite 
 List<FontResourceBase> fonts = document.getFonts();
 ```
 
-### Salvar Fontes em Pasta
+#### Salvar Fontes em Pasta
 
 #### Visão Geral
 Persista as fontes extraídas para uso posterior em ferramentas de design ou outros documentos.
@@ -157,7 +171,7 @@ Folhas de estilo (CSS) definem o layout visual. Extraí‑las permite reutilizar
 List<CssText> stylesheets = document.getCss();
 ```
 
-### Salvar Folhas de Estilo em Pasta
+#### Salvar Folhas de Estilo em Pasta
 
 #### Visão Geral
 Salvar os arquivos CSS lhe dá controle total sobre a estilização do documento fora do Word.
@@ -172,21 +186,22 @@ for (CssText oneStylesheet : stylesheets) {
 
 ## Aplicações Práticas
 
-1. **Gerenciamento de Ativos Digitais** – Extraia imagens para um repositório centralizado.
-2. **Consistência de Marca** – Extraia fontes para garantir branding uniforme em todos os documentos corporativos.
-3. **Modelos de Documentos Personalizados** – Reutilize folhas de estilo extraídas para criar modelos consistentes para geração automática de relatórios.
-4. **Processamento em Lote de Docs Word** – Percorra uma pasta de arquivos `.docx`, aplicando o mesmo fluxo de edição‑e‑extração a cada arquivo.
+1. **Gerenciamento de Ativos Digitais** – Extrair imagens para um repositório centralizado.  
+2. **Consistência de Marca** – Extrair fontes para garantir branding uniforme em todos os documentos corporativos.  
+3. **Modelos de Documentos Personalizados** – Reutilizar folhas de estilo extraídas para criar modelos consistentes para geração automática de relatórios.  
+4. **Processamento em Lote de Docs Word** – Percorrer uma pasta de arquivos `.docx`, aplicando o mesmo fluxo de edição‑e‑extração a cada arquivo.
 
 ## Considerações de Performance
 
 Ao trabalhar com o GroupDocs.Editor, tenha em mente estas dicas:
 
-- **Gerenciamento de Recursos** – Chame `editor.close()` ou deixe o coletor de lixo da JVM liberar recursos após cada documento.
-- **Processamento em Lote** ou com um pool de Ajuste `WordProcessingLoadOptions` (por exemplo, desabilite recursos desnecessários) para documentos grandes.
+- **Gerenciamento de Recursos** – Chame `editor.close()` ou deixe o coletor de lixo da JVM liberar recursos após cada documento.  
+- **Processamento em Lote** – Processar arquivos sequencialmente ou com um pool de threads, mas monitorar o uso de memória.  
+- **Ajuste de Opções de Carregamento** – Ajuste `WordProcessingLoadOptions` (por exemplo, desabilite recursos desnecessários) para documentos grandes.
 
 ## Perguntas Frequentes
 
-**Q: O GroupDocs.Editor é compatível com todas as versões Java?**  
+**Q: O GroupDocs.Editor é compatível com todas as versões do Java?**  
 A: Sim, funciona com JDK 8 e superiores.
 
 **Q: Posso editar documentos protegidos por senha?**  
@@ -203,17 +218,17 @@ A: Sim, você pode transmitir arquivos do AWS S3, Azure Blob ou Google Cloud Sto
 
 ## Recursos
 
-- [Documentação](https://docs.groupdocs.com/editor/java/)
-- [Referência da API](https://reference.groupdocs.com/editor/java/)
-- [Baixar Versão Mais Recente](https://releases.groupdocs.com/editor/java/)
-- [Teste Gratuito](https://releases.groupdocs.com/editor/java/)
-- [Licença Temporária](https://purchase.groupdocs.com/temporary-license)
-- [Fórum de Suporte](https://forum.groupdocs.com/c/editor/)
+- [Documentation](https://docs.groupdocs.com/editor/java/)
+- [API Reference](https://reference.groupdocs.com/editor/java/)
+- [Download Latest Version](https://releases.groupdocs.com/editor/java/)
+- [Free Trial](https://releases.groupdocs.com/editor/java/)
+- [Temporary License](https://purchase.groupdocs.com/temporary-license)
+- [Support Forum](https://forum.groupdocs.com/c/editor/)
 
-Seguindo este guia, você agora tem uma base sólida para **como editar docx** arquivos e extrair todos os recursos associados usando o GroupDocs.Editor para Java. Sinta‑se à vontade para experimentar recursos adicionais da API, como verificação ortográfica, controle de alterações ou conversão personalizada para HTML, a fim de expandir ainda mais sua solução.
+Seguindo este guia, você agora tem uma base sólida para **como editar docx** e extrair todos os recursos associados usando o GroupDocs.Editor para Java. Sinta‑se à vontade para experimentar recursos adicionais da API, como verificação ortográfica, controle de alterações ou conversão personalizada para HTML, a fim de expandir ainda mais sua solução.
 
 ---
 
-**Última Atualização:** 2026-01-21  
-**Testado com:** GroupDocs.Editor 25.3 para Java  
+**Última atualização:** 2026-03-22  
+**Testado com:** GroupDocs.Editor 25.3 for Java  
 **Autor:** GroupDocs
