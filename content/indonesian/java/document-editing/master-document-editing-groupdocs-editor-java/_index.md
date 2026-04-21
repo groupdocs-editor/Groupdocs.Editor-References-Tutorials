@@ -1,45 +1,47 @@
 ---
-date: '2025-12-21'
-description: Pelajari cara membuat dokumen yang dapat diedit dan mengedit file Word
-  menggunakan GroupDocs.Editor untuk Java. Termasuk pengaturan, ekstraksi sumber daya,
-  dan otomatisasi pembuatan laporan.
+date: '2026-02-21'
+description: Pelajari cara mengekstrak gambar dari Word, mengonversi Word ke HTML,
+  dan menghasilkan dokumen yang dapat diedit menggunakan GroupDocs.Editor untuk Java.
+  Termasuk pengaturan, ekstraksi sumber daya, dan tips pemrosesan batch.
 keywords:
 - GroupDocs.Editor for Java
 - document editing in Java
 - Java document management
-title: Cara Membuat Dokumen yang Dapat Diedit dengan GroupDocs.Editor untuk Java
+title: Cara Mengekstrak Gambar dari Word dan Membuat Dokumen yang Dapat Diedit dengan
+  GroupDocs.Editor untuk Java
 type: docs
 url: /id/java/document-editing/master-document-editing-groupdocs-editor-java/
 weight: 1
 ---
 
-# Buat Dokumen yang Dapat Diedit dengan GroupDocs.Editor Java
+# Ekstrak Gambar dari Word dan Buat Dokumen yang Dapat Diedit dengan GroupDocs.Editor Java
 
-Di era perusahaan yang bergerak cepat saat ini, kemampuan untuk **membuat dokumen yang dapat diedit** secara programatik menjadi pengubah permainan. Baik Anda perlu **mengedit Word** template, **mengekstrak gambar dari Word**, atau **mengonversi Word ke HTML** untuk portal web, GroupDocs.Editor untuk Java memberikan cara yang andal dan berperforma tinggi untuk mengotomatiskan tugas‑tugas tersebut. Dalam panduan ini kami akan membahas semua yang Anda perlukan—dari penyiapan lingkungan hingga penyuntingan lanjutan—sehingga Anda dapat mulai membangun solusi yang **mengotomatiskan pembuatan laporan** dalam hitungan menit.
+Pada perusahaan yang bergerak cepat saat ini, kemampuan untuk **mengekstrak gambar dari Word** secara programatik menjadi pengubah permainan. Baik Anda perlu **mengonversi Word ke HTML**, **menghasilkan HTML dari Word**, atau **mengedit dokumen Word gaya Java**, GroupDocs.Editor untuk Java memberikan cara yang andal dan berperforma tinggi untuk mengotomatisasi tugas‑tugas tersebut. Dalam panduan ini kami akan membahas semua yang Anda perlukan—dari penyiapan lingkungan hingga penyuntingan lanjutan—sehingga Anda dapat mulai membangun solusi yang **mengotomatisasi pembuatan laporan** dan **memproses batch dokumen Word** dalam hitungan menit.
 
 ## Jawaban Cepat
 - **Apa kelas utama untuk memuat file Word?** `Editor`  
-- **Metode mana yang mengembalikan markup HTML untuk penyuntingan?** `edit()` mengembalikan sebuah `EditableDocument`  
-- **Bagaimana cara mengekstrak gambar dari dokumen Word?** Gunakan `getAllResources()` pada `EditableDocument`  
-- **Apakah saya dapat menyimpan konten yang diedit kembali ke disk?** Ya, panggil `save()` pada `EditableDocument`  
-- **Apakah saya memerlukan lisensi untuk pengembangan?** Versi percobaan gratis atau lisensi sementara dapat digunakan untuk pengujian; lisensi penuh diperlukan untuk produksi  
+- **Metode mana yang mengembalikan markup HTML untuk penyuntingan?** `edit()` returns an `EditableDocument`  
+- **Bagaimana cara mengekstrak gambar dari dokumen Word?** Use `getAllResources()` on the `EditableDocument`  
+- **Bisakah saya menyimpan konten yang diedit kembali ke disk?** Yes, call `save()` on the `EditableDocument`  
+- **Apakah saya memerlukan lisensi untuk pengembangan?** A free trial or temporary license works for testing; a full license is required for production  
 
-## Apa itu “create editable document”?
-Membuat dokumen yang dapat diedit berarti memuat file sumber (mis., .docx) ke dalam format yang dapat dimanipulasi—biasanya HTML—sehingga Anda dapat mengubah teks, gambar, gaya, atau tautan secara programatik sebelum menyimpan hasilnya.
+## Apa itu “mengekstrak gambar dari word”?
+Mengekstrak gambar dari Word berarti memuat file `.docx`, mengonversinya menjadi representasi HTML yang dapat diedit, dan kemudian mengambil setiap gambar, font, atau stylesheet yang tersemat. Ini memberi Anda kontrol penuh atas setiap sumber daya sehingga Anda dapat menyimpannya secara terpisah, menempatkannya kembali di CDN, atau menyematkannya dalam dokumen lain.
 
 ## Mengapa menggunakan GroupDocs.Editor untuk Java?
-- **Dukungan Word lengkap** – mengedit, mengekstrak, dan mengonversi tanpa Microsoft Office.  
-- **Konversi HTML tanpa hambatan** – sempurna untuk editor berbasis web atau integrasi CMS.  
-- **Penanganan sumber daya yang kuat** – dapatkan gambar, font, dan CSS dalam satu panggilan.  
-- **Kinerja yang dapat diskalakan** – ideal untuk pemrosesan batch dan pembuatan laporan berskala besar.
+- **Full‑featured Word support** – edit, extract, and convert without Microsoft Office.  
+- **Seamless HTML conversion** – perfect for web‑based editors or CMS integrations.  
+- **Robust resource handling** – get images, fonts, and CSS in one call.  
+- **Scalable performance** – ideal for batch processing and large‑scale report generation.  
+- **Convenient Java API** – works naturally with Java 8+ and popular IDEs.
 
 ## Prasyarat
-- Java Development Kit (JDK) 8 atau lebih baru.  
-- IDE seperti IntelliJ IDEA atau Eclipse.  
-- Pengetahuan dasar Java dan familiaritas dengan Maven.
+- Java Development Kit (JDK) 8 or newer.  
+- An IDE such as IntelliJ IDEA or Eclipse.  
+- Basic Java knowledge and familiarity with Maven.
 
 ### Perpustakaan yang Diperlukan
-Sertakan pustaka GroupDocs.Editor dalam proyek Anda. Gunakan Maven untuk menambahkannya sebagai dependensi:
+Include the GroupDocs.Editor library in your project. Use Maven to add it as a dependency:
 
 ```xml
 <repositories>
@@ -59,20 +61,20 @@ Sertakan pustaka GroupDocs.Editor dalam proyek Anda. Gunakan Maven untuk menamba
 </dependencies>
 ```
 
-Sebagai alternatif, unduh versi terbaru langsung dari [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+Alternatively, download the latest version directly from [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 ### Akuisisi Lisensi
-Untuk menggunakan GroupDocs.Editor, Anda dapat memulai dengan percobaan gratis, meminta lisensi sementara, atau membeli lisensi penuh. Pustaka ini berfungsi langsung untuk evaluasi, dan beralih ke lisensi produksi hanya memerlukan pembaruan file lisensi.
+To use GroupDocs.Editor, you can start with a free trial, request a temporary license, or purchase a full license. The library works out‑of‑the‑box for evaluation, and switching to a production license is just a matter of updating the license file.
 
 ## Cara membuat dokumen yang dapat diedit menggunakan GroupDocs.Editor Java
 
 ### Instalasi
-1. **Add Dependency** – pastikan `pom.xml` berisi cuplikan Maven di atas.  
-2. **Download JAR** – jika Anda lebih suka penyiapan manual, dapatkan JAR terbaru dari situs resmi [GroupDocs site](https://releases.groupdocs.com/editor/java/).  
-3. **Configure License** – letakkan file `GroupDocs.Editor.lic` Anda di folder resources atau atur secara programatik.
+1. **Add Dependency** – ensure the `pom.xml` contains the Maven snippet above.  
+2. **Download JAR** – if you prefer manual setup, grab the latest JAR from the official [GroupDocs site](https://releases.groupdocs.com/editor/java/).  
+3. **Configure License** – place your `GroupDocs.Editor.lic` file in the resources folder or set it programmatically.
 
 ### Inisialisasi Dasar
-Setelah lingkungan siap, Anda dapat menginstansiasi kelas `Editor` dengan path ke file Word Anda:
+Once the environment is ready, you can instantiate the `Editor` class with the path to your Word file:
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -81,14 +83,12 @@ import com.groupdocs.editor.Editor;
 Editor editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx");
 ```
 
-Baris sederhana ini memberi Anda editor yang sepenuhnya berfungsi, mampu memuat, menyunting, dan menyimpan dokumen.
+This simple line gives you a fully‑functional editor capable of loading, editing, and saving the document.
 
-## Panduan Implementasi
+## Panduan Langkah‑per‑Langkah
 
-### Membuat dan Mengedit Dokumen yang Dapat Diedit
-
-#### Ikhtisar
-Memuat dokumen sebagai `EditableDocument` adalah langkah pertama menuju modifikasi apa pun.
+### Langkah 1: Muat dokumen sebagai EditableDocument
+Loading a document as an `EditableDocument` is the first step toward any modification.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -99,16 +99,14 @@ Editor editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx");
 EditableDocument beforeEdit = editor.edit();
 ```
 
-- **`Editor`** – menangani I/O file dan deteksi format.  
-- **`EditableDocument`** – merepresentasikan dokumen dalam bentuk HTML yang dapat disunting.
+- **`Editor`** – handles file I/O and format detection.  
+- **`EditableDocument`** – represents the document in an editable HTML form.
 
-#### Cara mengedit konten Word (how to edit word)
-Anda kini dapat memanipulasi string HTML, mengganti placeholder, atau memperbarui gaya. Setelah perubahan, panggil `save()` untuk menyimpannya.
+### Langkah 2: Edit konten Word (cara mengedit word)
+You can now manipulate the HTML string, replace placeholders, or update styles. After changes, call `save()` to persist them.
 
-### Mengekstrak Sumber Daya Dokumen
-
-#### Ikhtisar
-GroupDocs.Editor memudahkan penarikan sumber daya tersemat seperti gambar, font, dan file CSS.
+### Langkah 3: Ekstrak gambar dan sumber daya lainnya
+GroupDocs.Editor makes it easy to pull out every embedded resource, which is exactly how you **extract images from Word**.
 
 ```java
 import com.groupdocs.editor.htmlcss.resources.IHtmlResource;
@@ -122,49 +120,41 @@ List<IHtmlResource> allResources = beforeEdit.getAllResources();
 List<String> stylesheets = beforeEdit.getCssContent();
 ```
 
-- **`getEmbeddedHtml()`** – mengembalikan markup HTML lengkap.  
-- **`getAllResources()`** – menyediakan daftar setiap gambar, font, atau stylesheet yang tersemat dalam file Word asli.  
-- **`extract images from word** – cukup iterasi `allResources` untuk objek bertipe `ImageResource`.
+- **`getEmbeddedHtml()`** – returns the full HTML markup.  
+- **`getAllResources()`** – provides a list of every image, font, or stylesheet embedded in the original Word file.  
+- **`extract images from word`** – cukup iterasi `allResources` untuk objek bertipe `ImageResource`.
 
-### Menyesuaikan Tautan Eksternal dalam Markup HTML
-
-#### Ikhtisar
-Jika dokumen Anda berisi tautan yang perlu diarahkan ke penangan khusus (mis., CDN), Anda dapat menulis ulangnya secara langsung.
+### Langkah 4: Sesuaikan tautan eksternal dalam markup HTML
+If your document contains links that need to point to a custom handler (e.g., a CDN), you can rewrite them on the fly.
 
 ```java
 String customImagesRequesthandlerUri = "http://example.com/ImagesHandler/id=";
 String htmlMarkup = beforeEdit.getContentString(customImagesRequesthandlerUri);
 ```
 
-- **`getContentString()`** – menyuntikkan prefiks URI yang diberikan untuk semua referensi gambar, memungkinkan Anda mengontrol dari mana gambar disajikan.
+- **`getContentString()`** – injects the supplied URI prefix for all image references, enabling you to control where images are served from.
 
-### Menyimpan Dokumen yang Dapat Diedit ke Disk
-
-#### Ikhtisar
-Setelah semua penyuntingan dan penyesuaian sumber daya, tulis hasilnya kembali ke file HTML (atau konversi kembali ke DOCX nanti).
+### Langkah 5: Simpan dokumen yang diedit ke disk
+After all edits and resource adjustments, write the result back to an HTML file (or re‑convert to DOCX later).
 
 ```java
 // Save the edited document as an HTML file
 beforeEdit.save("YOUR_OUTPUT_DIRECTORY/output.html");
 ```
 
-- **`save()`** – menyimpan HTML yang telah disunting dan semua sumber daya terkait ke folder yang ditentukan.
+- **`save()`** – persists the edited HTML and any linked resources to the specified folder.
 
-### Memeriksa Status Pembuangan EditableDocument
-
-#### Ikhtisar
-Manajemen sumber daya yang tepat sangat penting, terutama saat memproses banyak file dalam pekerjaan batch.
+### Langkah 6: Periksa status pembuangan
+Proper resource management is crucial, especially when **batch process word docs**.
 
 ```java
 String res = !beforeEdit.isDisposed() ? "not" : "already";
 ```
 
-- **`isDisposed()`** – mengembalikan `true` jika sumber daya native dokumen telah dibebaskan. Selalu buang dokumen besar setelah selesai.
+- **`isDisposed()`** – returns `true` if the document’s native resources have been released. Always dispose of large documents when you’re done.
 
-### Membuat EditableDocument dari HTML
-
-#### Ikhtisar
-Anda juga dapat memulai dari file HTML yang ada atau markup mentah, yang berguna untuk skenario **convert word to html**.
+### Langkah 7: Buat EditableDocument dari HTML
+You can also start from an existing HTML file or raw markup, which is handy for **convert word to html** scenarios.
 
 ```java
 import com.groupdocs.editor.EditableDocument;
@@ -174,41 +164,47 @@ EditableDocument afterEditFromFile = EditableDocument.fromFile("YOUR_OUTPUT_DIRE
 EditableDocument afterEditFromMarkup = EditableDocument.fromMarkup(htmlMarkup, allResources);
 ```
 
-- **`fromFile()`** – memuat file HTML yang sebelumnya disimpan oleh `save()`.  
-- **`fromMarkup()`** – membangun `EditableDocument` langsung dari string dan daftar sumber dayanya.
+- **`fromFile()`** – loads an HTML file that was previously saved by `save()`.  
+- **`fromMarkup()`** – builds an `EditableDocument` directly from a string and its resource list.
 
-## Aplikasi Praktis
-GroupDocs.Editor Java bersinar dalam proyek dunia nyata:
+## Cara Mengonversi Word ke HTML dengan GroupDocs.Editor
+The `edit()` method automatically converts the loaded `.docx` into an HTML representation. You can then use `getEmbeddedHtml()` or `getContentString()` to retrieve the **generate html from word** output, which can be embedded in web pages, emails, or stored for later use.
 
-1. **Content Management Systems (CMS)** – sematkan tombol “Edit Document” yang membuka editor berbasis web yang didukung oleh HTML yang baru saja Anda hasilkan.  
-2. **Collaborative Editing Platforms** – izinkan banyak pengguna mengedit template Word yang sama, lalu gabungkan perubahan secara otomatis.  
-3. **Automate Report Generation** – isi placeholder dalam template Word dengan data dari basis data, ekspor ke HTML untuk email, atau kembali ke DOCX untuk diunduh.
+## Memproses Batch Dokumen Word Menggunakan GroupDocs.Editor
+When you need to handle dozens or hundreds of templates, wrap the steps above in a loop or a `CompletableFuture` pipeline. Remember to call `dispose()` (or let the GC handle it) after each document to keep memory usage low.
 
-## Pertimbangan Kinerja
-- **Dispose early** – panggil `beforeEdit.dispose()` (atau biarkan GC menanganinya) setelah menyimpan untuk membebaskan memori native.  
-- **Batch processing** – gunakan `CompletableFuture` Java untuk menyunting beberapa dokumen secara paralel tanpa memblokir thread UI.  
-- **Large files** – alirkan sumber daya alih‑alih memuat seluruh dokumen ke memori bila memungkinkan.
+## Masalah Umum dan Solusinya
+- **Large documents cause OutOfMemoryError** – stream resources instead of loading everything into memory; dispose of each `EditableDocument` as soon as you’re done.  
+- **Images not appearing after conversion** – ensure you pass the correct URI prefix to `getContentString()` or copy the extracted resources to the target folder.  
+- **License not recognized** – verify that the `GroupDocs.Editor.lic` file is on the classpath or set the license programmatically before creating the `Editor`.
+
+## Pertanyaan yang Sering Diajukan
+
+**Q: Can I edit PDFs using GroupDocs.Editor Java?**  
+A: Yes, GroupDocs.Editor supports various formats including PDF. Check the [API reference](https://reference.groupdocs.com/editor/java/) for specific methods.
+
+**Q: How do I handle large documents efficiently?**  
+A: Use resource management techniques such as disposing of `EditableDocument` instances promptly and processing files in parallel with Java’s `CompletableFuture`.
+
+**Q: Is GroupDocs.Editor compatible with all Java IDEs?**  
+A: Yes, it works with popular IDEs like IntelliJ IDEA and Eclipse.
+
+**Q: What is the best way to **extract images from word** when processing many files?**  
+A: Loop through `EditableDocument.getAllResources()` and filter for `ImageResource` objects; store them in a dedicated folder or upload to a CDN as you go.
+
+**Q: Can I convert the edited HTML back to a DOCX file?**  
+A: Absolutely. Use `EditableDocument.saveAsDocx("path/to/output.docx")` after making your changes.
 
 ## Kesimpulan
-Anda kini memiliki panduan lengkap, ujung‑ke‑ujung tentang cara **membuat dokumen yang dapat diedit**, **mengedit Word** konten, **mengekstrak gambar dari Word**, dan **mengonversi Word ke HTML** menggunakan GroupDocs.Editor untuk Java. Teknik‑teknik ini memungkinkan Anda membangun aplikasi berpusat dokumen yang kuat dan **mengotomatiskan pembuatan laporan** dengan percaya diri.
+You now have a complete, end‑to‑end walkthrough on how to **extract images from Word**, **edit Word** content, **convert Word to HTML**, and **generate editable documents** using GroupDocs.Editor for Java. These techniques empower you to build powerful document‑centric applications and **automate report generation** with confidence.
 
 ### Langkah Selanjutnya
-- Coba edit template dengan placeholder dinamis (mis., `{{CustomerName}}`).  
-- Jelajahi API untuk menyimpan kembali ke DOCX (`EditableDocument.saveAsDocx()`).  
-- Integrasikan alur kerja ke layanan Spring Boot untuk pembuatan dokumen on‑demand.
-
-## Bagian FAQ
-**Q1: Bisakah saya mengedit PDF menggunakan GroupDocs.Editor Java?**  
-A1: Ya, GroupDocs.Editor mendukung berbagai format termasuk PDF. Lihat [API reference](https://reference.groupdocs.com/editor/java/) untuk metode spesifik.
-
-**Q2: Bagaimana cara menangani dokumen besar secara efisien?**  
-A1: Gunakan teknik manajemen sumber daya dan optimalkan kode Anda untuk menangani file besar tanpa penurunan kinerja.
-
-**Q3: Apakah GroupDocs.Editor kompatibel dengan semua IDE Java?**  
-A1: Ya, kompatibel dengan IDE populer seperti IntelliJ IDEA dan Eclipse.
+- Try editing a template with dynamic placeholders (e.g., `{{CustomerName}}`).  
+- Explore the API for saving back to DOCX (`EditableDocument.saveAsDocx()`).  
+- Integrate the workflow into a Spring Boot service for on‑demand document generation.
 
 ---
 
-**Last Updated:** 2025-12-21  
-**Tested With:** GroupDocs.Editor 25.3 for Java  
-**Author:** GroupDocs
+**Terakhir Diperbarui:** 2026-02-21  
+**Diuji Dengan:** GroupDocs.Editor 25.3 for Java  
+**Penulis:** GroupDocs

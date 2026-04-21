@@ -1,43 +1,44 @@
 ---
-date: '2025-12-21'
-description: GroupDocs.Editor for Java を使用して、編集可能なドキュメントの作成と Word ファイルの編集方法を学びます。セットアップ、リソース抽出、レポート生成の自動化が含まれます。
+date: '2026-02-21'
+description: Word から画像を抽出し、Word を HTML に変換し、GroupDocs.Editor for Java を使用して編集可能なドキュメントを生成する方法を学びます。セットアップ、リソース抽出、バッチ処理のヒントが含まれます。
 keywords:
 - GroupDocs.Editor for Java
 - document editing in Java
 - Java document management
-title: Java 用 GroupDocs.Editor で編集可能なドキュメントを作成する方法
+title: Wordから画像を抽出し、GroupDocs.Editor for Javaで編集可能なドキュメントを作成する方法
 type: docs
 url: /ja/java/document-editing/master-document-editing-groupdocs-editor-java/
 weight: 1
 ---
 
-# GroupDocs.Editor Javaで編集可能なドキュメントを作成する
+# Word から画像を抽出し、GroupDocs.Editor Java で編集可能なドキュメントを作成する
 
-今日のスピーディーに変化する企業環境において、プログラムで **create editable document** ファイルを作成できる能力はゲームチェンジャーです。**edit Word** テンプレートの編集、**extract images from Word**、または Web ポータル向けに **convert Word to HTML** が必要な場合でも、GroupDocs.Editor for Java は信頼性が高く高性能な方法でこれらのタスクを自動化します。このガイドでは、環境設定から高度な編集まで必要なすべてを順に解説し、数分で **automate report generation** を実現できるソリューションの構築を開始できるようにします。
+今日の急速に変化する企業環境において、プログラムで **Word から画像を抽出** できる能力は画期的です。**Word を HTML に変換**、**Word から HTML を生成**、または **Java スタイルで Word ドキュメントを編集** したい場合でも、GroupDocs.Editor for Java は信頼性が高く高性能な方法でこれらのタスクを自動化します。このガイドでは、環境設定から高度な編集まで必要なすべてを順に解説し、**レポート生成の自動化**や **Word ドキュメントのバッチ処理** を数分で構築できるようにします。
 
-## クイックアンサー
-- **Wordファイルを読み込むためのプライマリクラスは何ですか？** `Editor`
-- **編集用のHTMLマークアップを返すメソッドはどれですか？** `edit()`は`EditableDocument`を返します。
-- **Word文書から画像を抽出するにはどうすればいいですか？** `EditableDocument`で`getAllResources()`を使用してください。
-- **編集したコンテンツをディスクに保存できますか？** はい。`EditableDocument`で`save()`を呼び出してください。
-- **開発にはライセンスが必要ですか？** 無料トライアルまたは一時ライセンスはテストには使用できますが、本番環境ではフルライセンスが必要です。
+## クイック回答
+- **Word ファイルをロードするための主要クラスは何ですか？** `Editor`  
+- **編集用の HTML マークアップを返すメソッドはどれですか？** `edit()` は `EditableDocument` を返します  
+- **Word ドキュメントから画像を抽出するには？** `EditableDocument` の `getAllResources()` を使用します  
+- **編集したコンテンツをディスクに保存できますか？** はい、`EditableDocument` の `save()` を呼び出します  
+- **開発にライセンスは必要ですか？** テスト用には無料トライアルまたは一時ライセンスで動作しますが、本番環境ではフルライセンスが必要です  
 
-## 「編集可能なドキュメントを作成」とは？
-編集可能なドキュメントを作成するとは、ソースファイル（例: .docx）を操作可能な形式（通常は HTML）にロードし、テキスト、画像、スタイル、リンクなどをプログラムで変更できるようにした上で、結果を保存することを指します。
+## “Word から画像を抽出” とは何ですか？
+Word から画像を抽出するとは、`.docx` ファイルをロードし、編集可能な HTML 表現に変換した上で、埋め込まれたすべての画像、フォント、スタイルシートを取り出すことを指します。これにより各リソースを完全に制御でき、別々に保存したり CDN に再ホストしたり、別のドキュメントに埋め込んだりできます。
 
-## GroupDocs.Editor for Java を使う理由
-- **フル機能の Word サポート** – Microsoft Office なしで編集、抽出、変換できます。
-- **シームレスな HTML 変換** – Web ベースのエディターや CMS との統合に最適です。
-- **堅牢なリソース処理** – 画像、フォント、CSS を 1 回の呼び出しで取得できます。
-- **スケーラブルなパフォーマンス** – バッチ処理や大規模なレポート生成に最適です。
+## なぜ GroupDocs.Editor for Java を使用するのか？
+- **フル機能の Word サポート** – Microsoft Office を使用せずに編集、抽出、変換が可能です。  
+- **シームレスな HTML 変換** – Web ベースのエディタや CMS 統合に最適です。  
+- **堅牢なリソース処理** – 1 回の呼び出しで画像、フォント、CSS を取得できます。  
+- **スケーラブルなパフォーマンス** – バッチ処理や大規模レポート生成に理想的です。  
+- **便利な Java API** – Java 8 以降および一般的な IDE と自然に連携します。  
 
 ## 前提条件
-- Java Development Kit (JDK) 8 以降。
-- IntelliJ IDEA や Eclipse などの IDE。
-- Java に関する基本的な知識と Maven の使用経験。
+- Java Development Kit (JDK) 8 以上。  
+- IntelliJ IDEA や Eclipse などの IDE。  
+- 基本的な Java の知識と Maven の使用経験。  
 
 ### 必要なライブラリ
-GroupDocs.Editor ライブラリをプロジェクトに含めます。依存関係として追加するには、Maven を使用します。
+プロジェクトに GroupDocs.Editor ライブラリを含めます。Maven を使用して依存関係として追加してください：
 
 ```xml
 <repositories>
@@ -57,20 +58,20 @@ GroupDocs.Editor ライブラリをプロジェクトに含めます。依存関
 </dependencies>
 ```
 
-または、[GroupDocs.Editor for Java リリース](https://releases.groupdocs.com/editor/java/) から最新バージョンを直接ダウンロードすることもできます。
+あるいは、最新バージョンを直接 [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) からダウンロードしてください。
 
-### ライセンスの取得
-GroupDocs.Editor を使用するには、無料トライアルから始めるか、一時ライセンスをリクエストするか、フルライセンスを購入することができます。ライブラリは評価版としてすぐに使用でき、ライセンスファイルを更新するだけで本番ライセンスに切り替えることができます。
+### ライセンス取得
+GroupDocs.Editor を使用するには、無料トライアルで開始するか、一時ライセンスをリクエストするか、フルライセンスを購入できます。ライブラリは評価用にすぐに使用でき、プロダクションライセンスへ切り替える場合はライセンスファイルを更新するだけです。
 
 ## GroupDocs.Editor Java を使用して編集可能なドキュメントを作成する方法
 
 ### インストール
-1. **依存関係を追加** – `pom.xml` に上記の Maven スニペットが含まれていることを確認します。
-2. **JAR をダウンロード** – 手動でセットアップする場合は、公式の [GroupDocs サイト](https://releases.groupdocs.com/editor/java/) から最新の JAR をダウンロードしてください。
-3. **ライセンスの設定** – `GroupDocs.Editor.lic` ファイルをリソースフォルダに配置するか、プログラムで設定します。
+1. **依存関係を追加** – `pom.xml` に上記の Maven スニペットが含まれていることを確認します。  
+2. **JAR をダウンロード** – 手動設定を好む場合は、公式の [GroupDocs site](https://releases.groupdocs.com/editor/java/) から最新の JAR を取得してください。  
+3. **ライセンスを設定** – `GroupDocs.Editor.lic` ファイルを resources フォルダーに配置するか、プログラムで設定します。  
 
 ### 基本的な初期化
-環境の準備が整ったら、Word ファイルへのパスを指定して `Editor` クラスをインスタンス化できます。
+環境が整ったら、Word ファイルへのパスを指定して `Editor` クラスのインスタンスを作成できます：
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -79,14 +80,12 @@ import com.groupdocs.editor.Editor;
 Editor editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx");
 ```
 
-このシンプルなコード行で、ドキュメントの読み込み、編集、保存が可能なフル機能のエディターが完成します。
+このシンプルなコード一行で、ドキュメントのロード、編集、保存が可能な完全なエディタが手に入ります。
 
-## 実装ガイド
+## ステップバイステップガイド
 
-### 編集可能なドキュメントの作成と編集
-
-#### 概要
-ドキュメントを `EditableDocument` として読み込むことは、あらゆる変更を行うための最初のステップです。
+### ステップ 1: ドキュメントを EditableDocument としてロードする
+ドキュメントを `EditableDocument` としてロードすることは、あらゆる変更への最初のステップです。
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -97,16 +96,14 @@ Editor editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx");
 EditableDocument beforeEdit = editor.edit();
 ```
 
-- **`Editor`** – ファイル入出力とフォーマット検出を処理します。
-- **`EditableDocument`** – ドキュメントを編集可能なHTML形式で表現します。
+- **`Editor`** – ファイル I/O とフォーマット検出を処理します。  
+- **`EditableDocument`** – ドキュメントを編集可能な HTML 形式で表現します。  
 
-#### Wordコンテンツの編集方法（Wordの編集方法）
-HTML文字列の操作、プレースホルダーの置き換え、スタイルの更新ができるようになりました。変更後は、`save()` を呼び出して変更内容を保存します。
+### ステップ 2: Word コンテンツを編集する（how to edit word）
+これで HTML 文字列を操作したり、プレースホルダーを置換したり、スタイルを更新したりできます。変更後は `save()` を呼び出して永続化します。
 
-### ドキュメントリソースの抽出
-
-#### 概要
-GroupDocs.Editorを使用すると、画像、フォント、CSSファイルなどの埋め込みリソースを簡単に抽出できます。
+### ステップ 3: 画像やその他のリソースを抽出する
+GroupDocs.Editor を使用すると、埋め込まれたすべてのリソースを簡単に取り出すことができ、これが **Word から画像を抽出** する方法そのものです。
 
 ```java
 import com.groupdocs.editor.htmlcss.resources.IHtmlResource;
@@ -120,49 +117,41 @@ List<IHtmlResource> allResources = beforeEdit.getAllResources();
 List<String> stylesheets = beforeEdit.getCssContent();
 ```
 
-- **`getEmbeddedHtml()`** – 完全な HTML マークアップを返します。
-- **`getAllResources()`** – 元の Word ファイルに埋め込まれているすべての画像、フォント、スタイルシートのリストを取得します。
-- **`extract images from word** – `allResources` を反復処理して、`ImageResource` 型のオブジェクトを検索します。
+- **`getEmbeddedHtml()`** – 完全な HTML マークアップを返します。  
+- **`getAllResources()`** – 元の Word ファイルに埋め込まれたすべての画像、フォント、スタイルシートのリストを提供します。  
+- **`extract images from word** – `allResources` を走査して `ImageResource` 型のオブジェクトを取得するだけです。  
 
-### HTML マークアップ内の外部リンクの調整
-
-#### 概要
-ドキュメントにカスタムハンドラー（CDN など）を参照する必要があるリンクが含まれている場合、そのリンクをオンザフライで書き換えることができます。
+### ステップ 4: HTML マークアップ内の外部リンクを調整する
+ドキュメントにカスタムハンドラ（例: CDN）を指す必要があるリンクが含まれている場合、リアルタイムで書き換えることができます。
 
 ```java
 String customImagesRequesthandlerUri = "http://example.com/ImagesHandler/id=";
 String htmlMarkup = beforeEdit.getContentString(customImagesRequesthandlerUri);
 ```
 
-- **`getContentString()`** – すべての画像参照に指定されたURIプレフィックスを挿入し、画像の提供元を制御できるようにします。
+- **`getContentString()`** – すべての画像参照に指定された URI プレフィックスを注入し、画像の配信先を制御できます。  
 
-### 編集可能なドキュメントをディスクに保存
-
-#### 概要
-すべての編集とリソース調整が完了したら、結果をHTMLファイルに書き戻します（または後でDOCXに再変換します）。
+### ステップ 5: 編集したドキュメントをディスクに保存する
+すべての編集とリソース調整が完了したら、結果を HTML ファイルに書き戻します（後で DOCX に再変換することも可能です）。
 
 ```java
 // Save the edited document as an HTML file
 beforeEdit.save("YOUR_OUTPUT_DIRECTORY/output.html");
 ```
 
-- **`save()`** – 編集したHTMLとリンクされたリソースを指定されたフォルダに保存します。
+- **`save()`** – 編集された HTML と関連リソースを指定フォルダーに永続化します。  
 
-### 編集可能なドキュメントの破棄状態の確認
-
-#### 概要
-特にバッチジョブで多数のファイルを処理する場合は、適切なリソース管理が不可欠です。
+### ステップ 6: 解放状態を確認する
+特に **batch process word docs** の場合、適切なリソース管理が重要です。
 
 ```java
 String res = !beforeEdit.isDisposed() ? "not" : "already";
 ```
 
-- **`isDisposed()`** – ドキュメントのネイティブリソースが解放されている場合は `true` を返します。大きなドキュメントは、作業が完了したら必ず破棄してください。
+- **`isDisposed()`** – ドキュメントのネイティブリソースが解放されていれば `true` を返します。使用後は必ず大きなドキュメントを解放してください。  
 
-### HTML から EditableDocument を作成する
-
-#### 概要
-既存の HTML ファイルや生のマークアップから作成することもできます。これは、**Word を HTML に変換する** シナリオに便利です。
+### ステップ 7: HTML から EditableDocument を作成する
+既存の HTML ファイルや生のマークアップから開始することもでき、**convert word to html** のシナリオに便利です。
 
 ```java
 import com.groupdocs.editor.EditableDocument;
@@ -172,41 +161,47 @@ EditableDocument afterEditFromFile = EditableDocument.fromFile("YOUR_OUTPUT_DIRE
 EditableDocument afterEditFromMarkup = EditableDocument.fromMarkup(htmlMarkup, allResources);
 ```
 
-- **`fromFile()`** – `save()` で保存した HTML ファイルを読み込みます。
-- **`fromMarkup()`** – 文字列とそのリソースリストから直接 `EditableDocument` を構築します。
+- **`fromFile()`** – 以前 `save()` で保存された HTML ファイルをロードします。  
+- **`fromMarkup()`** – 文字列とそのリソースリストから直接 `EditableDocument` を構築します。  
 
-## 実用的なアプリケーション
-GroupDocs.Editor Java は、実際のプロジェクトで威力を発揮します。
+## GroupDocs.Editor を使用した Word から HTML への変換方法
+`edit()` メソッドはロードされた `.docx` を自動的に HTML 表現に変換します。その後、`getEmbeddedHtml()` または `getContentString()` を使用して **generate html from word** の出力を取得でき、ウェブページやメールに埋め込んだり、後で使用するために保存したりできます。
 
-1. **コンテンツ管理システム (CMS)** – 生成した HTML で動作する Web ベースのエディターを開く「ドキュメントの編集」ボタンを埋め込みます。
-2. **共同編集プラットフォーム** – 複数のユーザーが同じ Word テンプレートを編集し、変更を自動的にマージできるようにします。
-3. **レポート生成の自動化** – Word テンプレートのプレースホルダーにデータベースのデータを入力し、HTML 形式でエクスポートしてメールに添付したり、DOCX 形式でダウンロードしたりできます。
+## GroupDocs.Editor を使用した Word ドキュメントのバッチ処理
+数十から数百のテンプレートを処理する必要がある場合、上記の手順をループまたは `CompletableFuture` パイプラインでラップします。メモリ使用量を抑えるため、各ドキュメント処理後に `dispose()` を呼び出す（または GC に任せる）ことを忘れないでください。
 
-## パフォーマンスに関する考慮事項
-- **早期破棄** – ネイティブメモリを解放して保存した後、`beforeEdit.dispose()` を呼び出します（または GC に処理を任せます）。
-- **バッチ処理** – Java の `CompletableFuture` を使用して、UI スレッドをブロックすることなく複数のドキュメントを並行して編集します。
-- **大きなファイル** – 可能な場合は、ドキュメント全体をメモリに読み込むのではなく、リソースをストリーミングします。
+## よくある問題と解決策
+- **大きなドキュメントで OutOfMemoryError が発生** – すべてをメモリにロードせずにリソースをストリームし、使用後はすぐに各 `EditableDocument` を解放してください。  
+- **変換後に画像が表示されない** – 正しい URI プレフィックスを `getContentString()` に渡すか、抽出したリソースを対象フォルダーにコピーしてください。  
+- **ライセンスが認識されない** – `GroupDocs.Editor.lic` ファイルがクラスパス上にあること、または `Editor` 作成前にプログラムでライセンスを設定していることを確認してください。  
 
-## まとめ
-GroupDocs.Editor for Java を使用して、**編集可能なドキュメント** ファイルを作成し、**Word** コンテンツを編集し、**Word から画像を抽出し、**Word を HTML に変換する** 方法について、エンドツーエンドの包括的なチュートリアルを学習しました。これらの手法により、強力なドキュメント中心のアプリケーションを構築し、**レポート生成を自動化** できるようになります。
+## よくある質問
+
+**Q: GroupDocs.Editor Java で PDF を編集できますか？**  
+A: はい、GroupDocs.Editor は PDF を含むさまざまな形式をサポートしています。具体的なメソッドは [API reference](https://reference.groupdocs.com/editor/java/) をご確認ください。
+
+**Q: 大きなドキュメントを効率的に処理するには？**  
+A: `EditableDocument` インスタンスを速やかに解放するなどのリソース管理手法や、Java の `CompletableFuture` を使った並列処理を活用してください。
+
+**Q: GroupDocs.Editor はすべての Java IDE と互換性がありますか？**  
+A: はい、IntelliJ IDEA や Eclipse などの一般的な IDE で動作します。
+
+**Q: 多数のファイルを処理する際、**extract images from word** の最適な方法は何ですか？**  
+A: `EditableDocument.getAllResources()` をループし、`ImageResource` オブジェクトをフィルタリングします。抽出した画像は専用フォルダーに保存するか、随時 CDN にアップロードしてください。
+
+**Q: 編集した HTML を DOCX ファイルに戻すことはできますか？**  
+A: もちろん可能です。変更後に `EditableDocument.saveAsDocx("path/to/output.docx")` を使用してください。
+
+## 結論
+これで、GroupDocs.Editor for Java を使用して **Word から画像を抽出**、**Word コンテンツを編集**、**Word を HTML に変換**、そして **編集可能なドキュメントを生成**するための完全なエンドツーエンドの手順が把握できました。これらの手法により、強力なドキュメント中心のアプリケーションを構築し、**レポート生成の自動化** を自信を持って実現できます。
 
 ### 次のステップ
-- 動的なプレースホルダー（例：`{{CustomerName}}`）を使用してテンプレートを編集してみましょう。
-- DOCX 形式で保存するための API を調べます（`EditableDocument.saveAsDocx()`）。
-- オンデマンドのドキュメント生成のために、ワークフローを Spring Boot サービスに統合します。
-
-## FAQ セクション
-**Q1:​​ GroupDocs.Editor Java を使用して PDF を編集できますか？**
-A1: はい、GroupDocs.Editor は PDF を含むさまざまな形式をサポートしています。具体的なメソッドについては、[API リファレンス](https://reference.groupdocs.com/editor/java/) をご確認ください。
-
-**Q2: 大きなドキュメントを効率的に処理するにはどうすればよいですか？**
-A1: リソース管理技術を活用し、パフォーマンスを低下させることなく大きなファイルを処理できるようにコードを最適化してください。
-
-**Q3: GroupDocs.Editor はすべての Java IDE と互換性がありますか？**
-A1: はい、IntelliJ IDEA や Eclipse などの一般的な IDE と互換性があります。
+- 動的プレースホルダー（例: `{{CustomerName}}`）を含むテンプレートの編集を試してみてください。  
+- DOCX への再保存用 API（`EditableDocument.saveAsDocx()`）を調査してください。  
+- このワークフローを Spring Boot サービスに統合し、オンデマンドでドキュメントを生成できるようにします。
 
 ---
 
-**最終更新日:** 2025 年 12 月 21 日
-**テスト環境:** GroupDocs.Editor 25.3 for Java
-**作成者:** GroupDocs
+**最終更新日:** 2026-02-21  
+**テスト環境:** GroupDocs.Editor 25.3 for Java  
+**作者:** GroupDocs
