@@ -1,24 +1,44 @@
 ---
-title: Zaawansowane wykorzystanie edytowalnych dokumentów
-linktitle: Zaawansowane wykorzystanie edytowalnych dokumentów
-second_title: Edytor GroupDocs.NET API
-description: Poznaj zaawansowane wykorzystanie programu GroupDocs.Editor dla platformy .NET do programowego tworzenia, edytowania i wyodrębniania zasobów z dokumentów.
-weight: 11
-url: /pl/net/document-editing/advanced-usage-of-editable-documents/
+date: 2026-03-14
+description: Dowiedz się, jak wyodrębnić obrazy z pliku DOCX, przekonwertować DOCX
+  na HTML oraz zapisać dokument jako HTML przy użyciu GroupDocs.Editor dla .NET.
+linktitle: Extract Images from DOCX – Advanced Editable Document Usage
+second_title: GroupDocs.Editor .NET API
+title: Wyodrębnianie obrazów z DOCX – Zaawansowane wykorzystanie edytowalnych dokumentów
 type: docs
+url: /pl/net/document-editing/advanced-usage-of-editable-documents/
+weight: 11
 ---
-# Zaawansowane wykorzystanie edytowalnych dokumentów
 
-## Wstęp
-Jeśli jesteś programistą .NET i chcesz ulepszyć swoje możliwości edycji dokumentów, GroupDocs.Editor dla .NET oferuje potężny zestaw narzędzi. Ten obszerny przewodnik przeprowadzi Cię przez zaawansowane korzystanie z edytowalnych dokumentów przy użyciu programu GroupDocs.Editor, szczegółowo opisując każdy krok, aby upewnić się, że możesz wykorzystać jego pełny potencjał.
-## Warunki wstępne
-Zanim zagłębisz się w zaawansowane funkcje, upewnij się, że posiadasz następujące elementy:
-- Program Visual Studio zainstalowany na komputerze programistycznym.
-- .NET Framework kompatybilny z GroupDocs.Editor.
--  GroupDocs.Editor dla biblioteki .NET. Możesz[Pobierz to tutaj](https://releases.groupdocs.com/editor/net/).
--  Ważna licencja GroupDocs.Editor. Możesz dostać[bezpłatna wersja próbna](https://releases.groupdocs.com/) lub kup A[licencja tymczasowa](https://purchase.groupdocs.com/temporary-license/).
-## Importuj przestrzenie nazw
-Na początek upewnij się, że zaimportowałeś niezbędne przestrzenie nazw do projektu .NET:
+# Wyodrębnianie obrazów z DOCX – Zaawansowane użycie edytowalnych dokumentów
+
+Jeśli jesteś programistą .NET, który chce **wyodrębnić obrazy z DOCX** i zwiększyć możliwości edycji dokumentów, GroupDocs.Editor for .NET oferuje potężny zestaw narzędzi. Ten kompleksowy przewodnik przeprowadzi Cię przez zaawansowane użycie edytowalnych dokumentów przy użyciu GroupDocs.Editor, szczegółowo opisując każdy krok, abyś mógł w pełni wykorzystać jego potencjał.
+
+## Szybkie odpowiedzi
+- **Jak mogę wyodrębnić obrazy z pliku DOCX?** Użyj `EditableDocument.Images` po załadowaniu dokumentu przy pomocy `Editor`.
+- **Czy mogę konwertować DOCX do HTML z osadzonymi zasobami?** Tak — wywołaj `EditableDocument.GetEmbeddedHtml()` lub `GetContent()` aby uzyskać znacznik HTML.
+- **Jaką metodą zapisać edytowany dokument jako HTML?** `EditableDocument.Save(htmlFilePath)` tworzy plik HTML z folderem zasobów.
+- **Czy można wyodrębnić czcionki z dokumentu Word?** Użyj `EditableDocument.Fonts`, aby pobrać wszystkie zasoby czcionek.
+- **Czy potrzebna jest licencja do użytku produkcyjnego?** Wymagana jest ważna licencja GroupDocs.Editor; dostępna jest darmowa wersja próbna.
+
+## Czym jest **extract images from docx**?
+Wyodrębnianie obrazów z pliku DOCX oznacza programowe pobieranie każdego obrazu osadzonego w dokumencie Word, aby móc go ponownie używać, modyfikować lub przechowywać osobno. GroupDocs.Editor udostępnia kolekcję `Images` w instancji `EditableDocument`, co upraszcza to zadanie.
+
+## Dlaczego warto używać GroupDocs.Editor w tym przepływie pracy?
+- **Pełna kontrola** nad zasobami dokumentu (obrazy, czcionki, CSS) bez ręcznego obsługiwania ZIP.  
+- **Bezproblemowa konwersja** z DOCX do HTML przy zachowaniu układu i stylizacji.  
+- **Łatwe wyodrębnianie zasobów** dla niestandardowej obsługi obrazów, osadzania czcionek lub dostarczania przez CDN.  
+- **Solidny wzorzec zwalniania** zapewnia brak wycieków pamięci w długotrwale działających usługach.
+
+## Wymagania wstępne
+- Visual Studio zainstalowane na Twoim komputerze deweloperskim.  
+- .NET Framework kompatybilny z GroupDocs.Editor.  
+- Biblioteka GroupDocs.Editor for .NET. Możesz ją [pobrać tutaj](https://releases.groupdocs.com/editor/net/).  
+- Ważna licencja GroupDocs.Editor. Możesz uzyskać [darmową wersję próbną](https://releases.groupdocs.com/) lub zakupić [tymczasową licencję](https://purchase.groupdocs.com/temporary-license/).
+
+## Importowanie przestrzeni nazw
+Aby rozpocząć, upewnij się, że importujesz niezbędne przestrzenie nazw w swoim projekcie .NET:
+
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -29,130 +49,197 @@ using GroupDocs.Editor.HtmlCss.Resources.Images;
 using GroupDocs.Editor.HtmlCss.Resources.Textual;
 using GroupDocs.Editor.Options;
 ```
+
 ## Krok 1: Tworzenie instancji EditableDocument
- Najpierw musisz utworzyć instancję`EditableDocument` ładując i edytując dokument wejściowy w obsługiwanym formacie.
+Najpierw musisz utworzyć instancję `EditableDocument`, ładując i edytując dokument wejściowy w obsługiwanym formacie.
+
 ```csharp
 string inputFilePath = "YourSampleDocument.docx";
 Editor editor = new Editor(inputFilePath, delegate { return new WordProcessingLoadOptions(); });
 EditableDocument beforeEdit = editor.Edit(new WordProcessingEditOptions());
 ```
-Na tym etapie ładujemy dokument wejściowy i przygotowujemy go do edycji.
-## Krok 2: Wyodrębnianie zasobów dokumentów
- The`EditableDocument` zawiera różne zasoby, które można wydobywać i manipulować. Podzielmy je na części:
-### Krok 2.1: Wyodrębnij cały dokument jako HTML
-Można wygenerować pojedynczy ciąg znaków zawierający cały dokument ze wszystkimi zasobami osadzonymi w formacie HTML.
+
+W tym kroku ładujemy dokument wejściowy i przygotowujemy go do edycji.
+
+## Jak **wyodrębnić obrazy z DOCX**?
+Poniżej zagłębiamy się w możliwości wyodrębniania zasobów, zaczynając od najczęstszej potrzeby — pobrania wszystkich obrazów z pliku Word.
+
+## Krok 2: Wyodrębnianie zasobów dokumentu
+`EditableDocument` zawiera różne zasoby, które można wyodrębnić i manipulować nimi. Rozbijmy je na części:
+
+### Krok 2.1: Wyodrębnienie całego dokumentu jako HTML
+Możesz wygenerować pojedynczy ciąg znaków zawierający cały dokument ze wszystkimi zasobami osadzonymi jako HTML.
+
 ```csharp
 string allAsHtmlInsideOneString = beforeEdit.GetEmbeddedHtml();
 ```
+
 Ten ciąg będzie dość duży, ponieważ zawiera arkusze stylów, obrazy i czcionki zakodowane w base64.
-### Krok 2.2: Wyodrębnij wszystkie obrazy
-Wyodrębnij wszystkie obrazy z dokumentu.
+
+### Krok 2.2: Wyodrębnienie wszystkich obrazów *(główne słowo kluczowe w akcji)*
+Wyodrębnij wszystkie obrazy z dokumentu — jest to sedno **extract images from docx**.
+
 ```csharp
 List<IImageResource> allImages = beforeEdit.Images;
 ```
-### Krok 2.3: Wyodrębnij wszystkie czcionki
-Wyodrębnij wszystkie czcionki użyte w dokumencie.
+
+### Krok 2.3: Wyodrębnienie wszystkich czcionek *(drugorzędne słowo kluczowe)*
+Jeśli potrzebujesz także **wyodrębnić czcionki z word**, użyj następującego wywołania:
+
 ```csharp
 List<FontResourceBase> allFonts = beforeEdit.Fonts;
 ```
-### Krok 2.4: Wyodrębnij wszystkie arkusze stylów
+
+### Krok 2.4: Wyodrębnienie wszystkich arkuszy stylów
 Wyodrębnij wszystkie arkusze stylów w formacie tekstowym.
+
 ```csharp
 List<CssText> allStylesheets = beforeEdit.Css;
 ```
-### Krok 2.5: Zbierz wszystkie zasoby
-Zbierz wszystkie zasoby w jednym połączeniu.
+
+### Krok 2.5: Zgromadzenie wszystkich zasobów
+Zgromadź wszystkie zasoby w jednym wywołaniu.
+
 ```csharp
 List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
-Dotyczy to obrazów, czcionek i arkuszy stylów.
-### Krok 2.6: Uzyskaj znaczniki HTML
-Uzyskaj znaczniki HTML dokumentu bez osadzonych zasobów.
+
+To obejmuje obrazy, czcionki i arkusze stylów.
+
+### Krok 2.6: Uzyskanie znacznika HTML
+Uzyskaj znacznik HTML dokumentu bez osadzonych zasobów.
+
 ```csharp
 string htmlMarkup = beforeEdit.GetContent();
 ```
-## Krok 3: Dostosowywanie linków zewnętrznych
-Czasami trzeba dostosować linki zewnętrzne, aby wskazywały niestandardową procedurę obsługi zasobów. Oto jak to zrobić:
-### Krok 3.1: Przygotuj niestandardowe prefiksy
-Przygotuj przedrostki, które będą dołączane do oryginalnych linków zewnętrznych.
+
+## Jak **konwertować docx do html** z niestandardową obsługą?
+Czasami trzeba dostosować zewnętrzne linki, aby wskazywały na własne obsługujące je zasoby.
+
+## Krok 3: Dostosowywanie zewnętrznych linków
+### Krok 3.1: Przygotowanie niestandardowych prefiksów
+Przygotuj prefiksy, które będą poprzedzać oryginalne zewnętrzne linki.
+
 ```csharp
-string customImagesRequesthandlerUri = "http://przykład.com/ImagesHandler/id=";
-string customCssRequesthandlerUri = "http://przykład.com/CssHandler/id=";
-string customFontsRequesthandlerUri = "http://przykład.com/FontsHandler/id=";
+string customImagesRequesthandlerUri = "http://example.com/ImagesHandler/id=";
+string customCssRequesthandlerUri = "http://example.com/CssHandler/id=";
+string customFontsRequesthandlerUri = "http://example.com/FontsHandler/id=";
 ```
-### Krok 3.2: Wygeneruj prefiksowane znaczniki HTML
-Wygeneruj znaczniki HTML z dostosowanymi linkami.
+
+### Krok 3.2: Generowanie znacznika HTML z prefiksami
+Wygeneruj znacznik HTML z dostosowanymi linkami.
+
 ```csharp
 string prefixedHtmlMarkup = beforeEdit.GetContent(customImagesRequesthandlerUri, customCssRequesthandlerUri);
 ```
-### Krok 3.3: Uzyskaj treść HTML zawierającą wyłącznie treść
-Niektóre edytory WYSIWYG obsługują tylko czyste znaczniki HTML bez nagłówków.
+
+### Krok 3.3: Uzyskanie treści HTML tylko z ciałem
+Niektóre edytory WYSIWYG obsługują wyłącznie czysty znacznik HTML bez nagłówków.
+
 ```csharp
 string onlyBodyContent = beforeEdit.GetBodyContent();
 ```
-### Krok 3.4: Treść zawierająca tylko treść z prefiksem
-Generuj samą treść z niestandardowymi przedrostkami obrazów.
+
+### Krok 3.4: Treść tylko z ciałem z prefiksami
+Wygeneruj treść tylko z ciałem z niestandardowymi prefiksami obrazów.
+
 ```csharp
 string prefixedBodyContent = beforeEdit.GetBodyContent(customImagesRequesthandlerUri);
 ```
-### Krok 3.5: Wyodrębnij arkusze stylów
+
+### Krok 3.5: Wyodrębnienie arkuszy stylów
 Wyodrębnij arkusze stylów użyte w dokumencie.
+
 ```csharp
 List<string> stylesheets = beforeEdit.GetCssContent();
 ```
-### Krok 3.6: Przedrostki arkuszy stylów
-Wyodrębnij arkusze stylów z niestandardowymi przedrostkami.
+
+### Krok 3.6: Arkusze stylów z prefiksami
+Wyodrębnij arkusze stylów z niestandardowymi prefiksami.
+
 ```csharp
 List<string> prefixedStylesheets = beforeEdit.GetCssContent(customImagesRequesthandlerUri, customFontsRequesthandlerUri);
 ```
+
+## Jak **zapisać dokument jako html** poprawnie?
 ## Krok 4: Zapisz dokument jako HTML
-Zapisz edytowany dokument jako plik HTML wraz z jego zasobami.
+Zapisz edytowany dokument jako plik HTML, wraz z jego zasobami.
+
 ```csharp
 string htmlFilePath = Path.Combine("output", Path.GetFileNameWithoutExtension(inputFilePath) + ".html");
 beforeEdit.Save(htmlFilePath);
 ```
-Ta metoda tworzy oddzielny katalog dla zasobów, takich jak arkusze stylów, obrazy i czcionki.
-## Krok 5: Pozbycie się edytowalnego dokumentu
- Implementacje EditableDocument`IDisposable` i zapewnia możliwość sprawdzenia, czy instancja została usunięta.
+
+Ta metoda tworzy osobny katalog dla zasobów, takich jak arkusze stylów, obrazy i czcionki.
+
+## Krok 5: Zwalnianie EditableDocument
+`EditableDocument` implementuje `IDisposable` i umożliwia sprawdzenie, czy instancja została zwolniona.
+
 ```csharp
 Console.WriteLine("EditableDocument is {0} disposed", !beforeEdit.IsDisposed ? "not" : "already");
 ```
+
 ### Krok 5.1 Obsługa zdarzenia Dispose
-Możesz także zapisać się na wydarzenie utylizacji.
+Możesz także subskrybować zdarzenie zwalniania.
+
 ```csharp
 EventHandler someMethod = delegate { Console.WriteLine("Disposing event was spotted!"); };
 beforeEdit.Disposed += someMethod;
 ```
-## Krok 6: Tworzenie edytowalnego dokumentu z HTML
-Utwórz instancję EditableDocument z dokumentu HTML.
+
+## Krok 6: Tworzenie EditableDocument z HTML
+Utwórz instancję `EditableDocument` z dokumentu HTML.
+
 ### Krok 6.1: Z pliku HTML
+
 ```csharp
 EditableDocument afterEditFromFile = EditableDocument.FromFile(htmlFilePath, null);
 ```
-### Krok 6.2: Ze znaczników HTML
+
+### Krok 6.2: Z znacznika HTML
+
 ```csharp
 EditableDocument afterEditFromMarkup = EditableDocument.FromMarkup(htmlMarkup, allResources);
 ```
-Te instancje (afterEditFromFile i afterEditFromMarkup) są identyczne z oryginałem (przed Edit).
-## Krok 7: Ręczna utylizacja
-Ręcznie usuń instancje EditableDocument.
+
+Te instancje (`afterEditFromFile` i `afterEditFromMarkup`) są identyczne jak oryginalna (`beforeEdit`).
+
+## Krok 7: Ręczne zwalnianie
+Ręcznie zwolnij swoje instancje `EditableDocument`.
+
 ```csharp
 beforeEdit.Dispose();
 afterEditFromFile.Dispose();
 afterEditFromMarkup.Dispose();
 editor.Dispose();
 ```
-Zapewnia to właściwe oczyszczenie zasobów.
-## Wniosek
-GroupDocs.Editor dla .NET zapewnia niezawodne narzędzia do programowej edycji dokumentów. Postępując zgodnie z tym szczegółowym przewodnikiem, możesz efektywnie zarządzać zawartością dokumentu, zasobami i formatami wyjściowymi. Niezależnie od tego, czy osadzasz zasoby, dostosowujesz linki zewnętrzne, czy konwertujesz dokumenty do formatu HTML, GroupDocs.Editor zapewnia funkcjonalność potrzebną do zaawansowanej manipulacji dokumentami.
-## Często zadawane pytania
-### Jakie formaty obsługuje GroupDocs.Editor?
-GroupDocs.Editor obsługuje różne formaty, w tym DOCX, XLSX, PPTX i inne.
-### Czy mogę używać GroupDocs.Editor bez licencji?
- Tak, możesz go używać z[bezpłatna wersja próbna](https://releases.groupdocs.com/) lub[licencja tymczasowa](https://purchase.groupdocs.com/temporary-license/).
-### Jak wyodrębnić określone zasoby z dokumentu?
- Możesz wyodrębnić obrazy, czcionki i arkusze stylów, korzystając z dostarczonych metod, takich jak`Images`, `Fonts` , I`Css`.
-### Czy można dostosować linki w wynikach HTML?
-Tak, możesz dostosować linki zewnętrzne, określając niestandardowe przedrostki obrazów, CSS i czcionek.
-### Jak zapisać edytowany dokument jako plik HTML?
- Użyj`Save` metoda`EditableDocument`class, aby zapisać dokument jako plik HTML wraz z jego zasobami.
+
+Zapewnia to prawidłowe czyszczenie zasobów.
+
+## Typowe problemy i rozwiązania
+- **Obrazy nie pojawiają się po wyodrębnieniu:** Upewnij się, że dokument rzeczywiście zawiera osadzone obrazy i że odwołujesz się do `beforeEdit.Images` po wywołaniu `Edit`.  
+- **Brak czcionek w wyjściu HTML:** Upewnij się, że wywołujesz `GetCssContent(customImagesRequesthandlerUri, customFontsRequesthandlerUri)`, aby poprawnie osadzić adresy URL czcionek.  
+- **Duże ciągi HTML powodujące obciążenie pamięci:** Użyj `GetContent()` dla znacznika bez osadzonych zasobów i serwuj obrazy/CSS z osobnych plików.
+
+## Najczęściej zadawane pytania
+
+**P: Jakie formaty obsługuje GroupDocs.Editor?**  
+O: GroupDocs.Editor obsługuje DOCX, XLSX, PPTX oraz wiele innych popularnych formatów biurowych.
+
+**P: Czy mogę używać GroupDocs.Editor bez licencji?**  
+O: Tak, możesz używać go z [darmową wersją próbną](https://releases.groupdocs.com/) lub [tymczasową licencją](https://purchase.groupdocs.com/temporary-license/).
+
+**P: Jak wyodrębnić konkretne zasoby z dokumentu?**  
+O: Użyj kolekcji `Images`, `Fonts` i `Css` w instancji `EditableDocument`.
+
+**P: Czy można dostosować linki w wyjściu HTML?**  
+O: Tak, przekaż niestandardowe prefiksy URI do `GetContent` lub `GetBodyContent`, aby przepisac linki do obrazów, CSS i czcionek.
+
+**P: Jak zapisać edytowany dokument jako plik HTML?**  
+O: Wywołaj metodę `Save` na instancji `EditableDocument`, podając ścieżkę pliku kończącą się na `.html`.
+
+---
+
+**Ostatnia aktualizacja:** 2026-03-14  
+**Testowano z:** GroupDocs.Editor for .NET (najnowsze wydanie)  
+**Autor:** GroupDocs

@@ -1,56 +1,81 @@
 ---
-title: 取得外部 CSS 內容
-linktitle: 取得外部 CSS 內容
+date: 2026-03-14
+description: 學習如何使用 GroupDocs.Editor for .NET 從文件中提取 CSS —— 開發者的逐步指南。
+linktitle: Extract CSS from Document Using GroupDocs.Editor for .NET
 second_title: GroupDocs.Editor .NET API
-description: 透過此逐步指南，了解如何使用 GroupDocs.Editor for .NET 從文件中提取外部 CSS 內容。非常適合開發人員整合文件。
-weight: 10
-url: /zh-hant/net/css-handling/get-external-css-content/
+title: 使用 GroupDocs.Editor for .NET 從文件中提取 CSS
 type: docs
+url: /zh-hant/net/css-handling/get-external-css-content/
+weight: 10
 ---
-# 取得外部 CSS 內容
+
+# 使用 GroupDocs.Editor for .NET 從文件中提取 CSS
 
 ## 介紹
-在本文中，我們將引導您完成開始使用 GroupDocs.Editor for .NET 所需的一切。從設定環境到從文件中提取外部 CSS 內容，我們將涵蓋這一切。讓我們開始吧！
-## 先決條件
-在我們開始之前，請確保您具備以下先決條件：
-1. .NET Framework：確保已安裝了 .NET Framework 4.6.1 或更高版本。
-2. Visual Studio：安裝 Visual Studio 2017 或更高版本以獲得無縫開發體驗。
-3.  GroupDocs.Editor for .NET：從以下位置下載最新版本[GroupDocs.Editor下載頁面](https://releases.groupdocs.com/editor/net/).
-4. C# 基礎知識：熟悉 C# 程式設計將有助於您理解範例。
-## 導入命名空間
-在深入研究程式碼範例之前，您需要在 C# 專案中匯入必要的命名空間：
+在本教學中，你將學習 **如何從文件中提取 CSS**，使用 GroupDocs.Editor .NET API。我們會逐步說明設定方式，提供完整程式碼範例，並解釋每一步驟，讓你能自信地從 Word、HTML 或其他支援格式中取得外部樣式表內容。無論你是在建置內容管理系統，或是需要以程式方式分析樣式，本指南都能滿足你的需求。
+
+## 快速回答
+- **「從文件中提取 CSS」是什麼意思？** 這表示取得嵌入於支援檔案中的外部樣式表字串，以便讀取或修改。  
+- **哪個程式庫提供此功能？** GroupDocs.Editor for .NET。  
+- **需要授權嗎？** 提供免費試用版；正式環境需購買商業授權。  
+- **支援哪些 .NET 版本？** .NET Framework 4.6.1 以上、.NET Core 3.1 以上、.NET 5/6 以上。  
+- **實作需要多長時間？** 基本提取通常在 10 分鐘以內完成。
+
+## 什麼是從文件中提取 CSS？
+當文件（例如 DOCX 或 HTML）包含連結或嵌入的樣式表時，編輯器會將這些樣式儲存為獨立的 CSS 字串。提取它們可讓你在原始檔案之外檢視、編輯或重新使用樣式邏輯。
+
+## 為什麼選擇 GroupDocs.Editor 來完成此任務？
+- **功能完整的 API** – 支援 DOCX、HTML、PPTX 等多種格式，且不需要安裝 Office。  
+- **輸出一致** – 回傳乾淨的樣式表字串清單，方便後續處理。  
+- **效能最佳化** – 即使是大型檔案也能高效運作。
+
+## 前置條件
+開始之前，請確保你已具備以下條件：
+
+1. **.NET Framework 4.6.1** 或更新版本（或相容的 .NET Core/5/6 執行環境）。  
+2. **Visual Studio 2017** 或更新版本。  
+3. **GroupDocs.Editor for .NET** – 從 [GroupDocs.Editor download page](https://releases.groupdocs.com/editor/net/) 下載。  
+4. 基本的 **C#** 程式設計知識。
+
+## 匯入命名空間
+首先，加入必要的命名空間，讓編譯器能找到編輯器類別。
+
 ```csharp
 using System;
 using System.Collections.Generic;
 using GroupDocs.Editor.Options;
 ```
-現在我們已經對先決條件進行了排序並導入了命名空間，讓我們逐步分解範例程式碼。
-## 第 1 步：初始化編輯器
-首先，您需要初始化`Editor`物件與您的範例文件。此步驟設定要編輯的文件。
+
+## 步驟 1：初始化 Editor
+建立 `Editor` 實例，指向你要分析的檔案。委派會提供適用於文字處理文件的載入選項。
+
 ```csharp
 using (Editor editor = new Editor("Your Sample Document", delegate { return new WordProcessingLoadOptions(); }))
 {
-    //繼續執行後續步驟
+    // Proceed to the next steps
 }
 ```
-在此程式碼片段中，我們建立一個`Editor`透過提供文檔路徑和傳回的委託來實例化`WordProcessingLoadOptions`。這將為編輯文件做好準備。
-## 第 2 步：編輯文檔
-接下來，您需要編輯文件以獲得其可編輯狀態。此步驟將文件轉換為可編輯格式。
+
+## 步驟 2：以可編輯模式開啟文件
+呼叫 `Edit` 會將來源檔案轉換為 `EditableDocument`，此物件提供 CSS 提取的方法。
+
 ```csharp
 using (EditableDocument document = editor.Edit(new WordProcessingEditOptions()))
 {
-    //繼續執行後續步驟
+    // Proceed to the next steps
 }
 ```
-在這裡，我們使用`Edit`的方法`Editor`類，傳入`WordProcessingEditOptions`得到一個`EditableDocument`對象，它以可編輯的形式表示文檔。
-## 步驟3：取得CSS內容
-現在，我們從可編輯文件中提取 CSS 內容。此步驟至關重要，因為它允許您存取和操作文件的樣式。
+
+## 步驟 3：提取 CSS 內容
+現在你可以取得文件所參考的每一個樣式表。
+
 ```csharp
 List<string> stylesheets = document.GetCssContent();
 ```
-這`GetCssContent`方法傳回文件中存在的 CSS 樣式表清單。此清單可用於進一步處理或分析。
-## 第四步：輸出CSS內容
-最後，我們將提取的 CSS 內容列印到控制台。這將幫助您驗證從文件中檢索到的樣式表。
+
+## 步驟 4：輸出 CSS 內容
+列印找到的樣式表數量並逐一列出。這有助於驗證提取是否成功。
+
 ```csharp
 Console.WriteLine("There are {0} stylesheets in the input document", stylesheets.Count);
 foreach (string css in stylesheets)
@@ -58,17 +83,34 @@ foreach (string css in stylesheets)
     Console.WriteLine(css);
 }
 ```
-在這一部分中，我們將樣式表的數量及其內容輸出到控制台。這提供了文件中使用的 CSS 的清晰視圖。
+
+## 常見問題與技巧
+- **沒有返回樣式表？** 請確認來源檔案確實包含外部 CSS（例如帶有連結樣式表的 DOCX）。  
+- **編碼問題** – 若輸出顯示亂碼，請確認文件的原始編碼是否受編輯器支援。  
+- **大型文件** – 對於非常大的檔案，建議在背景執行緒中處理，以保持 UI 的回應性。
+
+## 常見問答
+
+**Q: 什麼是 GroupDocs.Editor for .NET？**  
+A: GroupDocs.Editor for .NET 是一套文件編輯 API，讓開發者能以程式方式編輯、轉換與提取多種檔案格式的內容。
+
+**Q: 如何開始使用 GroupDocs.Editor for .NET？**  
+A: 從 [GroupDocs.Editor download page](https://releases.groupdocs.com/editor/net/) 下載程式庫，將 NuGet 套件加入專案，然後依照上述步驟操作。
+
+**Q: 可以免費使用 GroupDocs.Editor 嗎？**  
+A: 可以，免費試用版可從 [GroupDocs free trial page](https://releases.groupdocs.com/) 取得。正式部署需購買授權。
+
+**Q: GroupDocs.Editor 支援哪些檔案格式？**  
+A: 支援 DOCX、XLSX、PPTX、PDF、HTML 等多種格式。完整列表請參閱 [documentation](https://tutorials.groupdocs.com/editor/net/)。
+
+**Q: 如何取得 GroupDocs.Editor 的支援？**  
+A: 前往 [GroupDocs support forum](https://forum.groupdocs.com/c/editor/20) 提問，社群與 GroupDocs 工程師都會提供協助。
+
 ## 結論
-現在你就得到它了！您已使用 GroupDocs.Editor for .NET 成功從文件中擷取外部 CSS 內容。本逐步指南應幫助您了解使用這個強大的程式庫來滿足文件編輯需求的基礎知識。無論您是將其整合到更大的應用程式還是只是探索其功能，GroupDocs.Editor 都提供了一個強大的解決方案，以程式設計方式處理文件編輯。
-## 常見問題解答
-### 什麼是 .NET 的 GroupDocs.Editor？
-GroupDocs.Editor for .NET 是一個文檔編輯 API，允許開發人員在 .NET 應用程式中以程式設計方式編輯各種格式的文檔，包括 Word、Excel 和 PDF。
-### 如何開始使用適用於 .NET 的 GroupDocs.Editor？
-首先，您需要從以下位置下載最新版本的庫[GroupDocs.Editor下載頁面](https://releases.groupdocs.com/editor/net/)，設定您的 .NET 環境，然後按照本指南中概述的步驟進行操作。
-### 我可以免費使用 GroupDocs.Editor 嗎？
- GroupDocs.Editor 提供免費試用版，您可以從[GroupDocs 免費試用頁面](https://releases.groupdocs.com/)。如需完整功能，請考慮購買許可證。
-### GroupDocs.Editor 支援哪些檔案格式？
- GroupDocs.Editor 支援多種檔案格式，包括 DOCX、XLSX、PPTX、PDF、HTML 等。檢查[文件](https://tutorials.groupdocs.com/editor/net/)以獲得完整清單。
-### 如何獲得對 GroupDocs.Editor 的支援？
-您可以從以下方面獲得支持[GroupDocs 支援論壇](https://forum.groupdocs.com/c/editor/20)您可以在其中提出問題並獲得社群和 GroupDocs 專家的協助。
+你現在已掌握如何使用 GroupDocs.Editor for .NET **從文件中提取 CSS**。此功能可開啟進階樣式分析、自訂主題產生，或將文件樣式無縫整合至 Web 應用程式的可能性。你可以嘗試操作回傳的 CSS 字串，必要時進行修改，並使用編輯器的 `SetCssContent` 方法重新套用，完成完整的樣式工作流程。
+
+---
+
+**最後更新：** 2026-03-14  
+**測試環境：** GroupDocs.Editor for .NET（最新版本）  
+**作者：** GroupDocs

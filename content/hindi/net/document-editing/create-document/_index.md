@@ -1,53 +1,96 @@
 ---
-title: दस्तावेज़ बनाएँ
-linktitle: दस्तावेज़ बनाएँ
-second_title: GroupDocs.Editor .NET एपीआई
-description: इस व्यापक चरण-दर-चरण ट्यूटोरियल के साथ .NET के लिए GroupDocs.Editor का उपयोग करके Word, Excel, PowerPoint, Ebook और ईमेल दस्तावेज़ों को संपादित करना सीखें।
-weight: 10
-url: /hi/net/document-editing/create-document/
+date: 2026-03-14
+description: GroupDocs.Editor for .NET का उपयोग करके PowerPoint प्रस्तुति और अन्य
+  दस्तावेज़ प्रकारों को कैसे संपादित करें, सीखें। यह गाइड यह भी बताता है कि संपादित
+  दस्तावेज़ को कैसे सहेजें और .NET में Word दस्तावेज़ को कैसे संपादित करें।
+linktitle: Create Document
+second_title: GroupDocs.Editor .NET API
+title: GroupDocs.Editor for .NET के साथ PowerPoint प्रस्तुति संपादित करें
 type: docs
+url: /hi/net/document-editing/create-document/
+weight: 10
 ---
-# दस्तावेज़ बनाएँ
+
+NET (latest release)  
+**Author:** GroupDocs
+
+Translate labels but keep dates.
+
+**Last Updated:** 2026-03-14 (keep same)
+
+**Tested With:** GroupDocs.Editor for .NET (latest release) (translate "Tested With" maybe "परीक्षित साथ"? Could translate as "परीक्षित संस्करण:" but keep label? Probably translate label. So "परीक्षित साथ:"? Better "परीक्षण किया गया:"? Let's translate as "परीक्षण किया गया:".
+
+**Author:** GroupDocs (keep)
+
+Thus final markdown.
+
+Check that we didn't alter any code block placeholders.
+
+Now produce final answer.# GroupDocs.Editor for .NET के साथ PowerPoint प्रस्तुति संपादित करें
 
 ## परिचय
-क्या आप प्रोग्रामेटिक रूप से विभिन्न दस्तावेज़ प्रकारों को संपादित करने में आने वाली परेशानी से थक गए हैं? .NET के लिए GroupDocs.Editor प्रक्रिया को सरल बनाने के लिए यहाँ है। यह शक्तिशाली उपकरण डेवलपर्स को Word, Excel, PowerPoint, Ebooks और Emails जैसे विभिन्न दस्तावेज़ स्वरूपों को आसानी से संपादित करने की अनुमति देता है। इस ट्यूटोरियल में, हम दस्तावेज़ बनाने और संपादित करने के लिए .NET के लिए GroupDocs.Editor का उपयोग करने के तरीके के बारे में विस्तार से जानेंगे। हम प्रक्रिया को आसान-से-अनुसरण चरणों में विभाजित करेंगे, ताकि यह तब भी सुलभ हो, जब आप इसके लिए नए हों।
-## आवश्यक शर्तें
-शुरू करने से पहले, सुनिश्चित करें कि आपके पास निम्नलिखित हैं:
-- आपके मशीन पर Visual Studio स्थापित है.
-- .NET फ्रेमवर्क (4.0 या उच्चतर)।
--  .NET लाइब्रेरी के लिए GroupDocs.Editor। आप इसे यहाँ से डाउनलोड कर सकते हैं[यहाँ](https://releases.groupdocs.com/editor/net/).
-- C# प्रोग्रामिंग का बुनियादी ज्ञान.
-## नामस्थान आयात करें
-सबसे पहले, आइए आवश्यक नेमस्पेस को आयात करें। इससे हमारे एप्लिकेशन में आवश्यक क्लासेस और मेथड्स सुलभ हो जाएंगे।
+यदि आप प्रोग्रामेटिक रूप से **PowerPoint प्रस्तुति** फ़ाइलों को संपादित करने का विश्वसनीय तरीका खोज रहे हैं, तो GroupDocs.Editor for .NET उत्तर है। यह लाइब्रेरी आपको Word, Excel, PowerPoint, Ebook, और Email फ़ॉर्मेट्स के साथ काम करने देती है—सभी एक ही आसान‑से‑उपयोग API से। इस ट्यूटोरियल में हम प्रत्येक समर्थित दस्तावेज़ प्रकार को बनाने और संपादित करने की प्रक्रिया देखेंगे, आपको दिखाएंगे कि **संपादित दस्तावेज़ सहेजें** स्ट्रीम को कैसे किया जाता है, और वास्तविक प्रोजेक्ट्स में लागू करने योग्य व्यावहारिक टिप्स देंगे।
+
+## त्वरित उत्तर
+- **कौन सी लाइब्रेरी .NET में PowerPoint फ़ाइलें संपादित कर सकती है?** GroupDocs.Editor for .NET.  
+- **क्या मैं Word, Excel, और Epub फ़ाइलें उसी API से संपादित कर सकता हूँ?** हाँ, वही `Editor` क्लास इन सभी फ़ॉर्मेट्स को सपोर्ट करता है।  
+- **संपादित फ़ाइल को कैसे कैप्चर करूँ?** एक कॉलबैक फ़ंक्शन (जैसे `SaveNewDocument`) प्रदान करें जो परिणाम स्ट्रीम प्राप्त करता है।  
+- **क्या उत्पादन उपयोग के लिए लाइसेंस चाहिए?** हाँ—एक लाइसेंस खरीदें या अस्थायी ट्रायल लाइसेंस उपयोग करें।  
+- **कौन से .NET संस्करण समर्थित हैं?** .NET Framework 4.0+, .NET Core, और .NET 5/6.
+
+## GroupDocs.Editor के साथ “PowerPoint प्रस्तुति संपादित करना” क्या है?
+PowerPoint प्रस्तुति को संपादित करना मतलब `.pptx` फ़ाइल को लोड करना, परिवर्तन लागू करना (जैसे स्लाइड्स, टेक्स्ट, या छिपे हुए तत्वों को बदलना), और फिर अपडेटेड फ़ाइल प्राप्त करना—बिना Microsoft Office स्थापित किए।
+
+## GroupDocs.Editor for .NET क्यों उपयोग करें?
+- **कई फ़ॉर्मेट्स के लिए एकल API** – Word, Excel, या Epub के लिए अलग‑अलग लाइब्रेरीज़ को संभालने की जरूरत नहीं।  
+- **Office निर्भरता नहीं** – सर्वर, कंटेनर, और CI पाइपलाइन पर काम करता है।  
+- **सूक्ष्म नियंत्रण** – पेजिनेशन, भाषा जानकारी, फ़ॉन्ट एक्सट्रैक्शन, आदि को कस्टमाइज़ करें।  
+- **स्ट्रीम‑आधारित प्रोसेसिंग** – क्लाउड सेवाओं के लिए आदर्श जहाँ आप फिजिकल फ़ाइलों के बजाय मेमोरी स्ट्रीम्स के साथ काम करते हैं।
+
+## पूर्वापेक्षाएँ
+- Visual Studio (कोई भी नवीनतम संस्करण)।  
+- .NET Framework 4.0 या उससे ऊपर (या .NET Core/.NET 5+).  
+- GroupDocs.Editor for .NET लाइब्रेरी – इसे [here](https://releases.groupdocs.com/editor/net/) से डाउनलोड करें।  
+- बुनियादी C# ज्ञान।
+
+## Namespaces आयात करें
+पहले, उन namespaces को आयात करें जिनमें वह कोर क्लासेज़ हैं जिन्हें हम उपयोग करेंगे।
+
 ```csharp
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 using System.IO;
 ```
+
 ## चरण 1: स्ट्रीम सेट अप करना
-आरंभ करने के लिए, हमें एक मेमोरी स्ट्रीम सेट अप करना होगा जो दस्तावेज़ सामग्री के लिए हमारे प्लेसहोल्डर के रूप में कार्य करेगी।
+हम दस्तावेज़ सामग्री के लिए एक मेमोरी स्ट्रीम को प्लेसहोल्डर के रूप में उपयोग करेंगे।
+
 ```csharp
 Stream memoryStream = Stream.Null;
 ```
-## चरण 2: दस्तावेज़ को सहेजने के लिए कॉलबैक फ़ंक्शन
-इसके बाद, एक कॉलबैक फ़ंक्शन परिभाषित करें जो नए दस्तावेज़ स्ट्रीम को सहेजेगा। यह फ़ंक्शन दस्तावेज़ संपादन प्रक्रिया के आउटपुट को संभालने के लिए आवश्यक है।
+
+## चरण 2: **संपादित दस्तावेज़ सहेजें** के लिए कॉलबैक फ़ंक्शन
+`memoryStream` में संपादित स्ट्रीम प्राप्त करने और उसे संग्रहीत करने के लिए एक कॉलबैक परिभाषित करें।
+
 ```csharp
 void SaveNewDocument(Stream resultStream)
 {
     memoryStream = resultStream;
 }
 ```
-## चरण 3: वर्डप्रोसेसिंग दस्तावेज़ बनाना और संपादित करना
- अब, चलिए एक वर्ड डॉक्यूमेंट बनाते हैं और उसे संपादित करते हैं। हम एक नया डॉक्यूमेंट बनाकर शुरुआत करेंगे`Editor` वर्डप्रोसेसिंग दस्तावेज़ों के लिए उदाहरण बनाएँ और इसे डिफ़ॉल्ट विकल्पों के साथ संपादित करें।
-### डिफ़ॉल्ट विकल्पों के साथ बनाएँ और संपादित करें
+
+## चरण 3: WordProcessing दस्तावेज़ बनाना और संपादित करना  
+(यहाँ हम **edit word document .net** करते हैं.)
+
+### डिफ़ॉल्ट विकल्पों के साथ बनाएं और संपादित करें
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
 {
     EditableDocument defaultWordProcessingDoc = editor.Edit();
 }
 ```
-### कस्टम विकल्पों के साथ बनाएँ और संपादित करें
-अधिक नियंत्रण के लिए, हम पृष्ठांकन अक्षम करने और एम्बेडेड फ़ॉन्ट निकालने जैसे विकल्प निर्दिष्ट कर सकते हैं।
+
+### कस्टम विकल्पों के साथ बनाएं और संपादित करें
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
 {
@@ -60,17 +103,19 @@ using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
     EditableDocument editableWordProcessingDocument = editor.Edit(wordProcessingEditOptions);
 }
 ```
-## चरण 4: स्प्रेडशीट दस्तावेज़ बनाना और संपादित करना
-इसी तरह, हम एक एक्सेल दस्तावेज़ बना और संपादित कर सकते हैं। यहाँ बताया गया है कि आप यह कैसे कर सकते हैं।
-### डिफ़ॉल्ट विकल्पों के साथ बनाएँ और संपादित करें
+
+## चरण 4: Spreadsheet दस्तावेज़ बनाना और संपादित करना  
+(इसे **edit excel file .net** करने के लिए उपयोग करें.)
+
+### डिफ़ॉल्ट विकल्पों के साथ बनाएं और संपादित करें
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
 {
     EditableDocument defaultEditableSpreadsheetDocument = editor.Edit();
 }
 ```
-### कस्टम विकल्पों के साथ बनाएँ और संपादित करें
- विशिष्ट कार्यपत्रकों को लक्षित करने या छुपे हुए कार्यपत्रकों को बाहर करने के लिए, हम उपयोग करते हैं`SpreadsheetEditOptions`.
+
+### कस्टम विकल्पों के साथ बनाएं और संपादित करें
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
 {
@@ -82,17 +127,19 @@ using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
     EditableDocument editableSpreadsheetDocument = editor.Edit(spreadsheetEditOptions);
 }
 ```
-## चरण 5: प्रस्तुति दस्तावेज़ बनाना और संपादित करना
-पावरपॉइंट प्रेजेंटेशन भी समर्थित हैं। आइए देखें कि उन्हें कैसे हैंडल किया जाए।
-### डिफ़ॉल्ट विकल्पों के साथ बनाएँ और संपादित करें
+
+## चरण 5: **PowerPoint प्रस्तुति संपादित करें** – एक प्रस्तुति दस्तावेज़ बनाना और संपादित करना
+यह हमारे मुख्य कीवर्ड फोकस का कोर है।
+
+### डिफ़ॉल्ट विकल्पों के साथ बनाएं और संपादित करें
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
 {
     EditableDocument defaultEditablePresentationDocument = editor.Edit();
 }
 ```
-### कस्टम विकल्पों के साथ बनाएँ और संपादित करें
-आप विकल्प निर्दिष्ट करके अपने संपादन को अनुकूलित कर सकते हैं, जैसे कि कौन सी स्लाइड दिखानी है और छिपी हुई स्लाइडें शामिल करनी हैं या नहीं।
+
+### कस्टम विकल्पों के साथ बनाएं और संपादित करें
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
 {
@@ -104,17 +151,19 @@ using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
     EditableDocument editablePresentationDocument = editor.Edit(presentationEditOptions);
 }
 ```
-## चरण 6: ईबुक दस्तावेज़ बनाना और संपादित करना
-GroupDocs.Editor EPUB जैसे ईबुक प्रारूपों को संपादित करने की भी अनुमति देता है। यहां बताया गया है कि आप इसे कैसे संभाल सकते हैं।
-### डिफ़ॉल्ट विकल्पों के साथ बनाएँ और संपादित करें
+
+## चरण 6: Ebook दस्तावेज़ बनाना और संपादित करना  
+(यहाँ हम **edit epub file** करते हैं.)
+
+### डिफ़ॉल्ट विकल्पों के साथ बनाएं और संपादित करें
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
 {
     EditableDocument defaultEditableEbookDocument = editor.Edit();
 }
 ```
-### कस्टम विकल्पों के साथ बनाएँ और संपादित करें
-पृष्ठांकन और भाषा संबंधी जानकारी को सक्षम या अक्षम करके अपने ईबुक संपादन को अनुकूलित करें।
+
+### कस्टम विकल्पों के साथ बनाएं और संपादित करें
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
 {
@@ -126,17 +175,16 @@ using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
     EditableDocument editableEbookDocument = editor.Edit(ebookEditOptions);
 }
 ```
-## चरण 7: ईमेल दस्तावेज़ बनाना और संपादित करना
-अंत में, हम देखेंगे कि ईमेल दस्तावेज़ों को कैसे संपादित किया जाता है। इसमें EML जैसे प्रारूप शामिल हैं।
-### डिफ़ॉल्ट विकल्पों के साथ बनाएँ और संपादित करें
+
+## चरण 7: Email दस्तावेज़ बनाना और संपादित करना
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
 {
     EditableDocument defaultEditableEmailDocument = editor.Edit();
 }
 ```
-### कस्टम विकल्पों के साथ बनाएँ और संपादित करें
-संपादन प्रक्रिया को नियंत्रित करने के लिए मेल संदेश आउटपुट विकल्प निर्दिष्ट करें।
+
+### कस्टम विकल्पों के साथ बनाएं और संपादित करें
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
 {
@@ -147,22 +195,43 @@ using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
     EditableDocument editableEmailDocument = editor.Edit(emailEditOptions);
 }
 ```
+
 ## चरण 8: प्रक्रिया को अंतिम रूप देना
-दस्तावेजों को संपादित करने के बाद, संसाधनों को मुक्त करने के लिए मेमोरी स्ट्रीम का उचित तरीके से निपटान करना महत्वपूर्ण है।
+एक बार काम समाप्त होने पर संसाधनों को मुक्त करने के लिए स्ट्रीम को डिस्पोज़ करें।
+
 ```csharp
 memoryStream.Dispose();
 System.Console.WriteLine("CreateDocument routine has successfully finished");
 ```
-## निष्कर्ष
-.NET के लिए GroupDocs.Editor एक बहुमुखी और शक्तिशाली उपकरण है जो विभिन्न दस्तावेज़ प्रकारों को प्रोग्रामेटिक रूप से संपादित करने के कार्य को सरल बना सकता है। इस चरण-दर-चरण मार्गदर्शिका का पालन करके, आप आसानी से दस्तावेज़ बना और संपादित कर सकते हैं, चाहे वे WordProcessing फ़ाइलें, स्प्रेडशीट, प्रस्तुतियाँ, ईबुक या ईमेल हों। अधिक उन्नत सुविधाओं और अनुकूलन विकल्पों के लिए GroupDocs.Editor दस्तावेज़ में गोता लगाएँ।
+
+## सामान्य गलतियों और टिप्स
+- **स्ट्रीम को डिस्पोज़ करना कभी न भूलें** – इसे खुला छोड़ने से लंबे‑समय चलने वाली सेवाओं में मेमोरी लीक हो सकती है।  
+- **PowerPoint संपादित करते समय, सुनिश्चित करें कि आप `SlideNumber` सही सेट करें**; अन्यथा पहली स्लाइड दोहराई जा सकती है।  
+- **यदि आपको मूल फ़ाइल नाम रखना है**, तो कॉलबैक से पहले उसे संग्रहीत करें और संपादन के बाद आउटपुट स्ट्रीम का नाम बदलें।  
+- **बड़ी दस्तावेज़ों के लिए**, उन्हें चंक्स में प्रोसेस करने या उच्च मेमोरी उपयोग से बचने के लिए `Editor` को अस्थायी फ़ाइल के साथ उपयोग करने पर विचार करें।
+
 ## अक्सर पूछे जाने वाले प्रश्न
-### .NET के लिए मैं GroupDocs.Editor के साथ किस प्रकार के दस्तावेज़ों को संपादित कर सकता हूँ?
-आप वर्डप्रोसेसिंग, स्प्रेडशीट, प्रस्तुतीकरण, ई-बुक और ईमेल सहित दस्तावेजों की एक विस्तृत श्रृंखला को संपादित कर सकते हैं।
-### क्या संपादन विकल्पों को अनुकूलित करना संभव है?
-हां, .NET के लिए GroupDocs.Editor प्रत्येक दस्तावेज़ प्रकार के लिए विशिष्ट विभिन्न संपादन विकल्पों के माध्यम से व्यापक अनुकूलन की अनुमति देता है।
-### मैं संपादित दस्तावेजों के आउटपुट को कैसे संभालूँ?
-आप संपादित दस्तावेज़ स्ट्रीम को अपने इच्छित स्थान पर सहेजने के लिए कॉलबैक फ़ंक्शन का उपयोग कर सकते हैं।
-### क्या मुझे .NET के लिए GroupDocs.Editor का उपयोग करने के लिए लाइसेंस की आवश्यकता है?
- हां, आप यहां से लाइसेंस प्राप्त कर सकते हैं[यहाँ](https://purchase.groupdocs.com/buy)इसमें अस्थायी लाइसेंस का विकल्प भी है।
-### मैं अधिक विस्तृत दस्तावेज कहां पा सकता हूं?
- विस्तृत दस्तावेज यहां उपलब्ध है[.NET प्रलेखन पृष्ठ के लिए GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).
+
+**प्रश्न: मैं GroupDocs.Editor for .NET के साथ कौन‑से प्रकार के दस्तावेज़ संपादित कर सकता हूँ?**  
+**उत्तर:** आप WordProcessing, स्प्रेडशीट, प्रस्तुतियाँ, ईबुक, और ईमेल संपादित कर सकते हैं—जिसमें **edit PowerPoint presentation** उपयोग केस के लिए PowerPoint फ़ाइलें भी शामिल हैं।
+
+**प्रश्न: क्या संपादन विकल्पों को कस्टमाइज़ करना संभव है?**  
+**उत्तर:** हाँ, प्रत्येक फ़ॉर्मेट की अपनी विकल्प क्लास है (जैसे `WordProcessingEditOptions`, `SpreadsheetEditOptions`, `PresentationEditOptions`) जो आपको पेजिनेशन, छिपी स्लाइड्स, वर्कशीट चयन आदि को सूक्ष्म रूप से ट्यून करने देती है।
+
+**प्रश्न: संपादित दस्तावेज़ों के आउटपुट को कैसे संभालूँ?**  
+**उत्तर:** कॉलबैक फ़ंक्शन (`SaveNewDocument`) का उपयोग करके संपादित स्ट्रीम को कैप्चर करें, फिर आप इसे डिस्क, डेटाबेस में लिख सकते हैं, या वेब API से रिटर्न कर सकते हैं।
+
+**प्रश्न: GroupDocs.Editor for .NET उपयोग करने के लिए क्या लाइसेंस चाहिए?**  
+**उत्तर:** हाँ, उत्पादन के लिए लाइसेंस आवश्यक है। आप इसे [here](https://purchase.groupdocs.com/buy) से प्राप्त कर सकते हैं। एक अस्थायी ट्रायल लाइसेंस भी उपलब्ध है।
+
+**प्रश्न: अधिक विस्तृत दस्तावेज़ीकरण कहाँ मिल सकता है?**  
+**उत्तर:** विस्तृत दस्तावेज़ीकरण [GroupDocs.Editor for .NET documentation page](https://tutorials.groupdocs.com/editor/net/) पर उपलब्ध है।
+
+## निष्कर्ष
+GroupDocs.Editor for .NET PowerPoint प्रस्तुति फ़ाइलों और अन्य कई दस्तावेज़ प्रकारों को **edit PowerPoint presentation** करने को सरल बनाता है। ऊपर दिए गए चरणों का पालन करके आप कोड में ही दस्तावेज़ बनाना, संशोधित करना, और **संपादित दस्तावेज़ सहेजें** स्ट्रीम को पूरी तरह से कर सकते हैं, बिना Office इंस्टॉलेशन पर निर्भर हुए। लाइब्रेरी के उन्नत विकल्पों का अन्वेषण करें ताकि आप अपनी विशिष्ट व्यावसायिक आवश्यकताओं के अनुसार संपादन अनुभव को अनुकूलित कर सकें।
+
+---
+
+**Last Updated:** 2026-03-14  
+**परीक्षण किया गया:** GroupDocs.Editor for .NET (latest release)  
+**Author:** GroupDocs

@@ -1,53 +1,92 @@
 ---
-title: ドキュメントを作成
-linktitle: ドキュメントを作成
+date: 2026-03-14
+description: .NET 用の GroupDocs.Editor を使用して PowerPoint プレゼンテーションやその他のドキュメントタイプを編集する方法を学びます。このガイドでは、編集したドキュメントの保存方法や
+  Word ドキュメントの編集方法もカバーしています。
+linktitle: Create Document
 second_title: GroupDocs.Editor .NET API
-description: この包括的なステップバイステップのチュートリアルでは、GroupDocs.Editor for .NET を使用して Word、Excel、PowerPoint、電子ブック、電子メールのドキュメントを編集する方法を学習します。
-weight: 10
-url: /ja/net/document-editing/create-document/
+title: GroupDocs.Editor for .NET で PowerPoint プレゼンテーションを編集
 type: docs
+url: /ja/net/document-editing/create-document/
+weight: 10
 ---
-# ドキュメントを作成
 
-## 導入
-さまざまな種類のドキュメントをプログラムで編集する手間にうんざりしていませんか? GroupDocs.Editor for .NET は、このプロセスを簡素化します。この強力なツールを使用すると、開発者は Word、Excel、PowerPoint、電子書籍、電子メールなどのさまざまなドキュメント形式を簡単に編集できます。このチュートリアルでは、GroupDocs.Editor for .NET を使用してドキュメントを作成および編集する方法について詳しく説明します。プロセスをわかりやすい手順に分解して、初心者でも理解できるようにします。
+latest release)" translate maybe keep as is? The label "Tested With:" translate? Probably translate label but keep content. Keep bold formatting.
+
+"**Author:** GroupDocs" translate label.
+
+Now produce final content.
+
+Let's craft translation.
+
+Be careful with bullet list formatting.
+
+Proceed.
+
+# Edit PowerPoint Presentation with GroupDocs.Editor for .NET
+
+## はじめに
+プログラムから **edit PowerPoint presentation** ファイルを確実に編集したい場合は、GroupDocs.Editor for .NET が最適です。このライブラリは Word、Excel、PowerPoint、Ebook、Email 形式をすべて単一の使いやすい API で扱うことができます。本チュートリアルでは、サポートされている各ドキュメントタイプの作成と編集手順を解説し、**save edited document** ストリームの取得方法を示し、実際のプロジェクトで活用できる実用的なヒントを提供します。
+
+## クイック回答
+- **.NET で PowerPoint ファイルを編集できるライブラリは何ですか？** GroupDocs.Editor for .NET.  
+- **同じ API で Word、Excel、Epub ファイルも編集できますか？** はい、同じ `Editor` クラスがすべてのフォーマットをサポートしています。  
+- **編集されたファイルはどうやって取得しますか？** 結果ストリームを受け取るコールバック関数（例: `SaveNewDocument`）を提供します。  
+- **本番環境で使用するためにライセンスは必要ですか？** はい—ライセンスを購入するか、期間限定のトライアルライセンスを使用してください。  
+- **サポートされている .NET バージョンはどれですか？** .NET Framework 4.0+、.NET Core、.NET 5/6。
+
+## GroupDocs.Editor での “edit PowerPoint presentation” とは？
+PowerPoint プレゼンテーションの編集とは、`.pptx` ファイルを読み込み、スライドやテキスト、非表示要素などの変更を加え、更新されたファイルを取得することを指します。Microsoft Office がインストールされている必要はありません。
+
+## なぜ GroupDocs.Editor for .NET を使うのか？
+- **多数のフォーマットに対応した単一 API** – Word、Excel、Epub 用に別々のライブラリを用意する必要がありません。  
+- **Office 依存なし** – サーバー、コンテナ、CI パイプライン上でも動作します。  
+- **細かな制御が可能** – ページング、言語情報、フォント抽出などをカスタマイズできます。  
+- **ストリームベースの処理** – 物理ファイルではなくメモリストリームで操作できるため、クラウドサービスに最適です。
+
 ## 前提条件
-始める前に、以下のものを用意してください。
-- マシンに Visual Studio がインストールされています。
-- .NET Framework (4.0 以上)。
--  GroupDocs.Editor for .NETライブラリ。ここからダウンロードできます。[ここ](https://releases.groupdocs.com/editor/net/).
-- C# プログラミングの基礎知識。
+- Visual Studio（最新版のいずれか）。  
+- .NET Framework 4.0 以上（または .NET Core/.NET 5+）。  
+- GroupDocs.Editor for .NET ライブラリ – [こちら](https://releases.groupdocs.com/editor/net/) からダウンロード。  
+- 基本的な C# の知識。
+
 ## 名前空間のインポート
-まず、必要な名前空間をインポートしましょう。これにより、アプリケーションで必要なクラスとメソッドにアクセスできるようになります。
+まず、使用するコアクラスが含まれる名前空間をインポートします。
+
 ```csharp
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 using System.IO;
 ```
-## ステップ1: ストリームの設定
-まず、ドキュメント コンテンツのプレースホルダーとして機能するメモリ ストリームを設定する必要があります。
+
+## Step 1: ストリームの設定
+ドキュメント内容のプレースホルダーとしてメモリストリームを使用します。
+
 ```csharp
 Stream memoryStream = Stream.Null;
 ```
-## ステップ2: ドキュメントを保存するためのコールバック関数
-次に、新しいドキュメント ストリームを保存するコールバック関数を定義します。この関数は、ドキュメント編集プロセスの出力を処理するために不可欠です。
+
+## Step 2: **save edited document** 用コールバック関数
+編集されたストリームを受け取り、`memoryStream` に保存するコールバックを定義します。
+
 ```csharp
 void SaveNewDocument(Stream resultStream)
 {
     memoryStream = resultStream;
 }
 ```
-## ステップ3: ワードプロセッサ文書の作成と編集
-それでは、Word文書を作成して編集してみましょう。まずは新しい文書を作成します。`Editor` WordProcessing ドキュメントのインスタンスを作成し、デフォルトのオプションで編集します。
-### デフォルトオプションで作成および編集する
+
+## Step 3: WordProcessing ドキュメントの作成と編集  
+(Here we **edit word document .net**.)
+
+### デフォルトオプションで作成・編集
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
 {
     EditableDocument defaultWordProcessingDoc = editor.Edit();
 }
 ```
-### カスタムオプションで作成および編集
-さらに細かく制御するには、ページ区切りを無効にしたり、埋め込みフォントを抽出したりするオプションを指定できます。
+
+### カスタムオプションで作成・編集
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
 {
@@ -60,17 +99,19 @@ using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
     EditableDocument editableWordProcessingDocument = editor.Edit(wordProcessingEditOptions);
 }
 ```
-## ステップ4: スプレッドシートドキュメントの作成と編集
-同様に、Excel ドキュメントを作成および編集することもできます。手順は次のとおりです。
-### デフォルトオプションで作成および編集する
+
+## Step 4: Spreadsheet ドキュメントの作成と編集  
+(Use this to **edit excel file .net**.)
+
+### デフォルトオプションで作成・編集
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
 {
     EditableDocument defaultEditableSpreadsheetDocument = editor.Edit();
 }
 ```
-### カスタムオプションで作成および編集
-特定のワークシートをターゲットにしたり、非表示のワークシートを除外したりするには、`SpreadsheetEditOptions`.
+
+### カスタムオプションで作成・編集
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
 {
@@ -82,17 +123,19 @@ using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
     EditableDocument editableSpreadsheetDocument = editor.Edit(spreadsheetEditOptions);
 }
 ```
-## ステップ5: プレゼンテーションドキュメントの作成と編集
-PowerPoint プレゼンテーションもサポートされています。その処理方法を見てみましょう。
-### デフォルトオプションで作成および編集する
+
+## Step 5: **Edit PowerPoint Presentation** – プレゼンテーションドキュメントの作成と編集
+本キーワードの中心となるセクションです。
+
+### デフォルトオプションで作成・編集
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
 {
     EditableDocument defaultEditablePresentationDocument = editor.Edit();
 }
 ```
-### カスタムオプションで作成および編集
-表示するスライドや非表示のスライドを含めるかどうかなどのオプションを指定して、編集をカスタマイズできます。
+
+### カスタムオプションで作成・編集
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
 {
@@ -104,17 +147,19 @@ using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
     EditableDocument editablePresentationDocument = editor.Edit(presentationEditOptions);
 }
 ```
-## ステップ6: 電子書籍ドキュメントの作成と編集
-GroupDocs.Editor では、EPUB などの電子書籍形式の編集も可能です。その方法は次のとおりです。
-### デフォルトオプションで作成および編集する
+
+## Step 6: Ebook ドキュメントの作成と編集  
+(Here we **edit epub file**.)
+
+### デフォルトオプションで作成・編集
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
 {
     EditableDocument defaultEditableEbookDocument = editor.Edit();
 }
 ```
-### カスタムオプションで作成および編集
-ページ区切りと言語情報を有効または無効にして、電子書籍の編集をカスタマイズします。
+
+### カスタムオプションで作成・編集
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
 {
@@ -126,17 +171,16 @@ using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
     EditableDocument editableEbookDocument = editor.Edit(ebookEditOptions);
 }
 ```
-## ステップ7: 電子メールドキュメントの作成と編集
-最後に、電子メール ドキュメントを編集する方法について説明します。これには、EML などの形式が含まれます。
-### デフォルトオプションで作成および編集する
+
+## Step 7: Email ドキュメントの作成と編集
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
 {
     EditableDocument defaultEditableEmailDocument = editor.Edit();
 }
 ```
-### カスタムオプションで作成および編集
-編集プロセスを制御するためのメール メッセージ出力オプションを指定します。
+
+### カスタムオプションで作成・編集
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
 {
@@ -147,22 +191,43 @@ using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
     EditableDocument editableEmailDocument = editor.Edit(emailEditOptions);
 }
 ```
-## ステップ8: プロセスの終了
-ドキュメントを編集した後は、メモリ ストリームを適切に破棄してリソースを解放することが重要です。
+
+## Step 8: プロセスの完了
+作業が終わったらストリームを破棄してリソースを解放します。
+
 ```csharp
 memoryStream.Dispose();
 System.Console.WriteLine("CreateDocument routine has successfully finished");
 ```
+
+## よくある落とし穴とヒント
+- **ストリームの破棄を忘れない** – 開いたままにすると長時間稼働するサービスでメモリリークが発生します。  
+- **PowerPoint を編集する際は `SlideNumber` を正しく設定** – 設定ミスだと最初のスライドが重複します。  
+- **元のファイル名を保持したい場合** – コールバック前に名前を保存し、編集後に出力ストリームの名前を変更します。  
+- **大容量ドキュメントの場合** – チャンク処理や一時ファイルを使用した `Editor` の利用を検討し、メモリ使用量を抑えます。
+
+## FAQ
+
+**Q: GroupDocs.Editor for .NET で編集できるドキュメントの種類は何ですか？**  
+A: WordProcessing、スプレッドシート、プレゼンテーション、Ebook、メールの各形式を編集できます。**edit PowerPoint presentation** のユースケースも含まれます。
+
+**Q: 編集オプションはカスタマイズできますか？**  
+A: はい。各フォーマットには独自のオプションクラス（例: `WordProcessingEditOptions`、`SpreadsheetEditOptions`、`PresentationEditOptions`）があり、ページングや非表示スライド、シート選択などを細かく調整できます。
+
+**Q: 編集後のドキュメントはどう扱えばよいですか？**  
+A: コールバック関数（`SaveNewDocument`）で編集ストリームを取得し、ディスク、データベース、または Web API のレスポンスとして保存できます。
+
+**Q: GroupDocs.Editor for .NET の使用にライセンスは必要ですか？**  
+A: はい、本番環境ではライセンスが必須です。[こちら](https://purchase.groupdocs.com/buy) から購入できます。期間限定のトライアルライセンスも利用可能です。
+
+**Q: 詳細なドキュメントはどこで確認できますか？**  
+A: 詳細なドキュメントは [GroupDocs.Editor for .NET documentation page](https://tutorials.groupdocs.com/editor/net/) にあります。
+
 ## 結論
-GroupDocs.Editor for .NET は、さまざまなドキュメント タイプをプログラムで編集する作業を簡素化できる、多機能で強力なツールです。このステップ バイ ステップ ガイドに従うことで、WordProcessing ファイル、スプレッドシート、プレゼンテーション、電子書籍、電子メールなど、ドキュメントを簡単に作成および編集できます。より高度な機能とカスタマイズ オプションについては、GroupDocs.Editor のドキュメントを参照してください。
-## よくある質問
-### GroupDocs.Editor for .NET で編集できるドキュメントの種類は何ですか?
-ワードプロセッサ、スプレッドシート、プレゼンテーション、電子書籍、電子メールなど、幅広いドキュメントを編集できます。
-### 編集オプションをカスタマイズすることは可能ですか?
-はい、GroupDocs.Editor for .NET では、各ドキュメント タイプに固有のさまざまな編集オプションを通じて、広範囲にわたるカスタマイズが可能です。
-### 編集したドキュメントの出力をどのように処理すればよいですか?
-コールバック関数を使用して、編集したドキュメント ストリームを目的の場所に保存できます。
-### GroupDocs.Editor for .NET を使用するにはライセンスが必要ですか?
-はい、ライセンスは以下から取得できます。[ここ](https://purchase.groupdocs.com/buy)一時ライセンスのオプションもあります。
-### より詳細なドキュメントはどこで見つかりますか?
-詳細なドキュメントは、[GroupDocs.Editor for .NET ドキュメント ページ](https://tutorials.groupdocs.com/editor/net/).
+GroupDocs.Editor for .NET を使用すれば、**edit PowerPoint presentation** ファイルはもちろん、さまざまなドキュメントタイプをコードだけで簡単に作成・変更・**save edited document** ストリームとして保存できます。Office のインストールに依存せず、ビジネスニーズに合わせた高度なオプションで編集体験をカスタマイズしてください。
+
+---
+
+**Last Updated:** 2026-03-14  
+**Tested With:** GroupDocs.Editor for .NET (latest release)  
+**Author:** GroupDocs
