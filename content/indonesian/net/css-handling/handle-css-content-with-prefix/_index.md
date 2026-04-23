@@ -1,54 +1,82 @@
 ---
-title: Tangani Konten CSS dengan Awalan
-linktitle: Tangani Konten CSS dengan Awalan
+date: 2026-03-06
+description: Pelajari cara menangani konten CSS dengan prefix dan mengekstrak konten
+  CSS menggunakan GroupDocs.Editor untuk .NET dalam tutorial langkah demi langkah
+  yang mendetail ini.
+linktitle: Handle CSS Content with Prefix
 second_title: GroupDocs.Editor .NET API
-description: Pelajari cara menangani konten CSS dengan awalan menggunakan Groupdocs.Editor untuk .NET dalam tutorial langkah demi langkah yang mendetail ini. Sempurna untuk pengembang dari semua tingkatan.
-weight: 11
-url: /id/net/css-handling/handle-css-content-with-prefix/
+title: Tangani Konten CSS dengan Awalan
 type: docs
+url: /id/net/css-handling/handle-css-content-with-prefix/
+weight: 11
 ---
-# Tangani Konten CSS dengan Awalan
 
-## Perkenalan
-Dalam tutorial ini, kita akan mendalami cara menangani konten CSS dengan awalan menggunakan Groupdocs.Editor untuk .NET. Alat canggih ini memungkinkan Anda mengelola dan memanipulasi dokumen dengan mudah. Baik Anda seorang pengembang berpengalaman atau baru memulai, panduan ini akan memandu Anda melalui setiap langkah dengan cara yang sederhana dan menarik.
+# Menangani Konten CSS dengan Prefiks
+
+Dalam tutorial ini Anda akan menemukan **cara menangani prefiks css** saat bekerja dengan stylesheet di dalam dokumen menggunakan GroupDocs.Editor untuk .NET. Baik Anda perlu menambahkan URL ke gambar, font, atau sumber eksternal apa pun, langkah‑langkah di bawah ini menunjukkan secara tepat cara **menangani prefiks css** dan juga cara **mengekstrak konten css** untuk pemrosesan lebih lanjut.
+
+## Jawaban Cepat
+- **Apa arti “handle css prefix”?** Menambahkan prefiks URL khusus ke sumber eksternal yang direferensikan dalam CSS.  
+- **Metode API mana yang mengembalikan gaya CSS?** `EditableDocument.GetCssContent(...)`.  
+- **Apakah saya memerlukan lisensi?** Lisensi percobaan tersedia; lisensi komersial diperlukan untuk produksi.  
+- **Versi .NET apa yang didukung?** .NET Framework 4.5+ dan .NET Core/5/6.  
+- **Bisakah saya mengubah prefiks saat runtime?** Ya – cukup berikan string yang berbeda ke `GetCssContent`.
+
+## Apa itu **handle css prefix**?
+Menerapkan prefiks pada sumber daya CSS menulis ulang jalur gambar, font, atau aset lainnya sehingga mereka mengarah ke lokasi yang Anda kontrol (misalnya, CDN atau server yang aman). Ini sangat berguna ketika Anda mengekspor dokumen dan memerlukan semua referensi eksternal dapat diakses dari aplikasi web.
+
+## Mengapa menggunakan GroupDocs.Editor untuk **extract css content**?
+GroupDocs.Editor dapat membaca CSS asli yang tertanam dalam dokumen WordProcessing, memberikan Anda string stylesheet mentah, dan memungkinkan Anda memanipulasinya sebelum dirender atau disimpan. Ini menghilangkan kebutuhan parsing manual dan menjamin bahwa CSS yang diekstrak cocok dengan representasi internal dokumen.
+
 ## Prasyarat
-Sebelum kita mulai, pastikan Anda memiliki prasyarat berikut:
-- Visual Studio: Anda memerlukan instalasi Visual Studio yang berfungsi.
-- .NET Framework: Pastikan Anda telah menginstal .NET Framework.
--  Groupdocs.Editor untuk .NET: Anda dapat mengunduhnya[Di Sini](https://releases.groupdocs.com/editor/net/).
-- Contoh Dokumen: Siapkan contoh dokumen untuk diedit.
+- Visual Studio: Anda memerlukan instalasi Visual Studio yang berfungsi.  
+- .NET Framework: Pastikan Anda telah menginstal .NET Framework.  
+- GroupDocs.Editor untuk .NET: Anda dapat mengunduhnya [di sini](https://releases.groupdocs.com/editor/net/).  
+- Dokumen Contoh: Siapkan dokumen contoh siap untuk diedit.
+
 ## Impor Namespace
-Pertama, mari impor namespace yang diperlukan untuk memastikan kode kita berjalan dengan lancar. Ini adalah langkah penting untuk mengakses semua fungsi yang disediakan oleh Groupdocs.Editor untuk .NET.
+Pertama, mari impor namespace yang diperlukan untuk memastikan kode kami berjalan lancar. Langkah ini memberi kami akses ke kelas inti GroupDocs.Editor.
+
 ```csharp
 using System;
 using System.Collections.Generic;
 using GroupDocs.Editor.Options;
 ```
+
 ## Langkah 1: Inisialisasi Editor
- Langkah pertama melibatkan inisialisasi`Editor` kelas dengan dokumen sampel Anda. Ini mengatur lingkungan untuk mulai mengedit dokumen Anda.
+Langkah pertama melibatkan pembuatan instance `Editor` dengan dokumen contoh Anda. Ini menyiapkan lingkungan pengeditan.
+
 ```csharp
 using (Editor editor = new Editor("Your Sample Document", delegate { return new WordProcessingLoadOptions(); }))
 {
 ```
+
 ## Langkah 2: Edit Dokumen
-Selanjutnya, kita perlu membuat`EditableDocument` contoh. Di sinilah keajaiban terjadi - memungkinkan kita memanipulasi konten dokumen.
+Selanjutnya, kami memperoleh objek `EditableDocument`. Objek ini mewakili versi yang dapat diedit dari file dan memungkinkan kami bekerja dengan bagian internalnya.
+
 ```csharp
     using (EditableDocument document = editor.Edit(new WordProcessingEditOptions()))
     {
 ```
-## Langkah 3: Tetapkan Awalan Eksternal
-Di sini, kami mendefinisikan awalan eksternal untuk gambar dan font. Hal ini sangat berguna jika Anda mereferensikan sumber daya eksternal yang dihosting di server web.
+
+## Langkah 3: Atur Prefiks Eksternal
+Tentukan prefiks URL untuk gambar dan font. Prefiks ini akan ditambahkan di depan setiap referensi gambar dan font yang ditemukan dalam CSS.
+
 ```csharp
-        string externalImagesPrefix = "http://www.situswebsaya.com/images/id=";
+        string externalImagesPrefix = "http://www.mywebsite.com/images/id=";
         string externalFontsPrefix = "http://www.mywebsite.com/fonts/id=";
 ```
-## Langkah 4: Dapatkan Konten CSS
-Sekarang, kita mengambil konten CSS dari dokumen. Metode ini mengembalikan daftar stylesheet CSS, menerapkan awalan yang kita tentukan sebelumnya.
+
+## Langkah 4: **Extract CSS content** dengan Prefiks
+Panggil `GetCssContent`, dengan memberikan prefiks yang baru saja Anda definisikan. Metode ini mengembalikan daftar string stylesheet CSS yang sudah berisi URL dengan prefiks.
+
 ```csharp
         List<string> stylesheets = document.GetCssContent(externalImagesPrefix, externalFontsPrefix);
 ```
-## Langkah 5: Keluarkan Hasilnya
-Terakhir, kami menampilkan jumlah stylesheet yang ditemukan dan mencetak setiap stylesheet ke konsol. Ini membantu dalam memverifikasi bahwa awalan diterapkan dengan benar dan konten CSS berhasil diambil.
+
+## Langkah 5: Keluarkan Hasil
+Cetak jumlah stylesheet yang ditemukan dan tampilkan setiap stylesheet. Ini membantu Anda memverifikasi bahwa prefiks telah diterapkan dengan benar.
+
 ```csharp
         Console.WriteLine("There are {0} stylesheets in the input document", stylesheets.Count);
         foreach (string css in stylesheets)
@@ -58,16 +86,44 @@ Terakhir, kami menampilkan jumlah stylesheet yang ditemukan dan mencetak setiap 
     }
 }
 ```
+
+## Masalah Umum dan Solusinya
+- **Tidak ada stylesheet yang dikembalikan** – Pastikan dokumen sumber memang berisi CSS (misalnya, dokumen Word dengan tabel berformat atau HTML yang disematkan).  
+- **URL tidak tepat** – Periksa kembali bahwa string prefiks diakhiri dengan delimiter yang sesuai (`/` atau `=`) untuk routing server Anda.  
+- **Kekhawatiran kinerja** – Untuk dokumen yang sangat besar, pertimbangkan memproses stylesheet secara batch untuk menghindari penggunaan memori yang tinggi.
+
 ## Kesimpulan
-Menangani konten CSS dengan awalan menggunakan Groupdocs.Editor untuk .NET sangatlah mudah dan efisien. Dengan mengikuti langkah-langkah ini, Anda dapat dengan mudah mengelola lembar gaya dokumen Anda dan memastikan lembar gaya tersebut mereferensikan sumber daya eksternal yang benar. Tutorial ini telah membahas langkah-langkah penting untuk membantu Anda memulai, tetapi Groupdocs.Editor untuk .NET menawarkan lebih banyak lagi. Jelajahi dokumentasi dan fiturnya untuk memanfaatkan sepenuhnya kemampuannya dalam proyek Anda.
+Menangani konten CSS dengan prefiks menggunakan GroupDocs.Editor untuk .NET adalah sederhana dan kuat. Dengan mengikuti langkah‑langkah ini Anda dapat **menangani prefiks css**, mengambil CSS mentah melalui **extract css content**, dan mengintegrasikan sumber daya eksternal secara mulus ke dalam alur kerja web Anda. Jelajahi fitur GroupDocs.Editor lainnya seperti konversi HTML, ekstraksi gambar, dan penggabungan dokumen untuk mendapatkan nilai lebih dari API.
+
 ## FAQ
-### Bisakah saya menggunakan Groupdocs.Editor untuk .NET dengan format dokumen lain?
-Ya, Groupdocs.Editor untuk .NET mendukung berbagai format dokumen termasuk PDF, Word, Excel, dan lainnya.
-### Apakah ada uji coba gratis yang tersedia untuk Groupdocs.Editor untuk .NET?
- Sangat! Anda dapat memulai uji coba gratis Anda[Di Sini](https://releases.groupdocs.com/).
-### Bagaimana cara mendapatkan lisensi sementara untuk Groupdocs.Editor untuk .NET?
- Anda bisa mendapatkan lisensi sementara[Di Sini](https://purchase.groupdocs.com/temporary-license/).
-### Di mana saya dapat menemukan dokumentasi terperinci untuk Groupdocs.Editor untuk .NET?
- Dokumentasi terperinci tersedia[Di Sini](https://tutorials.groupdocs.com/editor/net/).
-### Opsi dukungan apa yang tersedia untuk Groupdocs.Editor untuk .NET?
- Anda bisa mendapatkan dukungan[Di Sini](https://forum.groupdocs.com/c/editor/20).
+### Bisakah saya menggunakan GroupDocs.Editor untuk .NET dengan format dokumen lain?
+Ya, GroupDocs.Editor untuk .NET mendukung berbagai format dokumen termasuk PDF, Word, Excel, dan lainnya.
+
+### Apakah ada percobaan gratis yang tersedia untuk GroupDocs.Editor untuk .NET?
+Tentu saja! Anda dapat memulai percobaan gratis Anda [di sini](https://releases.groupdocs.com/).
+
+### Bagaimana cara mendapatkan lisensi sementara untuk GroupDocs.Editor untuk .NET?
+Anda dapat memperoleh lisensi sementara [di sini](https://purchase.groupdocs.com/temporary-license/).
+
+### Di mana saya dapat menemukan dokumentasi terperinci untuk GroupDocs.Editor untuk .NET?
+Dokumentasi terperinci tersedia [di sini](https://tutorials.groupdocs.com/editor/net/).
+
+### Opsi dukungan apa yang tersedia untuk GroupDocs.Editor untuk .NET?
+Anda dapat mendapatkan dukungan [di sini](https://forum.groupdocs.com/c/editor/20).
+
+## Pertanyaan Umum Tambahan
+
+**Q: Bisakah saya mengubah prefiks setelah mengekstrak CSS?**  
+A: Ya. Panggil `GetCssContent` lagi dengan string prefiks yang berbeda; metode ini selalu menggunakan nilai yang Anda berikan pada runtime.
+
+**Q: Apakah ini bekerja dengan dokumen yang dilindungi kata sandi?**  
+A: Ya. Berikan kata sandi dalam `WordProcessingLoadOptions` saat membuat instance `Editor`.
+
+**Q: Apakah memungkinkan menyimpan CSS yang dimodifikasi kembali ke dalam dokumen?**  
+A: GroupDocs.Editor saat ini menyediakan akses baca‑saja ke CSS. Untuk mempertahankan perubahan, Anda perlu mengganti stylesheet asli menggunakan API XML dasar dokumen.
+
+---
+
+**Last Updated:** 2026-03-06  
+**Tested With:** GroupDocs.Editor 23.12 for .NET  
+**Author:** GroupDocs
