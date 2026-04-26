@@ -1,19 +1,20 @@
 ---
-title: "Java: Convert Webpage to Word with GroupDocs.Editor"
-description: "Learn how to convert webpage to word and generate professional DOCX files using GroupDocs.Editor for Java – ideal for reports and documentation."
-date: "2026-02-08"
-weight: 1
-url: "/java/document-saving/java-html-word-conversion-groupdocs-editor-guide/"
+date: '2026-02-08'
+description: GroupDocs.Editor for Java を使用して、ウェブページを Word に変換し、プロフェッショナルな DOCX ファイルを生成する方法を学びましょう
+  – レポートや文書作成に最適です。
 keywords:
 - Java HTML to Word conversion
 - GroupDocs.Editor for Java
 - document transformation
+title: 'Java: GroupDocs.EditorでウェブページをWordに変換'
 type: docs
+url: /ja/java/document-saving/java-html-word-conversion-groupdocs-editor-guide/
+weight: 1
 ---
 
-# Java: Convert Webpage to Word Using GroupDocs.Editor
+# Java: GroupDocs.Editor を使用した Web ページの Word への変換
 
-Converting a **webpage to Word** is a common need when you want to turn online content into a printable, editable document. Whether you’re pulling a marketing page, a technical article, or a legal notice, turning that HTML into a DOCX or DOCM lets you edit, share, and archive it with familiar Office tools. In this guide we’ll walk through how to use **GroupDocs.Editor for Java** to read an HTML file, inspect its resources, and save the result as both HTML and Word formats.
+**webpage to Word** を変換することは、オンラインコンテンツを印刷可能で編集可能なドキュメントにしたいときに一般的なニーズです。マーケティングページ、技術記事、法的通知など、HTML を DOCX または DOCM に変換すれば、慣れ親しんだ Office ツールで編集、共有、アーカイブが可能になります。このガイドでは、**GroupDocs.Editor for Java** を使用して HTML ファイルを読み取り、リソースを検査し、結果を HTML と Word の両方の形式で保存する方法を順を追って説明します。
 
 ## Quick Answers
 - **What does “convert webpage to word” mean?** It transforms HTML markup and its assets into an editable Word (DOCX/DOCM) file.  

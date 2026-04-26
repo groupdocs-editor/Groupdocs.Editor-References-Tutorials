@@ -1,17 +1,21 @@
 ---
-title: "Load Document Java with GroupDocs.Editor: A Comprehensive Guide for Developers"
-description: "Learn how to load document java using GroupDocs.Editor. This document loading tutorial java covers handling large files java, load document with password, and optimize memory usage java."
-date: "2026-02-08"
-weight: 1
-url: "/java/document-loading/master-groupdocs-editor-java-document-loading/"
+date: '2026-02-08'
+description: Tanulja meg, hogyan töltsön be dokumentumot Java-ban a GroupDocs.Editor
+  használatával. Ez a dokumentum betöltésével kapcsolatos Java tutorial a nagy fájlok
+  kezelését, a jelszóval védett dokumentum betöltését és a memóriahasználat optimalizálását
+  tárgyalja.
 keywords:
 - GroupDocs.Editor Java
 - document loading Java
 - Java document manipulation
+title: 'Dokumentum betöltése Java-ban a GroupDocs.Editor segítségével: Átfogó útmutató
+  fejlesztőknek'
 type: docs
+url: /hu/java/document-loading/master-groupdocs-editor-java-document-loading/
+weight: 1
 ---
 
-# Load Document Java with GroupDocs.Editor: A Complete Developer’s Guide
+# Load Document Java a GroupDocs.Editor-rel: Teljes Fejlesztői Útmutató
 
 Welcome to the definitive **load document java** tutorial. In this guide you’ll discover how to load documents with GroupDocs.Editor for Java—whether the file lives on disk, comes from an `InputStream`, or is protected with a password. We’ll also show you how to **handle large files java** and **optimize memory usage java** so your applications stay responsive. Let’s dive in and get your project up and running!
 
@@ -175,8 +179,8 @@ Understanding **load document java** techniques opens the door to many real‑wo
 
 ## Common Issues and Solutions
 
-| Issue | Solution |
-|-------|----------|
+| Probléma | Megoldás |
+|----------|----------|
 | **OutOfMemoryError on big Excel files** | Enable `optimizeMemoryUsage` or split the file into smaller chunks before loading. |
 | **Password‑protected file fails to open** | Ensure you set the password via `WordProcessingLoadOptions` **before** creating the `Editor`. |
 | **Editor not released after use** | Always invoke `editor.dispose()` in a `finally` block or use try‑with‑resources if you wrap it in a custom helper. |

@@ -1,14 +1,17 @@
 ---
-title: "Load Document Java with GroupDocs.Editor: A Comprehensive Guide for Developers"
-description: "Learn how to load document java using GroupDocs.Editor. This document loading tutorial java covers handling large files java, load document with password, and optimize memory usage java."
-date: "2026-02-08"
-weight: 1
-url: "/java/document-loading/master-groupdocs-editor-java-document-loading/"
+date: '2026-02-08'
+description: Naucz się, jak ładować dokumenty java przy użyciu GroupDocs.Editor. Ten
+  samouczek ładowania dokumentów java obejmuje obsługę dużych plików java, ładowanie
+  dokumentu z hasłem oraz optymalizację zużycia pamięci java.
 keywords:
 - GroupDocs.Editor Java
 - document loading Java
 - Java document manipulation
+title: 'Ładowanie dokumentu w Javie przy użyciu GroupDocs.Editor: Kompletny przewodnik
+  dla programistów'
 type: docs
+url: /pl/java/document-loading/master-groupdocs-editor-java-document-loading/
+weight: 1
 ---
 
 # Load Document Java with GroupDocs.Editor: A Complete Developer’s Guide
@@ -175,11 +178,11 @@ Understanding **load document java** techniques opens the door to many real‑wo
 
 ## Common Issues and Solutions
 
-| Issue | Solution |
-|-------|----------|
-| **OutOfMemoryError on big Excel files** | Enable `optimizeMemoryUsage` or split the file into smaller chunks before loading. |
-| **Password‑protected file fails to open** | Ensure you set the password via `WordProcessingLoadOptions` **before** creating the `Editor`. |
-| **Editor not released after use** | Always invoke `editor.dispose()` in a `finally` block or use try‑with‑resources if you wrap it in a custom helper. |
+| Problem | Rozwiązanie |
+|---------|-------------|
+| **OutOfMemoryError przy dużych plikach Excel** | Enable `optimizeMemoryUsage` or split the file into smaller chunks before loading. |
+| **Plik chroniony hasłem nie otwiera się** | Ensure you set the password via `WordProcessingLoadOptions` **before** creating the `Editor`. |
+| **Editor nie został zwolniony po użyciu** | Always invoke `editor.dispose()` in a `finally` block or use try‑with‑resources if you wrap it in a custom helper. |
 
 ## Frequently Asked Questions (FAQ)
 
