@@ -1,35 +1,46 @@
 ---
-date: '2025-12-19'
-description: GroupDocs.Editor for Java를 사용하여 워드 문서를 로드, 편집 및 저장하는 방법을 배우고, 비밀번호 보호
-  및 메모리 최적화 옵션을 활용하여 효율적으로 문서를 편집하세요.
+date: '2026-02-19'
+description: GroupDocs.Editor for Java를 사용하여 비밀번호 보호된 Word를 저장하는 방법, Java에서 워드 문서를
+  편집하는 방법, 그리고 메모리 사용량을 최적화하는 방법을 배워보세요.
 keywords:
 - GroupDocs Editor Java
 - Java document editing
 - document loading and saving in Java
-title: GroupDocs.Editor 가이드를 사용한 Java 워드 문서 편집
+title: GroupDocs.Editor for Java를 사용하여 비밀번호로 Word 저장
 type: docs
 url: /ko/java/document-editing/implement-document-editing-java-groupdocs-editor/
 weight: 1
 ---
 
-# GroupDocs.Editor 가이드로 Java에서 Word 문서 편집
+ produce final content.# GroupDocs.Editor for Java를 사용하여 비밀번호로 Word 저장하기
 
-Welcome to this comprehensive guide on using GroupDocs.Editor for Java to **edit word document java** efficiently. In today's digital age, managing documents with ease is a necessity for businesses and individuals alike. Whether you're dealing with sensitive information that requires password protection or simply need to modify content before distribution, mastering these functionalities can significantly streamline your workflow.
+이 튜토리얼에서는 Java에서 Word 문서를 편집하면서 **비밀번호로 Word 저장**하는 방법을 알아봅니다. **Java에서 Word 문서 편집**이 필요하거나, 비밀번호로 보호하거나, DOCX를 DOCM 형식으로 변환하려는 경우에도 GroupDocs.Editor는 깔끔하고 메모리 효율적인 방법을 제공합니다. 라이브러리 설정, 비밀번호 보호 파일 로드, 편집 옵션 커스터마이징, 최종적으로 문서를 안전하게 저장하는 전체 과정을 단계별로 살펴보겠습니다.
 
-## 빠른 답변
+## Quick Answers
 - **Java에서 Word 문서를 편집할 수 있는 라이브러리는 무엇인가요?** GroupDocs.Editor for Java.  
-- **비밀번호로 보호된 파일을 열 수 있나요?** Yes – use `WordProcessingLoadOptions` with a password.  
-- **저장 시 메모리 사용량을 줄이는 방법은?** Set `optimizeMemoryUsage(true)` in `WordProcessingSaveOptions`.  
-- **프로덕션에 라이선스가 필요합니까?** A valid GroupDocs.Editor license is required.  
-- **매크로와 읽기 전용 보호를 지원하는 형식은?** The DOCM format.
+- **비밀번호로 보호된 파일을 열 수 있나요?** 예 – 비밀번호와 함께 `WordProcessingLoadOptions`를 사용합니다.  
+- **저장 시 메모리 사용량을 줄이려면 어떻게 해야 하나요?** `WordProcessingSaveOptions`에서 `optimizeMemoryUsage(true)`를 설정합니다.  
+- **프로덕션 환경에 라이선스가 필요합니까?** 유효한 GroupDocs.Editor 라이선스가 필요합니다.  
+- **매크로와 읽기 전용 보호를 지원하는 형식은 무엇인가요?** DOCM 형식.  
+- **편집 중에 내장 폰트를 추출하려면 어떻게 해야 하나요?** `FontExtractionOptions.ExtractEmbeddedWithoutSystem`을 사용합니다.  
+- **편집 후 DOCX를 DOCM으로 변환할 수 있나요?** 예 – 저장 시 `WordProcessingFormats.Docm`을 지정합니다.
 
-## 사전 요구 사항
+## What is “save word with password”?
+Word 파일을 비밀번호로 저장한다는 것은 문서가 암호화되어 비밀번호를 아는 사용자만 열 수 있다는 의미입니다. 이는 특히 파일이 전자적으로 저장되거나 전송될 때 기밀 콘텐츠에 대한 보안 레이어를 추가합니다.
 
-Before we start, make sure you have a solid understanding of Java programming. Familiarity with Maven project setup and handling file I/O operations in Java will be beneficial. Additionally, ensure that your development environment is set up for Java 8 or later versions to work seamlessly with GroupDocs.Editor.
+## Why Use GroupDocs.Editor for Java?
+- **전체 기능 편집** – 텍스트, 이미지, 표, 그리고 매크로까지 수정할 수 있습니다.  
+- **비밀번호 처리** – 보호된 파일을 손쉽게 열고 저장할 수 있습니다.  
+- **메모리 최적화 옵션** – 대용량 문서나 클라우드 환경에 이상적입니다.  
+- **크로스 플랫폼** – Java 호환 플랫폼 어디서든 작동합니다 (Java 8 이상).
 
-### 필요 라이브러리 및 종속성
+## Prerequisites
 
-For this tutorial, we'll use the GroupDocs.Editor library version 25.3. You can include it in your project using Maven by adding the following configuration:
+시작하기 전에 Java 프로그래밍에 대한 탄탄한 이해가 필요합니다. Maven 프로젝트 설정 및 Java에서 파일 I/O 작업을 다루는 데 익숙하면 도움이 됩니다. 또한 개발 환경이 Java 8 이상으로 설정되어 GroupDocs.Editor와 원활히 작동하도록 해야 합니다.
+
+### Required Libraries and Dependencies
+
+이 튜토리얼에서는 GroupDocs.Editor 라이브러리를 사용합니다. Maven을 사용하여 프로젝트에 포함시키세요:
 
 ```xml
 <repositories>
@@ -49,123 +60,124 @@ For this tutorial, we'll use the GroupDocs.Editor library version 25.3. You can 
 </dependencies>
 ```
 
-Alternatively, you can download the library directly from [GroupDocs.Editor for Java 릴리스](https://releases.groupdocs.com/editor/java/).
+또는 [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/)에서 직접 라이브러리를 다운로드할 수 있습니다.
 
-### 라이선스 획득
+### License Acquisition
 
-To fully utilize GroupDocs.Editor without evaluation limitations, consider obtaining a free trial or purchasing a license. You can acquire a temporary license through [이 링크](https://purchase.groupdocs.com/temporary-license) to explore the features extensively.
+평가 제한 없이 GroupDocs.Editor를 완전히 활용하려면 무료 체험판을 받거나 라이선스를 구매하는 것을 고려하세요. 기능을 충분히 살펴보려면 [this link](https://purchase.groupdocs.com/temporary-license)에서 임시 라이선스를 획득할 수 있습니다.
 
-## GroupDocs.Editor for Java 설정
+## Setting Up GroupDocs.Editor for Java
 
-Once you have installed GroupDocs.Editor, it's time to initialize and configure your environment:
-1. Add the Maven dependency or download the JAR file as specified above.
-2. Set up a basic project structure in your favorite IDE (e.g., IntelliJ IDEA, Eclipse).
-3. Ensure your `pom.xml` includes the required repository if using Maven.
+GroupDocs.Editor를 설치했으면 이제 환경을 초기화하고 구성할 차례입니다:
 
-With these steps completed, you're ready to start implementing document management features with GroupDocs.Editor.
+1. 위에서 지정한 Maven 의존성을 추가하거나 JAR 파일을 다운로드합니다.  
+2. 선호하는 IDE(예: IntelliJ IDEA, Eclipse)에서 기본 프로젝트 구조를 설정합니다.  
+3. `pom.xml`에 Maven을 사용할 경우 필요한 저장소가 포함되어 있는지 확인합니다.  
 
-## 구현 가이드
+위 단계들을 완료하면 GroupDocs.Editor를 사용해 문서 관리 기능을 구현할 준비가 된 것입니다.
 
-We'll break down the process into three main sections: Document Loading and Password Handling, Document Editing Options, and Content Editing and Saving. Let's explore each feature step‑by‑step.
+## Implementation Guide
 
-### 기능 1: 문서 로드 및 비밀번호 처리
+프로세스를 세 가지 주요 섹션으로 나눕니다: 문서 로드 및 비밀번호 처리, 문서 편집 옵션, 콘텐츠 편집 및 저장. 각 기능을 단계별로 살펴보겠습니다.
 
-**Overview:** This section demonstrates how to **load password protected doc** using GroupDocs.Editor for Java. It’s essential when handling sensitive documents that require access control.
+### Feature 1: Document Loading and Password Handling
 
-#### 단계 1: 문서 경로 정의
+**개요:** 이 섹션에서는 GroupDocs.Editor for Java를 사용해 **비밀번호로 보호된 문서를 로드**하는 방법을 보여줍니다. 접근 제어가 필요한 민감한 문서를 다룰 때 필수적입니다.
 
-First, specify the location of your Word document:
+#### Step 1: Define the Path to Your Document
+
+먼저 Word 문서의 위치를 지정합니다:
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.docx";
 ```
 
-#### 단계 2: InputStream 생성
+#### Step 2: Create an InputStream
 
-Next, initialize a file input stream for reading the document:
+다음으로 문서를 읽기 위한 파일 입력 스트림을 초기화합니다:
 
 ```java
 InputStream fs = new FileInputStream(inputFilePath);
 ```
 
-#### 단계 3: 비밀번호 보호 로드 옵션 설정
+#### Step 3: Set Load Options with Password Protection
 
-To handle documents that are password‑protected, configure the load options:
+비밀번호로 보호된 문서를 처리하려면 로드 옵션을 구성합니다:
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 loadOptions.setPassword("some_password_to_open_a_document");
 ```
 
-#### 단계 4: Editor를 사용해 문서 로드
+#### Step 4: Load the Document Using Editor
 
-Finally, use the `Editor` class to open and work with the document:
+마지막으로 `Editor` 클래스를 사용해 문서를 열고 작업합니다:
 
 ```java
 Editor editor = new Editor(fs, loadOptions);
 ```
 
-### 기능 2: 문서 편집 옵션
+### Feature 2: Document Editing Options
 
-**Overview:** Configuring editing options such as font extraction and language information can enhance document processing capabilities.
+**개요:** 폰트 추출 및 언어 정보와 같은 편집 옵션을 구성하면 문서 처리 기능을 향상시킬 수 있습니다.
 
-#### 단계 1: 편집 옵션 생성
+#### Step 1: Create Editing Options
 
-Begin by initializing your editing options object:
+먼저 편집 옵션 객체를 초기화합니다:
 
 ```java
 WordProcessingEditOptions editOptions = new WordProcessingEditOptions();
 ```
 
-#### 단계 2: 폰트 추출 활성화
+#### Step 2: Enable Font Extraction
 
-To ensure embedded fonts are used, configure the following option:
+내장 폰트를 사용하도록 하려면 다음 옵션을 설정합니다:
 
 ```java
 editOptions.setFontExtraction(FontExtractionOptions.ExtractEmbeddedWithoutSystem);
 ```
 
-#### 단계 3: 언어 정보 추출
+#### Step 3: Extract Language Information
 
-Enabling language information can be useful for multilingual document processing:
+언어 정보를 활성화하면 다국어 문서 처리에 유용합니다:
 
 ```java
 editOptions.setEnableLanguageInformation(true);
 ```
 
-#### 단계 4: 페이지 매김 모드 활성화
+#### Step 4: Enable Pagination Mode
 
-For easier editing, especially with long documents, switch on pagination mode:
+특히 긴 문서의 경우 편집을 쉽게 하기 위해 페이지네이션 모드를 켭니다:
 
 ```java
 editOptions.setEnablePagination(true);
 ```
 
-### 기능 3: 콘텐츠 편집 및 문서 저장
+### Feature 3: Content Editing and Document Saving
 
-**Overview:** This section shows how to modify document content and save it with specific configurations such as format and password protection.
+**개요:** 이 섹션에서는 형식 및 비밀번호 보호와 같은 특정 구성으로 **비밀번호로 Word 저장**하는 방법을 보여줍니다.
 
-#### 단계 1: 원본 콘텐츠 추출
+#### Step 1: Extract Original Content
 
-Start by extracting the original content and resources:
+먼저 원본 콘텐츠와 리소스를 추출합니다:
 
 ```java
 String originalContent = beforeEdit.getContent();
 List<IHtmlResource> allResources = beforeEdit.getAllResources();
 ```
 
-#### 단계 2: 문서 콘텐츠 수정
+#### Step 2: Modify Document Content
 
-Change the document's text as needed. Here, we replace "document" with "edited document":
+필요에 따라 문서 텍스트를 변경합니다. 여기서는 "document"를 "edited document"로 교체합니다:
 
 ```java
 String editedContent = originalContent.replace("document", "edited document");
 EditableDocument afterEdit = EditableDocument.fromMarkup(editedContent, allResources);
 ```
 
-#### 단계 3: 저장 옵션 설정
+#### Step 3: Set Up Save Options
 
-Configure how the document should be saved, including format and password:
+형식 및 비밀번호를 포함해 문서를 저장하는 방식을 구성합니다:
 
 ```java
 WordProcessingFormats docmFormat = WordProcessingFormats.Docm;
@@ -177,9 +189,9 @@ saveOptions.setOptimizeMemoryUsage(true);
 saveOptions.setProtection(new WordProcessingProtection(WordProcessingProtectionType.ReadOnly, "write_password"));
 ```
 
-#### 단계 4: 편집된 문서 저장
+#### Step 4: Save the Edited Document
 
-Finally, write the edited document to an output file:
+마지막으로 편집된 문서를 출력 파일에 기록합니다:
 
 ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/edited_output.docm";
@@ -190,45 +202,45 @@ try (FileOutputStream outputFile = new FileOutputStream(outputPath)) {
 }
 ```
 
-## 실용적인 적용 사례
+## Common Use Cases
+- **보안 문서 처리:** 기밀 계약서나 인사 파일을 편집할 때 비밀번호 보호를 사용합니다.  
+- **배치 처리:** 기업 문서 관리 시스템에서 수십 개 파일의 편집을 자동화합니다.  
+- **콘텐츠 검토 워크플로:** 검토자가 최종 승인 전에 Word 파일에서 직접 편집하고 댓글을 달 수 있도록 합니다.  
 
-GroupDocs.Editor for Java offers versatile applications across various domains:
-1. **Secure Document Handling:** Password‑protect sensitive documents during editing and saving processes.  
-2. **Batch Processing:** Automate editing tasks on multiple documents, ideal for enterprise document management systems.  
-3. **Content Review Systems:** Implement editable review workflows where reviewers can suggest changes directly within documents.
+## Performance Considerations
 
-By integrating GroupDocs.Editor into your Java applications, you enhance both security and efficiency in managing Word documents.
+GroupDocs.Editor를 사용할 때 최적 성능을 보장하려면:
 
-## 성능 고려 사항
+- **메모리 사용 최소화** – `optimizeMemoryUsage(true)`를 활성화 상태로 유지합니다.  
+- 전체 문서를 메모리에 로드하는 대신 큰 파일을 청크 단위로 처리합니다.  
+- 성능 향상 및 버그 수정을 위해 최신 GroupDocs.Editor 릴리스로 정기적으로 업그레이드합니다.  
 
-To ensure optimal performance when using GroupDocs.Editor:
-- **Minimize memory usage** by setting `optimizeMemoryUsage(true)` in save options. *(Keyword: optimize memory usage java)*
-- Avoid loading large files entirely in memory; process them in chunks if possible.
-- Regularly update to the latest version of GroupDocs.Editor for improved features and bug fixes.
+## Frequently Asked Questions
 
-## 자주 묻는 질문
-
-**Q: 비밀번호로 보호된 문서를 여는 방법은?**  
-A: Use `WordProcessingLoadOptions` and call `setPassword("your_password")` before creating the `Editor` instance.
+**Q: 비밀번호로 보호된 문서를 어떻게 열 수 있나요?**  
+A: `Editor` 인스턴스를 만들기 전에 `WordProcessingLoadOptions`를 사용하고 `setPassword("your_password")`를 호출합니다.
 
 **Q: 매크로가 포함된 DOCM 파일을 편집할 수 있나요?**  
-A: Yes. Save the edited document using `WordProcessingFormats.Docm` to preserve macros.
+A: 예. 매크로를 보존하려면 편집된 문서를 `WordProcessingFormats.Docm`으로 저장합니다.
 
-**Q: 대용량 파일을 저장할 때 메모리 사용량을 줄이는 가장 좋은 방법은?**  
-A: Enable `optimizeMemoryUsage(true)` in `WordProcessingSaveOptions` and consider using pagination mode.
+**Q: 큰 파일을 저장할 때 메모리 사용량을 줄이는 가장 좋은 방법은 무엇인가요?**  
+A: `WordProcessingSaveOptions`에서 `optimizeMemoryUsage(true)`를 활성화하고 페이지네이션 모드 사용을 고려합니다.
 
-**Q: 편집 시 임베디드 폰트를 추출할 수 있나요?**  
-A: Absolutely. Set `editOptions.setFontExtraction(FontExtractionOptions.ExtractEmbeddedWithoutSystem)`.
+**Q: 편집 중에 내장 폰트를 추출할 수 있나요?**  
+A: 물론 가능합니다. `editOptions.setFontExtraction(FontExtractionOptions.ExtractEmbeddedWithoutSystem)`을 설정합니다.
 
-**Q: 프로덕션에서 GroupDocs.Editor를 사용하려면 특별한 라이선스가 필요합니까?**  
-A: A valid GroupDocs.Editor license is required for production deployments; a temporary license can be obtained for evaluation.
+**Q: 프로덕션 환경에서 GroupDocs.Editor를 사용하려면 특별한 라이선스가 필요합니까?**  
+A: 프로덕션 배포에는 유효한 GroupDocs.Editor 라이선스가 필요합니다; 평가용으로는 임시 라이선스를 얻을 수 있습니다.
 
-## 결론
+**Q: 편집 후 DOCX를 DOCM으로 변환하려면 어떻게 해야 하나요?**  
+A: 저장 단계에서와 같이 `WordProcessingSaveOptions`를 만들 때 `WordProcessingFormats.Docm`을 지정합니다.
 
-In this guide, we've explored how to **edit word document java** using GroupDocs.Editor for Java—loading files (including password‑protected ones), customizing editing options, and saving with memory‑optimizing settings. By following these steps, you can embed powerful, secure document‑editing capabilities directly into your Java applications, boosting both productivity and data protection.
+## Conclusion
+
+이 가이드에서는 Java에서 Word 문서를 편집하면서 **비밀번호로 Word 저장** 보호를 적용하는 방법을 다루었습니다. 비밀번호로 보호된 파일을 로드하고, 내장 폰트 추출과 같은 편집 옵션을 커스터마이징하며, 최종적으로 읽기 전용 보호와 메모리 최적화가 적용된 DOCM 형식으로 문서를 저장하는 방법을 배웠습니다. Java 애플리케이션에 GroupDocs.Editor를 통합하면 현대 비즈니스 요구에 부합하는 안전하고 고성능의 문서 처리 솔루션을 구축할 수 있습니다.
 
 ---
 
-**Last Updated:** 2025-12-19  
+**Last Updated:** 2026-02-19  
 **Tested With:** GroupDocs.Editor 25.3  
 **Author:** GroupDocs

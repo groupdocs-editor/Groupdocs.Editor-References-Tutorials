@@ -1,36 +1,46 @@
 ---
-date: '2025-12-19'
-description: Scopri come modificare documenti Word in Java usando GroupDocs.Editor
-  per Java per caricare, modificare e salvare i documenti in modo efficiente, con
-  protezione tramite password e opzioni di ottimizzazione della memoria.
+date: '2026-02-19'
+description: Scopri come salvare Word con protezione tramite password usando GroupDocs.Editor
+  per Java, modificare documenti Word in Java e ottimizzare l'uso della memoria.
 keywords:
 - GroupDocs Editor Java
 - Java document editing
 - document loading and saving in Java
-title: Modifica di documenti Word in Java con la guida GroupDocs.Editor
+title: Salva Word con password usando GroupDocs.Editor per Java
 type: docs
 url: /it/java/document-editing/implement-document-editing-java-groupdocs-editor/
 weight: 1
 ---
 
-# Guida all'editing di documenti Word Java con GroupDocs.Editor
+Proceed.# Salva Word con Password usando GroupDocs.Editor per Java
 
-Benvenuti in questa guida completa sull'utilizzo di GroupDocs.Editor per Java per **modificare documenti Word Java** in modo efficiente. Nell'era digitale odierna, gestire i documenti con facilità è una necessità per aziende e privati. Che si tratti di informazioni sensibili che richiedono protezione con password o semplicemente di modificare contenuti prima della distribuzione, padroneggiare queste funzionalità può semplificare notevolmente il vostro flusso di lavoro.
+In questo tutorial scoprirai **come salvare Word con password** durante la modifica di un documento Word in Java. Che tu abbia bisogno di **modificare documenti Word java**, proteggerli con una password, o convertire un DOCX in formato DOCM, GroupDocs.Editor ti offre un modo pulito ed efficiente in termini di memoria per farlo. Seguiamo l’intero processo—dalla configurazione della libreria al caricamento di file protetti da password, alla personalizzazione delle opzioni di modifica e infine al salvataggio sicuro del documento.
 
-## Risposte rapide
-- **Quale libreria consente di modificare documenti Word in Java?** GroupDocs.Editor per Java.  
-- **Posso aprire un file protetto da password?** Sì – utilizza `WordProcessingLoadOptions` con una password.  
+## Quick Answers
+- **Quale libreria consente di modificare documenti Word in Java?** GroupDocs.Editor for Java.  
+- **Posso aprire un file protetto da password?** Sì – usa `WordProcessingLoadOptions` con una password.  
 - **Come ridurre il consumo di memoria durante il salvataggio?** Imposta `optimizeMemoryUsage(true)` in `WordProcessingSaveOptions`.  
 - **È necessaria una licenza per la produzione?** È richiesta una licenza valida di GroupDocs.Editor.  
-- **Quale formato supporta macro e protezione di sola lettura?** Il formato DOCM.
+- **Quale formato supporta macro e protezione di sola lettura?** Il formato DOCM.  
+- **Come posso estrarre i font incorporati durante la modifica?** Usa `FontExtractionOptions.ExtractEmbeddedWithoutSystem`.  
+- **Posso convertire un DOCX in DOCM dopo la modifica?** Sì – specifica `WordProcessingFormats.Docm` al salvataggio.
 
-## Prerequisiti
+## Cos’è “salvare Word con password”?
+Salvare un file Word con una password significa che il documento è crittografato e può essere aperto solo dagli utenti che conoscono la password. Questo aggiunge un livello di sicurezza per i contenuti riservati, soprattutto quando il file è memorizzato o trasmesso elettronicamente.
 
-Prima di iniziare, assicuratevi di avere una solida comprensione della programmazione Java. Familiarità con la configurazione di progetti Maven e la gestione delle operazioni I/O dei file in Java sarà utile. Inoltre, verificate che il vostro ambiente di sviluppo sia configurato per Java 8 o versioni successive per lavorare senza problemi con GroupDocs.Editor.
+## Perché usare GroupDocs.Editor per Java?
+- **Modifica completa** – modifica testo, immagini, tabelle e anche macro.  
+- **Gestione password** – apri e salva file protetti senza sforzo.  
+- **Opzioni di ottimizzazione della memoria** – ideale per documenti di grandi dimensioni o ambienti cloud.  
+- **Cross‑platform** – funziona su qualsiasi piattaforma compatibile con Java (Java 8+).  
 
-### Librerie e dipendenze richieste
+## Prerequisites
 
-Per questo tutorial utilizzeremo la libreria GroupDocs.Editor versione 25.3. Potete includerla nel vostro progetto usando Maven aggiungendo la seguente configurazione:
+Prima di iniziare, assicurati di avere una solida comprensione della programmazione Java. Familiarità con la configurazione di progetti Maven e la gestione delle operazioni I/O di file in Java sarà utile. Inoltre, verifica che il tuo ambiente di sviluppo sia configurato per Java 8 o versioni successive per lavorare senza problemi con GroupDocs.Editor.
+
+### Required Libraries and Dependencies
+
+Per questo tutorial, utilizzeremo la libreria GroupDocs.Editor. Includila nel tuo progetto usando Maven:
 
 ```xml
 <repositories>
@@ -50,123 +60,124 @@ Per questo tutorial utilizzeremo la libreria GroupDocs.Editor versione 25.3. Pot
 </dependencies>
 ```
 
-In alternativa, potete scaricare la libreria direttamente da [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+In alternativa, puoi scaricare la libreria direttamente da [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-### Acquisizione della licenza
+### License Acquisition
 
-Per utilizzare pienamente GroupDocs.Editor senza limitazioni di valutazione, considerate di ottenere una prova gratuita o di acquistare una licenza. Potete ottenere una licenza temporanea tramite [questo link](https://purchase.groupdocs.com/temporary-license) per esplorare ampiamente le funzionalità.
+Per utilizzare pienamente GroupDocs.Editor senza limitazioni di valutazione, considera di ottenere una prova gratuita o di acquistare una licenza. Puoi ottenere una licenza temporanea tramite [this link](https://purchase.groupdocs.com/temporary-license) per esplorare ampiamente le funzionalità.
 
 ## Configurazione di GroupDocs.Editor per Java
 
-Una volta installato GroupDocs.Editor, è il momento di inizializzare e configurare il vostro ambiente:
-1. Aggiungete la dipendenza Maven o scaricate il file JAR come indicato sopra.  
-2. Impostate una struttura di progetto di base nel vostro IDE preferito (ad es., IntelliJ IDEA, Eclipse).  
-3. Assicuratevi che il vostro `pom.xml` includa il repository richiesto se usate Maven.
+Una volta installato GroupDocs.Editor, è il momento di inizializzare e configurare il tuo ambiente:
 
-Con questi passaggi completati, siete pronti a iniziare a implementare le funzionalità di gestione dei documenti con GroupDocs.Editor.
+1. Aggiungi la dipendenza Maven o scarica il file JAR come specificato sopra.  
+2. Configura una struttura di progetto di base nel tuo IDE preferito (es., IntelliJ IDEA, Eclipse).  
+3. Assicurati che il tuo `pom.xml` includa il repository richiesto se usi Maven.  
 
-## Guida all'implementazione
+Con questi passaggi completati, sei pronto per iniziare a implementare funzionalità di gestione dei documenti con GroupDocs.Editor.
 
-Divideremo il processo in tre sezioni principali: Caricamento del documento e gestione della password, Opzioni di editing del documento e Modifica del contenuto e salvataggio. Esploriamo ogni funzionalità passo‑passo.
+## Implementation Guide
 
-### Funzionalità 1: Caricamento del documento e gestione della password
+Divideremo il processo in tre sezioni principali: Caricamento del Documento e Gestione della Password, Opzioni di Modifica del Documento e Modifica del Contenuto e Salvataggio. Esploriamo ogni funzionalità passo‑per‑passo.
 
-**Panoramica:** Questa sezione dimostra come **caricare un documento protetto da password** usando GroupDocs.Editor per Java. È fondamentale quando si gestiscono documenti sensibili che richiedono controllo degli accessi.
+### Funzione 1: Caricamento del Documento e Gestione della Password
 
-#### Passo 1: Definire il percorso del documento
+**Overview:** Questa sezione dimostra come **caricare un doc protetto da password** usando GroupDocs.Editor per Java. È essenziale quando si gestiscono documenti sensibili che richiedono controllo di accesso.
 
-Innanzitutto, specificate la posizione del vostro documento Word:
+#### Step 1: Define the Path to Your Document
+
+First, specify the location of your Word document:
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.docx";
 ```
 
-#### Passo 2: Creare un InputStream
+#### Step 2: Create an InputStream
 
-Successivamente, inizializzate uno stream di input per leggere il documento:
+Next, initialize a file input stream for reading the document:
 
 ```java
 InputStream fs = new FileInputStream(inputFilePath);
 ```
 
-#### Passo 3: Impostare le opzioni di caricamento con protezione password
+#### Step 3: Set Load Options with Password Protection
 
-Per gestire documenti protetti da password, configurate le opzioni di caricamento:
+To handle documents that are password‑protected, configure the load options:
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 loadOptions.setPassword("some_password_to_open_a_document");
 ```
 
-#### Passo 4: Caricare il documento usando Editor
+#### Step 4: Load the Document Using Editor
 
-Infine, utilizzate la classe `Editor` per aprire e lavorare sul documento:
+Finally, use the `Editor` class to open and work with the document:
 
 ```java
 Editor editor = new Editor(fs, loadOptions);
 ```
 
-### Funzionalità 2: Opzioni di editing del documento
+### Funzione 2: Opzioni di Modifica del Documento
 
-**Panoramica:** Configurare opzioni di editing come l'estrazione dei font e le informazioni sulla lingua può migliorare le capacità di elaborazione dei documenti.
+**Overview:** Configurare opzioni di modifica come l'estrazione dei font e le informazioni sulla lingua può migliorare le capacità di elaborazione dei documenti.
 
-#### Passo 1: Creare le opzioni di editing
+#### Step 1: Create Editing Options
 
-Iniziate creando l'oggetto delle opzioni di editing:
+Begin by initializing your editing options object:
 
 ```java
 WordProcessingEditOptions editOptions = new WordProcessingEditOptions();
 ```
 
-#### Passo 2: Abilitare l'estrazione dei font
+#### Step 2: Enable Font Extraction
 
-Per garantire l'uso dei font incorporati, configurate l'opzione seguente:
+To ensure embedded fonts are used, configure the following option:
 
 ```java
 editOptions.setFontExtraction(FontExtractionOptions.ExtractEmbeddedWithoutSystem);
 ```
 
-#### Passo 3: Estrarre le informazioni sulla lingua
+#### Step 3: Extract Language Information
 
-Abilitare le informazioni sulla lingua può essere utile per l'elaborazione di documenti multilingue:
+Enabling language information can be useful for multilingual document processing:
 
 ```java
 editOptions.setEnableLanguageInformation(true);
 ```
 
-#### Passo 4: Abilitare la modalità di impaginazione
+#### Step 4: Enable Pagination Mode
 
-Per facilitare l'editing, soprattutto con documenti lunghi, attivate la modalità di impaginazione:
+For easier editing, especially with long documents, switch on pagination mode:
 
 ```java
 editOptions.setEnablePagination(true);
 ```
 
-### Funzionalità 3: Modifica del contenuto e salvataggio del documento
+### Funzione 3: Modifica del Contenuto e Salvataggio del Documento
 
-**Panoramica:** Questa sezione mostra come modificare il contenuto del documento e salvarlo con configurazioni specifiche come formato e protezione password.
+**Overview:** Questa sezione mostra come modificare il contenuto del documento e **salvare Word con password** usando configurazioni specifiche come formato e protezione con password.
 
-#### Passo 1: Estrarre il contenuto originale
+#### Step 1: Extract Original Content
 
-Iniziate estraendo il contenuto originale e le risorse:
+Start by extracting the original content and resources:
 
 ```java
 String originalContent = beforeEdit.getContent();
 List<IHtmlResource> allResources = beforeEdit.getAllResources();
 ```
 
-#### Passo 2: Modificare il contenuto del documento
+#### Step 2: Modify Document Content
 
-Modificate il testo del documento secondo necessità. Qui, sostituiamo "document" con "edited document":
+Change the document's text as needed. Here, we replace "document" with "edited document":
 
 ```java
 String editedContent = originalContent.replace("document", "edited document");
 EditableDocument afterEdit = EditableDocument.fromMarkup(editedContent, allResources);
 ```
 
-#### Passo 3: Configurare le opzioni di salvataggio
+#### Step 3: Set Up Save Options
 
-Impostate come il documento deve essere salvato, includendo formato e password:
+Configure how the document should be saved, including format and password:
 
 ```java
 WordProcessingFormats docmFormat = WordProcessingFormats.Docm;
@@ -178,9 +189,9 @@ saveOptions.setOptimizeMemoryUsage(true);
 saveOptions.setProtection(new WordProcessingProtection(WordProcessingProtectionType.ReadOnly, "write_password"));
 ```
 
-#### Passo 4: Salvare il documento modificato
+#### Step 4: Save the Edited Document
 
-Infine, scrivete il documento modificato in un file di output:
+Finally, write the edited document to an output file:
 
 ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/edited_output.docm";
@@ -191,43 +202,46 @@ try (FileOutputStream outputFile = new FileOutputStream(outputPath)) {
 }
 ```
 
-## Applicazioni pratiche
+## Common Use Cases
 
-GroupDocs.Editor per Java offre applicazioni versatili in diversi settori:
-1. **Gestione sicura dei documenti:** Protezione con password dei documenti sensibili durante le fasi di editing e salvataggio.  
-2. **Elaborazione batch:** Automazione delle attività di editing su più documenti, ideale per sistemi enterprise di gestione documentale.  
-3. **Sistemi di revisione dei contenuti:** Implementazione di workflow di revisione editabili dove i revisori possono suggerire modifiche direttamente nei documenti.
+- **Gestione sicura dei documenti:** Usa la protezione con password quando modifichi contratti riservati o file HR.  
+- **Elaborazione batch:** Automatizza la modifica di decine di file in un sistema aziendale di gestione documenti.  
+- **Flussi di revisione dei contenuti:** Consenti ai revisori di modificare e commentare direttamente nel file Word prima dell'approvazione finale.  
 
-## Considerazioni sulle prestazioni
+## Performance Considerations
 
 Per garantire prestazioni ottimali quando si utilizza GroupDocs.Editor:
-- **Minimizzare l'uso di memoria** impostando `optimizeMemoryUsage(true)` nelle opzioni di salvataggio. *(Keyword: optimize memory usage java)*  
-- Evitare di caricare file di grandi dimensioni interamente in memoria; processarli a blocchi se possibile.  
-- Aggiornare regolarmente alla versione più recente di GroupDocs.Editor per usufruire di funzionalità migliorate e correzioni di bug.
 
-## Domande frequenti
+- **Riduci al minimo l'uso della memoria** mantenendo abilitato `optimizeMemoryUsage(true)`.  
+- Elabora file di grandi dimensioni a blocchi anziché caricare l'intero documento in memoria.  
+- Aggiorna regolarmente all'ultima versione di GroupDocs.Editor per miglioramenti delle prestazioni e correzioni di bug.
 
-**D: Come aprire un documento protetto da password?**  
-R: Utilizzate `WordProcessingLoadOptions` e chiamate `setPassword("your_password")` prima di creare l'istanza di `Editor`.
+## Frequently Asked Questions
 
-**D: Posso modificare un file DOCM che contiene macro?**  
-R: Sì. Salvate il documento modificato usando `WordProcessingFormats.Docm` per preservare le macro.
+**Q: Come apro un documento protetto da password?**  
+A: Usa `WordProcessingLoadOptions` e chiama `setPassword("your_password")` prima di creare l'istanza `Editor`.
 
-**D: Qual è il modo migliore per ridurre il consumo di memoria durante il salvataggio di file di grandi dimensioni?**  
-R: Abilitate `optimizeMemoryUsage(true)` in `WordProcessingSaveOptions` e considerate l'uso della modalità di impaginazione.
+**Q: Posso modificare un file DOCM che contiene macro?**  
+A: Sì. Salva il documento modificato usando `WordProcessingFormats.Docm` per preservare le macro.
 
-**D: È possibile estrarre i font incorporati durante l'editing?**  
-R: Assolutamente. Impostate `editOptions.setFontExtraction(FontExtractionOptions.ExtractEmbeddedWithoutSystem)`.
+**Q: Qual è il modo migliore per ridurre il consumo di memoria durante il salvataggio di file grandi?**  
+A: Abilita `optimizeMemoryUsage(true)` in `WordProcessingSaveOptions` e considera l'uso della modalità di paginazione.
 
-**D: È necessaria una licenza speciale per usare GroupDocs.Editor in produzione?**  
-R: È richiesta una licenza valida di GroupDocs.Editor per le distribuzioni in produzione; è possibile ottenere una licenza temporanea per la valutazione.
+**Q: È possibile estrarre i font incorporati durante la modifica?**  
+A: Assolutamente. Imposta `editOptions.setFontExtraction(FontExtractionOptions.ExtractEmbeddedWithoutSystem)`.
 
-## Conclusione
+**Q: È necessaria una licenza speciale per usare GroupDocs.Editor in produzione?**  
+A: È richiesta una licenza valida di GroupDocs.Editor per le distribuzioni in produzione; una licenza temporanea può essere ottenuta per la valutazione.
 
-In questa guida abbiamo esplorato come **modificare documenti Word Java** usando GroupDocs.Editor per Java—caricamento di file (inclusi quelli protetti da password), personalizzazione delle opzioni di editing e salvataggio con impostazioni di ottimizzazione della memoria. Seguendo questi passaggi, potrete integrare potenti e sicure capacità di editing dei documenti direttamente nelle vostre applicazioni Java, aumentando sia la produttività sia la protezione dei dati.
+**Q: Come posso convertire un DOCX in DOCM dopo la modifica?**  
+A: Specifica `WordProcessingFormats.Docm` quando crei `WordProcessingSaveOptions` (come mostrato nel passaggio di salvataggio).
+
+## Conclusion
+
+In questa guida abbiamo coperto **come salvare Word con password** durante la modifica di un documento Word in Java. Hai imparato a caricare file protetti da password, personalizzare le opzioni di modifica come l'estrazione dei font incorporati e, infine, salvare il documento come DOCM con protezione di sola lettura e utilizzo ottimizzato della memoria. Integrando GroupDocs.Editor nelle tue applicazioni Java, puoi creare soluzioni di elaborazione documenti sicure e ad alte prestazioni che soddisfano le esigenze aziendali moderne.
 
 ---
 
-**Ultimo aggiornamento:** 2025-12-19  
-**Testato con:** GroupDocs.Editor 25.3  
-**Autore:** GroupDocs
+**Last Updated:** 2026-02-19  
+**Tested With:** GroupDocs.Editor 25.3  
+**Author:** GroupDocs

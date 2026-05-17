@@ -1,36 +1,46 @@
 ---
-date: '2025-12-19'
-description: Leer hoe je Word‑documenten kunt bewerken met Java met GroupDocs.Editor
-  voor Java om documenten efficiënt te laden, bewerken en opslaan, met wachtwoordbeveiliging
-  en geheugenoptimaliserende opties.
+date: '2026-02-19'
+description: Leer hoe je Word met wachtwoordbeveiliging opslaat met GroupDocs.Editor
+  voor Java, een Word‑document bewerkt in Java en het geheugenverbruik optimaliseert.
 keywords:
 - GroupDocs Editor Java
 - Java document editing
 - document loading and saving in Java
-title: Bewerk Word-document Java met GroupDocs.Editor-gids
+title: Word opslaan met wachtwoord met GroupDocs.Editor voor Java
 type: docs
 url: /nl/java/document-editing/implement-document-editing-java-groupdocs-editor/
 weight: 1
 ---
 
-# Word-document bewerken Java met GroupDocs.Editor gids
+# Word opslaan met wachtwoord met GroupDocs.Editor voor Java
 
-Welkom bij deze uitgebreide gids over het gebruik van GroupDocs.Editor voor Java om **word document java bewerken** efficiënt te bewerken. In het digitale tijdperk van vandaag is het eenvoudig beheren van documenten een noodzaak voor zowel bedrijven als individuen. Of u nu te maken heeft met gevoelige informatie die wachtwoordbeveiliging vereist of gewoon inhoud moet aanpassen vóór distributie, het beheersen van deze functionaliteiten kan uw workflow aanzienlijk stroomlijnen.
+In deze tutorial ontdek je **hoe je Word met wachtwoord** kunt beveiligen tijdens het bewerken van een Word‑document in Java. Of je nu **edit word document java** bestanden moet bewerken, ze met een wachtwoord wilt beveiligen, of een DOCX naar een DOCM‑formaat wilt converteren, GroupDocs.Editor biedt een schone, geheugen‑efficiënte manier om dit te doen. Laten we het volledige proces doorlopen — van het instellen van de bibliotheek tot het laden van met wachtwoord beveiligde bestanden, het aanpassen van bewerkingsopties, en uiteindelijk het veilig opslaan van het document.
 
 ## Snelle antwoorden
-- **Welke bibliotheek stelt u in staat Word-documenten te bewerken in Java?** GroupDocs.Editor voor Java.
-- **Kan ik een met wachtwoord beveiligd bestand openen?** Ja – gebruik `WordProcessingLoadOptions` met een wachtwoord.
-- **Hoe kan ik het geheugenverbruik tijdens het besparen verminderen?** Stel `optimizeMemoryUsage(true)` in `WordProcessingSaveOptions`.
-- **Heb ik een licentie nodig voor productie?** Een geldige GroupDocs.Editor-licentie is vereist.
-- **Welk formaat ondersteunt macro's en alleen-lezen bescherming?** Het DOCM-formaat.
+- **Welke bibliotheek laat je Word‑documenten bewerken in Java?** GroupDocs.Editor for Java.  
+- **Kan ik een met wachtwoord beveiligd bestand openen?** Ja – gebruik `WordProcessingLoadOptions` met een wachtwoord.  
+- **Hoe verminder ik het geheugenverbruik tijdens het opslaan?** Stel `optimizeMemoryUsage(true)` in op `WordProcessingSaveOptions`.  
+- **Heb ik een licentie nodig voor productie?** Een geldige GroupDocs.Editor‑licentie is vereist.  
+- **Welk formaat ondersteunt macro's en alleen‑lezen bescherming?** Het DOCM‑formaat.  
+- **Hoe kan ik ingesloten lettertypen extraheren tijdens het bewerken?** Gebruik `FontExtractionOptions.ExtractEmbeddedWithoutSystem`.  
+- **Kan ik een DOCX naar DOCM converteren na het bewerken?** Ja – specificeer `WordProcessingFormats.Docm` bij het opslaan.
+
+## Wat betekent “Word opslaan met wachtwoord”?
+Een Word‑bestand opslaan met een wachtwoord betekent dat het document versleuteld is en alleen kan worden geopend door gebruikers die het wachtwoord kennen. Dit voegt een extra beveiligingslaag toe voor vertrouwelijke inhoud, vooral wanneer het bestand elektronisch wordt opgeslagen of verzonden.
+
+## Waarom GroupDocs.Editor voor Java gebruiken?
+- **Volledige bewerkingsfunctionaliteit** – wijzig tekst, afbeeldingen, tabellen en zelfs macro's.  
+- **Wachtwoordbehandeling** – open en sla beschermde bestanden moeiteloos op.  
+- **Geheugen‑optimaliserende opties** – ideaal voor grote documenten of cloudomgevingen.  
+- **Cross‑platform** – werkt op elk Java‑compatibel platform (Java 8+).  
 
 ## Vereisten
 
-Voordat we beginnen, zorg ervoor dat u een solide begrip heeft van Java-programmeurs. Vertrouwelijkheid met Maven-projectopzet en het afhandelen van bestands-I/O-bewerkingen in Java is nuttig. Zorg er voor dat uw ontwikkelomgeving is ingesteld voor Java8 of latere versies om naadloos met GroupDocs.Editor te werken.
+Voordat we beginnen, zorg ervoor dat je een solide begrip hebt van Java‑programmeren. Vertrouwdheid met Maven‑projectopzet en het omgaan met bestands‑I/O‑operaties in Java zal nuttig zijn. Zorg er bovendien voor dat je ontwikkelomgeving is ingesteld voor Java 8 of latere versies om naadloos met GroupDocs.Editor te werken.
 
 ### Vereiste bibliotheken en afhankelijkheden
 
-Voor deze tutorial gebruiken we de GroupDocs.Editor‑bibliotheek versie 25.3. U kunt deze opnemen in uw project met Maven door de volgende configuratie toe te voegen:
+Voor deze tutorial gebruiken we de GroupDocs.Editor‑bibliotheek. Voeg deze toe aan je project met Maven:
 
 ```xml
 <repositories>
@@ -50,93 +60,94 @@ Voor deze tutorial gebruiken we de GroupDocs.Editor‑bibliotheek versie 25.3. U
 </dependencies>
 ```
 
-U kunt de bibliotheek ook rechtstreeks downloaden van [GroupDocs.Editor voor Java releases](https://releases.groupdocs.com/editor/java/).
+Alternatief kun je de bibliotheek direct downloaden van [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-### Licentie-aankoop
+### Licentie‑acquisitie
 
-Om GroupDocs.Editor volledig te kunnen gebruiken zonder evaluatiebeperkingen, overweeg een gratis proefversie of het aanschaffen van een licentie. U kunt een tijdelijke licentie verkrijgen via [deze link](https://purchase.groupdocs.com/temporary-license) om de functies uitgebreid te verkennen.
+Om GroupDocs.Editor volledig te kunnen gebruiken zonder evaluatiebeperkingen, overweeg een gratis proefversie of het aanschaffen van een licentie. Je kunt een tijdelijke licentie verkrijgen via [this link](https://purchase.groupdocs.com/temporary-license) om de functies uitgebreid te verkennen.
 
 ## GroupDocs.Editor voor Java instellen
 
-Grote u GroupDocs.Editor heeft defect, is het tijd om uw omgeving te initialiseren en te omgezet:
-1. Voeg de Maven-dependency toe of download het JAR-bestand zoals hierboven uitgesloten.
-2. Zet een basisprojectstructuur op in uw favoriete IDE (bijv. IntelliJ IDEA, Eclipse).
-3. Zorg ervoor dat uw `pom.xml` de benodigde repository bevat als u Maven gebruikt.
+Zodra je GroupDocs.Editor hebt geïnstalleerd, is het tijd om je omgeving te initialiseren en te configureren:
 
-Met deze stappen voltooid, bent u klaar om documentbeheerfuncties te implementeren met GroupDocs.Editor.
+1. Voeg de Maven‑dependency toe of download het JAR‑bestand zoals hierboven gespecificeerd.  
+2. Zet een basisprojectstructuur op in je favoriete IDE (bijv. IntelliJ IDEA, Eclipse).  
+3. Zorg ervoor dat je `pom.xml` de vereiste repository bevat als je Maven gebruikt.  
 
-## Implementatiegids
+Met deze stappen voltooid, ben je klaar om document‑beheermogelijkheden te implementeren met GroupDocs.Editor.
 
-We splitsen het proces op in drie hoofdsecties: Document laden en wachtwoordafhandeling, Documentbewerkingsopties en Inhoud bewerken en opslaan. Laten we elke functie stap voor stap verkennen.
+## Implementatie‑gids
 
-### Functie 1: Documenten laden en wachtwoordafhandeling
+We splitsen het proces op in drie hoofdsecties: Document laden en wachtwoordbehandeling, Documentbewerkingsopties, en Inhoud bewerken en document opslaan. Laten we elke functie stap‑voor‑stap verkennen.
 
-**Overzicht:** Deze sectie laat zien hoe u **wachtwoordbeveiligd doc laden** kunt **laden** met GroupDocs.Editor voor Java. Het is essentieel bij het verwerken van gevoelige documenten en de toegangscontrole geïntegreerd.
+### Functie 1: Document laden en wachtwoordbehandeling
 
-#### Stap 1: Definieer het pad naar uw document
+**Overview:** Deze sectie laat zien hoe je een **met wachtwoord beveiligd doc** kunt **laden** met GroupDocs.Editor voor Java. Het is essentieel bij het verwerken van gevoelige documenten die toegangsbescherming vereisen.
 
-Eerst geeft u de locatie van uw Word‑document op:
+#### Stap 1: Definieer het pad naar je document
+
+First, specify the location of your Word document:
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.docx";
 ```
 
-#### Stap 2: Een invoerstroom maken
+#### Stap 2: Maak een InputStream
 
-Vervolgens initialiseert u een bestands‑inputstream om het document te lezen:
+Next, initialize a file input stream for reading the document:
 
 ```java
 InputStream fs = new FileInputStream(inputFilePath);
 ```
 
-#### Stap 3: Laadopties instellen met wachtwoordbeveiliging
+#### Stap 3: Stel laadopties in met wachtwoordbeveiliging
 
-Om documenten die met een wachtwoord zijn beveiligd te verwerken, configureert u de laadopties:
+To handle documents that are password‑protected, configure the load options:
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 loadOptions.setPassword("some_password_to_open_a_document");
 ```
 
-#### Stap 4: Het document laden met de editor
+#### Stap 4: Laad het document met Editor
 
-Ten slotte gebruikt u de `Editor`‑klasse om het document te openen en ermee te werken:
+Finally, use the `Editor` class to open and work with the document:
 
 ```java
 Editor editor = new Editor(fs, loadOptions);
 ```
 
-### Functie 2: Bewerkingsopties voor het document
+### Functie 2: Documentbewerkingsopties
 
-**Overzicht:** Het configureren van bewerkingsopties zoals lettertype‑extractie en taal‑informatie kan de mogelijkheden voor documentverwerking verbeteren.
+**Overview:** Het configureren van bewerkingsopties zoals lettertype‑extractie en taal‑informatie kan de mogelijkheden voor documentverwerking verbeteren.
 
-#### Stap 1: Bewerkingsopties maken
+#### Stap 1: Maak bewerkingsopties
 
-Begin met het initialiseren van uw bewerkingsopties‑object:
+Begin by initializing your editing options object:
 
 ```java
 WordProcessingEditOptions editOptions = new WordProcessingEditOptions();
 ```
 
-#### Stap 2: Lettertype-extractie inschakelen
+#### Stap 2: Schakel lettertype‑extractie in
 
-Om ervoor te zorgen dat ingesloten lettertypen worden gebruikt, configureert u de volgende optie:
+To ensure embedded fonts are used, configure the following option:
 
 ```java
 editOptions.setFontExtraction(FontExtractionOptions.ExtractEmbeddedWithoutSystem);
 ```
 
-#### Stap 3: Taalgegevens extraheren
+#### Stap 3: Haal taal‑informatie op
 
-Het inschakelen van taal‑informatie kan nuttig zijn voor meertalige documentverwerking:
+Enabling language information can be useful for multilingual document processing:
 
 ```java
 editOptions.setEnableLanguageInformation(true);
 ```
 
-#### Stap 4: Paginering inschakelen
+#### Stap 4: Schakel paginatiemodus in
 
-Voor gemakkelijker bewerken, vooral bij lange documenten, schakelt u de paginamodus in:
+For easier editing, especially with long documents, switch on pagination mode:
 
 ```java
 editOptions.setEnablePagination(true);
@@ -144,29 +155,29 @@ editOptions.setEnablePagination(true);
 
 ### Functie 3: Inhoud bewerken en document opslaan
 
-**Overzicht:** Deze sectie laat zien hoe u de inhoud van een document wijzigt en opslaat met specifieke configuraties, zoals formaat en wachtwoordbeveiliging.
+**Overview:** Deze sectie toont hoe je de documentinhoud wijzigt en **Word opslaat met wachtwoord** met specifieke configuraties zoals formaat en wachtwoordbeveiliging.
 
-#### Stap 1: Originele inhoud extraheren
+#### Stap 1: Haal originele inhoud op
 
-Begin met het extraheren van de originele inhoud en bronnen:
+Start by extracting the original content and resources:
 
 ```java
 String originalContent = beforeEdit.getContent();
 List<IHtmlResource> allResources = beforeEdit.getAllResources();
 ```
 
-#### Stap 2: Documentinhoud wijzigen
+#### Stap 2: Wijzig documentinhoud
 
-Wijzig de tekst van het document naar behoefte. Hier vervangen we "document" door "edited document":
+Change the document's text as needed. Here, we replace "document" with "edited document":
 
 ```java
 String editedContent = originalContent.replace("document", "edited document");
 EditableDocument afterEdit = EditableDocument.fromMarkup(editedContent, allResources);
 ```
 
-#### Stap 3: Opslagopties instellen
+#### Stap 3: Stel opslaan‑opties in
 
-Configureer hoe het document moet worden opgeslagen, inclusief formaat en wachtwoord:
+Configure how the document should be saved, including format and password:
 
 ```java
 WordProcessingFormats docmFormat = WordProcessingFormats.Docm;
@@ -178,9 +189,9 @@ saveOptions.setOptimizeMemoryUsage(true);
 saveOptions.setProtection(new WordProcessingProtection(WordProcessingProtectionType.ReadOnly, "write_password"));
 ```
 
-#### Stap 4: Het bewerkte document opslaan
+#### Stap 4: Sla het bewerkte document op
 
-Ten slotte schrijft u het bewerkte document naar een uitvoerbestand:
+Finally, write the edited document to an output file:
 
 ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/edited_output.docm";
@@ -191,45 +202,46 @@ try (FileOutputStream outputFile = new FileOutputStream(outputPath)) {
 }
 ```
 
-## Praktische toepassingen
+## Veelvoorkomende gebruikssituaties
 
-GroupDocs.Editor voor Java biedt veelzijdige toepassingen in verschillende domeinen:
-1. **Veilige documentafhandeling:** Bescherm gevoelige documenten met een wachtwoord tijdens bewerkingen‑ en opslagprocessen.
-2. **Batchverwerking:** Automatiseer bewerkingen op meerdere documenten, ideaal voor enterprise document management‑systemen.
-3. **Inhouds‑reviewsystemen:** Implementeer bewerkbare review‑workflows waarbij beoordelaars directe wijzigingen in kunnen documenten voorstellen.
+- **Beveiligde documentafhandeling:** Gebruik wachtwoordbeveiliging bij het bewerken van vertrouwelijke contracten of HR‑bestanden.  
+- **Batchverwerking:** Automatiseer het bewerken van tientallen bestanden in een bedrijfsdocument‑beheersysteem.  
+- **Inhoud‑review‑workflows:** Laat beoordelaars direct in het Word‑bestand bewerken en commentaar geven vóór de definitieve goedkeuring.  
 
-Door GroupDocs.Editor te hinderen in uw Java-applicaties, verbetert u zowel de beveiliging als de optimalisatie bij het beheren van Word-documenten.
-
-## Prestatieoverwegingen
+## Prestatie‑overwegingen
 
 Om optimale prestaties te garanderen bij het gebruik van GroupDocs.Editor:
-- **Minimaliseer het geheugenverbruik** door `optimizeMemoryUsage(true)` in de opslag‑opties in te stellen. *(Trefwoord: geheugengebruik Java optimaliseren)*
-- Vermijd het volledig in het geheugen laden van grote bestanden; verwerk ze indien mogelijk in delen.
-- Werk regelmatig bij naar de nieuwste versie van GroupDocs.Editor voor verbeterde functies en bugfixes.
+
+- **Minimaliseer geheugenverbruik** door `optimizeMemoryUsage(true)` ingeschakeld te houden.  
+- Verwerk grote bestanden in delen in plaats van het volledige document in het geheugen te laden.  
+- Werk regelmatig bij naar de nieuwste GroupDocs.Editor‑release voor prestatieverbeteringen en bug‑fixes.
 
 ## Veelgestelde vragen
 
-**V: Hoe open ik een document dat met een wachtwoord is beveiligd?**
-A: Gebruik `WordProcessingLoadOptions` en roep `setPassword("your_password")` aan voordat u de `Editor`‑instantie maakt.
+**Q: Hoe open ik een document dat met een wachtwoord is beveiligd?**  
+A: Gebruik `WordProcessingLoadOptions` en roep `setPassword("your_password")` aan voordat je de `Editor`‑instantie maakt.
 
-**V: Kan ik een DOCM‑bestand bewerken dat macro's bevat?**
-EEN:Ja. Sla het bewerkte document op met `WordProcessingFormats.Docm` om macro's te behouden.
+**Q: Kan ik een DOCM‑bestand bewerken dat macro's bevat?**  
+A: Ja. Sla het bewerkte document op met `WordProcessingFormats.Docm` om macro's te behouden.
 
-**V: Wat is de beste manier om het geheugenverbruik te verminderen tijdens het opslaan van grote bestanden?**
-A: Schakel `optimizeMemoryUsage(true)` in `WordProcessingSaveOptions` in en overweeg het gebruik van de paginamodus.
+**Q: Wat is de beste manier om het geheugenverbruik te verminderen bij het opslaan van grote bestanden?**  
+A: Schakel `optimizeMemoryUsage(true)` in op `WordProcessingSaveOptions` en overweeg het gebruik van paginatiemodus.
 
-**V: Is het mogelijk om ingesloten lettertypen te extraheren tijdens het bewerken?**
+**Q: Is het mogelijk om ingesloten lettertypen te extraheren tijdens het bewerken?**  
 A: Absoluut. Stel `editOptions.setFontExtraction(FontExtractionOptions.ExtractEmbeddedWithoutSystem)` in.
 
-**V: Heb ik een speciale licentie nodig om GroupDocs.Editor in productie te gebruiken?**
+**Q: Heb ik een speciale licentie nodig om GroupDocs.Editor in productie te gebruiken?**  
 A: Een geldige GroupDocs.Editor‑licentie is vereist voor productie‑implementaties; een tijdelijke licentie kan worden verkregen voor evaluatie.
+
+**Q: Hoe kan ik een DOCX naar DOCM converteren na het bewerken?**  
+A: Specificeer `WordProcessingFormats.Docm` bij het aanmaken van `WordProcessingSaveOptions` (zoals getoond in de opslaan‑stap).
 
 ## Conclusie
 
-In deze gids hebben we onderzocht hoe u **word document java bewerken** kunt bewerken met GroupDocs.Editor voor Java — bestanden laden (inclusief met wachtwoord beveiligd), bewerkingsopties aanpassen en opslaan met geheugen‑optimaliserende instellingen. Door deze stappen te volgen, kunt u krachtige, veilige documentbewerkingsmogelijkheden direct in uw Java-applicaties veroorzaken, waardoor zowel de productiviteit als de gegevensbescherming toenemen.
+In deze gids hebben we **hoe je Word met wachtwoord** kunt beveiligen tijdens het bewerken van een Word‑document in Java behandeld. Je hebt geleerd hoe je met wachtwoordbeveiligde bestanden laadt, bewerkingsopties aanpast zoals het extraheren van ingesloten lettertypen, en uiteindelijk het document opslaat als een DOCM met alleen‑lezen bescherming en geoptimaliseerd geheugenverbruik. Door GroupDocs.Editor in je Java‑applicaties te integreren, kun je veilige, high‑performance document‑verwerkingsoplossingen bouwen die voldoen aan de moderne zakelijke behoeften.
 
 ---
 
-**Laatst bijgewerkt:** 2025-12-19  
+**Laatst bijgewerkt:** 2026-02-19  
 **Getest met:** GroupDocs.Editor 25.3  
 **Auteur:** GroupDocs
