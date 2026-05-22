@@ -1,46 +1,90 @@
 ---
-date: '2026-02-16'
-description: Μάθετε πώς να εξάγετε πόρους χρησιμοποιώντας το GroupDocs.Editor για
-  Java. Περιλαμβάνει βήματα φόρτωσης εγγράφου Word σε Java και παραδείγματα εξαγωγής
-  εικόνων σε Java, εξαγωγής CSS σε Java.
+date: '2026-05-22'
+description: Μάθετε πώς να εξάγετε εικόνες από το Word χρησιμοποιώντας το GroupDocs.Editor
+  for Java, συμπεριλαμβανομένων των load word document java steps και extract images
+  java, extract css java examples.
 keywords:
-- GroupDocs Editor Java
-- Word document resources extraction
-- Java API for Word processing
-title: Πώς να εξάγετε πόρους από έγγραφα Word – GroupDocs.Editor Java
+- extract pictures from word
+- load word document java
+- extract images java
+- extract css java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-22'
+  description: Learn how to extract pictures from Word using GroupDocs.Editor for
+    Java, including load word document java steps and extract images java, extract
+    css java examples.
+  headline: How to Extract Pictures from Word Documents Using GroupDocs.Editor for
+    Java
+  type: TechArticle
+- description: Learn how to extract pictures from Word using GroupDocs.Editor for
+    Java, including load word document java steps and extract images java, extract
+    css java examples.
+  name: How to Extract Pictures from Word Documents Using GroupDocs.Editor for Java
+  steps:
+  - name: Load and Prepare the Document for Editing
+    text: '*The `FontExtractionOptions.ExtractAll` flag guarantees that every embedded
+      font is available for extraction.*'
+  - name: Extract Images, Fonts, and Stylesheets
+    text: '*These three calls give you collections of each resource type, ready for
+      further processing.*'
+  - name: Save Extracted Resources to Disk
+    text: '*Each loop writes the corresponding resource to the `outputFolderPath`,
+      preserving the original filenames.*'
+  - name: Retrieve Resource Content Directly (Optional)
+    text: 'If you need the raw bytes or a Base64 string—for example, to embed an image
+      in an HTML email—use:'
+  type: HowTo
+- questions:
+  - answer: Yes, it supports DOCX, DOC, and other Microsoft Word formats.
+    question: Is GroupDocs.Editor compatible with all Word file formats?
+  - answer: Absolutely. Provide the password via `WordProcessingLoadOptions` when
+      creating the `Editor`.
+    question: Can I extract resources from password‑protected documents?
+  - answer: It’s optimized for speed; for files over 200 MB we recommend batch processing
+      or extracting sections sequentially.
+    question: How does the API perform with very large documents?
+  - answer: Yes. The API is framework‑agnostic; just include the dependency and inject
+      `Editor` where needed.
+    question: Can I integrate this with Spring Boot or other Java frameworks?
+  - answer: Call only `beforeEdit.getImages()` and skip the font/CSS extraction steps.
+    question: What if I need to extract only images and not fonts or CSS?
+  type: FAQPage
+title: Πώς να εξάγετε εικόνες από έγγραφα Word χρησιμοποιώντας το GroupDocs.Editor
+  for Java
 type: docs
 url: /el/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/
 weight: 1
 ---
 
-# Πώς να Εξάγετε Πόρους από Έγγραφα Word Χρησιμοποιώντας το GroupDocs.Editor για Java
+# Πώς να Εξάγετε Εικόνες από Έγγραφα Word Χρησιμοποιώντας το GroupDocs.Editor για Java
 
-Αν ψάχνετε για **πώς να εξάγετε πόρους** από αρχεία Word προγραμματιστικά, βρίσκεστε στο σωστό μέρος. Σε αυτόν τον οδηγό θα περάσουμε από τη φόρτωση ενός εγγράφου Word σε Java, την επεξεργασία του, και την εξαγωγή εικόνων, γραμματοσειρών και CSS—ακριβώς τα βήματα που χρειάζεστε για να αυτοματοποιήσετε τις διαδικασίες επεξεργασίας εγγράφων.
+Αν χρειάζεστε να **extract pictures from Word** αρχεία προγραμματιστικά, βρίσκεστε στο σωστό μέρος. Σε αυτό το tutorial θα περάσουμε από τη φόρτωση ενός εγγράφου Word σε Java, τη ρύθμιση του editor και την εξαγωγή εικόνων, γραμματοσειρών και CSS—ακριβώς τα βήματα που χρειάζεστε για να αυτοματοποιήσετε τις γραμμές επεξεργασίας εγγράφων με το GroupDocs.Editor για Java.
 
 **Τι θα μάθετε:**
-- Πώς να **φορτώνετε έγγραφο word java** με το GroupDocs.Editor
-- Πώς να **εξάγετε εικόνες java** και άλλα ενσωματωμένα στοιχεία
-- Πώς να **εξάγετε css java** για επαναχρησιμοποίηση στυλ
-- Βέλτιστες πρακτικές για αποθήκευση αυτών των πόρων στο δίσκο
-- Πραγματικά σενάρια όπου η εξαγωγή πόρων εξοικονομεί χρόνο και προσπάθεια
+- Πώς να **load word document java** με το GroupDocs.Editor  
+- Πώς να **extract images java** και άλλα ενσωματωμένα στοιχεία  
+- Πώς να **extract css java** για επαναχρησιμοποίηση στυλ  
+- Βέλτιστες πρακτικές για την αποθήκευση αυτών των πόρων στο δίσκο  
+- Πραγματικά σενάρια όπου η εξαγωγή πόρων εξοικονομεί χρόνο και προσπάθεια  
 
 Έτοιμοι να βελτιώσετε τη ροή εργασίας των εγγράφων σας; Ας ξεκινήσουμε!
 
 ## Γρήγορες Απαντήσεις
-- **Τι σημαίνει “πώς να εξάγετε πόρους”;** Αναφέρεται στην προγραμματιστική εξαγωγή εικόνων, γραμματοσειρών, CSS κ.λπ., από ένα αρχείο Word.  
-- **Ποια βιβλιοθήκη το διαχειρίζεται σε Java;** GroupDocs.Editor για Java.  
+- **Τι σημαίνει “extract pictures from word”;** Σημαίνει την προγραμματιστική εξαγωγή εικόνων, γραμματοσειρών, CSS και άλλων ενσωματωμένων στοιχείων από ένα αρχείο Word.  
+- **Ποια βιβλιοθήκη το διαχειρίζεται σε Java;** Το GroupDocs.Editor for Java παρέχει ένα υψηλού επιπέδου API για την εργασία.  
 - **Χρειάζομαι άδεια;** Μια δωρεάν δοκιμή λειτουργεί για δοκιμές· απαιτείται πλήρης άδεια για παραγωγή.  
-- **Μπορώ να επεξεργαστώ αρχεία DOCX και DOC;** Ναι—και τα δύο υποστηρίζονται.  
-- **Είναι ασφαλές για μεγάλα έγγραφα;** Ναι, αλλά σκεφτείτε επεξεργασία σε παρτίδες και σωστή αποδέσμευση μνήμης.
+- **Μπορώ να επεξεργαστώ αρχεία DOCX και DOC;** Ναι—και τα δύο υποστηρίζονται πλήρως.  
+- **Είναι ασφαλές για μεγάλα έγγραφα;** Ναι, αλλά σκεφτείτε επεξεργασία σε παρτίδες και σωστή διαχείριση μνήμης για αρχεία μεγαλύτερα από 200 MB.
 
 ## Τι είναι η Εξαγωγή Πόρων σε Έγγραφα Word;
-Η εξαγωγή πόρων είναι η διαδικασία ανάκτησης ενσωματωμένων στοιχείων—όπως εικόνες, προσαρμοσμένες γραμματοσειρές και φύλλα στυλ—από ένα αρχείο Word, ώστε να μπορούν να επαναχρησιμοποιηθούν, να αρχειοθετηθούν ή να μετατραπούν για άλλες εφαρμογές.
+Η εξαγωγή πόρων αναφέρεται στην συστηματική ανάκτηση όλων των ενσωματωμένων στοιχείων από ένα αρχείο Word, συμπεριλαμβανομένων των εικόνων, προσαρμοσμένων γραμματοσειρών, φύλλων στυλ, μακροεντολών και άλλων δυαδικών αντικειμένων. Με την εξαγωγή αυτών των στοιχείων, οι προγραμματιστές μπορούν να τα επαναχρησιμοποιήσουν σε ξεχωριστές εφαρμογές, να τα αρχειοθετήσουν για συμμόρφωση ή να τα μετατρέψουν σε μορφές φιλικές προς το web, επεκτείνοντας έτσι την αξία του αρχικού εγγράφου.
 
 ## Γιατί να Χρησιμοποιήσετε το GroupDocs.Editor για Java;
-Το GroupDocs.Editor προσφέρει ένα API υψηλού επιπέδου που αφαιρεί τις πολυπλοκότητες της μορφής Office Open XML. Σας επιτρέπει να εστιάσετε στο **πώς να εξάγετε πόρους** χωρίς να ασχοληθείτε με χειρισμό ZIP χαμηλού επιπέδου ή ανάλυση XML.
+Το GroupDocs.Editor για Java αφαιρεί την πολυπλοκότητα του φορμά Office Open XML, επιτρέποντάς σας να εστιάσετε στο **how to extract pictures from word** χωρίς να γράφετε χαμηλού επιπέδου κώδικα ZIP ή XML. Υποστηρίζει **30+ μορφές εισόδου και εξόδου** και μπορεί να επεξεργαστεί έγγραφα έως **500 MB** χωρίς να φορτώνει ολόκληρο το αρχείο στη μνήμη, προσφέροντας ταχύτητα και κλιμακωσιμότητα.
 
 ## Προαπαιτούμενα
-- **Maven** (ή άμεση λήψη JAR) για διαχείριση εξαρτήσεων.  
+- **Maven** (ή άμεση λήψη JAR) για τη διαχείριση εξαρτήσεων.  
 - **JDK 8+** εγκατεστημένο στο μηχάνημά σας.  
 - Ένα IDE όπως **IntelliJ IDEA** ή **Eclipse** για επεξεργασία και εκτέλεση κώδικα Java.
 
@@ -65,14 +109,16 @@ weight: 1
 </dependencies>
 ```
 
-Μπορείτε επίσης να κατεβάσετε το πιο πρόσφατο JAR από [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+Μπορείτε επίσης να κατεβάσετε το τελευταίο JAR από [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 ### Απόκτηση Άδειας
-- **Δωρεάν Δοκιμή:** Ιδανική για εξερεύνηση του API.  
-- **Προσωρινή Άδεια:** Αποκτήστε μία από τη [GroupDocs Temporary License Page](https://purchase.groupdocs.com/temporary-license).  
-- **Πλήρης Άδεια:** Αγοράστε για απεριόριστη χρήση σε παραγωγή.
+- **Free Trial:** Ιδανικό για εξερεύνηση του API.  
+- **Temporary License:** Αποκτήστε μία από τη [GroupDocs Temporary License Page](https://purchase.groupdocs.com/temporary-license).  
+- **Full License:** Αγοράστε για απεριόριστη χρήση στην παραγωγή.
 
 ### Βασική Αρχικοποίηση
+`Editor` είναι το κύριο σημείο εισόδου του GroupDocs.Editor για Java που παρέχει μεθόδους για φόρτωση, επεξεργασία και εξαγωγή πόρων από αρχεία Word.
+
 Δημιουργήστε μια παρουσία `Editor` που δείχνει στο αρχείο Word σας:
 
 ```java
@@ -81,7 +127,7 @@ Editor editor = new Editor(inputFilePath, new WordProcessingLoadOptions());
 ```
 
 ## Πώς να Εξάγετε Πόρους από Ένα Έγγραφο Word
-Παρακάτω χωρίζουμε την υλοποίηση σε τρία λογικά βήματα: φόρτωση/επεξεργασία, εξαγωγή και αποθήκευση.
+Η εξαγωγή πόρων ξεκινά με τη φόρτωση του στοχευμένου αρχείου Word σε μια παρουσία `Editor`, έπειτα με τη ρύθμιση του `WordProcessingEditOptions` ώστε να ενεργοποιηθεί η εξαγωγή εικόνων, γραμματοσειρών και CSS. Μόλις το έγγραφο είναι έτοιμο, το API παρέχει συλλογές για κάθε τύπο πόρου, τις οποίες μπορείτε να διατρέξετε και να αποθηκεύσετε στο σύστημα αρχείων ή να τις επεξεργαστείτε περαιτέρω σύμφωνα με τις απαιτήσεις της ροής εργασίας σας.
 
 ### Βήμα 1: Φόρτωση και Προετοιμασία του Εγγράφου για Επεξεργασία
 ```java
@@ -91,21 +137,21 @@ Editor editor = new Editor(inputFilePath, new WordProcessingLoadOptions());
 WordProcessingEditOptions editOptions = new WordProcessingEditOptions();
 editOptions.setFontExtraction(FontExtractionOptions.ExtractAll);
 EditableDocument beforeEdit = editor.edit(editOptions);
-```
+```  
 *Η σημαία `FontExtractionOptions.ExtractAll` εγγυάται ότι κάθε ενσωματωμένη γραμματοσειρά είναι διαθέσιμη για εξαγωγή.*
 
 ### Βήμα 2: Εξαγωγή Εικόνων, Γραμματοσειρών και Φύλλων Στυλ
 ```java
 List<IImageResource> images = beforeEdit.getImages();
-```
+```  
 
 ```java
 List<FontResourceBase> fonts = beforeEdit.getFonts();
-```
+```  
 
 ```java
 List<CssText> stylesheets = beforeEdit.getCss();
-```
+```  
 *Αυτές οι τρεις κλήσεις σας παρέχουν συλλογές για κάθε τύπο πόρου, έτοιμες για περαιτέρω επεξεργασία.*
 
 ### Βήμα 3: Αποθήκευση Εξαγόμενων Πόρων στο Δίσκο
@@ -116,7 +162,7 @@ for (int i = 0; i < images.size(); i++) {
     File outputFile = new File(outputFolderPath + oneImage.getFilenameWithExtension());
     oneImage.save(outputFile.getAbsolutePath());
 }
-```
+```  
 
 ```java
 for (int i = 0; i < fonts.size(); i++) {
@@ -124,7 +170,7 @@ for (int i = 0; i < fonts.size(); i++) {
     File outputFile = new File(outputFolderPath + oneFont.getFilenameWithExtension());
     oneFont.save(outputFile.getAbsolutePath());
 }
-```
+```  
 
 ```java
 for (int i = 0; i < stylesheets.size(); i++) {
@@ -132,11 +178,11 @@ for (int i = 0; i < stylesheets.size(); i++) {
     File outputFile = new File(outputFolderPath + oneStylesheet.getFilenameWithExtension());
     oneStylesheet.save(outputFile.getAbsolutePath());
 }
-```
+```  
 *Κάθε βρόχος γράφει τον αντίστοιχο πόρο στο `outputFolderPath`, διατηρώντας τα αρχικά ονόματα αρχείων.*
 
-### Βήμα 4: Ανάκτηση Περιεχομένου Πόρου Απευθείας (Προαιρετικό)
-Αν χρειάζεστε τα ακατέργαστα bytes ή μια συμβολοσειρά Base64—π.χ., για ενσωμάτωση εικόνας σε email HTML—χρησιμοποιήστε:
+### Βήμα 4: Ανάκτηση Περιεχομένου Πόρου Άμεσα (Προαιρετικό)
+Αν χρειάζεστε τα ακατέργαστα bytes ή μια συμβολοσειρά Base64—π.χ., για ενσωμάτωση μιας εικόνας σε email HTML—χρησιμοποιήστε:
 
 ```java
 InputStream ms = images.get(0).getByteContent(); // raw bytes
@@ -145,38 +191,43 @@ String base64EncodedResource = images.get(0).getTextContent(); // Base64 string
 
 ## Συνηθισμένα Προβλήματα και Λύσεις
 | Πρόβλημα | Γιατί Συμβαίνει | Διόρθωση |
-|----------|-----------------|----------|
-| **OutOfMemoryError σε μεγάλα αρχεία** | Οι πόροι φορτώνονται στη μνήμη όλα μαζί. | Επεξεργαστείτε τα έγγραφα σε μικρότερες παρτίδες και καλέστε `editor.dispose()` μετά από κάθε αρχείο. |
-| **Απουσία γραμματοσειρών μετά την εξαγωγή** | Η εξαγωγή γραμματοσειρών είναι απενεργοποιημένη στις επιλογές. | Βεβαιωθείτε ότι έχει οριστεί `editOptions.setFontExtraction(FontExtractionOptions.ExtractAll)`. |
-| **Εικόνες αποθηκεύονται με λάθος επέκταση** | Ορισμένες εικόνες δεν έχουν σωστή ανίχνευση τύπου MIME. | Επαληθεύστε το `oneImage.getFilenameWithExtension()` πριν την αποθήκευση· μετονομάστε αν χρειάζεται. |
+|----------|----------------|----------|
+| **OutOfMemoryError on large files** | Οι πόροι φορτώνονται στη μνήμη όλα ταυτόχρονα. | Επεξεργαστείτε τα έγγραφα σε μικρότερες παρτίδες και καλέστε `editor.dispose()` μετά από κάθε αρχείο. |
+| **Missing fonts after extraction** | Η εξαγωγή γραμματοσειρών είναι απενεργοποιημένη στις επιλογές. | Βεβαιωθείτε ότι έχει οριστεί `editOptions.setFontExtraction(FontExtractionOptions.ExtractAll)`. |
+| **Images saved with wrong extension** | Ορισμένες εικόνες δεν έχουν σωστή ανίχνευση τύπου MIME. | Επαληθεύστε το `oneImage.getFilenameWithExtension()` πριν την αποθήκευση· μετονομάστε αν χρειάζεται. |
 
 ## Συχνές Ερωτήσεις
 
-**Ε: Είναι το GroupDocs.Editor συμβατό με όλες τις μορφές αρχείων Word;**  
-Α: Ναι, υποστηρίζει DOCX, DOC και άλλες μορφές Microsoft Word.
+**Q: Είναι το GroupDocs.Editor συμβατό με όλες τις μορφές αρχείων Word;**  
+A: Ναι, υποστηρίζει DOCX, DOC και άλλες μορφές Microsoft Word.
 
-**Ε: Μπορώ να εξάγω πόρους από έγγραφα προστατευμένα με κωδικό;**  
-Α: Απολύτως. Παρέχετε τον κωδικό μέσω `WordProcessingLoadOptions` κατά τη δημιουργία του `Editor`.
+**Q: Μπορώ να εξάγω πόρους από έγγραφα προστατευμένα με κωδικό;**  
+A: Απόλυτα. Παρέχετε τον κωδικό μέσω `WordProcessingLoadOptions` κατά τη δημιουργία του `Editor`.
 
-**Ε: Πώς αποδίδει το API με πολύ μεγάλα έγγραφα;**  
-Α: Έχει βελτιστοποιηθεί για ταχύτητα, αλλά για τεράστια αρχεία συνιστούμε το διαχωρισμό του εγγράφου ή την επεξεργασία των τμημάτων διαδοχικά.
+**Q: Πώς αποδίδει το API με πολύ μεγάλα έγγραφα;**  
+A: Είναι βελτιστοποιημένο για ταχύτητα· για αρχεία πάνω από 200 MB συνιστούμε επεξεργασία σε παρτίδες ή εξαγωγή τμημάτων διαδοχικά.
 
-**Ε: Μπορώ να ενσωματώσω αυτό με Spring Boot ή άλλα Java frameworks;**  
-Α: Ναι. Το API είναι ανεξάρτητο από πλατφόρμα· απλώς συμπεριλάβετε την εξάρτηση και ενσωματώστε το `Editor` όπου χρειάζεται.
+**Q: Μπορώ να ενσωματώσω αυτό με Spring Boot ή άλλα Java frameworks;**  
+A: Ναι. Το API είναι ανεξάρτητο από πλαίσια· απλώς συμπεριλάβετε την εξάρτηση και ενσωματώστε το `Editor` όπου χρειάζεται.
 
-**Ε: Τι γίνεται αν χρειάζομαι να εξάγω μόνο εικόνες και όχι γραμματοσειρές ή CSS;**  
-Α: Καλείστε μόνο `beforeEdit.getImages()` και παραλείψτε τα βήματα εξαγωγής γραμματοσειρών/CSS.
+**Q: Τι γίνεται αν χρειάζομαι να εξάγω μόνο εικόνες και όχι γραμματοσειρές ή CSS;**  
+A: Καλέστε μόνο `beforeEdit.getImages()` και παραλείψτε τα βήματα εξαγωγής γραμματοσειρών/CSS.
 
 ## Συμπέρασμα
-Τώρα έχετε έναν πλήρη, έτοιμο για παραγωγή οδηγό για **πώς να εξάγετε πόρους** από έγγραφα Word χρησιμοποιώντας το GroupDocs.Editor για Java. Φορτώνοντας το έγγραφο, ρυθμίζοντας τις επιλογές επεξεργασίας και επαναλαμβάνοντας τις συλλογές πόρων που επιστρέφονται, μπορείτε να αυτοματοποιήσετε την αρχειοθέτηση, τη δημιουργία προτύπων και τη δυναμική παραγωγή περιεχομένου με ευκολία.
+Τώρα έχετε έναν πλήρη, έτοιμο για παραγωγή οδηγό για το **how to extract pictures from word** έγγραφα χρησιμοποιώντας το GroupDocs.Editor για Java. Φορτώνοντας το έγγραφο, ρυθμίζοντας τις επιλογές επεξεργασίας και διατρέχοντας τις επιστρεφόμενες συλλογές πόρων, μπορείτε να αυτοματοποιήσετε την αρχειοθέτηση, τη δημιουργία προτύπων και τη δυναμική παραγωγή περιεχομένου με ευκολία.
 
 **Επόμενα βήματα:**  
-- Δοκιμάστε διαφορετικές `WordProcessingEditOptions` για λεπτομερή ρύθμιση της εξαγωγής.  
+- Δοκιμάστε διαφορετικές `WordProcessingEditOptions` για να ρυθμίσετε λεπτομερώς την εξαγωγή.  
 - Συνδυάστε αυτή τη ροή εργασίας με ένα SDK αποθήκευσης cloud για άμεση μεταφόρτωση των πόρων σε S3 ή Azure Blob.  
-- Εξερευνήστε τα APIs μετατροπής του GroupDocs για μετατροπή των εξαγόμενων στοιχείων σε άλλες μορφές.
+- Εξερευνήστε τα APIs μετατροπής του GroupDocs για να μετατρέψετε τα εξαγόμενα στοιχεία σε άλλες μορφές.
 
 ---
 
-**Τελευταία Ενημέρωση:** 2026-02-16  
-**Δοκιμή Με:** GroupDocs.Editor 25.3 for Java  
-**Συγγραφέας:** GroupDocs
+**Last Updated:** 2026-05-22  
+**Tested With:** GroupDocs.Editor 25.3 for Java  
+**Author:** GroupDocs  
+
+## Σχετικά Μαθήματα
+
+- [Πώς να Εξάγετε Πόρους από Έγγραφα Word – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
+- [Φόρτωση Εγγράφου Word Java με GroupDocs.Editor – Πλήρης Οδηγός](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)

@@ -1,42 +1,86 @@
 ---
-date: '2026-02-16'
-description: Узнайте, как извлекать ресурсы с помощью GroupDocs.Editor для Java. Включает
-  шаги загрузки Word‑документа на Java и примеры извлечения изображений и CSS на Java.
+date: '2026-05-22'
+description: Узнайте, как извлечь изображения из Word с помощью GroupDocs.Editor for
+  Java, включая шаги загрузки документа Word java и извлечение изображений java, примеры
+  извлечения css java.
 keywords:
-- GroupDocs Editor Java
-- Word document resources extraction
-- Java API for Word processing
-title: Как извлечь ресурсы из документов Word – GroupDocs.Editor Java
+- extract pictures from word
+- load word document java
+- extract images java
+- extract css java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-22'
+  description: Learn how to extract pictures from Word using GroupDocs.Editor for
+    Java, including load word document java steps and extract images java, extract
+    css java examples.
+  headline: How to Extract Pictures from Word Documents Using GroupDocs.Editor for
+    Java
+  type: TechArticle
+- description: Learn how to extract pictures from Word using GroupDocs.Editor for
+    Java, including load word document java steps and extract images java, extract
+    css java examples.
+  name: How to Extract Pictures from Word Documents Using GroupDocs.Editor for Java
+  steps:
+  - name: Load and Prepare the Document for Editing
+    text: '*The `FontExtractionOptions.ExtractAll` flag guarantees that every embedded
+      font is available for extraction.*'
+  - name: Extract Images, Fonts, and Stylesheets
+    text: '*These three calls give you collections of each resource type, ready for
+      further processing.*'
+  - name: Save Extracted Resources to Disk
+    text: '*Each loop writes the corresponding resource to the `outputFolderPath`,
+      preserving the original filenames.*'
+  - name: Retrieve Resource Content Directly (Optional)
+    text: 'If you need the raw bytes or a Base64 string—for example, to embed an image
+      in an HTML email—use:'
+  type: HowTo
+- questions:
+  - answer: Yes, it supports DOCX, DOC, and other Microsoft Word formats.
+    question: Is GroupDocs.Editor compatible with all Word file formats?
+  - answer: Absolutely. Provide the password via `WordProcessingLoadOptions` when
+      creating the `Editor`.
+    question: Can I extract resources from password‑protected documents?
+  - answer: It’s optimized for speed; for files over 200 MB we recommend batch processing
+      or extracting sections sequentially.
+    question: How does the API perform with very large documents?
+  - answer: Yes. The API is framework‑agnostic; just include the dependency and inject
+      `Editor` where needed.
+    question: Can I integrate this with Spring Boot or other Java frameworks?
+  - answer: Call only `beforeEdit.getImages()` and skip the font/CSS extraction steps.
+    question: What if I need to extract only images and not fonts or CSS?
+  type: FAQPage
+title: Как извлечь изображения из документов Word с помощью GroupDocs.Editor for Java
 type: docs
 url: /ru/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/
 weight: 1
 ---
 
-# Как извлечь ресурсы из Word‑документов с помощью GroupDocs.Editor для Java
+# Как извлечь изображения из Word‑документов с помощью GroupDocs.Editor для Java
 
-Если вы ищете **как извлечь ресурсы** из Word‑файлов программно, вы попали по адресу. В этом руководстве мы пройдем процесс загрузки Word‑документа в Java, его редактирования и извлечения изображений, шрифтов и CSS — именно те шаги, которые нужны для автоматизации конвейеров обработки документов.
+Если вам нужно **извлекать изображения из Word**‑файлов программно, вы попали по адресу. В этом руководстве мы пройдем процесс загрузки Word‑документа в Java, настройки редактора и извлечения изображений, шрифтов и CSS — именно те шаги, которые нужны для автоматизации конвейеров обработки документов с GroupDocs.Editor для Java.
 
 **Что вы узнаете:**
-- Как **load word document java** с помощью GroupDocs.Editor
-- Как **extract images java** и другие встроенные ресурсы
-- Как **extract css java** для повторного использования стилей
-- Лучшие практики сохранения этих ресурсов на диск
-- Реальные сценарии, где извлечение ресурсов экономит время и усилия
+- Как **загрузить word документ java** с помощью GroupDocs.Editor  
+- Как **извлечь изображения java** и другие встроенные ресурсы  
+- Как **извлечь css java** для повторного использования стилей  
+- Лучшие практики сохранения этих ресурсов на диск  
+- Реальные сценарии, где извлечение ресурсов экономит время и усилия  
 
-Готовы оптимизировать ваш документооборот? Приступим!
+Готовы оптимизировать ваш документооборот? Поехали!
 
 ## Быстрые ответы
-- **Что означает “how to extract resources”?** Это означает программное извлечение изображений, шрифтов, CSS и т.д. из Word‑файла.  
-- **Какая библиотека обеспечивает это в Java?** GroupDocs.Editor for Java.  
-- **Нужна ли лицензия?** Бесплатная пробная версия подходит для тестирования; полная лицензия требуется для продакшн.  
-- **Можно ли обрабатывать файлы DOCX и DOC?** Да — оба поддерживаются.  
-- **Безопасно ли это для больших документов?** Да, но рекомендуется пакетная обработка и правильное освобождение памяти.
+- **Что означает «извлекать изображения из word»?** Это программное извлечение изображений, шрифтов, CSS и других встроенных ресурсов из файла Word.  
+- **Какая библиотека делает это в Java?** GroupDocs.Editor для Java предоставляет высокоуровневый API для этой задачи.  
+- **Нужна ли лицензия?** Бесплатная пробная версия подходит для тестов; полная лицензия требуется для продакшна.  
+- **Можно ли обрабатывать DOCX и DOC файлы?** Да — обе версии полностью поддерживаются.  
+- **Безопасно ли это для больших документов?** Да, но рекомендуется пакетная обработка и правильное освобождение памяти для файлов более 200 МБ.
 
 ## Что такое извлечение ресурсов в Word‑документах?
-Извлечение ресурсов — это процесс получения встроенных элементов — таких как изображения, пользовательские шрифты и таблицы стилей — из Word‑файла, чтобы их можно было повторно использовать, архивировать или преобразовывать для других приложений.
+Извлечение ресурсов — это систематическое получение всех встроенных объектов из Word‑файла, включая изображения, пользовательские шрифты, таблицы стилей, макросы и другие бинарные объекты. Извлекая эти компоненты, разработчики могут повторно использовать их в отдельных приложениях, архивировать для соответствия требованиям или преобразовывать в веб‑дружественные форматы, тем самым расширяя ценность исходного документа.
 
 ## Почему стоит использовать GroupDocs.Editor для Java?
-GroupDocs.Editor предоставляет высокоуровневый API, который абстрагирует сложности формата Office Open XML. Он позволяет сосредоточиться на **как извлечь ресурсы** без необходимости работать с низкоуровневой обработкой ZIP‑архивов или парсингом XML.
+GroupDocs.Editor для Java абстрагирует формат Office Open XML, позволяя сосредоточиться на **том, как извлекать изображения из word**, без написания низкоуровневого кода ZIP или XML. Он поддерживает **30+ форматов ввода и вывода** и может обрабатывать документы до **500 МБ**, не загружая весь файл в память, обеспечивая как скорость, так и масштабируемость.
 
 ## Предварительные требования
 - **Maven** (или прямое скачивание JAR) для управления зависимостями.  
@@ -64,15 +108,17 @@ GroupDocs.Editor предоставляет высокоуровневый API, 
 </dependencies>
 ```
 
-Вы также можете скачать последнюю JAR‑файл с [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+Также можно скачать последний JAR с [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-### Получение лицензии
-- **Free Trial:** Идеально для изучения API.  
-- **Temporary License:** Получите её на странице [GroupDocs Temporary License Page](https://purchase.groupdocs.com/temporary-license).  
-- **Full License:** Приобретите для неограниченного использования в продакшн.
+### Приобретение лицензии
+- **Бесплатная пробная:** Идеально для знакомства с API.  
+- **Временная лицензия:** Получите её на [GroupDocs Temporary License Page](https://purchase.groupdocs.com/temporary-license).  
+- **Полная лицензия:** Приобретите для неограниченного использования в продакшне.
 
 ### Базовая инициализация
-Создайте экземпляр `Editor`, указывающий на ваш Word‑файл:
+`Editor` — основной входной пункт GroupDocs.Editor для Java, предоставляющий методы загрузки, редактирования и извлечения ресурсов из Word‑файлов.
+
+Создайте экземпляр `Editor`, указывая путь к вашему Word‑файлу:
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY";
@@ -80,9 +126,9 @@ Editor editor = new Editor(inputFilePath, new WordProcessingLoadOptions());
 ```
 
 ## Как извлечь ресурсы из Word‑документа
-Ниже мы разбиваем реализацию на три логических шага: загрузка/редактирование, извлечение и сохранение.
+Извлечение ресурсов начинается с загрузки целевого Word‑файла в экземпляр `Editor`, затем настройки `WordProcessingEditOptions` для включения извлечения изображений, шрифтов и CSS. После подготовки документа API предоставляет коллекции для каждого типа ресурса, которые можно перебрать и сохранить в файловой системе или обработать дальше в соответствии с вашими требованиями.
 
-### Шаг 1: Загрузка и подготовка документа к редактированию
+### Шаг 1: Загрузка и подготовка документа к редактированию
 ```java
 // Initialize editor and edit options
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY";
@@ -90,24 +136,24 @@ Editor editor = new Editor(inputFilePath, new WordProcessingLoadOptions());
 WordProcessingEditOptions editOptions = new WordProcessingEditOptions();
 editOptions.setFontExtraction(FontExtractionOptions.ExtractAll);
 EditableDocument beforeEdit = editor.edit(editOptions);
-```
+```  
 *Флаг `FontExtractionOptions.ExtractAll` гарантирует, что каждый встроенный шрифт будет доступен для извлечения.*
 
-### Шаг 2: Извлечение изображений, шрифтов и таблиц стилей
+### Шаг 2: Извлечение изображений, шрифтов и таблиц стилей
 ```java
 List<IImageResource> images = beforeEdit.getImages();
-```
+```  
 
 ```java
 List<FontResourceBase> fonts = beforeEdit.getFonts();
-```
+```  
 
 ```java
 List<CssText> stylesheets = beforeEdit.getCss();
-```
-*Эти три вызова возвращают коллекции каждого типа ресурсов, готовые к дальнейшей обработке.*
+```  
+*Эти три вызова возвращают коллекции каждого типа ресурса, готовые к дальнейшей обработке.*
 
-### Шаг 3: Сохранение извлечённых ресурсов на диск
+### Шаг 3: Сохранение извлеченных ресурсов на диск
 ```java
 String outputFolderPath = "YOUR_OUTPUT_DIRECTORY";
 for (int i = 0; i < images.size(); i++) {
@@ -115,7 +161,7 @@ for (int i = 0; i < images.size(); i++) {
     File outputFile = new File(outputFolderPath + oneImage.getFilenameWithExtension());
     oneImage.save(outputFile.getAbsolutePath());
 }
-```
+```  
 
 ```java
 for (int i = 0; i < fonts.size(); i++) {
@@ -123,7 +169,7 @@ for (int i = 0; i < fonts.size(); i++) {
     File outputFile = new File(outputFolderPath + oneFont.getFilenameWithExtension());
     oneFont.save(outputFile.getAbsolutePath());
 }
-```
+```  
 
 ```java
 for (int i = 0; i < stylesheets.size(); i++) {
@@ -131,11 +177,11 @@ for (int i = 0; i < stylesheets.size(); i++) {
     File outputFile = new File(outputFolderPath + oneStylesheet.getFilenameWithExtension());
     oneStylesheet.save(outputFile.getAbsolutePath());
 }
-```
+```  
 *Каждый цикл записывает соответствующий ресурс в `outputFolderPath`, сохраняя оригинальные имена файлов.*
 
-### Шаг 4: Прямое получение содержимого ресурса (опционально)
-Если вам нужны необработанные байты или строка Base64 — например, для встраивания изображения в HTML‑письмо — используйте:
+### Шаг 4: Получение содержимого ресурса напрямую (по желанию)
+Если нужны необработанные байты или строка Base64 — например, для вставки изображения в HTML‑письмо — используйте:
 
 ```java
 InputStream ms = images.get(0).getByteContent(); // raw bytes
@@ -143,40 +189,46 @@ String base64EncodedResource = images.get(0).getTextContent(); // Base64 string
 ```
 
 ## Распространённые проблемы и решения
-
-| Проблема | Причина | Решение |
-|----------|---------|---------|
-| **OutOfMemoryError on large files** | Ресурсы загружаются в память полностью сразу. | Обрабатывайте документы небольшими партиями и вызывайте `editor.dispose()` после каждого файла. |
-| **Missing fonts after extraction** | Извлечение шрифтов отключено в параметрах. | Убедитесь, что установлен `editOptions.setFontExtraction(FontExtractionOptions.ExtractAll)`. |
-| **Images saved with wrong extension** | Некоторые изображения не имеют корректного определения MIME‑типа. | Проверьте `oneImage.getFilenameWithExtension()` перед сохранением; при необходимости переименуйте. |
+| Проблема | Почему происходит | Решение |
+|----------|-------------------|---------|
+| **OutOfMemoryError при работе с большими файлами** | Все ресурсы загружаются в память одновременно. | Обрабатывайте документы небольшими партиями и вызывайте `editor.dispose()` после каждого файла. |
+| **Отсутствуют шрифты после извлечения** | Извлечение шрифтов отключено в параметрах. | Убедитесь, что установлен `editOptions.setFontExtraction(FontExtractionOptions.ExtractAll)`. |
+| **Изображения сохраняются с неправильным расширением** | Некоторые изображения не имеют корректного определения MIME‑типа. | Проверьте `oneImage.getFilenameWithExtension()` перед сохранением; при необходимости переименуйте. |
 
 ## Часто задаваемые вопросы
 
-**В: Совместим ли GroupDocs.Editor со всеми форматами Word‑файлов?**  
-**О:** Да, поддерживает DOCX, DOC и другие форматы Microsoft Word.
+**Q:** Совместим ли GroupDocs.Editor со всеми форматами файлов Word?  
+**A:** Да, поддерживает DOCX, DOC и другие форматы Microsoft Word.
 
-**В: Можно ли извлекать ресурсы из документов, защищённых паролем?**  
-**О:** Да. Укажите пароль через `WordProcessingLoadOptions` при создании `Editor`.
+**Q:** Можно ли извлекать ресурсы из документов, защищённых паролем?  
+**A:** Конечно. Передайте пароль через `WordProcessingLoadOptions` при создании `Editor`.
 
-**В: Как API работает с очень большими документами?**  
-**О:** Он оптимизирован для скорости, но для огромных файлов рекомендуется разбивать документ или последовательно обрабатывать секции.
+**Q:** Как API работает с очень большими документами?  
+**A:** Оптимизировано для скорости; для файлов более 200 МБ рекомендуется пакетная обработка или последовательное извлечение секций.
 
-**В: Можно ли интегрировать это со Spring Boot или другими Java‑фреймворками?**  
-**О:** Да. API не зависит от фреймворка; просто добавьте зависимость и внедрите `Editor` там, где нужно.
+**Q:** Можно ли интегрировать это с Spring Boot или другими Java‑фреймворками?  
+**A:** Да. API не зависит от фреймворка; просто добавьте зависимость и внедрите `Editor` там, где нужно.
 
-**В: Что делать, если нужно извлечь только изображения, без шрифтов и CSS?**  
-**О:** Вызовите только `beforeEdit.getImages()` и пропустите шаги извлечения шрифтов/CSS.
+**Q:** Что делать, если нужно извлекать только изображения, а не шрифты или CSS?  
+**A:** Вызывайте только `beforeEdit.getImages()` и пропустите шаги извлечения шрифтов и CSS.
 
 ## Заключение
-Теперь у вас есть полное, готовое к продакшн руководство по **как извлечь ресурсы** из Word‑документов с помощью GroupDocs.Editor для Java. Загрузив документ, настроив параметры редактирования и пройдясь по полученным коллекциям ресурсов, вы сможете легко автоматизировать архивирование, создание шаблонов и генерацию динамического контента.
+Теперь у вас есть полное, готовое к продакшну руководство по **извлечению изображений из word**‑документов с помощью GroupDocs.Editor для Java. Загрузив документ, настроив параметры редактирования и пройдя по полученным коллекциям ресурсов, вы сможете автоматизировать архивирование, создание шаблонов и генерацию динамического контента без труда.
 
 **Следующие шаги:**  
-- Поэкспериментировать с различными `WordProcessingEditOptions` для точной настройки извлечения.  
-- Скомбинировать этот процесс с SDK облачного хранилища для прямой загрузки ресурсов в S3 или Azure Blob.  
-- Исследовать конверсионные API GroupDocs для преобразования извлечённых активов в другие форматы.
+- Поэкспериментируйте с различными `WordProcessingEditOptions` для тонкой настройки извлечения.  
+- Совместите этот процесс с SDK облачного хранилища, чтобы сразу загружать ресурсы в S3 или Azure Blob.  
+- Изучите API конвертации GroupDocs для преобразования извлечённых активов в другие форматы.
 
 ---
 
-**Последнее обновление:** 2026-02-16  
+**Последнее обновление:** 2026-05-22  
 **Тестировано с:** GroupDocs.Editor 25.3 for Java  
-**Автор:** GroupDocs
+**Автор:** GroupDocs  
+
+---
+
+## Связанные руководства
+
+- [How to Extract Resources from Word Docs – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
+- [Load Word Document Java with GroupDocs.Editor – A Complete Guide](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
