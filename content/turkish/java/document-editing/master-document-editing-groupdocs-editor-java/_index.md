@@ -1,42 +1,44 @@
 ---
-date: '2025-12-21'
-description: GroupDocs.Editor for Java kullanarak düzenlenebilir belge oluşturmayı
-  ve Word dosyalarını düzenlemeyi öğrenin. Kurulum, kaynak çıkarma ve rapor oluşturmayı
-  otomatikleştirme içerir.
+date: '2026-02-21'
+description: Word'ten resimleri nasıl çıkaracağınızı, Word'ü HTML'ye nasıl dönüştüreceğinizi
+  ve GroupDocs.Editor for Java kullanarak düzenlenebilir belgeler nasıl oluşturacağınızı
+  öğrenin. Kurulum, kaynak çıkarma ve toplu işleme ipuçlarını içerir.
 keywords:
 - GroupDocs.Editor for Java
 - document editing in Java
 - Java document management
-title: Java için GroupDocs.Editor ile Düzenlenebilir Belge Nasıl Oluşturulur
+title: Word'den Görselleri Nasıl Çıkarıp GroupDocs.Editor for Java ile Düzenlenebilir
+  Belge Oluşturulur
 type: docs
 url: /tr/java/document-editing/master-document-editing-groupdocs-editor-java/
 weight: 1
 ---
 
-# GroupDocs.Editor Java ile Düzenlenebilir Belge Oluşturma
+# Word'den Görüntüleri Çıkar ve GroupDocs.Editor Java ile Düzenlenebilir Belge Oluştur
 
-Günümüzün hızlı tempolu işletmelerinde, programlı olarak **create editable document** dosyaları oluşturma yeteneği bir oyun değiştiricidir. **edit Word** şablonlarını düzenlemeniz, **extract images from Word** yapmanız veya bir web portalı için **convert Word to HTML** yapmanız gerekse, GroupDocs.Editor for Java bu görevleri otomatikleştirmenin güvenilir, yüksek performanslı bir yolunu sunar. Bu rehberde ortam kurulumundan ileri düzey düzenlemeye kadar ihtiyacınız olan her şeyi adım adım inceleyeceğiz; böylece **automate report generation** çözümlerini dakikalar içinde inşa etmeye başlayabilirsiniz.
+Günümüzün hızlı tempolu işletmelerinde, **extract images from Word** dosyalarını programlı olarak çıkarabilme yeteneği bir dönüm noktasıdır. **convert Word to HTML**, **generate HTML from Word** ya da **edit Word document Java**‑stilinde bir işlem yapmanız gerekse, GroupDocs.Editor for Java bu görevleri otomatikleştirmeniz için güvenilir, yüksek performanslı bir yol sunar. Bu rehberde ortam kurulumundan ileri düzey düzenlemeye kadar ihtiyacınız olan her şeyi adım adım inceleyeceğiz, böylece **automate report generation** ve **batch process Word docs** işlemlerini dakikalar içinde çözümleyebileceksiniz.
 
 ## Hızlı Yanıtlar
 - **Word dosyasını yüklemek için birincil sınıf nedir?** `Editor`  
-- **Düzenleme için HTML işaretlemesini döndüren yöntem hangisidir?** `edit()` bir `EditableDocument` döndürür.  
-- **Word belgesinden nasıl resim çıkarırım?** `EditableDocument` üzerinde `getAllResources()` kullanın.  
-- **Düzenlenmiş içeriği diske kaydedebilir miyim?** Evet, `EditableDocument` üzerinde `save()` çağırın.  
-- **Geliştirme için lisansa ihtiyacım var mı?** Test için ücretsiz deneme veya geçici lisans yeterlidir; üretim için tam lisans gereklidir.  
+- **Düzenleme için HTML işaretlemesini döndüren yöntem hangisidir?** `edit()` bir `EditableDocument` döndürür  
+- **Word belgesinden görüntüleri nasıl çıkarırım?** `EditableDocument` üzerindeki `getAllResources()` metodunu kullanın  
+- **Düzenlenmiş içeriği diske kaydedebilir miyim?** Evet, `EditableDocument` üzerindeki `save()` metodunu çağırın  
+- **Geliştirme için lisansa ihtiyacım var mı?** Test için ücretsiz deneme veya geçici lisans yeterlidir; üretim için tam lisans gereklidir  
 
-## “create editable document” nedir?
-Düzenlenebilir bir belge oluşturmak, bir kaynak dosyayı (ör. .docx) manipüle edilebilecek bir formata—genellikle HTML—yüklemek anlamına gelir; böylece sonucu kaydetmeden önce metni, resimleri, stilleri veya bağlantıları programlı olarak değiştirebilirsiniz.
+## “extract images from word” nedir?
+Word'den görüntüleri çıkarmak, bir `.docx` dosyasını yüklemek, düzenlenebilir bir HTML temsiline dönüştürmek ve ardından gömülü her görüntü, font veya stil sayfasını ayıklamak anlamına gelir. Bu, her kaynağı ayrı ayrı depolayabilmenizi, bir CDN üzerinde yeniden barındırabilmenizi veya başka bir belgeye gömebilmenizi sağlar.
 
-## Neden GroupDocs.Editor for Java kullanmalısınız?
-- **Full‑featured Word support** – Microsoft Office olmadan düzenleme, çıkarma ve dönüştürme.  
-- **Seamless HTML conversion** – web tabanlı editörler veya CMS entegrasyonları için mükemmel.  
-- **Robust resource handling** – tek bir çağrıda resimleri, fontları ve CSS'i alın.  
-- **Scalable performance** – toplu işleme ve büyük ölçekli rapor oluşturma için ideal.  
+## Neden GroupDocs.Editor for Java kullanmalı?
+- **Tam özellikli Word desteği** – Microsoft Office olmadan düzenleme, çıkarma ve dönüştürme.  
+- **Sorunsuz HTML dönüşümü** – web tabanlı editörler veya CMS entegrasyonları için ideal.  
+- **Güçlü kaynak yönetimi** – tek bir çağrıyla görüntü, font ve CSS alınabilir.  
+- **Ölçeklenebilir performans** – toplu işleme ve büyük ölçekli rapor üretimi için mükemmel.  
+- **Kullanışlı Java API** – Java 8+ ve popüler IDE'lerle doğal olarak çalışır.
 
 ## Önkoşullar
-- Java Development Kit (JDK) 8 ve üzeri.  
+- Java Development Kit (JDK) 8 veya daha yeni bir sürüm.  
 - IntelliJ IDEA veya Eclipse gibi bir IDE.  
-- Temel Java bilgisi ve Maven'a aşinalık.  
+- Temel Java bilgisi ve Maven aşinalığı.
 
 ### Gerekli Kütüphaneler
 Projenize GroupDocs.Editor kütüphanesini ekleyin. Maven kullanarak bağımlılık olarak ekleyin:
@@ -59,20 +61,20 @@ Projenize GroupDocs.Editor kütüphanesini ekleyin. Maven kullanarak bağımlıl
 </dependencies>
 ```
 
-Alternatif olarak, en son sürümü doğrudan [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) adresinden indirin.
+Alternatif olarak, en son sürümü doğrudan [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) adresinden indirebilirsiniz.
 
 ### Lisans Edinme
-GroupDocs.Editor'ı kullanmak için ücretsiz deneme ile başlayabilir, geçici bir lisans talep edebilir veya tam lisans satın alabilirsiniz. Kütüphane değerlendirme için kutudan çıkar çıkmaz çalışır ve üretim lisansına geçmek sadece lisans dosyasını güncellemekle mümkündür.
+GroupDocs.Editor kullanmak için ücretsiz deneme ile başlayabilir, geçici bir lisans talep edebilir veya tam lisans satın alabilirsiniz. Kütüphane değerlendirme için kutudan çıktığı gibi çalışır ve üretim lisansına geçiş sadece lisans dosyasını güncellemekle gerçekleşir.
 
-## GroupDocs.Editor Java kullanarak düzenlenebilir belge nasıl oluşturulur
+## GroupDocs.Editor Java ile düzenlenebilir bir belge nasıl oluşturulur
 
 ### Kurulum
-1. **Add Dependency** – `pom.xml` dosyasının yukarıdaki Maven snippet'ini içerdiğinden emin olun.  
-2. **Download JAR** – manuel kurulum tercih ediyorsanız, resmi [GroupDocs site](https://releases.groupdocs.com/editor/java/) adresinden en son JAR'ı indirin.  
-3. **Configure License** – `GroupDocs.Editor.lic` dosyanızı resources klasörüne yerleştirin veya programatik olarak ayarlayın.  
+1. **Add Dependency** – `pom.xml` dosyanızın yukarıdaki Maven snippet'ini içerdiğinden emin olun.  
+2. **Download JAR** – manuel kurulum tercih ediyorsanız, resmi [GroupDocs site](https://releases.groupdocs.com/editor/java/) üzerinden en son JAR dosyasını indirin.  
+3. **Configure License** – `GroupDocs.Editor.lic` dosyanızı resources klasörüne yerleştirin veya programatik olarak ayarlayın.
 
 ### Temel Başlatma
-Ortam hazır olduğunda, `Editor` sınıfını Word dosyanızın yolu ile örnekleyebilirsiniz:
+Ortam hazır olduğunda, Word dosyanızın yolunu belirterek `Editor` sınıfını örnekleyebilirsiniz:
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -81,14 +83,12 @@ import com.groupdocs.editor.Editor;
 Editor editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx");
 ```
 
-Bu basit satır, belgeyi yükleyebilen, düzenleyebilen ve kaydedebilen tam işlevli bir editör sağlar.
+Bu basit satır, belgeyi yükleyebilen, düzenleyebilen ve kaydedebilen tam işlevsel bir editör sağlar.
 
-## Uygulama Kılavuzu
+## Adım‑Adım Kılavuz
 
-### Düzenlenebilir Belgeler Oluşturma ve Düzenleme
-
-#### Genel Bakış
-`EditableDocument` olarak bir belge yüklemek, herhangi bir değişiklik için ilk adımdır.
+### Adım 1: Belgeyi EditableDocument olarak yükleyin
+Bir belgeyi `EditableDocument` olarak yüklemek, herhangi bir değişiklik yapmanın ilk adımıdır.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -99,16 +99,14 @@ Editor editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx");
 EditableDocument beforeEdit = editor.edit();
 ```
 
-- **`Editor`** – dosya I/O ve format tespiti işlemlerini yönetir.  
-- **`EditableDocument`** – belgeyi düzenlenebilir bir HTML formunda temsil eder.  
+- **`Editor`** – dosya I/O ve format algılamasını yönetir.  
+- **`EditableDocument`** – belgeyi düzenlenebilir bir HTML formunda temsil eder.
 
-#### Word içeriğini nasıl düzenlenir (how to edit word)
-Artık HTML dizesini manipüle edebilir, yer tutucuları değiştirebilir veya stilleri güncelleyebilirsiniz. Değişikliklerden sonra, `save()` çağırarak kalıcı hale getirin.
+### Adım 2: Word içeriğini düzenleyin (how to edit word)
+Artık HTML dizesini manipüle edebilir, yer tutucuları değiştirebilir veya stilleri güncelleyebilirsiniz. Değişikliklerden sonra `save()` metodunu çağırarak kalıcı hale getirin.
 
-### Belge Kaynaklarını Çıkarma
-
-#### Genel Bakış
-GroupDocs.Editor, gömülü kaynakları (resimler, fontlar ve CSS dosyaları gibi) kolayca çıkarmanızı sağlar.
+### Adım 3: Görüntüleri ve diğer kaynakları çıkarın
+GroupDocs.Editor, gömülü her kaynağı çıkarmayı çok kolay hâle getirir; bu da **extract images from Word** işleminin tam karşılığıdır.
 
 ```java
 import com.groupdocs.editor.htmlcss.resources.IHtmlResource;
@@ -123,39 +121,39 @@ List<String> stylesheets = beforeEdit.getCssContent();
 ```
 
 - **`getEmbeddedHtml()`** – tam HTML işaretlemesini döndürür.  
-- **`getAllResources()`** – orijinal Word dosyasına gömülmüş tüm resim, font veya stil sayfası listesini sağlar.  
-- **`extract images from word** – `ImageResource` tipindeki nesneler için `allResources` üzerinde döngü yaparak resimleri çıkarın.  
+- **`getAllResources()`** – orijinal Word dosyasına gömülü tüm görüntü, font veya stil sayfasının bir listesini sağlar.  
+- **`extract images from word** – `allResources` içinde `ImageResource` tipindeki nesneleri döngüyle işleyerek görüntüleri çıkarın.
 
-#### HTML İşaretlemesindeki Dış Bağlantıları Ayarlama
-Belgenizde özel bir işleyiciye (ör. bir CDN) yönlendirilmesi gereken bağlantılar varsa, bunları anında yeniden yazabilirsiniz.
+### Adım 4: HTML işaretlemesindeki dış bağlantıları ayarlayın
+Belgenizde özel bir işleyiciye (ör. bir CDN) yönlendirilmesi gereken bağlantılar varsa, bunları anlık olarak yeniden yazabilirsiniz.
 
 ```java
 String customImagesRequesthandlerUri = "http://example.com/ImagesHandler/id=";
 String htmlMarkup = beforeEdit.getContentString(customImagesRequesthandlerUri);
 ```
 
-- **`getContentString()`** – tüm resim referansları için sağlanan URI önekini ekler, böylece resimlerin nereden sunulacağını kontrol edebilirsiniz.  
+- **`getContentString()`** – tüm görüntü referansları için sağlanan URI önekini ekler, böylece görüntülerin nereden servis edileceğini kontrol edebilirsiniz.
 
-#### Düzenlenebilir Belgeyi Diske Kaydetme
-Tüm düzenlemeler ve kaynak ayarlamaları tamamlandıktan sonra, sonucu bir HTML dosyasına (veya daha sonra DOCX'e yeniden dönüştürmek için) yazın.
+### Adım 5: Düzenlenmiş belgeyi diske kaydedin
+Tüm düzenlemeler ve kaynak ayarlamaları tamamlandıktan sonra sonucu bir HTML dosyasına (veya daha sonra DOCX'e dönüştürmek için) yazın.
 
 ```java
 // Save the edited document as an HTML file
 beforeEdit.save("YOUR_OUTPUT_DIRECTORY/output.html");
 ```
 
-- **`save()`** – düzenlenmiş HTML'i ve bağlı kaynakları belirtilen klasöre kaydeder.  
+- **`save()`** – düzenlenmiş HTML'i ve ilişkili kaynakları belirtilen klasöre kalıcı hâle getirir.
 
-#### EditableDocument'in Boşaltma Durumunu Kontrol Etme
-Doğru kaynak yönetimi çok önemlidir, özellikle toplu işlerde birçok dosya işlenirken.
+### Adım 6: Dağıtım durumunu kontrol edin
+Özellikle **batch process word docs** senaryolarında doğru kaynak yönetimi çok önemlidir.
 
 ```java
 String res = !beforeEdit.isDisposed() ? "not" : "already";
 ```
 
-- **`isDisposed()`** – belgeye ait yerel kaynaklar serbest bırakıldıysa `true` döndürür. İşiniz bittiğinde büyük belgeleri her zaman boşaltın.  
+- **`isDisposed()`** – belgeye ait yerel kaynaklar serbest bırakıldıysa `true` döndürür. İşiniz bittiğinde büyük belgeleri her zaman dispose edin.
 
-#### HTML'den EditableDocument Oluşturma
+### Adım 7: HTML'den EditableDocument oluşturun
 Mevcut bir HTML dosyasından veya ham işaretlemeden de başlayabilirsiniz; bu, **convert word to html** senaryoları için kullanışlıdır.
 
 ```java
@@ -167,40 +165,46 @@ EditableDocument afterEditFromMarkup = EditableDocument.fromMarkup(htmlMarkup, a
 ```
 
 - **`fromFile()`** – daha önce `save()` ile kaydedilmiş bir HTML dosyasını yükler.  
-- **`fromMarkup()`** – bir dizeden ve onun kaynak listesinden doğrudan bir `EditableDocument` oluşturur.  
+- **`fromMarkup()`** – bir dize ve onun kaynak listesinden doğrudan bir `EditableDocument` oluşturur.
 
-## Pratik Uygulamalar
-GroupDocs.Editor Java gerçek dünya projelerinde parlıyor:
+## GroupDocs.Editor ile Word'ü HTML'e Dönüştürme
+`edit()` metodu, yüklenen `.docx` dosyasını otomatik olarak bir HTML temsiline dönüştürür. Ardından **generate html from word** çıktısını almak için `getEmbeddedHtml()` veya `getContentString()` metodlarını kullanabilirsiniz; bu çıktı web sayfalarına, e‑postalara ya da daha sonra kullanılmak üzere depolanabilir.
 
-1. **Content Management Systems (CMS)** – yeni oluşturduğunuz HTML ile çalışan bir web tabanlı editör açan “Edit Document” düğmesi ekleyin.  
-2. **Collaborative Editing Platforms** – birden çok kullanıcının aynı Word şablonunu düzenlemesine izin verin, ardından değişiklikleri otomatik birleştirin.  
-3. **Automate Report Generation** – bir Word şablonundaki yer tutucuları veritabanı verileriyle doldurun, e-posta için HTML olarak dışa aktarın veya indirme için DOCX'e geri dönüştürün.  
+## GroupDocs.Editor ile Word Belgelerini Toplu İşleme
+Onlarca ya da yüzlerce şablonla çalışmanız gerektiğinde, yukarıdaki adımları bir döngü ya da `CompletableFuture` pipeline içinde sarın. Her belge işleminden sonra `dispose()` (veya GC'nin otomatik olarak yapmasını) çağırarak bellek kullanımını düşük tutmayı unutmayın.
 
-## Performans Düşünceleri
-- **Dispose early** – kaydetme sonrası yerel belleği serbest bırakmak için `beforeEdit.dispose()` (veya GC'ye bırak) çağırın.  
-- **Batch processing** – UI iş parçacığını engellemeden paralel olarak birden çok belgeyi düzenlemek için Java’nın `CompletableFuture`'ını kullanın.  
-- **Large files** – mümkün olduğunda tüm belgeyi belleğe yüklemek yerine kaynakları akış olarak işleyin.  
+## Yaygın Sorunlar ve Çözümler
+- **Büyük belgeler OutOfMemoryError hatasına neden olur** – tüm kaynakları belleğe yüklemek yerine akış (stream) kullanın; her `EditableDocument` işiniz bittiğinde dispose edin.  
+- **Dönüştürmeden sonra görüntüler görünmüyor** – `getContentString()` metoduna doğru URI önekini gönderdiğinizden emin olun veya çıkarılan kaynakları hedef klasöre kopyalayın.  
+- **Lisans tanınmıyor** – `GroupDocs.Editor.lic` dosyasının sınıf yolunda (classpath) bulunduğunu veya editör oluşturulmadan önce programatik olarak lisansın ayarlandığını kontrol edin.
+
+## Sıkça Sorulan Sorular
+
+**S: GroupDocs.Editor Java ile PDF dosyalarını düzenleyebilir miyim?**  
+C: Evet, GroupDocs.Editor PDF dahil çeşitli formatları destekler. Belirli metodlar için [API reference](https://reference.groupdocs.com/editor/java/) sayfasına bakın.
+
+**S: Büyük belgeleri verimli bir şekilde nasıl yönetirim?**  
+C: `EditableDocument` örneklerini hızlı bir şekilde dispose edin ve dosyaları Java’nın `CompletableFuture` yapısıyla paralel işleyin.
+
+**S: GroupDocs.Editor tüm Java IDE'leriyle uyumlu mu?**  
+C: Evet, IntelliJ IDEA ve Eclipse gibi popüler IDE'lerle sorunsuz çalışır.
+
+**S: Çok sayıda dosya işlenirken **extract images from word** en iyi nasıl yapılır?**  
+C: `EditableDocument.getAllResources()` üzerinden döngü kurup `ImageResource` nesnelerini filtreleyin; ardından bunları ayrı bir klasöre kaydedin ya da bir CDN’ye yükleyin.
+
+**S: Düzenlenmiş HTML'i tekrar DOCX dosyasına dönüştürebilir miyim?**  
+C: Kesinlikle. Değişiklikleri yaptıktan sonra `EditableDocument.saveAsDocx("path/to/output.docx")` metodunu kullanın.
 
 ## Sonuç
-Artık GroupDocs.Editor for Java kullanarak **create editable document** dosyaları oluşturma, **edit Word** içeriğini düzenleme, **extract images from Word** çıkarma ve **convert Word to HTML** yapma konusunda eksiksiz, uçtan uca bir rehbere sahipsiniz. Bu teknikler, güçlü belge‑odaklı uygulamalar oluşturmanızı ve **automate report generation** konusunda güvenle hareket etmenizi sağlar.
+Artık **extract images from Word**, **edit Word** içeriği, **convert Word to HTML** ve GroupDocs.Editor for Java kullanarak **editable documents** oluşturma konularında eksiksiz bir uçtan uca yol haritasına sahipsiniz. Bu teknikler, güçlü belge‑odaklı uygulamalar geliştirmenizi ve **automate report generation** işlemlerini güvenle otomatikleştirmenizi sağlar.
 
 ### Sonraki Adımlar
-- Dinamik yer tutucularla (ör. `{{CustomerName}}`) bir şablonu düzenlemeyi deneyin.  
-- DOCX'e geri kaydetme için API'yi keşfedin (`EditableDocument.saveAsDocx()`).  
-- İş akışını, isteğe bağlı belge oluşturma için bir Spring Boot servisine entegre edin.  
-
-## SSS Bölümü
-**S1: GroupDocs.Editor Java ile PDF'leri düzenleyebilir miyim?**  
-C1: Evet, GroupDocs.Editor PDF dahil çeşitli formatları destekler. Belirli yöntemler için [API reference](https://reference.groupdocs.com/editor/java/) adresine bakın.  
-
-**S2: Büyük belgeleri verimli bir şekilde nasıl yönetebilirim?**  
-C2: Kaynak yönetimi tekniklerini kullanın ve performans düşüşü olmadan büyük dosyaları işlemek için kodunuzu optimize edin.  
-
-**S3: GroupDocs.Editor tüm Java IDE'leriyle uyumlu mu?**  
-C3: Evet, IntelliJ IDEA ve Eclipse gibi popüler IDE'lerle uyumludur.  
+- Dinamik yer tutucular içeren bir şablonu (ör. `{{CustomerName}}`) düzenlemeyi deneyin.  
+- DOCX'e geri kaydetme (`EditableDocument.saveAsDocx()`) API'sını keşfedin.  
+- İş akışını bir Spring Boot servisine entegre ederek isteğe bağlı belge üretimini sağlayın.
 
 ---
 
-**Son Güncelleme:** 2025-12-21  
+**Son Güncelleme:** 2026-02-21  
 **Test Edilen Versiyon:** GroupDocs.Editor 25.3 for Java  
 **Yazar:** GroupDocs

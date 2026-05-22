@@ -1,56 +1,63 @@
 ---
-date: '2025-12-20'
-description: Naučte se upravovat dokumenty Excel a Word v Javě pomocí GroupDocs.Editor.
-  Automatizujte generování reportů, extrahujte vložená písma a optimalizujte výkon.
+date: '2026-02-21'
+description: Naučte se, jak upravovat soubory Excel a jak upravovat dokumenty Word
+  v Javě pomocí GroupDocs.Editor. Generujte Excel report v Javě, vypněte stránkování
+  ve Wordu a zvyšte výkon.
 keywords:
 - GroupDocs Editor Java
 - Java document editing
 - Word document automation in Java
-title: Jak upravit soubory Excel a Word v Javě pomocí GroupDocs.Editor
+title: Jak upravovat soubory Excel a Word v Javě pomocí GroupDocs.Editor
 type: docs
 url: /cs/java/document-editing/java-groupdocs-editor-master-document-editing/
 weight: 1
 ---
 
-# Jak upravit soubory Excel a Word v Javě s GroupDocs.Editor
+Autor:".
 
-V moderních Java aplikacích je schopnost **jak upravit Excel** soubory programově převratná pro firmy, které potřebují automatizovat generování reportů, aktualizovat tabulky za běhu nebo personalizovat šablony pro každého uživatele. Tento tutoriál vám krok za krokem ukáže, jak upravit jak Excel, tak Word dokumenty pomocí GroupDocs.Editor, a zároveň pokrývá techniky optimalizace výkonu v Javě a jak v případě potřeby extrahovat vložená písma.
+Now ensure all markdown formatting preserved.
 
-## Úvod
+Let's construct final output.# jak upravit soubory Excel a Word v Javě s GroupDocs.Editor
 
-V dnešním rychle se rozvíjejícím digitálním světě je efektivní správa a úprava dokumentů klíčová jak pro firmy, tak pro jednotlivce. Ať už automatizujete generování reportů nebo přizpůsobujete šablony za běhu, zvládnutí manipulace s dokumenty může výrazně zvýšit produktivitu. Tento průvodce vás provede používáním GroupDocs.Editor pro Java k načtení, úpravě a uložení Word a Excel souborů s jistotou.
+V moderních Java aplikacích je schopnost **how to edit excel** souborů programově průlomová pro firmy, které potřebují automatizovat generování reportů, aktualizovat tabulky za běhu nebo personalizovat šablony pro každého uživatele. Ať už hledáte jak upravit word dokumenty nebo potřebujete spolehlivý způsob, jak generovat excel report java, tento tutoriál vás provede každým krokem s GroupDocs.Editor.
 
-**Co se naučíte**
-- Jak načíst a upravit dokumenty pro zpracování Word s výchozími a vlastními možnostmi.  
-- Jak **jak upravit Excel** tabulky, zaměřené na konkrétní listy.  
+## Introduction
+V dnešním rychle se rozvíjejícím digitálním světě je efektivní správa a úprava dokumentů klíčová jak pro firmy, tak pro jednotlivce. Ať už automatizujete generování reportů, přizpůsobujete šablony za běhu, nebo jen potřebujete vědět, jak upravit word, zvládnutí manipulace s dokumenty může výrazně zvýšit produktivitu. Tento průvodce vás provede používáním GroupDocs.Editor pro Javu k načtení, úpravě a uložení souborů Word a Excel s jistotou.
+
+**What You'll Learn**
+- Jak načíst a upravit dokumenty Word processing s výchozími a vlastními možnostmi (how to edit word).  
+- Jak **how to edit excel** tabulky, zaměřené na konkrétní listy (edit excel java).  
 - Praktické aplikace, jako je automatizované generování reportů a přizpůsobení šablon.  
-- Tipy na optimalizaci výkonu v Javě, aby vaše aplikace zůstala responzivní.  
+- Tipy na optimalizaci výkonu v Javě, včetně toho, jak **disable pagination word** pro velké soubory.  
 
-Jste připraveni ponořit se do světa automatizované úpravy dokumentů? Pojďme začít!
+Připraveni ponořit se do světa automatizované úpravy dokumentů? Pojďme na to!
 
-## Rychlé odpovědi
-- **Která knihovna umožňuje jak upravit Excel v Javě?** GroupDocs.Editor for Java.  
+## Quick Answers
+- **Jaká knihovna umožňuje **how to edit excel** v Javě?** GroupDocs.Editor for Java.  
 - **Mohu upravit konkrétní list Excelu bez načtení celého sešitu?** Ano, pomocí `SpreadsheetEditOptions.setWorksheetIndex()`.  
-- **Jak extrahovat všechna vložená písma z Word dokumentu?** Nastavte `FontExtractionOptions.ExtractAllEmbedded` v `WordProcessingEditOptions`.  
-- **Jaká je nejlepší praxe pro optimalizaci výkonu v Javě při práci s velkými soubory?** Okamžitě uvolněte objekty `EditableDocument` a `Editor` a pokud možno znovu použijte možnosti načítání.  
+- **Jak extrahovat všechny vložené fonty z Word dokumentu?** Nastavte `FontExtractionOptions.ExtractAllEmbedded` v `WordProcessingEditOptions`.  
+- **Jaká je nejlepší praxe pro optimalizaci výkonu v Javě při práci s velkými soubory?** Okamžitě uvolněte objekty `EditableDocument` a `Editor` a pokud možno znovu použijte možnosti načtení.  
 - **Je licence vyžadována pro produkční použití?** Plná licence GroupDocs.Editor se doporučuje pro produkční nasazení.
 
-## Požadavky
-Než začneme, ujistěte se, že máte následující:
+## Why edit Excel and Word files in Java?
+Úprava dokumentů přímo z Javy vám umožní vytvořit end‑to‑end workflow: generovat faktury, aktualizovat smlouvy nebo vytvářet dynamické dashboardy bez ručního zásahu. S GroupDocs.Editor můžete **generate excel report java**, extrahovat fonty a dokonce **disable pagination word**, aby byl nízký odběr paměti.
 
-### Požadované knihovny a závislosti
+## Prerequisites
+Before we begin, ensure you have the following:
+
+### Required Libraries and Dependencies
 - **GroupDocs.Editor for Java** (verze 25.3 nebo novější).  
 - **Java Development Kit (JDK)** 8 nebo vyšší.
 
-### Požadavky na nastavení prostředí
-- IDE jako IntelliJ IDEA nebo Eclipse.  
+### Environment Setup Requirements
+- IDE, jako je IntelliJ IDEA nebo Eclipse.  
 - Základní znalost konceptů programování v Javě.
 
-## Nastavení GroupDocs.Editor pro Java
-Pro integraci GroupDocs.Editor do vašeho projektu postupujte podle těchto kroků:
+## Setting Up GroupDocs.Editor for Java
+To integrate GroupDocs.Editor in your project, follow these steps:
 
 **Maven**  
-Přidejte následující do souboru `pom.xml`:
+Add the following to your `pom.xml` file:
 ```xml
 <repositories>
    <repository>
@@ -69,19 +76,20 @@ Přidejte následující do souboru `pom.xml`:
 </dependencies>
 ```
 
-**Přímé stažení**  
-Alternativně stáhněte knihovnu z [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+**Direct Download**  
+Přímé stažení  
+Alternatively, download the library from [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-### Získání licence
+### License Acquisition
 - **Free Trial** – začněte prozkoumávat funkce bez závazku.  
-- **Temporary License** – prodlužte dobu hodnocení, pokud je potřeba.  
-- **Full License** – doporučeno pro produkční použití k odemknutí všech možností.
+- **Temporary License** – prodlužte dobu hodnocení podle potřeby.  
+- **Full License** – doporučeno pro produkční použití k odemčení všech funkcí.
 
-## Jak upravit Word dokument v Javě
-Níže jsou tři běžné způsoby práce se soubory Word.
+## How to Edit Word Document in Java
+Below are three common ways to work with Word files.
 
-### Načtení a úprava Word dokumentu s výchozími možnostmi
-**Přehled:** Načtěte soubor DOCX pomocí výchozího nastavení a získejte editovatelnou instanci.
+### Load and Edit Word Processing Document with Default Options
+**Overview:** Load a DOCX file using the default settings and obtain an editable instance.
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.EditableDocument;
@@ -95,12 +103,12 @@ EditableDocument defaultWordProcessingDoc = editor1.edit();
 defaultWordProcessingDoc.dispose();
 editor1.dispose();
 ```
-**Klíčové parametry**
+**Key Parameters**
 - `inputFilePath` – cesta k vašemu Word dokumentu.  
 - `WordProcessingLoadOptions()` – načte dokument s výchozími možnostmi.
 
-### Úprava Word dokumentu s vlastními možnostmi
-**Přehled:** Zakázat stránkování, povolit extrakci informací o jazyce a extrahovat všechna vložená písma.
+### Edit Word Processing Document with Custom Options
+**Overview:** Disable pagination, enable language information extraction, and extract all embedded fonts.
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.EditableDocument;
@@ -121,13 +129,13 @@ EditableDocument editableDoc = editor1.edit(options);
 editableDoc.dispose();
 editor1.dispose();
 ```
-**Klíčové konfigurační možnosti**
-- `setEnablePagination(false)` – zakáže stránkování pro rychlejší úpravy.  
-- `setEnableLanguageInformation(true)` – extrahuje metadata o jazyce.  
-- `setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)` – **extrahovat vložená písma** pro plnou věrnost.
+**Key Configuration Options**
+- `setEnablePagination(false)` – vypne stránkování pro rychlejší úpravy (toto je způsob, jak **disable pagination word**).  
+- `setEnableLanguageInformation(true)` – extrahuje jazyková metadata.  
+- `setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)` – **extract embedded fonts** pro plnou věrnost.
 
-### Úprava Word dokumentu s další konfigurací
-**Přehled:** Povolit informace o jazyce a zároveň extrahovat všechna vložená písma pomocí zkratky konstruktoru.
+### Edit Word Processing Document with Another Configuration
+**Overview:** Enable language information while extracting all embedded fonts using a constructor shortcut.
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.EditableDocument;
@@ -146,11 +154,11 @@ editableDoc.dispose();
 editor1.dispose();
 ```
 
-## Jak upravit Excel soubory v Javě
-GroupDocs.Editor vám umožňuje cílit na jednotlivé listy, což je ideální pro scénáře **jak upravit Excel**, kde potřebujete upravit jen jeden list.
+## How to Edit Excel Files in Java
+GroupDocs.Editor lets you target individual worksheets, which is perfect for **how to edit excel** scenarios where you only need to modify a single tab.
 
-### Načtení a úprava Spreadsheet dokumentu (první list)
-**Přehled:** Upravit první list (index 0) Excel souboru.
+### Load and Edit Spreadsheet Document (First Tab)
+**Overview:** Edit the first worksheet (index 0) of an Excel file.
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.EditableDocument;
@@ -170,8 +178,8 @@ editableDoc.dispose();
 editor2.dispose();
 ```
 
-### Načtení a úprava Spreadsheet dokumentu (druhý list)
-**Přehled:** Upravit druhý list (index 1) stejného sešitu.
+### Load and Edit Spreadsheet Document (Second Tab)
+**Overview:** Edit the second worksheet (index 1) of the same workbook.
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.EditableDocument;
@@ -191,46 +199,47 @@ editableDoc.dispose();
 editor2.dispose();
 ```
 
-## Praktické aplikace
-- **Automated Report Generation** – generovat měsíční výkonnostní reporty programovým vyplněním Excel šablon.  
-- **Template Customization** – upravovat Word smlouvy nebo faktury za běhu na základě vstupu uživatele.  
-- **Data Consolidation** – sloučit data z více tabulek bez načtení celého sešitu do paměti, zlepšující **optimalizaci výkonu v Javě**.  
-- **CRM Integration** – automaticky aktualizovat zákaznické dokumenty uložené v CRM systému.
+## Practical Applications
+- **Automatizované generování reportů** – generovat měsíční výkonnostní reporty programově vyplněním Excel šablon (**generate excel report java**).  
+- **Přizpůsobení šablon** – upravit Word smlouvy nebo faktury za běhu na základě vstupu uživatele (**how to edit word**).  
+- **Konsolidace dat** – sloučit data z více tabulek bez načtení celého sešitu do paměti, zlepšuje **performance optimization Java**.  
+- **Integrace s CRM** – automaticky aktualizovat zákaznické dokumenty uložené v CRM systému.
 
-## Úvahy o výkonu
-Aby vaše Java aplikace zůstala responzivní při práci s velkými dokumenty:
+## Performance Considerations
+To keep your Java application responsive when working with large documents:
 
-1. **Dispose objects promptly** – zavolejte `dispose()` na `EditableDocument` a `Editor` ihned po dokončení.  
-2. **Reuse load options** – vytvořte jedinou instanci `WordProcessingLoadOptions` nebo `SpreadsheetLoadOptions` a předávejte ji více editorům.  
-3. **Target specific worksheets** – úprava pouze potřebného listu snižuje paměťovou náročnost (viz příklady **jak upravit Excel** výše).  
-4. **Avoid unnecessary pagination** – zakázání stránkování (`setEnablePagination(false)`) urychluje zpracování velkých Word souborů.
+1. **Okamžitě uvolňujte objekty** – zavolejte `dispose()` na `EditableDocument` a `Editor`, jakmile skončíte.  
+2. **Znovu použijte možnosti načtení** – vytvořte jedinou instanci `WordProcessingLoadOptions` nebo `SpreadsheetLoadOptions` a předávejte ji více editorům.  
+3. **Zaměřte se na konkrétní listy** – úprava jen potřebného listu snižuje paměťovou náročnost (viz příklady **how to edit excel** výše).  
+4. **Vyhněte se zbytečnému stránkování** – vypnutí stránkování (`setEnablePagination(false)`) zrychluje zpracování velkých Word souborů (**disable pagination word**).
 
-## Závěr
-Nyní máte solidní základy pro **jak upravit Excel** a Word dokumenty v Javě pomocí GroupDocs.Editor. Využitím vlastních možností načítání a úpravy, extrahováním vložených písem a aplikací výkonově zaměřených postupů můžete vytvořit robustní, automatizované pracovní toky s dokumenty, které jsou škálovatelné.
+## Common Issues and Solutions
+| Problém | Řešení |
+|-------|----------|
+| **OutOfMemoryError on large files** | Ujistěte se, že **disable pagination word** a upravujete jen požadované listy. |
+| **Fonts not appearing after edit** | Použijte `FontExtractionOptions.ExtractAllEmbedded` k načtení všech vložených fontů. |
+| **License exception** | Ověřte, že platný soubor licence GroupDocs.Editor je umístěn v classpath aplikace. |
+| **Incorrect worksheet edited** | Zkontrolujte index předávaný do `setWorksheetIndex()`; indexy začínají od 0. |
 
-**Další kroky**
-- Experimentujte s různými `WordProcessingEditOptions` pro jemné doladění vašeho editačního zážitku.  
-- Prozkoumejte další funkce GroupDocs.Editor, jako je konverze dokumentů nebo ochrana.  
-- Integrujte logiku úprav do vašich existujících služeb nebo mikro‑servisní architektury.
+## Frequently Asked Questions
 
-## Často kladené otázky
-
-**Q: Je GroupDocs.Editor kompatibilní se všemi Word formáty?**  
-A: Ano, podporuje DOCX, DOCM, DOC a další běžné Word formáty.
+**Q: Je GroupDocs.Editor kompatibilní se všemi formáty Word?**  
+A: Ano, podporuje DOCX, DOCM, DOC a další běžné formáty Word.
 
 **Q: Mohu upravit Excel soubor bez načtení celého sešitu do paměti?**  
-A: Rozhodně. Nastavením `SpreadsheetEditOptions.setWorksheetIndex()` upravujete jen vybraný list, což je ideální pro úkoly **jak upravit Excel**.
+A: Absolutně. Nastavením `SpreadsheetEditOptions.setWorksheetIndex()` upravujete jen vybraný list, což je ideální pro úkoly **how to edit excel**.
 
-**Q: Jak extrahovat všechna vložená písma z Word dokumentu?**  
+**Q: Jak extrahovat všechny vložené fonty z Word dokumentu?**  
 A: Použijte `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)` jak je ukázáno v příkladu vlastních možností.
 
 **Q: Jaké jsou nejlepší postupy pro optimalizaci výkonu v Javě při práci s velkými dokumenty?**  
-A: Okamžitě uvolněte objekty `EditableDocument` a `Editor`, zaměřte se na konkrétní listy a zakázat stránkování, pokud není potřeba.
+A: Okamžitě uvolňujte objekty `EditableDocument` a `Editor`, zaměřujte se na konkrétní listy a **disable pagination word**, když není potřeba.
 
 **Q: Potřebuji licenci pro produkční použití?**  
-A: Ano, plná licence GroupDocs.Editor je vyžadována pro produkční nasazení, aby odemkla všechny funkce a poskytla podporu.
+A: Ano, plná licence GroupDocs.Editor je vyžadována pro produkční nasazení k odemčení všech funkcí a získání podpory.
 
 ---
-**Poslední aktualizace:** 2025-12-20  
-**Testováno s:** GroupDocs.Editor 25.3 pro Java  
+
+**Poslední aktualizace:** 2026-02-21  
+**Testováno s:** GroupDocs.Editor 25.3 for Java  
 **Autor:** GroupDocs
