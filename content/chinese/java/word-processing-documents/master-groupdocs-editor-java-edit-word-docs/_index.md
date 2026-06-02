@@ -1,19 +1,28 @@
 ---
-title: "Programmatically Edit DOCX with GroupDocs.Editor Java: A Complete Guide"
-description: "Learn how to programmatically edit docx files using GroupDocs.Editor for Java, convert docx to html, and edit word document java examples."
-date: "2026-02-26"
-weight: 1
-url: "/java/word-processing-documents/master-groupdocs-editor-java-edit-word-docs/"
+date: '2026-02-26'
+description: 学习如何使用 GroupDocs.Editor for Java 以编程方式编辑 docx 文件、将 docx 转换为 html，以及编辑
+  Word 文档的 Java 示例。
 keywords:
 - GroupDocs.Editor Java
 - edit Word documents with Java
 - Java document management
+title: 使用 GroupDocs.Editor Java 编程编辑 DOCX：完整指南
 type: docs
+url: /zh/java/word-processing-documents/master-groupdocs-editor-java-edit-word-docs/
+weight: 1
 ---
+
+Let's produce Chinese translation.
+
+We'll keep headings same (#, ##). Translate text after headings.
+
+Make sure to keep bold formatting (**text**) and inline code formatting (`code`). Also keep bullet points.
+
+Proceed.
 
 # Programmatically Edit DOCX with GroupDocs.Editor for Java
 
-**Unlock the full potential of document management by learning how to programmatically edit docx files** using GroupDocs.Editor in Java. Whether you need to convert docx to html, generate an editable document, or edit password‑protected docx files, this guide walks you through every step—from setup to real‑world usage—so you can streamline your workflow and boost productivity.
+**通过学习如何在 Java 中使用 GroupDocs.Editor 编程编辑 docx 文件，释放文档管理的全部潜能**。无论您需要将 docx 转换为 html、生成可编辑文档，还是编辑受密码保护的 docx 文件，本指南将从设置到实际使用的每一步为您详细演示，帮助您简化工作流并提升生产力。
 
 ## Quick Answers
 - **What library lets you programmatically edit docx in Java?** GroupDocs.Editor for Java.  
@@ -201,5 +210,3 @@ A: Load the template with `Editor`, apply `WordProcessingEditOptions`, and retri
 - [Free Trial](https://releases.groupdocs.com/editor/java/)
 - [Temporary License](https://purchase.groupdocs.com/temporary-license)
 - [Support Forum](https://forum.groupdocs.com/c/editor/)
-
----
