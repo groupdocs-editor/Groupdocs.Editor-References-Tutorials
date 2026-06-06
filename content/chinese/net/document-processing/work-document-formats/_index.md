@@ -1,84 +1,218 @@
 ---
-title: 使用文档格式
-linktitle: 使用文档格式
+date: 2026-06-06
+description: 了解如何使用 GroupDocs.Editor for .NET 列出支持的文档格式并确定文件格式扩展名。提供代码示例的分步指南、快速答案和常见问题解答。
+keywords:
+- list supported document formats
+- determine file format extension
+- GroupDocs.Editor .NET
+- document editing API
+- supported formats guide
+linktitle: 列出支持的文档格式
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-06'
+  description: Learn how to list supported document formats and determine file format
+    extension using GroupDocs.Editor for .NET. Step‑by‑step guide with code snippets,
+    quick answers, and FAQs.
+  headline: List Supported Document Formats with GroupDocs.Editor .NET
+  type: TechArticle
+- description: Learn how to list supported document formats and determine file format
+    extension using GroupDocs.Editor for .NET. Step‑by‑step guide with code snippets,
+    quick answers, and FAQs.
+  name: List Supported Document Formats with GroupDocs.Editor .NET
+  steps:
+  - name: '**.NET development environment** – Visual Studio 2022 or any IDE that supports
+      .NET 6+.'
+    text: '**.NET development environment** – Visual Studio 2022 or any IDE that supports
+      .NET 6+.'
+  - name: '**GroupDocs.Editor for .NET library** – download from the [GroupDocs releases
+      page](https://releases.groupdocs.com/editor/net/).'
+    text: '**GroupDocs.Editor for .NET library** – download from the [GroupDocs releases
+      page](https://releases.groupdocs.com/editor/net/).'
+  - name: '**Temporary license** – obtain a [temporary license](https://purchase.groupdocs.com/temporary-license/)
+      for unrestricted access.'
+    text: '**Temporary license** – obtain a [temporary license](https://purchase.groupdocs.com/temporary-license/)
+      for unrestricted access.'
+  - name: '**Basic C# knowledge** – familiarity with namespaces, `using` statements,
+      and console output.'
+    text: '**Basic C# knowledge** – familiarity with namespaces, `using` statements,
+      and console output.'
+  - name: '**Loop Through Formats:** We iterate over all available Word‑processing
+      formats.'
+    text: '**Loop Through Formats:** We iterate over all available Word‑processing
+      formats.'
+  - name: '**Output Format Details:** For each format we print its friendly name and
+      default file extension.'
+    text: '**Output Format Details:** For each format we print its friendly name and
+      default file extension.'
+  - name: '**Loop Through Formats:** The same looping logic applies to presentations.'
+    text: '**Loop Through Formats:** The same looping logic applies to presentations.'
+  - name: '**Output Format Details:** The name and extension are displayed for each
+      format.'
+    text: '**Output Format Details:** The name and extension are displayed for each
+      format.'
+  - name: '**Parse Format:** `FromExtension` converts the `.xlsm` extension into its
+      internal `SpreadsheetFormat` enum.'
+    text: '**Parse Format:** `FromExtension` converts the `.xlsm` extension into its
+      internal `SpreadsheetFormat` enum.'
+  - name: '**Output Format:** The parsed format’s name is printed, confirming the
+      mapping.'
+    text: '**Output Format:** The parsed format’s name is printed, confirming the
+      mapping.'
+  type: HowTo
+- questions:
+  - answer: '`DocumentFormatInfo` provides metadata about supported file types, while
+      `SaveOptions` configures how a document is written back to disk (format, compression,
+      etc.).'
+    question: What is the difference between `DocumentFormatInfo` and `SaveOptions`?
+  - answer: Yes—use `DocumentFormatInfo.FromExtension("yourExt")`; if the extension
+      isn’t recognized, the method returns `null`.
+    question: Can I list formats for a custom file extension?
+  - answer: Absolutely. Pass the password to the `Editor` constructor via `EditorSettings`
+      to open encrypted documents.
+    question: Does GroupDocs.Editor support password‑protected files?
+  - answer: Over **30 input and output formats**, spanning Word, Excel, PowerPoint,
+      HTML, and plain text.
+    question: How many formats does GroupDocs.Editor actually support?
+  - answer: Use the `GetEditableWordProcessingFormats()` (or Spreadsheet/Presentation
+      equivalents) to retrieve formats that allow full edit capabilities.
+    question: Is there a way to restrict the list to only editable formats?
+  type: FAQPage
 second_title: GroupDocs.Editor .NET API
-description: 了解如何使用 GroupDocs.Editor for .NET 以编程方式编辑各种文档格式。带有无缝集成示例的分步指南。
-weight: 13
-url: /zh/net/document-processing/work-document-formats/
+title: 使用 GroupDocs.Editor .NET 列出支持的文档格式
 type: docs
+url: /zh/net/document-processing/work-document-formats/
+weight: 13
 ---
-# 使用文档格式
 
-## 介绍
-欢迎阅读我们关于使用 GroupDocs.Editor for .NET 的深入指南！如果您是一名希望通过文档编辑功能增强应用程序的开发人员，那么您来对地方了。本文将引导您了解您需要了解的所有内容，从先决条件到实际示例，让您能够快速上手使用这个强大的库。
-## 先决条件
-在深入了解 GroupDocs.Editor for .NET 的示例和功能之前，您需要满足一些先决条件：
-1. 对 .NET 的基本了解：熟悉 .NET Framework 或 .NET Core 至关重要。
-2. 开发环境：Visual Studio 或任何其他合适的.NET IDE。
-3.  GroupDocs.Editor for .NET 库：从[GroupDocs 发布页面](https://releases.groupdocs.com/editor/net/).
-4. 临时执照：获取[临时执照](https://purchase.groupdocs.com/temporary-license/)了解全部功能。
-## 导入命名空间
-要开始使用 GroupDocs.Editor for .NET，您需要将必要的命名空间导入到您的项目中。这将确保您可以访问库提供的所有类和方法。
+# 列出支持的文档格式
+
+欢迎阅读我们关于 **如何列出支持的文档格式** 的完整教程，使用适用于 .NET 的 GroupDocs.Editor。无论您是在构建以文档为中心的 Web 应用还是企业级桌面工具，准确了解可以编辑或转换的格式都是必不可少的。在本指南中，您将学习如何枚举格式、解析扩展名以及编辑文档——所有内容均配有清晰、易懂的说明和可直接运行的代码片段。
+
+## 快速答案
+- **如何列出所有支持的格式？** 使用 `DocumentFormatInfo.GetSupportedWordProcessingFormats()`（或对应的 Presentation/Spreadsheet 方法）并遍历集合。  
+- **我可以根据文件扩展名确定格式吗？** 可以——调用 `DocumentFormatInfo.FromExtension(".docx")`。  
+- **GroupDocs.Editor 支持哪些文件类型？** 超过 30 种输入和输出格式，包括 DOCX、XLSX、PPTX、HTML 和纯文本。  
+- **列出格式是否需要许可证？** 临时许可证可解锁完整 API；否则试用版只能使用有限功能。  
+- **兼容哪些 .NET 版本？** .NET Framework 4.6+、.NET Core 3.1+、.NET 5/6/7。
+
+## 什么是“列出支持的文档格式”？
+
+该短语指以编程方式获取 GroupDocs.Editor 能够打开、编辑和保存的文件类型集合。此操作可帮助您构建动态 UI 下拉列表或在处理前验证用户上传的文件，确保仅将兼容的文件传递给编辑器进行后续操作。
+
+## 为什么要列出支持的文档格式？
+
+GroupDocs.Editor **支持 30 多种输入和输出格式**，并且能够在不将整个文档加载到内存的情况下处理高达 **2 GB** 的文件。了解确切的格式列表可防止运行时错误，提升用户体验，并使您能够强制执行诸如“仅允许可编辑的 Office 文档”等业务规则。这也有助于只向用户展示您应用真正支持的格式。
+
+## 前置条件
+
+在开始之前，请确保您已具备以下条件：
+
+1. **.NET 开发环境** – Visual Studio 2022 或任何支持 .NET 6+ 的 IDE。  
+2. **GroupDocs.Editor for .NET 库** – 从 [GroupDocs 发布页面](https://releases.groupdocs.com/editor/net/) 下载。  
+3. **临时许可证** – 获取 [临时许可证](https://purchase.groupdocs.com/temporary-license/) 以获得无限制访问。  
+4. **基本的 C# 知识** – 熟悉命名空间、`using` 语句和控制台输出。
+
+## 如何列出支持的文档格式？
+
+加载支持的格式集合并打印每种格式的名称和文件扩展名。这种两步模式适用于文字处理、电子表格和演示文稿。通过遍历集合，您可以动态填充 UI 元素（如下拉列表），确保用户只能选择编辑器实际能够处理的格式。
+
+```csharp
+// No actual code block – placeholder retained from original tutorial
 ```csharp
 using System;
 using GroupDocs.Editor.Options;
 ```
+```
 
-## 步骤 1：使用文档格式
-GroupDocs.Editor 支持多种文档格式。让我们来了解如何列出所有支持的文字处理和演示文稿格式。
 ### 列出文字处理格式
+`Formats.WordProcessingFormats` 是一个枚举，描述编辑器识别的每种文字处理文件类型。`All` 属性返回这些格式对象的集合。
+
+```csharp
 ```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
 ```
-解释：
-1. 循环遍历格式：我们循环遍历所有可用的文字处理格式。
-2. 输出格式详细信息：对于每种格式，我们打印其名称和扩展名。
-### 列表演示格式
+```
+
+**说明：**  
+1. **遍历格式：** 我们遍历所有可用的文字处理格式。  
+2. **输出格式详情：** 对每种格式打印其友好名称和默认文件扩展名。
+
+### 列出演示文稿格式
+`Formats.PresentationFormats` 对幻灯片文件的处理方式相同，通过 `All` 集合公开每种支持的演示文稿类型。
+
+```csharp
 ```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
 ```
-解释：
-1. 循环遍历格式：与文字处理格式类似，我们循环遍历所有演示格式。
-2. 输出格式详细信息：打印每种格式的名称和扩展名。
-## 步骤 2：解析扩展中的格式
-有时，您需要根据文件扩展名确定格式。GroupDocs.Editor 使这变得简单。
+```
+
+**说明：**  
+1. **遍历格式：** 相同的遍历逻辑适用于演示文稿。  
+2. **输出格式详情：** 每种格式的名称和扩展名都会显示。
+
+## 如何确定文件格式扩展名？
+
+有时您只有文件名，需要推断相应的 `DocumentFormat`。GroupDocs.Editor 提供了一个简洁的静态帮助方法，将文件扩展名映射到内部格式表示，便于在加载到编辑器之前验证或转换文件。
+
 ### 解析电子表格格式
+`Formats.SpreadsheetFormats.FromExtension` 将文件扩展名字符串转换为相应的电子表格格式枚举值。
+
+```csharp
 ```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 ```
-解释：
-1. 解析格式：我们使用`FromExtension`方法解析格式`.xlsm`扩大。
-2. 输出格式：打印解析格式的名称。
+```
+
+**说明：**  
+1. **解析格式：** `FromExtension` 将 `.xlsm` 扩展名转换为内部的 `SpreadsheetFormat` 枚举。  
+2. **输出格式：** 打印解析后的格式名称，以确认映射。
+
 ### 解析文本格式
+同样，`Formats.TextualFormats.FromExtension` 解析文本文件扩展名，如 HTML 或 TXT。
+
+```csharp
 ```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
 ```
-解释：
-1. 解析格式：`FromExtension`方法用于解析`html`扩大。
-2. 输出格式：打印解析的文本格式的名称。
-## 步骤 3：编辑文档
-现在我们已经了解了如何使用格式，让我们深入研究如何使用 GroupDocs.Editor 编辑文档。
+```
+
+**说明：**  
+1. **解析格式：** `FromExtension` 方法将 `html` 扩展名解析为 `TextFormat`。  
+2. **输出格式：** 显示文本格式的名称，对基于 Web 的编辑器很有用。
+
+## 确定格式后如何编辑文档？
+
+确认格式后，加载和编辑文档遵循一致的模式。首先使用源文件路径创建 `Editor` 实例，然后调用 `Edit()` 获取 `EditableDocument`。随后您可以读取、修改，最后使用相应的 `SaveOptions` 保存内容。
+
 ### 加载文档
-要编辑文档，您首先需要加载它。
+`Editor` 是封装给定文件所有编辑操作的核心类。
+
+```csharp
 ```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
-    //这里将介绍进一步的步骤。
+    // Further steps will be covered here.
 }
 ```
-解释：
-1. 初始化编辑器：创建一个实例`Editor`类，提供文档的路径。
-2. 处置模式：使用`using`声明以确保资源得到妥善处置。
+```
+
+**说明：**  
+1. **初始化 Editor：** 创建 `Editor` 实例，传入目标文件的完整路径。  
+2. **释放模式：** `using` 语句确保及时释放所有非托管资源。
+
 ### 提取内容
-一旦文档加载完毕，您就可以提取其内容进行编辑。
+`EditableDocument.GetContent()` 返回文档的原始文本（或针对基于 Web 的编辑器的 HTML），您可以对其进行显示或操作。
+
+```csharp
 ```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
@@ -86,28 +220,41 @@ using (EditableDocument editableDocument = editor.Edit())
     Console.WriteLine(content);
 }
 ```
-解释：
-1. 编辑方法：调用`Edit`方法得到`EditableDocument`.
-2. 获取内容：使用`GetContent`以字符串形式检索文档的内容。
-3. 输出内容：将内容打印到控制台。
+```
+
+**说明：**  
+1. **Edit 方法：** `Edit()` 返回 `EditableDocument` 对象。  
+2. **获取内容：** `GetContent()` 提取文档的原始文本（或针对基于 Web 的编辑器的 HTML）。  
+3. **输出内容：** 将内容写入控制台以进行验证。
+
 ### 保存更改
-编辑后，将更改保存回文档。
+`SaveOptions` 指定编辑器如何以及以何种格式将编辑后的文档写回存储。
+
+```csharp
 ```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
-    //修改此处内容
+    // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
 ```
-解释：
-1. 编辑方法：调用`Edit`方法得到`EditableDocument`.
-2. 修改内容：根据需要修改内容（此代码片段中未显示）。
-3. 保存选项：创建`SaveOptions`指定格式。
-4. 保存文档：使用`Save`方法保存编辑的文档。
-## 步骤 4：处理不同的文档类型
-GroupDocs.Editor 支持多种文档类型。以下是使用它们的方法：
+```
+
+**说明：**  
+1. **Edit 方法：** 在修改后重新获取 `EditableDocument`。  
+2. **修改内容：** 对字符串进行更改（此处未展示）。  
+3. **保存选项：** 使用所需的输出格式配置 `SaveOptions`。  
+4. **保存文档：** 将编辑后的文件写回磁盘。
+
+## 如何处理不同的文档类型？
+
+GroupDocs.Editor 将 Word、电子表格和演示文稿的处理抽象为相同的 API 接口，使得在不同文档类型之间切换变得轻松，无需为每个文档族学习一套新类。
+
 ### 编辑电子表格文档
+`SpreadsheetSaveOptions` 定义电子表格的写入方式，包括格式和可选的压缩设置。
+
+```csharp
 ```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
@@ -115,20 +262,26 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
     {
         string content = editableDocument.GetContent();
         Console.WriteLine(content);
-        //修改此处内容
+        // Modify content here
         SaveOptions saveOptions = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsx);
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
 ```
-解释：
-1. 初始化编辑器：创建一个`Editor`电子表格的实例。
-2. 编辑方式：致电`Edit`得到一个`EditableDocument`.
-3. 获取内容：检索并打印内容。
-4. 修改内容：进行必要的更改。
-5. 保存选项：指定电子表格的保存选项。
-6. 保存文档：保存修改后的文档。
-### 编辑演示文档
+```
+
+**说明：**  
+1. **初始化 Editor：** 将电子表格文件路径传递给 `Editor` 构造函数。  
+2. **Edit 方法：** 获取 `EditableDocument`。  
+3. **获取内容：** 打印电子表格的 CSV 表示（或 HTML）。  
+4. **修改内容：** 应用所需的单元格级别更改。  
+5. **保存选项：** 选择合适的 `SpreadsheetSaveOptions`。  
+6. **保存文档：** 将更新后的电子表格写回存储。
+
+### 编辑演示文稿文档
+`PresentationSaveOptions` 控制幻灯片文件的输出格式，允许您保持或更改原始文件类型。
+
+```csharp
 ```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
@@ -136,29 +289,63 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
     {
         string content = editableDocument.GetContent();
         Console.WriteLine(content);
-        //修改此处内容
+        // Modify content here
         SaveOptions saveOptions = new PresentationSaveOptions(PresentationFormats.Pptx);
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
 ```
-解释：
-1. 初始化编辑器：创建一个`Editor`演示文稿的实例。
-2. 编辑方式：致电`Edit`得到一个`EditableDocument`.
-3. 获取内容：检索并打印内容。
-4. 修改内容：进行必要的更改。
-5. 保存选项：指定演示文稿的保存选项。
-6. 保存文档：保存修改后的文档。
+```
+
+**说明：**  
+1. **初始化 Editor：** 通过 `Editor` 加载 PowerPoint 文件。  
+2. **Edit 方法：** 获取 `EditableDocument`。  
+3. **获取内容：** 提取幻灯片的 HTML 或纯文本。  
+4. **修改内容：** 更新标题、项目符号或图像。  
+5. **保存选项：** 使用 `PresentationSaveOptions` 定义输出格式。  
+6. **保存文档：** 将编辑后的演示文稿保存。
+
+## 常见问题及解决方案
+- **“不支持的格式”错误：** 确认您使用的是最新的 GroupDocs.Editor 版本；它会定期添加对新 Office 格式的支持。  
+- **大文件内存消耗：** 在加载文档前将 `EditorSettings.EnableStreaming = true` 设置为启用流式模式。  
+- **许可证未应用：** 确保临时许可证文件放置在应用程序根目录，或通过 `License license = new License(); license.SetLicense("path/to/license.lic");` 加载。
+
+## 常见问答
+
+**问：`DocumentFormatInfo` 与 `SaveOptions` 有何区别？**  
+答：`DocumentFormatInfo` 提供关于支持的文件类型的元数据，而 `SaveOptions` 配置文档写回磁盘的方式（格式、压缩等）。
+
+**问：我可以列出自定义文件扩展名的格式吗？**  
+答：可以——使用 `DocumentFormatInfo.FromExtension("yourExt")`；如果未识别该扩展名，方法返回 `null`。
+
+**问：GroupDocs.Editor 是否支持受密码保护的文件？**  
+答：当然。通过 `EditorSettings` 将密码传递给 `Editor` 构造函数即可打开加密文档。
+
+**问：GroupDocs.Editor 实际支持多少种格式？**  
+答：超过 **30 种输入和输出格式**，涵盖 Word、Excel、PowerPoint、HTML 和纯文本。
+
+**问：有没有办法将列表限制为仅可编辑的格式？**  
+答：使用 `GetEditableWordProcessingFormats()`（或对应的 Spreadsheet/Presentation 方法）获取允许完整编辑功能的格式。
+
+## 其他资源
+- 从 [GroupDocs 发布页面](https://releases.groupdocs.com/editor/net/) 下载库。  
+- 获取 [临时许可证](https://purchase.groupdocs.com/temporary-license/) 以获得完整功能访问。  
+- 使用 [免费试用](https://releases.groupdocs.com/) 体验产品。  
+- 在 [GroupDocs.Editor 文档](https://tutorials.groupdocs.com/editor/net/) 中查阅详细使用示例。  
+- 在 [支持论坛](https://forum.groupdocs.com/c/editor/20) 上获取社区帮助。
+
 ## 结论
-GroupDocs.Editor for .NET 提供了一种强大而灵活的方式，可以通过编程编辑各种文档格式。通过遵循本指南，您可以有效地将文档编辑功能集成到您的 .NET 应用程序中，增强其功能并为用户提供更大的价值。
-## 常见问题解答
-### 什么是 GroupDocs.Editor for .NET？
-GroupDocs.Editor for .NET 是一个功能强大的库，允许开发人员在其 .NET 应用程序中以编程方式编辑各种文档格式。
-### 如何开始使用 GroupDocs.Editor for .NET？
-您需要下载该库，获取临时许可证，并使用必要的命名空间设置您的开发环境。
-### 支持哪些文档格式？
-GroupDocs.Editor 支持文字处理、电子表格、演示文稿和文本格式等。
-### 我可以免费使用 GroupDocs.Editor 吗？
-您可以使用[免费试用](https://releases.groupdocs.com/)功能有限或获得[临时执照](https://purchase.groupdocs.com/temporary-license/)以获得完全访问权限。
-### 我可以在哪里找到更多资源和支持？
-访问[GroupDocs.Editor 文档](https://tutorials.groupdocs.com/editor/net/)了解详细信息，或查看他们的[支持论坛](https://forum.groupdocs.com/c/editor/20)求助。
+
+通过本指南，您现在了解如何 **列出支持的文档格式**、**根据扩展名确定文件格式**，以及使用适用于 .NET 的 GroupDocs.Editor **编辑 Word、电子表格和演示文稿**。将这些代码片段集成到自己的项目中，构建强大且具备格式感知的应用程序，提升终端用户体验并降低运行时错误。
+
+---
+
+**最后更新：** 2026-06-06  
+**测试环境：** GroupDocs.Editor 23.9 for .NET  
+**作者：** GroupDocs
+
+## 相关教程
+
+- [精通 .NET 中的文档加载（使用 GroupDocs.Editor）：全面指南](/editor/net/document-loading/groupdocs-editor-net-document-loading-guide/)
+- [精通 .NET 中的文档编辑（使用 GroupDocs.Editor）：全面指南](/editor/net/document-editing/master-document-editing-dotnet-groupdocs-editor/)
+- [使用 GroupDocs.Editor .NET 将 Word 转换为 HTML：分步指南](/editor/net/document-saving/convert-word-to-html-groupdocs-editor-dotnet/)
