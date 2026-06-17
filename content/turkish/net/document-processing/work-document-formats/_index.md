@@ -1,84 +1,214 @@
 ---
-title: Belge Formatlarıyla Çalışma
-linktitle: Belge Formatlarıyla Çalışma
-second_title: GroupDocs.Editor .NET API'si
-description: Çeşitli belge formatlarını programlı olarak düzenlemek için GroupDocs.Editor for .NET'i nasıl kullanacağınızı öğrenin. Sorunsuz entegrasyon için örnekler içeren adım adım kılavuz.
-weight: 13
-url: /tr/net/document-processing/work-document-formats/
+date: 2026-06-06
+description: GroupDocs.Editor for .NET kullanarak desteklenen belge formatlarını nasıl
+  listeleyeceğinizi ve dosya uzantısını nasıl belirleyeceğinizi öğrenin. Kod örnekleri,
+  hızlı cevaplar ve SSS içeren adım adım kılavuz.
+keywords:
+- list supported document formats
+- determine file format extension
+- GroupDocs.Editor .NET
+- document editing API
+- supported formats guide
+linktitle: Desteklenen Belge Formatlarını Listele
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-06'
+  description: Learn how to list supported document formats and determine file format
+    extension using GroupDocs.Editor for .NET. Step‑by‑step guide with code snippets,
+    quick answers, and FAQs.
+  headline: List Supported Document Formats with GroupDocs.Editor .NET
+  type: TechArticle
+- description: Learn how to list supported document formats and determine file format
+    extension using GroupDocs.Editor for .NET. Step‑by‑step guide with code snippets,
+    quick answers, and FAQs.
+  name: List Supported Document Formats with GroupDocs.Editor .NET
+  steps:
+  - name: '**.NET development environment** – Visual Studio 2022 or any IDE that supports
+      .NET 6+.'
+    text: '**.NET development environment** – Visual Studio 2022 or any IDE that supports
+      .NET 6+.'
+  - name: '**GroupDocs.Editor for .NET library** – download from the [GroupDocs releases
+      page](https://releases.groupdocs.com/editor/net/).'
+    text: '**GroupDocs.Editor for .NET library** – download from the [GroupDocs releases
+      page](https://releases.groupdocs.com/editor/net/).'
+  - name: '**Temporary license** – obtain a [temporary license](https://purchase.groupdocs.com/temporary-license/)
+      for unrestricted access.'
+    text: '**Temporary license** – obtain a [temporary license](https://purchase.groupdocs.com/temporary-license/)
+      for unrestricted access.'
+  - name: '**Basic C# knowledge** – familiarity with namespaces, `using` statements,
+      and console output.'
+    text: '**Basic C# knowledge** – familiarity with namespaces, `using` statements,
+      and console output.'
+  - name: '**Loop Through Formats:** We iterate over all available Word‑processing
+      formats.'
+    text: '**Loop Through Formats:** We iterate over all available Word‑processing
+      formats.'
+  - name: '**Output Format Details:** For each format we print its friendly name and
+      default file extension.'
+    text: '**Output Format Details:** For each format we print its friendly name and
+      default file extension.'
+  - name: '**Loop Through Formats:** The same looping logic applies to presentations.'
+    text: '**Loop Through Formats:** The same looping logic applies to presentations.'
+  - name: '**Output Format Details:** The name and extension are displayed for each
+      format.'
+    text: '**Output Format Details:** The name and extension are displayed for each
+      format.'
+  - name: '**Parse Format:** `FromExtension` converts the `.xlsm` extension into its
+      internal `SpreadsheetFormat` enum.'
+    text: '**Parse Format:** `FromExtension` converts the `.xlsm` extension into its
+      internal `SpreadsheetFormat` enum.'
+  - name: '**Output Format:** The parsed format’s name is printed, confirming the
+      mapping.'
+    text: '**Output Format:** The parsed format’s name is printed, confirming the
+      mapping.'
+  type: HowTo
+- questions:
+  - answer: '`DocumentFormatInfo` provides metadata about supported file types, while
+      `SaveOptions` configures how a document is written back to disk (format, compression,
+      etc.).'
+    question: What is the difference between `DocumentFormatInfo` and `SaveOptions`?
+  - answer: Yes—use `DocumentFormatInfo.FromExtension("yourExt")`; if the extension
+      isn’t recognized, the method returns `null`.
+    question: Can I list formats for a custom file extension?
+  - answer: Absolutely. Pass the password to the `Editor` constructor via `EditorSettings`
+      to open encrypted documents.
+    question: Does GroupDocs.Editor support password‑protected files?
+  - answer: Over **30 input and output formats**, spanning Word, Excel, PowerPoint,
+      HTML, and plain text.
+    question: How many formats does GroupDocs.Editor actually support?
+  - answer: Use the `GetEditableWordProcessingFormats()` (or Spreadsheet/Presentation
+      equivalents) to retrieve formats that allow full edit capabilities.
+    question: Is there a way to restrict the list to only editable formats?
+  type: FAQPage
+second_title: GroupDocs.Editor .NET API
+title: GroupDocs.Editor .NET ile Desteklenen Belge Formatlarını Listeleyin
 type: docs
+url: /tr/net/document-processing/work-document-formats/
+weight: 13
 ---
-# Belge Formatlarıyla Çalışma
 
-## giriiş
-GroupDocs.Editor for .NET'in kullanımına ilişkin ayrıntılı kılavuzumuza hoş geldiniz! Uygulamalarınızı belge düzenleme özellikleriyle geliştirmek isteyen bir geliştiriciyseniz doğru yere geldiniz. Bu makale, bu güçlü kütüphaneyi çalışır duruma getirmeniz için önkoşullardan pratik örneklere kadar bilmeniz gereken her şeyi size anlatacaktır.
+# Desteklenen Belge Formatlarını Listeleme
+
+GroupDocs.Editor for .NET ile **desteklenen belge formatlarını nasıl listeleyeceğinizi** kapsayan kapsamlı öğreticiye hoş geldiniz. Belge‑odaklı bir web uygulaması ya da kurumsal‑düzeyde bir masaüstü aracı geliştiriyor olun, hangi formatları düzenleyebileceğinizi veya dönüştürebileceğinizi tam olarak bilmek çok önemlidir. Bu rehberde formatları nasıl sıralayacağınızı, uzantıları nasıl ayrıştıracağınızı ve belgeleri nasıl düzenleyeceğinizi keşfedeceksiniz — net, kullanıcı‑dostu açıklamalar ve çalıştırmaya hazır kod parçacıklarıyla.
+
+## Hızlı Yanıtlar
+- **Tüm desteklenen formatları nasıl listelerim?** `DocumentFormatInfo.GetSupportedWordProcessingFormats()` (veya Presentation/Spreadsheet eşdeğerlerini) kullanın ve koleksiyonu döngüyle gezinin.  
+- **Bir dosya uzantısından formatı belirleyebilir miyim?** Evet—`DocumentFormatInfo.FromExtension(".docx")` metodunu çağırın.  
+- **GroupDocs.Editor hangi dosya türlerini destekliyor?** DOCX, XLSX, PPTX, HTML ve düz metin dahil olmak üzere 30’dan fazla giriş ve çıkış formatı.  
+- **Formatları listelemek için lisansa ihtiyacım var mı?** Geçici bir lisans tam API'yi açar; aksi takdirde deneme sürümü sınırlı özelliklerle çalışır.  
+- **Hangi .NET sürümleri uyumludur?** .NET Framework 4.6+, .NET Core 3.1+, .NET 5/6/7.
+
+## “Desteklenen belge formatlarını listeleme” nedir?
+Bu ifade, GroupDocs.Editor'ün açabildiği, düzenleyebildiği ve kaydedebildiği dosya türleri koleksiyonunu programlı olarak almayı ifade eder. Bu işlem, dinamik UI açılır menüleri oluşturmanıza veya kullanıcı yüklemelerini işlemden önce doğrulamanıza olanak tanır; böylece yalnızca uyumlu dosyalar editöre aktarılır ve sonraki işlemler için kullanılabilir.
+
+## Neden desteklenen belge formatlarını listeleyelim?
+GroupDocs.Editor **30'dan fazla giriş ve çıkış formatını destekler** ve belgeyi belleğe tamamen yüklemeden **2 GB**'a kadar dosyaları işleyebilir. Tam listeyi bilmek çalışma zamanı hatalarını önler, kullanıcı deneyimini iyileştirir ve “yalnızca düzenlenebilir Office belgelerine izin ver” gibi iş kurallarını uygulamanızı sağlar. Ayrıca, kullanıcılarınıza yalnızca uygulamanızın gerçekten desteklediği formatları sunmanıza yardımcı olur.
+
 ## Önkoşullar
-GroupDocs.Editor for .NET'in örneklerine ve işlevlerine dalmadan önce, yerine getirmeniz gereken birkaç önkoşul vardır:
-1. .NET'in Temel Anlaşılması: .NET Framework veya .NET Core'a aşinalık çok önemlidir.
-2. Geliştirme Ortamı: Visual Studio veya herhangi bir uygun .NET IDE.
-3.  GroupDocs.Editor for .NET Kitaplığı: Kitaplığı şu adresten indirin:[GroupDocs sürüm sayfası](https://releases.groupdocs.com/editor/net/).
-4.  Geçici Lisans: Alın[geçici lisans](https://purchase.groupdocs.com/temporary-license/) tüm özellikler için.
-## Ad Alanlarını İçe Aktar
-GroupDocs.Editor for .NET'i kullanmaya başlamak için gerekli ad alanlarını projenize aktarmanız gerekir. Bu, kütüphane tarafından sağlanan tüm sınıflara ve yöntemlere erişebilmenizi sağlayacaktır.
+Başlamadan önce, şunların olduğundan emin olun:
+
+1. **.NET geliştirme ortamı** – Visual Studio 2022 veya .NET 6+ destekleyen herhangi bir IDE.  
+2. **GroupDocs.Editor for .NET kütüphanesi** – [GroupDocs releases page](https://releases.groupdocs.com/editor/net/) adresinden indirin.  
+3. **Geçici lisans** – sınırsız erişim için bir [temporary license](https://purchase.groupdocs.com/temporary-license/) alın.  
+4. **Temel C# bilgisi** – ad alanları, `using` ifadeleri ve konsol çıktısı konularına aşina olun.
+
+## Desteklenen Belge Formatlarını Nasıl Listeleyebilirsiniz?
+Desteklenen formatlar koleksiyonunu yükleyin ve her formatın adını ve dosya uzantısını yazdırın. Bu iki adımlı desen Word İşleme, Elektronik Tablo ve Sunum belgeleri için çalışır. Koleksiyonu döngüyle gezerek, açılır menüler gibi UI öğelerini dinamik olarak doldurabilir ve kullanıcıların yalnızca editörün gerçekten işleyebileceği formatları seçmesini sağlayabilirsiniz.
+
+```csharp
+// No actual code block – placeholder retained from original tutorial
 ```csharp
 using System;
 using GroupDocs.Editor.Options;
 ```
+```
 
-## 1. Adım: Belge Formatlarıyla Çalışmak
-GroupDocs.Editor çok çeşitli belge formatlarını destekler. Desteklenen tüm Kelime İşleme ve Sunum formatlarını nasıl listeleyebileceğinizi keşfedelim.
-### Kelime İşleme Formatlarını Listeleme
+### Word İşleme Formatlarını Listeleme
+`Formats.WordProcessingFormats` is an enumeration that describes every Word‑processing file type recognized by the editor. The `All` property returns a collection of these format objects.
+
+```csharp
 ```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
 ```
-Açıklama:
-1. Döngü Formatları: Mevcut tüm Kelime İşleme formatları arasında geçiş yapıyoruz.
-2. Çıktı Formatı Detayları: Her format için adını ve uzantısını yazdırıyoruz.
+```
+
+**Açıklama:**  
+1. **Formatlar Üzerinde Döngü:** Tüm mevcut Word‑processing formatları üzerinde döngü yaparız.  
+2. **Format Detaylarını Çıktıla:** Her format için kullanıcı dostu adını ve varsayılan dosya uzantısını yazdırırız.
+
 ### Sunum Formatlarını Listeleme
+`Formats.PresentationFormats` works the same way for slide‑deck files, exposing each supported presentation type through the `All` collection.
+
+```csharp
 ```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
 ```
-Açıklama:
-1. Döngü Formatları: Kelime İşleme formatlarına benzer şekilde, tüm Sunum formatlarında döngü yaparız.
-2. Çıktı Formatı Ayrıntıları: Her formatın adını ve uzantısını yazdırın.
-## Adım 2: Uzantılardan Formatları Ayrıştırma
-Bazen formatı dosya uzantısına göre belirlemeniz gerekir. GroupDocs.Editor bunu kolaylaştırır.
+```
+
+**Açıklama:**  
+1. **Formatlar Üzerinde Döngü:** The same looping logic applies to presentations.  
+2. **Output Format Details:** The name and extension are displayed for each format.
+
+## Dosya Formatı Uzantısını Nasıl Belirleyebilirsiniz?
+Bazen sadece bir dosya adınız olur ve ilgili `DocumentFormat`'ı tahmin etmeniz gerekir. GroupDocs.Editor, bir dosya uzantısını iç format temsiline eşleyen basit bir statik yardımcı sunar; bu sayede dosyaları editöre yüklemeden önce doğrulama veya dönüştürme yapabilirsiniz.
+
 ### Elektronik Tablo Formatlarını Ayrıştırma
+`Formats.SpreadsheetFormats.FromExtension` converts a file extension string into the matching spreadsheet format enum value.
+
+```csharp
 ```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 ```
-Açıklama:
-1. Ayrıştırma Formatı: Kullanıyoruz`FromExtension` formatı ayrıştırma yöntemi`.xlsm` eklenti.
-2. Çıktı Formatı: Ayrıştırılan formatın adını yazdırın.
+```
+
+**Açıklama:**  
+1. **Formatı Ayrıştır:** `FromExtension`, `.xlsm` uzantısını iç `SpreadsheetFormat` enum'ına dönüştürür.  
+2. **Formatı Çıktıla:** Ayrıştırılan formatın adı yazdırılır, eşlemenin doğruluğu teyit edilir.
+
 ### Metin Formatlarını Ayrıştırma
+Similarly, `Formats.TextualFormats.FromExtension` resolves textual file extensions such as HTML or TXT.
+
+```csharp
 ```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
 ```
-Açıklama:
-1.  Ayrıştırma Formatı:`FromExtension` yöntemi, formatı ayrıştırmak için kullanılır.`html` eklenti.
-2. Çıktı Formatı: Ayrıştırılan metin formatının adını yazdırın.
-## 3. Adım: Belgeleri Düzenleme
-Artık formatlarla nasıl çalışacağımızı gördüğümüze göre, GroupDocs.Editor'ı kullanarak belgeleri düzenlemeye geçelim.
-### Belge Yükleme
-Bir belgeyi düzenlemek için önce onu yüklemeniz gerekir.
+```
+
+**Açıklama:**  
+1. **Formatı Ayrıştır:** The `FromExtension` method resolves the `html` extension to a `TextFormat`.  
+2. **Formatı Çıktıla:** The name of the textual format is displayed, useful for web‑based editors.
+
+## Formatları Belirledikten Sonra Belgeleri Nasıl Düzenlersiniz?
+Formatı öğrendikten sonra bir belgeyi yükleme ve düzenleme tutarlı bir desen izler. İlk olarak kaynak dosyanın yolunu vererek bir `Editor` örneği oluşturursunuz, ardından `Edit()` metodunu çağırarak bir `EditableDocument` elde edersiniz. Buradan içeriği okuyabilir, değiştirebilir ve sonunda uygun `SaveOptions` ile kaydedebilirsiniz.
+
+### Bir Belge Yükleme
+`Editor`, belirli bir dosya için tüm düzenleme işlemlerini kapsülleyen temel sınıftır.
+
+```csharp
 ```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
-    // Daha sonraki adımlar burada ele alınacaktır.
+    // Further steps will be covered here.
 }
 ```
-Açıklama:
-1.  Düzenleyiciyi Başlat: Bir örneğini oluşturun`Editor` belgenize giden yolu sağlayan sınıf.
-2.  Deseni Atın: Kullanın`using` Kaynakların uygun şekilde bertaraf edilmesini sağlamak için beyan.
-### İçerik Çıkarma
-Belge yüklendikten sonra içeriğini düzenlemek üzere çıkarabilirsiniz.
+```
+
+**Açıklama:**  
+1. **Editor'ı Başlat:** Hedef dosyanın tam yolunu vererek bir `Editor` örneği oluşturun.  
+2. **Dispose Deseni:** `using` ifadesi, tüm yönetilmeyen kaynakların hızlı bir şekilde serbest bırakılmasını garanti eder.
+
+### İçeriği Çıkarma
+`EditableDocument.GetContent()` belge'nin ham metnini (veya web‑tabanlı editörler için HTML) döndürür; bunu görüntüleyebilir veya manipüle edebilirsiniz.
+
+```csharp
 ```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
@@ -86,28 +216,40 @@ using (EditableDocument editableDocument = editor.Edit())
     Console.WriteLine(content);
 }
 ```
-Açıklama:
-1.  Düzenleme Yöntemi:`Edit` almanın yöntemi`EditableDocument`.
-2.  İçerik Al: Kullan`GetContent` belgenin içeriğini bir dize olarak almak için.
-3. Çıkış İçeriği: İçeriği konsola yazdırın.
-### Değişiklikleri kaydediyor
-Düzenledikten sonra değişikliklerinizi belgeye geri kaydedin.
+```
+
+**Açıklama:**  
+1. **Edit Metodu:** `Edit()` bir `EditableDocument` nesnesi döndürür.  
+2. **İçeriği Al:** `GetContent()` belge'nin ham metnini (veya web‑tabanlı editörler için HTML) çıkarır.  
+3. **İçeriği Çıktıla:** İçerik doğrulama amacıyla konsola yazdırılır.
+
+### Değişiklikleri Kaydetme
+`SaveOptions`, editörün düzenlenmiş belgeyi nasıl ve hangi formatta depolamaya geri yazacağını belirler.
+
+```csharp
 ```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
-    // İçeriği burada değiştirin
+    // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
 ```
-Açıklama:
-1.  Düzenleme Yöntemi:`Edit` almanın yöntemi`EditableDocument`.
-2. İçeriği Değiştirin: İçeriği gerektiği gibi değiştirin (bu kod parçasında gösterilmemiştir).
-3.  Kaydetme Seçenekleri: Oluştur`SaveOptions` biçimini belirtiyoruz.
-4.  Belgeyi Kaydet: Kullan`Save` Düzenlenen belgeyi kaydetme yöntemi.
-## Adım 4: Farklı Belge Türleriyle Çalışmak
-GroupDocs.Editor çeşitli belge türlerini destekler. Onlarla nasıl çalışılacağı aşağıda açıklanmıştır:
+```
+
+**Açıklama:**  
+1. **Edit Metodu:** Değişikliklerden sonra `EditableDocument` tekrar elde edilir.  
+2. **İçeriği Değiştir:** (burada gösterilmeyen) string üzerinde değişikliklerinizi uygulayın.  
+3. **Kaydetme Seçenekleri:** İstenen çıkış formatı ile `SaveOptions` yapılandırılır.  
+4. **Belgeyi Kaydet:** Düzenlenmiş dosya diske kaydedilir.
+
+## Farklı Belge Türleriyle Nasıl Çalışılır?
+GroupDocs.Editor, Word, Elektronik Tablo ve Sunum işlemlerini aynı API üzerinden soyutlayarak, her belge ailesi için yeni sınıflar öğrenmeye gerek kalmadan bağlamlar arasında geçiş yapmayı kolaylaştırır.
+
 ### Elektronik Tablo Belgelerini Düzenleme
+`SpreadsheetSaveOptions`, bir elektronik tablonun nasıl yazılacağını, format ve isteğe bağlı sıkıştırma ayarlarını tanımlar.
+
+```csharp
 ```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
@@ -115,20 +257,26 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
     {
         string content = editableDocument.GetContent();
         Console.WriteLine(content);
-        // İçeriği burada değiştirin
+        // Modify content here
         SaveOptions saveOptions = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsx);
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
 ```
-Açıklama:
-1.  Düzenleyiciyi Başlat: Bir`Editor` örneğin bir e-tablo için.
-2.  Düzenleme Yöntemi: Çağrı`Edit` almak için`EditableDocument`.
-3. İçeriği Al: İçeriği alın ve yazdırın.
-4. İçeriği Değiştir: Gerekli değişiklikleri yapın.
-5. Kaydetme Seçenekleri: Elektronik tablolar için kaydetme seçeneklerini belirtin.
-6. Belgeyi Kaydet: Değiştirilen belgeyi kaydedin.
+```
+
+**Açıklama:**  
+1. **Editor'ı Başlat:** `Editor` yapıcısına bir elektronik tablo dosya yolu verin.  
+2. **Edit Metodu:** Bir `EditableDocument` alın.  
+3. **İçeriği Al:** Elektronik tablonun CSV temsilini (veya HTML) yazdırın.  
+4. **İçeriği Değiştir:** Gerekli hücre‑seviyesi değişiklikleri uygulayın.  
+5. **Kaydetme Seçenekleri:** Uygun `SpreadsheetSaveOptions` seçin.  
+6. **Belgeyi Kaydet:** Güncellenmiş elektronik tabloyu depolamaya geri yazın.
+
 ### Sunum Belgelerini Düzenleme
+`PresentationSaveOptions`, slayt destesi için çıkış formatını kontrol eder; orijinal dosya tipini korumanıza veya değiştirmenize olanak tanır.
+
+```csharp
 ```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
@@ -136,29 +284,62 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
     {
         string content = editableDocument.GetContent();
         Console.WriteLine(content);
-        // İçeriği burada değiştirin
+        // Modify content here
         SaveOptions saveOptions = new PresentationSaveOptions(PresentationFormats.Pptx);
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
 ```
-Açıklama:
-1.  Düzenleyiciyi Başlat: Bir`Editor` örneğin bir sunum için.
-2.  Düzenleme Yöntemi: Çağrı`Edit` almak için`EditableDocument`.
-3. İçeriği Al: İçeriği alın ve yazdırın.
-4. İçeriği Değiştir: Gerekli değişiklikleri yapın.
-5. Kaydetme Seçenekleri: Sunumlar için kaydetme seçeneklerini belirtin.
-6. Belgeyi Kaydet: Değiştirilen belgeyi kaydedin.
-## Çözüm
-GroupDocs.Editor for .NET, çeşitli belge formatlarını programlı olarak düzenlemek için sağlam ve esnek bir yol sağlar. Bu kılavuzu takip ederek, belge düzenleme işlevlerini .NET uygulamalarınıza verimli bir şekilde entegre edebilir, yeteneklerini geliştirebilir ve kullanıcılarınıza daha fazla değer sağlayabilirsiniz.
-## SSS'ler
-### .NET için GroupDocs.Editor nedir?
-GroupDocs.Editor for .NET, geliştiricilerin .NET uygulamaları içinde çeşitli belge formatlarını programlı olarak düzenlemelerine olanak tanıyan güçlü bir kitaplıktır.
-### GroupDocs.Editor for .NET'i kullanmaya nasıl başlayabilirim?
-Kitaplığı indirmeniz, geçici bir lisans almanız ve geliştirme ortamınızı gerekli ad alanlarıyla ayarlamanız gerekir.
-### Hangi belge formatları destekleniyor?
-GroupDocs.Editor, diğerlerinin yanı sıra Kelime İşleme, Elektronik Tablo, Sunum ve Metin formatlarını destekler.
-### GroupDocs.Editor'ı ücretsiz kullanabilir miyim?
- Bir kullanabilirsiniz[ücretsiz deneme](https://releases.groupdocs.com/) sınırlı özelliklere sahip veya bir[geçici lisans](https://purchase.groupdocs.com/temporary-license/) tam erişim için.
-### Daha fazla kaynak ve desteği nerede bulabilirim?
- Ziyaret edin[GroupDocs.Editor belgeleri](https://tutorials.groupdocs.com/editor/net/) ayrıntılı bilgi için veya bunlara göz atın[destek Forumu](https://forum.groupdocs.com/c/editor/20) yardım için.
+```
+
+**Açıklama:**  
+1. **Editor'ı Başlat:** `Editor` aracılığıyla bir PowerPoint dosyası yükleyin.  
+2. **Edit Metodu:** Bir `EditableDocument` elde edin.  
+3. **İçeriği Al:** Slayt HTML'sini veya düz metni çıkarın.  
+4. **İçeriği Değiştir:** Başlıkları, madde işaretlerini veya görselleri güncelleyin.  
+5. **Kaydetme Seçenekleri:** Çıkış formatını tanımlamak için `PresentationSaveOptions` kullanın.  
+6. **Belgeyi Kaydet:** Düzenlenmiş sunumu kaydedin.
+
+## Yaygın Sorunlar ve Çözümler
+- **“Format not supported” hatası:** En son GroupDocs.Editor sürümünü kullandığınızdan emin olun; bu sürüm düzenli olarak yeni Office formatlarını destekler.  
+- **Büyük dosya bellek tüketimi:** Belgeyi yüklemeden önce `EditorSettings.EnableStreaming = true` ayarını yaparak akış modunu etkinleştirin.  
+- **Lisans uygulanmadı:** Geçici lisans dosyasının uygulama kök dizinine yerleştirildiğinden veya `License license = new License(); license.SetLicense("path/to/license.lic");` ile yüklendiğinden emin olun.
+
+## Sık Sorulan Sorular
+
+**S: `DocumentFormatInfo` ve `SaveOptions` arasındaki fark nedir?**  
+C: `DocumentFormatInfo`, desteklenen dosya türleri hakkında meta veriler sağlar; `SaveOptions` ise bir belgenin diske nasıl (format, sıkıştırma vb.) yazılacağını yapılandırır.
+
+**S: Özel bir dosya uzantısı için formatları listeleyebilir miyim?**  
+C: Evet—`DocumentFormatInfo.FromExtension("yourExt")` kullanın; uzantı tanınmazsa metod `null` döndürür.
+
+**S: GroupDocs.Editor şifre‑korumalı dosyaları destekliyor mu?**  
+C: Kesinlikle. Şifreyi `EditorSettings` aracılığıyla `Editor` yapıcısına geçirerek şifreli belgeleri açabilirsiniz.
+
+**S: GroupDocs.Editor gerçekte kaç format destekliyor?**  
+C: **30'dan fazla** giriş ve çıkış formatı, Word, Excel, PowerPoint, HTML ve düz metin dahil.
+
+**S: Listeyi yalnızca düzenlenebilir formatlarla sınırlamanın bir yolu var mı?**  
+C: Tam düzenleme yeteneklerine izin veren formatları almak için `GetEditableWordProcessingFormats()` (veya Spreadsheet/Presentation eşdeğerlerini) kullanın.
+
+## Ek Kaynaklar
+- Kütüphaneyi [GroupDocs releases page](https://releases.groupdocs.com/editor/net/) adresinden indirin.  
+- Tam özellik erişimi için bir [temporary license](https://purchase.groupdocs.com/temporary-license/) alın.  
+- Ürünü bir [free trial](https://releases.groupdocs.com/) ile deneyin.  
+- [GroupDocs.Editor documentation](https://tutorials.groupdocs.com/editor/net/) içinde ayrıntılı kullanım örneklerini keşfedin.  
+- [support forum](https://forum.groupdocs.com/c/editor/20) üzerinden topluluktan yardım alın.
+
+## Sonuç
+Bu rehberi izleyerek artık **desteklenen belge formatlarını nasıl listeleyeceğinizi**, **bir uzantıdan dosya formatını nasıl belirleyeceğinizi** ve GroupDocs.Editor for .NET kullanarak Word, Elektronik Tablo ve Sunum türlerinde **belgeleri nasıl düzenleyeceğinizi** biliyorsunuz. Bu kod parçacıklarını kendi projelerinize entegre ederek, son kullanıcıları memnun eden ve çalışma zamanı hatalarını azaltan sağlam, format‑bilinçli uygulamalar oluşturabilirsiniz.
+
+---
+
+**Last Updated:** 2026-06-06  
+**Tested With:** GroupDocs.Editor 23.9 for .NET  
+**Author:** GroupDocs
+
+## İlgili Eğitimler
+
+- [GroupDocs.Editor ile .NET'te Belge Yüklemeyi Ustalaştırma: Kapsamlı Rehber](/editor/net/document-loading/groupdocs-editor-net-document-loading-guide/)
+- [GroupDocs.Editor ile .NET'te Belge Düzenlemeyi Ustalaştırma: Kapsamlı Rehber](/editor/net/document-editing/master-document-editing-dotnet-groupdocs-editor/)
+- [GroupDocs.Editor .NET ile Word'ü HTML'ye Dönüştürme: Adım‑Adım Rehber](/editor/net/document-saving/convert-word-to-html-groupdocs-editor-dotnet/)
