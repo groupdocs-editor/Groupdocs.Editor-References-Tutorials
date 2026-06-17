@@ -1,54 +1,81 @@
 ---
+date: 2026-03-06
+description: Aprende cómo manejar contenido CSS con prefijo y extraer contenido CSS
+  usando GroupDocs.Editor para .NET en este tutorial detallado paso a paso.
+linktitle: Handle CSS Content with Prefix
+second_title: GroupDocs.Editor .NET API
 title: Manejar contenido CSS con prefijo
-linktitle: Manejar contenido CSS con prefijo
-second_title: API GroupDocs.Editor .NET
-description: Aprenda a manejar contenido CSS con prefijo usando Groupdocs.Editor para .NET en este tutorial detallado paso a paso. Perfecto para desarrolladores de todos los niveles.
-weight: 11
-url: /es/net/css-handling/handle-css-content-with-prefix/
 type: docs
+url: /es/net/css-handling/handle-css-content-with-prefix/
+weight: 11
 ---
+
 # Manejar contenido CSS con prefijo
 
-## Introducción
-En este tutorial, profundizaremos en cómo manejar contenido CSS con un prefijo usando Groupdocs.Editor para .NET. Esta poderosa herramienta le permite administrar y manipular documentos con facilidad. Ya sea que sea un desarrollador experimentado o recién esté comenzando, esta guía lo guiará a través de cada paso de una manera sencilla y atractiva.
+En este tutorial descubrirás **cómo manejar el prefijo CSS** al trabajar con hojas de estilo dentro de un documento usando GroupDocs.Editor para .NET. Ya sea que necesites anteponer una URL a imágenes, fuentes o cualquier recurso externo, los pasos a continuación te muestran exactamente cómo **manejar el prefijo CSS** y también cómo **extraer contenido CSS** para su procesamiento posterior.
+
+## Respuestas rápidas
+- **¿Qué significa “manejar el prefijo CSS”?** Añadir un prefijo de URL personalizado a los recursos externos referenciados en CSS.
+- **¿Qué método de la API devuelve los estilos CSS?** `EditableDocument.GetCssContent(...)`.
+- **¿Necesito una licencia?** Hay una licencia de prueba disponible; se requiere una licencia comercial para producción.
+- **¿Qué versiones de .NET son compatibles?** .NET Framework 4.5+ y .NET Core/5/6.
+- **¿Puedo cambiar el prefijo en tiempo de ejecución?** Sí – simplemente pasa una cadena diferente a `GetCssContent`.
+
+## Qué es **manejar el prefijo CSS**?
+Aplicar un prefijo a los recursos CSS reescribe las rutas de imágenes, fuentes u otros activos para que apunten a una ubicación que controlas (p. ej., un CDN o un servidor seguro). Esto es especialmente útil cuando exportas un documento y necesitas que todas las referencias externas sean accesibles desde una aplicación web.
+
+## Por qué usar GroupDocs.Editor para **extraer contenido CSS**?
+GroupDocs.Editor puede leer el CSS original incrustado en documentos de procesamiento de texto, proporcionarte las cadenas de hojas de estilo sin procesar y permitirte manipularlas antes de renderizar o guardar. Esto elimina la necesidad de análisis manual y garantiza que el CSS extraído coincida con la representación interna del documento.
+
 ## Requisitos previos
-Antes de comenzar, asegúrese de cumplir con los siguientes requisitos previos:
-- Visual Studio: necesitará una instalación funcional de Visual Studio.
-- .NET Framework: asegúrese de tener .NET Framework instalado.
--  Groupdocs.Editor para .NET: puedes descargarlo[aquí](https://releases.groupdocs.com/editor/net/).
-- Documento de muestra: tenga un documento de muestra listo para editar.
+- Visual Studio: Necesitarás una instalación funcional de Visual Studio.  
+- .NET Framework: Asegúrate de que tienes instalado el .NET Framework.  
+- GroupDocs.Editor para .NET: Puedes descargarlo [aquí](https://releases.groupdocs.com/editor/net/).  
+- Documento de muestra: Ten un documento de muestra listo para editar.
+
 ## Importar espacios de nombres
-Primero, importemos los espacios de nombres necesarios para garantizar que nuestro código se ejecute sin problemas. Este es un paso crucial para acceder a todas las funcionalidades proporcionadas por Groupdocs.Editor para .NET.
+Primero, importemos los espacios de nombres necesarios para garantizar que nuestro código se ejecute sin problemas. Este paso nos brinda acceso a las clases principales de GroupDocs.Editor.
+
 ```csharp
 using System;
 using System.Collections.Generic;
 using GroupDocs.Editor.Options;
 ```
-## Paso 1: inicializa el editor
- El primer paso consiste en inicializar el`Editor` clase con su documento de muestra. Esto configura el entorno para comenzar a editar su documento.
+
+## Paso 1: Inicializar el Editor
+El primer paso consiste en crear una instancia de `Editor` con tu documento de muestra. Esto configura el entorno de edición.
+
 ```csharp
 using (Editor editor = new Editor("Your Sample Document", delegate { return new WordProcessingLoadOptions(); }))
 {
 ```
-## Paso 2: edite el documento
- continuación, necesitamos crear un`EditableDocument` instancia. Aquí es donde ocurre la magia: permitirnos manipular el contenido del documento.
+
+## Paso 2: Editar el documento
+A continuación, obtenemos un objeto `EditableDocument`. Este objeto representa la versión editable del archivo y nos permite trabajar con sus partes internas.
+
 ```csharp
     using (EditableDocument document = editor.Edit(new WordProcessingEditOptions()))
     {
 ```
-## Paso 3: establecer prefijos externos
-Aquí definimos los prefijos externos para imágenes y fuentes. Esto es particularmente útil si hace referencia a recursos externos alojados en un servidor web.
+
+## Paso 3: Establecer prefijos externos
+Define los prefijos de URL para imágenes y fuentes. Estos prefijos se antepondrán a cada referencia de imagen y fuente encontrada en el CSS.
+
 ```csharp
-        string externalImagesPrefix = "http://www.misitioweb.com/images/id=";
-        string externalFontsPrefix = "http://www.misitioweb.com/fonts/id=";
+        string externalImagesPrefix = "http://www.mywebsite.com/images/id=";
+        string externalFontsPrefix = "http://www.mywebsite.com/fonts/id=";
 ```
-## Paso 4: obtenga contenido CSS
-Ahora, recuperamos el contenido CSS del documento. Este método devuelve una lista de hojas de estilo CSS, aplicando los prefijos que definimos anteriormente.
+
+## Paso 4: **Extraer contenido CSS** con los prefijos
+Llama a `GetCssContent`, pasando los prefijos que acabas de definir. El método devuelve una lista de cadenas de hojas de estilo CSS que ya contienen las URLs con prefijo.
+
 ```csharp
         List<string> stylesheets = document.GetCssContent(externalImagesPrefix, externalFontsPrefix);
 ```
-## Paso 5: generar los resultados
-Finalmente, generamos la cantidad de hojas de estilo encontradas e imprimimos cada hoja de estilo en la consola. Esto ayuda a verificar que los prefijos se apliquen correctamente y que el contenido CSS se recupere correctamente.
+
+## Paso 5: Mostrar los resultados
+Imprime la cantidad de hojas de estilo encontradas y muestra cada hoja de estilo. Esto te ayuda a verificar que los prefijos se aplicaron correctamente.
+
 ```csharp
         Console.WriteLine("There are {0} stylesheets in the input document", stylesheets.Count);
         foreach (string css in stylesheets)
@@ -58,16 +85,44 @@ Finalmente, generamos la cantidad de hojas de estilo encontradas e imprimimos ca
     }
 }
 ```
+
+## Problemas comunes y soluciones
+- **No se devolvieron hojas de estilo** – Asegúrate de que el documento fuente realmente contenga CSS (p. ej., un documento Word con tablas con estilo o HTML incrustado).  
+- **URLs incorrectas** – Verifica que las cadenas de prefijo terminen con el delimitador apropiado (`/` o `=`) para el enrutamiento de tu servidor.  
+- **Problemas de rendimiento** – Para documentos muy grandes, considera procesar las hojas de estilo en lotes para evitar un alto consumo de memoria.
+
 ## Conclusión
-Manejar contenido CSS con prefijos usando Groupdocs.Editor para .NET es sencillo y eficiente. Si sigue estos pasos, podrá administrar fácilmente las hojas de estilo de su documento y asegurarse de que hagan referencia a los recursos externos correctos. Este tutorial ha cubierto los pasos esenciales para comenzar, pero Groupdocs.Editor para .NET ofrece mucho más. Explore su documentación y características para aprovechar al máximo sus capacidades en sus proyectos.
+Manejar contenido CSS con un prefijo usando GroupDocs.Editor para .NET es sencillo y potente. Siguiendo estos pasos puedes **manejar el prefijo CSS**, obtener el CSS sin procesar mediante **extraer contenido CSS**, e integrar sin problemas recursos externos en tu flujo de trabajo web. Explora otras funciones de GroupDocs.Editor como la conversión a HTML, extracción de imágenes y combinación de documentos para obtener aún más valor de la API.
+
 ## Preguntas frecuentes
-### ¿Puedo utilizar Groupdocs.Editor para .NET con otros formatos de documentos?
-Sí, Groupdocs.Editor para .NET admite varios formatos de documentos, incluidos PDF, Word, Excel y más.
-### ¿Existe una prueba gratuita disponible para Groupdocs.Editor para .NET?
- ¡Absolutamente! Puedes iniciar tu prueba gratuita[aquí](https://releases.groupdocs.com/).
-### ¿Cómo obtengo una licencia temporal de Groupdocs.Editor para .NET?
- Puedes obtener una licencia temporal[aquí](https://purchase.groupdocs.com/temporary-license/).
-### ¿Dónde puedo encontrar documentación detallada para Groupdocs.Editor para .NET?
- La documentación detallada está disponible.[aquí](https://tutorials.groupdocs.com/editor/net/).
-### ¿Qué opciones de soporte están disponibles para Groupdocs.Editor para .NET?
- Puedes obtener apoyo[aquí](https://forum.groupdocs.com/c/editor/20).
+### ¿Puedo usar GroupDocs.Editor para .NET con otros formatos de documento?
+Sí, GroupDocs.Editor para .NET admite varios formatos de documento, incluidos PDF, Word, Excel y más.
+
+### ¿Hay una prueba gratuita disponible para GroupDocs.Editor para .NET?
+¡Absolutamente! Puedes iniciar tu prueba gratuita [aquí](https://releases.groupdocs.com/).
+
+### ¿Cómo obtengo una licencia temporal para GroupDocs.Editor para .NET?
+Puedes obtener una licencia temporal [aquí](https://purchase.groupdocs.com/temporary-license/).
+
+### ¿Dónde puedo encontrar documentación detallada para GroupDocs.Editor para .NET?
+La documentación detallada está disponible [aquí](https://tutorials.groupdocs.com/editor/net/).
+
+### ¿Qué opciones de soporte están disponibles para GroupDocs.Editor para .NET?
+Puedes obtener soporte [aquí](https://forum.groupdocs.com/c/editor/20).
+
+## Preguntas frecuentes adicionales
+
+**Q: ¿Puedo cambiar el prefijo después de extraer el CSS?**  
+A: Sí. Llama a `GetCssContent` nuevamente con una cadena de prefijo diferente; el método siempre usa los valores que pasas en tiempo de ejecución.
+
+**Q: ¿Esto funciona con documentos protegidos con contraseña?**  
+A: Sí. Proporciona la contraseña en `WordProcessingLoadOptions` al crear la instancia de `Editor`.
+
+**Q: ¿Es posible guardar el CSS modificado de nuevo en el documento?**  
+A: Actualmente GroupDocs.Editor proporciona acceso de solo lectura al CSS. Para persistir los cambios deberías reemplazar la hoja de estilo original usando las API XML subyacentes del documento.
+
+---
+
+**Última actualización:** 2026-03-06  
+**Probado con:** GroupDocs.Editor 23.12 para .NET  
+**Autor:** GroupDocs

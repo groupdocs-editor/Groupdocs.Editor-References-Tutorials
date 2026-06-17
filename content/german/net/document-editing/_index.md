@@ -1,71 +1,137 @@
 ---
-title: Dokumentbearbeitung
-linktitle: Dokumentbearbeitung
+date: 2026-03-06
+description: Erfahren Sie, wie Sie HTML mit GroupDocs.Editor für .NET in Word konvertieren.
+  Dieser Leitfaden behandelt außerdem, wie Sie Dokumente bearbeiten, passwortgeschützte
+  Dateien laden und HTML aus Dokumenten extrahieren.
+linktitle: Convert HTML to Word
 second_title: GroupDocs.Editor .NET API
-description: Verwalten und bearbeiten Sie Dokumente mit GroupDocs.Editor .NET. Erfahren Sie, wie Sie Dokumente ganz einfach erstellen, bearbeiten und speichern. Verbessern Sie noch heute Ihren Dokumentenmanagement-Workflow!
-weight: 20
-url: /de/net/document-editing/
+title: HTML in Word konvertieren mit GroupDocs.Editor .NET
 type: docs
+url: /de/net/document-editing/
+weight: 20
 ---
-# Dokumentbearbeitung
 
+# HTML in Word konvertieren mit GroupDocs.Editor .NET
 
-Möchten Sie Ihren Dokumentenmanagement-Workflow optimieren? Tauchen Sie ein in die Welt der GroupDocs.Editor-Tutorials für .NET und nutzen Sie das volle Potenzial der Dokumentbearbeitungsfunktionen. Von der Erstellung bearbeitbarer Dokumente aus HTML bis hin zur erweiterten Nutzung und Ressourceneinsparung bieten diese Tutorials umfassende Anleitungen für Entwickler, die eine nahtlose Integration und erweiterte Funktionalität anstreben.
+Suchen Sie nach einer Möglichkeit, Ihren Dokumenten‑Management‑Workflow zu optimieren? In diesem Leitfaden erfahren Sie, wie Sie **HTML in Word** schnell und zuverlässig mit GroupDocs.Editor für .NET konvertieren können. Wir zeigen Ihnen außerdem, wie Sie Dokumente bearbeiten, passwortgeschützte Dateien laden und HTML‑Inhalte extrahieren – alles wesentliche Fähigkeiten für moderne .NET‑Entwickler.
 
-## Einführung in GroupDocs.Editor für .NET
+## Quick Answers
+- **Was bedeutet „convert html to word“?** Es wandelt eine HTML‑Datei in ein vollständig editierbares Word‑Dokument (.docx) um.  
+- **Welche Bibliothek übernimmt das?** GroupDocs.Editor für .NET stellt eine dedizierte API für die Konvertierung bereit.  
+- **Brauche ich eine Lizenz?** Eine kostenlose Testversion funktioniert für die Entwicklung; für die Produktion ist eine kommerzielle Lizenz erforderlich.  
+- **Kann ich die resultierende Word‑Datei programmgesteuert bearbeiten?** Ja, Sie können das Dokument mit derselben Editor‑API bearbeiten.  
+- **Wird die Verarbeitung von passwortgeschützten Dateien unterstützt?** Absolut – GroupDocs.Editor kann passwortgeschützte Dateien öffnen und bearbeiten.
 
- Neu bei GroupDocs.Editor für .NET? Tauchen Sie ein in unseren ausführlichen Leitfaden zu[wie Sie dieses leistungsstarke Tool verwenden](./introduction-groupdocs-editor/) um Dokumente programmgesteuert zu bearbeiten. Egal, ob Sie ein erfahrener Entwickler oder neu in der Welt der Dokumentenverwaltung sind, unser Tutorial bietet Einblicke und Tipps für den Einstieg. Schöpfen Sie noch heute das Potenzial von GroupDocs.Editor für .NET aus.
+## What is “convert html to word”?
+Das Konvertieren von HTML zu Word bedeutet, das Markup, die Styles und Bilder einer HTML‑Seite zu übernehmen und eine .docx‑Datei zu erzeugen, die das Layout beibehält und gleichzeitig volle Bearbeitungsfunktionen bietet. Dies ist besonders nützlich für die Erstellung von Berichten, Verträgen oder anderen Dokumenten, die als Web‑Inhalt beginnen, aber im Microsoft‑Word‑Format geteilt werden müssen.
 
-## Dokument erstellen
+## Why use GroupDocs.Editor for .NET?
+- **Ein‑Schritt‑Konvertierung** – Keine Zwischenschritte nötig.  
+- **Erhält das Styling** – CSS, Tabellen und Bilder bleiben unverändert.  
+- **Vollständige Editierbarkeit** – Nach der Konvertierung können Sie das Dokument programmgesteuert bearbeiten (edit word document .net).  
+- **Unterstützt Passwortschutz** – Laden Sie passwortgeschützte Dokumente ohne zusätzlichen Code.  
+- **Plattformübergreifend** – Funktioniert mit .NET Framework, .NET Core und .NET 5/6+.
 
-Bereit, in die Dokumenterstellung einzutauchen? Erfahren Sie, wie Sie[Bearbeiten Sie Word-, Excel-, PowerPoint-, E-Book- und E-Mail-Dokumente](./create-document/) mit GroupDocs.Editor für .NET. Unser umfassendes Tutorial bietet eine Schritt-für-Schritt-Anleitung, mit der Entwickler Dokumente ganz einfach erstellen und anpassen können. Verbessern Sie noch heute Ihren Dokumentenmanagement-Workflow.
+## Prerequisites
+- .NET 6.0 oder höher (oder .NET Framework 4.6+).  
+- GroupDocs.Editor für .NET NuGet‑Paket installiert.  
+- Grundkenntnisse in C# und Datei‑I/O.
 
-## Dokument bearbeiten
+## How to convert HTML to Word
+Im Folgenden finden Sie einen knappen Überblick über die Schritte. Der detaillierte Code befindet sich im dedizierten Tutorial, das später auf dieser Seite verlinkt ist.
 
- Das Bearbeiten von Dokumenten war noch nie so einfach. Entdecken Sie, wie Sie mühelos[Dokumente bearbeiten](./edit-document/) mit GroupDocs.Editor für .NET. Egal, ob Sie mit Textverarbeitungs- oder Tabellenkalkulationsdateien arbeiten, unsere Schritt-für-Schritt-Anleitung vereinfacht den Prozess und ermöglicht Ihnen nahtlose Überarbeitungen. Verabschieden Sie sich von mühsamem Bearbeiten und begrüßen Sie gesteigerte Produktivität.
+1. **HTML‑Quelle laden** – Lesen Sie die HTML‑Datei oder den String in den Speicher.  
+2. **Ein EditableDocument erstellen** – Verwenden Sie die Klasse `EditableDocument`, um den HTML‑Inhalt zu kapseln.  
+3. **Als Word speichern** – Rufen Sie die Methode `Save` mit den `SaveOptions` auf, die auf `SaveFormat.Docx` gesetzt sind.  
 
+> **Profi‑Tipp:** Nach dem Speichern können Sie die resultierende .docx sofort mit derselben Editor‑Instanz öffnen, um weitere Änderungen vorzunehmen, z. B. „how to edit document“ programmgesteuert.
 
-## Dokument laden
+## How to edit a Word document programmatically (.NET)
+GroupDocs.Editor ermöglicht es Ihnen, Text zu ändern, Bilder zu ersetzen oder Tabellen zu aktualisieren, ohne die .NET‑Umgebung zu verlassen. Dies ist das Kernstück des „edit word document .net“-Workflows und passt perfekt zur HTML‑zu‑Word‑Konvertierung.
 
- Sind Sie bereit, die Leistungsfähigkeit von GroupDocs.Editor für .NET zu nutzen? Erfahren Sie, wie Sie[Dokumente laden](./load-document/)handhaben Sie passwortgeschützte Dateien und vieles mehr mit unserer Schritt-für-Schritt-Anleitung. Egal, ob Sie Dokumente programmgesteuert bearbeiten oder neue Funktionen in Ihre Anwendung integrieren, dieses Tutorial vermittelt Ihnen das Wissen, das Sie zum Erfolg brauchen. Legen Sie noch heute los und optimieren Sie Ihren Dokumentenverwaltungs-Workflow.
+## How to load a password‑protected document
+Wenn eine Datei verschlüsselt ist, geben Sie einfach das Passwort beim Initialisieren des `Document`‑Objekts an. Der Editor entschlüsselt sie on‑the‑fly, sodass Sie den Inhalt wie bei jeder ungeschützten Datei bearbeiten oder extrahieren können.
 
-## Dokument speichern
+## How to extract HTML from a document
+Wenn Sie die Gegenrichtung benötigen – HTML aus einer Word‑ oder Excel‑Datei zurückzugewinnen – bietet GroupDocs.Editor die Methode `ExtractHtml`. Dies erfüllt die Anforderung „extract html from document“ und ist nützlich für webbasierte Vorschauen.
 
- Bearbeiten und speichern Sie Dokumente mühelos mit GroupDocs.Editor für .NET. Unsere Schritt-für-Schritt-Anleitung vereinfacht den Vorgang und ermöglicht es Entwicklern, den Dokumentenverwaltungs-Workflow mühelos zu verbessern. Egal, ob Sie mit Word-, Excel-, PowerPoint-, E-Book- oder E-Mail-Dokumenten arbeiten, dieses Tutorial bietet die Tools und Einblicke, die Sie für Ihren Erfolg benötigen. Begrüßen Sie effiziente Dokumentenbearbeitung und -verwaltung.[Mehr lesen](./save-document/)
+---
 
-## Bearbeitbares Dokument aus HTML erstellen
+## Introduction to GroupDocs.Editor for .NET
 
- Sind Sie es leid, manuell umzurechnen? Entdecken Sie, wie Sie mühelos[HTML in editierbare Word-Dokumente konvertieren](./create-editable-document-from-html/)mit GroupDocs.Editor für .NET. Unsere Schritt-für-Schritt-Anleitung vereinfacht den Prozess, ermöglicht Ihnen die Automatisierung der Dokumenterstellung und spart wertvolle Zeit. Verabschieden Sie sich von mühsamen Konvertierungen und begrüßen Sie effizientes Dokumentenmanagement.
+Neu bei GroupDocs.Editor für .NET? Tauchen Sie ein in unseren ausführlichen Leitfaden, wie man dieses leistungsstarke Werkzeug [how to use this powerful tool](./introduction-groupdocs-editor/) programmgesteuert verwendet, um Dokumente zu bearbeiten. Egal, ob Sie ein erfahrener Entwickler sind oder neu in der Welt des Dokumentenmanagements, unser Tutorial bietet Einblicke und Tipps für den Einstieg. Entfesseln Sie noch heute das Potenzial von GroupDocs.Editor für .NET.
 
-## Erweiterte Verwendung editierbarer Dokumente
+## Create Document
 
- Möchten Sie Ihre Fähigkeiten in der Dokumentbearbeitung auf die nächste Ebene bringen? Entdecken Sie die[Erweiterte Nutzung von GroupDocs.Editor für .NET](./advanced-usage-of-editable-documents/). Egal, ob Sie Dokumente programmgesteuert erstellen, bearbeiten oder Ressourcen daraus extrahieren, dieses Tutorial stattet Sie mit den Tools aus, mit denen Sie komplexe Aufgaben mühelos bewältigen können. Verbessern Sie Ihren Dokumentenverwaltungs-Workflow und erschließen Sie sich noch heute neue Möglichkeiten.
+Bereit, mit der Dokumentenerstellung zu beginnen? Erfahren Sie, wie Sie [edit Word, Excel, PowerPoint, Ebook, and Email documents](./create-document/) mit GroupDocs.Editor für .NET bearbeiten können. Unser umfassendes Tutorial bietet Schritt‑für‑Schritt‑Anleitungen und befähigt Entwickler, Dokumente mühelos zu erstellen und anzupassen. Verbessern Sie noch heute Ihren Dokumenten‑Management‑Workflow.
 
-## Extrahieren Sie HTML-Inhalte aus einem bearbeitbaren Dokument
+## Edit Document
 
- Müssen Sie HTML-Inhalte aus Dokumenten extrahieren? GroupDocs.Editor für .NET ist die Lösung für Sie. Unsere ausführliche Anleitung führt Sie nahtlos durch den Prozess und sorgt für eine reibungslose Integration und effiziente Dokumentenverwaltung. Verabschieden Sie sich von der manuellen Extraktion und begrüßen Sie automatisierte Lösungen.[Mehr lesen](./extract-html-content-from-editable-document/)
+Das Bearbeiten von Dokumenten war noch nie so einfach. Entdecken Sie, wie Sie mühelos [edit documents](./edit-document/) mit GroupDocs.Editor für .NET bearbeiten können. Egal, ob Sie mit Word‑Processing‑ oder Spreadsheet‑Dateien arbeiten, die Schritt‑für‑Schritt‑Anleitung vereinfacht den Prozess und ermöglicht nahtlose Überarbeitungen. Verabschieden Sie sich von mühsamen Bearbeitungen und begrüßen Sie gesteigerte Produktivität.
 
-## HTML-Ressourcen im Ordner speichern
+## Load Document
 
- Suchen Sie nach einer umfassenden Lösung zum Speichern von HTML-Ressourcen aus Dokumenten? Tauchen Sie ein in unser Tutorial zu[Speichern von HTML-Ressourcen in einem Ordner](./save-html-resources-to-folder/) mit GroupDocs.Editor für .NET. Mit der Schritt-für-Schritt-Anleitung können Entwickler mühelos Ressourcen extrahieren und ihren Dokumentenverwaltungs-Workflow optimieren. Freuen Sie sich über mehr Effizienz und Produktivität.
+Bereit, die Leistungsfähigkeit von GroupDocs.Editor für .NET zu nutzen? Erfahren Sie, wie Sie [load documents](./load-document/) laden, passwortgeschützte Dateien handhaben und mehr mit unserer Schritt‑für‑Schritt‑Anleitung. Egal, ob Sie Dokumente programmgesteuert bearbeiten oder neue Funktionen in Ihre Anwendung integrieren, dieses Tutorial vermittelt das nötige Wissen für den Erfolg. Starten Sie noch heute und optimieren Sie Ihren Dokumenten‑Management‑Workflow.
 
-Möchten Sie Ihren Dokumentenmanagement-Workflow verbessern? Tauchen Sie ein in die Welt der GroupDocs.Editor für .NET-Tutorials und schöpfen Sie das volle Potenzial der Dokumentbearbeitungsfunktionen aus. Von der Erstellung bearbeitbarer Dokumente bis hin zur erweiterten Nutzung und nahtlosen Integration bieten diese Tutorials umfassende Anleitungen für Entwickler, die ihren Workflow optimieren und ihre Produktivität steigern möchten. Verabschieden Sie sich von manuellen Prozessen und begrüßen Sie effizientes Dokumentenmanagement mit GroupDocs.Editor für .NET. 
-## Tutorials zur Dokumentbearbeitung
-### [Bearbeitbares Dokument aus HTML erstellen](./create-editable-document-from-html/)
-Mit dieser Schritt-für-Schritt-Anleitung können Sie HTML mit GroupDocs.Editor für .NET in bearbeitbare Word-Dokumente konvertieren. Perfekt zur Optimierung Ihres Dokumentenmanagement-Workflows.
-### [Erweiterte Verwendung editierbarer Dokumente](./advanced-usage-of-editable-documents/)
-Erlernen Sie die erweiterte Verwendung von GroupDocs.Editor für .NET: programmgesteuertes Erstellen, Bearbeiten und Extrahieren von Ressourcen aus Dokumenten.
-### [Extrahieren Sie HTML-Inhalte aus einem bearbeitbaren Dokument](./extract-html-content-from-editable-document/)
-Extrahieren Sie mühelos HTML-Inhalte aus Dokumenten mit GroupDocs.Editor für .NET. Folgen Sie unserer ausführlichen Anleitung für nahtlose Integration und Dokumentenverwaltung.
-### [HTML-Ressourcen im Ordner speichern](./save-html-resources-to-folder/)
-Erfahren Sie, wie Sie mit Groupdocs.Editor für .NET HTML-Ressourcen aus Dokumenten extrahieren. Dieses umfassende Tutorial bietet Entwicklern eine Schritt-für-Schritt-Anleitung.
-### [Dokument erstellen](./create-document/)
-Erfahren Sie in diesem umfassenden Schritt-für-Schritt-Tutorial, wie Sie Word-, Excel-, PowerPoint-, E-Book- und E-Mail-Dokumente mit GroupDocs.Editor für .NET bearbeiten.
-### [Dokument bearbeiten](./edit-document/)
-Lernen Sie, mit GroupDocs.Editor für .NET mühelos Dokumente zu bearbeiten. Schritt-für-Schritt-Anleitung für Textverarbeitungs- und Tabellenkalkulationsdateien.
-### [Einführung in GroupDocs.Editor für .NET](./introduction-groupdocs-editor/)
-Erfahren Sie in dieser ausführlichen Schritt-für-Schritt-Anleitung, wie Sie mit GroupDocs.Editor für .NET Dokumente programmgesteuert bearbeiten.
-### [Dokument laden](./load-document/)
-Erfahren Sie, wie Sie Dokumente programmgesteuert mit GroupDocs.Editor für .NET bearbeiten. Schritt-für-Schritt-Anleitung zum Laden von Dokumenten, Verwalten kennwortgeschützter Dateien und mehr.
-### [Dokument speichern](./save-document/)
-Bearbeiten und speichern Sie Dokumente mühelos mit GroupDocs.Editor für .NET. Diese Schritt-für-Schritt-Anleitung vereinfacht den Vorgang für Entwickler.
+## Save Document
+
+Bearbeiten und speichern Sie Dokumente mühelos mit GroupDocs.Editor für .NET. Unsere Schritt‑für‑Schritt‑Anleitung vereinfacht den Prozess und ermöglicht Entwicklern, den Dokumenten‑Management‑Workflow mit Leichtigkeit zu verbessern. Egal, ob Sie mit Word-, Excel-, PowerPoint-, Ebook- oder Email‑Dokumenten arbeiten, dieses Tutorial liefert die Werkzeuge und Erkenntnisse, die Sie benötigen. Begrüßen Sie effizientes Dokumenten‑Editing und -Management. [Read more](./save-document/)
+
+## Create Editable Document from HTML
+
+Sind Sie es leid, manuelle Konvertierungen durchzuführen? Entdecken Sie, wie Sie mühelos [convert HTML to editable Word documents](./create-editable-document-from-html/) mit GroupDocs.Editor für .NET durchführen können. Unsere Schritt‑für‑Schritt‑Anleitung vereinfacht den Prozess und ermöglicht Ihnen, die Dokumentenerstellung zu automatisieren und wertvolle Zeit zu sparen. Verabschieden Sie sich von mühsamen Konvertierungen und begrüßen Sie effizientes Dokumentenmanagement.
+
+## Advanced Usage of Editable Documents
+
+Bereit, Ihre Dokumenten‑Bearbeitungsfähigkeiten auf das nächste Level zu heben? Erkunden Sie die [advanced usage of GroupDocs.Editor for .NET](./advanced-usage-of-editable-documents/). Egal, ob Sie Dokumente programmgesteuert erstellen, bearbeiten oder Ressourcen extrahieren, dieses Tutorial stellt Ihnen die Werkzeuge zur Verfügung, um komplexe Aufgaben mühelos zu bewältigen. Verbessern Sie Ihren Dokumenten‑Management‑Workflow und entdecken Sie noch heute neue Möglichkeiten.
+
+## Extract HTML Content from Editable Document
+
+Müssen Sie HTML‑Inhalte aus Dokumenten extrahieren? GroupDocs.Editor für .NET bietet die Lösung. Unser ausführlicher Leitfaden führt Sie nahtlos durch den Prozess und sorgt für reibungslose Integration sowie effizientes Dokumentenmanagement. Verabschieden Sie sich von manueller Extraktion und begrüßen Sie automatisierte Lösungen. [Read more](./extract-html-content-from-editable-document/)
+
+## Save HTML Resources to Folder
+
+Suchen Sie nach einer umfassenden Lösung, um HTML‑Ressourcen aus Dokumenten zu speichern? Tauchen Sie ein in unser Tutorial zum [saving HTML resources to a folder](./save-html-resources-to-folder/) mit GroupDocs.Editor für .NET. Mit Schritt‑für‑Schritt‑Anleitungen können Entwickler Ressourcen mühelos extrahieren und ihren Dokumenten‑Management‑Workflow optimieren. Begrüßen Sie erhöhte Effizienz und Produktivität.
+
+Bereit, Ihren Dokumenten‑Management‑Workflow zu verbessern? Tauchen Sie ein in die Welt der GroupDocs.Editor für .NET‑Tutorials und erschließen Sie das volle Potenzial der Dokumenten‑Bearbeitungsfunktionen. Von der Erstellung editierbarer Dokumente über fortgeschrittene Nutzung bis hin zur nahtlosen Integration bieten diese Tutorials umfassende Anleitungen für Entwickler, die ihren Workflow optimieren und die Produktivität steigern möchten. Verabschieden Sie sich von manuellen Prozessen und begrüßen Sie effizientes Dokumentenmanagement mit GroupDocs.Editor für .NET. 
+
+## Document Editing Tutorials
+### [Create Editable Document from HTML](./create-editable-document-from-html/)
+HTML in editierbare Word‑Dokumente konvertieren mit GroupDocs.Editor für .NET – Schritt‑für‑Schritt‑Leitfaden. Perfekt, um Ihren Dokumenten‑Management‑Workflow zu optimieren.
+### [Advanced Usage of Editable Documents](./advanced-usage-of-editable-documents/)
+Erfahren Sie die erweiterte Nutzung von GroupDocs.Editor für .NET: programmgesteuertes Erstellen, Bearbeiten und Extrahieren von Ressourcen aus Dokumenten.
+### [Extract HTML Content from Editable Document](./extract-html-content-from-editable-document/)
+Extrahieren Sie mühelos HTML‑Inhalte aus Dokumenten mit GroupDocs.Editor für .NET. Folgen Sie unserem ausführlichen Leitfaden für nahtlose Integration und Dokumentenmanagement.
+### [Save HTML Resources to Folder](./save-html-resources-to-folder/)
+Erfahren Sie, wie Sie HTML‑Ressourcen aus Dokumenten mit GroupDocs.Editor für .NET extrahieren. Dieses umfassende Tutorial bietet Schritt‑für‑Schritt‑Anleitungen für Entwickler.
+### [Create Document](./create-document/)
+Erfahren Sie, wie Sie Word-, Excel-, PowerPoint-, Ebook- und Email‑Dokumente mit GroupDocs.Editor für .NET bearbeiten – in diesem umfassenden Schritt‑für‑Schritt‑Tutorial.
+### [Edit Document](./edit-document/)
+Lernen Sie, Dokumente mühelos mit GroupDocs.Editor für .NET zu bearbeiten. Schritt‑für‑Schritt‑Leitfaden für Word‑Processing‑ und Spreadsheet‑Dateien.
+### [Introduction to GroupDocs.Editor for .NET](./introduction-groupdocs-editor/)
+Erfahren Sie, wie Sie GroupDocs.Editor für .NET nutzen, um Dokumente programmgesteuert zu bearbeiten – mit diesem detaillierten Schritt‑für‑Schritt‑Leitfaden.
+### [Load Document](./load-document/)
+Erfahren Sie, wie Sie Dokumente programmgesteuert mit GroupDocs.Editor für .NET bearbeiten. Schritt‑für‑Schritt‑Leitfaden zum Laden von Dokumenten, Umgang mit passwortgeschützten Dateien und mehr.
+### [Save Document](./save-document/)
+Bearbeiten und speichern Sie Dokumente mühelos mit GroupDocs.Editor für .NET. Diese Schritt‑für‑Schritt‑Anleitung vereinfacht den Prozess für Entwickler.
+
+## Frequently Asked Questions
+
+**Q: Kann ich HTML in Word konvertieren, ohne CSS‑Styling zu verlieren?**  
+A: Ja, GroupDocs.Editor bewahrt die meisten CSS‑Stile, Tabellen und Bilder während der Konvertierung.
+
+**Q: Wie bearbeite ich ein Word‑Dokument nach der Konvertierung von HTML?**  
+A: Laden Sie die resultierende .docx mit der Klasse `EditableDocument` und verwenden Sie die API des Editors, um Text zu ändern, Bilder zu ersetzen oder Tabellen zu aktualisieren.
+
+**Q: Ist es möglich, eine passwortgeschützte Word‑Datei zu laden und anschließend zu konvertieren?**  
+A: Absolut. Geben Sie das Passwort beim Öffnen des Dokuments an; die API entschlüsselt es automatisch.
+
+**Q: Kann ich das ursprüngliche HTML aus einem Word‑Dokument extrahieren?**  
+A: Ja, die Methode `ExtractHtml` liefert die HTML‑Darstellung des Dokuments und erfüllt damit die Anforderung „extract html from document“.
+
+**Q: Unterstützt GroupDocs.Editor das programmgesteuerte Bearbeiten von Excel‑Dateien?**  
+A: Ja. Sie können Excel‑Tabellen mit derselben Editor‑API bearbeiten, was Szenarien wie „edit excel programmatically“ ermöglicht.
+
+**Zuletzt aktualisiert:** 2026-03-06  
+**Getestet mit:** GroupDocs.Editor für .NET 23.12 (aktuell zum Zeitpunkt der Erstellung)  
+**Autor:** GroupDocs

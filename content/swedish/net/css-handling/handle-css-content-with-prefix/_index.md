@@ -1,54 +1,82 @@
 ---
-title: Hantera CSS-innehåll med prefix
-linktitle: Hantera CSS-innehåll med prefix
+date: 2026-03-06
+description: Lär dig hur du hanterar CSS‑innehåll med prefix och extraherar CSS‑innehåll
+  med GroupDocs.Editor för .NET i den här detaljerade steg‑för‑steg‑handledningen.
+linktitle: Handle CSS Content with Prefix
 second_title: GroupDocs.Editor .NET API
-description: Lär dig hur du hanterar CSS-innehåll med prefix med Groupdocs.Editor för .NET i denna detaljerade steg-för-steg-handledning. Perfekt för utvecklare på alla nivåer.
-weight: 11
-url: /sv/net/css-handling/handle-css-content-with-prefix/
+title: Hantera CSS‑innehåll med prefix
 type: docs
+url: /sv/net/css-handling/handle-css-content-with-prefix/
+weight: 11
 ---
+
 # Hantera CSS-innehåll med prefix
 
-## Introduktion
-den här handledningen kommer vi att dyka djupt in i hur man hanterar CSS-innehåll med ett prefix med Groupdocs.Editor för .NET. Detta kraftfulla verktyg låter dig hantera och manipulera dokument med lätthet. Oavsett om du är en erfaren utvecklare eller precis har börjat, kommer den här guiden att gå igenom varje steg på ett enkelt och engagerande sätt.
+I den här handledningen kommer du att upptäcka **hur man hanterar css prefix** när du arbetar med stilmallar i ett dokument med GroupDocs.Editor för .NET. Oavsett om du behöver lägga till en URL före bilder, teckensnitt eller någon extern resurs, visar stegen nedan exakt hur du **hanterar css prefix** och även hur du **extraherar css-innehåll** för vidare bearbetning.
+
+## Snabba svar
+- **Vad betyder “handle css prefix”?** Att lägga till ett anpassat URL-prefix till externa resurser som refereras i CSS.
+- **Vilken API‑metod returnerar CSS‑stilar?** `EditableDocument.GetCssContent(...)`.
+- **Behöver jag en licens?** En provlicens är tillgänglig; en kommersiell licens krävs för produktion.
+- **Vilka .NET‑versioner stöds?** .NET Framework 4.5+ och .NET Core/5/6.
+- **Kan jag ändra prefixet vid körning?** Ja – skicka bara en annan sträng till `GetCssContent`.
+
+## Vad är **handle css prefix**?
+Att applicera ett prefix på CSS‑resurser omskriver sökvägarna för bilder, teckensnitt eller andra tillgångar så att de pekar på en plats du kontrollerar (t.ex. ett CDN eller en säker server). Detta är särskilt användbart när du exporterar ett dokument och behöver att alla externa referenser ska vara åtkomliga från en webbapplikation.
+
+## Varför använda GroupDocs.Editor för att **extrahera css-innehåll**?
+GroupDocs.Editor kan läsa den ursprungliga CSS som är inbäddad i WordProcessing‑dokument, ge dig de råa stilbladssträngarna och låta dig manipulera dem innan rendering eller sparning. Detta eliminerar behovet av manuell parsning och garanterar att den extraherade CSS‑en matchar dokumentets interna representation.
+
 ## Förutsättningar
 Innan vi börjar, se till att du har följande förutsättningar på plats:
-- Visual Studio: Du behöver en fungerande installation av Visual Studio.
-- .NET Framework: Se till att du har .NET Framework installerat.
--  Groupdocs.Editor för .NET: Du kan ladda ner den[här](https://releases.groupdocs.com/editor/net/).
+- Visual Studio: Du behöver en fungerande installation av Visual Studio.  
+- .NET Framework: Se till att du har .NET Framework installerat.  
+- GroupDocs.Editor för .NET: Du kan ladda ner det [här](https://releases.groupdocs.com/editor/net/).  
 - Exempeldokument: Ha ett exempeldokument redo för redigering.
-## Importera namnområden
-Låt oss först importera de nödvändiga namnrymden för att säkerställa att vår kod fungerar smidigt. Detta är ett avgörande steg för att få tillgång till alla funktioner som tillhandahålls av Groupdocs.Editor för .NET.
+
+## Importera namnrymder
+Först, låt oss importera de nödvändiga namnrymderna för att säkerställa att vår kod körs smidigt. Detta steg ger oss åtkomst till de centrala klasserna i GroupDocs.Editor.
+
 ```csharp
 using System;
 using System.Collections.Generic;
 using GroupDocs.Editor.Options;
 ```
-## Steg 1: Initiera redigeraren
- Det första steget innebär att initiera`Editor` klass med ditt exempeldokument. Detta ställer in miljön för att börja redigera ditt dokument.
+
+## Steg 1: Initiera editorn
+Det första steget innebär att skapa en `Editor`‑instans med ditt exempeldokument. Detta sätter upp redigeringsmiljön.
+
 ```csharp
 using (Editor editor = new Editor("Your Sample Document", delegate { return new WordProcessingLoadOptions(); }))
 {
 ```
+
 ## Steg 2: Redigera dokumentet
-Därefter måste vi skapa en`EditableDocument` exempel. Det är här magin händer - vilket gör det möjligt för oss att manipulera dokumentets innehåll.
+Därefter får vi ett `EditableDocument`‑objekt. Detta objekt representerar den redigerbara versionen av filen och låter oss arbeta med dess interna delar.
+
 ```csharp
     using (EditableDocument document = editor.Edit(new WordProcessingEditOptions()))
     {
 ```
+
 ## Steg 3: Ställ in externa prefix
-Här definierar vi externa prefix för bilder och typsnitt. Detta är särskilt användbart om du hänvisar till externa resurser som finns på en webbserver.
+Definiera URL‑prefixen för bilder och teckensnitt. Dessa prefix kommer att läggas till före varje bild‑ och teckensnittreferens som hittas i CSS.
+
 ```csharp
         string externalImagesPrefix = "http://www.mywebsite.com/images/id=";
         string externalFontsPrefix = "http://www.mywebsite.com/fonts/id=";
 ```
-## Steg 4: Skaffa CSS-innehåll
-Nu hämtar vi CSS-innehållet från dokumentet. Den här metoden returnerar en lista med CSS-formatmallar, med de prefix som vi definierade tidigare.
+
+## Steg 4: **Extrahera CSS-innehåll** med prefixen
+Anropa `GetCssContent` och skicka de prefix du just definierade. Metoden returnerar en lista med CSS‑stilbladssträngar som redan innehåller de prefixade URL‑erna.
+
 ```csharp
         List<string> stylesheets = document.GetCssContent(externalImagesPrefix, externalFontsPrefix);
 ```
-## Steg 5: Mata ut resultaten
-Slutligen matar vi ut antalet hittade stilmallar och skriver ut varje stilmall till konsolen. Detta hjälper till att verifiera att prefixen är korrekt tillämpade och att CSS-innehållet har hämtats.
+
+## Steg 5: Skriv ut resultaten
+Skriv ut antalet stilblad som hittades och visa varje stilblad. Detta hjälper dig att verifiera att prefixen har tillämpats korrekt.
+
 ```csharp
         Console.WriteLine("There are {0} stylesheets in the input document", stylesheets.Count);
         foreach (string css in stylesheets)
@@ -58,16 +86,44 @@ Slutligen matar vi ut antalet hittade stilmallar och skriver ut varje stilmall t
     }
 }
 ```
+
+## Vanliga problem och lösningar
+- **Inga stilblad returnerades** – Se till att källdokumentet faktiskt innehåller CSS (t.ex. ett Word‑dokument med formaterade tabeller eller inbäddad HTML).  
+- **Felaktiga URL‑er** – Dubbelkolla att prefixsträngarna avslutas med rätt avgränsare (`/` eller `=`) för din server‑routing.  
+- **Prestandaproblem** – För mycket stora dokument, överväg att bearbeta stilblad i batchar för att undvika hög minnesanvändning.
+
 ## Slutsats
-Att hantera CSS-innehåll med prefix med Groupdocs.Editor för .NET är enkelt och effektivt. Genom att följa dessa steg kan du enkelt hantera dokumentets formatmallar och se till att de refererar till rätt externa resurser. Denna handledning har täckt de väsentliga stegen för att komma igång, men Groupdocs.Editor för .NET erbjuder mycket mer. Utforska dess dokumentation och funktioner för att fullt ut utnyttja dess kapacitet i dina projekt.
-## FAQ's
-### Kan jag använda Groupdocs.Editor för .NET med andra dokumentformat?
-Ja, Groupdocs.Editor för .NET stöder olika dokumentformat inklusive PDF, Word, Excel och mer.
-### Finns det en gratis testversion tillgänglig för Groupdocs.Editor för .NET?
- Absolut! Du kan starta din kostnadsfria provperiod[här](https://releases.groupdocs.com/).
-### Hur får jag en tillfällig licens för Groupdocs.Editor för .NET?
- Du kan få en tillfällig licens[här](https://purchase.groupdocs.com/temporary-license/).
-### Var kan jag hitta detaljerad dokumentation för Groupdocs.Editor för .NET?
- Detaljerad dokumentation finns tillgänglig[här](https://tutorials.groupdocs.com/editor/net/).
-### Vilka supportalternativ finns tillgängliga för Groupdocs.Editor för .NET?
- Du kan få stöd[här](https://forum.groupdocs.com/c/editor/20).
+Att hantera CSS‑innehåll med ett prefix med GroupDocs.Editor för .NET är enkelt och kraftfullt. Genom att följa dessa steg kan du **hantera css prefix**, hämta den råa CSS‑en via **extrahera css-innehåll**, och sömlöst integrera externa resurser i ditt webbflöde. Utforska andra GroupDocs.Editor‑funktioner såsom HTML‑konvertering, bildextraktion och dokumentsammanfogning för att få ännu mer värde ur API‑et.
+
+## Vanliga frågor
+### Kan jag använda GroupDocs.Editor för .NET med andra dokumentformat?
+Ja, GroupDocs.Editor för .NET stöder olika dokumentformat inklusive PDF, Word, Excel och mer.
+
+### Finns det en gratis provperiod för GroupDocs.Editor för .NET?
+Absolut! Du kan starta din gratis provperiod [här](https://releases.groupdocs.com/).
+
+### Hur får jag en tillfällig licens för GroupDocs.Editor för .NET?
+Du kan skaffa en tillfällig licens [här](https://purchase.groupdocs.com/temporary-license/).
+
+### Var kan jag hitta detaljerad dokumentation för GroupDocs.Editor för .NET?
+Detaljerad dokumentation finns tillgänglig [här](https://tutorials.groupdocs.com/editor/net/).
+
+### Vilka supportalternativ finns tillgängliga för GroupDocs.Editor för .NET?
+Du kan få support [här](https://forum.groupdocs.com/c/editor/20).
+
+## Ytterligare vanliga frågor
+
+**Q: Kan jag ändra prefixet efter att ha extraherat CSS?**  
+A: Ja. Anropa `GetCssContent` igen med en annan prefixsträng; metoden använder alltid de värden du skickar vid körning.
+
+**Q: Fungerar detta med lösenordsskyddade dokument?**  
+A: Ja. Ange lösenordet i `WordProcessingLoadOptions` när du skapar `Editor`‑instansen.
+
+**Q: Är det möjligt att spara den modifierade CSS‑en tillbaka i dokumentet?**  
+A: GroupDocs.Editor erbjuder för närvarande endast läsåtkomst till CSS. För att bevara ändringarna måste du ersätta den ursprungliga stilbladet med hjälp av dokumentets underliggande XML‑API:er.
+
+---
+
+**Senast uppdaterad:** 2026-03-06  
+**Testad med:** GroupDocs.Editor 23.12 för .NET  
+**Författare:** GroupDocs

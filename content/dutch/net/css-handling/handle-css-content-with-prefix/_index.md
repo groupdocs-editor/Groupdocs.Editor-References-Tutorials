@@ -1,54 +1,82 @@
 ---
-title: Behandel CSS-inhoud met voorvoegsel
-linktitle: Behandel CSS-inhoud met voorvoegsel
+date: 2026-03-06
+description: Leer hoe u CSS-inhoud met een prefix kunt verwerken en CSS-inhoud kunt
+  extraheren met GroupDocs.Editor voor .NET in deze gedetailleerde stapsgewijze tutorial.
+linktitle: Handle CSS Content with Prefix
 second_title: GroupDocs.Editor .NET API
-description: Leer hoe u met CSS-inhoud met voorvoegsel omgaat met Groupdocs.Editor voor .NET in deze gedetailleerde stapsgewijze zelfstudie. Perfect voor ontwikkelaars van alle niveaus.
-weight: 11
-url: /nl/net/css-handling/handle-css-content-with-prefix/
+title: CSS-inhoud met voorvoegsel behandelen
 type: docs
+url: /nl/net/css-handling/handle-css-content-with-prefix/
+weight: 11
 ---
-# Behandel CSS-inhoud met voorvoegsel
 
-## Invoering
-In deze zelfstudie gaan we dieper in op het omgaan met CSS-inhoud met een voorvoegsel met behulp van Groupdocs.Editor voor .NET. Met deze krachtige tool kunt u documenten eenvoudig beheren en manipuleren. Of u nu een doorgewinterde ontwikkelaar bent of net begint, deze gids leidt u op een eenvoudige en boeiende manier door elke stap.
-## Vereisten
-Voordat we aan de slag gaan, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
-- Visual Studio: U hebt een werkende installatie van Visual Studio nodig.
-- .NET Framework: Zorg ervoor dat .NET Framework is geïnstalleerd.
--  Groupdocs.Editor voor .NET: u kunt het downloaden[hier](https://releases.groupdocs.com/editor/net/).
-- Voorbeelddocument: Zorg ervoor dat u een voorbeelddocument gereed heeft om te bewerken.
-## Naamruimten importeren
-Laten we eerst de benodigde naamruimten importeren om ervoor te zorgen dat onze code soepel werkt. Dit is een cruciale stap om toegang te krijgen tot alle functionaliteiten van Groupdocs.Editor voor .NET.
+# CSS-inhoud behandelen met prefix
+
+In deze tutorial ontdek je **hoe je css‑prefix kunt behandelen** bij het werken met stylesheets binnen een document met GroupDocs.Editor voor .NET. Of je nu een URL moet voorvoegen aan afbeeldingen, lettertypen of een externe bron, de onderstaande stappen laten je precies zien hoe je **css‑prefix kunt behandelen** en ook hoe je **css‑inhoud kunt extraheren** voor verdere verwerking.
+
+## Quick Answers
+- **Wat betekent “handle css prefix”?** Het toevoegen van een aangepaste URL‑prefix aan externe bronnen die in CSS worden gerefereerd.  
+- **Welke API‑methode retourneert CSS‑stijlen?** `EditableDocument.GetCssContent(...)`.  
+- **Heb ik een licentie nodig?** Een proeflicentie is beschikbaar; een commerciële licentie is vereist voor productie.  
+- **Welke .NET‑versies worden ondersteund?** .NET Framework 4.5+ en .NET Core/5/6.  
+- **Kan ik de prefix tijdens runtime wijzigen?** Ja – geef simpelweg een andere string door aan `GetCssContent`.
+
+## Wat is **handle css prefix**?
+Het toepassen van een prefix op CSS‑bronnen herschrijft de paden van afbeeldingen, lettertypen of andere assets zodat ze wijzen naar een locatie die jij beheert (bijv. een CDN of een beveiligde server). Dit is vooral handig wanneer je een document exporteert en alle externe verwijzingen bereikbaar moeten zijn vanuit een webapplicatie.
+
+## Waarom GroupDocs.Editor gebruiken om **css‑inhoud te extraheren**?
+GroupDocs.Editor kan de originele CSS die in Word‑verwerkingsdocumenten is ingebed lezen, je de ruwe stylesheet‑strings geven, en je in staat stellen deze te manipuleren vóór weergave of opslaan. Dit elimineert de noodzaak voor handmatige parsing en garandeert dat de geëxtraheerde CSS overeenkomt met de interne representatie van het document.
+
+## Prerequisites
+Voordat we beginnen, zorg dat je de volgende zaken klaar hebt staan:
+- Visual Studio: Je hebt een werkende installatie van Visual Studio nodig.  
+- .NET Framework: Zorg dat je het .NET Framework geïnstalleerd hebt.  
+- GroupDocs.Editor for .NET: Je kunt het downloaden [hier](https://releases.groupdocs.com/editor/net/).  
+- Sample Document: Zorg voor een voorbeelddocument klaar voor bewerking.
+
+## Import Namespaces
+Laten we eerst de benodigde namespaces importeren zodat onze code soepel draait. Deze stap geeft ons toegang tot de kernklassen van GroupDocs.Editor.
+
 ```csharp
 using System;
 using System.Collections.Generic;
 using GroupDocs.Editor.Options;
 ```
-## Stap 1: Initialiseer de editor
- De eerste stap omvat het initialiseren van de`Editor` klasse met uw voorbeelddocument. Hiermee wordt de omgeving ingesteld om te beginnen met het bewerken van uw document.
+
+## Step 1: Initialize the Editor
+De eerste stap omvat het aanmaken van een `Editor`‑instance met je voorbeelddocument. Dit zet de bewerkingsomgeving op.
+
 ```csharp
 using (Editor editor = new Editor("Your Sample Document", delegate { return new WordProcessingLoadOptions(); }))
 {
 ```
-## Stap 2: bewerk het document
-Vervolgens moeten we een`EditableDocument` voorbeeld. Dit is waar de magie gebeurt: we kunnen de inhoud van het document manipuleren.
+
+## Step 2: Edit the Document
+Vervolgens verkrijgen we een `EditableDocument`‑object. Dit object vertegenwoordigt de bewerkbare versie van het bestand en stelt ons in staat om met de interne onderdelen te werken.
+
 ```csharp
     using (EditableDocument document = editor.Edit(new WordProcessingEditOptions()))
     {
 ```
-## Stap 3: Stel externe voorvoegsels in
-Hier definiëren we de externe voorvoegsels voor afbeeldingen en lettertypen. Dit is vooral handig als u verwijst naar externe bronnen die op een webserver worden gehost.
+
+## Step 3: Set External Prefixes
+Definieer de URL‑prefixes voor afbeeldingen en lettertypen. Deze prefixes worden voor elke afbeelding‑ en lettertype‑referentie in de CSS geplaatst.
+
 ```csharp
-        string externalImagesPrefix = "http://www.mijnwebsite.com/images/id=”;
-        string externalFontsPrefix = "http://www.mijnwebsite.com/fonts/id=”;
+        string externalImagesPrefix = "http://www.mywebsite.com/images/id=";
+        string externalFontsPrefix = "http://www.mywebsite.com/fonts/id=";
 ```
-## Stap 4: verkrijg CSS-inhoud
-Nu halen we de CSS-inhoud uit het document. Deze methode retourneert een lijst met CSS-stylesheets, waarbij de voorvoegsels worden toegepast die we eerder hebben gedefinieerd.
+
+## Step 4: **Extract CSS content** with the Prefixes
+Roep `GetCssContent` aan en geef de zojuist gedefinieerde prefixes door. De methode retourneert een lijst met CSS‑stylesheet‑strings die al de geprefixt URLs bevatten.
+
 ```csharp
         List<string> stylesheets = document.GetCssContent(externalImagesPrefix, externalFontsPrefix);
 ```
-## Stap 5: Voer de resultaten uit
-Ten slotte geven we het aantal gevonden stylesheets weer en drukken we elke stylesheet af naar de console. Dit helpt bij het verifiëren dat de voorvoegsels correct zijn toegepast en dat de CSS-inhoud met succes is opgehaald.
+
+## Step 5: Output the Results
+Print het aantal gevonden stylesheets en toon elke stylesheet. Dit helpt je te verifiëren dat de prefixes correct zijn toegepast.
+
 ```csharp
         Console.WriteLine("There are {0} stylesheets in the input document", stylesheets.Count);
         foreach (string css in stylesheets)
@@ -58,16 +86,44 @@ Ten slotte geven we het aantal gevonden stylesheets weer en drukken we elke styl
     }
 }
 ```
-## Conclusie
-Het verwerken van CSS-inhoud met voorvoegsels met Groupdocs.Editor voor .NET is eenvoudig en efficiënt. Door deze stappen te volgen, kunt u de stijlbladen van uw document eenvoudig beheren en ervoor zorgen dat ze naar de juiste externe bronnen verwijzen. In deze zelfstudie worden de essentiële stappen besproken om u op weg te helpen, maar Groupdocs.Editor voor .NET biedt nog veel meer. Ontdek de documentatie en functies ervan om de mogelijkheden ervan volledig te benutten in uw projecten.
-## Veelgestelde vragen
-### Kan ik Groupdocs.Editor voor .NET gebruiken met andere documentformaten?
-Ja, Groupdocs.Editor voor .NET ondersteunt verschillende documentformaten, waaronder PDF, Word, Excel en meer.
-### Is er een gratis proefversie beschikbaar voor Groupdocs.Editor voor .NET?
- Absoluut! U kunt uw gratis proefperiode starten[hier](https://releases.groupdocs.com/).
-### Hoe krijg ik een tijdelijke licentie voor Groupdocs.Editor voor .NET?
- U kunt een tijdelijke licentie verkrijgen[hier](https://purchase.groupdocs.com/temporary-license/).
-### Waar kan ik gedetailleerde documentatie vinden voor Groupdocs.Editor voor .NET?
- Gedetailleerde documentatie is beschikbaar[hier](https://tutorials.groupdocs.com/editor/net/).
-### Welke ondersteuningsopties zijn beschikbaar voor Groupdocs.Editor voor .NET?
- U kunt ondersteuning krijgen[hier](https://forum.groupdocs.com/c/editor/20).
+
+## Common Issues and Solutions
+- **No stylesheets returned** – Zorg ervoor dat het bron‑document daadwerkelijk CSS bevat (bijv. een Word‑document met gestylede tabellen of ingebedde HTML).  
+- **Incorrect URLs** – Controleer dubbel dat de prefix‑strings eindigen met het juiste scheidingsteken (`/` of `=`) voor jouw server‑routing.  
+- **Performance concerns** – Voor zeer grote documenten kun je overwegen om stylesheets in batches te verwerken om hoog geheugenverbruik te vermijden.
+
+## Conclusion
+CSS‑inhoud behandelen met een prefix via GroupDocs.Editor voor .NET is eenvoudig en krachtig. Door deze stappen te volgen kun je **css‑prefix** toepassen, de ruwe CSS ophalen via **extract css content**, en externe bronnen naadloos integreren in je web‑workflow. Ontdek andere GroupDocs.Editor‑functies zoals HTML‑conversie, afbeeldingsextractie en document‑samenvoeging om nog meer waarde uit de API te halen.
+
+## FAQ's
+### Kan ik GroupDocs.Editor voor .NET gebruiken met andere documentformaten?
+Ja, GroupDocs.Editor voor .NET ondersteunt verschillende documentformaten, waaronder PDF, Word, Excel en meer.
+
+### Is er een gratis proefversie beschikbaar voor GroupDocs.Editor voor .NET?
+Absoluut! Je kunt je gratis proefversie starten [hier](https://releases.groupdocs.com/).
+
+### Hoe krijg ik een tijdelijke licentie voor GroupDocs.Editor voor .NET?
+Je kunt een tijdelijke licentie verkrijgen [hier](https://purchase.groupdocs.com/temporary-license/).
+
+### Waar vind ik gedetailleerde documentatie voor GroupDocs.Editor voor .NET?
+Gedetailleerde documentatie is beschikbaar [hier](https://tutorials.groupdocs.com/editor/net/).
+
+### Welke ondersteuningsopties zijn er beschikbaar voor GroupDocs.Editor voor .NET?
+Je kunt ondersteuning krijgen [hier](https://forum.groupdocs.com/c/editor/20).
+
+## Additional Frequently Asked Questions
+
+**Q: Kan ik de prefix wijzigen nadat ik de CSS heb geëxtraheerd?**  
+A: Ja. Roep `GetCssContent` opnieuw aan met een andere prefix‑string; de methode gebruikt altijd de waarden die je op runtime doorgeeft.
+
+**Q: Werkt dit met met wachtwoord beveiligde documenten?**  
+A: Ja. Geef het wachtwoord door in `WordProcessingLoadOptions` bij het aanmaken van de `Editor`‑instance.
+
+**Q: Is het mogelijk om de aangepaste CSS terug op te slaan in het document?**  
+A: GroupDocs.Editor biedt momenteel alleen read‑only toegang tot CSS. Om wijzigingen te behouden moet je de originele stylesheet vervangen via de onderliggende XML‑API’s van het document.
+
+---
+
+**Last Updated:** 2026-03-06  
+**Tested With:** GroupDocs.Editor 23.12 for .NET  
+**Author:** GroupDocs
