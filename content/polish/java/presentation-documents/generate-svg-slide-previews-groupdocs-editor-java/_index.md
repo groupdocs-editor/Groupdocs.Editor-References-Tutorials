@@ -1,48 +1,44 @@
 ---
-date: '2026-01-13'
-description: Dowiedz się, jak konwertować pliki PPTX na SVG i generować obrazy SVG
-  w Javie przy użyciu GroupDocs.Editor, zwiększając efektywność zarządzania dokumentami
-  i współpracy.
+date: '2026-04-02'
+description: Dowiedz się, jak tworzyć pliki SVG z prezentacji PowerPoint przy użyciu
+  GroupDocs.Editor dla Javy, konwertować PPTX na SVG i zapisywać obrazy SVG w Javie,
+  aby uzyskać szybkie podglądy dokumentów.
 keywords:
-- GroupDocs.Editor for Java
-- SVG slide previews
-- Java presentations
-title: 'Konwertuj PPTX na SVG - Twórz podglądy slajdów przy użyciu GroupDocs.Editor
-  dla Javy'
+- create svg from powerpoint
+- convert pptx to svg
+- save svg images java
+title: Utwórz SVG z PowerPoint przy użyciu GroupDocs.Editor dla Javy
 type: docs
 url: /pl/java/presentation-documents/generate-svg-slide-previews-groupdocs-editor-java/
 weight: 1
 ---
 
-# Konwertuj PPTX do SVG: Twórz podglądy slajdów przy użyciu GroupDocs.Editor dla Java
+# Utwórz SVG z PowerPoint przy użyciu GroupDocs.Editor dla Javy
 
-Efektywne zarządzanie i prezentowanie dokumentów może być wyzwaniem, szczególnie przy pracy z prezentacjami. **Jeśli potrzebujesz konwertować PPTX do SVG**, ten przewodnik pokaże Ci szybki, niezawodny sposób generowania skalowalnych podglądów slajdów bezpośrednio z kodu Java. Po zakończeniu tego tutorialu zrozumiesz, jak załadować prezentację, wyodrębnić jej metadane oraz **java generować obrazy SVG** dla każdego slajdu — idealne rozwiązanie dla systemów zarządzania dokumentami, narzędzi współpracy czy platform edukacyjnych.
+Generowanie wizualnych podglądów slajdów PowerPoint jest powszechną potrzebą w systemach zarządzania dokumentami, platformach e‑learningowych i narzędziach współpracy. **W tym samouczku dowiesz się, jak utworzyć SVG z plików PowerPoint** przy użyciu kilku linii kodu Java. Po zakończeniu będziesz w stanie wczytać plik PPTX, odczytać liczbę slajdów i **zapisać obrazy SVG w Javie** dla każdego slajdu — co zapewni ostre, skalowalne grafiki ładowane natychmiast w przeglądarkach.
 
 ## Szybkie odpowiedzi
-- **Co oznacza „convert PPTX to SVG”?** Przekształca każdy slajd PowerPointa w plik wektorowy SVG.  
-- **Która biblioteka obsługuje konwersję?** GroupDocs.Editor dla Java udostępnia wbudowane metody generowania podglądów SVG.  
-- **Czy potrzebna jest licencja?** Darmowa wersja próbna lub tymczasowa licencja wystarczy do testów; pełna licencja jest wymagana w środowisku produkcyjnym.  
-- **Czy mogę przetwarzać duże prezentacje?** Tak — przetwarzaj slajdy w partiach i niezwłocznie zwalniaj instancje `Editor`.  
-- **Jakiej wersji Javy potrzebuję?** Każda współczesna JDK (8+) działa; wystarczy używać najnowszej wersji GroupDocs.Editor.
+- **Co oznacza „create SVG from PowerPoint”?** Konwertuje każdy slajd w pliku PPTX na plik Scalable Vector Graphic (SVG).  
+- **Która biblioteka wykonuje konwersję?** GroupDocs.Editor for Java oferuje dedykowaną metodę `generatePreview` do wyjścia SVG.  
+- **Czy potrzebna jest licencja do produkcji?** Tak — użyj wersji próbnej do testów, a następnie zastosuj pełną licencję w wdrożeniach komercyjnych.  
+- **Czy duże prezentacje mogą być przetwarzane efektywnie?** Absolutnie — przetwarzaj slajdy w partiach i zwalniaj instancję `Editor` po każdej partii.  
+- **Jakiej wersji Javy wymaga?** Każdy JDK 8+ działa; wystarczy odwołać się do najnowszego JAR‑a GroupDocs.Editor.
 
-## Co to jest „convert PPTX to SVG”?
-Konwersja pliku PPTX do SVG tworzy wektorową reprezentację każdego slajdu. Pliki SVG zachowują wysoką jakość grafiki przy dowolnym poziomie powiększenia, szybko ładują się w przeglądarkach i są idealne jako miniatury lub podglądy online.
+## Co to jest „create SVG from PowerPoint”?
+Utworzenie SVG z PowerPoint oznacza konwersję każdego slajdu PPTX do pliku SVG. SVG jest formatem wektorowym, więc grafika pozostaje ostra przy dowolnym poziomie powiększenia, ładuje się szybko i jest idealna dla miniatur lub przeglądarek online.
 
-## Dlaczego warto używać GroupDocs.Editor dla Java do generowania podglądów SVG?
-- **Brak zewnętrznych narzędzi** — biblioteka obsługuje wszystko wewnątrz aplikacji Java.  
-- **Wysoka wierność** — wyjście SVG zachowuje czcionki, kształty i układ dokładnie tak, jak w oryginalnym slajdzie.  
-- **Skoncentrowane na wydajności** — możesz generować podglądy w locie, bez otwierania pełnej prezentacji.  
-- **Wieloplatformowość** — działa na Windows, Linux i macOS.
+## Dlaczego warto używać GroupDocs.Editor dla Javy do konwersji PPTX na SVG?
+- **All‑in‑one solution** – Brak zewnętrznych narzędzi; biblioteka obsługuje wczytywanie, renderowanie i zapisywanie.  
+- **Pixel‑perfect fidelity** – Czcionki, kształty i układy są odtwarzane dokładnie.  
+- **High performance** – Generuj podglądy w locie bez otwierania pełnego interfejsu prezentacji.  
+- **Cross‑platform** – Działa tak samo na Windows, Linux i macOS.
 
 ## Wymagania wstępne
+- **GroupDocs.Editor** library ≥ 25.3.  
+- Java Development Kit (JDK 8 lub nowszy).  
+- IDE (IntelliJ IDEA, Eclipse itp.) oraz Maven do zarządzania zależnościami (opcjonalnie, ale zalecane).
 
-Zanim rozpoczniesz, upewnij się, że masz:
-
-- Bibliotekę **GroupDocs.Editor** w wersji 25.3 lub nowszej.  
-- Zainstalowany Java Development Kit (JDK) (8 lub nowszy).  
-- IDE, takie jak IntelliJ IDEA lub Eclipse, oraz Maven do zarządzania zależnościami (opcjonalnie, ale zalecane).
-
-## Konfiguracja GroupDocs.Editor dla Java
+## Konfiguracja GroupDocs.Editor dla Javy
 
 ### Korzystanie z Maven
 Dodaj repozytorium i zależność do pliku `pom.xml`:
@@ -66,15 +62,15 @@ Dodaj repozytorium i zależność do pliku `pom.xml`:
 ```
 
 ### Bezpośrednie pobranie
-Jeśli wolisz ręczną konfigurację, pobierz najnowszy JAR ze strony oficjalnej: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+Jeśli wolisz ręczną konfigurację, pobierz najnowszy JAR z oficjalnej strony pobierania: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 #### Uzyskanie licencji
-- **Darmowa wersja próbna:** Testuj wszystkie funkcje bez kosztów.  
-- **Licencja tymczasowa:** Pozwala na pełną funkcjonalność przez ograniczony czas.  
-- **Pełny zakup:** Odblokowuje nieograniczone użycie w produkcji.
+- **Free Trial:** Testuj wszystkie funkcje bez kosztów.  
+- **Temporary License:** Pełna funkcjonalność przez ograniczony czas.  
+- **Full Purchase:** Nieograniczone użycie w produkcji.
 
 ### Podstawowa inicjalizacja i konfiguracja
-Poniżej znajduje się minimalny przykład pokazujący, jak utworzyć obiekt `Editor` z plikiem prezentacji. Ten fragment będzie użyty później przy generowaniu podglądów SVG.
+Poniżej znajduje się minimalny przykład pokazujący, jak utworzyć obiekt `Editor` z plikiem prezentacji. Ten fragment kodu będzie użyty później przy generowaniu podglądów SVG.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -92,19 +88,18 @@ public class InitGroupDocs {
 
 ## Przewodnik implementacji
 
-Przejdziemy krok po kroku przez wszystkie etapy **konwertowania PPTX do SVG** oraz **java generowania obrazów SVG** dla każdego slajdu.
+Przejdziemy przez każdy krok niezbędny do **konwersji PPTX na SVG** oraz **zapisu obrazów SVG w Javie** dla każdego slajdu.
 
-### Ładowanie pliku prezentacji
+### Wczytaj plik prezentacji
+**Przegląd:** Wczytaj plik PowerPoint, aby uzyskać dostęp do jego stron i metadanych.
 
-**Przegląd:** Załaduj plik PowerPoint, aby uzyskać dostęp do jego stron i metadanych.
-
-#### Krok 1: Import wymaganych klas
+#### Krok 1: Importuj wymagane klasy
 ```java
 import com.groupdocs.editor.Editor;
 ```
 
-#### Krok 2: Inicjalizacja Editor ze ścieżką pliku
-Utwórz instancję `Editor`, podając ścieżkę do pliku prezentacji:
+#### Krok 2: Zainicjalizuj Editor z ścieżką do pliku
+Create an `Editor` instance, passing the path of your presentation file:
 
 ```java
 String inputPath = "YOUR_DOCUMENT_DIRECTORY/FormatingExample.pptx";
@@ -112,18 +107,17 @@ Editor editor = new Editor(inputPath);
 editor.dispose();
 ```
 
-### Pobieranie informacji o dokumencie
-
+### Pobierz informacje o dokumencie
 **Przegląd:** Wyodrębnij metadane (np. liczbę slajdów), aby wiedzieć, ile plików SVG trzeba wygenerować.
 
-#### Krok 1: Import klas metadanych
+#### Krok 1: Importuj klasy metadanych
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.metadata.IDocumentInfo;
 ```
 
-#### Krok 2: Uzyskanie informacji o dokumencie
-Załaduj dokument do `Editor` i pobierz informacje:
+#### Krok 2: Uzyskaj informacje o dokumencie
+Load the document into `Editor` and retrieve information:
 
 ```java
 String inputPath = "YOUR_DOCUMENT_DIRECTORY/FormatingExample.pptx";
@@ -132,35 +126,33 @@ IDocumentInfo infoUncasted = editor.getDocumentInfo(null);
 editor.dispose();
 ```
 
-### Rzutowanie informacji o dokumencie do typu prezentacji
-
+### Rzutuj informacje o dokumencie na typ prezentacji
 **Przegląd:** Konwertuj ogólny `IDocumentInfo` na `PresentationDocumentInfo`, aby móc korzystać z metod specyficznych dla slajdów.
 
-#### Krok 1: Import klas rzutujących
+#### Krok 1: Importuj klasy rzutowania
 ```java
 import com.groupdocs.editor.metadata.IDocumentInfo;
 import com.groupdocs.editor.metadata.PresentationDocumentInfo;
 ```
 
-#### Krok 2: Wykonanie rzutowania
+#### Krok 2: Wykonaj rzutowanie
 ```java
 // Assume infoUncasted is obtained as shown previously
 IDocumentInfo infoUncasted = null; // Placeholder
 PresentationDocumentInfo infoSlides = (PresentationDocumentInfo) infoUncasted;
 ```
 
-### Generowanie podglądów slajdów jako obrazy SVG
+### Generuj podglądy slajdów jako obrazy SVG
+**Przegląd:** To jest rdzeń procesu **create SVG from PowerPoint**. Przejdziemy po każdym slajdzie, wygenerujemy podgląd SVG i zapiszemy go na dysku.
 
-**Przegląd:** To serce procesu **convert PPTX to SVG**. Przejdziemy przez każdy slajd, wygenerujemy podgląd SVG i zapisujemy go na dysku.
-
-#### Krok 1: Import niezbędnych klas
+#### Krok 1: Importuj niezbędne klasy
 ```java
 import com.groupdocs.editor.metadata.PresentationDocumentInfo;
 import com.groupdocs.editor.htmlcss.resources.images.vector.SvgImage;
 import java.io.File;
 ```
 
-#### Krok 2: Generowanie i zapisywanie podglądów SVG
+#### Krok 2: Generuj i zapisuj podglądy SVG
 ```java
 // Assume infoSlides is obtained as shown previously
 PresentationDocumentInfo infoSlides = null; // Placeholder for actual retrieval logic
@@ -175,26 +167,25 @@ for (int i = 0; i < slidesCount; i++) {
 ```
 
 ## Praktyczne zastosowania
+1. **Document Management Systems:** Wyświetl miniatury SVG dla szybkiej nawigacji po dużych bibliotekach slajdów.  
+2. **Collaboration Tools:** Umożliw recenzentom podgląd treści slajdu bez pobierania pełnego pliku PPTX.  
+3. **Educational Platforms:** Prezentuj przegląd slajdów na stronach kursów, ograniczając zużycie pasma.
 
-1. **Systemy zarządzania dokumentami:** Wyświetlaj miniatury SVG dla szybkiej nawigacji po dużych bibliotekach slajdów.  
-2. **Narzędzia współpracy:** Umożliw recenzentom podgląd treści slajdu bez pobierania pełnego pliku PPTX.  
-3. **Platformy edukacyjne:** Prezentuj przegląd slajdów na stronach kursów, ograniczając zużycie pasma.
+## Rozważania dotyczące wydajności
+- **Dispose early:** Wywołaj `editor.dispose()` natychmiast po zakończeniu przetwarzania, aby zwolnić zasoby natywne.  
+- **Batch processing:** W przypadku prezentacji z setkami slajdów generuj SVG w mniejszych grupach, aby utrzymać przewidywalne zużycie pamięci.  
+- **Stay updated:** Regularnie aktualizuj do najnowszej wersji GroupDocs.Editor, aby uzyskać poprawki wydajności i naprawy błędów.
 
-## Wskazówki dotyczące wydajności
-- **Wcześniejsze zwalnianie:** Wywołaj `editor.dispose()` zaraz po zakończeniu przetwarzania, aby zwolnić zasoby natywne.  
-- **Przetwarzanie w partiach:** W przypadku prezentacji z setkami slajdów generuj SVG w mniejszych grupach, aby utrzymać przewidywalne zużycie pamięci.  
-- **Aktualizuj regularnie:** Regularnie aktualizuj do najnowszej wersji GroupDocs.Editor, aby korzystać z poprawek wydajności i bug‑fixów.
-
-## Typowe problemy i rozwiązania
+## Częste problemy i rozwiązania
 | Problem | Przyczyna | Rozwiązanie |
 |-------|-------|-----|
 | **OutOfMemoryError** | Duże prezentacje przetwarzane jednocześnie | Przetwarzaj slajdy w partiach; wywołaj `System.gc()` po każdej partii, jeśli to konieczne. |
-| **Brak czcionek w SVG** | Czcionka nie jest osadzona w PPTX lub nie jest zainstalowana na serwerze | Zainstaluj wymagane czcionki na serwerze lub osadź je w źródłowym PPTX. |
-| **Nieprawidłowa ścieżka pliku** | Niepoprawne użycie ścieżek względnych | Używaj ścieżek bezwzględnych lub skonfiguruj katalog roboczy w IDE. |
+| **Missing fonts in SVG** | Czcionka nie jest osadzona w PPTX lub nie jest zainstalowana na serwerze | Zainstaluj wymagane czcionki na serwerze lub osadź je w źródłowym PPTX. |
+| **Incorrect file path** | Nieprawidłowo użyte ścieżki względne | Użyj ścieżek bezwzględnych lub skonfiguruj katalog roboczy IDE. |
 
 ## Najczęściej zadawane pytania
 
-**Q: Jaki jest najlepszy sposób obsługi plików PPTX zabezpieczonych hasłem?**  
+**Q: Jaki jest najlepszy sposób obsługi plików PPTX chronionych hasłem?**  
 A: Przekaż hasło do przeciążenia konstruktora `Editor`, które przyjmuje obiekt `LoadOptions`.
 
 **Q: Czy mogę konwertować tylko wybrany podzbiór slajdów?**  
@@ -207,7 +198,7 @@ A: Oczywiście; możesz generować podglądy PNG, JPEG lub PDF przy użyciu podo
 A: Nie ma sztywnego limitu, ale bardzo duże prezentacje mogą wymagać więcej pamięci; rozważ przetwarzanie w partiach.
 
 **Q: Jak zapewnić, że wygenerowane SVG są bezpieczne dla sieci?**  
-A: Biblioteka automatycznie sanitizuje zawartość SVG, ale możesz dodatkowo zweryfikować je przy pomocy lintera SVG, jeśli zajdzie taka potrzeba.
+A: Biblioteka automatycznie sanitizuje zawartość SVG, ale w razie potrzeby możesz dodatkowo zweryfikować je przy użyciu lintera SVG.
 
 ## Zasoby
 - [Documentation](https://docs.groupdocs.com/editor/java/)
@@ -216,6 +207,8 @@ A: Biblioteka automatycznie sanitizuje zawartość SVG, ale możesz dodatkowo zw
 
 ---
 
-**Ostatnia aktualizacja:** 2026-01-13  
-**Testowane z:** GroupDocs.Editor 25.3 for Java  
-**Autor:** GroupDocs
+**Ostatnia aktualizacja:** 2026-04-02  
+**Testowano z:** GroupDocs.Editor 25.3 for Java  
+**Autor:** GroupDocs  
+
+---
