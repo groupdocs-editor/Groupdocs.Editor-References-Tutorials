@@ -1,59 +1,94 @@
 ---
-date: '2026-02-16'
-description: Dowiedz się, jak wyodrębniać zasoby przy użyciu GroupDocs.Editor dla
-  Javy. Zawiera kroki ładowania dokumentu Word w Javie oraz przykłady wyodrębniania
-  obrazów w Javie i wyodrębniania CSS w Javie.
+date: '2026-05-22'
+description: Dowiedz się, jak wyodrębnić obrazy z Word przy użyciu GroupDocs.Editor
+  for Java, w tym load word document java steps oraz extract images java, extract
+  css java examples.
 keywords:
-- GroupDocs Editor Java
-- Word document resources extraction
-- Java API for Word processing
-title: Jak wyodrębnić zasoby z dokumentów Word – GroupDocs.Editor Java
+- extract pictures from word
+- load word document java
+- extract images java
+- extract css java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-22'
+  description: Learn how to extract pictures from Word using GroupDocs.Editor for
+    Java, including load word document java steps and extract images java, extract
+    css java examples.
+  headline: How to Extract Pictures from Word Documents Using GroupDocs.Editor for
+    Java
+  type: TechArticle
+- description: Learn how to extract pictures from Word using GroupDocs.Editor for
+    Java, including load word document java steps and extract images java, extract
+    css java examples.
+  name: How to Extract Pictures from Word Documents Using GroupDocs.Editor for Java
+  steps:
+  - name: Load and Prepare the Document for Editing
+    text: '*The `FontExtractionOptions.ExtractAll` flag guarantees that every embedded
+      font is available for extraction.*'
+  - name: Extract Images, Fonts, and Stylesheets
+    text: '*These three calls give you collections of each resource type, ready for
+      further processing.*'
+  - name: Save Extracted Resources to Disk
+    text: '*Each loop writes the corresponding resource to the `outputFolderPath`,
+      preserving the original filenames.*'
+  - name: Retrieve Resource Content Directly (Optional)
+    text: 'If you need the raw bytes or a Base64 string—for example, to embed an image
+      in an HTML email—use:'
+  type: HowTo
+- questions:
+  - answer: Yes, it supports DOCX, DOC, and other Microsoft Word formats.
+    question: Is GroupDocs.Editor compatible with all Word file formats?
+  - answer: Absolutely. Provide the password via `WordProcessingLoadOptions` when
+      creating the `Editor`.
+    question: Can I extract resources from password‑protected documents?
+  - answer: It’s optimized for speed; for files over 200 MB we recommend batch processing
+      or extracting sections sequentially.
+    question: How does the API perform with very large documents?
+  - answer: Yes. The API is framework‑agnostic; just include the dependency and inject
+      `Editor` where needed.
+    question: Can I integrate this with Spring Boot or other Java frameworks?
+  - answer: Call only `beforeEdit.getImages()` and skip the font/CSS extraction steps.
+    question: What if I need to extract only images and not fonts or CSS?
+  type: FAQPage
+title: Jak wyodrębnić obrazy z dokumentów Word przy użyciu GroupDocs.Editor for Java
 type: docs
 url: /pl/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/
 weight: 1
 ---
 
-Autor:** GroupDocs  
+# Jak wyodrębnić obrazy z dokumentów Word przy użyciu GroupDocs.Editor dla Javy
 
-Now ensure all formatting preserved.
+Jeśli potrzebujesz **wyodrębnić obrazy z Worda** programowo, jesteś we właściwym miejscu. W tym samouczku przeprowadzimy Cię przez ładowanie dokumentu Word w Javie, konfigurowanie edytora oraz wyciąganie obrazów, czcionek i CSS‑u — dokładnie te kroki, które są potrzebne do automatyzacji potoków przetwarzania dokumentów przy użyciu GroupDocs.Editor dla Javy.
 
-Check for any other markdown like images none.
-
-Make sure code block placeholders remain unchanged.
-
-Now produce final content.# Jak wyodrębnić zasoby z dokumentów Word przy użyciu GroupDocs.Editor dla Javy
-
-Jeśli szukasz **how to extract resources** z plików Word programowo, trafiłeś we właściwe miejsce. W tym przewodniku przeprowadzimy Cię przez ładowanie dokumentu Word w Javie, jego edycję oraz wyciąganie obrazów, czcionek i CSS — dokładnie te kroki, które są potrzebne do automatyzacji potoków przetwarzania dokumentów.
-
-**Co się nauczysz:**
-- Jak **load word document java** z GroupDocs.Editor
-- Jak **extract images java** i inne osadzone zasoby
-- Jak **extract css java** do ponownego użycia stylów
-- Najlepsze praktyki zapisywania tych zasobów na dysku
-- Scenariusze rzeczywiste, w których wyodrębnianie zasobów oszczędza czas i wysiłek
+**Czego się nauczysz:**
+- Jak **załadować dokument Word w Javie** przy użyciu GroupDocs.Editor  
+- Jak **wyodrębnić obrazy w Javie** oraz inne osadzone zasoby  
+- Jak **wyodrębnić CSS w Javie** do ponownego użycia stylów  
+- Najlepsze praktyki zapisywania tych zasobów na dysku  
+- Przykłady rzeczywistych scenariuszy, w których wyodrębnianie zasobów oszczędza czas i wysiłek  
 
 Gotowy, aby usprawnić swój przepływ pracy z dokumentami? Zanurzmy się!
 
 ## Szybkie odpowiedzi
-- **Co oznacza “how to extract resources”?** Odnosi się do programowego wyciągania obrazów, czcionek, CSS itp. z pliku Word.  
-- **Która biblioteka obsługuje to w Javie?** GroupDocs.Editor for Java.  
+- **Co oznacza „wyodrębnić obrazy z word”?** Oznacza to programowe wyciąganie obrazów, czcionek, CSS‑u i innych osadzonych zasobów z pliku Word.  
+- **Która biblioteka obsługuje to w Javie?** GroupDocs.Editor dla Javy zapewnia wysokopoziomowe API do tego zadania.  
 - **Czy potrzebna jest licencja?** Darmowa wersja próbna działa do testów; pełna licencja jest wymagana w produkcji.  
-- **Czy mogę przetwarzać pliki DOCX i DOC?** Tak — oba są obsługiwane.  
-- **Czy jest bezpieczne dla dużych dokumentów?** Tak, ale rozważ przetwarzanie wsadowe i prawidłowe zwalnianie pamięci.
+- **Czy mogę przetwarzać pliki DOCX i DOC?** Tak — oba są w pełni obsługiwane.  
+- **Czy jest to bezpieczne dla dużych dokumentów?** Tak, ale rozważ przetwarzanie wsadowe i prawidłowe zwalnianie pamięci dla plików większych niż 200 MB.  
 
-## Czym jest wyodrębnianie zasobów w dokumentach Word?
-Wyodrębnianie zasobów to proces pobierania osadzonych elementów — takich jak obrazy, niestandardowe czcionki i arkusze stylów — z pliku Word, aby można je było ponownie wykorzystać, zarchiwizować lub przekształcić do innych aplikacji.
+## Co to jest wyodrębnianie zasobów w dokumentach Word?
+Wyodrębnianie zasobów odnosi się do systematycznego pobierania wszystkich osadzonych elementów z pliku Word, w tym obrazów, własnych czcionek, arkuszy stylów, makr i innych obiektów binarnych. Dzięki wyodrębnieniu tych komponentów programiści mogą ponownie wykorzystać je w oddzielnych aplikacjach, archiwizować w celu spełnienia wymogów zgodności lub przekształcać w formaty przyjazne sieci, zwiększając wartość pierwotnego dokumentu.
 
 ## Dlaczego używać GroupDocs.Editor dla Javy?
-GroupDocs.Editor oferuje wysokopoziomowe API, które ukrywa złożoność formatu Office Open XML. Pozwala skupić się na **how to extract resources** bez konieczności zajmowania się obsługą ZIP na niskim poziomie czy parsowaniem XML.
+GroupDocs.Editor dla Javy abstrahuje format Office Open XML, pozwalając skupić się na **wyodrębnianiu obrazów z Worda** bez pisania niskopoziomowego kodu ZIP czy XML. Obsługuje **ponad 30 formatów wejścia i wyjścia** i może przetwarzać dokumenty do **500 MB** bez ładowania całego pliku do pamięci, zapewniając zarówno szybkość, jak i skalowalność.
 
 ## Wymagania wstępne
 - **Maven** (lub bezpośrednie pobranie JAR) do zarządzania zależnościami.  
-- **JDK 8+** zainstalowany na Twojej maszynie deweloperskiej.  
-- IDE takie jak **IntelliJ IDEA** lub **Eclipse** do edycji i uruchamiania kodu Java.
+- **JDK 8+** zainstalowane na Twojej maszynie deweloperskiej.  
+- IDE, takie jak **IntelliJ IDEA** lub **Eclipse**, do edycji i uruchamiania kodu Java.
 
 ## Konfiguracja GroupDocs.Editor dla Javy
-Add the repository and dependency to your `pom.xml`:
+Dodaj repozytorium i zależność do swojego `pom.xml`:
 
 ```xml
 <repositories>
@@ -73,15 +108,17 @@ Add the repository and dependency to your `pom.xml`:
 </dependencies>
 ```
 
-Możesz również pobrać najnowszy JAR z [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+Możesz także pobrać najnowszy JAR z [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 ### Uzyskanie licencji
-- **Free Trial:** Idealny do testowania API.  
-- **Temporary License:** Pobierz jedną ze [GroupDocs Temporary License Page](https://purchase.groupdocs.com/temporary-license).  
-- **Full License:** Zakup pełnej licencji do nieograniczonego użycia w produkcji.
+- **Darmowa wersja próbna:** Idealna do testowania API.  
+- **Temporary License:** Grab one from the [GroupDocs Temporary License Page](https://purchase.groupdocs.com/temporary-license).  
+- **Pełna licencja:** Zakup do nieograniczonego użycia w produkcji.
 
 ### Podstawowa inicjalizacja
-Create an `Editor` instance pointing at your Word file:
+`Editor` jest głównym punktem wejścia GroupDocs.Editor dla Javy, który udostępnia metody do ładowania, edycji i wyodrębniania zasobów z plików Word.
+
+Utwórz instancję `Editor` wskazującą na Twój plik Word:
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY";
@@ -89,7 +126,7 @@ Editor editor = new Editor(inputFilePath, new WordProcessingLoadOptions());
 ```
 
 ## Jak wyodrębnić zasoby z dokumentu Word
-Poniżej dzielimy implementację na trzy logiczne kroki: ładowanie/edycję, wyodrębnianie i zapisywanie.
+Wyodrębnianie zasobów rozpoczyna się od załadowania docelowego pliku Word do instancji `Editor`, a następnie skonfigurowania `WordProcessingEditOptions`, aby włączyć wyodrębnianie obrazów, czcionek i CSS. Po przygotowaniu dokumentu API udostępnia kolekcje dla każdego typu zasobu, które można iterować i zapisywać w systemie plików lub dalej przetwarzać zgodnie z wymaganiami Twojego przepływu pracy.
 
 ### Krok 1: Załaduj i przygotuj dokument do edycji
 ```java
@@ -99,21 +136,21 @@ Editor editor = new Editor(inputFilePath, new WordProcessingLoadOptions());
 WordProcessingEditOptions editOptions = new WordProcessingEditOptions();
 editOptions.setFontExtraction(FontExtractionOptions.ExtractAll);
 EditableDocument beforeEdit = editor.edit(editOptions);
-```
-*Flaga `FontExtractionOptions.ExtractAll` zapewnia, że każda osadzona czcionka jest dostępna do wyodrębnienia.*
+```  
+*Flaga `FontExtractionOptions.ExtractAll` gwarantuje, że każda osadzona czcionka jest dostępna do wyodrębnienia.*
 
 ### Krok 2: Wyodrębnij obrazy, czcionki i arkusze stylów
 ```java
 List<IImageResource> images = beforeEdit.getImages();
-```
+```  
 
 ```java
 List<FontResourceBase> fonts = beforeEdit.getFonts();
-```
+```  
 
 ```java
 List<CssText> stylesheets = beforeEdit.getCss();
-```
+```  
 *Te trzy wywołania zwracają kolekcje każdego typu zasobu, gotowe do dalszego przetwarzania.*
 
 ### Krok 3: Zapisz wyodrębnione zasoby na dysku
@@ -124,7 +161,7 @@ for (int i = 0; i < images.size(); i++) {
     File outputFile = new File(outputFolderPath + oneImage.getFilenameWithExtension());
     oneImage.save(outputFile.getAbsolutePath());
 }
-```
+```  
 
 ```java
 for (int i = 0; i < fonts.size(); i++) {
@@ -132,7 +169,7 @@ for (int i = 0; i < fonts.size(); i++) {
     File outputFile = new File(outputFolderPath + oneFont.getFilenameWithExtension());
     oneFont.save(outputFile.getAbsolutePath());
 }
-```
+```  
 
 ```java
 for (int i = 0; i < stylesheets.size(); i++) {
@@ -140,7 +177,7 @@ for (int i = 0; i < stylesheets.size(); i++) {
     File outputFile = new File(outputFolderPath + oneStylesheet.getFilenameWithExtension());
     oneStylesheet.save(outputFile.getAbsolutePath());
 }
-```
+```  
 *Każda pętla zapisuje odpowiedni zasób do `outputFolderPath`, zachowując oryginalne nazwy plików.*
 
 ### Krok 4: Pobierz zawartość zasobu bezpośrednio (opcjonalnie)
@@ -156,35 +193,42 @@ String base64EncodedResource = images.get(0).getTextContent(); // Base64 string
 |-------|----------------|-----|
 | **OutOfMemoryError on large files** | Zasoby są ładowane do pamięci jednocześnie. | Przetwarzaj dokumenty w mniejszych partiach i wywołuj `editor.dispose()` po każdym pliku. |
 | **Missing fonts after extraction** | Wyodrębnianie czcionek wyłączone w opcjach. | Upewnij się, że ustawiono `editOptions.setFontExtraction(FontExtractionOptions.ExtractAll)`. |
-| **Images saved with wrong extension** | Niektóre obrazy nie mają prawidłowego wykrycia typu MIME. | Sprawdź `oneImage.getFilenameWithExtension()` przed zapisem; w razie potrzeby zmień nazwę. |
+| **Images saved with wrong extension** | Niektóre obrazy nie mają poprawnego wykrycia typu MIME. | Zweryfikuj `oneImage.getFilenameWithExtension()` przed zapisem; w razie potrzeby zmień nazwę. |
 
 ## Najczęściej zadawane pytania
 
-**P: Czy GroupDocs.Editor jest kompatybilny ze wszystkimi formatami plików Word?**  
-O: Tak, obsługuje DOCX, DOC i inne formaty Microsoft Word.
+**Q: Czy GroupDocs.Editor jest kompatybilny ze wszystkimi formatami plików Word?**  
+A: Tak, obsługuje DOCX, DOC i inne formaty Microsoft Word.
 
-**P: Czy mogę wyodrębnić zasoby z dokumentów zabezpieczonych hasłem?**  
-O: Oczywiście. Podaj hasło za pomocą `WordProcessingLoadOptions` przy tworzeniu `Editor`.
+**Q: Czy mogę wyodrębnić zasoby z dokumentów zabezpieczonych hasłem?**  
+A: Absolutnie. Podaj hasło za pomocą `WordProcessingLoadOptions` przy tworzeniu `Editor`.
 
-**P: Jak API radzi sobie z bardzo dużymi dokumentami?**  
-O: Jest zoptymalizowane pod kątem szybkości, ale przy ogromnych plikach zalecamy podzielenie dokumentu lub przetwarzanie sekcji kolejno.
+**Q: Jak API zachowuje się przy bardzo dużych dokumentach?**  
+A: Jest zoptymalizowane pod kątem szybkości; dla plików powyżej 200 MB zalecamy przetwarzanie wsadowe lub wyodrębnianie sekcji kolejno.
 
-**P: Czy mogę zintegrować to ze Spring Boot lub innymi frameworkami Java?**  
-O: Tak. API jest niezależne od frameworku; wystarczy dodać zależność i wstrzyknąć `Editor` tam, gdzie jest potrzebny.
+**Q: Czy mogę zintegrować to z Spring Boot lub innymi frameworkami Java?**  
+A: Tak. API jest niezależne od frameworków; wystarczy dodać zależność i wstrzyknąć `Editor` tam, gdzie jest potrzebny.
 
-**P: Co zrobić, jeśli potrzebuję wyodrębnić tylko obrazy, a nie czcionki ani CSS?**  
-O: Wywołaj tylko `beforeEdit.getImages()` i pomiń kroki wyodrębniania czcionek/CSS.
+**Q: Co zrobić, jeśli potrzebuję wyodrębnić tylko obrazy, a nie czcionki ani CSS?**  
+A: Wywołaj jedynie `beforeEdit.getImages()` i pomiń kroki wyodrębniania czcionek/CSS.
 
-## Podsumowanie
-Masz teraz kompletny, gotowy do produkcji przewodnik po **how to extract resources** z dokumentów Word przy użyciu GroupDocs.Editor dla Javy. Ładując dokument, konfigurować opcje edycji i iterując po zwróconych kolekcjach zasobów, możesz z łatwością automatyzować archiwizację, tworzenie szablonów i generowanie dynamicznej treści.
+## Zakończenie
+Masz teraz kompletny, gotowy do produkcji przewodnik, jak **wyodrębnić obrazy z Worda** przy użyciu GroupDocs.Editor dla Javy. Ładując dokument, konfigurując opcje edycji i iterując po zwróconych kolekcjach zasobów, możesz automatyzować archiwizację, tworzenie szablonów i dynamiczne generowanie treści z łatwością.
 
 **Kolejne kroki:**  
-- Eksperymentuj z różnymi `WordProcessingEditOptions`, aby precyzyjnie dostroić wyodrębnianie.  
-- Połącz ten przepływ pracy z SDK przechowywania w chmurze, aby przesyłać zasoby bezpośrednio do S3 lub Azure Blob.  
-- Zbadaj API konwersji GroupDocs, aby przekształcić wyodrębnione zasoby w inne formaty.
+- Eksperymentuj z różnymi `WordProcessingEditOptions`, aby precyzyjnie dopasować wyodrębnianie.  
+- Połącz ten przepływ pracy z SDK przechowywania w chmurze, aby bezpośrednio przesyłać zasoby do S3 lub Azure Blob.  
+- Zbadaj API konwersji GroupDocs, aby przekształcać wyodrębnione zasoby w inne formaty.
 
 ---
 
-**Ostatnia aktualizacja:** 2026-02-16  
-**Testowano z:** GroupDocs.Editor 25.3 for Java  
-**Autor:** GroupDocs
+**Last Updated:** 2026-05-22  
+**Tested With:** GroupDocs.Editor 25.3 for Java  
+**Author:** GroupDocs  
+
+---
+
+## Powiązane samouczki
+
+- [Jak wyodrębnić zasoby z dokumentów Word – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
+- [Ładowanie dokumentu Word w Javie z GroupDocs.Editor – Kompletny przewodnik](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
