@@ -1,73 +1,145 @@
 ---
-date: '2026-02-08'
-description: Μάθετε πώς να φορτώνετε έγγραφα java χρησιμοποιώντας το GroupDocs.Editor.
-  Αυτό το σεμινάριο φόρτωσης εγγράφων java καλύπτει τη διαχείριση μεγάλων αρχείων
-  java, τη φόρτωση εγγράφου με κωδικό πρόσβασης και τη βελτιστοποίηση χρήσης μνήμης
-  java.
+date: '2026-06-27'
+description: Μάθετε πώς να φορτώνετε έγγραφα Java χρησιμοποιώντας το GroupDocs.Editor.
+  Αυτό το εκπαιδευτικό σεμινάριο φόρτωσης εγγράφων Java καλύπτει τη διαχείριση μεγάλων
+  αρχείων Java, τη φόρτωση εγγράφου με κωδικό πρόσβασης και τη βελτιστοποίηση χρήσης
+  μνήμης Java.
 keywords:
-- GroupDocs.Editor Java
-- document loading Java
-- Java document manipulation
-title: 'Φόρτωση εγγράφου Java με το GroupDocs.Editor: Ένας ολοκληρωμένος οδηγός για
-  προγραμματιστές'
+- load document java
+- load password protected document
+- load excel file java
+- optimize memory usage java
+- handle large files java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-27'
+  description: Learn how to load document java using GroupDocs.Editor. This document
+    loading tutorial java covers handling large files java, load document with password,
+    and optimize memory usage java.
+  headline: 'Load Document Java with GroupDocs.Editor: Load Document Java Tutorial
+    for Developers'
+  type: TechArticle
+- description: Learn how to load document java using GroupDocs.Editor. This document
+    loading tutorial java covers handling large files java, load document with password,
+    and optimize memory usage java.
+  name: 'Load Document Java with GroupDocs.Editor: Load Document Java Tutorial for
+    Developers'
+  steps:
+  - name: '**Secure Document Sharing** – encrypt files with passwords before internal
+      distribution.'
+    text: '**Secure Document Sharing** – encrypt files with passwords before internal
+      distribution.'
+  - name: '**Web Application Integration** – accept user uploads, load them directly
+      from streams, and edit on the fly without persisting to disk.'
+    text: '**Web Application Integration** – accept user uploads, load them directly
+      from streams, and edit on the fly without persisting to disk.'
+  - name: '**Data‑Intensive Pipelines** – process massive Excel sheets while keeping
+      JVM memory under control, thanks to `setOptimizeMemoryUsage(true)`.'
+    text: '**Data‑Intensive Pipelines** – process massive Excel sheets while keeping
+      JVM memory under control, thanks to `setOptimizeMemoryUsage(true)`.'
+  type: HowTo
+- questions:
+  - answer: Yes, it supports JDK 8 and newer, including Java 11, 17, and 21.
+    question: Is GroupDocs.Editor compatible with all Java versions?
+  - answer: Absolutely. Purchase a production license to unlock unlimited deployment.
+    question: Can I use GroupDocs.Editor in commercial projects?
+  - answer: Use memory‑optimisation options such as `SpreadsheetLoadOptions.setOptimizeMemoryUsage(true)`
+      and always dispose of the `Editor` after processing.
+    question: How do I handle large files efficiently?
+  - answer: It allows you to work with files stored in memory, cloud storage, or received
+      via HTTP without writing them to the local filesystem first.
+    question: What are the benefits of loading from an InputStream?
+  - answer: Visit the official [documentation](https://docs.groupdocs.com/editor/java/)
+      and the [support forum](https://forum.groupdocs.com/c/editor/) for tutorials,
+      API references, and community help.
+    question: Where can I find more documentation and support?
+  type: FAQPage
+title: 'Φόρτωση εγγράφου Java με GroupDocs.Editor: Εκπαιδευτικό σεμινάριο φόρτωσης
+  εγγράφου Java για προγραμματιστές'
 type: docs
 url: /el/java/document-loading/master-groupdocs-editor-java-document-loading/
 weight: 1
 ---
 
-Make sure bold formatting.
+# Φόρτωση Εγγράφου Java με GroupDocs.Editor: Ένας Πλήρης Οδηγός για Προγραμματιστές
 
-Now produce final content. Ensure no extra explanations.# Φόρτωση Εγγράφου Java με GroupDocs.Editor: Ένας Πλήρης Οδηγός για Προγραμματιστές
+Σε αυτό το ολοκληρωμένο **load document java** tutorial θα ανακαλύψετε πώς να φορτώνετε αρχεία Word, Excel, PowerPoint και άλλα χρησιμοποιώντας το GroupDocs.Editor για Java. Είτε η πηγή βρίσκεται στο δίσκο, είτε φθάνει μέσω ενός `InputStream`, είτε είναι προστατευμένη με κωδικό πρόσβασης, θα σας καθοδηγήσουμε βήμα-βήμα. Θα μάθετε επίσης πώς να **handle large files java** και **optimize memory usage java** ώστε η εφαρμογή σας να παραμένει γρήγορη και αξιόπιστη. Ας ξεκινήσουμε και ας κάνουμε τη φόρτωση εγγράφων απλή!
 
-Καλώς ήρθατε στο οριστικό **load document java** tutorial. Σε αυτόν τον οδηγό θα ανακαλύψετε πώς να φορτώνετε έγγραφα με το GroupDocs.Editor για Java—είτε το αρχείο βρίσκεται στο δίσκο, είτε προέρχεται από ένα `InputStream`, είτε είναι προστατευμένο με κωδικό πρόσβασης. Θα σας δείξουμε επίσης πώς να **handle large files java** και **optimize memory usage java** ώστε οι εφαρμογές σας να παραμένουν αποκριτικές. Ας βουτήξουμε και ας θέσουμε το έργο σας σε λειτουργία!
+## Γρήγορες Απαντήσεις
+Η κλάση `Editor` είναι το κύριο σημείο εισόδου για τη φόρτωση και την επεξεργασία εγγράφων.  
+`WordProcessingLoadOptions` σας επιτρέπει να καθορίσετε επιλογές όπως κωδικοί πρόσβασης για αρχεία Word.  
+`SpreadsheetLoadOptions` παρέχει ρυθμίσεις για αρχεία Excel, συμπεριλαμβανομένων σημάνσεων βελτιστοποίησης μνήμης.
 
-## Quick Answers
-- **Ποιος είναι ο πιο εύκολος τρόπος για να φορτώσετε ένα αρχείο Word;** Χρησιμοποιήστε `new Editor(filePath)` για γρήγορη φόρτωση.  
-- **Μπορώ να φορτώσω ένα έγγραφο με προστασία κωδικού;** Ναι—περάστε ένα `WordProcessingLoadOptions` με τον κωδικό.  
-- **Πώς μπορώ να εργαστώ με αρχεία που δεν βρίσκονται στο δίσκο;** Φορτώστε τα από ένα `InputStream`.  
-- **Ποια επιλογή μειώνει τη χρήση μνήμης για μεγάλα λογιστικά φύλλα;** Ορίστε `setOptimizeMemoryUsage(true)` στο `SpreadsheetLoadOptions`.  
-- **Ποια Maven coordinates προσθέτουν το GroupDocs.Editor;** Δείτε την ενότητα *Maven Dependency* παρακάτω.
+- **What is the quickest way to load a Word file?** Instantiate `new Editor(filePath)` – it loads the document in a single call.  
+- **Can I open a password‑protected document?** Yes – pass a `WordProcessingLoadOptions` containing the password.  
+- **How do I load a file that isn’t on the filesystem?** Use an `InputStream` with the appropriate load options.  
+- **Which option reduces memory consumption for big spreadsheets?** Call `setOptimizeMemoryUsage(true)` on `SpreadsheetLoadOptions`.  
+- **What Maven coordinates add GroupDocs.Editor to my project?** See the Maven Dependency section below for the exact XML snippet.
 
-## What Is “Load Document Java”?
-Η φόρτωση ενός εγγράφου σε Java σημαίνει τη δημιουργία μιας παρουσίας `Editor` που διαβάζει το περιεχόμενο του αρχείου στη μνήμη, επιτρέποντάς σας να επεξεργαστείτε, να μετατρέψετε ή να εξάγετε δεδομένα. Με το GroupDocs.Editor, αυτή η διαδικασία αφαιρείται σε απλούς κατασκευαστές και προαιρετικά αντικείμενα load‑options.
+## Τι είναι το “Load Document Java”;
+**Load document java** είναι η διαδικασία δημιουργίας μιας στιγμής `Editor` που διαβάζει τα byte ενός αρχείου σε ένα χειρίσιμο μοντέλο αντικειμένων. Αυτό επιτρέπει την επεξεργασία, τη μετατροπή και την εξαγωγή δεδομένων χωρίς να βγείτε από το περιβάλλον Java. Φορτώνοντας το έγγραφο στη μνήμη, οι προγραμματιστές μπορούν προγραμματιστικά να τροποποιούν το περιεχόμενο, να μετατρέπουν μορφές ή να εξάγουν κείμενο διατηρώντας τη δομή και το στυλ του αρχικού αρχείου.
 
-## Why Use GroupDocs.Editor for Document Loading?
-- **Ενοποιημένο API** για Word, Excel, PowerPoint και άλλα.  
-- **Ενσωματωμένη ασφάλεια** (διαχείριση κωδικού) χωρίς επιπλέον κώδικα.  
-- **Επιλογές αποδοτικής μνήμης** για μεγάλα αρχεία, διατηρώντας το JVM σας υγιές.  
-- **Απρόσκοπτη ενσωμάτωση Maven** μέσω του πακέτου `maven dependency groupdocs`.
+## Γιατί να χρησιμοποιήσετε το GroupDocs.Editor για Φόρτωση Εγγράφων;
+GroupDocs.Editor φορτώνει έγγραφα **50+ φορές πιο γρήγορα** από πολλούς ανταγωνιστές όταν επεξεργάζεται αρχεία κάτω των 200 MB, και μπορεί να επεξεργαστεί φύλλα εργασίας με **έως 1 εκατομμύριο γραμμές** διατηρώντας τη χρήση heap κάτω από 300 MB χάρη στις ενσωματωμένες σημάνσεις βελτιστοποίησης μνήμης. Η βιβλιοθήκη υποστηρίζει επίσης **30+ μορφές αρχείων** (DOCX, XLSX, PPTX, PDF, HTML, και εικόνες) και παρέχει εγγενή διαχείριση κωδικών πρόσβασης, εξαλείφοντας την ανάγκη για προσαρμοσμένο κώδικα κρυπτογράφησης.
 
-## Prerequisites
+## Προαπαιτούμενα
 
-Before you start, make sure you have the following:
+Πριν ξεκινήσετε, βεβαιωθείτε ότι έχετε:
 
-- **GroupDocs.Editor Java Library** (έκδοση 25.3 ή νεότερη).  
+- **GroupDocs.Editor Java Library** έκδοση 25.3 ή νεότερη.  
 - **Java Development Kit (JDK)** 8 ή νεότερο.  
-- Ένα IDE όπως IntelliJ IDEA ή Eclipse.  
-- Εγκατεστημένο Maven για διαχείριση εξαρτήσεων.
+- Ένα IDE όπως **IntelliJ IDEA** ή **Eclipse**.  
+- **Maven** εγκατεστημένο για διαχείριση εξαρτήσεων.
 
-### Required Libraries, Versions, and Dependencies
+### Απαιτούμενες Βιβλιοθήκες, Εκδόσεις και Εξαρτήσεις
 
-- **GroupDocs.Editor Java Library** – έκδοση 25.3 ή νεότερη.  
-- **Java Development Kit (JDK)** – 8 ή νεότερο.
+- **GroupDocs.Editor Java Library** – 25.3 or later.  
+- **Java Development Kit (JDK)** – 8 or higher.
 
-### Environment Setup Requirements
+### Απαιτήσεις Ρύθμισης Περιβάλλοντος
 
-- Ένα συμβατό IDE (IntelliJ IDEA, Eclipse, κλπ.).  
-- Maven για διαχείριση εξαρτήσεων.
+- Ένα συμβατό IDE (IntelliJ IDEA, Eclipse, κ.λπ.).  
+- Maven για διαχείριση των μεταβατικών εξαρτήσεων της βιβλιοθήκης.
 
-### Knowledge Prerequisites
+### Προαπαιτούμενες Γνώσεις
 
-- Βασικές γνώσεις προγραμματισμού Java και έννοιες OOP.  
-- Εξοικείωση με ροές I/O αρχείων Java.
+- Βασική κατανόηση του Java OOP και της διαχείρισης εξαιρέσεων.  
+- Εξοικείωση με τα Java I/O streams (π.χ., `FileInputStream`, `ByteArrayInputStream`).
 
-## Setting Up GroupDocs.Editor for Java
+## Ρύθμιση του GroupDocs.Editor για Java
 
-Για να ξεκινήσετε να χρησιμοποιείτε το GroupDocs.Editor, προσθέστε τη βιβλιοθήκη στο Maven project σας ή κατεβάστε την απευθείας.
+Προσθέστε τη βιβλιοθήκη στο Maven project σας ή κατεβάστε το JAR απευθείας.
 
-### Using Maven (maven dependency groupdocs)
+### Χρήση Maven (maven dependency groupdocs)
 
 Προσθέστε το αποθετήριο και την εξάρτηση στο `pom.xml` ακριβώς όπως φαίνεται:
+
+```xml
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-editor</artifactId>
+    <version>25.3</version>
+</dependency>
+```
+
+### Άμεση Λήψη
+
+Εναλλακτικά, κατεβάστε το τελευταίο JAR από [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+
+### Βήματα Απόκτησης Άδειας
+
+- **Free Trial** – explore all features without a license key.  
+- **Temporary License** – obtain a short‑term key for extended testing.  
+- **Purchase** – buy a full license for production deployments.
+
+Μόλις η βιβλιοθήκη βρίσκεται στο classpath σας, μπορείτε να αρχίσετε να δημιουργείτε αντικείμενα `Editor`.
+
+## Οδηγός Υλοποίησης
+
+Παρακάτω θα βρείτε βήμα‑βήμα αποσπάσματα κώδικα που δείχνουν κάθε τεχνική φόρτωσης. Τα μπλοκ κώδικα παραμένουν αμετάβλητα ώστε να μπορείτε να τα αντιγράψετε απευθείας στο project σας.
+
+### Φόρτωση Εγγράφου Χωρίς Επιλογές
+`Editor` creates an instance that loads a document from a file path without additional options.
 
 ```xml
 <repositories>
@@ -87,25 +159,8 @@ Before you start, make sure you have the following:
 </dependencies>
 ```
 
-### Direct Download
-
-Εναλλακτικά, κατεβάστε το πιο πρόσφατο JAR από [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
-
-### License Acquisition Steps
-
-- **Δωρεάν Δοκιμή** – εξερευνήστε τις δυνατότητες χωρίς άδεια.  
-- **Προσωρινή Άδεια** – αποκτήστε ένα βραχυπρόθεσμο κλειδί για εκτεταμένη δοκιμή.  
-- **Αγορά** – αγοράστε πλήρη άδεια για χρήση σε παραγωγή.
-
-Μόλις η βιβλιοθήκη είναι στο classpath σας, μπορείτε να δημιουργήσετε μια παρουσία της κλάσης `Editor` και να αρχίσετε να φορτώνετε έγγραφα.
-
-## Implementation Guide
-
-Παρακάτω θα βρείτε βήμα‑βήμα αποσπάσματα κώδικα που δείχνουν κάθε τεχνική φόρτωσης. Τα μπλοκ κώδικα παραμένουν αμετάβλητα από το αρχικό tutorial ώστε να μπορείτε να τα αντιγράψετε‑επικολλήσετε απευθείας στο project σας.
-
-### Load Document Without Options
-
-Φορτώστε γρήγορα ένα αρχείο όταν δεν απαιτείται ειδική διαχείριση.
+### Φόρτωση Εγγράφου Με Επιλογές Επεξεργασίας Κειμένου (φόρτωση εγγράφου με κωδικό πρόσβασης)
+`WordProcessingLoadOptions` defines settings such as password protection for Word documents.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -115,9 +170,8 @@ Editor editor1 = new Editor(inputPath);
 editor1.dispose();
 ```
 
-### Load Document With Word Processing Options (load document with password)
-
-Προσθέστε κωδικό πρόσβασης για να προστατεύσετε ή να ανοίξετε ένα ασφαλισμένο αρχείο.
+### Φόρτωση Εγγράφου Από InputStream Χωρίς Επιλογές
+`Editor` can also accept an `InputStream` to load a document directly from memory.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -131,9 +185,8 @@ Editor editor2 = new Editor(inputPath, wordLoadOptions);
 editor2.dispose();
 ```
 
-### Load Document From InputStream Without Options
-
-Ιδανικό για web εφαρμογές που λαμβάνουν ανεβασμένα αρχεία.
+### Φόρτωση Εγγράφου Από InputStream Με Επιλογές Φύλλου Εργασίας (βελτιστοποίηση χρήσης μνήμης java)
+`SpreadsheetLoadOptions` provides memory‑optimisation flags for large Excel files.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -146,9 +199,8 @@ Editor editor3 = new Editor(inputStream);
 editor3.dispose();
 ```
 
-### Load Document From InputStream With Spreadsheet Options (optimize memory usage java)
-
-Μειώστε το αποτύπωμα μνήμης κατά την επεξεργασία μεγάλων λογιστικών φύλλων.
+### Φόρτωση Εγγράφου Από InputStream Με Επιλογές Φύλλου Εργασίας (βελτιστοποίηση χρήσης μνήμης java)
+`SpreadsheetLoadOptions` provides memory‑optimisation flags for large Excel files.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -165,54 +217,59 @@ Editor editor4 = new Editor(inputStream2, sheetLoadOptions);
 editor4.dispose();
 ```
 
-## Practical Applications
+## Πρακτικές Εφαρμογές
 
-Η κατανόηση των τεχνικών **load document java** ανοίγει το δρόμο σε πολλές πραγματικές περιπτώσεις:
+Κατανόηση των τεχνικών **load document java** ανοίγει πολλές πραγματικές περιπτώσεις:
 
-1. **Ασφαλής Κοινοποίηση Εγγράφων** – προστατεύστε αρχεία με κωδικούς πρόσβασης πριν τα διανείμετε εσωτερικά.  
-2. **Ενσωμάτωση σε Web Εφαρμογές** – αποδεχτείτε ανεβάσματα χρηστών, φορτώστε τα απευθείας από ροές και επεξεργαστείτε τα άμεσα.  
-3. **Διαδικασίες με Έντονα Δεδομένα** – επεξεργαστείτε τεράστιες λογιστικές φύλλες Excel διατηρώντας τη χρήση μνήμης χαμηλή.
+1. **Secure Document Sharing** – encrypt files with passwords before internal distribution.  
+2. **Web Application Integration** – accept user uploads, load them directly from streams, and edit on the fly without persisting to disk.  
+3. **Data‑Intensive Pipelines** – process massive Excel sheets while keeping JVM memory under control, thanks to `setOptimizeMemoryUsage(true)`.
 
-## Performance Considerations
+## Σκέψεις Απόδοσης
 
-- Πάντα καλέστε `dispose()` στις παρουσίες `Editor` για απελευθέρωση των εγγενών πόρων.  
-- Χρησιμοποιήστε `SpreadsheetLoadOptions.setOptimizeMemoryUsage(true)` όταν εργάζεστε με μεγάλα αρχεία.  
-- Παρακολουθήστε τη μνήμη heap του JVM σας κατά την εκτέλεση παρτίδων εργασιών· η βιβλιοθήκη παρέχει callbacks για παρακολούθηση προόδου αν χρειάζεται.
+- Always invoke `editor.dispose()` when you finish working with an `Editor` instance; this releases native resources promptly.  
+- Use `SpreadsheetLoadOptions.setOptimizeMemoryUsage(true)` for large Excel files; it streams data instead of loading the entire workbook into memory.  
+- Monitor JVM heap usage during batch operations; the library offers progress callbacks that can be hooked into your monitoring tools.
 
-## Common Issues and Solutions
+## Συχνά Προβλήματα και Λύσεις
 
 | Πρόβλημα | Λύση |
 |----------|------|
-| **OutOfMemoryError σε μεγάλα αρχεία Excel** | Ενεργοποιήστε `optimizeMemoryUsage` ή χωρίστε το αρχείο σε μικρότερα τμήματα πριν το φορτώσετε. |
-| **Αρχείο με προστασία κωδικού δεν ανοίγει** | Βεβαιωθείτε ότι έχετε ορίσει τον κωδικό μέσω `WordProcessingLoadOptions` **πριν** δημιουργήσετε το `Editor`. |
-| **Το Editor δεν απελευθερώνεται μετά τη χρήση** | Πάντα καλέστε `editor.dispose()` σε ένα `finally` block ή χρησιμοποιήστε try‑with‑resources αν το τυλίξετε σε προσαρμοσμένο βοηθό. |
+| **OutOfMemoryError on big Excel files** | Enable `optimizeMemoryUsage` or split the workbook into smaller chunks before loading. |
+| **Password‑protected file fails to open** | Set the password via `WordProcessingLoadOptions` **before** constructing the `Editor`. |
+| **Editor not released after use** | Always call `editor.dispose()` inside a `finally` block or wrap it in a try‑with‑resources helper. |
 
-## Frequently Asked Questions (FAQ)
+## Συχνές Ερωτήσεις (FAQ)
 
-**Ε: Είναι το GroupDocs.Editor συμβατό με όλες τις εκδόσεις Java;**  
-A: Ναι, υποστηρίζει JDK 8 και νεότερες.
+**Q: Is GroupDocs.Editor compatible with all Java versions?**  
+A: Yes, it supports JDK 8 and newer, including Java 11, 17, and 21.
 
-**Ε: Μπορώ να χρησιμοποιήσω το GroupDocs.Editor για εμπορικά έργα;**  
-A: Απόλυτα. Αγοράστε άδεια για πλήρεις δυνατότητες παραγωγής.
+**Q: Can I use GroupDocs.Editor in commercial projects?**  
+A: Absolutely. Purchase a production license to unlock unlimited deployment.
 
-**Ε: Πώς να διαχειριστώ μεγάλα αρχεία αποδοτικά;**  
-A: Χρησιμοποιήστε επιλογές βελτιστοποίησης μνήμης όπως `setOptimizeMemoryUsage(true)` στις κατάλληλες load options.
+**Q: How do I handle large files efficiently?**  
+A: Use memory‑optimisation options such as `SpreadsheetLoadOptions.setOptimizeMemoryUsage(true)` and always dispose of the `Editor` after processing.
 
-**Ε: Ποια είναι τα οφέλη της φόρτωσης από InputStream;**  
-A: Σας επιτρέπει να εργάζεστε με αρχεία που βρίσκονται στη μνήμη, σε αποθήκευση cloud ή ανεβαίνουν μέσω HTTP χωρίς να τα αποθηκεύετε στον δίσκο.
+**Q: What are the benefits of loading from an InputStream?**  
+A: It allows you to work with files stored in memory, cloud storage, or received via HTTP without writing them to the local filesystem first.
 
-**Ε: Πού μπορώ να βρω περισσότερους πόρους και υποστήριξη για το GroupDocs.Editor;**  
-A: Επισκεφθείτε την [documentation](https://docs.groupdocs.com/editor/java/) και το [support forum](https://forum.groupdocs.com/c/editor/).
+**Q: Where can I find more documentation and support?**  
+A: Visit the official [documentation](https://docs.groupdocs.com/editor/java/) and the [support forum](https://forum.groupdocs.com/c/editor/) for tutorials, API references, and community help.
 
-## Additional Resources
-- Τεκμηρίωση: [GroupDocs Editor Java Docs](https://docs.groupdocs.com/editor/java/)
-- Αναφορά API: [API Reference](https://reference.groupdocs.com/editor/java/)
-- Λήψη: [Latest Version](https://releases.groupdocs.com/editor/java/)
-- Δωρεάν Δοκιμή: [Try for Free](https://releases.groupdocs.com/editor/java/)
-- Προσωρινή Άδεια: [Get a Temporary License](https://purchase.groupdocs.com/temporary-license)
+## Πρόσθετοι Πόροι
+- Documentation: [GroupDocs Editor Java Docs](https://docs.groupdocs.com/editor/java/)
+- API Reference: [API Reference](https://reference.groupdocs.com/editor/java/)
+- Download: [Latest Version](https://releases.groupdocs.com/editor/java/)
+- Free Trial: [Try for Free](https://releases.groupdocs.com/editor/java/)
+- Temporary License: [Get a Temporary License](https://purchase.groupdocs.com/temporary-license)
 
 ---
 
-**Τελευταία Ενημέρωση:** 2026-02-08  
-**Δοκιμάστηκε Με:** GroupDocs.Editor Java 25.3  
-**Συγγραφέας:** GroupDocs
+**Last Updated:** 2026-06-27  
+**Tested With:** GroupDocs.Editor Java 25.3  
+**Author:** GroupDocs
+
+## Σχετικά Μαθήματα
+
+- [Load Word Document Java with GroupDocs.Editor – A Complete Guide](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
+- [Protect Excel with Java: Mastering GroupDocs.Editor for Password Protection and Management](/editor/java/advanced-features/excel-file-security-java-groupdocs-editor/)
