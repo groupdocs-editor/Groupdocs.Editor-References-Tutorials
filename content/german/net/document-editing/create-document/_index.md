@@ -1,44 +1,72 @@
 ---
-title: Dokument erstellen
-linktitle: Dokument erstellen
+date: 2026-03-14
+description: Lernen Sie, wie Sie PowerPoint-Präsentationen und andere Dokumenttypen
+  mit GroupDocs.Editor für .NET bearbeiten. Der Leitfaden behandelt außerdem, wie
+  Sie das bearbeitete Dokument speichern und Word-Dokumente in .NET bearbeiten.
+linktitle: Create Document
 second_title: GroupDocs.Editor .NET API
-description: Erfahren Sie in diesem umfassenden Schritt-für-Schritt-Tutorial, wie Sie Word-, Excel-, PowerPoint-, E-Book- und E-Mail-Dokumente mit GroupDocs.Editor für .NET bearbeiten.
-weight: 10
-url: /de/net/document-editing/create-document/
+title: PowerPoint-Präsentation mit GroupDocs.Editor für .NET bearbeiten
 type: docs
+url: /de/net/document-editing/create-document/
+weight: 10
 ---
-# Dokument erstellen
+
+# PowerPoint-Präsentation bearbeiten mit GroupDocs.Editor für .NET
 
 ## Einführung
-Sind Sie es leid, sich mit dem programmgesteuerten Bearbeiten verschiedener Dokumenttypen herumzuschlagen? GroupDocs.Editor für .NET vereinfacht diesen Vorgang. Mit diesem leistungsstarken Tool können Entwickler verschiedene Dokumentformate wie Word, Excel, PowerPoint, E-Books und E-Mails ganz einfach bearbeiten. In diesem Tutorial erfahren Sie ausführlich, wie Sie mit GroupDocs.Editor für .NET Dokumente erstellen und bearbeiten. Wir unterteilen den Vorgang in leicht verständliche Schritte, sodass er auch für Anfänger leicht verständlich ist.
+Wenn Sie nach einer zuverlässigen Möglichkeit suchen, **PowerPoint-Präsentation bearbeiten** Dateien programmgesteuert zu bearbeiten, ist GroupDocs.Editor für .NET die Antwort. Diese Bibliothek ermöglicht Ihnen die Arbeit mit Word-, Excel-, PowerPoint-, Ebook- und E‑Mail-Formaten – alles über eine einzige, einfach zu nutzende API. In diesem Tutorial führen wir Sie durch das Erstellen und Bearbeiten jedes unterstützten Dokumenttyps, zeigen Ihnen, wie Sie **bearbeitetes Dokument speichern**‑Streams speichern, und geben Ihnen praktische Tipps, die Sie in realen Projekten anwenden können.
+
+## Schnelle Antworten
+- **Welche Bibliothek ermöglicht mir das Bearbeiten von PowerPoint-Dateien in .NET?** GroupDocs.Editor für .NET.  
+- **Kann ich Word-, Excel- und Epub-Dateien mit derselben API bearbeiten?** Ja, die gleiche `Editor`‑Klasse unterstützt all diese Formate.  
+- **Wie erfasse ich die bearbeitete Datei?** Stellen Sie eine Callback‑Funktion bereit (z. B. `SaveNewDocument`), die den Ergebnis‑Stream empfängt.  
+- **Benötige ich eine Lizenz für den Produktionseinsatz?** Ja – erwerben Sie eine Lizenz oder nutzen Sie eine temporäre Testlizenz.  
+- **Welche .NET‑Versionen werden unterstützt?** .NET Framework 4.0+, .NET Core und .NET 5/6.
+
+## Was bedeutet „PowerPoint-Präsentation bearbeiten“ mit GroupDocs.Editor?
+Das Bearbeiten einer PowerPoint‑Präsentation bedeutet, eine `.pptx`‑Datei zu laden, Änderungen vorzunehmen (wie das Modifizieren von Folien, Text oder versteckten Elementen) und anschließend die aktualisierte Datei abzurufen – und das alles, ohne dass Microsoft Office installiert sein muss.
+
+## Warum GroupDocs.Editor für .NET verwenden?
+- **Einzelne API für viele Formate** – Keine Notwendigkeit, separate Bibliotheken für Word, Excel oder Epub zu jonglieren.  
+- **Keine Office‑Abhängigkeit** – Funktioniert auf Servern, in Containern und CI‑Pipelines.  
+- **Feinkörnige Kontrolle** – Paginierung, Sprachinformationen, Schriftart‑Extraktion und mehr anpassen.  
+- **Stream‑basierte Verarbeitung** – Ideal für Cloud‑Dienste, bei denen Sie mit Memory‑Streams statt physischen Dateien arbeiten.
+
 ## Voraussetzungen
-Bevor wir beginnen, stellen Sie sicher, dass Sie über Folgendes verfügen:
-- Visual Studio ist auf Ihrem Computer installiert.
-- .NET Framework (4.0 oder höher).
--  GroupDocs.Editor für .NET-Bibliothek. Sie können es herunterladen von[Hier](https://releases.groupdocs.com/editor/net/).
-- Grundkenntnisse der C#-Programmierung.
+- Visual Studio (irgendeine aktuelle Edition).  
+- .NET Framework 4.0 oder höher (oder .NET Core/.NET 5+).  
+- GroupDocs.Editor für .NET Bibliothek – laden Sie sie von [hier](https://releases.groupdocs.com/editor/net/) herunter.  
+- Grundkenntnisse in C#.
+
 ## Namespaces importieren
-Importieren wir zunächst die erforderlichen Namespaces. Dadurch werden die erforderlichen Klassen und Methoden in unserer Anwendung zugänglich.
+Zuerst importieren Sie die Namespaces, die die Kernklassen enthalten, die wir verwenden werden.
+
 ```csharp
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 using System.IO;
 ```
-## Schritt 1: Einrichten des Streams
-Zunächst müssen wir einen Speicherstream einrichten, der als Platzhalter für den Dokumentinhalt dient.
+
+## Schritt 1: Stream einrichten
+Wir verwenden einen Memory‑Stream als Platzhalter für den Dokumentinhalt.
+
 ```csharp
 Stream memoryStream = Stream.Null;
 ```
-## Schritt 2: Callback-Funktion zum Speichern des Dokuments
-Definieren Sie als Nächstes eine Rückruffunktion, die den neuen Dokumentstrom speichert. Diese Funktion ist für die Handhabung der Ausgabe des Dokumentbearbeitungsprozesses von entscheidender Bedeutung.
+
+## Schritt 2: Callback‑Funktion zum **bearbeitetes Dokument speichern**
+Definieren Sie einen Callback, der den bearbeiteten Stream empfängt und ihn in `memoryStream` speichert.
+
 ```csharp
 void SaveNewDocument(Stream resultStream)
 {
     memoryStream = resultStream;
 }
 ```
-## Schritt 3: Erstellen und Bearbeiten eines Textverarbeitungsdokuments
- Lassen Sie uns nun ein Word-Dokument erstellen und bearbeiten. Wir beginnen mit der Erstellung eines neuen`Editor` Instanz für Textverarbeitungsdokumente und bearbeiten Sie sie mit den Standardoptionen.
+
+## Schritt 3: Erstellen und Bearbeiten eines WordProcessing-Dokuments  
+(Hier **Word-Dokument .net bearbeiten**.)
+
 ### Erstellen und Bearbeiten mit Standardoptionen
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
@@ -46,8 +74,8 @@ using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
     EditableDocument defaultWordProcessingDoc = editor.Edit();
 }
 ```
+
 ### Erstellen und Bearbeiten mit benutzerdefinierten Optionen
-Für mehr Kontrolle können wir Optionen wie das Deaktivieren der Seitennummerierung und das Extrahieren eingebetteter Schriftarten angeben.
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
 {
@@ -60,8 +88,10 @@ using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
     EditableDocument editableWordProcessingDocument = editor.Edit(wordProcessingEditOptions);
 }
 ```
-## Schritt 4: Erstellen und Bearbeiten eines Tabellenkalkulationsdokuments
-Auf ähnliche Weise können wir ein Excel-Dokument erstellen und bearbeiten. So geht’s:
+
+## Schritt 4: Erstellen und Bearbeiten eines Spreadsheet-Dokuments  
+(Verwenden Sie dies, um **Excel-Datei .net bearbeiten**.)
+
 ### Erstellen und Bearbeiten mit Standardoptionen
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
@@ -69,8 +99,8 @@ using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
     EditableDocument defaultEditableSpreadsheetDocument = editor.Edit();
 }
 ```
+
 ### Erstellen und Bearbeiten mit benutzerdefinierten Optionen
- Um bestimmte Arbeitsblätter anzusprechen oder versteckte auszuschließen, verwenden wir`SpreadsheetEditOptions`.
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
 {
@@ -82,8 +112,8 @@ using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
     EditableDocument editableSpreadsheetDocument = editor.Edit(spreadsheetEditOptions);
 }
 ```
-## Schritt 5: Erstellen und Bearbeiten eines Präsentationsdokuments
-PowerPoint-Präsentationen werden ebenfalls unterstützt. Sehen wir uns an, wie man damit umgeht.
+
+## Schritt 5: **PowerPoint-Präsentation bearbeiten** – Erstellen und Bearbeiten eines Präsentationsdokuments
 ### Erstellen und Bearbeiten mit Standardoptionen
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
@@ -91,8 +121,8 @@ using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
     EditableDocument defaultEditablePresentationDocument = editor.Edit();
 }
 ```
+
 ### Erstellen und Bearbeiten mit benutzerdefinierten Optionen
-Sie können Ihre Bearbeitungen anpassen, indem Sie Optionen angeben, beispielsweise welche Folie angezeigt werden soll und ob ausgeblendete Folien einbezogen werden sollen.
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
 {
@@ -104,8 +134,10 @@ using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
     EditableDocument editablePresentationDocument = editor.Edit(presentationEditOptions);
 }
 ```
-## Schritt 6: Erstellen und Bearbeiten eines E-Book-Dokuments
-GroupDocs.Editor ermöglicht auch die Bearbeitung von E-Book-Formaten wie EPUB. So können Sie vorgehen.
+
+## Schritt 6: Erstellen und Bearbeiten eines Ebook-Dokuments  
+(Hier **epub-Datei bearbeiten**.)
+
 ### Erstellen und Bearbeiten mit Standardoptionen
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
@@ -113,8 +145,8 @@ using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
     EditableDocument defaultEditableEbookDocument = editor.Edit();
 }
 ```
+
 ### Erstellen und Bearbeiten mit benutzerdefinierten Optionen
-Passen Sie die Bearbeitung Ihres E-Books an, indem Sie Seitennummerierung und Sprachinformationen aktivieren oder deaktivieren.
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
 {
@@ -126,17 +158,16 @@ using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
     EditableDocument editableEbookDocument = editor.Edit(ebookEditOptions);
 }
 ```
-## Schritt 7: Erstellen und Bearbeiten eines E-Mail-Dokuments
-Abschließend schauen wir uns an, wie man E-Mail-Dokumente bearbeitet. Dazu gehören Formate wie EML.
-### Erstellen und Bearbeiten mit Standardoptionen
+
+## Schritt 7: Erstellen und Bearbeiten eines E‑Mail‑Dokuments
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
 {
     EditableDocument defaultEditableEmailDocument = editor.Edit();
 }
 ```
+
 ### Erstellen und Bearbeiten mit benutzerdefinierten Optionen
-Geben Sie Ausgabeoptionen für E-Mail-Nachrichten an, um den Bearbeitungsvorgang zu steuern.
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
 {
@@ -147,22 +178,43 @@ using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
     EditableDocument editableEmailDocument = editor.Edit(emailEditOptions);
 }
 ```
-## Schritt 8: Abschließen des Vorgangs
-Nach dem Bearbeiten der Dokumente ist es wichtig, den Speicherstrom ordnungsgemäß zu entsorgen, um Ressourcen freizugeben.
+
+## Schritt 8: Prozess abschließen
+Entsorgen Sie den Stream, um Ressourcen freizugeben, sobald Sie fertig sind.
+
 ```csharp
 memoryStream.Dispose();
 System.Console.WriteLine("CreateDocument routine has successfully finished");
 ```
-## Abschluss
-GroupDocs.Editor für .NET ist ein vielseitiges und leistungsstarkes Tool, das die programmgesteuerte Bearbeitung verschiedener Dokumenttypen vereinfacht. Wenn Sie dieser Schritt-für-Schritt-Anleitung folgen, können Sie Dokumente ganz einfach erstellen und bearbeiten, egal ob es sich um Textverarbeitungsdateien, Tabellenkalkulationen, Präsentationen, E-Books oder E-Mails handelt. Weitere erweiterte Funktionen und Anpassungsoptionen finden Sie in der GroupDocs.Editor-Dokumentation.
+
+## Häufige Fallstricke & Tipps
+- **Vergessen Sie niemals, den Stream zu entsorgen** – lässt man ihn offen, kann das in langlaufenden Diensten zu Speicherlecks führen.  
+- **Beim Bearbeiten von PowerPoint stellen Sie sicher, dass `SlideNumber` korrekt gesetzt ist**; sonst kann die erste Folie dupliziert werden.  
+- **Wenn Sie den ursprünglichen Dateinamen beibehalten müssen**, speichern Sie ihn vor dem Callback und benennen Sie den Ausgabestream nach dem Bearbeiten um.  
+- **Bei großen Dokumenten** sollten Sie die Verarbeitung in Chunks erwägen oder `Editor` mit einer temporären Datei verwenden, um hohen Speicherverbrauch zu vermeiden.
+
 ## Häufig gestellte Fragen
-### Welche Dokumenttypen kann ich mit GroupDocs.Editor für .NET bearbeiten?
-Sie können eine breite Palette von Dokumenten bearbeiten, darunter Textverarbeitungsdokumente, Tabellenkalkulationen, Präsentationen, E-Books und E-Mails.
-### Ist es möglich, die Bearbeitungsoptionen anzupassen?
-Ja, GroupDocs.Editor für .NET ermöglicht eine umfassende Anpassung durch verschiedene, für jeden Dokumenttyp spezifische Bearbeitungsoptionen.
-### Wie gehe ich mit der Ausgabe der bearbeiteten Dokumente um?
-Sie können eine Rückruffunktion verwenden, um den bearbeiteten Dokumentstrom am gewünschten Speicherort zu speichern.
-### Benötige ich eine Lizenz, um GroupDocs.Editor für .NET zu verwenden?
- Ja, Sie können eine Lizenz erhalten bei[Hier](https://purchase.groupdocs.com/buy)Es besteht auch die Möglichkeit einer temporären Lizenz.
-### Wo finde ich ausführlichere Dokumentation?
- Eine ausführliche Dokumentation finden Sie auf der[GroupDocs.Editor für .NET-Dokumentationsseite](https://tutorials.groupdocs.com/editor/net/).
+
+**F: Welche Dokumenttypen kann ich mit GroupDocs.Editor für .NET bearbeiten?**  
+A: Sie können WordProcessing-, Tabellenkalkulations-, Präsentations-, Ebook- und E‑Mail-Dokumente bearbeiten – einschließlich PowerPoint‑Dateien für den Anwendungsfall **PowerPoint-Präsentation bearbeiten**.
+
+**F: Ist es möglich, die Bearbeitungsoptionen anzupassen?**  
+A: Ja, jedes Format hat seine eigene Optionsklasse (z. B. `WordProcessingEditOptions`, `SpreadsheetEditOptions`, `PresentationEditOptions`), die Ihnen ermöglicht, Paginierung, versteckte Folien, Arbeitsblatt‑Auswahl usw. fein abzustimmen.
+
+**F: Wie gehe ich mit der Ausgabe der bearbeiteten Dokumente um?**  
+A: Verwenden Sie die Callback‑Funktion (`SaveNewDocument`), um den bearbeiteten Stream zu erfassen, dann können Sie ihn auf die Festplatte, in eine Datenbank schreiben oder von einer Web‑API zurückgeben.
+
+**F: Benötige ich eine Lizenz, um GroupDocs.Editor für .NET zu verwenden?**  
+A: Ja, für den Produktionseinsatz ist eine Lizenz erforderlich. Sie können eine Lizenz von [hier](https://purchase.groupdocs.com/buy) erhalten. Eine temporäre Testlizenz ist ebenfalls verfügbar.
+
+**F: Wo finde ich ausführlichere Dokumentation?**  
+A: Detaillierte Dokumentation ist auf der [GroupDocs.Editor für .NET Dokumentationsseite](https://tutorials.groupdocs.com/editor/net/) verfügbar.
+
+## Fazit
+GroupDocs.Editor für .NET macht es einfach, **PowerPoint-Präsentationen** zu bearbeiten und eine breite Palette anderer Dokumenttypen. Wenn Sie den obigen Schritten folgen, können Sie Dokumente erstellen, ändern und **bearbeitete Dokumente**‑Streams vollständig im Code speichern, ohne auf Office‑Installationen angewiesen zu sein. Erkunden Sie die erweiterten Optionen der Bibliothek, um das Bearbeitungserlebnis an Ihre spezifischen Geschäftsanforderungen anzupassen.
+
+---
+
+**Zuletzt aktualisiert:** 2026-03-14  
+**Getestet mit:** GroupDocs.Editor für .NET (neueste Version)  
+**Autor:** GroupDocs

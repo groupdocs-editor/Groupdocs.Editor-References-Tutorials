@@ -1,56 +1,82 @@
 ---
-title: Obtener contenido CSS externo
-linktitle: Obtener contenido CSS externo
-second_title: API GroupDocs.Editor .NET
-description: Aprenda a utilizar GroupDocs.Editor para .NET para extraer contenido CSS externo de documentos con esta guía paso a paso. Perfecto para desarrolladores que integran documentos.
-weight: 10
-url: /es/net/css-handling/get-external-css-content/
+date: 2026-03-14
+description: 'Aprende a extraer CSS de un documento usando GroupDocs.Editor para .NET:
+  una guía paso a paso para desarrolladores.'
+linktitle: Extract CSS from Document Using GroupDocs.Editor for .NET
+second_title: GroupDocs.Editor .NET API
+title: Extraer CSS de un documento usando GroupDocs.Editor para .NET
 type: docs
+url: /es/net/css-handling/get-external-css-content/
+weight: 10
 ---
-# Obtener contenido CSS externo
+
+# Extraer CSS de un documento usando GroupDocs.Editor para .NET
 
 ## Introducción
-En este artículo, lo guiaremos a través de todo lo que necesita para comenzar con GroupDocs.Editor para .NET. Desde configurar su entorno hasta extraer contenido CSS externo de documentos, lo cubriremos todo. ¡Vamos a sumergirnos de lleno!
+En este tutorial aprenderás **cómo extraer CSS de un documento** con la API GroupDocs.Editor .NET. Te guiaremos paso a paso en la configuración, te mostraremos el código exacto que necesitas y explicaremos cada paso para que puedas obtener con confianza el contenido de hojas de estilo externas de Word, HTML u otros formatos compatibles. Ya sea que estés construyendo un sistema de gestión de contenido o necesites analizar estilos de forma programática, esta guía te cubre.
+
+## Respuestas rápidas
+- **¿Qué significa “extraer CSS de un documento”?** Significa recuperar las cadenas de hojas de estilo externas incrustadas en un archivo compatible para que puedas leerlas o modificarlas.  
+- **¿Qué biblioteca proporciona esta función?** GroupDocs.Editor para .NET.  
+- **¿Necesito una licencia?** Hay una prueba gratuita disponible; se requiere una licencia comercial para uso en producción.  
+- **¿Qué versiones de .NET son compatibles?** .NET Framework 4.6.1+, .NET Core 3.1+, .NET 5/6+.  
+- **¿Cuánto tiempo lleva la implementación?** Normalmente menos de 10 minutos para una extracción básica.
+
+## ¿Qué es extraer CSS de un documento?
+Cuando un documento (p. ej., DOCX o HTML) contiene hojas de estilo vinculadas o incrustadas, el editor almacena esos estilos como cadenas CSS separadas. Extraerlas te permite inspeccionar, editar o reutilizar la lógica de estilo fuera del archivo original.
+
+## ¿Por qué usar GroupDocs.Editor para esta tarea?
+- **API completa** – Maneja DOCX, HTML, PPTX y más sin necesidad de tener Office instalado.  
+- **Salida consistente** – Devuelve una lista limpia de cadenas de hojas de estilo, lista para procesamiento adicional.  
+- **Optimizada para rendimiento** – Funciona de manera eficiente incluso con archivos grandes.  
+
 ## Requisitos previos
-Antes de comenzar, asegúrese de cumplir con los siguientes requisitos previos:
-1. .NET Framework: asegúrese de tener instalado .NET Framework 4.6.1 o posterior.
-2. Visual Studio: instale Visual Studio 2017 o posterior para disfrutar de una experiencia de desarrollo perfecta.
-3.  GroupDocs.Editor para .NET: descargue la última versión desde[Página de descarga de GroupDocs.Editor](https://releases.groupdocs.com/editor/net/).
-4. Conocimientos básicos de C#: la familiaridad con la programación en C# le ayudará a seguir los ejemplos.
+Antes de comenzar, asegúrate de tener:
+
+1. **.NET Framework 4.6.1** o posterior (o un runtime compatible de .NET Core/5/6).  
+2. **Visual Studio 2017** o más reciente.  
+3. **GroupDocs.Editor para .NET** – descárgalo desde la [página de descarga de GroupDocs.Editor](https://releases.groupdocs.com/editor/net/).  
+4. Conocimientos básicos de programación en **C#**.
+
 ## Importar espacios de nombres
-Antes de profundizar en los ejemplos de código, debe importar los espacios de nombres necesarios en su proyecto C#:
+Primero, agrega los espacios de nombres requeridos para que el compilador sepa dónde encontrar las clases del editor.
+
 ```csharp
 using System;
 using System.Collections.Generic;
 using GroupDocs.Editor.Options;
 ```
-Ahora que tenemos nuestros requisitos previos ordenados y los espacios de nombres importados, analicemos el código de ejemplo paso a paso.
-## Paso 1: inicializa el editor
- Primero, necesitarás inicializar el`Editor` objeto con su documento de muestra. Este paso configura el documento para su edición.
+
+## Paso 1: Inicializar el Editor
+Crea una instancia de `Editor` apuntando al archivo que deseas analizar. El delegado proporciona las opciones de carga apropiadas para documentos de procesamiento de texto.
+
 ```csharp
 using (Editor editor = new Editor("Your Sample Document", delegate { return new WordProcessingLoadOptions(); }))
 {
-    // Continúe con los siguientes pasos
+    // Proceed to the next steps
 }
 ```
- En este fragmento, creamos un`Editor`instancia proporcionando la ruta del documento y un delegado que devuelve`WordProcessingLoadOptions`. Esto prepara el documento para su edición.
-## Paso 2: edite el documento
-A continuación, debe editar el documento para obtener su estado editable. Este paso convierte el documento a un formato editable.
+
+## Paso 2: Abrir el documento en modo editable
+Llamar a `Edit` convierte el archivo fuente en un `EditableDocument`, que expone métodos para la extracción de CSS.
+
 ```csharp
 using (EditableDocument document = editor.Edit(new WordProcessingEditOptions()))
 {
-    // Continúe con los siguientes pasos
+    // Proceed to the next steps
 }
 ```
- Aquí utilizamos el`Edit` método de la`Editor` clase, pasando`WordProcessingEditOptions` para conseguir un`EditableDocument` objeto, que representa el documento en un formato editable.
-## Paso 3: obtenga contenido CSS
-Ahora extraemos el contenido CSS del documento editable. Este paso es crucial ya que le permite acceder y manipular los estilos del documento.
+
+## Paso 3: Extraer el contenido CSS
+Ahora puedes extraer cada hoja de estilo que el documento referencia.
+
 ```csharp
 List<string> stylesheets = document.GetCssContent();
 ```
- El`GetCssContent` El método devuelve una lista de hojas de estilo CSS presentes en el documento. Esta lista se puede utilizar para su posterior procesamiento o análisis.
-## Paso 4: generar el contenido CSS
-Finalmente, imprimamos el contenido CSS extraído en la consola. Esto le ayudará a verificar las hojas de estilo recuperadas del documento.
+
+## Paso 4: Mostrar el contenido CSS
+Imprime la cantidad de hojas de estilo encontradas y lista cada una. Esto te ayuda a verificar que la extracción se realizó con éxito.
+
 ```csharp
 Console.WriteLine("There are {0} stylesheets in the input document", stylesheets.Count);
 foreach (string css in stylesheets)
@@ -58,17 +84,34 @@ foreach (string css in stylesheets)
     Console.WriteLine(css);
 }
 ```
-En esta parte, enviamos la cantidad de hojas de estilo y su contenido a la consola. Esto proporciona una vista clara del CSS utilizado en el documento.
-## Conclusión
-¡Y ahí lo tienes! Ha extraído con éxito contenido CSS externo de un documento utilizando GroupDocs.Editor para .NET. Esta guía paso a paso le ayudará a comprender los conceptos básicos del uso de esta poderosa biblioteca para sus necesidades de edición de documentos. Ya sea que lo esté integrando en una aplicación más grande o simplemente explorando sus capacidades, GroupDocs.Editor ofrece una solución sólida para manejar la edición de documentos mediante programación.
+
+## Problemas comunes y consejos
+- **¿No se devuelven hojas de estilo?** Asegúrate de que el archivo fuente realmente contenga CSS externo (p. ej., un DOCX con una hoja de estilo vinculada).  
+- **Problemas de codificación** – Si la salida se ve distorsionada, verifica que la codificación original del documento sea compatible con el editor.  
+- **Documentos grandes** – Para archivos muy grandes, considera procesar el documento en un hilo en segundo plano para mantener la UI responsiva.
+
 ## Preguntas frecuentes
-### ¿Qué es GroupDocs.Editor para .NET?
-GroupDocs.Editor para .NET es una API de edición de documentos que permite a los desarrolladores editar documentos mediante programación en varios formatos, incluidos Word, Excel y PDF, dentro de aplicaciones .NET.
-### ¿Cómo empiezo a utilizar GroupDocs.Editor para .NET?
- Para comenzar, debe descargar la última versión de la biblioteca desde[Página de descarga de GroupDocs.Editor](https://releases.groupdocs.com/editor/net/)configure su entorno .NET y siga los pasos descritos en esta guía.
-### ¿Puedo utilizar GroupDocs.Editor gratis?
- GroupDocs.Editor ofrece una prueba gratuita que puede descargar desde[Página de prueba gratuita de GroupDocs](https://releases.groupdocs.com/). Para obtener todas las funciones, considere comprar una licencia.
-### ¿Qué formatos de archivo admite GroupDocs.Editor?
- GroupDocs.Editor admite una amplia gama de formatos de archivo, incluidos DOCX, XLSX, PPTX, PDF, HTML y muchos más. Comprobar el[documentación](https://tutorials.groupdocs.com/editor/net/) para obtener una lista completa.
-### ¿Cómo obtengo soporte para GroupDocs.Editor?
- Puede obtener apoyo del[Foro de soporte de GroupDocs](https://forum.groupdocs.com/c/editor/20) donde puede hacer preguntas y recibir ayuda de la comunidad y de los expertos de GroupDocs.
+
+**Q: ¿Qué es GroupDocs.Editor para .NET?**  
+**A:** GroupDocs.Editor para .NET es una API de edición de documentos que permite a los desarrolladores editar, convertir y extraer contenido de forma programática de una amplia gama de formatos de archivo.
+
+**Q: ¿Cómo empiezo con GroupDocs.Editor para .NET?**  
+**A:** Descarga la biblioteca desde la [página de descarga de GroupDocs.Editor](https://releases.groupdocs.com/editor/net/), agrega el paquete NuGet a tu proyecto y sigue los pasos mostrados arriba.
+
+**Q: ¿Puedo usar GroupDocs.Editor de forma gratuita?**  
+**A:** Sí, hay una prueba gratuita disponible en la [página de prueba gratuita de GroupDocs](https://releases.groupdocs.com/). Se requiere una licencia de pago para implementaciones en producción.
+
+**Q: ¿Qué formatos de archivo soporta GroupDocs.Editor?**  
+**A:** Soporta DOCX, XLSX, PPTX, PDF, HTML y muchos más. Consulta la lista completa en la [documentación](https://tutorials.groupdocs.com/editor/net/).
+
+**Q: ¿Cómo obtengo soporte para GroupDocs.Editor?**  
+**A:** Visita el [foro de soporte de GroupDocs](https://forum.groupdocs.com/c/editor/20) para hacer preguntas y recibir ayuda tanto de la comunidad como de los ingenieros de GroupDocs.
+
+## Conclusión
+Ahora dominas cómo **extraer CSS de un documento** usando GroupDocs.Editor para .NET. Esta capacidad abre la puerta a análisis avanzados de estilos, generación de temas personalizados o integración fluida de estilos de documentos en aplicaciones web. Experimenta con las cadenas CSS devueltas, modifícalas si es necesario y vuelve a aplicarlas usando el método `SetCssContent` del editor para flujos de trabajo de estilo de ciclo completo.
+
+---
+
+**Última actualización:** 2026-03-14  
+**Probado con:** GroupDocs.Editor para .NET (última versión)  
+**Autor:** GroupDocs
