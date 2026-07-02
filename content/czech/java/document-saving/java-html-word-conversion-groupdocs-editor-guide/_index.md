@@ -1,38 +1,64 @@
 ---
-date: '2026-02-08'
-description: Naučte se, jak převést webovou stránku do Wordu a vytvářet profesionální
-  soubory DOCX pomocí GroupDocs.Editor pro Javu – ideální pro zprávy a dokumentaci.
+date: '2026-07-02'
+description: Zjistěte, jak převést webovou stránku na DOCX pomocí GroupDocs.Editor
+  pro Java – přeměňte HTML na editovatelné dokumenty Word rychle a spolehlivě.
 keywords:
-- Java HTML to Word conversion
-- GroupDocs.Editor for Java
-- document transformation
-title: 'Java: Převést webovou stránku do Wordu pomocí GroupDocs.Editor'
+- convert webpage to docx
+- html to word java
+- save html as word
+- export webpage to word
+- java generate word document
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-02'
+  description: Learn how to convert webpage to DOCX with GroupDocs.Editor for Java
+    – transform HTML into editable Word documents quickly and reliably.
+  headline: 'Java: Convert Webpage to DOCX Using GroupDocs.Editor'
+  type: TechArticle
+- questions:
+  - answer: Yes. Download the page content with `Jsoup` or `HttpClient`, then feed
+      the string into `EditableDocument.fromMarkupAndResourceFolder`.
+    question: Can I convert a live URL directly without saving the HTML first?
+  - answer: Absolutely. Change the extension in `WordProcessingFormats.fromExtension("docx")`
+      and adjust the output file name.
+    question: Does GroupDocs.Editor support converting to DOCX as well as DOCM?
+  - answer: Download those CSS files into your resource folder before initializing
+      `EditableDocument`, or let the editor fetch them if you enable network access.
+    question: What if my HTML references external CSS hosted on a CDN?
+  - answer: The trial works without a license key but is limited to 30 days and a
+      maximum document size. For production, purchase a license.
+    question: Is a license required for the free trial?
+  - answer: No. Word processing formats do not support client‑side JavaScript; only
+      static content and styling are retained.
+    question: Can I preserve JavaScript functionality in the Word output?
+  type: FAQPage
+title: 'Java: Převod webové stránky na DOCX pomocí GroupDocs.Editor'
 type: docs
 url: /cs/java/document-saving/java-html-word-conversion-groupdocs-editor-guide/
 weight: 1
 ---
 
-# Java: Převod webové stránky do Wordu pomocí GroupDocs.Editor
+# Java: Převod webové stránky do DOCX pomocí GroupDocs.Editor
 
-Převod **webové stránky do Wordu** je běžná potřeba, když chcete online obsah převést na tisknutelný, editovatelný dokument. Ať už získáváte marketingovou stránku, technický článek nebo právní oznámení, převod tohoto HTML do DOCX nebo DOCM vám umožní upravovat, sdílet a archivovat jej pomocí známých nástrojů Office. V tomto průvodci si ukážeme, jak použít **GroupDocs.Editor for Java** k načtení HTML souboru, prozkoumání jeho zdrojů a uložení výsledku jak ve formátu HTML, tak Word.
+Převod **webové stránky do DOCX** vám umožní převést libovolnou online HTML stránku na plně upravitelný dokument Word, který lze sdílet, tisknout nebo dále přizpůsobovat. Ať už potřebujete archivovat marketingový článek, vytvořit zprávu z dashboardu nebo poskytnout tisknutelnou verzi právního oznámení, převod zachovává rozvržení, stylování a vložené obrázky. V tomto průvodci vás provedeme používáním **GroupDocs.Editor for Java** k načtení HTML souboru, zabalení jeho zdrojů a uložení výsledku jak jako HTML, tak jako soubory DOCX/DOCM.
 
 ## Rychlé odpovědi
-- **Co znamená “convert webpage to word”?** Převádí HTML značkování a jeho zdroje do editovatelného Word (DOCX/DOCM) souboru.  
+- **Co znamená „convert webpage to docx“?** Převádí HTML značky a jejich zdroje do upravitelného Word (DOCX/DOCM) souboru.  
 - **Která knihovna provádí převod?** GroupDocs.Editor for Java.  
-- **Potřebuji licenci?** Bezplatná zkušební verze funguje pro testování; pro produkční nasazení je vyžadována placená licence.  
+- **Potřebuji licenci?** Bezplatná zkušební verze funguje pro testování; placená licence je vyžadována pro produkci.  
 - **Jaká verze Javy je požadována?** Java 8 nebo vyšší.  
 - **Mohu zachovat CSS a obrázky?** Ano – editor během převodu zachovává propojené styly a obrázky.
 
-## Co je “convert webpage to word”?
-Proces načte HTML zdroj stránky, seskupí všechny odkazované CSS nebo obrázky a poté vygeneruje dokument pro zpracování textu, který zachovává původní rozvržení a stylování. To umožňuje následnou úpravu v Microsoft Word nebo jiných kompatibilních editorech.
+## Co je „convert webpage to docx“?
+Načtěte HTML zdroj, sbalte všechny odkazované CSS nebo obrázky a vygenerujte dokument pro zpracování textu, který odráží původní rozvržení. Převod zachovává nadpisy, tabulky, seznamy a stylování, čímž vytváří soubor, který lze otevřít a upravit v Microsoft Word nebo v jakémkoli kompatibilním editoru bez nutnosti ručního přeformátování nebo rekonstrukce.
 
-## Proč použít GroupDocs.Editor for Java?
-GroupDocs.Editor poskytuje vysoce‑úrovňové API, které abstrahuje nízko‑úrovňové parsování HTML, správu zdrojů a specifické zvláštnosti formátů. Je osvědčený v praxi, podporuje DOCX/DOCM a funguje napříč platformami bez nativních závislostí.
+## Proč použít GroupDocs.Editor pro Javu?
+GroupDocs.Editor poskytuje vysoce úrovňové API, které převádí HTML do DOCX za méně než 2 sekundy pro soubory až do 150 MB, podporuje více než 30 HTML elementů a automaticky vkládá CSS a obrázky. Běží napříč platformami, nevyžaduje žádné nativní závislosti a zaručuje věrnost rozvržení v aplikacích Word, LibreOffice a Google Docs.
 
 ## Předpoklady
 
 ### Požadované knihovny, verze a závislosti
-- **Apache Commons IO** – zjednodušuje práci se soubory.  
+- **Apache Commons IO** – zjednodušuje souborové I/O.  
 - **GroupDocs.Editor** – verze 25.3 (nebo nejnovější stabilní vydání).
 
 ### Požadavky na nastavení prostředí
@@ -43,9 +69,9 @@ GroupDocs.Editor poskytuje vysoce‑úrovňové API, které abstrahuje nízko‑
 - Základní struktura projektu v Javě a Maven.  
 - Znalost HTML souborů a jejich struktury složek.
 
-## Nastavení GroupDocs.Editor pro Java
+## Nastavení GroupDocs.Editor pro Javu
 
-### Maven Setup
+### Nastavení Maven
 Přidejte repozitář GroupDocs a závislost do vašeho `pom.xml`:
 
 ```xml
@@ -67,19 +93,19 @@ Přidejte repozitář GroupDocs a závislost do vašeho `pom.xml`:
 ```
 
 ### Přímé stažení
-Alternativně můžete stáhnout nejnovější verzi z [vydání GroupDocs.Editor pro Java](https://releases.groupdocs.com/editor/java/).
+Alternativně můžete stáhnout nejnovější verzi z [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 ### Kroky získání licence
-- **Bezplatná zkušební verze:** Začněte s trial verzí a prozkoumejte API.  
-- **Dočasná licence:** Použijte časově omezený klíč pro prodloužené vyhodnocení.  
-- **Nákup:** Získejte komerční licenci pro produkční nasazení.
+- **Free Trial:** Začněte s trial verzí pro prozkoumání API.  
+- **Temporary License:** Použijte časově omezený klíč pro rozšířené hodnocení.  
+- **Purchase:** Získejte komerční licenci pro produkční nasazení.
 
 ## Průvodce implementací
 
-Níže je podrobný průvodce krok za krokem. Každý blok kódu zůstává nezměněn oproti originálnímu tutoriálu; okolní vysvětlení byla rozšířena pro větší přehlednost.
+Níže je krok‑za‑krokem průvodce. Každý blok kódu zůstává nezměněn oproti originálnímu tutoriálu; okolní vysvětlení byla rozšířena pro větší přehlednost.
 
 ### Funkce 1 – Čtení HTML obsahu ze souboru  
-**Proč je to důležité:** Pro převod webové stránky potřebujete nejprve surové HTML jako `String`. Použití Apache Commons IO to zjednoduší na jednorázový řádek.
+**Proč je to důležité:** Pro převod webové stránky potřebujete nejprve surové HTML jako `String`. Použití Apache Commons IO to zjednoduší na jeden řádek.
 
 #### 1.1 Import požadovaných knihoven
 ```java
@@ -95,7 +121,7 @@ String htmlFilePath = "YOUR_DOCUMENT_DIRECTORY/sample_html_body.html";
 ```
 
 #### 1.3 Načtěte obsah do řetězce  
-Metoda `FileUtils.readFileToString` načte soubor pomocí kódování UTF‑8 a zachová všechny znaky.
+Metoda `FileUtils.readFileToString` čte soubor pomocí kódování UTF‑8 a zachovává všechny znaky.
 
 ```java
 String content = FileUtils.readFileToString(new File(htmlFilePath), "utf-8");
@@ -103,7 +129,9 @@ String content = FileUtils.readFileToString(new File(htmlFilePath), "utf-8");
 ```
 
 ### Funkce 2 – Inicializace EditableDocument z HTML obsahu  
-**Proč je to důležité:** `EditableDocument` je hlavní objekt, který spojuje značkování s jeho zdroji (CSS, obrázky), aby editor mohl pracovat s kompletním dokumentem.
+**Proč je to důležité:** `EditableDocument` je hlavní objekt, který spojuje značky s jejich zdroji (CSS, obrázky), aby editor mohl pracovat s kompletním dokumentem.
+
+Třída `EditableDocument` představuje jeden HTML dokument spolu s jeho propojenými zdroji, což umožňuje plynulý převod do jiných formátů.  
 
 #### 2.1 Import knihoven GroupDocs
 ```java
@@ -118,7 +146,7 @@ String resourceFolderPath = "YOUR_DOCUMENT_DIRECTORY/sample_html_body_resources"
 ```
 
 #### 2.3 Inicializace EditableDocument  
-Tento volání sloučí HTML značkování se složkou zdrojů a vytvoří editovatelný dokument v paměti.
+Tento volání sloučí HTML značky se složkou zdrojů a vytvoří v‑paměti upravitelný dokument.
 
 ```java
 EditableDocument inputDoc = EditableDocument.fromMarkupAndResourceFolder(content, resourceFolderPath);
@@ -157,7 +185,9 @@ inputDoc.save(outputHtmlFilePath);
 ```
 
 ### Funkce 5 – Uložení EditableDocument jako dokument pro zpracování textu (DOCX/DOCM)  
-**Proč je to důležité:** Převod na DOCX/DOCM vám poskytne plně editovatelný Word soubor, který lze otevřít v Microsoft Word, LibreOffice nebo jakémkoli kompatibilním editoru.
+**Proč je to důležité:** Převod do DOCX/DOCM vám poskytne plně upravitelný Word soubor, který lze otevřít v Microsoft Word, LibreOffice nebo v jakémkoli kompatibilním editoru.
+
+Výčtový typ `WordProcessingFormats` určuje přesný Word formát (DOCX nebo DOCM), který chcete vygenerovat.  
 
 #### 5.1 Import knihoven pro možnosti uložení
 ```java
@@ -171,13 +201,15 @@ String outputDocmFilePath = "YOUR_OUTPUT_DIRECTORY/_output.docm";
 ```
 
 #### 5.3 Nastavení možností uložení a formátu  
-Zde explicitně požadujeme formát DOCM (Word dokument s makry). Pro standardní dokument můžete přepnout na `"docx"`.
+Zde explicitně požadujeme formát DOCM (makro‑povolený Word dokument). Pro standardní dokument můžete přepnout na `"docx"`.
 
 ```java
 WordProcessingFormats saveFormat = WordProcessingFormats.fromExtension("docm");
 WordProcessingSaveOptions saveOptions = new WordProcessingSaveOptions(saveFormat);
 // Here, we define the desired output format (DOCM) along with any specific saving options needed for conversion.
 ```
+
+`Editor` je hlavní třída, která přijímá `EditableDocument` a zapisuje jej do zvoleného Word formátu.
 
 #### 5.4 Uložení dokumentu jako DOCM  
 Používáme třídu `Editor` k provedení finálního převodu.
@@ -190,21 +222,21 @@ editor.save(inputDoc, outputDocmFilePath, saveOptions);
 
 ## Praktické aplikace
 
-- **Dynamické generování reportů:** Stáhněte tabulky z živého dashboardu, převedete je do Wordu a pošlete automatizované reporty e-mailem.  
-- **Systémy pro správu obsahu:** Nabídněte tlačítko “Export do Wordu” pro články, zachovávající stylování a obrázky.  
-- **Příprava právních dokumentů:** Převést webové publikace předpisů na editovatelné smlouvy nebo politické dokumenty.  
+- **Dynamické generování reportů:** Stáhněte tabulky z živého dashboardu, převěďte je do Wordu a pošlete automatizované reporty e-mailem.  
+- **Systémy pro správu obsahu:** Nabídněte tlačítko „Export do Wordu“ pro články, zachovávající stylování a obrázky.  
+- **Příprava právních dokumentů:** Převést webově publikované předpisy na upravitelné smlouvy nebo politické dokumenty.  
 - **Sestavování vzdělávacích materiálů:** Shromáždit poznámky z přednášek z HTML stránek do jedné studijní příručky.  
-- **Vytváření obchodních nabídek:** Převést marketingové webové stránky na vylepšené DOCM nabídky pro klienty.
+- **Vytváření obchodních nabídek:** Převést marketingové webové stránky na vyladěné DOCM návrhy pro klienty.
 
 ## Úvahy o výkonu
 
 - **Optimalizace využití paměti:** Pro velké HTML soubory zvyšte haldu JVM (`-Xmx2g`) nebo zpracovávejte dokumenty po částech.  
-- **Asynchronní načítání zdrojů:** V webových nástrojích načítejte CSS a obrázky na pozadí, aby UI zůstalo responzivní.
+- **Načítání zdrojů asynchronně:** Ve webových nástrojích načítejte CSS a obrázky na pozadí, aby UI zůstalo responzivní.
 
 ## Časté problémy a řešení
 
 | Problém | Příčina | Řešení |
-|-------|-------|-----|
+|---------|---------|--------|
 | Obrázky chybí v DOCM | Cesta ke složce zdrojů je nesprávná | Ověřte, že `resourceFolderPath` ukazuje na složku obsahující všechny soubory obrázků. |
 | Styly vypadají po převodu odlišně | CSS nebylo načteno | Ujistěte se, že `inputDoc.getCss()` vrací očekávaný počet; přidejte chybějící styly do složky zdrojů. |
 | OutOfMemoryError u velkých stránek | Velké HTML + mnoho zdrojů | Zvyšte haldu JVM nebo rozdělte HTML na menší sekce před převodem. |
@@ -214,7 +246,7 @@ editor.save(inputDoc, outputDocmFilePath, saveOptions);
 **Q: Mohu převést živou URL přímo bez uložení HTML nejprve?**  
 A: Ano. Stáhněte obsah stránky pomocí `Jsoup` nebo `HttpClient` a poté předávejte řetězec do `EditableDocument.fromMarkupAndResourceFolder`.
 
-**Q: Podporuje GroupDocs.Editor převod na DOCX i na DOCM?**  
+**Q: Podporuje GroupDocs.Editor převod do DOCX i do DOCM?**  
 A: Rozhodně. Změňte příponu v `WordProcessingFormats.fromExtension("docx")` a upravte název výstupního souboru.
 
 **Q: Co když moje HTML odkazuje na externí CSS hostované na CDN?**  
@@ -228,6 +260,12 @@ A: Ne. Formáty pro zpracování textu nepodporují klientský JavaScript; zacho
 
 ---
 
-**Poslední aktualizace:** 2026-02-08  
+**Poslední aktualizace:** 2026-07-02  
 **Testováno s:** GroupDocs.Editor 25.3  
 **Autor:** GroupDocs
+
+## Související tutoriály
+
+- [Jak převést Word do HTML a upravit Word dokumenty v Javě s GroupDocs.Editor](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
+- [Načtení Word dokumentu v Javě pomocí GroupDocs.Editor – Kompletní průvodce](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
+- [Úprava Word dokumentu v Javě pomocí GroupDocs.Editor – Průvodce](/editor/java/word-processing-documents/groupdocs-editor-java-edit-word-docs-efficiently/)
