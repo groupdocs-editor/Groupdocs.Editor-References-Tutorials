@@ -1,33 +1,33 @@
 ---
-date: 2026-01-13
+date: 2026-03-17
 description: Apprenez à modifier des feuilles de calcul Excel en Java avec GroupDocs.Editor,
-  y compris les feuilles de calcul, les formules, les classeurs à plusieurs onglets
-  et les fichiers protégés par mot de passe.
-title: Éditer une feuille de calcul Excel en Java avec les tutoriels GroupDocs.Editor
+  en couvrant les feuilles de calcul, les formules, les classeurs à plusieurs onglets,
+  les fichiers protégés par mot de passe et la gestion des classeurs volumineux.
+title: Comment modifier une feuille de calcul Excel en Java avec GroupDocs.Editor
 type: docs
 url: /fr/java/spreadsheet-documents/
 weight: 6
 ---
 
-# Modifier une feuille de calcul Excel Java avec GroupDocs.Editor
+# Comment modifier une feuille de calcul Excel en Java avec GroupDocs.Editor
 
-Si vous devez **modifier des feuilles de calcul Excel Java** rapidement et de manière fiable, vous êtes au bon endroit. Ce guide vous explique comment utiliser GroupDocs.Editor pour Java afin de modifier les feuilles de calcul, mettre à jour les formules, gérer les classeurs à plusieurs onglets et travailler avec des fichiers protégés par mot de passe — tout en conservant le moteur de calcul original de la feuille de calcul.
+Si vous cherchez **comment modifier des fichiers Excel** directement depuis une application Java, vous êtes au bon endroit. Dans ce tutoriel, nous allons parcourir l’utilisation de GroupDocs.Editor pour Java afin d’ouvrir un classeur, de modifier des cellules, de préserver les formules, de travailler avec plusieurs onglets, et même de gérer des feuilles de calcul protégées par mot de passe ou très volumineuses — le tout sans avoir besoin de Microsoft Office sur le serveur.
 
 ## Réponses rapides
-- **Puis-je modifier des fichiers Excel protégés par mot de passe ?** Oui, il suffit de fournir le mot de passe lors du chargement du document.  
-- **GroupDocs.Editor préserve-t-il les formules ?** Absolument ; les formules restent fonctionnelles après les modifications.  
-- **La modification multi‑feuilles est‑elle prise en charge ?** Vous pouvez ouvrir, modifier et enregistrer n’importe quel nombre de feuilles dans un classeur.  
-- **Quelle version de Java est requise ?** Java 8 ou supérieur est recommandé.  
-- **Ai‑je besoin d’une licence pour la production ?** Une licence valide de GroupDocs.Editor pour Java est requise pour une utilisation hors période d’essai.  
+- **Puis-je modifier des fichiers Excel protégés par mot de passe ?** Oui – il suffit de fournir le mot de passe lors du chargement du document.  
+- **GroupDocs.Editor préserve-t-il les formules ?** Absolument ; les formules restent fonctionnelles après toute modification.  
+- **La modification multi‑feuilles est‑elle prise en charge ?** Vous pouvez ouvrir, modifier et enregistrer n’importe quel nombre de feuilles de calcul dans un classeur.  
+- **Quelle version de Java est requise ?** Java 8 ou supérieur est recommandé.  
+- **Ai‑je besoin d’une licence pour la production ?** Une licence valide de GroupDocs.Editor pour Java est requise pour une utilisation hors période d’essai.  
 
-## Qu’est‑ce que « modifier une feuille de calcul Excel Java » ?
-Modifier une feuille de calcul Excel depuis Java signifie ouvrir programmétiquement un fichier `.xlsx` ou `.xls`, modifier les valeurs des cellules, ajouter ou supprimer des lignes/colonnes, puis enregistrer le fichier mis à jour — le tout sans interaction manuelle de l’utilisateur. GroupDocs.Editor fournit une API de haut niveau qui abstrait les détails de bas niveau du format Office Open XML.
+## Qu’est‑ce que « comment modifier Excel » dans un contexte Java ?
+Modifier Excel depuis Java signifie charger programmétiquement un fichier `.xlsx` ou `.xls`, modifier les valeurs des cellules, ajouter ou supprimer des lignes/colonnes, et enregistrer le résultat sans aucune interaction manuelle. GroupDocs.Editor abstrait les complexités d’Office Open XML, vous offrant une API propre et de haut niveau.
 
 ## Pourquoi modifier des feuilles de calcul Excel en Java avec GroupDocs.Editor ?
-- **API complète** – Prend en charge la mise à jour des cellules, la préservation des formules et la gestion des feuilles.  
-- **Cross‑platform** – Fonctionne sur tout système d’exploitation exécutant Java, ce qui le rend idéal pour le traitement côté serveur.  
-- **Pas d’installation d’Office requise** – Aucune dépendance à Microsoft Office ou au runtime Excel.  
-- **Prêt pour la sécurité** – Gère les classeurs chiffrés dès le départ.  
+- **API complète** – Mettre à jour les cellules, préserver les formules et gérer les feuilles de calcul avec des appels de méthode simples.  
+- **Cross‑platform** – Fonctionne sur tout système d’exploitation supportant Java, idéal pour le traitement par lots côté serveur.  
+- **Pas de dépendance à Office** – Aucun besoin d’installer Microsoft Office ou de dépendre de l’interopérabilité COM.  
+- **Sécurité intégrée** – Prise en charge native des classeurs chiffrés et de la gestion des mots de passe.  
 
 ## Prérequis
 - Java 8 ou version supérieure installé.  
@@ -37,27 +37,36 @@ Modifier une feuille de calcul Excel depuis Java signifie ouvrir programmétique
 ## Guide étape par étape
 
 ### Étape 1 : Initialiser l’Editor
-Créez une instance de la classe `Editor`, en passant le chemin de votre fichier Excel et les options de chargement requises (par ex., le mot de passe).
+Créez une instance `Editor`, en la pointant vers le fichier Excel avec lequel vous souhaitez travailler. Si le classeur est protégé par mot de passe, incluez le mot de passe dans les options de chargement.
 
 ### Étape 2 : Charger le classeur
-Utilisez la méthode `load` pour obtenir un objet `SpreadsheetDocument` qui représente le classeur en mémoire.
+Appelez la méthode `load` pour obtenir un objet `SpreadsheetDocument`. Cet objet représente l’ensemble du classeur en mémoire et vous donne accès à chaque feuille de calcul.
 
-### Étape 3 : Modifier les cellules ou les formules
-Naviguez vers la feuille de calcul souhaitée, puis mettez à jour les valeurs des cellules ou les formules à l’aide des méthodes API fournies. Toutes les modifications sont conservées en mémoire jusqu’à l’enregistrement.
+### Étape 3 : Modifier les cellules, les formules ou les feuilles de calcul
+Naviguez vers la feuille de calcul requise, puis utilisez l’API pour modifier les valeurs des cellules (`setValue`) ou les formules (`setFormula`). Vous pouvez également ajouter de nouvelles feuilles, supprimer celles existantes ou réorganiser les onglets.
 
 ### Étape 4 : Enregistrer le classeur mis à jour
-Appelez la méthode `save` pour écrire le classeur modifié sur le disque ou le diffuser vers une application cliente.
+Lorsque toutes les modifications sont terminées, invoquez la méthode `save` pour écrire le classeur sur le disque ou le diffuser vers un client. Le moteur de calcul original reste intact, de sorte que les formules se recalculent lorsque le fichier est ouvert dans Excel.
 
-> **Astuce :** Travaillez toujours sur une copie du fichier original lors du test d’une nouvelle logique de modification afin d’éviter toute perte de données accidentelle.
+> **Astuce :** Travaillez sur une copie du fichier original pendant le développement afin d’éviter toute perte de données accidentelle.
+
+## Comment modifier des fichiers Excel protégés par mot de passe avec Java
+Lors du chargement d’un classeur chiffré, transmettez le mot de passe via l’objet `LoadOptions`. L’éditeur déchiffrera le fichier en mémoire, appliquera vos modifications, puis le rechiffrera lors de l’enregistrement.
+
+## Gérer efficacement les classeurs Excel volumineux
+Les classeurs volumineux peuvent consommer beaucoup de mémoire. Pour limiter l’utilisation des ressources :
+- Traitez une feuille à la fois au lieu de charger l’ensemble du classeur en mémoire.  
+- Utilisez les API de streaming (si disponibles dans les versions plus récentes de GroupDocs.Editor).  
+- Libérez les références aux feuilles après les avoir éditées.
 
 ## Problèmes courants et solutions
-- **Les formules deviennent du texte statique :** Assurez‑vous d’utiliser la méthode `setFormula` plutôt que `setValue` pour les cellules qui doivent contenir des formules.  
-- **Le fichier protégé par mot de passe ne s’ouvre pas :** Vérifiez que le mot de passe correct est fourni dans les options de chargement.  
-- **Les gros classeurs provoquent une pression mémoire :** Traitez les feuilles individuellement ou utilisez les options de streaming si disponibles.  
+- **Les formules deviennent du texte statique :** Utilisez `setFormula` au lieu de `setValue` pour les cellules qui doivent contenir des formules.  
+- **Le fichier protégé par mot de passe ne s’ouvre pas :** Vérifiez que le bon mot de passe est fourni dans les options de chargement.  
+- **Pression mémoire avec les gros fichiers :** Divisez le traitement par feuille ou activez le streaming pour réduire la consommation du tas.  
 
 ## Tutoriels disponibles
 
-### [Maîtriser l’édition des onglets Excel en Java avec GroupDocs.Editor : Guide complet pour les développeurs](./master-excel-tab-editing-java-groupdocs-editor/)
+### [Maîtriser la modification des onglets Excel en Java avec GroupDocs.Editor : Guide complet pour les développeurs](./master-excel-tab-editing-java-groupdocs-editor/)
 Apprenez à modifier et enregistrer les onglets Excel de façon programmatique en utilisant GroupDocs.Editor pour Java. Améliorez dès aujourd’hui vos compétences en gestion de feuilles de calcul !
 
 ## Ressources supplémentaires
@@ -69,23 +78,25 @@ Apprenez à modifier et enregistrer les onglets Excel de façon programmatique e
 - [Support gratuit](https://forum.groupdocs.com/)
 - [Licence temporaire](https://purchase.groupdocs.com/temporary-license/)
 
-## Questions fréquentes
+## Foire aux questions
 
 **Q : Puis‑je modifier les formats `.xlsx` et `.xls` ?**  
-A : Oui, GroupDocs.Editor prend en charge les deux types de fichiers Excel modernes et anciens.
+**R :** Oui, GroupDocs.Editor prend en charge les deux types de fichiers Excel modernes et anciens.
 
 **Q : La modification préserve‑t‑elle les styles et le formatage des cellules ?**  
-A : Tous les styles de cellules, polices et couleurs d’origine sont conservés sauf si vous les modifiez explicitement.
+**R :** Tous les styles de cellules, polices et couleurs d’origine sont conservés sauf si vous les modifiez explicitement.
 
 **Q : Comment gérer efficacement des feuilles de calcul très volumineuses ?**  
-A : Traitez le classeur par morceaux, travaillez avec des feuilles individuelles et libérez les ressources rapidement après chaque opération.
+**R :** Traitez le classeur par morceaux, travaillez avec des feuilles individuelles et libérez les ressources rapidement après chaque opération.
 
 **Q : Est‑il possible d’ajouter de nouvelles feuilles de calcul programmatique ?**  
-A : Absolument. Utilisez la méthode `addWorksheet` pour créer de nouveaux onglets dans le classeur.
+**R :** Absolument. Utilisez la méthode `addWorksheet` pour créer de nouveaux onglets dans le classeur.
 
 **Q : Quelles options de licence sont disponibles pour les déploiements en production ?**  
-A : GroupDocs.Editor propose des licences perpétuelles, d’abonnement et temporaires pour répondre aux différents besoins de projet.
+**R :** GroupDocs.Editor propose des licences perpétuelles, d’abonnement et temporaires pour répondre aux différents besoins de projet.
 
-**Dernière mise à jour :** 2026-01-13  
-**Testé avec :** GroupDocs.Editor for Java 23.9  
-**Auteur :** GroupDocs
+---
+
+**Last Updated:** 2026-03-17  
+**Tested With:** GroupDocs.Editor for Java 23.9  
+**Author:** GroupDocs

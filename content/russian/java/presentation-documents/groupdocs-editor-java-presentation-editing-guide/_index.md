@@ -1,59 +1,66 @@
 ---
-date: '2026-01-13'
-description: Узнайте, как конвертировать PPTX в PPTM на Java с помощью GroupDocs.Editor.
-  Это руководство также показывает, как эффективно редактировать Java‑проекты PPTX.
+date: '2026-03-17'
+description: Узнайте, как редактировать PPTX и конвертировать PPTX в PPTM на Java
+  с помощью GroupDocs.Editor. Это руководство проведёт вас через программное редактирование
+  PowerPoint, замену текста и массовое преобразование файлов PPTX.
 keywords:
 - GroupDocs.Editor for Java
 - presentation editing in Java
 - editing PPTX files with Java
-title: Конвертировать PPTX в PPTM на Java с помощью GroupDocs.Editor
+title: Как редактировать PPTX и конвертировать в PPTM в Java с помощью GroupDocs
 type: docs
 url: /ru/java/presentation-documents/groupdocs-editor-java-presentation-editing-guide/
 weight: 1
 ---
 
-# Конвертация PPTX в PPTM на Java с GroupDocs.Editor
+:** GroupDocs"
 
-## Введение
+Translate labels but keep dates.
 
-В современном быстром цифровом мире возможность **конвертировать PPTX в PPTM** быстро дает огромный прирост производительности, особенно когда также необходимо **редактировать PPTX Java** проекты. Будь то обновление презентации для клиентского выступления или работа с файлами, защищёнными паролем, GroupDocs.Editor для Java предоставляет чистый программный способ загрузки, редактирования и сохранения презентаций. Этот учебник проведёт вас через каждый шаг — от загрузки файла PPTX до его преобразования в формат PPTM — чтобы вы могли интегрировать редактирование презентаций непосредственно в свои Java‑приложения.
+Now produce final content.
 
-### Быстрые ответы
-- **Какова основная цель данного руководства?** Показать, как конвертировать PPTX в PPTM и редактировать презентации с помощью GroupDocs.Editor для Java.  
-- **Нужна ли лицензия?** Да, для использования в продакшене требуется пробная или постоянная лицензия от GroupDocs.  
-- **Можно ли работать с файлами, защищёнными паролем?** Конечно — опции загрузки позволяют указать пароль.  
-- **Какая версия Java поддерживается?** Java 8 или выше (рекомендовано JDK 11+).  
-- **Является ли Maven единственным способом добавить библиотеку?** Нет, JAR‑файл можно также скачать напрямую.
+Be careful with markdown formatting: keep headings with same number of #.
 
-## Что такое «конвертировать PPTX в PPTM»?
+Let's craft final answer.# Как редактировать PPTX и конвертировать в PPTM на Java с GroupDocs
 
-Конвертация файла PPTX в PPTM меняет формат файла с обычной презентации PowerPoint на версию с поддержкой макросов (PPTM). Это полезно, когда необходимо внедрить VBA‑макросы или сохранить расширенные функции, которые не поддерживаются в PPTX.
+В современном быстром цифровом мире многие разработчики задаются вопросом **how to edit pptx** файлов программно. Независимо от того, нужно ли вам заменить текст, добавить макросы или просто **convert PPTX to PPTM**, в этом руководстве показано шаг за шагом, как достичь этих целей с помощью GroupDocs.Editor для Java. Вы увидите, как загрузить презентацию, внести изменения и сохранить результат как PPTM с поддержкой макросов — без необходимости установки Microsoft Office на сервере.
 
-## Почему стоит использовать GroupDocs.Editor для Java при редактировании PPTX?
+## Quick Answers
+- **What is the primary purpose of this guide?** Чтобы продемонстрировать, как редактировать PPTX файлы и конвертировать PPTX в PPTM с помощью GroupDocs.Editor для Java.  
+- **Do I need a license?** Да, для использования в продакшене требуется пробная или постоянная лицензия от GroupDocs.  
+- **Can I handle password‑protected files?** Абсолютно — параметры загрузки позволяют указать пароль.  
+- **Which Java version is supported?** Java 8 или выше (рекомендовано JDK 11+).  
+- **Is Maven the only way to add the library?** Нет, JAR‑файл можно также скачать напрямую.
 
-GroupDocs.Editor предлагает высокоуровневый API, который абстрагирует сложность формата Office Open XML. Он позволяет:
+## What is “convert PPTX to PPTM”?
+
+Конвертация файла PPTX в PPTM меняет формат файла с обычной презентации PowerPoint на версию с поддержкой макросов (PPTM). Это полезно, когда необходимо внедрить VBA‑macros или сохранить расширенные функции, которые не поддерживает PPTX.
+
+## Why use GroupDocs.Editor for Java to edit PPTX?
+
+GroupDocs.Editor предлагает высокоуровневый API, который скрывает сложность формата Office Open XML. Он позволяет:
 
 - Загружать презентации (включая защищённые паролем) одним вызовом.  
-- Редактировать отдельные слайды, заменять текст и управлять ресурсами.  
-- Сохранять результат в PPTM, при необходимости задавая новый пароль.  
+- **Programmatic PowerPoint edit**: изменять слайды, заменять текст и управлять ресурсами.  
+- Сохранять результат как PPTM, при необходимости задавая новый пароль.  
 
-Всё это можно выполнять без установки Microsoft Office на сервере.
+Все это можно выполнить без установки Microsoft Office на сервере.
 
-## Предварительные требования
+## Prerequisites
 
-- **GroupDocs.Editor для Java** — версия 25.3 или новее.  
-- **Java Development Kit (JDK)** — 8 или выше.  
+- **GroupDocs.Editor for Java** – версия 25.3 или новее.  
+- **Java Development Kit (JDK)** – 8 или выше.  
 - IDE, например IntelliJ IDEA или Eclipse.  
-- Действительная лицензия GroupDocs (бесплатная пробная или приобретённая).  
+- Действующая лицензия GroupDocs (бесплатная пробная или приобретённая).  
 
-Пробную лицензию можно получить на [веб‑сайте GroupDocs](https://purchase.groupdocs.com/temporary-license).
+Вы можете получить пробную лицензию на [веб‑сайте GroupDocs](https://purchase.groupdocs.com/temporary-license).
 
-## Настройка GroupDocs.Editor для Java
+## Setting Up GroupDocs.Editor for Java
 
-Библиотеку можно добавить в проект через Maven или скачав JAR напрямую.
+Вы можете добавить библиотеку в проект через Maven или скачав JAR напрямую.
 
-### Использование Maven
-Добавьте следующую конфигурацию в ваш файл `pom.xml`:
+### Using Maven
+Включите следующую конфигурацию в ваш файл `pom.xml`:
 
 ```xml
 <repositories>
@@ -73,10 +80,10 @@ GroupDocs.Editor предлагает высокоуровневый API, кот
 </dependencies>
 ```
 
-### Прямое скачивание
-Либо скачайте последнюю версию JAR со страницы официальных релизов: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+### Direct Download
+Кроме того, скачайте последний JAR со страницы официальных релизов: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-После того как библиотека окажется в classpath, можно создать экземпляр `Editor`:
+После того как библиотека окажется в вашем classpath, вы можете создать экземпляр `Editor`:
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -84,23 +91,23 @@ import com.groupdocs.editor.Editor;
 Editor editor = new Editor();
 ```
 
-## Руководство по реализации
+## How to Edit PPTX (and Convert to PPTM)
 
-### Функция 1: Загрузка презентации (включая файлы, защищённые паролем)
+### Feature 1: Loading a Presentation (including password‑protected files)
 
-#### Обзор
-Загрузка презентации — первый шаг перед тем, как **конвертировать PPTX в PPTM** или редактировать её содержимое.
+#### Overview
+Загрузка презентации — первый шаг перед тем, как вы сможете **convert PPTX to PPTM** или редактировать её содержимое.
 
-#### Пошаговая реализация
+#### Step‑by‑Step Implementation
 
-**1. Определите путь к вашему файлу**  
+**1. Define the Path to Your File**  
 Укажите расположение PPTX, с которым хотите работать:
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample_pptx.pptx";
 ```
 
-**2. Создайте InputStream**  
+**2. Create an InputStream**  
 Откройте файл как поток:
 
 ```java
@@ -110,7 +117,7 @@ import java.io.InputStream;
 InputStream fs = new FileInputStream(inputFilePath);
 ```
 
-**3. Настройте параметры загрузки**  
+**3. Set Up Load Options**  
 Если файл защищён, укажите пароль:
 
 ```java
@@ -120,8 +127,8 @@ PresentationLoadOptions loadOptions = new PresentationLoadOptions();
 loadOptions.setPassword("some_password_to_open_a_document");
 ```
 
-**4. Загрузите презентацию**  
-Вызовите класс `Editor` с потоком и параметрами:
+**4. Load the Presentation**  
+Используйте класс `Editor` с потоком и параметрами:
 
 ```java
 Editor editor = new Editor(fs, loadOptions);
@@ -129,15 +136,15 @@ Editor editor = new Editor(fs, loadOptions);
 
 **Pro tip:** Всегда закрывайте `InputStream` в блоке `finally` или используйте try‑with‑resources, чтобы избежать утечек ресурсов.
 
-### Функция 2: Редактирование конкретного слайда (edit pptx java)
+### Feature 2: Editing a Specific Slide (edit pptx java)
 
-#### Обзор
-Выберите один слайд для изменений — идеально подходит для сценария **edit pptx java**.
+#### Overview
+Выберите один слайд для изменения — идеально подходит для сценария **edit pptx java**.
 
-#### Пошаговая реализация
+#### Step‑by‑Step Implementation
 
-**1. Настройте параметры редактирования**  
-Укажите, какой слайд редактировать (индекс с нуля):
+**1. Set Up Editing Options**  
+Укажите, какой слайд редактировать (индекс начинается с 0):
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -148,8 +155,8 @@ editOptions.setSlideNumber(0); // Edit the first slide
 editOptions.setShowHiddenSlides(true);
 ```
 
-**2. Получите редактируемый документ**  
-Получите HTML‑представление выбранного слайда:
+**2. Obtain an Editable Document**  
+Получите редактируемое представление слайда:
 
 ```java
 import com.groupdocs.editor.EditableDocument;
@@ -157,43 +164,43 @@ import com.groupdocs.editor.EditableDocument;
 EditableDocument beforeEdit = editor.edit(editOptions);
 ```
 
-**3. Извлеките HTML‑контент и ресурсы**  
-Теперь можно работать с разметкой слайда и встроенными ресурсами:
+**3. Extract HTML Content and Resources**  
+Теперь вы можете работать с HTML‑разметкой слайда и его встроенными ресурсами:
 
 ```java
 String originalContent = beforeEdit.getContent();
 List<IHtmlResource> allResources = beforeEdit.getAllResources();
 ```
 
-### Функция 3: Модификация содержимого слайда презентации
+### Feature 3: Modifying Content of a Presentation Slide
 
-#### Обзор
+#### Overview
 Замените текст или вставьте новый HTML непосредственно в разметку слайда.
 
-#### Пошаговая реализация
+#### Step‑by‑Step Implementation
 
-**1. Замена текста**  
-Простая подстановка текста:
+**1. Replace Text**  
+Простая замена текста:
 
 ```java
 String editedContent = beforeEdit.getContent().replace("New text", "edited text");
 ```
 
-**2. Создание нового редактируемого документа**  
-Оберните изменённую разметку обратно в `EditableDocument`:
+**2. Create a New Editable Document**  
+Обёрните изменённую разметку обратно в `EditableDocument`:
 
 ```java
 EditableDocument afterEdit = EditableDocument.fromMarkup(editedContent, allResources);
 ```
 
-### Функция 4: Сохранение отредактированной презентации (convert PPTX to PPTM)
+### Feature 4: Saving an Edited Presentation (convert PPTX to PPTM)
 
-#### Обзор
-Наконец, сохраните набор отредактированных слайдов в файл PPTM, при желании защитив его паролем.
+#### Overview
+Наконец, сохраните отредактированный набор слайдов как файл PPTM, при желании защитив его паролем.
 
-#### Пошаговая реализация
+#### Step‑by‑Step Implementation
 
-**1. Инициализируйте параметры сохранения**  
+**1. Initialize Save Options**  
 Укажите формат PPTM и новый пароль:
 
 ```java
@@ -204,7 +211,7 @@ PresentationSaveOptions saveOptions = new PresentationSaveOptions(PresentationFo
 saveOptions.setPassword("password");
 ```
 
-**2. Подготовьте выходной поток**  
+**2. Prepare Output Stream**  
 Определите, куда будет записан полученный файл:
 
 ```java
@@ -215,14 +222,14 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/sample_out.pptm";
 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 ```
 
-**3. Сохраните отредактированный документ**  
+**3. Save the Edited Document**  
 Запишите обновлённую презентацию в выходной поток:
 
 ```java
 editor.save(afterEdit, outputStream, saveOptions);
 ```
 
-**4. Запишите в файл**  
+**4. Write to File**  
 Сохраните поток на диск:
 
 ```java
@@ -231,52 +238,63 @@ try (FileOutputStream outputFile = new FileOutputStream(outputPath)) {
 }
 ```
 
-**Tip:** После сохранения откройте файл в PowerPoint, чтобы убедиться, что макрос‑включённый формат работает корректно.
+**Tip:** После сохранения вы можете открыть файл в PowerPoint, чтобы убедиться, что формат с поддержкой макросов работает корректно.
 
-## Практические применения
+## Replace Text in PPTX Slides
 
-API GroupDocs.Editor Java проявляет себя в реальных сценариях, таких как:
+Фрагмент выше (`replace text pptx`) демонстрирует простой способ заменить любую строку в HTML‑разметке слайда. Для более сложных сценариев — например, обновления плейсхолдеров на нескольких слайдах — можно пройтись по каждому `EditableDocument` и применить ту же логику `replace`.
 
-- **Корпоративное обучение:** Быстрое обновление наборов слайдов с новыми политиками.  
-- **Маркетинговые кампании:** Генерация презентаций с макросами для интерактивных демонстраций.  
-- **Образование:** Автоматизация создания лекционных слайдов, включающих VBA‑макросы для викторин.
+## Bulk Convert PPTX Files
 
-## Соображения по производительности
+Если вам нужно **bulk convert pptx** файлы в PPTM (или в другой формат), оберните шаги загрузки‑редактирования‑сохранения в цикл, который проходит по каталогу с PPTX‑файлами. Повторное использование одного экземпляра `Editor` уменьшает накладные расходы и ускоряет пакетную обработку.
 
-При работе с большими файлами PPTX:
+## Practical Applications
+
+GroupDocs.Editor Java API проявляет себя в реальных сценариях, таких как:
+
+- **Corporate training:** Быстрое обновление наборов слайдов с новыми политиками.  
+- **Marketing campaigns:** Генерация презентаций с поддержкой макросов для интерактивных демонстраций.  
+- **Education:** Автоматизация создания лекционных слайдов, включающих VBA‑macros для викторин.  
+
+## Performance Considerations
+
+При работе с большими PPTX‑файлами:
 
 - Увеличьте размер кучи JVM (`-Xmx2g` или больше), чтобы избежать `OutOfMemoryError`.  
-- Переиспользуйте один экземпляр `Editor` для пакетной обработки, чтобы снизить накладные расходы.  
-- Держите библиотеку в актуальном состоянии; новые версии содержат оптимизации производительности.
+- Переиспользуйте один и тот же экземпляр `Editor` для пакетной обработки, чтобы снизить накладные расходы.  
+- Держите библиотеку актуальной; новые релизы содержат оптимизации производительности.
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
-**Q: Можно ли конвертировать PPTX в PPTM без редактирования слайдов?**  
-A: Да. Загрузите PPTX с помощью `PresentationLoadOptions`, затем сохраните его через `PresentationSaveOptions` с форматом PPTM — промежуточные шаги редактирования не требуются.
+**Q: Can I convert a PPTX to PPTM without editing the slides?**  
+**A:** Да. Загрузите PPTX с помощью `PresentationLoadOptions`, затем сохраните его, используя `PresentationSaveOptions` с форматом PPTM — промежуточные шаги редактирования не требуются.
 
-**Q: Поддерживает ли библиотека другие форматы PowerPoint (PPT, PPSX и т.д.)?**  
-A: GroupDocs.Editor может загружать и сохранять форматы PPT, PPTX, PPSX и PPTM. При сохранении используйте соответствующее значение из перечисления `PresentationFormats`.
+**Q: Does the library support other PowerPoint formats (PPT, PPSX, etc.)?**  
+**A:** GroupDocs.Editor может загружать и сохранять форматы PPT, PPTX, PPSX и PPTM. При сохранении используйте соответствующий элемент перечисления `PresentationFormats`.
 
-**Q: Как обработать презентацию без пароля, но задать пароль для выходного файла?**  
-A: Укажите желаемый пароль только в `PresentationSaveOptions`; в `PresentationLoadOptions` его указывать не нужно.
+**Q: How do I handle a presentation that has no password but I still want to set one on the output?**  
+**A:** Укажите желаемый пароль только в `PresentationSaveOptions`; в `PresentationLoadOptions` его задавать не нужно.
 
-**Q: Можно ли редактировать несколько слайдов за одну операцию?**  
-A: Да. Итеративно проходите по номерам слайдов, получайте каждый `EditableDocument`, применяйте изменения и объединяйте результаты перед сохранением.
+**Q: Is it possible to edit multiple slides in one operation?**  
+**A:** Да. Пройдитесь по номерам слайдов, получите каждый `EditableDocument`, примените изменения и объедините результаты перед сохранением.
 
-**Q: Что делать, если нужно добавить новый слайд, а не редактировать существующий?**  
-A: Создайте новый слайд через API редактора (например, `PresentationEditOptions.setSlideNumber(-1)`, чтобы добавить в конец) и затем вставьте нужную разметку.
+**Q: What if I need to add a new slide rather than edit an existing one?**  
+**A:** Создайте новый слайд с помощью API редактора (например, задайте `PresentationEditOptions.setSlideNumber(-1)`, чтобы добавить в конец) и затем вставьте нужную разметку.
 
-## Заключение
+**Q: How can I perform a bulk convert pptx to pptm in a single service?**  
+**A:** Пройдитесь по исходному каталогу, загрузите каждый PPTX тем же экземпляром `Editor` и вызовите `save` с `PresentationSaveOptions(PresentationFormats.Pptm)`. Не забудьте своевременно закрывать потоки.
 
-Следуя этому руководству, вы теперь знаете, как **конвертировать PPTX в PPTM** и **редактировать PPTX Java** проекты с помощью GroupDocs.Editor. Вы можете загружать презентации, изменять отдельные слайды, заменять текст и сохранять результат в макрос‑включённый файл PPTM — все это программно и безопасно.
+## Conclusion
 
-**Следующие шаги:**  
-- Поэкспериментировать с добавлением VBA‑макросов в файл PPTM.  
-- Исследовать массовую конвертацию нескольких презентаций в одном Java‑сервисе.  
-- Ознакомиться с полной документацией GroupDocs.Editor для продвинутых возможностей, таких как работа с изображениями и пользовательским стилем.
+Следуя этому руководству, вы теперь знаете **how to edit pptx** файлы и **convert PPTX to PPTM** с помощью GroupDocs.Editor для Java. Вы можете загружать презентации, изменять отдельные слайды, заменять текст и сохранять результат как PPTM с поддержкой макросов — полностью программно и безопасно.
+
+**Next steps:**  
+- Поэкспериментировать с добавлением VBA‑macros в файл PPTM.  
+- Исследовать пакетную конвертацию нескольких презентаций в одном Java‑сервисе.  
+- Ознакомиться с полной документацией GroupDocs.Editor для продвинутых функций, таких как работа с изображениями и пользовательским стилем.
 
 ---
 
-**Последнее обновление:** 2026-01-13  
-**Тестировано с:** GroupDocs.Editor 25.3 for Java  
-**Автор:** GroupDocs
+**Last Updated:** 2026-03-17  
+**Tested With:** GroupDocs.Editor 25.3 for Java  
+**Author:** GroupDocs
