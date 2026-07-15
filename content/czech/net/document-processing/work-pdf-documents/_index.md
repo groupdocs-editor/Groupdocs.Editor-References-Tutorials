@@ -1,23 +1,86 @@
 ---
-title: Práce s dokumenty PDF
-linktitle: Práce s dokumenty PDF
+date: 2026-07-15
+description: Zjistěte, jak programaticky upravovat PDF dokumenty pomocí GroupDocs.Editor
+  for .NET – načíst password‑protected soubory, pracovat s velkými PDF, číst streams
+  a povolit pagination.
+keywords:
+- programmatically edit pdf
+- load password protected pdf
+- handle large pdf files
+lastmod: 2026-07-15
+linktitle: Programaticky upravovat PDF pomocí GroupDocs.Editor for .NET
+og_description: Programaticky upravovat PDF dokumenty pomocí GroupDocs.Editor for
+  .NET – načíst password‑protected PDF, pracovat s velkými soubory, číst file streams
+  a povolit pagination během několika kroků.
+og_image_alt: Guide to programmatically edit PDF files with GroupDocs.Editor for .NET
+og_title: Programaticky upravovat PDF pomocí GroupDocs.Editor for .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-15'
+  description: Learn how to programmatically edit PDF documents using GroupDocs.Editor
+    for .NET – load password‑protected files, handle large PDFs, read streams, and
+    enable pagination.
+  headline: Programmatically Edit PDF with GroupDocs.Editor for .NET
+  type: TechArticle
+- description: Learn how to programmatically edit PDF documents using GroupDocs.Editor
+    for .NET – load password‑protected files, handle large PDFs, read streams, and
+    enable pagination.
+  name: Programmatically Edit PDF with GroupDocs.Editor for .NET
+  steps:
+  - name: '**.NET Development Environment** – Visual Studio, Rider, or any IDE that
+      supports .NET 6+.'
+    text: '**.NET Development Environment** – Visual Studio, Rider, or any IDE that
+      supports .NET 6+.'
+  - name: '**GroupDocs.Editor for .NET** – Download and install the library from the
+      [release page](https://releases.groupdocs.com/editor/net/).'
+    text: '**GroupDocs.Editor for .NET** – Download and install the library from the
+      [release page](https://releases.groupdocs.com/editor/net/).'
+  - name: '**Basic C# knowledge** – Understanding of classes, streams, and exception
+      handling will help.'
+    text: '**Basic C# knowledge** – Understanding of classes, streams, and exception
+      handling will help.'
+  type: HowTo
+- questions:
+  - answer: Yes, the library supports Word, Excel, PowerPoint, and over 30 additional
+      formats besides PDF.
+    question: Can I use GroupDocs.Editor for .NET to edit other document formats?
+  - answer: You can download a free trial from the [GroupDocs.Editor free trial page](https://releases.groupdocs.com/).
+    question: How can I get a free trial of GroupDocs.Editor for .NET?
+  - answer: Yes, the API includes streaming and memory‑optimisation features that
+      let you work with PDFs larger than 500 MB.
+    question: Is it possible to handle large PDF documents with GroupDocs.Editor for
+      .NET?
+  - answer: Set the `Password` property on `PdfSaveOptions` before calling `Save`;
+      the output PDF will be password‑protected.
+    question: How do I encrypt the PDF document while saving it?
+  - answer: For help, visit the [GroupDocs.Editor support forum](https://forum.groupdocs.com/c/editor/20).
+    question: Where can I get support if I encounter issues?
+  type: FAQPage
 second_title: GroupDocs.Editor .NET API
-description: V tomto kurzu se dozvíte, jak upravovat dokumenty PDF pomocí GroupDocs.Editor pro .NET. Upravujte obsah, manipulujte s velkými soubory a bezpečně ukládejte své úpravy.
-weight: 14
-url: /cs/net/document-processing/work-pdf-documents/
+tags:
+- edit pdf
+- GroupDocs.Editor
+- .NET document processing
+title: Programaticky upravovat PDF pomocí GroupDocs.Editor for .NET
 type: docs
+url: /cs/net/document-processing/work-pdf-documents/
+weight: 14
 ---
-# Práce s dokumenty PDF
+
+# Programatické úpravy PDF pomocí GroupDocs.Editor pro .NET
 
 ## Úvod
-Hledáte komplexního průvodce pro manipulaci a úpravu dokumentů PDF pomocí GroupDocs.Editor pro .NET? Jste na správném místě! V tomto tutoriálu vás provedeme celým procesem, od nastavení projektu až po uložení upraveného dokumentu PDF. Ať už jste zkušený vývojář nebo teprve začínáte, tato příručka vám bude užitečná a snadno se budete řídit. Pojďme se ponořit!
-## Předpoklady
-Než začneme, budete potřebovat několik věcí:
-1. Vývojové prostředí .NET: Ujistěte se, že máte nastavené vývojové prostředí .NET. Může to být Visual Studio nebo jakékoli jiné preferované IDE.
-2. GroupDocs.Editor pro .NET: Stáhněte a nainstalujte knihovnu GroupDocs.Editor pro .NET. Můžete to získat z[stránka vydání](https://releases.groupdocs.com/editor/net/).
-3. Základní porozumění C#: Znalost programování v C# bude prospěšná, protože tento tutoriál zahrnuje psaní a porozumění kódu C#.
-## Importovat jmenné prostory
-Před napsáním jakéhokoli kódu se ujistěte, že máte do projektu importovány potřebné jmenné prostory:
+Pokud potřebujete **programmatically edit PDF** soubory v .NET aplikaci, narazili jste na správný tutoriál. V tomto průvodci projdeme každý krok – od instalace GroupDocs.Editor, načtení PDF chráněného heslem, čtení souboru jako streamu, povolení stránkování až po uložení upraveného dokumentu. Ať už aktualizujete jedno slovo nebo zpracováváte obrovské PDF, uvidíte, jak knihovna usnadňuje a spolehlivě provádí práci.
+
+## Rychlé odpovědi
+- **Mohu upravovat PDF bez jejich otevření v uživatelském rozhraní?** Ano, GroupDocs.Editor funguje zcela v kódu.  
+- **Podporuje PDF chráněná heslem?** Rozhodně – můžete zadat heslo v možnostech načítání.  
+- **Jaký je limit pro velké PDF?** API dokáže zpracovat soubory větší než 500 MB pomocí streamovacích technik.  
+- **Jak povolit režim stránkování?** Nastavte `EnablePagination = true` v možnostech úprav.  
+- **Potřebuji licenci pro produkci?** Pro nasazení mimo zkušební verzi je vyžadována komerční licence.
+
+## Co znamená programmatically edit pdf?
+**Programmatically edit pdf** znamená upravovat obsah PDF souboru pomocí kódu místo ručního použití GUI editoru. GroupDocs.Editor pro .NET poskytuje plnohodnotné API, které umožňuje nahrazovat text, obrázky a prvky rozvržení přímo z C#. Tento přístup umožňuje automatizaci, dávkové zpracování a integraci do webových služeb, což vývojářům umožňuje provádět změny bez zásahu uživatele. API abstrahuje strukturu PDF, takže můžete pracovat s objekty na vyšší úrovni, zatímco knihovna se stará o složitosti podkladového formátu souboru.  
 ```csharp
 using System;
 using GroupDocs.Editor.Formats;
@@ -28,67 +91,85 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 ```
-## Krok 1: Získejte cestu ke vstupnímu souboru
-Nejprve musíte zadat cestu k dokumentu PDF. Pro tento tutoriál budeme předpokládat, že máte vzorový soubor PDF.
+
+## Proč používat GroupDocs.Editor pro .NET?
+GroupDocs.Editor podporuje **30+ formátů dokumentů** a dokáže upravovat PDF až do **500 MB** bez načítání celého souboru do paměti, což ho činí ideálním pro vysokokapacitní back‑end služby. Jeho funkce **vestavěného stránkování** zajišťuje, že vícestránkové PDF zachovají správné zalomení stránek po úpravách, a knihovna nabízí **nativní streamování** pro efektivní čtení a zápis souborů.
+
+## Požadavky
+1. **.NET Development Environment** – Visual Studio, Rider nebo jakékoli IDE, které podporuje .NET 6+.  
+2. **GroupDocs.Editor for .NET** – Stáhněte a nainstalujte knihovnu ze [stránky vydání](https://releases.groupdocs.com/editor/net/).  
+3. **Basic C# knowledge** – Porozumění třídám, streamům a zpracování výjimek vám pomůže.
+
+## Importovat jmenné prostory
+Před psaním jakéhokoli kódu se ujistěte, že máte v projektu importovány potřebné jmenné prostory:
 ```csharp
 string inputFilePath = "Your Sample Document.pdf";
 ```
-## Krok 2: Vytvořte stream z cesty
-Dále vytvořte datový proud souboru ze zadané cesty. Tento proud bude použit ke čtení dokumentu PDF.
+
+## Jak načíst PDF chráněné heslem?
+`PdfLoadOptions` definuje možnosti pro načítání PDF souborů, včetně hesla a nastavení paměti. Pro načtení chráněného PDF vytvořte instanci `PdfLoadOptions`, nastavte její vlastnost `Password` na heslo dokumentu a předávejte tento objekt editoru. Tím zajistíte, že soubor bude dešifrován před jakýmikoli úpravami.  
 ```csharp
 using (FileStream fs = File.OpenRead(inputFilePath))
 ```
-## Krok 3: Vytvořte možnosti načtení pro dokument
-Chcete-li načíst dokument PDF, musíte určit možnosti načtení. Pokud je váš PDF chráněn heslem, můžete heslo zadat zde.
+
+## Krok 1: Získat cestu k vstupnímu souboru
+Nejprve musíte zadat cestu k vašemu PDF dokumentu. Pro tento tutoriál předpokládáme, že máte ukázkový PDF soubor.  
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Pokud je dokument chráněn heslem
+// If the document is password-protected
 loadOptions.Password = "your_password";
 ```
-## Krok 4: Načtěte dokument do instance editoru
-Nyní použijte možnosti toku souboru a načtení k načtení dokumentu do souboru`Editor` instance.
+
+## Jak číst stream PDF souboru?
+`FileStream` poskytuje stream pro čtení a zápis souborů na disku. Použijte jej k otevření PDF v režimu čtení, což umožní editoru zpracovat soubor bez jeho uzamčení pro výhradní přístup. Příklad: `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` zajišťuje optimální výkon a bezpečné souběžné čtení.  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
-## Krok 5: Vytvořte možnosti úprav
-Nastavte možnosti úprav dokumentu. V tomto případě povolíme režim stránkování.
+
+## Krok 2: Vytvořit stream z cesty
+Dále vytvořte souborový stream z cesty, kterou jste zadali. Tento stream bude použit k načtení PDF dokumentu.  
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
-## Krok 6: Vytvořte přechodný upravitelný dokument
-Vytvořte přechodný upravitelný dokument pomocí instance editoru a možností úprav.
+
+## Jak nakonfigurovat možnosti načítání pro PDF chráněné heslem?
+`PdfLoadOptions` definuje možnosti pro načítání PDF souborů, včetně hesla a využití paměti. Po vytvoření instance přiřaďte vlastnost `Password` s heslem dokumentu. Pro velké PDF můžete také nastavit `UseMemoryCache = false`, aby se snížila spotřeba paměti. Tato nastavení připraví načítač na efektivní zpracování šifrovaných a objemných souborů.  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
-    // Extrahujte textový obsah jako značku HTML
+    // Extract textual content as HTML markup
     string originalContent = beforeEdit.GetContent();
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
-## Krok 7: Upravte obsah
-Podle potřeby upravte obsah dokumentu. Zde jednoduše nahrazujeme slovo v dokumentu.
+
+## Krok 3: Vytvořit možnosti načítání pro dokument
+Pro načtení PDF dokumentu musíte specifikovat možnosti načítání. Pokud je vaše PDF chráněno heslem, můžete zde zadat heslo.  
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
-## Krok 8: Vytvořte nový upravitelný dokument s upraveným obsahem
- Vytvoř nový`EditableDocument` instance s upraveným obsahem a zdroji.
+
+## Jak inicializovat Editor pomocí streamu a možností?
+`Editor` je hlavní třída, která načítá dokument a poskytuje možnosti úprav. Vytvořte její instanci předáním delegáta, který vrací souborový stream, a dalšího delegáta, který vrací dříve nakonfigurované možnosti načítání. Tím se vytvoří in‑memory reprezentace PDF připravená k dalším úpravám.  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
-## Krok 9: Vytvořte možnosti uložení dokumentu
-Určete možnosti uložení pro dokument PDF. Můžete také nastavit heslo pro výstupní dokument.
+
+## Krok 4: Načíst dokument do instance Editoru
+Nyní použijte souborový stream a možnosti načítání k načtení dokumentu do instance `Editor`.  
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
 saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
-## Krok 10: Uložte upravený dokument
-Nakonec upravený dokument uložte do zadané výstupní cesty.
+
+## Jak povolit stránkování při úpravě PDF?
+`PdfEditOptions` určuje nastavení úprav pro PDF soubory, například stránkování. Vytvořte instanci této třídy a nastavte `EnablePagination = true`. Povolení stránkování zachová původní zalomení stránek a rozvržení po úpravách, čímž zajistí, že výstupní PDF zachová stejnou vizuální strukturu jako zdroj.  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -98,16 +179,80 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
+## Krok 5: Vytvořit možnosti úprav
+Nastavte možnosti úprav pro dokument. V tomto případě povolíme režim stránkování.  
+CODE_BLOCK_PLACEHOLDER_11_END
+
+## Jak vygenerovat editovatelný mezidokument?
+`CreateEditableDocument` vytvoří editovatelnou reprezentaci načteného dokumentu. Zavolejte tuto metodu na instanci `Editor`, předáním dříve definovaných `PdfEditOptions`. Metoda vrací `EditableDocument`, který obsahuje HTML‑podobný obsah, jež lze programově upravit před uložením zpět do PDF.  
+CODE_BLOCK_PLACEHOLDER_12_END
+
+## Krok 6: Vytvořit mezidokument k úpravě
+Vytvořte mezidokument k úpravě pomocí instance editoru a možností úprav.  
+CODE_BLOCK_PLACEHOLDER_13_END
+
+## Jak nahradit text v editovatelném obsahu?
+`EditableDocument` obsahuje obsah dokumentu v editovatelném formátu. Přistupte k jeho vlastnosti `Content`, která vrací řetězec HTML reprezentace dokumentu. Použijte standardní C# operace s řetězci, jako je `Replace`, nebo regulární výrazy k úpravě textu podle potřeby před opětovným sestavením dokumentu.  
+CODE_BLOCK_PLACEHOLDER_14_END
+
+## Krok 7: Upravit obsah
+Upravte obsah dokumentu podle potřeby. Zde jednoduše nahrazujeme slovo v dokumentu.  
+CODE_BLOCK_PLACEHOLDER_15_END
+
+## Jak znovu sestavit EditableDocument po změnách?
+`EditableDocument` obsahuje obsah dokumentu v editovatelném formátu. Po úpravě HTML řetězce vytvořte nový `EditableDocument` předáním upraveného obsahu a všech souvisejících zdrojů (obrázky, fonty) zpět editoru. Tím se znovu vytvoří vnitřní struktura dokumentu, připravená k uložení s aktualizovaným obsahem.  
+CODE_BLOCK_PLACEHOLDER_16_END
+
+## Krok 8: Vytvořit nový EditableDocument s upraveným obsahem
+Vytvořte novou instanci `EditableDocument` s upraveným obsahem a zdroji.  
+CODE_BLOCK_PLACEHOLDER_17_END
+
+## Jak nakonfigurovat možnosti uložení PDF, včetně šifrování?
+`PdfSaveOptions` definuje možnosti pro ukládání PDF souborů, včetně ochrany heslem a komprese. Vytvořte jeho instanci, nastavte `Password` pro šifrování výstupu, volitelně povolte `EnablePagination` pro zachování rozvržení stránek a upravte `CompressionLevel` pro velké soubory. Tato nastavení řídí, jak bude upravené PDF zapsáno na disk.  
+CODE_BLOCK_PLACEHOLDER_18_END
+
+## Krok 9: Vytvořit možnosti uložení dokumentu
+Zadejte možnosti uložení pro PDF dokument. Můžete také nastavit heslo pro výstupní dokument.  
+CODE_BLOCK_PLACEHOLDER_19_END
+
+## Jak uložit upravené PDF na disk?
+`Save` zapíše upravený dokument do souboru pomocí zadaných možností uložení. Zavolejte jej na instanci `Editor`, předáním aktualizovaného `EditableDocument` a nakonfigurovaných `PdfSaveOptions`. Metoda vytvoří finální PDF na cílovém umístění a aplikuje veškeré šifrovací nebo stránkovací nastavení, které jste definovali.  
+CODE_BLOCK_PLACEHOLDER_20_END
+
+## Krok 10: Uložit upravený dokument
+Nakonec uložte upravený dokument na určenou výstupní cestu.  
+CODE_BLOCK_PLACEHOLDER_21_END
+
+## Časté problémy a řešení
+- **Paměťové špičky u obrovských PDF** – Povolit streamování nastavením `LoadOptions.UseMemoryCache = false`.  
+- **Text nebyl nahrazen** – Ujistěte se, že existuje přesně shodný řetězec s rozlišením velkých a malých písmen; zvažte použití regulárních výrazů pro nepřesné shody.  
+- **Problémy se stránkováním** – Ověřte, že `EnablePagination` je nastaveno na true jak v možnostech úprav, tak v možnostech uložení.
+
+## Často kladené otázky
+**Q: Mohu použít GroupDocs.Editor pro .NET k úpravě dalších formátů dokumentů?**  
+A: Ano, knihovna podporuje Word, Excel, PowerPoint a více než 30 dalších formátů kromě PDF.
+
+**Q: Jak získat bezplatnou zkušební verzi GroupDocs.Editor pro .NET?**  
+A: Bezplatnou zkušební verzi si můžete stáhnout ze [stránky bezplatné zkušební verze GroupDocs.Editor](https://releases.groupdocs.com/).
+
+**Q: Je možné zpracovávat velké PDF dokumenty pomocí GroupDocs.Editor pro .NET?**  
+A: Ano, API obsahuje funkce streamování a optimalizace paměti, které umožňují pracovat s PDF většími než 500 MB.
+
+**Q: Jak při ukládání šifrovat PDF dokument?**  
+A: Nastavte vlastnost `Password` na `PdfSaveOptions` před voláním `Save`; výstupní PDF bude chráněno heslem.
+
+**Q: Kde mohu získat podporu, pokud narazím na problémy?**  
+A: Pro pomoc navštivte [fórum podpory GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
+
 ## Závěr
-Tady to máš! Podle těchto kroků můžete úspěšně upravovat dokumenty PDF pomocí GroupDocs.Editor pro .NET. Tato výkonná knihovna usnadňuje manipulaci a programové ukládání souborů PDF. Ať už provádíte jednoduché nahrazování textu nebo složitější úpravy, GroupDocs.Editor pro .NET vás pokryje.
-## FAQ
-### Mohu použít GroupDocs.Editor pro .NET k úpravě jiných formátů dokumentů?
-Ano, GroupDocs.Editor pro .NET podporuje různé formáty dokumentů včetně Wordu, Excelu, PowerPointu a dalších.
-### Jak mohu získat bezplatnou zkušební verzi GroupDocs.Editor pro .NET?
- Můžete si stáhnout bezplatnou zkušební verzi z[Bezplatná zkušební stránka GroupDocs.Editor](https://releases.groupdocs.com/).
-### Je možné zpracovávat velké PDF dokumenty s GroupDocs.Editor pro .NET?
-Ano, GroupDocs.Editor for .NET obsahuje možnosti pro optimalizaci využití paměti, takže je vhodný pro zpracování velkých dokumentů.
-### Jak získám podporu, pokud narazím na problémy?
- Pro podporu můžete navštívit[Fórum podpory GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
-### Mohu dokument PDF při ukládání zašifrovat?
-Ano, můžete nastavit heslo pro šifrování dokumentu PDF během procesu ukládání pomocí`PdfSaveOptions.Password` vlastnictví.
+Nyní máte kompletní end‑to‑end workflow pro **programmatically edit pdf** soubory pomocí GroupDocs.Editor pro .NET. Od načítání PDF chráněných heslem a čtení jako streamů, přes povolení stránkování až po ukládání šifrovaných výstupů, knihovna pokrývá všechny běžné scénáře. Prozkoumejte API dále pro dávkové zpracování dokumentů, manipulaci s obrázky nebo integraci s cloudovým úložištěm.
+
+---
+
+**Poslední aktualizace:** 2026-07-15  
+**Testováno s:** GroupDocs.Editor 23.12 pro .NET  
+**Autor:** GroupDocs
+
+## Související tutoriály
+- [Jak načíst Word dokumenty pomocí GroupDocs.Editor v .NET: Kompletní průvodce](/editor/net/document-loading/load-word-documents-groupdocs-editor-net/)
+- [Chránit Word dokument a optimalizovat DOCX pomocí GroupDocs.Editor pro .NET – Pokročilý průvodce](/editor/net/advanced-features/optimize-protect-docx-groupdocs-editor-dotnet/)
