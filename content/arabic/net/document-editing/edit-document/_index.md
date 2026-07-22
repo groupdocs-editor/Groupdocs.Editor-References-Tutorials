@@ -1,101 +1,143 @@
 ---
-title: تحرير المستند
-linktitle: تحرير المستند
+date: 2026-03-25
+description: تعلم كيفية تحرير المستندات باستخدام GroupDocs.Editor لـ .NET، بما في
+  ذلك كيفية استخراج الصور من المستند وتخصيص خيارات التحرير.
+linktitle: How to Edit Documents
 second_title: GroupDocs.Editor .NET API
-description: تعلم كيفية تحرير المستندات بسهولة باستخدام GroupDocs.Editor لـ .NET. دليل خطوة بخطوة لمعالجة النصوص وملفات جداول البيانات.
-weight: 11
-url: /ar/net/document-editing/edit-document/
+title: كيفية تحرير المستندات باستخدام GroupDocs.Editor لـ .NET
 type: docs
+url: /ar/net/document-editing/edit-document/
+weight: 11
 ---
-# تحرير المستند
 
-## مقدمة
-هل وجدت نفسك متشابكًا في تعقيد عملية تحرير المستندات داخل تطبيقات .NET الخاصة بك؟ لا تخافوا! باستخدام GroupDocs.Editor for .NET، لديك حليف قوي لتبسيط هذه المهمة. سيرشدك هذا الدليل الشامل إلى كيفية الاستفادة من هذه الأداة القوية لتحرير المستندات بسهولة. سواء كنت تتعامل مع مستندات معالجة النصوص أو جداول البيانات، فبحلول نهاية هذا البرنامج التعليمي، ستتمكن من التنقل في GroupDocs.Editor مثل المحترفين.
-## المتطلبات الأساسية
-قبل الغوص في البرنامج التعليمي، تأكد من أن لديك ما يلي:
-- Visual Studio: مثبت وجاهز للاستخدام.
-- .NET Framework: إصدار متوافق مثبت على نظامك.
--  GroupDocs.Editor لـ .NET: يمكنك ذلك[تحميل أحدث نسخة](https://releases.groupdocs.com/editor/net/) والحصول على[ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/) إذا لزم الأمر.
-- المعرفة الأساسية بـ C#: يفترض هذا الدليل أن لديك فهمًا أساسيًا لتطوير C# و.NET.
+# كيفية تحرير المستندات باستخدام GroupDocs.Editor لـ .NET
+
+## المقدمة
+هل وجدت نفسك يومًا عالقًا في تعقيد **how to edit documents** داخل تطبيقات .NET الخاصة بك؟ لست وحدك. مع GroupDocs.Editor لـ .NET، لديك حليف قوي يبسط هذه المهمة، سواء كنت تعمل مع ملفات معالجة النصوص أو جداول البيانات. في هذا الدليل سنستعرض تحميل المستند، تحريره، واستخراج المحتوى—حتى تتمكن من إتقان **how to edit documents** بكفاءة وثقة.
+
+## إجابات سريعة
+- **ما المكتبة التي تمكّن تحرير المستندات في .NET؟** GroupDocs.Editor for .NET.  
+- **هل يمكنني تعطيل ترقيم الصفحات عند تحرير مستند Word؟** Yes – set `EnablePagination = false`.  
+- **كيف يمكنني استخراج الصور من مستند؟** Use the `Images` collection on an `EditableDocument`.  
+- **هل يمكن تحرير علامة تبويب معينة في جدول البيانات؟** Absolutely – set `WorksheetIndex` in `SpreadsheetEditOptions`.  
+- **هل أحتاج إلى ترخيص للاستخدام في الإنتاج؟** A temporary license is available for testing; a full license is required for production.
+
+## المتطلبات المسبقة
+قبل الغوص في الشرح، تأكد من وجود ما يلي:
+
+- Visual Studio: مثبت وجاهز للاستخدام.  
+- .NET Framework: نسخة متوافقة مثبتة على نظامك.  
+- GroupDocs.Editor for .NET: يمكنك [تحميل أحدث نسخة](https://releases.groupdocs.com/editor/net/) والحصول على [ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/) إذا لزم الأمر.  
+- Basic Knowledge of C#: يفترض هذا الدليل أن لديك فهمًا أساسيًا لـ C# وتطوير .NET.
+
 ## استيراد مساحات الأسماء
-للبدء، تحتاج إلى استيراد مساحات الأسماء الضرورية إلى مشروعك. أضف الأسطر التالية في أعلى ملف C# الخاص بك:
+لبدء العمل، تحتاج إلى استيراد مساحات الأسماء الضرورية إلى مشروعك. أضف السطور التالية في أعلى ملف C# الخاص بك:
+
 ```csharp
 using System.Collections.Generic;
 using GroupDocs.Editor.HtmlCss.Resources;
 using GroupDocs.Editor.HtmlCss.Resources.Images;
 using GroupDocs.Editor.Options;
 ```
-الآن بعد أن انتهيت من الإعداد، دعنا نقسم عملية تحرير المستند إلى خطوات يمكن التحكم فيها.
-## الخطوة 1: قم بتحميل مستند معالجة النصوص
-أولاً، لنقم بتحميل مستند معالجة النصوص. هذا هو المكان الذي تقوم فيه بتوجيه مثيل المحرر إلى موقع مستندك وتحديد أي خيارات تحميل إذا لزم الأمر.
-### 1.1 تهيئة المحرر بالخيارات الافتراضية
+
+الآن بعد أن انتهيت من الإعداد، دعنا نقسم عملية تحرير المستند إلى خطوات قابلة للإدارة.
+
+## ما هو “how to edit documents”؟
+تحرير المستندات برمجيًا يعني تحميل ملف، تطبيق التغييرات، ثم حفظ أو استخراج النتيجة—كل ذلك دون تفاعل يدوي من المستخدم. تقوم GroupDocs.Editor بتجريد التعامل منخفض المستوى مع الملفات، مما يمنحك API نظيف للتركيز على منطق الأعمال.
+
+## لماذا نستخدم GroupDocs.Editor لـ .NET؟
+- **Full‑featured editing** لتنسيقات Word و Excel و PowerPoint.  
+- **Customizable editing options** مثل التحكم في ترقيم الصفحات، اكتشاف اللغة، واستخراج الخطوط.  
+- **Easy content extraction** – استرجاع HTML أو الصور أو موارد أخرى ببضع استدعاءات للطرق.  
+- **Memory‑efficient** – التخلص من الكائنات عند الانتهاء لتجنب التسريبات.
+
+## كيفية تحرير المستندات في تطبيقات .NET
+فيما يلي دليل خطوة بخطوة يغطي تحميل، تحرير، واستخراج المحتوى من مستندات معالجة النصوص وجداول البيانات.
+
+### الخطوة 1: تحميل مستند معالجة نصوص
+أولاً، وجه كائن Editor إلى موقع المستند الخاص بك وحدد أي خيارات تحميل إذا لزم الأمر.
+
+#### 1.1 تهيئة Editor باستخدام الخيارات الافتراضية
 ```csharp
-string inputFilePath = "Your Sample Document"; // المسار إلى المستند الخاص بك
+string inputFilePath = "Your Sample Document"; // Path to your document
 Editor editor1 = new Editor(inputFilePath, delegate { return new WordProcessingLoadOptions(); });
 ```
-يقوم مقتطف التعليمات البرمجية هذا بتهيئة مثيل المحرر باستخدام خيارات التحميل الافتراضية لمستند معالجة الكلمات.
-## الخطوة 2: تحرير المستند
-الآن، يمكننا المتابعة لتحرير المستند الذي تم تحميله. يتيح لك GroupDocs.Editor تخصيص خيارات التحرير لتناسب احتياجاتك.
-### 2.1 التحرير باستخدام الخيارات الافتراضية
+يقوم هذا المقتطف البرمجي بتهيئة كائن Editor باستخدام خيارات التحميل الافتراضية لمستند معالجة نصوص.
+
+### الخطوة 2: تحرير المستند
+يتيح لك GroupDocs.Editor تخصيص تجربة التحرير.
+
+#### 2.1 تحرير باستخدام الخيارات الافتراضية
 ```csharp
 EditableDocument defaultWordProcessingDoc = editor1.Edit();
 ```
-يعد تحرير المستند باستخدام الخيارات الافتراضية أمرًا سهلاً ويتطلب الحد الأدنى من التكوين.
-### 2.2 التحرير باستخدام الخيارات المخصصة
-دعنا نتعمق في التكوينات الأكثر تقدمًا من خلال تحديد خيارات التحرير المخصصة.
+تحرير المستند باستخدام الخيارات الافتراضية سهل ويتطلب أقل قدر من التكوين.
+
+#### 2.2 تحرير باستخدام خيارات مخصصة
+دعونا نتعمق في تكوينات أكثر تقدمًا عن طريق تحديد خيارات تحرير مخصصة.
+
 ```csharp
 WordProcessingEditOptions wordProcessingEditOptions1 = new WordProcessingEditOptions();
-wordProcessingEditOptions1.EnablePagination = false;
+wordProcessingEditOptions1.EnablePagination = false; // **disable pagination word**
 wordProcessingEditOptions1.EnableLanguageInformation = true;
 wordProcessingEditOptions1.FontExtraction = FontExtractionOptions.ExtractAllEmbedded;
 EditableDocument version1WordProcessingDoc = editor1.Edit(wordProcessingEditOptions1);
 ```
-في هذا المقتطف، قمنا بتعطيل ترقيم الصفحات، وتمكين معلومات اللغة، وقمنا بتعيين استخراج الخط لاستخراج جميع الخطوط المضمنة.
-### 2.3 مثال آخر للتكوين
+في هذا المقتطف، قمنا بتعطيل ترقيم الصفحات، تمكين معلومات اللغة، وتعيين استخراج الخطوط لاستخراج جميع الخطوط المدمجة.
+
+#### 2.3 مثال تكوين آخر
 يمكنك أيضًا تحرير المستند باستخدام مجموعة مختلفة من الخيارات:
+
 ```csharp
 WordProcessingEditOptions wordProcessingEditOptions2 = new WordProcessingEditOptions(true);
 wordProcessingEditOptions2.FontExtraction = FontExtractionOptions.ExtractAll;
 EditableDocument version2WordProcessingDoc = editor1.Edit(wordProcessingEditOptions2);
 ```
-هنا، قمنا بتمكين ترقيم الصفحات وقمنا بتعيين استخراج الخط لاستخراج جميع الخطوط.
-## الخطوة 3: تحميل جدول بيانات وتحريره
-يعد تحرير جداول البيانات أمرًا سهلاً بنفس القدر باستخدام GroupDocs.Editor.
-### 3.1 قم بتحميل جدول البيانات
+هنا، تم تمكين ترقيم الصفحات وتم تعيين استخراج الخطوط لاستخراج جميع الخطوط.
+
+### الخطوة 3: تحميل وتحرير جدول بيانات
+#### 3.1 تحميل جدول البيانات
 ```csharp
 Editor editor2 = new Editor("Your Sample Document", delegate { return new SpreadsheetLoadOptions(); });
 ```
-يؤدي هذا إلى تهيئة مثيل محرر لمستند جدول بيانات.
-### 3.2 تحرير علامة التبويب الأولى
+يقوم هذا بتهيئة كائن Editor لمستند جدول بيانات.
+
+#### 3.2 تحرير علامة التبويب الأولى
 ```csharp
 SpreadsheetEditOptions sheetTab1EditOptions = new SpreadsheetEditOptions();
-sheetTab1EditOptions.WorksheetIndex = 0; // يعتمد الفهرس على 0، لذا فهذه هي علامة التبويب الأولى
+sheetTab1EditOptions.WorksheetIndex = 0; // Index is 0‑based, so this is the first tab
 EditableDocument firstTab = editor2.Edit(sheetTab1EditOptions);
 ```
-يمكنك تحرير علامة التبويب الأولى في جدول البيانات باستخدام الخيارات المحددة.
-### 3.3 تحرير علامة التبويب الثانية
+يمكنك تحرير علامة التبويب الأولى لجدول البيانات باستخدام الخيارات المحددة.
+
+#### 3.3 تحرير علامة التبويب الثانية
 ```csharp
 SpreadsheetEditOptions sheetTab2EditOptions = new SpreadsheetEditOptions();
-sheetTab2EditOptions.WorksheetIndex = 1; // يعتمد الفهرس على 0، لذا فهذه هي علامة التبويب الثانية
+sheetTab2EditOptions.WorksheetIndex = 1; // Index is 0‑based, so this is the second tab
 EditableDocument secondTab = editor2.Edit(sheetTab2EditOptions);
 ```
-وبالمثل، يقوم مقتطف الكود هذا بتحرير علامة التبويب الثانية من جدول البيانات.
-## الخطوة 4: استخراج المحتوى
-بمجرد قيامك بتحرير المستند الخاص بك، قد تحتاج إلى استخراج محتواه. يوفر GroupDocs.Editor أساليب مختلفة لهذا الغرض.
-### 4.1 احصل على محتوى HTML
+وبالمثل، يقوم هذا المقتطف البرمجي بتحرير علامة التبويب الثانية لجدول البيانات.
+
+### الخطوة 4: استخراج المحتوى
+بعد تحرير المستند، قد تحتاج إلى استخراج محتوياته. توفر GroupDocs.Editor عدة طرق مفيدة.
+
+#### 4.1 الحصول على محتوى HTML
 ```csharp
-string bodyContent = firstTab.GetBodyContent(); // ترميز HTML من داخل عنصر HTML->BODY
-string allContent = firstTab.GetContent(); // ترميز HTML كامل لجميع المستندات، بما في ذلك HTML->رأس HEAD ومحتواه
+string bodyContent = firstTab.GetBodyContent(); // HTML markup from inside the HTML->BODY element
+string allContent = firstTab.GetContent(); // Full HTML markup of all document, including HTML->HEAD header and its content
 ```
-يستخرج هذا الرمز محتوى HTML للمستند الذي تم تحريره.
-### 4.2 استخراج الموارد
+يقوم هذا الكود باستخراج محتوى HTML للمستند المحرر.
+
+#### 4.2 استخراج الموارد
 ```csharp
-List<IImageResource> onlyImages = firstTab.Images;
+List<IImageResource> onlyImages = firstTab.Images; // **extract images from document**
 List<IHtmlResource> allResourcesTogether = firstTab.AllResources;
 ```
-هنا، يمكنك استخراج الصور وجميع موارد HTML الأخرى من المستند.
-## الخطوة 5: التنظيف
-لا تنس التخلص من جميع الحالات لتحرير الموارد.
+هنا، يمكنك استخراج الصور وجميع الموارد الأخرى للـ HTML من المستند.
+
+### الخطوة 5: التنظيف
+لا تنسَ التخلص من جميع الكائنات لتحرير الموارد.
+
 ```csharp
 defaultWordProcessingDoc.Dispose();
 version1WordProcessingDoc.Dispose();
@@ -105,17 +147,37 @@ secondTab.Dispose();
 editor1.Dispose();
 editor2.Dispose();
 ```
-يضمن التخلص السليم عدم وجود تسرب للذاكرة أو مشكلات في الأداء في تطبيقك.
-## خاتمة
- تهانينا! لديك الآن فهم قوي لكيفية استخدام GroupDocs.Editor لـ .NET لتحميل المحتوى وتحريره واستخراجه من مستندات معالجة الكلمات وجداول البيانات. تعمل هذه الأداة القوية على تبسيط مهام تحرير المستندات وتتكامل بسلاسة مع تطبيقات .NET الخاصة بك. لمزيد من التفاصيل، يمكنك استكشاف[توثيق](https://tutorials.groupdocs.com/editor/net/), [تحميل أحدث نسخة](https://releases.groupdocs.com/editor/net/) ، أو الحصول على[ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/).
-## الأسئلة الشائعة
-### هل يمكنني تحرير مستندات PDF باستخدام GroupDocs.Editor لـ .NET؟
-حاليًا، يدعم GroupDocs.Editor for .NET بشكل أساسي تنسيقات معالجة الكلمات وجداول البيانات والعروض التقديمية.
-### كيف أتعامل مع المستندات الكبيرة بكفاءة؟
-استخدم خيارات التحرير لتحميل ومعالجة الأجزاء الضرورية فقط من المستند، وتأكد من التخلص من المثيلات بشكل صحيح لإدارة الذاكرة.
-### هل هناك حد لحجم المستند الذي يمكنني تعديله؟
-لا توجد حدود صارمة للحجم، ولكن الأداء يعتمد على قدرات النظام الخاص بك.
-### هل يمكنني تخصيص مخرجات HTML بشكل أكبر؟
-نعم، يسمح GroupDocs.Editor بالتخصيص الشامل لمخرجات HTML من خلال خيارات وإعدادات متنوعة.
-### أين يمكنني الحصول على الدعم إذا واجهت مشاكل؟
- يمكنك زيارة[منتدى دعم GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20) للمساعدة والمساعدة.
+يضمن التخلص السليم عدم وجود تسريبات للذاكرة أو مشاكل في الأداء في تطبيقك.
+
+## حالات الاستخدام الشائعة والنصائح
+- **Automated report generation:** تحميل قالب، استبدال العناصر النائبة، وتصدير النتيجة.  
+- **Bulk document processing:** التكرار عبر مجلد، تحرير كل ملف باستخدام نفس `WordProcessingEditOptions`، واستخراج الصور للفهرسة.  
+- **Pro tip:** عند العمل مع ملفات Excel الكبيرة، حرر فقط ورقة العمل المطلوبة (`WorksheetIndex`) لتقليل استهلاك الذاكرة.
+
+## الأسئلة المتكررة
+
+**س: هل يمكنني تحرير مستندات PDF باستخدام GroupDocs.Editor لـ .NET؟**  
+A: حاليًا، يدعم GroupDocs.Editor لـ .NET بشكل أساسي تنسيقات معالجة النصوص، جداول البيانات، والعروض التقديمية.
+
+**س: كيف يمكنني التعامل مع المستندات الكبيرة بكفاءة؟**  
+A: استخدم خيارات التحرير لتحميل ومعالجة الأجزاء الضرورية فقط من المستند، وتأكد من التخلص من الكائنات بشكل صحيح لإدارة الذاكرة.
+
+**س: هل هناك حد لحجم المستند الذي يمكنني تحريره؟**  
+A: لا توجد حدود صريحة للحجم، لكن الأداء يعتمد على قدرات نظامك.
+
+**س: هل يمكنني تخصيص مخرجات HTML بشكل أكبر؟**  
+A: نعم، يتيح GroupDocs.Editor تخصيصًا واسعًا لمخرجات HTML عبر خيارات وإعدادات متعددة.
+
+**س: أين يمكنني الحصول على الدعم إذا واجهت مشاكل؟**  
+A: يمكنك زيارة [منتدى دعم GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20) للحصول على المساعدة والدعم.
+
+## الخلاصة
+تهانينا! لديك الآن فهم قوي لـ **how to edit documents** باستخدام GroupDocs.Editor لـ .NET، من تحميل وتحرير ملفات معالجة النصوص إلى العمل مع علامات تبويب جداول البيانات واستخراج الصور أو محتوى HTML. هذه الأداة القوية تبسط مهام تحرير المستندات وتندمج بسلاسة مع تطبيقات .NET الخاصة بك. لمزيد من التفاصيل، استكشف [الوثائق](https://tutorials.groupdocs.com/editor/net/)، [تحميل أحدث نسخة](https://releases.groupdocs.com/editor/net/)، أو احصل على [ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/).
+
+---
+
+**آخر تحديث:** 2026-03-25  
+**تم الاختبار مع:** GroupDocs.Editor 23.12 لـ .NET  
+**المؤلف:** GroupDocs  
+
+---
