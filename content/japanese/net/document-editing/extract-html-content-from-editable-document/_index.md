@@ -1,71 +1,118 @@
 ---
-title: 編集可能なドキュメントから HTML コンテンツを抽出する
-linktitle: 編集可能なドキュメントから HTML コンテンツを抽出する
+date: 2026-03-28
+description: GroupDocs.Editor for .NET を使用して C# で HTML コンテンツを取得する方法を学びましょう – ドキュメントから
+  HTML を抽出し、Word を HTML に変換し、.NET で Word 文書を編集します。
+linktitle: Extract HTML Content from Editable Document
 second_title: GroupDocs.Editor .NET API
-description: GroupDocs.Editor for .NET を使用して、ドキュメントから HTML コンテンツを簡単に抽出できます。シームレスな統合とドキュメント管理については、詳細なガイドに従ってください。
-weight: 12
-url: /ja/net/document-editing/extract-html-content-from-editable-document/
+title: HTML コンテンツ取得 C# – 編集可能なドキュメントから HTML を抽出
 type: docs
+url: /ja/net/document-editing/extract-html-content-from-editable-document/
+weight: 12
 ---
-# 編集可能なドキュメントから HTML コンテンツを抽出する
 
-## 導入
-今日のデジタル時代では、文書を効率的に管理および編集することは、企業にとっても個人にとっても重要です。GroupDocs.Editor for .NET は、さまざまな文書形式をシームレスに編集するための強力なソリューションを提供します。このガイドでは、GroupDocs.Editor for .NET を使用して編集可能な文書から HTML コンテンツを抽出するプロセスについて説明します。最後まで読めば、この機能を自分のプロジェクトに実装する方法が明確に理解できるようになります。
+# HTMLコンテンツを取得 C# – 編集可能なドキュメントからHTMLを抽出
+
+## はじめに
+Word、DOCX、またはその他の編集可能なファイルから **get HTML content C#** を取得する必要がある場合、GroupDocs.Editor for .NET を使用すれば簡単です。このチュートリアルでは、編集可能なドキュメントからHTMLを抽出する正確な手順を説明し、**convert Word to HTML** の方法を示し、**edit Word document .NET** アプリケーションが必要なときにこのアプローチが理想的である理由を解説します。最後まで読めば、数行のコードだけで自分のプロジェクトにHTML抽出を統合できるようになります。
+
+## クイック回答
+- **What does “get HTML content C#” mean?** C#コードを使用してドキュメントのHTML表現を取得するプロセスです。  
+- **Which library handles the conversion?** GroupDocs.Editor for .NET は、Word、DOCX、その他のフォーマットに対する組み込みサポートを提供します。  
+- **Do I need a license for production?** はい – 本番環境で使用するには商用ライセンスが必要ですが、無料トライアルが利用可能です。  
+- **Can I extract only a part of the document?** 全文のHTML文字列を取得し、必要な部分をスライスまたは解析することで、ドキュメントの一部だけを抽出できます。  
+- **Is this approach .NET‑compatible?** もちろんです – .NET Framework、.NET Core、.NET 5/6 で動作します。
+
+## “get HTML content C#” とは何ですか？
+Getting HTML content C# とは、C#コードを使用してドキュメント（例: .docx）を読み取り、その内容をHTML文字列として出力することを指します。これは、ウェブプレビュー、コンテンツ移行、またはHTMLのさらなる操作に便利です。
+
+## 編集可能なドキュメントからHTMLを抽出する理由
+- **Cross‑platform preview** – Officeファイルをブラウザで表示でき、Officeのインストールは不要です。  
+- **Content reuse** – テキストやスタイルをウェブページやメールテンプレートで再利用できます。  
+- **Simplified editing** – HTMLを編集し、必要に応じて元のフォーマットに変更を反映できます。  
+- **Integration** – 他の.NETサービス（例: PDF変換、検索インデックス作成）と組み合わせられます。
+
 ## 前提条件
-チュートリアルに進む前に、次の前提条件を満たしていることを確認してください。
-- Visual Studio または互換性のある .NET 開発環境
-- .NET Framework がマシンにインストールされている
-- GroupDocs.Editor for .NET ライブラリ
-- HTMLコンテンツを抽出するサンプルドキュメント
-- C#プログラミングの基礎知識
+- Visual Studio（または互換性のある.NET IDE）  
+- .NET Framework または .NET Core ランタイムがインストールされていること  
+- GroupDocs.Editor for .NET ライブラリがプロジェクトに追加されていること（NuGet 経由）  
+- HTMLを抽出するためのサンプルドキュメント（Word、DOCX など）  
+- 基本的な C# の知識  
+
 ## 名前空間のインポート
-開始するには、プロジェクトに必要な名前空間をインポートする必要があります。これらの名前空間は、GroupDocs.Editor for .NET を操作するために必要なクラスとメソッドを提供します。
+まず、GroupDocs.Editor クラスを利用できるように必要な名前空間をインポートします。
+
 ```csharp
 using System;
 using System.IO;
 using GroupDocs.Editor.Options;
 ```
-## ステップ 1: ドキュメントの FileStream を作成する
-最初のステップは、`FileStream` HTML コンテンツを抽出するドキュメントを開くオブジェクト。このストリームは、ドキュメントをエディターに読み込むために使用されます。
+
+## 編集可能なドキュメントから HTML コンテンツを取得 C# の方法
+以下は、**how to extract HTML** を示すステップバイステップのガイドです。これは本質的にドキュメントから **how to extract html** するのと同じです。同じフローで **convert docx to html** と **convert word to html** も実演します。
+
+### ステップ 1: ドキュメントの FileStream を作成する
+`FileStream` でソースファイルを開きます。このストリームはドキュメントのバイトをエディタに供給します。
+
 ```csharp
 using (FileStream fs = File.OpenRead("Your Sample Document"))
 {
-    //次のステップはここに記載されます
+    // Next steps will be placed here
 }
 ```
-## ステップ2: エディターを初期化する
-以内`using`の声明`FileStream`を初期化する必要があります`Editor`オブジェクト。`Editor`クラスはドキュメントの読み込みと編集を担当します。また、ドキュメントの種類に適した読み込みオプションも指定します。この例では、WordProcessing ドキュメントを操作しています。
+
+### ステップ 2: エディタを初期化する
+`using` ブロック内で `Editor` クラスのインスタンスを作成します。デリゲートがストリームを提供し、ロードオプションでエディタに処理するフォーマット（この場合は WordProcessing）を指示します。
+
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return new WordProcessingLoadOptions(); }))
 {
-    //次のステップはここに記載されます
+    // Next steps will be placed here
 }
 ```
-## ステップ3: ドキュメントを編集する
-さて、`Editor`ドキュメントを編集するためのオブジェクトを作成します。これには`EditableDocument`オブジェクトは、ドキュメントの編集可能なバージョンを表します。`Edit`方法の`Editor`ここでは、特定の編集オプションとともにクラスが使用されます。
+
+### ステップ 3: ドキュメントを編集する
+`Edit` メソッドを使用して `EditableDocument` を作成します。このオブジェクトは編集可能な状態のドキュメントを表し、HTML コンテンツへのアクセスを提供します。
+
 ```csharp
 using (EditableDocument document = editor.Edit(new WordProcessingEditOptions()))
 {
-    //次のステップはここに記載されます
+    // Next steps will be placed here
 }
 ```
-## ステップ4: HTMLコンテンツを抽出する
-最後に、`EditableDocument`オブジェクトが手元にあれば、HTMLコンテンツを抽出できます。`GetContent`方法の`EditableDocument`クラスは、ドキュメントのコンテンツを HTML 文字列として返します。デモの目的で、HTML コンテンツの最初の 200 文字を出力します。
+
+### ステップ 4: HTML コンテンツを抽出する
+最後に `EditableDocument` の `GetContent()` を呼び出します。このメソッドはドキュメント全体を HTML 文字列として返します。デモとして最初の 200 文字を出力します。
+
 ```csharp
 string htmlContent = document.GetContent();
 Console.WriteLine("HTML content of the input document (first 200 chars): {0}", htmlContent.Substring(0, 200));
 ```
 
-## 結論
-おめでとうございます! GroupDocs.Editor for .NET を使用して、編集可能なドキュメントから HTML コンテンツを正常に抽出できました。この強力なツールはさまざまなドキュメント形式を処理できるため、ドキュメント管理タスクに最適です。このガイドで説明されている手順に従うことで、ドキュメント編集機能を .NET アプリケーションに簡単に統合できます。
+## 一般的な問題と解決策
+| 問題 | 原因 | 対策 |
+|-------|--------|-----|
+| **Empty HTML output** | ロードオプションが間違っているか、サポートされていないファイルタイプです | 正しい `WordProcessingLoadOptions` または PDF、スプレッドシートなどに適したロードオプションを使用しているか確認してください。 |
+| **Encoding problems** | ドキュメントに非ASCII文字が含まれています | ソースファイルが UTF‑8 エンコードで保存されていることを確認してください。GroupDocs.Editor は Unicode を自動的に処理します。 |
+| **Performance slowdown on large files** | 大きなドキュメントはメモリを多く消費します | ドキュメントをチャンクに分割して処理するか、アプリケーションのメモリ上限を増やしてください。 |
+
 ## よくある質問
-### GroupDocs.Editor for .NET はどのような種類のドキュメントを処理できますか?
-GroupDocs.Editor for .NET は、ワードプロセッシング、スプレッドシート、プレゼンテーションなど、幅広いドキュメント形式をサポートしています。
-### GroupDocs.Editor for .NET の無料試用版はありますか?
-はい、無料トライアルは以下からダウンロードできます。[Webサイト](https://releases.groupdocs.com/).
-### GroupDocs.Editor for .NET の一時ライセンスを取得するにはどうすればよいですか?
-一時ライセンスを申請するには、[GroupDocs 購入ページ](https://purchase.groupdocs.com/temporary-license/).
-### GroupDocs.Editor for .NET のドキュメントはどこにありますか?
-包括的なドキュメントが利用可能[ここ](https://tutorials.groupdocs.com/editor/net/).
-### 問題が発生した場合、サポートを受けることはできますか?
-はい、サポートを受けることができます[GroupDocs サポートフォーラム](https://forum.groupdocs.com/c/editor/20).
+### GroupDocs.Editor for .NET が扱えるドキュメントの種類は？
+GroupDocs.Editor for .NET は、WordProcessing、Spreadsheet、Presentation など、幅広いドキュメント形式をサポートしています。
+
+### GroupDocs.Editor for .NET の無料トライアルは利用可能ですか？
+はい、[website](https://releases.groupdocs.com/) から無料トライアルをダウンロードできます。
+
+### GroupDocs.Editor for .NET の一時ライセンスはどう取得しますか？
+[GroupDocs purchase page](https://purchase.groupdocs.com/temporary-license/) から一時ライセンスをリクエストできます。
+
+### GroupDocs.Editor for .NET のドキュメントはどこで見つけられますか？
+包括的なドキュメントは[here](https://tutorials.groupdocs.com/editor/net/) で入手可能です。
+
+### 問題が発生した場合、サポートは受けられますか？
+はい、[GroupDocs support forum](https://forum.groupdocs.com/c/editor/20/) でサポートを受けられます。
+
+---
+
+**最終更新:** 2026-03-28  
+**テスト環境:** GroupDocs.Editor for .NET 23.12 (latest at time of writing)  
+**作者:** GroupDocs

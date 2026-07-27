@@ -1,71 +1,118 @@
 ---
-title: استخراج محتوى HTML من مستند قابل للتحرير
-linktitle: استخراج محتوى HTML من مستند قابل للتحرير
+date: 2026-03-28
+description: تعلم كيفية الحصول على محتوى HTML باستخدام C# وGroupDocs.Editor لـ .NET
+  – استخراج HTML من مستند، تحويل Word إلى HTML، وتحرير مستندات Word في .NET.
+linktitle: Extract HTML Content from Editable Document
 second_title: GroupDocs.Editor .NET API
-description: قم باستخراج محتوى HTML من المستندات بسهولة باستخدام GroupDocs.Editor لـ .NET. اتبع دليلنا التفصيلي للتكامل السلس وإدارة المستندات.
-weight: 12
-url: /ar/net/document-editing/extract-html-content-from-editable-document/
+title: الحصول على محتوى HTML في C# – استخراج HTML من مستند قابل للتحرير
 type: docs
+url: /ar/net/document-editing/extract-html-content-from-editable-document/
+weight: 12
 ---
-# استخراج محتوى HTML من مستند قابل للتحرير
 
-## مقدمة
-في العصر الرقمي الحالي، تعد إدارة المستندات وتحريرها بكفاءة أمرًا بالغ الأهمية للشركات والأفراد على حدٍ سواء. يقدم GroupDocs.Editor for .NET حلاً قويًا لتحرير مجموعة متنوعة من تنسيقات المستندات بسلاسة. سيرشدك هذا الدليل خلال عملية استخراج محتوى HTML من مستند قابل للتحرير باستخدام GroupDocs.Editor لـ .NET. وفي النهاية، سيكون لديك فهم واضح لكيفية تنفيذ هذه الميزة في مشاريعك الخاصة.
-## المتطلبات الأساسية
-قبل الغوص في البرنامج التعليمي، تأكد من أن لديك المتطلبات الأساسية التالية:
-- Visual Studio أو أي بيئة تطوير .NET متوافقة
-- .NET Framework مثبت على جهازك
-- GroupDocs.Editor لمكتبة .NET
-- نموذج مستند لاستخراج محتوى HTML منه
-- المعرفة الأساسية ببرمجة C#
+# الحصول على محتوى HTML C# – استخراج HTML من مستند قابل للتحرير
+
+## المقدمة
+إذا كنت بحاجة إلى **get HTML content C#** من ملف Word أو DOCX أو أي ملف قابل للتحرير آخر، فإن GroupDocs.Editor for .NET يجعل العملية سهلة. في هذا الدرس سنستعرض الخطوات الدقيقة لاستخراج HTML من مستند قابل للتحرير، ونظهر لك كيفية **convert Word to HTML**، ونشرح لماذا هذا النهج مثالي عندما تحتاج إلى **edit Word document .NET**. في النهاية ستكون جاهزًا لدمج استخراج HTML في مشاريعك الخاصة ببضع أسطر من الشيفرة.
+
+## الإجابات السريعة
+- **What does “get HTML content C#” mean?** إنها عملية استرجاع تمثيل HTML للمستند باستخدام شفرة C#.  
+- **Which library handles the conversion?** يوفر GroupDocs.Editor for .NET دعمًا مدمجًا لـ Word و DOCX وغيرها من الصيغ.  
+- **Do I need a license for production?** نعم – يلزم الحصول على ترخيص تجاري للاستخدام في الإنتاج، لكن يتوفر نسخة تجريبية مجانية.  
+- **Can I extract only a part of the document?** يمكنك استرجاع سلسلة HTML الكاملة ثم تقطيع أو تحليل الجزء الذي تحتاجه.  
+- **Is this approach .NET‑compatible?** بالطبع – يعمل مع .NET Framework و .NET Core و .NET 5/6.
+
+## ما هو “get HTML content C#”؟
+يشير Getting HTML content C# إلى استخدام شفرة C# لقراءة مستند (مثل .docx) وإخراج محتوياته كسلسلة HTML. هذا مفيد للمعاينة على الويب، أو ترحيل المحتوى، أو مزيد من معالجة HTML.
+
+## لماذا استخراج HTML من مستند قابل للتحرير؟
+- **Cross‑platform preview** – عرض ملفات Office في المتصفحات دون الحاجة إلى تثبيت Office.  
+- **Content reuse** – إعادة استخدام النص والتنسيق في صفحات الويب أو قوالب البريد الإلكتروني.  
+- **Simplified editing** – تعديل HTML، ثم إرجاع التغييرات إلى الصيغة الأصلية إذا لزم الأمر.  
+- **Integration** – دمج مع خدمات .NET أخرى (مثل تحويل PDF، أو فهرسة البحث).
+
+## المتطلبات المسبقة
+- Visual Studio (أو أي بيئة تطوير .NET متوافقة)  
+- .NET framework أو .NET Core runtime مثبت  
+- مكتبة GroupDocs.Editor for .NET مضافة إلى مشروعك (عبر NuGet)  
+- مستند تجريبي (Word، DOCX، إلخ) لاستخراج HTML منه  
+- معرفة أساسية بـ C#
+
 ## استيراد مساحات الأسماء
-للبدء، تحتاج إلى استيراد مساحات الأسماء الضرورية في مشروعك. توفر مساحات الأسماء هذه الفئات والأساليب المطلوبة للعمل مع GroupDocs.Editor لـ .NET.
+لبدء العمل، استورد مساحات الأسماء الضرورية التي تكشف عن فئات GroupDocs.Editor.
+
 ```csharp
 using System;
 using System.IO;
 using GroupDocs.Editor.Options;
 ```
-## الخطوة 1: إنشاء FileStream للمستند الخاص بك
-الخطوة الأولى هي إنشاء`FileStream` الكائن الذي يفتح المستند الذي تريد استخراج محتوى HTML منه. سيتم استخدام هذا الدفق لقراءة المستند في المحرر.
+
+## كيفية الحصول على محتوى HTML C# من مستند قابل للتحرير
+فيما يلي دليل خطوة بخطوة يوضح **how to extract HTML**، وهو في الأساس نفس **how to extract html** من مستند. يوضح نفس التدفق أيضًا **convert docx to html** و **convert word to html**.
+
+### الخطوة 1: إنشاء FileStream للمستند الخاص بك
+افتح ملف المصدر باستخدام `FileStream`. هذه الدفق يزود المحرر ببايتات المستند.
+
 ```csharp
 using (FileStream fs = File.OpenRead("Your Sample Document"))
 {
-    // سيتم وضع الخطوات التالية هنا
+    // Next steps will be placed here
 }
 ```
-## الخطوة 2: تهيئة المحرر
- في حدود`using` بيان`FileStream` ، تحتاج إلى تهيئة`Editor` هدف. ال`Editor` الفصل هو المسؤول عن تحميل وتحرير المستند. ستقوم أيضًا بتحديد خيارات التحميل المناسبة لنوع المستند الخاص بك. في هذا المثال، نحن نعمل مع مستند WordProcessing.
+
+### الخطوة 2: تهيئة Editor
+داخل كتلة `using`، أنشئ كائن من فئة `Editor`. الموفر (delegate) يزود الدفق، وخيارات التحميل تخبر المحرر بأي صيغة تتعامل معها (WordProcessing في هذه الحالة).
+
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return new WordProcessingLoadOptions(); }))
 {
-    // سيتم وضع الخطوات التالية هنا
+    // Next steps will be placed here
 }
 ```
-## الخطوة 3: تحرير المستند
- الآن سوف تستخدم`Editor` كائن لتحرير المستند. وهذا ينطوي على إنشاء`EditableDocument` الكائن، الذي يمثل النسخة القابلة للتحرير من المستند. ال`Edit` طريقة`Editor` يتم استخدام class هنا مع خيارات تحرير محددة.
+
+### الخطوة 3: تحرير المستند
+أنشئ `EditableDocument` باستخدام طريقة `Edit`. هذا الكائن يمثل المستند في حالة قابلة للتحرير ويمنحك الوصول إلى محتوى HTML الخاص به.
+
 ```csharp
 using (EditableDocument document = editor.Edit(new WordProcessingEditOptions()))
 {
-    // سيتم وضع الخطوات التالية هنا
+    // Next steps will be placed here
 }
 ```
-## الخطوة 4: استخراج محتوى HTML
- وأخيراً مع`EditableDocument` كائن في متناول اليد، يمكنك استخراج محتوى HTML. ال`GetContent` طريقة`EditableDocument`تقوم class بإرجاع محتوى المستند كسلسلة HTML. لأغراض العرض التوضيحي، سنقوم بطباعة أول 200 حرف من محتوى HTML.
+
+### الخطوة 4: استخراج محتوى HTML
+أخيرًا، استدعِ `GetContent()` على `EditableDocument`. تُعيد الطريقة المستند بالكامل كسلسلة HTML. للعرض، نقوم بطباعة أول 200 حرف.
+
 ```csharp
 string htmlContent = document.GetContent();
 Console.WriteLine("HTML content of the input document (first 200 chars): {0}", htmlContent.Substring(0, 200));
 ```
 
-## خاتمة
-تهانينا! لقد نجحت في استخراج محتوى HTML من مستند قابل للتحرير باستخدام GroupDocs.Editor لـ .NET. يمكن لهذه الأداة القوية التعامل مع تنسيقات المستندات المختلفة، مما يجعلها خيارًا ممتازًا لمهام إدارة المستندات. باتباع الخطوات الموضحة في هذا الدليل، يمكنك دمج إمكانيات تحرير المستندات في تطبيقات .NET الخاصة بك بسهولة.
-## الأسئلة الشائعة
-### ما أنواع المستندات التي يمكن لـ GroupDocs.Editor لـ .NET التعامل معها؟
-يدعم GroupDocs.Editor for .NET نطاقًا واسعًا من تنسيقات المستندات، بما في ذلك WordProcessing وSpreadsheet وPresentation والمزيد.
-### هل هناك نسخة تجريبية مجانية متاحة لـ GroupDocs.Editor لـ .NET؟
- نعم، يمكنك تنزيل نسخة تجريبية مجانية من[موقع إلكتروني](https://releases.groupdocs.com/).
-### كيف يمكنني الحصول على ترخيص مؤقت لـ GroupDocs.Editor لـ .NET؟
- يمكنك طلب ترخيص مؤقت من[صفحة شراء GroupDocs](https://purchase.groupdocs.com/temporary-license/).
-### أين يمكنني العثور على الوثائق الخاصة بـ GroupDocs.Editor لـ .NET؟
- الوثائق الشاملة متاحة[هنا](https://tutorials.groupdocs.com/editor/net/).
+## المشكلات الشائعة والحلول
+| المشكلة | السبب | الحل |
+|-------|--------|-----|
+| **Empty HTML output** | خيارات تحميل خاطئة أو نوع ملف غير مدعوم | تحقق من أنك تستخدم `WordProcessingLoadOptions` الصحيح أو خيارات التحميل المناسبة لملفات PDF أو جداول البيانات، إلخ. |
+| **Encoding problems** | المستند يحتوي على أحرف غير ASCII | تأكد من حفظ ملف المصدر بترميز UTF‑8؛ يتعامل GroupDocs.Editor مع Unicode تلقائيًا. |
+| **Performance slowdown on large files** | المستندات الكبيرة تستهلك المزيد من الذاكرة | قم بمعالجة المستند على أجزاء أو زيادة حد الذاكرة للتطبيق. |
+
+## الأسئلة المتكررة
+### ما هي أنواع المستندات التي يمكن لـ GroupDocs.Editor for .NET التعامل معها؟
+يدعم GroupDocs.Editor for .NET مجموعة واسعة من صيغ المستندات، بما في ذلك WordProcessing و Spreadsheet و Presentation وغيرها.
+
+### هل هناك نسخة تجريبية مجانية متاحة لـ GroupDocs.Editor for .NET؟
+نعم، يمكنك تنزيل نسخة تجريبية مجانية من [الموقع الإلكتروني](https://releases.groupdocs.com/).
+
+### كيف أحصل على ترخيص مؤقت لـ GroupDocs.Editor for .NET؟
+يمكنك طلب ترخيص مؤقت من [صفحة شراء GroupDocs](https://purchase.groupdocs.com/temporary-license/).
+
+### أين يمكنني العثور على الوثائق الخاصة بـ GroupDocs.Editor for .NET؟
+الوثائق الشاملة متاحة [هنا](https://tutorials.groupdocs.com/editor/net/).
+
 ### هل يمكنني الحصول على الدعم إذا واجهت مشاكل؟
- نعم يمكنك طلب الدعم من[منتدى دعم مستندات المجموعة](https://forum.groupdocs.com/c/editor/20).
+نعم، يمكنك طلب الدعم من [منتدى دعم GroupDocs](https://forum.groupdocs.com/c/editor/20/).
+
+---
+
+**آخر تحديث:** 2026-03-28  
+**تم الاختبار مع:** GroupDocs.Editor for .NET 23.12 (latest at time of writing)  
+**المؤلف:** GroupDocs
