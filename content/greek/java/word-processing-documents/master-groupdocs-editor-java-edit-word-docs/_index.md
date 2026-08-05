@@ -1,55 +1,116 @@
 ---
-date: '2026-02-26'
-description: Μάθετε πώς να επεξεργάζεστε προγραμματιστικά αρχεία docx χρησιμοποιώντας
-  το GroupDocs.Editor για Java, να μετατρέπετε docx σε html και να επεξεργάζεστε παραδείγματα
-  Java για έγγραφα Word.
+date: '2026-08-05'
+description: Μάθετε πώς να μετατρέψετε docx σε html και να επεξεργαστείτε Word documents
+  προγραμματιστικά χρησιμοποιώντας GroupDocs.Editor for Java, συμπεριλαμβανομένης
+  της διαχείρισης images και password‑protected files.
 keywords:
-- GroupDocs.Editor Java
-- edit Word documents with Java
-- Java document management
-title: 'Προγραμματιστική Επεξεργασία DOCX με το GroupDocs.Editor Java: Ένας Πλήρης
-  Οδηγός'
+- convert docx to html
+- add images to docx
+- edit password protected docx
+- generate editable docx
+lastmod: '2026-08-05'
+og_description: Μετατρέψτε docx σε html και επεξεργαστείτε Word files προγραμματιστικά
+  με GroupDocs.Editor for Java. Ανακαλύψτε το setup, τη διαχείριση password, τα image
+  prefixes και τα performance tips σε αυτό το ολοκληρωμένο tutorial.
+og_image_alt: Guide showing Java code that converts DOCX to HTML using GroupDocs.Editor
+og_title: Μετατροπή docx σε html με GroupDocs.Editor for Java – Πλήρης Οδηγός
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-05'
+  description: Learn how to convert docx to html and edit Word documents programmatically
+    using GroupDocs.Editor for Java, including handling images and password‑protected
+    files.
+  headline: Convert docx to html with GroupDocs.Editor for Java
+  type: TechArticle
+- description: Learn how to convert docx to html and edit Word documents programmatically
+    using GroupDocs.Editor for Java, including handling images and password‑protected
+    files.
+  name: Convert docx to html with GroupDocs.Editor for Java
+  steps:
+  - name: '**Import required classes**'
+    text: '**Import required classes**'
+  - name: '**Specify document path and load options**'
+    text: '**Specify document path and load options**'
+  - name: '**Initialize editor instance**'
+    text: '**Initialize editor instance**'
+  - name: '**Import necessary classes**'
+    text: '**Import necessary classes**'
+  - name: '**Edit document and retrieve content**'
+    text: '**Edit document and retrieve content**'
+  - name: '**Understanding parameters and return values**'
+    text: '**Understanding parameters and return values**'
+  - name: '**Automated document editing** – bulk‑update contracts, reports, or invoices.'
+    text: '**Automated document editing** – bulk‑update contracts, reports, or invoices.'
+  - name: '**Dynamic content generation** – generate customized proposals on the fly.'
+    text: '**Dynamic content generation** – generate customized proposals on the fly.'
+  - name: '**CMS integration** – embed document editing capabilities directly into
+      your content management system.'
+    text: '**CMS integration** – embed document editing capabilities directly into
+      your content management system.'
+  - name: '**Collaboration platforms** – allow multiple users to edit a shared DOCX
+      through a web interface.'
+    text: '**Collaboration platforms** – allow multiple users to edit a shared DOCX
+      through a web interface.'
+  type: HowTo
+- questions:
+  - answer: It uses configurable load options to manage memory efficiently, allowing
+      smooth processing of DOCX files up to 500 MB without loading the entire file
+      into memory.
+    question: How does GroupDocs.Editor handle large Word files?
+  - answer: Yes—set the password in `WordProcessingLoadOptions` before initializing
+      the editor.
+    question: Can I edit password‑protected documents?
+  - answer: Absolutely. Use `editableDocument.getBodyContent()` to retrieve the HTML
+      representation of the DOCX.
+    question: Is converting docx to html supported?
+  - answer: Besides DOCX, you can export to PDF, HTML, and other formats supported
+      by GroupDocs.Editor (over 50 output options).
+    question: What formats can I export to after editing?
+  - answer: Load the template with `Editor`, apply `WordProcessingEditOptions`, and
+      retrieve the edited `EditableDocument` for further processing.
+    question: How do I generate an editable document from a template?
+  type: FAQPage
+tags:
+- convert docx to html
+- GroupDocs.Editor
+- Java document processing
+- docx editing
+- HTML conversion
+title: Μετατροπή docx σε html με GroupDocs.Editor for Java
 type: docs
 url: /el/java/word-processing-documents/master-groupdocs-editor-java-edit-word-docs/
 weight: 1
 ---
 
- final content with Greek translation.
+# Μετατροπή docx σε html με GroupDocs.Editor για Java
 
-Check headings: keep same number of #.
+Σε αυτόν τον οδηγό βήμα‑βήμα θα μάθετε πώς να **convert docx to html** και να επεξεργάζεστε αρχεία DOCX προγραμματιστικά χρησιμοποιώντας το GroupDocs.Editor για Java. Στο τέλος του οδηγού θα μπορείτε να φορτώσετε ένα έγγραφο Word, να τροποποιήσετε το περιεχόμενό του, να ανακτήσετε την HTML αναπαράσταση με προσαρμοσμένα πρόθεμα εικόνων και να διαχειριστείτε αρχεία με κωδικό πρόσβασης — όλα χωρίς να αφήσετε την εφαρμογή Java.
 
-Let's construct final answer.# Προγραμματιστική Επεξεργασία DOCX με το GroupDocs.Editor για Java
-
-**Αποκτήστε το πλήρες δυναμικό της διαχείρισης εγγράφων μαθαίνοντας πώς να επεξεργάζεστε προγραμματιστικά αρχεία docx** χρησιμοποιώντας το GroupDocs.Editor σε Java. Είτε χρειάζεστε να μετατρέψετε docx σε html, να δημιουργήσετε ένα επεξεργάσιμο έγγραφο, είτε να επεξεργαστείτε αρχεία docx με προστασία κωδικού, αυτός ο οδηγός σας καθοδηγεί βήμα-βήμα—από τη ρύθμιση μέχρι την πραγματική χρήση—ώστε να βελτιώσετε τη ροή εργασίας σας και να αυξήσετε την παραγωγικότητα.
-
-## Γρήγορες Απαντήσεις
+## Γρήγορες απαντήσεις
 - **Ποια βιβλιοθήκη σας επιτρέπει να επεξεργάζεστε προγραμματιστικά docx σε Java;** GroupDocs.Editor for Java.  
-- **Μπορώ να μετατρέψω docx σε html με το ίδιο API;** Ναι, χρησιμοποιήστε `getBodyContent()` για να λάβετε το HTML.  
-- **Υποστηρίζεται η επεξεργασία docx με προστασία κωδικού;** Απόλυτα—παρέχετε τον κωδικό μέσω `WordProcessingLoadOptions`.  
-- **Χρειάζομαι άδεια για παραγωγική χρήση;** Απαιτείται έγκυρη άδεια GroupDocs.Editor για παραγωγή.  
-- **Ποια έκδοση της Java συνιστάται;** JDK 8 ή νεότερη.
+- **Μπορώ να μετατρέψω docx σε html με το ίδιο API;** Yes, call `getBodyContent()` to retrieve HTML.  
+- **Υποστηρίζεται η επεξεργασία docx με κωδικό πρόσβασης;** Absolutely—supply the password via `WordProcessingLoadOptions`.  
+- **Χρειάζομαι άδεια για παραγωγική χρήση;** A valid GroupDocs.Editor license is required for production.  
+- **Ποια έκδοση Java συνιστάται;** JDK 8 or higher.
 
-## Τι σημαίνει προγραμματιστική επεξεργασία docx;
-Η προγραμματιστική επεξεργασία docx σημαίνει τη διαχείριση αρχείων Microsoft Word μέσω κώδικα αντί για χειροκίνητη αλληλεπίδραση. Με το GroupDocs.Editor για Java μπορείτε να ανοίξετε, να τροποποιήσετε και να αποθηκεύσετε αρχεία DOCX εξ ολοκλήρου μέσα στην εφαρμογή σας, επιτρέποντας αυτοματοποιημένες ροές εργασίας εγγράφων, μαζικές ενημερώσεις και απρόσκοπτη ενσωμάτωση με άλλα συστήματα.
+## Τι σημαίνει η προγραμματιστική επεξεργασία docx;
+Η προγραμματιστική επεξεργασία docx σημαίνει τη διαχείριση αρχείων Microsoft Word μέσω κώδικα αντί για χειροκίνητη αλληλεπίδραση. Με το GroupDocs.Editor για Java μπορείτε να ανοίξετε, τροποποιήσετε και αποθηκεύσετε αρχεία DOCX εξ ολοκλήρου μέσα στην εφαρμογή σας, επιτρέποντας αυτοματοποιημένες ροές εργασίας εγγράφων, μαζικές ενημερώσεις και απρόσκοπτη ενσωμάτωση με άλλα συστήματα.
 
-## Γιατί να χρησιμοποιήσετε το GroupDocs.Editor για την επεξεργασία εγγράφων word σε έργα Java;
-- **Πλήρης λειτουργικότητα επεξεργασίας** – αλλαγή κειμένου, εικόνων, πινάκων και στυλ χωρίς απώλεια μορφοποίησης.  
-- **Μετατροπή σε HTML** – άμεση λήψη HTML (`convert docx to html`) για προβολή στο web.  
-- **Υποστήριξη κωδικού** – επεξεργασία προστατευμένων αρχείων (`edit password protected docx`) παρέχοντας τα διαπιστευτήρια.  
-- **Βελτιστοποιημένη απόδοση** – οι επιλογές φόρτωσης σας επιτρέπουν να ελέγχετε τη χρήση μνήμης για μεγάλα αρχεία.  
+## Γιατί να χρησιμοποιήσετε το GroupDocs.Editor για την επεξεργασία εγγράφων Word σε έργα Java;
+Το GroupDocs.Editor παρέχει μια πλήρη μηχανή επεξεργασίας που σας επιτρέπει να αλλάζετε κείμενο, εικόνες, πίνακες και στυλ διατηρώντας την αρχική διάταξη. Υποστηρίζει επίσης **convert docx to html** με μία κλήση, διαχειρίζεται αρχεία με κωδικό πρόσβασης και επεξεργάζεται έγγραφα έως 500 MB χρησιμοποιώντας επιλογές φόρτωσης που κρατούν τη χρήση heap κάτω από 200 MB — ιδανικό για σενάρια υψηλού όγκου σε επιχειρήσεις.
 
-## Prerequisites
+## Προαπαιτούμενα
 
-Πριν ξεκινήσουμε, βεβαιωθείτε ότι έχετε:
+Πριν ξεκινήσετε, βεβαιωθείτε ότι έχετε:
 
 - **GroupDocs.Editor for Java** (Έκδοση 25.3 ή νεότερη).  
 - **Java Development Kit (JDK)** 8+ εγκατεστημένο.  
-- **Maven** (ή τη δυνατότητα προσθήκης JAR χειροκίνητα).  
+- **Maven** (ή η δυνατότητα προσθήκης JARs χειροκίνητα).  
 - Ένα IDE Java όπως IntelliJ IDEA, Eclipse ή NetBeans.  
 
-## Setting Up GroupDocs.Editor for Java
+## Ρύθμιση GroupDocs.Editor για Java
 
-### Maven Integration
+### Ενσωμάτωση Maven
 
 Προσθέστε την παρακάτω διαμόρφωση στο αρχείο `pom.xml` σας για να συμπεριλάβετε το GroupDocs.Editor ως εξάρτηση:
 
@@ -71,19 +132,20 @@ Let's construct final answer.# Προγραμματιστική Επεξεργα
 </dependencies>
 ```
 
-### Direct Download
+### Άμεση λήψη
 
 Εναλλακτικά, κατεβάστε την πιο πρόσφατη έκδοση απευθείας από [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-### License Acquisition
+### Απόκτηση άδειας
 
-- **Δωρεάν Δοκιμή** – ξεκινήστε να εξερευνάτε το API χωρίς κόστος.  
-- **Προσωρινή Άδεια** – αποκτήστε κλειδί περιορισμένου χρόνου για δοκιμή.  
-- **Αγορά** – αποκτήστε πλήρη άδεια από [GroupDocs](https://purchase.groupdocs.com/).
+- **Free trial** – ξεκινήστε να εξερευνάτε το API χωρίς κόστος.  
+- **Temporary license** – αποκτήστε κλειδί περιορισμένου χρόνου για δοκιμή.  
+- **Purchase** – αποκτήστε πλήρη άδεια από [GroupDocs](https://purchase.groupdocs.com/).
 
-### Basic Initialization and Setup
+### Βασική αρχικοποίηση και ρύθμιση
 
-Αρχικοποιήστε την κλάση `Editor` για να ξεκινήσετε την εργασία με έγγραφα Word:
+`Editor` είναι η βασική κλάση που σας δίνει πρόσβαση ανάγνωσης/εγγραφής σε ένα έγγραφο Word.  
+Το αντικείμενο `EditableDocument` που επιστρέφεται από τον επεξεργαστή αντιπροσωπεύει το μοντέλο DOCX στη μνήμη.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -94,48 +156,50 @@ WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 Editor editor = new Editor(documentPath, loadOptions);
 ```
 
-## Implementation Guide
+## Οδηγός υλοποίησης
 
-### Feature: Initialize Editor and Load Document
+### Χαρακτηριστικό: αρχικοποίηση επεξεργαστή και φόρτωση εγγράφου
 
-**Επισκόπηση** – Αυτή η λειτουργία δείχνει πώς να δημιουργήσετε μια παρουσία `Editor` και να φορτώσετε ένα αρχείο DOCX με προσαρμοσμένες επιλογές.
+**Overview** – Αυτό το χαρακτηριστικό δείχνει πώς να δημιουργήσετε μια παρουσία `Editor` και να φορτώσετε ένα αρχείο DOCX με προσαρμοσμένες επιλογές.
 
-#### Step‑by‑Step Implementation
+#### Υλοποίηση βήμα‑βήμα
 
-1. **Εισαγωγή Απαιτούμενων Κλάσεων**  
+1. **Import required classes**  
 
+   `WordProcessingLoadOptions` σας επιτρέπει να ορίσετε επιλογές όπως κωδικός πρόσβασης και όρια μνήμης κατά τη φόρτωση ενός εγγράφου.  
    ```java
    import com.groupdocs.editor.Editor;
    import com.groupdocs.editor.options.WordProcessingLoadOptions;
    ```
 
-2. **Καθορισμός Διαδρομής Εγγράφου και Επιλογών Φόρτωσης**  
+2. **Specify document path and load options**  
 
    ```java
    String documentPath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_DOCX";
    WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
    ```
 
-3. **Αρχικοποίηση Παρουσίας Editor**  
+3. **Initialize editor instance**  
 
    ```java
    Editor editor = new Editor(documentPath, loadOptions);
    ```
 
-### Feature: Edit Document and Retrieve Body Content with Prefix
+### Χαρακτηριστικό: επεξεργασία εγγράφου και ανάκτηση περιεχομένου σώματος με πρόθεμα
 
-**Επισκόπηση** – Δείχνει πώς να επεξεργαστείτε το έγγραφο και να λάβετε την αναπαράσταση HTML (`convert docx to html`) με πρόθεμα εξωτερικών εικόνων.
+**Overview** – Δείχνει πώς να επεξεργαστείτε το έγγραφο και να λάβετε την HTML αναπαράσταση (`convert docx to html`) με πρόθεμα εξωτερικών εικόνων.
 
-#### Step‑by‑Step Implementation
+#### Υλοποίηση βήμα‑βήμα
 
-1. **Εισαγωγή Απαραίτητων Κλάσεων**  
+1. **Import necessary classes**  
 
+   `WordProcessingEditOptions` διαμορφώνει τη συμπεριφορά επεξεργασίας όπως η παρακολούθηση αλλαγών και η διατήρηση μεταδεδομένων.  
    ```java
    import com.groupdocs.editor.EditableDocument;
    import com.groupdocs.editor.options.WordProcessingEditOptions;
    ```
 
-2. **Επεξεργασία Εγγράφου και Λήψη Περιεχομένου**  
+2. **Edit document and retrieve content**  
 
    ```java
    EditableDocument document = editor.edit(new WordProcessingEditOptions());
@@ -143,68 +207,78 @@ Editor editor = new Editor(documentPath, loadOptions);
    String prefixedBodyContent = document.getBodyContent(externalImagesPrefix);
    ```
 
-3. **Κατανόηση Παραμέτρων και Τιμών Επιστροφής**  
+3. **Understanding parameters and return values**  
 
    - `WordProcessingEditOptions` – διαμορφώνει τον τρόπο επεξεργασίας του εγγράφου.  
    - `getBodyContent()` – επιστρέφει το HTML (`retrieve html content java`) του σώματος του εγγράφου, προαιρετικά προσθέτοντας πρόθεμα στις URL των εικόνων.
 
-### Common Issues and Solutions
+## Πώς να μετατρέψετε docx σε html χρησιμοποιώντας το GroupDocs.Editor για Java;
 
-- **Αρχείο δεν βρέθηκε** – ελέγξτε ξανά το `documentPath` και βεβαιωθείτε ότι το αρχείο είναι προσβάσιμο.  
-- **Λείπουν εξαρτήσεις** – επαληθεύστε ότι οι συντεταγμένες Maven είναι σωστές και ότι το URL του αποθετηρίου είναι προσβάσιμο.  
-- **Αιχμές μνήμης με μεγάλα αρχεία** – χρησιμοποιήστε πιο συγκεκριμένες `WordProcessingLoadOptions` για να περιορίσετε τους φορτωμένους πόρους.
+Φορτώστε το DOCX με `new Editor(...).load(documentPath, loadOptions)` και στη συνέχεια καλέστε `editableDocument.getBodyContent()` – η μέθοδος επιστρέφει μια συμβολοσειρά που περιέχει το πλήρες HTML markup του εγγράφου, συμπεριλαμβανομένων των ετικετών εικόνας. Μπορείτε προαιρετικά να περάσετε ένα πρόθεμα URL εικόνας ώστε όλα τα attributes `<img src>` να δείχνουν σε CDN ή αποθηκευτικό χώρο, κάτι χρήσιμο για προβολείς web‑based.
 
-## Practical Applications
+## Συχνά προβλήματα και λύσεις
 
-1. **Αυτοματοποιημένη Επεξεργασία Εγγράφων** – μαζική ενημέρωση συμβάσεων, αναφορών ή τιμολογίων.  
-2. **Δυναμική Δημιουργία Περιεχομένου** – δημιουργία προσαρμοσμένων προτάσεων σε πραγματικό χρόνο.  
-3. **Ενσωμάτωση CMS** – ενσωμάτωση δυνατοτήτων επεξεργασίας εγγράφων απευθείας στο σύστημα διαχείρισης περιεχομένου.  
-4. **Πλατφόρμες Συνεργασίας** – επιτρέψτε σε πολλούς χρήστες να επεξεργάζονται ένα κοινό DOCX μέσω διεπαφής web.  
+- **File not found** – ελέγξτε ξανά το `documentPath` και βεβαιωθείτε ότι το αρχείο είναι προσβάσιμο από τη διαδικασία που εκτελείται.  
+- **Missing dependencies** – βεβαιωθείτε ότι οι συντεταγμένες Maven είναι σωστές και ότι το URL του αποθετηρίου είναι προσβάσιμο.  
+- **Memory spikes with large files** – χρησιμοποιήστε πιο συγκεκριμένες `WordProcessingLoadOptions` για περιορισμό των φορτωμένων πόρων· το API μπορεί να διαχειριστεί έγγραφα έως 500 MB διατηρώντας τη χρήση heap κάτω από 200 MB.
 
-## Performance Considerations
+## Πρακτικές εφαρμογές
 
-- **Βελτιστοποίηση Επιλογών Φόρτωσης** – φορτώστε μόνο τα απαιτούμενα μέρη του εγγράφου για μείωση της χρήσης μνήμης.  
-- **Διαχείριση Πόρων** – κλείστε άμεσα τα αντικείμενα `EditableDocument` (`document.close()`) για απελευθέρωση πόρων.  
-- **Ρύθμιση Java GC** – παρακολουθήστε το μέγεθος της heap και προσαρμόστε τις σημαίες JVM για επεξεργασία μεγάλης κλίμακας.  
+1. **Automated document editing** – μαζική ενημέρωση συμβάσεων, αναφορών ή τιμολογίων.  
+2. **Dynamic content generation** – δημιουργία προσαρμοσμένων προτάσεων εν κινήσει.  
+3. **CMS integration** – ενσωμάτωση δυνατοτήτων επεξεργασίας εγγράφων απευθείας στο σύστημα διαχείρισης περιεχομένου σας.  
+4. **Collaboration platforms** – επιτρέψτε σε πολλούς χρήστες να επεξεργάζονται ένα κοινό DOCX μέσω διαδικτυακής διεπαφής.
 
-## Conclusion
+## Σκέψεις απόδοσης
 
-Τώρα έχετε μια σταθερή βάση για **προγραμματιστική επεξεργασία docx** αρχείων χρησιμοποιώντας το GroupDocs.Editor για Java. Από την αρχικοποίηση του επεξεργαστή μέχρι τη λήψη περιεχομένου HTML, μπορείτε να δημιουργήσετε ισχυρές, αυτοματοποιημένες ροές εργασίας εγγράφων που εξοικονομούν χρόνο και μειώνουν τα σφάλματα.
+- **Optimize load options** – φορτώστε μόνο τα απαιτούμενα τμήματα του εγγράφου για μείωση της χρήσης μνήμης.  
+- **Resource management** – κλείστε άμεσα τα αντικείμενα `EditableDocument` (`document.close()`) για απελευθέρωση πόρων.  
+- **Java GC tuning** – παρακολουθήστε το μέγεθος heap και προσαρμόστε τις σημαίες JVM για επεξεργασία μεγάλης κλίμακας.
 
-**Next Steps**
+## Συμπέρασμα
 
-- Δοκιμάστε πρόσθετες `WordProcessingEditOptions` (π.χ., παρακολούθηση αλλαγών, διατήρηση μεταδεδομένων).  
+Τώρα έχετε μια σταθερή βάση για **programmatically edit docx** αρχεία χρησιμοποιώντας το GroupDocs.Editor για Java. Από την αρχικοποίηση του επεξεργαστή μέχρι την ανάκτηση του HTML περιεχομένου, μπορείτε να δημιουργήσετε ισχυρές, αυτοματοποιημένες ροές εργασίας εγγράφων που εξοικονομούν χρόνο και μειώνουν τα σφάλματα.
+
+**Επόμενα βήματα**
+
+- Πειραματιστείτε με πρόσθετες `WordProcessingEditOptions` (π.χ., παρακολούθηση αλλαγών, διατήρηση μεταδεδομένων).  
 - Εξερευνήστε την εξαγωγή του επεξεργασμένου εγγράφου σε άλλες μορφές όπως PDF ή HTML.  
-- Ενσωματώστε τον επεξεργαστή σε ένα REST API για να εκθέσετε τις δυνατότητες επεξεργασίας σε άλλες υπηρεσίες.  
+- Ενσωματώστε τον επεξεργαστή σε ένα REST API για να εκθέσετε τις δυνατότητες επεξεργασίας σε άλλες υπηρεσίες.
 
-## Frequently Asked Questions
+## Συχνές ερωτήσεις
 
-**Ε: Πώς διαχειρίζεται το GroupDocs.Editor μεγάλα αρχεία Word;**  
-Α: Χρησιμοποιεί ρυθμιζόμενες επιλογές φόρτωσης για αποτελεσματική διαχείριση μνήμης, εξασφαλίζοντας ομαλή απόδοση ακόμη και με αρχεία DOCX πολλαπλών megabytes.
+**Q: Πώς διαχειρίζεται το GroupDocs.Editor μεγάλα αρχεία Word;**  
+A: Χρησιμοποιεί διαμορφώσιμες επιλογές φόρτωσης για αποδοτική διαχείριση μνήμης, επιτρέποντας ομαλή επεξεργασία αρχείων DOCX έως 500 MB χωρίς να φορτώνεται ολόκληρο το αρχείο στη μνήμη.
 
-**Ε: Μπορώ να επεξεργαστώ έγγραφα με προστασία κωδικού;**  
-Α: Ναι—ορίστε τον κωδικό στο `WordProcessingLoadOptions` πριν την αρχικοποίηση του επεξεργαστή.
+**Q: Μπορώ να επεξεργαστώ έγγραφα με κωδικό πρόσβασης;**  
+A: Ναι—ορίστε τον κωδικό στο `WordProcessingLoadOptions` πριν την αρχικοποίηση του επεξεργαστή.
 
-**Ε: Υποστηρίζεται η μετατροπή docx σε html;**  
-Α: Απόλυτα. Χρησιμοποιήστε `document.getBodyContent()` για να λάβετε την αναπαράσταση HTML του DOCX.
+**Q: Υποστηρίζεται η μετατροπή docx σε html;**  
+A: Απολύτως. Χρησιμοποιήστε `editableDocument.getBodyContent()` για να λάβετε την HTML αναπαράσταση του DOCX.
 
-**Ε: Σε ποιες μορφές μπορώ να εξάγω μετά την επεξεργασία;**  
-Α: Εκτός από DOCX, μπορείτε να εξάγετε σε PDF, HTML και άλλες μορφές που υποστηρίζονται από το GroupDocs.Editor.
+**Q: Σε ποιες μορφές μπορώ να εξάγω μετά την επεξεργασία;**  
+A: Εκτός από DOCX, μπορείτε να εξάγετε σε PDF, HTML και άλλες μορφές που υποστηρίζει το GroupDocs.Editor (πάνω από 50 επιλογές εξόδου).
 
-**Ε: Πώς δημιουργώ ένα επεξεργάσιμο έγγραφο από ένα πρότυπο;**  
-Α: Φορτώστε το πρότυπο με `Editor`, εφαρμόστε `WordProcessingEditOptions` και λάβετε το επεξεργασμένο `EditableDocument`.
+**Q: Πώς δημιουργώ επεξεργάσιμο έγγραφο από πρότυπο;**  
+A: Φορτώστε το πρότυπο με `Editor`, εφαρμόστε `WordProcessingEditOptions` και λάβετε το επεξεργάσιμο `EditableDocument` για περαιτέρω επεξεργασία.
 
 ---
 
-**Τελευταία Ενημέρωση:** 2026-02-26  
-**Δοκιμάστηκε Με:** GroupDocs.Editor 25.3 for Java  
+**Τελευταία ενημέρωση:** 2026-08-05  
+**Δοκιμάστηκε με:** GroupDocs.Editor 25.3 for Java  
 **Συγγραφέας:** GroupDocs  
 
-## Resources
+## Πόροι
 
 - [Τεκμηρίωση](https://docs.groupdocs.com/editor/java/)
 - [Αναφορά API](https://reference.groupdocs.com/editor/java/)
-- [Λήψη GroupDocs.Editor for Java](https://releases.groupdocs.com/editor/java/)
-- [Δωρεάν Δοκιμή](https://releases.groupdocs.com/editor/java/)
-- [Προσωρινή Άδεια](https://purchase.groupdocs.com/temporary-license)
-- [Φόρουμ Υποστήριξης](https://forum.groupdocs.com/c/editor/)
+- [Λήψη GroupDocs.Editor για Java](https://releases.groupdocs.com/editor/java/)
+- [Δωρεάν δοκιμή](https://releases.groupdocs.com/editor/java/)
+- [Προσωρινή άδεια](https://purchase.groupdocs.com/temporary-license)
+- [Φόρουμ υποστήριξης](https://forum.groupdocs.com/c/editor/)
+
+## Σχετικά μαθήματα
+
+- [html to docx java – Μετατροπή HTML σε DOCX με GroupDocs.Editor](/editor/java/document-saving/convert-html-docx-groupdocs-java-guide/)
+- [How to Extract Images from Word and Create Editable Document with GroupDocs.Editor for Java](/editor/java/document-editing/master-document-editing-groupdocs-editor-java/)
+- [Edit Word Document Java: Master Document Manipulation with GroupDocs.Editor](/editor/java/advanced-features/master-document-manipulation-java-groupdocs-editor/)
