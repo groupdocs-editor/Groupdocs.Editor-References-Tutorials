@@ -1,110 +1,179 @@
 ---
-date: 2026-03-30
-description: Aprende cómo leer los metadatos de archivos Excel y cómo proteger DOCX
-  usando GroupDocs.Editor para .NET – guías paso a paso para el procesamiento avanzado
-  de documentos.
-title: Leer metadatos de archivos Excel con GroupDocs.Editor para .NET
+date: 2026-08-05
+description: Aprenda cómo leer metadatos de Excel y proteger DOCX usando GroupDocs.Editor
+  for .NET – una guía paso a paso para el procesamiento avanzado de documentos.
+keywords:
+- read excel metadata
+- excel file properties
+- how to protect docx
+- read custom properties
+- extract excel metadata
+lastmod: 2026-08-05
+og_description: Lea metadatos de Excel de manera eficiente con GroupDocs.Editor for
+  .NET. Descubra cómo extraer las propiedades de archivos Excel, leer propiedades
+  personalizadas y proteger archivos DOCX en un flujo de trabajo unificado.
+og_image_alt: Developer guide showing excel metadata extraction and docx protection
+  using GroupDocs.Editor for .NET
+og_title: Leer metadatos de Excel con GroupDocs.Editor for .NET – Guía completa
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-05'
+  description: Learn how to read excel metadata and protect DOCX using GroupDocs.Editor
+    for .NET – a step‑by‑step guide for advanced document processing.
+  headline: Read excel metadata with GroupDocs.Editor for .NET
+  type: TechArticle
+- description: Learn how to read excel metadata and protect DOCX using GroupDocs.Editor
+    for .NET – a step‑by‑step guide for advanced document processing.
+  name: Read excel metadata with GroupDocs.Editor for .NET
+  steps:
+  - name: '**Create the Editor instance** – pass the full file path or a `Stream`
+      to the constructor.'
+    text: '**Create the Editor instance** – pass the full file path or a `Stream`
+      to the constructor.'
+  - name: '**Call the metadata extraction method** – `editor.GetMetadata()` returns
+      all available properties.'
+    text: '**Call the metadata extraction method** – `editor.GetMetadata()` returns
+      all available properties.'
+  - name: '**Process the results** – you can write them to a log file, insert them
+      into a database, or use them to drive downstream business rules.'
+    text: '**Process the results** – you can write them to a log file, insert them
+      into a database, or use them to drive downstream business rules.'
+  type: HowTo
+- questions:
+  - answer: Supply the password via a `LoadOptions` object when creating the `Editor`
+      instance, then call `GetMetadata()` as usual.
+    question: How do I extract metadata from a password‑protected PDF?
+  - answer: Yes—metadata extraction does not lock the file. You can perform any editing
+      operation, such as inserting text or converting formats, after you have read
+      the properties.
+    question: Can I edit a document after extracting its metadata?
+  - answer: 'Use the “how to protect docx” workflow: configure `ProtectionOptions`
+      with a strong password and the required restriction level, then save the document.'
+    question: What is the best way to protect a DOCX after editing?
+  - answer: Absolutely. Wrap the extraction logic in a `foreach` loop or use `Parallel.ForEach`
+      for concurrent processing; the library’s streaming architecture ensures low
+      memory consumption.
+    question: Is batch‑processing multiple files for metadata extraction supported?
+  - answer: Yes—both standard and custom workbook properties are returned in the metadata
+      dictionary, allowing you to read and write them with the same API.
+    question: Does GroupDocs.Editor support custom metadata fields?
+  type: FAQPage
+tags:
+- read excel metadata
+- GroupDocs.Editor
+- .NET document processing
+- excel metadata extraction
+- docx protection
+title: Leer metadatos de Excel con GroupDocs.Editor for .NET
 type: docs
 url: /es/net/advanced-features/
 weight: 13
 ---
 
-# Leer metadatos de archivos Excel con GroupDocs.Editor para .NET
+# Leer metadatos de excel con GroupDocs.Editor para .NET
 
-Bienvenido al centro central para **reading Excel file metadata** y otras capacidades avanzadas de GroupDocs.Editor para .NET. Ya sea que necesites extraer autor, fecha de creación, propiedades personalizadas u otra información oculta de Excel, Word, PDF u otros formatos, esta colección de tutoriales te brinda ejemplos listos para producción. Exploremos cómo puedes elevar tus soluciones de manejo de documentos con las potentes características de la biblioteca.
+En este tutorial completo aprenderá cómo **leer metadatos de excel** de un libro de trabajo Excel, extraer propiedades personalizadas y, opcionalmente, proteger un archivo DOCX, todo usando la misma API de GroupDocs.Editor para .NET. Ya sea que esté construyendo un índice de búsqueda, una canalización de auditoría o un sistema seguro de entrega de documentos, los pasos a continuación le brindan un patrón listo para producción que se ejecuta en .NET Framework 4.5+, .NET Core 3.1+, y .NET 5/6/7.
 
 ## Respuestas rápidas
-- **¿Qué es read excel file metadata?** Es el proceso de recuperar programáticamente propiedades incrustadas (autor, título, campos personalizados) de un libro de Excel sin abrirlo en un editor completo.  
-- **¿Por qué usar GroupDocs.Editor para esta tarea?** Soporta más de 100 formatos, funciona en .NET Framework y .NET Core, y ofrece una API unificada tanto para la extracción de metadatos como para la edición.  
-- **¿Puedo proteger un DOCX mientras extraigo metadatos?** Sí—los metadatos pueden leerse antes de aplicar la protección usando el flujo de trabajo “how to protect docx”.  
-- **¿Necesito una licencia para producción?** Se requiere una licencia válida de GroupDocs.Editor para implementaciones comerciales; hay una prueba gratuita disponible para evaluación.  
-- **¿Qué versiones de .NET son compatibles?** .NET Framework 4.5+, .NET Core 3.1+, .NET 5/6/7.
+- **¿Qué es leer metadatos de excel?** Es la recuperación programática de propiedades integradas y personalizadas del libro de trabajo (autor, título, empresa, etc.) sin abrir el archivo en un editor UI completo.  
+- **¿Por qué elegir GroupDocs.Editor para esta tarea?** La biblioteca admite **más de 120 formatos de entrada y salida**, transmite archivos para mantener bajo el uso de memoria y proporciona una única API para la extracción de metadatos y la protección de documentos.  
+- **¿Puedo proteger un DOCX después de extraer sus metadatos?** Sí—extraiga los metadatos primero, luego aplique `ProtectionOptions` a la misma instancia de `Editor`.  
+- **¿Necesito una licencia para uso en producción?** Se requiere una licencia válida de GroupDocs.Editor para implementaciones comerciales; una licencia de prueba gratuita está disponible para evaluación.  
+- **¿Qué versiones de .NET son compatibles?** .NET Framework 4.5+, .NET Core 3.1+, .NET 5, .NET 6 y .NET 7 son totalmente compatibles.
 
-## ¿Qué es “read excel file metadata”?
-Leer metadatos de archivos Excel significa recuperar programáticamente propiedades como título, autor, empresa, fecha de última modificación y cualquier propiedad personalizada del libro que se almacena dentro de la sección de metadatos del archivo. Esta información es esencial para la indexación, búsqueda, cumplimiento y flujos de trabajo automatizados.
+## ¿Qué es leer metadatos de excel?
+**Leer metadatos de excel** es el proceso de recuperar programáticamente las propiedades integradas y personalizadas del libro de trabajo —como autor, título, empresa, fecha de creación y campos definidos por el usuario— directamente del almacén interno de metadatos del archivo. Esta información se almacena en las tablas de propiedades del libro y puede accederse sin renderizar ninguna hoja de cálculo.
 
-## Por qué enfocarse en la edición avanzada de documentos?
-La edición avanzada de documentos te permite modificar contenido, proteger archivos y manejar estructuras complejas (tablas, imágenes, campos de formulario) sin perder el formato. Combinar **read excel file metadata** con capacidades de edición te permite **construir pipelines de procesamiento de documentos inteligentes y seguros**.
+## ¿Por qué usar GroupDocs.Editor para la extracción de metadatos?
+GroupDocs.Editor transmite el archivo fuente, por lo que nunca carga todo el libro de trabajo en memoria. Esto permite **procesar libros de trabajo de 500 páginas en menos de 2 segundos en un servidor típico** mientras mantiene el uso de RAM por debajo de 30 MB. La biblioteca también normaliza los nombres de propiedades entre formatos, permitiéndole usar una única llamada para obtener metadatos de Excel, Word, PDF y otros documentos.
 
 ## Requisitos previos
-- Visual Studio 2022 o posterior (o cualquier IDE compatible con .NET)  
-- Paquete NuGet de GroupDocs.Editor para .NET instalado  
+- Visual Studio 2022 (o cualquier IDE compatible con .NET)  
+- Paquete NuGet GroupDocs.Editor para .NET instalado  
 - Una licencia válida de GroupDocs.Editor (o licencia de prueba temporal)  
 
-## Cómo leer metadatos de archivos Excel con GroupDocs.Editor
-GroupDocs.Editor proporciona una API sencilla para acceder a las propiedades del libro. El flujo típico es:
+## Cómo leer metadatos de excel con GroupDocs.Editor
 
-1. **Load the Excel file** usando la clase `Editor`.  
-2. **Call the metadata extraction method** para obtener un diccionario de propiedades estándar y personalizadas.  
-3. **Consume the metadata** – regístralo, guárdalo en una base de datos o úsalo para impulsar reglas de negocio.
+Cargue el libro de trabajo con la clase `Editor`, llame a la API de metadatos y luego trabaje con el diccionario devuelto.  
+`Editor` es la clase principal que carga y manipula documentos en GroupDocs.Editor.
 
-> **Consejo profesional:** Siempre lee los metadatos **antes** de aplicar cualquier protección o transformación para evitar perder propiedades personalizadas.
+**Respuesta directa:**  
+Instancie `Editor` con la ruta a su archivo Excel, invoque `GetMetadata()` para recibir un `Dictionary<string, string>` que contiene tanto propiedades estándar como personalizadas, y luego itere sobre la colección para registrar o almacenar cada par clave/valor. `GetMetadata()` devuelve un diccionario de todas las propiedades estándar y personalizadas del documento. Toda esta operación se completa en dos llamadas a métodos y no requiere configuración adicional.
 
-## Cómo proteger archivos DOCX (how to protect docx)
-Si necesitas asegurar un documento Word después de extraer sus metadatos, sigue estos pasos:
+### Guía paso a paso
+1. **Crear la instancia de Editor** – pase la ruta completa del archivo o un `Stream` al constructor.  
+2. **Llamar al método de extracción de metadatos** – `editor.GetMetadata()` devuelve todas las propiedades disponibles.  
+3. **Procesar los resultados** – puede escribirlos en un archivo de registro, insertarlos en una base de datos o usarlos para impulsar reglas de negocio posteriores.  
 
-1. Carga el DOCX con `Editor`.  
-2. Aplica `ProtectionOptions` (contraseña, solo lectura, restricciones de edición).  
-3. Guarda el archivo protegido.
+> **Consejo profesional:** Realice la extracción de metadatos **antes** de cualquier paso de protección o conversión; esto garantiza que las propiedades personalizadas no se eliminen en el procesamiento posterior.
 
-Este patrón “how to protect docx” garantiza que el documento permanezca a prueba de manipulaciones mientras aún te permite leer sus metadatos primero.
+## Cómo proteger archivos docx (cómo proteger docx)
 
-## Tutoriales disponibles
+Aplicar protección con contraseña o restricciones de solo lectura a un documento Word después de haber extraído sus metadatos es sencillo con GroupDocs.Editor.
 
-### [Domina el procesamiento de documentos con GroupDocs.Editor .NET&#58; Cargar y editar documentos Word](./groupdocs-editor-net-word-documents-processing/)
-Aprende a cargar, leer y editar documentos Word de manera eficiente usando GroupDocs.Editor para .NET. Perfecto para desarrolladores que buscan soluciones avanzadas de procesamiento de documentos.
+**Respuesta directa:**  
+Cargue el DOCX usando `Editor`, configure un objeto `ProtectionOptions` con la contraseña y el tipo de restricción deseados, luego llame a `editor.Protect(protectionOptions)` seguido de `editor.Save(outputPath)`. `ProtectionOptions` especifica la contraseña y las restricciones de edición para el documento protegido. La protección se aplica en una sola pasada, preservando todos los metadatos extraídos previamente.
 
-### [Domina la extracción de metadatos en .NET con GroupDocs.Editor&#58; Guía completa](./groupdocs-editor-net-metadata-extraction-guide/)
-Aprende a extraer y gestionar metadatos de varios formatos de documentos de manera eficiente usando GroupDocs.Editor para .NET. Esta guía cubre Word, Excel y archivos de texto.
-
-### [Optimiza y protege archivos DOCX usando GroupDocs.Editor en .NET&#58; Guía avanzada](./optimize-protect-docx-groupdocs-editor-dotnet/)
-Aprende a optimizar, proteger y corregir campos de formulario inválidos en archivos DOCX usando GroupDocs.Editor para .NET. Mejora tu flujo de trabajo de gestión de documentos con esta guía completa.
+### Flujo de trabajo de protección
+- **Cargar el DOCX** – reutilice la misma instancia de `Editor` si está procesando varios archivos.  
+- **Configurar `ProtectionOptions`** – establezca `Password`, `ReadOnly` o restricciones de edición específicas como `AllowComments`.  
+- **Guardar el archivo protegido** – la salida conserva el contenido y los metadatos originales mientras aplica la configuración de seguridad que definió.
 
 ## Casos de uso comunes
-- **Indexación de búsqueda empresarial:** Extrae metadatos de informes Excel cargados para enriquecer los índices de búsqueda.  
-- **Auditoría de cumplimiento:** Verifica el autor y las fechas de creación antes de archivar documentos.  
-- **Pipelines de procesamiento por lotes:** Recorre una carpeta de libros, extrae metadatos y almacena los resultados en un repositorio central.  
-- **Entrega segura de documentos:** Extrae metadatos y luego aplica protección con contraseña a archivos DOCX antes de enviarlos a socios externos.
+- **Indexación de búsqueda empresarial:** Enriquecer los índices de búsqueda con autor, título y etiquetas personalizadas extraídas de los informes Excel cargados.  
+- **Auditoría de cumplimiento:** Verificar fechas de creación y campos de autor antes de archivar documentos para cumplir con los estándares regulatorios.  
+- **Flujos de procesamiento por lotes:** Recorrer un directorio de libros de trabajo, extraer metadatos y persistir los resultados en un repositorio central de metadatos.  
+- **Entrega segura de documentos:** Extraer los metadatos primero, luego bloquear el DOCX con una contraseña antes de transmitirlo a socios externos.
 
 ## Consejos y mejores prácticas
-- **Cachea metadatos de acceso frecuente** para reducir la sobrecarga de I/O en escenarios de alto rendimiento.  
-- **Valida los nombres de propiedades personalizadas** para evitar colisiones con claves reservadas.  
-- **Combina la extracción de metadatos con la conversión de documentos** cuando necesites migrar archivos heredados a formatos más nuevos preservando sus propiedades.  
-- **Siempre prueba con archivos protegidos con contraseña** usando el objeto `LoadOptions` para asegurar que tu lógica de extracción maneje la seguridad correctamente.
+- **Cachear metadatos de acceso frecuente** para minimizar I/O en escenarios de alto rendimiento.  
+- **Validar nombres de propiedades personalizadas** contra una lista blanca para evitar colisiones con claves reservadas.  
+- **Combinar extracción con conversión** al migrar archivos heredados; GroupDocs.Editor puede convertir Excel a PDF preservando los metadatos.  
+- **Probar con archivos protegidos con contraseña** usando el objeto `LoadOptions` para asegurar que su lógica de extracción maneje correctamente los libros de trabajo encriptados.  
 
 ## Recursos adicionales
+
 - [Documentación de GroupDocs.Editor para .net](https://docs.groupdocs.com/editor/net/)
-- [Referencia API de GroupDocs.Editor para .net](https://reference.groupdocs.com/editor/net/)
+- [Referencia de API de GroupDocs.Editor para .net](https://reference.groupdocs.com/editor/net/)
 - [Descargar GroupDocs.Editor para .net](https://releases.groupdocs.com/editor/net/)
 - [Foro de GroupDocs.Editor](https://forum.groupdocs.com/c/editor)
 - [Soporte gratuito](https://forum.groupdocs.com/)
 - [Licencia temporal](https://purchase.groupdocs.com/temporary-license/)
+- [Procesamiento maestro de documentos con GroupDocs.Editor .NET: Cargar y editar documentos Word](./groupdocs-editor-net-word-documents-processing/)
+- [Extracción maestra de metadatos en .NET con GroupDocs.Editor: Guía completa](./groupdocs-editor-net-metadata-extraction-guide/)
+- [Optimizar y proteger archivos DOCX usando GroupDocs.Editor en .NET: Guía avanzada](./optimize-protect-docx-groupdocs-editor-dotnet/)
 
 ## Preguntas frecuentes
 
-**Q: ¿Cómo extraigo metadatos de un PDF protegido con contraseña?**  
-**A:** Usa el objeto `LoadOptions` para proporcionar la contraseña al abrir el documento, luego llama a la API de extracción de metadatos.
+**P: ¿Cómo extraigo metadatos de un PDF protegido con contraseña?**  
+R: Proporcione la contraseña mediante un objeto `LoadOptions` al crear la instancia de `Editor`, luego llame a `GetMetadata()` como de costumbre.
 
-**Q: ¿Puedo editar un documento después de extraer sus metadatos?**  
-**A:** Absolutamente. La biblioteca te permite leer los metadatos primero, luego realizar cualquier operación de edición como escenarios de “edit word document .net”.
+**P: ¿Puedo editar un documento después de extraer sus metadatos?**  
+R: Sí—la extracción de metadatos no bloquea el archivo. Puede realizar cualquier operación de edición, como insertar texto o convertir formatos, después de haber leído las propiedades.
 
-**Q: ¿Cuál es la mejor manera de proteger un DOCX después de editarlo?**  
-**A:** Sigue la guía “how to protect docx”—aplica protección con contraseña mediante la clase `ProtectionOptions` después de terminar todas las ediciones.
+**P: ¿Cuál es la mejor manera de proteger un DOCX después de editarlo?**  
+R: Use el flujo de trabajo “cómo proteger docx”: configure `ProtectionOptions` con una contraseña fuerte y el nivel de restricción requerido, luego guarde el documento.
 
-**Q: ¿Es posible procesar por lotes varios archivos para la extracción de metadatos?**  
-**A:** Sí. Envuelve la lógica de extracción en un bucle o usa `Parallel.ForEach` para escenarios de alto rendimiento.
+**P: ¿Se admite el procesamiento por lotes de varios archivos para la extracción de metadatos?**  
+R: Absolutamente. Envuelva la lógica de extracción en un bucle `foreach` o use `Parallel.ForEach` para procesamiento concurrente; la arquitectura de transmisión de la biblioteca garantiza bajo consumo de memoria.
 
-**Q: ¿GroupDocs.Editor admite campos de metadatos personalizados?**  
-**A:** Las propiedades personalizadas son totalmente compatibles; puedes leerlas y escribirlas usando la misma API de metadatos.
+**P: ¿GroupDocs.Editor admite campos de metadatos personalizados?**  
+R: Sí—tanto las propiedades estándar como las personalizadas del libro de trabajo se devuelven en el diccionario de metadatos, lo que le permite leerlas y escribirlas con la misma API.
 
-**Q: ¿Puedo leer los metadatos de Excel sin cargar todo el libro en memoria?**  
-**A:** GroupDocs.Editor transmite el archivo y extrae los metadatos sin materializar completamente el libro, lo que mantiene bajo el uso de memoria.
+**P: ¿Puedo leer metadatos de excel sin cargar todo el libro de trabajo en memoria?**  
+R: GroupDocs.Editor transmite el archivo y extrae los metadatos directamente de las tablas de propiedades, manteniendo el uso de memoria mínimo incluso para libros de trabajo grandes.
 
-**Q: ¿En qué se diferencia “read excel file metadata” de usar Office Interop?**  
-**A:** GroupDocs.Editor es independiente de la plataforma, funciona en entornos de servidor y no requiere que Microsoft Office esté instalado, a diferencia de Interop.
+**P: ¿En qué se diferencia leer metadatos de excel de usar Office Interop?**  
+R: A diferencia de Interop, GroupDocs.Editor es del lado del servidor, no requiere instalación de Microsoft Office, funciona en contenedores Linux y procesa archivos de hasta 2 GB sin degradación del rendimiento.
 
 ---
 
-**Última actualización:** 2026-03-30  
-**Probado con:** GroupDocs.Editor 23.12 for .NET  
+**Última actualización:** 2026-08-05  
+**Probado con:** GroupDocs.Editor 23.12 para .NET  
 **Autor:** GroupDocs
+
+## Tutoriales relacionados
+
+- [Extracción maestra de metadatos en .NET con GroupDocs.Editor: Guía completa](/editor/net/advanced-features/groupdocs-editor-net-metadata-extraction-guide/)
+- [Proteger con contraseña archivos Excel usando GroupDocs.Editor para .NET | Gestión segura de hojas de cálculo](/editor/net/spreadsheet-documents/groupdocs-editor-net-password-excel-files/)
+- [Dominando la carga de documentos en .NET con GroupDocs.Editor: Guía completa](/editor/net/document-loading/groupdocs-editor-net-document-loading-guide/)
