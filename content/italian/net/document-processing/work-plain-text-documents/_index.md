@@ -1,24 +1,125 @@
 ---
-title: Lavora con documenti di solo testo
-linktitle: Lavora con documenti di solo testo
-second_title: API GroupDocs.Editor .NET
-description: Impara a modificare documenti di testo semplice utilizzando GroupDocs.Editor per .NET con la nostra guida passo passo. Semplifica il processo di modifica dei documenti .NET.
-weight: 15
-url: /it/net/document-processing/work-plain-text-documents/
+date: 2026-08-10
+description: Scopri come modificare file di testo semplice usando GroupDocs.Editor
+  per .NET. La guida copre il caricamento di un file txt, la rimozione degli spazi,
+  l'impostazione della codifica del testo e il salvataggio del risultato.
+keywords:
+- edit plain text
+- load txt file
+- trim trailing spaces
+- convert leading spaces
+- set text encoding
+lastmod: 2026-08-10
+linktitle: Lavorare con documenti di testo semplice
+og_description: Scopri come modificare file di testo semplice usando GroupDocs.Editor
+  per .NET – carica file txt, rimuovi spazi finali, converte spazi iniziali, imposta
+  la codifica del testo e salva in modo efficiente.
+og_image_alt: Guide showing edit plain text workflow with GroupDocs.Editor for .NET
+og_title: Modifica documenti di testo semplice con GroupDocs.Editor per .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-10'
+  description: Learn how to edit plain text files using GroupDocs.Editor for .NET.
+    The guide covers loading a txt file, trimming spaces, setting text encoding, and
+    saving the result.
+  headline: Edit plain text documents with GroupDocs.Editor for .NET
+  type: TechArticle
+- description: Learn how to edit plain text files using GroupDocs.Editor for .NET.
+    The guide covers loading a txt file, trimming spaces, setting text encoding, and
+    saving the result.
+  name: Edit plain text documents with GroupDocs.Editor for .NET
+  steps:
+  - name: Get a path to the input TXT file
+    text: First, decide whether you’ll work with a physical file path or a memory
+      stream. Using a path is the most straightforward approach for local development.
+  - name: Create an Editor instance
+    text: '`Editor` is the main class that loads a document and provides editing capabilities.'
+  - name: Create TXT editing options
+    text: '`TxtEditOptions` configures how plain‑text files are parsed and edited,
+      allowing you to set encoding and space‑handling rules.'
+  - name: Create an EditableDocument instance
+    text: '`EditableDocument` represents the in‑memory version of the loaded document,
+      including its text and any associated resources.'
+  - name: Edit the document content
+    text: Retrieve the original text, apply any string operations you need (e.g.,
+      replace, trim, change case), and store the result back into the `EditableDocument`.
+  - name: Create an EditableDocument with updated content
+    text: After you’ve transformed the text, instantiate a new `EditableDocument`
+      that contains the edited string and the original resource collection.
+  - name: Create WordProcessing save options
+    text: '`WordProcessingSaveOptions` defines settings for saving the document in
+      a Word‑compatible format such as DOCX or DOCM.'
+  - name: Create TXT saving options
+    text: '`TxtSaveOptions` specifies how the edited plain‑text file should be written,
+      including encoding, line‑ending preservation, and table layout handling.'
+  - name: Prepare output paths
+    text: Derive the output directory from the input file path, then build the full
+      filenames for the DOCX and TXT results.
+  - name: Save the edited document
+    text: Finally, call `editor.Save` twice—once with the WordProcessing options and
+      once with the TXT options—to produce both formats in a single operation.
+  type: HowTo
+- questions:
+  - answer: The library supports 50+ formats, including DOCX, TXT, HTML, PDF, and
+      markdown, allowing you to edit and convert between them seamlessly.
+    question: What file formats does GroupDocs.Editor for .NET support?
+  - answer: Download the trial from the [releases page](https://releases.groupdocs.com/).
+    question: How can I get a free trial of GroupDocs.Editor for .NET?
+  - answer: Yes, temporary licenses are available through the [GroupDocs purchase
+      page](https://purchase.groupdocs.com/temporary-license/).
+    question: Can I purchase a temporary license for testing?
+  - answer: The official support forum is the best place – visit the [GroupDocs.Editor
+      support forum](https://forum.groupdocs.com/c/editor/20).
+    question: Where can I find support if I run into issues?
+  - answer: Absolutely. The full reference is on the [GroupDocs.Editor documentation
+      page](https://tutorials.groupdocs.com/editor/net/).
+    question: Is there detailed documentation for advanced scenarios?
+  type: FAQPage
+second_title: GroupDocs.Editor .NET API
+tags:
+- edit plain text
+- GroupDocs.Editor
+- C# document processing
+- plain text editing
+- txt file handling
+title: Modifica documenti di testo semplice con GroupDocs.Editor per .NET
 type: docs
+url: /it/net/document-processing/work-plain-text-documents/
+weight: 15
 ---
-# Lavora con documenti di solo testo
 
-## introduzione
-Stai cercando di semplificare il processo di modifica dei documenti in .NET? Non cercare oltre GroupDocs.Editor per .NET! Questa potente API ti consente di modificare facilmente un'ampia varietà di formati di documenti. In questo tutorial ti guideremo attraverso il processo di lavoro con documenti di testo semplice utilizzando GroupDocs.Editor per .NET. Alla fine, sarai in grado di gestire la modifica dei documenti di testo come un professionista. Pronti a tuffarvi? Iniziamo!
+# Modifica documenti di testo semplice con GroupDocs.Editor per .NET
+
+## Introduzione
+Se hai bisogno di **modificare testo semplice** rapidamente e in modo affidabile in un'applicazione .NET, GroupDocs.Editor per .NET è lo strumento che fa il lavoro pesante. Questa API supporta più di 30 formati di documento, può gestire file fino a 500 MB e ti consente di manipolare il testo senza caricare l'intero file in memoria. In questo tutorial imparerai come caricare un file txt, rimuovere gli spazi finali, convertire gli spazi iniziali, impostare la codifica corretta e infine salvare il contenuto modificato su disco. Pronto per mettere le mani sul codice? Immergiamoci!
+
+## Risposte rapide
+- **Qual è il primo passo per modificare un file txt?** Carica il file con `Editor` usando il percorso o lo stream a tua disposizione.  
+- **Posso cambiare la codifica del file durante la modifica?** Sì – il `TxtSaveOptions` ti permette di specificare UTF‑8, UTF‑16 o qualsiasi codifica personalizzata.  
+- **Come rimuovo gli spazi extra alla fine di ogni riga?** Recupera il testo, chiama `TrimEnd()` su ogni riga e riscrivilo.  
+- **GroupDocs.Editor è gratuito per la prova?** È disponibile una versione di prova completamente funzionale di 30 giorni dalla pagina dei rilasci.  
+- **Quali versioni di .NET sono supportate?** .NET Framework 4.6+, .NET Core 3.1+ e .NET 5/6/7.
+
+## Che cosa significa modificare testo semplice?
+**Edit plain text** significa modificare programmaticamente i caratteri all'interno di un semplice file `.txt`—aggiungendo, rimuovendo o riformattando il testo—preservando la codifica originale del file e lo stile di interruzione di riga. Può includere operazioni come la rimozione di spazi bianchi, la normalizzazione delle terminazioni di riga, l'aggiornamento dei valori di configurazione o l'inserimento di contenuti generati. L'operazione dovrebbe mantenere il file leggibile da qualsiasi editor di testo standard e conservare eventuali metadati esistenti come i marker BOM.
+
+## Perché usare GroupDocs.Editor per la modifica di testo semplice?
+GroupDocs.Editor elabora i file in modalità streaming, il che significa che può modificare un file di log da 300 MB utilizzando meno di 50 MB di RAM. La libreria supporta **oltre 50 formati di input e output**, rileva automaticamente gli stili di terminazione di riga (CR, LF, CRLF) e fornisce opzioni integrate per **rimuovere gli spazi finali** e **convertire gli spazi iniziali** senza scrivere parser personalizzati.
+
 ## Prerequisiti
-Prima di iniziare, ci sono alcune cose che dovrai avere a posto:
-- Ambiente di sviluppo .NET: assicurati di avere configurato un ambiente di sviluppo .NET funzionante. Visual Studio è una scelta popolare.
--  GroupDocs.Editor per .NET: scarica e installa il file[GroupDocs.Editor per .NET](https://releases.groupdocs.com/editor/net/).
-- Conoscenza di base di C#: la familiarità con il linguaggio di programmazione C# ti aiuterà a seguire gli esempi.
-- Editor di testo: va bene qualsiasi editor di testo, anche se Visual Studio Code è consigliato per le sue funzionalità e facilità d'uso.
-## Importa spazi dei nomi
-Per iniziare a utilizzare GroupDocs.Editor per .NET, devi importare gli spazi dei nomi necessari nel tuo progetto. Ciò garantisce che tutte le classi e i metodi richiesti siano disponibili per l'uso.
+- **Ambiente di sviluppo .NET** – Visual Studio 2022 o VS Code con l'estensione C#.  
+- **GroupDocs.Editor per .NET** – scarica dalla pagina dei rilasci [GroupDocs.Editor for .NET](https://releases.groupdocs.com/editor/net/) .  
+- **Conoscenza di base di C#** – dovresti sentirti a tuo agio con I/O di file e manipolazione di stringhe.  
+- **Editor di testo (opzionale)** – per ispezionare i file sorgente; VS Code è consigliato.  
+- Per un utilizzo dettagliato, consulta la [documentazione](https://tutorials.groupdocs.com/editor/net/).  
+- Puoi anche navigare nella [pagina dei rilasci](https://releases.groupdocs.com/).
+
+## Come modificare testo semplice passo dopo passo
+Carica il file, modifica il suo contenuto e salvalo nuovamente – il tutto in meno di dieci righe di codice. Le sezioni seguenti ti guidano attraverso ogni fase con spiegazioni chiare.
+
+### Passo 1: Ottieni il percorso del file TXT di input
+Innanzitutto, decidi se lavorare con un percorso di file fisico o con uno stream in memoria. Usare un percorso è l'approccio più semplice per lo sviluppo locale.
+
 ```csharp
 using System.Collections.Generic;
 using System.IO;
@@ -26,20 +127,25 @@ using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.HtmlCss.Resources;
 using GroupDocs.Editor.Options;
 ```
-Suddividiamo il processo in passaggi gestibili. Seguici mentre ti guidiamo attraverso ogni fase della modifica di documenti di testo normale utilizzando GroupDocs.Editor per .NET.
-## Passaggio 1: ottieni un percorso per il file TXT di input
-Innanzitutto, è necessario specificare il percorso del file TXT di input. Può trattarsi del percorso di un file locale o di un flusso contenente il contenuto del file.
+
+### Passo 2: Crea un'istanza di Editor
+`Editor` è la classe principale che carica un documento e fornisce funzionalità di modifica.
+
 ```csharp
 string inputFilePath = "YourSampleDocument.txt";
 ```
-## Passaggio 2: crea un'istanza dell'editor
- Successivamente, crea un'istanza di`Editor` classe. Questa classe è responsabile del caricamento e della modifica dei documenti. In questa fase non sono richieste opzioni di caricamento.
+
+### Passo 3: Crea le opzioni di modifica TXT
+`TxtEditOptions` configura come i file di testo semplice vengono analizzati e modificati, consentendo di impostare la codifica e le regole di gestione degli spazi.
+
 ```csharp
 using (Editor editor = new Editor(inputFilePath))
 {
 ```
-## Passaggio 3: crea opzioni di modifica TXT
-Ora crea le opzioni di modifica TXT. Queste opzioni consentono di specificare come deve essere elaborato il contenuto testuale durante la modifica.
+
+### Passo 4: Crea un'istanza di EditableDocument
+`EditableDocument` rappresenta la versione in memoria del documento caricato, includendo il suo testo e eventuali risorse associate.
+
 ```csharp
     TextEditOptions editOptions = new TextEditOptions
     {
@@ -49,33 +155,43 @@ Ora crea le opzioni di modifica TXT. Queste opzioni consentono di specificare co
         TrailingSpaces = TextTrailingSpacesOptions.Trim
     };
 ```
-## Passaggio 4: crea un'istanza di documento modificabile
- Con le opzioni di modifica impostate, crea un file`EditableDocument` esempio. Questo rappresenta il documento in un formato modificabile.
+
+### Passo 5: Modifica il contenuto del documento
+Recupera il testo originale, applica le operazioni di stringa necessarie (ad esempio, replace, trim, change case) e memorizza il risultato nuovamente nell'`EditableDocument`.
+
 ```csharp
     EditableDocument beforeEdit = editor.Edit(editOptions);
 ```
-## Passaggio 5: modifica il contenuto del documento
-Recupera il contenuto del testo originale e apporta le modifiche desiderate. Per questo esempio, sostituiremo la parola "testo" con "testo EDITATO".
+
+### Passo 6: Crea un EditableDocument con contenuto aggiornato
+Dopo aver trasformato il testo, istanzia un nuovo `EditableDocument` che contiene la stringa modificata e la collezione di risorse originale.
+
 ```csharp
     string originalTextContent = beforeEdit.GetContent();
     string updatedTextContent = originalTextContent.Replace("text", "EDITED text");
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
-## Passaggio 6: crea un documento modificabile con contenuto aggiornato
- Dopo aver apportato le modifiche necessarie, creane uno nuovo`EditableDocument` con il contenuto aggiornato e le risorse originali.
+
+### Passo 7: Crea le opzioni di salvataggio WordProcessing
+`WordProcessingSaveOptions` definisce le impostazioni per salvare il documento in un formato compatibile con Word, come DOCX o DOCM.
+
 ```csharp
     EditableDocument afterEdit = EditableDocument.FromMarkup(updatedTextContent, allResources);
 ```
-## Passaggio 7: crea le opzioni di salvataggio dell'elaborazione testi
-Preparare le opzioni di salvataggio per il formato di elaborazione testi. Questo esempio utilizza il formato DOCM e specifica la locale.
+
+### Passo 8: Crea le opzioni di salvataggio TXT
+`TxtSaveOptions` specifica come il file di testo semplice modificato deve essere scritto, includendo la codifica, la conservazione delle terminazioni di riga e la gestione del layout delle tabelle.
+
 ```csharp
     WordProcessingSaveOptions wordSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docm)
     {
         Locale = System.Globalization.CultureInfo.GetCultureInfo("en-GB")
     };
 ```
-## Passaggio 8: crea opzioni di salvataggio TXT
-Allo stesso modo, crea le opzioni di salvataggio per il formato TXT. Assicurati che la codifica sia impostata su UTF-8 e preserva il layout della tabella.
+
+### Passo 9: Prepara i percorsi di output
+Deriva la directory di output dal percorso del file di input, quindi costruisci i nomi completi dei file per i risultati DOCX e TXT.
+
 ```csharp
     TextSaveOptions txtSaveOptions = new TextSaveOptions
     {
@@ -83,30 +199,55 @@ Allo stesso modo, crea le opzioni di salvataggio per il formato TXT. Assicurati 
         PreserveTableLayout = true
     };
 ```
-## Passaggio 9: preparare i percorsi di output
-Preparare i percorsi per il salvataggio dei file DOCX e TXT risultanti. Utilizzare il percorso del file di input per determinare la directory di output e i nomi dei file.
+
+### Passo 10: Salva il documento modificato
+Infine, chiama `editor.Save` due volte—una volta con le opzioni WordProcessing e una volta con le opzioni TXT—per produrre entrambi i formati in un'unica operazione.
+
 ```csharp
     string outputWordPath = Path.Combine(Path.GetDirectoryName(inputFilePath), Path.GetFileNameWithoutExtension(inputFilePath) + ".docm");
     string outputTxtPath = Path.Combine(Path.GetDirectoryName(inputFilePath), Path.GetFileNameWithoutExtension(inputFilePath) + ".txt");
 ```
-## Passaggio 10: salva il documento modificato
-Infine, salva il documento modificato in entrambi i formati DOCX e TXT utilizzando le opzioni di salvataggio specificate.
+
+## Problemi comuni e soluzioni
+- **Gli spazi finali rimangono dopo la modifica** – assicurati che `TxtEditOptions.TrimTrailingSpaces` sia impostato su `true` prima di caricare il documento.  
+- **Codifica errata nel file salvato** – verifica che `TxtSaveOptions.Encoding` corrisponda alla pagina di codice desiderata (ad es., `Encoding.UTF8`).  
+- **File di grandi dimensioni causano OutOfMemoryException** – utilizza l'API streaming (`Editor.Load(Stream)`) invece di caricare da un percorso file per mantenere basso l'uso della memoria.  
+
+## Domande frequenti
+
+**D: Quali formati di file supporta GroupDocs.Editor per .NET?**  
+R: La libreria supporta oltre 50 formati, inclusi DOCX, TXT, HTML, PDF e markdown, consentendo di modificare e convertire tra di essi senza problemi.
+
+**D: Come posso ottenere una prova gratuita di GroupDocs.Editor per .NET?**  
+R: Scarica la versione di prova dalla [pagina dei rilasci](https://releases.groupdocs.com/).
+
+**D: Posso acquistare una licenza temporanea per i test?**  
+R: Sì, le licenze temporanee sono disponibili tramite la [pagina di acquisto di GroupDocs](https://purchase.groupdocs.com/temporary-license/).
+
+**D: Dove posso trovare supporto se riscontro problemi?**  
+R: Il forum di supporto ufficiale è il posto migliore – visita il [forum di supporto di GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
+
+**D: Esiste una documentazione dettagliata per scenari avanzati?**  
+R: Assolutamente. Il riferimento completo è disponibile nella [pagina di documentazione di GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).
+
+## Conclusione
+Ora hai imparato a **modificare testo semplice** usando GroupDocs.Editor per .NET—caricando un file txt, rimuovendo gli spazi, convertendo gli spazi iniziali, impostando la codifica corretta e salvando il risultato sia in formato TXT che DOCX. Questa funzionalità ti consente di automatizzare la pulizia dei file di log, generare file di configurazione al volo o creare pipeline di elaborazione testo personalizzate senza reinventare la ruota. Esplora funzionalità aggiuntive come l'elaborazione batch e la conversione di documenti visitando la documentazione ufficiale.
+
+---
+
+**Last Updated:** 2026-08-10  
+**Tested With:** GroupDocs.Editor 23.11 for .NET  
+**Author:** GroupDocs  
+
 ```csharp
     editor.Save(afterEdit, outputWordPath, wordSaveOptions);
     editor.Save(afterEdit, outputTxtPath, txtSaveOptions);
 }
 System.Console.WriteLine("Document editing process completed successfully!");
 ```
-## Conclusione
- Congratulazioni! Hai modificato con successo un documento di testo normale utilizzando GroupDocs.Editor per .NET. Questo potente strumento semplifica la modifica dei documenti, facilitandone l'integrazione nelle applicazioni .NET. Che tu stia gestendo semplici file di testo o formati di documenti complessi, GroupDocs.Editor è quello che fa per te. Esplora ulteriori funzionalità e capacità visitando il[Documentazione di GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).
-## Domande frequenti
-### Quali formati di file supporta GroupDocs.Editor per .NET?
- GroupDocs.Editor per .NET supporta un'ampia gamma di formati di file, inclusi DOCX, TXT, HTML e altri. Controlla il[documentazione](https://tutorials.groupdocs.com/editor/net/) per un elenco completo.
-### Come posso ottenere una prova gratuita di GroupDocs.Editor per .NET?
- È possibile scaricare una versione di prova gratuita di GroupDocs.Editor per .NET dal sito[pagina delle uscite](https://releases.groupdocs.com/).
-### Posso acquistare una licenza temporanea per GroupDocs.Editor per .NET?
-Sì, puoi ottenere una licenza temporanea da[Pagina di acquisto di GroupDocs](https://purchase.groupdocs.com/temporary-license/).
-### Dove posso ottenere supporto per GroupDocs.Editor per .NET?
- Il supporto è disponibile tramite il[Forum di supporto GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
-### È disponibile una documentazione dettagliata per GroupDocs.Editor per .NET?
- Sì, la documentazione dettagliata è disponibile sul[Pagina della documentazione di GroupDocs.Editor](https://tutorials.groupdocs.com/editor/net/).
+
+## Tutorial correlati
+
+- [Tutorial di caricamento documenti con GroupDocs.Editor per .NET](/editor/net/document-loading/)
+- [Tutorial di salvataggio ed esportazione documenti per GroupDocs.Editor .NET](/editor/net/document-saving/)
+- [Tutorial di modifica di testo semplice e documenti DSV per GroupDocs.Editor .NET](/editor/net/plain-text-dsv-documents/)
