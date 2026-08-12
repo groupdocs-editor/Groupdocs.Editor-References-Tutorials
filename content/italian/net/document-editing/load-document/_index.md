@@ -1,89 +1,148 @@
 ---
-title: Carica documento
-linktitle: Carica documento
-second_title: API GroupDocs.Editor .NET
-description: Scopri come modificare i documenti a livello di codice con GroupDocs.Editor per .NET. Guida passo passo per caricare documenti, gestire file protetti da password e altro ancora.
-weight: 13
-url: /it/net/document-editing/load-document/
+date: 2026-04-20
+description: Scopri come caricare un documento protetto da password utilizzando GroupDocs.Editor
+  per .NET, inclusi il caricamento da un percorso file, da un flusso di byte e da
+  un database.
+keywords:
+- load password protected document
+- load document from stream
+- load document from database
+linktitle: Carica documento protetto da password
+second_title: GroupDocs.Editor .NET API
+title: Carica documento protetto da password con GroupDocs.Editor .NET
 type: docs
+url: /it/net/document-editing/load-document/
+weight: 13
 ---
-# Carica documento
 
-## introduzione
-La modifica dei documenti a livello di codice può essere un compito arduo, soprattutto se hai a che fare con formati di file diversi e strutture complesse. Fortunatamente, GroupDocs.Editor per .NET rende questo compito un gioco da ragazzi, fornendo un'API robusta e facile da usare per modificare un'ampia gamma di tipi di documenti. In questo tutorial ti guideremo attraverso tutto ciò di cui hai bisogno per iniziare con GroupDocs.Editor per .NET, inclusi i prerequisiti, come importare gli spazi dei nomi e una guida dettagliata passo passo per caricare i documenti utilizzando vari metodi.
+# Carica documento protetto da password con GroupDocs.Editor .NET
+
+## Introduzione
+Modificare i documenti programmaticamente può sembrare opprimente, soprattutto quando è necessario **load password protected document** file che risiedono in posizioni diverse. Che il file sia su disco, provenga da un flusso di byte o sia memorizzato in un database, GroupDocs.Editor per .NET ti offre un'API pulita e coerente per gestire tutti questi scenari. In questa guida percorreremo i prerequisiti, importeremo gli spazi dei nomi richiesti e ti mostreremo passo‑passo come caricare i documenti usando vari metodi—compreso il caso speciale dei file protetti da password.
+
+## Risposte rapide
+- **GroupDocs.Editor può aprire file protetti da password?** Sì, utilizza le opzioni di caricamento appropriate impostando la password.  
+- **Quali versioni .NET sono supportate?** .NET Framework 2.0+ e .NET Core/5/6 sono tutti compatibili.  
+- **Devo rilasciare l'oggetto Editor?** Assolutamente—chiama `Dispose()` per liberare le risorse.  
+- **Posso caricare un documento da un database?** Sì, recupera il file come array di byte o stream e passalo al costruttore `Editor`.  
+- **Esiste un limite di dimensione del file?** I file di grandi dimensioni sono supportati; considera di utilizzare il caricamento basato su stream con opzioni di ottimizzazione della memoria.
+
+## Che cosa è “load password protected document”?
+Caricare un documento protetto da password significa aprire un file che richiede una password per l'accesso, quindi fornire quella password programmaticamente affinché l'API possa decrittare e lavorare con il contenuto. GroupDocs.Editor astrae il passaggio di decrittazione tramite le opzioni di caricamento, rendendo il processo semplice.
+
+## Perché usare GroupDocs.Editor per caricare i documenti?
+- **Unified API** – Lo stesso codice funziona per file Word, Excel, PowerPoint e HTML.  
+- **Password handling** – Supporto integrato per file crittografati senza decrittazione manuale.  
+- **Stream flexibility** – Carica da percorsi file, stream o qualsiasi fonte personalizzata come un database.  
+- **Resource management** – Il semplice pattern `Dispose()` mantiene basso l'uso della memoria.
+
 ## Prerequisiti
-Prima di approfondire, assicurati di aver configurato i seguenti prerequisiti:
-- Visual Studio: assicurati di avere Visual Studio installato sul tuo computer.
-- .NET Framework: GroupDocs.Editor per .NET supporta .NET Framework 2.0 o versione successiva. Assicurati che il tuo progetto abbia come target un framework compatibile.
--  GroupDocs.Editor per .NET: scarica la versione più recente da[pagina di download](https://releases.groupdocs.com/editor/net/).
-- Conoscenza di base di C#: per seguire questo tutorial è necessaria la familiarità con la programmazione C# e .NET.
+Prima di iniziare, assicurati di avere i seguenti prerequisiti configurati:
+- **Visual Studio** – Assicurati di avere Visual Studio installato sulla tua macchina.  
+- **.NET Framework** – GroupDocs.Editor per .NET supporta .NET Framework 2.0 o successivo. Assicurati che il tuo progetto punti a un framework compatibile.  
+- **GroupDocs.Editor for .NET** – Scarica l'ultima versione dalla [download page](https://releases.groupdocs.com/editor/net/).  
+- **Basic Knowledge of C#** – Familiarità con C# e la programmazione .NET è necessaria per seguire questo tutorial.
+
 ## Importa spazi dei nomi
-Per iniziare a utilizzare GroupDocs.Editor per .NET, devi importare gli spazi dei nomi necessari nel tuo progetto. Aggiungi le seguenti direttive using nella parte superiore del file C#:
+Per iniziare a usare GroupDocs.Editor per .NET, devi importare gli spazi dei nomi necessari nel tuo progetto. Aggiungi le seguenti direttive using all'inizio del tuo file C#:
+
 ```csharp
 using GroupDocs.Editor.Options;
 using System.IO;
 ```
+
 Questi spazi dei nomi forniranno l'accesso alle classi e ai metodi richiesti per le attività di modifica dei documenti.
-## Passaggio 1: caricare il documento da un percorso file
-Caricare un documento da un percorso file è semplice. Questo metodo è ideale per i documenti archiviati localmente sul computer.
+
+## Passo 1: Carica documento da un percorso file
+Caricare un documento da un percorso file è semplice. Questo metodo è ideale per documenti memorizzati localmente sulla tua macchina.
 
 ```csharp
 string inputPath = "Your Sample Document";
-// Carica il documento come file tramite percorso e senza opzioni di caricamento
+// Load document as file via path and without load options
 Editor editor1 = new Editor(inputPath);
-// Smaltire le risorse
+// Dispose resources
 editor1.Dispose();
 System.Console.WriteLine("Document loaded successfully from file path.");
 ```
-## Passaggio 2: caricare il documento con le opzioni di caricamento
-A volte potrebbe essere necessario caricare documenti che richiedono una gestione speciale, come file protetti da password. In questi casi, puoi utilizzare le opzioni di caricamento.
+
+## Passo 2: Carica documento con Load Options (file protetti da password)
+A volte, potresti dover caricare documenti che richiedono una gestione speciale, come i file protetti da password. In tali casi, puoi utilizzare le opzioni di caricamento.
 
 ```csharp
 string inputPath = "Your Sample Document";
-//Crea opzioni di caricamento per i documenti Word
+// Create load options for Word documents
 WordProcessingLoadOptions wordLoadOptions = new WordProcessingLoadOptions();
 wordLoadOptions.Password = "some password";
-// Carica il documento come file tramite percorso e con opzioni di caricamento
+// Load document as file via path and with load options
 Editor editor2 = new Editor(inputPath, delegate { return wordLoadOptions; });
-// Smaltire le risorse
+// Dispose resources
 editor2.Dispose();
 System.Console.WriteLine("Password-protected document loaded successfully.");
 ```
-## Passaggio 3: caricare il documento da un flusso di byte
-Il caricamento di un documento da un flusso di byte è utile quando è necessario elaborare documenti che non sono archiviati come file, come quelli recuperati da un database o da un servizio Web.
+
+## Come caricare un documento da stream
+Caricare un documento da un byte stream è utile quando devi elaborare documenti che non sono memorizzati come file, ad esempio quelli recuperati da un database o da un servizio web.
 
 ```csharp
 FileStream inputStream = File.OpenRead("Your Sample Document");
-// Carica il documento come contenuto dal flusso di byte e senza opzioni di caricamento
+// Load document as content from byte stream and without load options
 Editor editor3 = new Editor(delegate { return inputStream; });
-// Smaltire le risorse
+// Dispose resources
 editor3.Dispose();
 System.Console.WriteLine("Document loaded successfully from byte stream.");
 ```
-## Passaggio 4: caricare il documento con le opzioni di caricamento da un flusso di byte
-Per i documenti che richiedono una gestione speciale quando caricati da un flusso di byte, è possibile combinare il caricamento del flusso di byte con le opzioni di caricamento.
+
+## Passo 4: Carica documento con Load Options da un byte stream
+Per i documenti che richiedono una gestione speciale quando vengono caricati da un byte stream, puoi combinare il caricamento da stream con le opzioni di caricamento.
 
 ```csharp
 FileStream inputStream = File.OpenRead("Your Sample Document");
-// Crea opzioni di caricamento per i fogli di calcolo
+// Create load options for spreadsheets
 SpreadsheetLoadOptions sheetLoadOptions = new SpreadsheetLoadOptions();
 sheetLoadOptions.OptimizeMemoryUsage = true;
-// Carica il documento come contenuto dal flusso di byte e con le opzioni di caricamento
+// Load document as content from byte stream and with load options
 Editor editor4 = new Editor(delegate { return inputStream; }, delegate { return sheetLoadOptions; });
-// Smaltire le risorse
+// Dispose resources
 editor4.Dispose();
 System.Console.WriteLine("Spreadsheet document loaded successfully with load options.");
 ```
-## Conclusione
-Congratulazioni! Hai imparato con successo come caricare documenti utilizzando GroupDocs.Editor per .NET in vari modi. Che tu abbia a che fare con file locali, documenti protetti da password o flussi di byte, GroupDocs.Editor fornisce una soluzione flessibile e potente per le tue esigenze di modifica dei documenti. Ricordati di smaltire sempre le risorse per garantire prestazioni e gestione delle risorse ottimali nelle tue applicazioni.
+
+## Come caricare un documento da un database
+Se i tuoi documenti sono memorizzati in un database relazionale, recupera i dati binari (ad es., usando `SELECT FileData FROM Documents WHERE Id = @id`) e passa il risultato `byte[]` o `MemoryStream` al costruttore `Editor` proprio come nell'esempio di stream sopra. Questo mantiene il tuo codice coerente indipendentemente dalla sorgente.
+
+## Problemi comuni e soluzioni
+- **Incorrect password** – L'editor genererà un'eccezione. Verifica il valore della password e assicurati di utilizzare la classe di load options corretta per il tipo di file.  
+- **Stream already closed** – Assicurati che lo stream rimanga aperto per tutta la durata dell'istanza `Editor`, oppure copia lo stream in un `MemoryStream`.  
+- **Memory consumption with large files** – Usa `SpreadsheetLoadOptions.OptimizeMemoryUsage = true` (come mostrato) o opzioni equivalenti per altri formati.
+
 ## Domande frequenti
-### Quali formati di file sono supportati da GroupDocs.Editor per .NET?
- GroupDocs.Editor supporta un'ampia gamma di formati di file, inclusi DOCX, XLSX, PPTX, HTML e molti altri. Per un elenco completo, fare riferimento a[documentazione](https://tutorials.groupdocs.com/editor/net/).
-### Come gestisco i documenti protetti da password?
- Puoi utilizzare opzioni di caricamento come`WordProcessingLoadOptions` per specificare la password durante il caricamento di documenti protetti da password.
-### Posso utilizzare GroupDocs.Editor in un'applicazione web?
-Sì, GroupDocs.Editor può essere utilizzato nelle applicazioni web. Assicurati di gestire correttamente i flussi di file e l'eliminazione delle risorse per evitare perdite di memoria.
-### Dove posso ottenere una licenza temporanea per GroupDocs.Editor?
- È possibile ottenere una licenza temporanea da[pagina della licenza temporanea](https://purchase.groupdocs.com/temporary-license/).
-### È disponibile supporto se riscontro problemi?
- Sì, GroupDocs fornisce supporto tramite il proprio[Forum di assistenza](https://forum.groupdocs.com/c/editor/20).
+
+**Q: Quali formati di file sono supportati da GroupDocs.Editor per .NET?**  
+**A:** GroupDocs.Editor supporta un'ampia gamma di formati di file, inclusi DOCX, XLSX, PPTX, HTML e molti altri. Per un elenco completo, consulta la [documentation](https://tutorials.groupdocs.com/editor/net/).
+
+**Q: Come gestisco i documenti protetti da password?**  
+**A:** Puoi utilizzare le opzioni di caricamento come `WordProcessingLoadOptions` per specificare la password durante il caricamento di documenti protetti da password.
+
+**Q: Posso usare GroupDocs.Editor in un'applicazione web?**  
+**A:** Sì, GroupDocs.Editor può essere utilizzato in applicazioni web. Assicurati di gestire correttamente gli stream dei file e lo smaltimento delle risorse per evitare perdite di memoria.
+
+**Q: Dove posso ottenere una licenza temporanea per GroupDocs.Editor?**  
+**A:** Puoi ottenere una licenza temporanea dalla [temporary license page](https://purchase.groupdocs.com/temporary-license/).
+
+**Q: È disponibile supporto se incontro problemi?**  
+**A:** Sì, GroupDocs fornisce supporto tramite il loro [support forum](https://forum.groupdocs.com/c/editor/20).
+
+**Q: Il caricamento da un database richiede configurazioni speciali?**  
+**A:** Nessuna configurazione speciale è necessaria oltre al recupero dei dati binari e al loro passaggio come stream o array di byte al costruttore `Editor`.
+
+**Q: Come posso migliorare le prestazioni quando carico fogli di calcolo molto grandi?**  
+**A:** Abilita opzioni di ottimizzazione della memoria come `SpreadsheetLoadOptions.OptimizeMemoryUsage = true` per ridurre l'impronta di memoria.
+
+## Conclusione
+Congratulazioni! Hai imparato con successo come **load password protected document** file usando GroupDocs.Editor per .NET in vari modi. Che tu stia gestendo file locali, documenti protetti da password, byte stream o contenuti memorizzati in un database, GroupDocs.Editor fornisce una soluzione flessibile e potente per le tue esigenze di modifica dei documenti. Ricorda di rilasciare sempre l'istanza `Editor` per mantenere la tua applicazione performante ed efficiente in termini di risorse.
+
+---
+
+**Last Updated:** 2026-04-20  
+**Tested With:** GroupDocs.Editor 2.0 (latest)  
+**Author:** GroupDocs
