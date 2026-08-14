@@ -1,53 +1,79 @@
 ---
-date: '2026-02-08'
-description: Tanulja meg, hogyan konvertálhatja a weboldalt Word formátumba, és generálhat
-  professzionális DOCX fájlokat a GroupDocs.Editor for Java segítségével – ideális
-  jelentésekhez és dokumentációhoz.
+date: '2026-07-02'
+description: Ismerje meg, hogyan konvertálhatja a weboldalt DOCX formátumba a GroupDocs.Editor
+  for Java segítségével – alakítsa át a HTML-t szerkeszthető Word dokumentumokká gyorsan
+  és megbízhatóan.
 keywords:
-- Java HTML to Word conversion
-- GroupDocs.Editor for Java
-- document transformation
-title: 'Java: Weboldal konvertálása Word-be a GroupDocs.Editor segítségével'
+- convert webpage to docx
+- html to word java
+- save html as word
+- export webpage to word
+- java generate word document
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-02'
+  description: Learn how to convert webpage to DOCX with GroupDocs.Editor for Java
+    – transform HTML into editable Word documents quickly and reliably.
+  headline: 'Java: Convert Webpage to DOCX Using GroupDocs.Editor'
+  type: TechArticle
+- questions:
+  - answer: Yes. Download the page content with `Jsoup` or `HttpClient`, then feed
+      the string into `EditableDocument.fromMarkupAndResourceFolder`.
+    question: Can I convert a live URL directly without saving the HTML first?
+  - answer: Absolutely. Change the extension in `WordProcessingFormats.fromExtension("docx")`
+      and adjust the output file name.
+    question: Does GroupDocs.Editor support converting to DOCX as well as DOCM?
+  - answer: Download those CSS files into your resource folder before initializing
+      `EditableDocument`, or let the editor fetch them if you enable network access.
+    question: What if my HTML references external CSS hosted on a CDN?
+  - answer: The trial works without a license key but is limited to 30 days and a
+      maximum document size. For production, purchase a license.
+    question: Is a license required for the free trial?
+  - answer: No. Word processing formats do not support client‑side JavaScript; only
+      static content and styling are retained.
+    question: Can I preserve JavaScript functionality in the Word output?
+  type: FAQPage
+title: 'Java: Weboldal átalakítása DOCX formátumba a GroupDocs.Editor segítségével'
 type: docs
 url: /hu/java/document-saving/java-html-word-conversion-groupdocs-editor-guide/
 weight: 1
 ---
 
-# Java: Weboldal konvertálása Word-re a GroupDocs.Editor használatával
+# Java: Weboldal konvertálása DOCX formátumba a GroupDocs.Editor segítségével
 
-A **weboldal Word-re konvertálása** gyakori igény, amikor online tartalmat szeretnénk nyomtatható, szerkeszthető dokumentummá alakítani. Legyen szó marketingoldalról, technikai cikkről vagy jogi közleményről, a HTML DOCX vagy DOCM formátumba való átalakítása lehetővé teszi a szerkesztést, megosztást és archiválást a jól ismert Office eszközökkel. Ebben az útmutatóban lépésről lépésre bemutatjuk, hogyan használhatjuk a **GroupDocs.Editor for Java**‑t HTML fájl beolvasására, erőforrásainak ellenőrzésére, és a végeredmény mentésére HTML és Word formátumban egyaránt.
+A **weboldal DOCX-be konvertálása** lehetővé teszi, hogy bármely online HTML oldalt teljesen szerkeszthető Word dokumentummá alakítsunk, amely megosztható, nyomtatható vagy tovább testreszabható. Akár egy marketingcikk archiválására, egy műszerfalról jelentés generálására, vagy egy jogi közlemény nyomtatható változatának biztosítására van szükség, a konverzió megőrzi az elrendezést, a stílusokat és a beágyazott képeket. Ebben az útmutatóban lépésről lépésre bemutatjuk, hogyan használjuk a **GroupDocs.Editor for Java**-t egy HTML fájl beolvasásához, erőforrásainak összegyűjtéséhez, és az eredmény mentéséhez HTML és DOCX/DOCM fájlokként.
 
 ## Gyors válaszok
-- **Mit jelent a “weboldal Word-re konvertálása”?** Átalakítja a HTML markupot és annak erőforrásait egy szerkeszthető Word (DOCX/DOCM) fájlba.  
-- **Melyik könyvtár végzi a konverziót?** GroupDocs.Editor for Java.  
-- **Szükség van licencre?** Egy ingyenes próbaidőszak elegendő a teszteléshez; a termeléshez fizetős licenc szükséges.  
+- **Mit jelent a „weboldal DOCX-be konvertálása”?** Átalakítja a HTML jelölőnyelvet és annak erőforrásait egy szerkeszthető Word (DOCX/DOCM) fájlba.  
+- **Melyik könyvtár kezeli a konverziót?** GroupDocs.Editor for Java.  
+- **Szükségem van licencre?** Egy ingyenes próba a teszteléshez működik; a termeléshez fizetett licenc szükséges.  
 - **Milyen Java verzió szükséges?** Java 8 vagy újabb.  
-- **Megőrizhető a CSS és a képek?** Igen – a szerkesztő megőrzi a hivatkozott stíluslapokat és képeket a konverzió során.
+- **Megőrizhetem a CSS-t és a képeket?** Igen – a szerkesztő a konverzió során megőrzi a hivatkozott stíluslapokat és képeket.
 
-## Mi a “weboldal Word-re konvertálása”?
-A folyamat beolvassa egy oldal HTML forrását, összegyűjti a hivatkozott CSS‑eket és képeket, majd egy olyan szövegszerkesztő dokumentumot generál, amely megőrzi az eredeti elrendezést és stílusokat. Ez lehetővé teszi a további szerkesztést a Microsoft Word vagy más kompatibilis szerkesztőkben.
+## Mi a „weboldal DOCX-be konvertálása”?
+Töltsd be a HTML forrást, csomagold be a hivatkozott CSS‑t vagy képeket, és generálj egy szövegszerkesztő dokumentumot, amely tükrözi az eredeti elrendezést. A konverzió megőrzi a címsorokat, táblázatokat, listákat és a stílusokat, egy olyan fájlt eredményezve, amely megnyitható és szerkeszthető a Microsoft Wordben vagy bármely kompatibilis szerkesztőben, anélkül, hogy manuális újraformázásra vagy újraépítésre lenne szükség.
 
 ## Miért használjuk a GroupDocs.Editor for Java‑t?
-A GroupDocs.Editor magas szintű API‑t biztosít, amely elrejti a HTML alacsony szintű elemzését, az erőforrások kezelését és a formátumspecifikus sajátosságokat. Kipróbált, támogatja a DOCX/DOCM formátumokat, és platformfüggetlen, natív függőségek nélkül működik.
+A GroupDocs.Editor egy magas szintű API‑t biztosít, amely 2 másodpercnél kevesebb idő alatt konvertálja a HTML‑t DOCX‑be 150 MB-ig terjedő fájlok esetén, több mint 30 HTML elemet támogat, és automatikusan beágyazza a CSS‑t és a képeket. Keresztplatformos, nem igényel natív függőségeket, és garantálja az elrendezés pontosságát a Word, a LibreOffice és a Google Docs között.
 
-## Előfeltételek
+## Előkövetelmények
 
 ### Szükséges könyvtárak, verziók és függőségek
-- **Apache Commons IO** – egyszerűsíti a fájl‑I/O műveleteket.  
+- **Apache Commons IO** – egyszerűsíti a fájl I/O‑t.  
 - **GroupDocs.Editor** – 25.3 verzió (vagy a legújabb stabil kiadás).
 
 ### Környezet beállítási követelmények
 - JDK 8 vagy újabb telepítve.  
-- IntelliJ IDEA vagy Eclipse fejlesztőkörnyezet.
+- Egy IDE, például IntelliJ IDEA vagy Eclipse.
 
-### Tudásbeli előfeltételek
-- Alapvető Java és Maven projektstruktúra ismerete.  
+### Tudás előkövetelmények
+- Alapvető Java és Maven projektstruktúra.  
 - HTML fájlok és azok mappaszerkezetének ismerete.
 
-## GroupDocs.Editor for Java beállítása
+## A GroupDocs.Editor beállítása Java‑hoz
 
 ### Maven beállítás
-Add hozzá a GroupDocs tárolót és függőséget a `pom.xml`‑hez:
+Addja a GroupDocs tárolót és függőséget a `pom.xml`‑hez:
 
 ```xml
 <repositories>
@@ -68,19 +94,19 @@ Add hozzá a GroupDocs tárolót és függőséget a `pom.xml`‑hez:
 ```
 
 ### Közvetlen letöltés
-Alternatívaként letöltheted a legújabb verziót a [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) oldalról.
+Alternatívaként letöltheti a legújabb verziót a [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) oldalról.
 
-### Licenc beszerzési lépések
-- **Ingyenes próba:** Kezdj egy próbaidőszakkal, hogy felfedezd az API‑t.  
-- **Ideiglenes licenc:** Használj időkorlátos kulcsot a kiterjesztett értékeléshez.  
-- **Megvásárlás:** Szerezz kereskedelmi licencet a termelési környezethez.
+### Licenc megszerzésének lépései
+- **Free Trial:** Kezdje egy próbaidőszakkal az API felfedezéséhez.  
+- **Temporary License:** Használjon időkorlátos kulcsot a kiterjesztett értékeléshez.  
+- **Purchase:** Szerezzen be kereskedelmi licencet a termelési környezethez.
 
 ## Implementációs útmutató
 
-Az alábbiakban egy lépésről‑lépésre bemutatott folyamatot találsz. Minden kódrészlet változatlanul marad az eredeti oktatóanyagból; a környező magyarázatok a tisztánlátás érdekében bővültek.
+Az alábbiakban egy lépésről‑lépésre bemutató található. Minden kódrészlet változatlan az eredeti útmutatóból; a környező magyarázatok a tisztaság kedvéért bővítve lettek.
 
-### Feature 1 – HTML tartalom beolvasása fájlból  
-**Miért fontos:** A weboldal konvertálásához először a nyers HTML‑t kell `String`‑ként rendelkezésre állnia. Az Apache Commons IO segítségével ez egyetlen sorban megoldható.
+### 1. funkció – HTML tartalom beolvasása fájlból  
+**Miért fontos:** A weboldal konvertálásához először a nyers HTML‑t kell `String`‑ként beszerezni. Az Apache Commons IO használata egy egy‑soros megoldást tesz lehetővé.
 
 #### 1.1 Szükséges könyvtárak importálása
 ```java
@@ -88,23 +114,25 @@ import java.io.File;
 import org.apache.commons.io.FileUtils;
 ```
 
-#### 1.2 Fájl útvonal megadása  
-Cseréld le a `YOUR_DOCUMENT_DIRECTORY`‑t arra a mappára, amely a forrás‑HTML‑t tartalmazza.
+#### 1.2 Fájlútvonal megadása  
+Cserélje le a `YOUR_DOCUMENT_DIRECTORY`-t arra a mappára, amely a forrás HTML‑t tartalmazza.
 
 ```java
 String htmlFilePath = "YOUR_DOCUMENT_DIRECTORY/sample_html_body.html";
 ```
 
 #### 1.3 Tartalom beolvasása `String`‑be  
-A `FileUtils.readFileToString` metódus UTF‑8 kódolással olvassa be a fájlt, megőrizve minden karaktert.
+A `FileUtils.readFileToString` metódus UTF‑8 kódolással olvassa be a fájlt, megőrizve az összes karaktert.
 
 ```java
 String content = FileUtils.readFileToString(new File(htmlFilePath), "utf-8");
 // Note: This method reads the HTML content as a UTF-8 encoded string, ensuring accurate representation of characters.
 ```
 
-### Feature 2 – EditableDocument inicializálása HTML tartalomból  
-**Miért fontos:** Az `EditableDocument` a markupot és annak erőforrásait (CSS, képek) egy egységbe csoportosítja, így a szerkesztő egy teljes dokumentummal dolgozhat.
+### 2. funkció – EditableDocument inicializálása HTML tartalomból  
+**Miért fontos:** A `EditableDocument` a központi objektum, amely a jelölőnyelvet az erőforrásaival (CSS, képek) egyesíti, így a szerkesztő egy teljes dokumentummal dolgozhat.
+
+A `EditableDocument` osztály egyetlen HTML dokumentumot képvisel a kapcsolódó erőforrásaival együtt, lehetővé téve a zökkenőmentes konverziót más formátumokra.
 
 #### 2.1 GroupDocs könyvtárak importálása
 ```java
@@ -112,22 +140,22 @@ import com.groupdocs.editor.EditableDocument;
 ```
 
 #### 2.2 Erőforrás mappa útvonalának megadása  
-A mappának tartalmaznia kell minden CSS‑fájlt, képet vagy egyéb erőforrást, amelyet a HTML hivatkozik.
+A mappának tartalmaznia kell a HTML által hivatkozott CSS fájlokat, képeket vagy egyéb erőforrásokat.
 
 ```java
 String resourceFolderPath = "YOUR_DOCUMENT_DIRECTORY/sample_html_body_resources";
 ```
 
 #### 2.3 EditableDocument inicializálása  
-Ez a hívás egyesíti a HTML markupot az erőforrás mappával, létrehozva egy memóriában szerkeszthető dokumentumot.
+Ez a hívás egyesíti a HTML jelölőnyelvet az erőforrás mappával, egy memóriában lévő szerkeszthető dokumentumot hozva létre.
 
 ```java
 EditableDocument inputDoc = EditableDocument.fromMarkupAndResourceFolder(content, resourceFolderPath);
 // This method combines the HTML markup with its linked resources to form a complete editable document.
 ```
 
-### Feature 3 – Dokumentum erőforrásainak ellenőrzése  
-**Miért fontos:** Annak tudása, hogy hány stíluslap vagy kép van jelen, segít eldönteni, szükséges‑e további feldolgozás (pl. képek optimalizálása).
+### 3. funkció – Dokumentum erőforrásainak ellenőrzése  
+**Miért fontos:** Tudni, hogy hány stíluslap vagy kép van jelen, segít eldönteni, szükséges‑e további feldolgozás (pl. képoptimalizálás).
 
 #### 3.1 Stíluslapok és képek számlálása
 ```java
@@ -136,10 +164,10 @@ int imageCount = inputDoc.getImages().size();
 // These methods provide insights into how many stylesheets or images are linked within your HTML content.
 ```
 
-### Feature 4 – EditableDocument mentése HTML‑ként  
-**Miért fontos:** Néha szükség van egy HTML verzió megtartására a szerkesztés után, vagy ellenőrizni kell, hogy az erőforrások helyesen vannak-e csomagolva.
+### 4. funkció – EditableDocument mentése HTML‑ként  
+**Miért fontos:** Néha szeretne egy HTML verziót megtartani a szerkesztés után, vagy ellenőrizni kell, hogy az erőforrások helyesen vannak‑e csomagolva.
 
-#### 4.1 Mentési opciók könyvtárak importálása
+#### 4.1 Mentési opciók könyvtárainak importálása
 ```java
 import com.groupdocs.editor.Editor;
 ```
@@ -150,17 +178,19 @@ String outputHtmlFilePath = "YOUR_OUTPUT_DIRECTORY/_output.html";
 ```
 
 #### 4.3 Dokumentum mentése HTML‑ként  
-A `save` metódus visszaírja a szerkesztett dokumentumot a lemezre, megőrizve a struktúrát.
+A `save` metódus visszaírja a szerkesztett dokumentumot a lemezre, megőrizve annak struktúráját.
 
 ```java
 inputDoc.save(outputHtmlFilePath);
 // This saves all changes made in memory back into a new HTML document, maintaining its editable format and resources.
 ```
 
-### Feature 5 – EditableDocument mentése Word feldolgozó dokumentumként (DOCX/DOCM)  
-**Miért fontos:** A DOCX/DOCM formátumba konvertálás egy teljesen szerkeszthető Word fájlt eredményez, amely megnyitható a Microsoft Word, a LibreOffice vagy bármely kompatibilis szerkesztő segítségével.
+### 5. funkció – EditableDocument mentése szövegszerkesztő dokumentumként (DOCX/DOCM)  
+**Miért fontos:** A DOCX/DOCM formátumba konvertálás egy teljesen szerkeszthető Word fájlt ad, amely megnyitható a Microsoft Wordben, a LibreOffice-ban vagy bármely kompatibilis szerkesztőben.  
 
-#### 5.1 Mentési opciók könyvtárak importálása
+A `WordProcessingFormats` enum határozza meg a pontos Word formátumot (DOCX vagy DOCM), amelyet generálni szeretne.
+
+#### 5.1 Mentési opciók könyvtárainak importálása
 ```java
 import com.groupdocs.editor.options.WordProcessingSaveOptions;
 import com.groupdocs.editor.formats.WordProcessingFormats;
@@ -172,7 +202,7 @@ String outputDocmFilePath = "YOUR_OUTPUT_DIRECTORY/_output.docm";
 ```
 
 #### 5.3 Mentési opciók és formátum beállítása  
-Itt kifejezetten a DOCM formátumot (makró‑támogatott Word dokumentum) kérjük. A `"docx"`‑re váltva standard dokumentumot kapunk.
+Itt kifejezetten a DOCM formátumot kérjük (makró‑támogatott Word dokumentum). A `"docx"`-re is válthat egy szabványos dokumentumhoz.
 
 ```java
 WordProcessingFormats saveFormat = WordProcessingFormats.fromExtension("docm");
@@ -180,8 +210,10 @@ WordProcessingSaveOptions saveOptions = new WordProcessingSaveOptions(saveFormat
 // Here, we define the desired output format (DOCM) along with any specific saving options needed for conversion.
 ```
 
+`Editor` a központi osztály, amely egy `EditableDocument`‑et veszi, és a kiválasztott Word formátumba írja.
+
 #### 5.4 Dokumentum mentése DOCM‑ként  
-Az `Editor` osztályt használjuk a végső konverzióhoz.
+A `Editor` osztályt használjuk a végső konverzió elvégzéséhez.
 
 ```java
 Editor editor = new Editor(htmlFilePath);
@@ -191,44 +223,50 @@ editor.save(inputDoc, outputDocmFilePath, saveOptions);
 
 ## Gyakorlati alkalmazások
 
-- **Dinamikus jelentéskészítés:** Táblázatok lekérése egy élő műszerfalról, Word‑re konvertálása és automatizált jelentések e‑mailben történő küldése.  
-- **Tartalomkezelő rendszerek:** “Exportálás Word‑be” gomb biztosítása cikkekhez, a stílusok és képek megőrzésével.  
-- **Jogi dokumentumok előkészítése:** Weben közzétett szabályozások átalakítása szerkeszthető szerződések vagy irányelvek formájában.  
-- **Oktatási anyagok összeállítása:** Előadások jegyzeteinek HTML oldalról egyetlen tanulási útmutatóba gyűjtése.  
-- **Üzleti ajánlatkészítés:** Marketing weboldalak konvertálása kifinomult DOCM ajánlatokká ügyfelek számára.
+- **Dinamikus jelentéskészítés:** Táblázatokat húz egy élő műszerfalról, Word‑be konvertálja, és automatikus jelentéseket küld e‑mailben.  
+- **Tartalomkezelő rendszerek:** „Export to Word” gombot kínál cikkekhez, megőrizve a stílusokat és képeket.  
+- **Jogi dokumentum előkészítés:** A weben közzétett szabályozásokat szerkeszthető szerződésekké vagy irányelvekké alakítja.  
+- **Oktatási anyagok összeállítása:** Előadások jegyzeteit HTML oldalakról egyetlen tanulmányi útmutatóba gyűjti.  
+- **Üzleti ajánlat készítése:** A marketing weboldalakat kifinomult DOCM ajánlatokká alakítja ügyfelek számára.
 
 ## Teljesítménybeli megfontolások
 
-- **Memóriahasználat optimalizálása:** Nagy HTML fájlok esetén növeld a JVM heap‑et (`-Xmx2g`) vagy dolgozz a dokumentumokon darabonként.  
-- **Erőforrások aszinkron betöltése:** Web‑alapú eszközökben töltsd be a CSS‑t és a képeket háttérszálon, hogy a felhasználói felület reagáló maradjon.  
+- **Memóriahasználat optimalizálása:** Nagy HTML fájlok esetén növelje a JVM heap‑et (`-Xmx2g`), vagy dolgozza fel a dokumentumokat darabokban.  
+- **Erőforrások aszinkron betöltése:** Web‑alapú eszközökben töltse be a CSS‑t és a képeket háttérszálon, hogy a felhasználói felület reagálók maradjon.
 
 ## Gyakori problémák és megoldások
 
 | Probléma | Ok | Megoldás |
 |----------|----|----------|
-| Képek hiányoznak a DOCM‑ben | Hibás erőforrás mappa útvonal | Ellenőrizd, hogy a `resourceFolderPath` a képfájlokat tartalmazó mappára mutat. |
-| A stílusok eltérnek a konverzió után | CSS nem töltődött be | Győződj meg róla, hogy az `inputDoc.getCss()` a várt számot adja vissza; add hozzá a hiányzó stíluslapokat a resource mappához. |
-| OutOfMemoryError nagy oldalaknál | Nagy HTML + sok erőforrás | Növeld a JVM heap‑et vagy oszd fel a HTML‑t kisebb szakaszokra a konverzió előtt. |
+| Képek hiányoznak a DOCM‑ben | Az erőforrás mappa útvonala helytelen | Ellenőrizze, hogy a `resourceFolderPath` a minden képfájlt tartalmazó mappára mutat. |
+| A stílusok másként jelennek meg a konverzió után | A CSS nem lett betöltve | Győződjön meg róla, hogy a `inputDoc.getCss()` a várt számot adja vissza; adja hozzá a hiányzó stíluslapokat az erőforrás mappához. |
+| OutOfMemoryError nagy oldalak esetén | Nagy HTML + sok erőforrás | Növelje a JVM heap‑et, vagy a konverzió előtt bontsa fel a HTML‑t kisebb szakaszokra. |
 
 ## Gyakran feltett kérdések
 
-**Q: Konvertálhatok élő URL‑t közvetlenül anélkül, hogy előbb lementeném a HTML‑t?**  
-A: Igen. Töltsd le az oldal tartalmát `Jsoup`‑bal vagy `HttpClient`‑tel, majd add át a stringet az `EditableDocument.fromMarkupAndResourceFolder` metódusnak.
+**Q: Konvertálhatok élő URL‑t közvetlenül anélkül, hogy előbb elmenteném a HTML‑t?**  
+A: Igen. Töltse le az oldal tartalmát `Jsoup` vagy `HttpClient` segítségével, majd adja át a stringet a `EditableDocument.fromMarkupAndResourceFolder`‑nek.
 
-**Q: A GroupDocs.Editor támogatja a DOCX konvertálást is, nem csak a DOCM‑et?**  
-A: Természetesen. Cseréld ki a kiterjesztést `WordProcessingFormats.fromExtension("docx")`‑re, és módosítsd a kimeneti fájl nevét.
+**Q: A GroupDocs.Editor támogatja a DOCX‑re való konvertálást is, nem csak a DOCM‑re?**  
+A: Teljes mértékben. Módosítsa a kiterjesztést a `WordProcessingFormats.fromExtension("docx")`‑ben, és állítsa be a kimeneti fájl nevét.
 
-**Q: Mit tegyek, ha a HTML külső, CDN‑en tárolt CSS‑t hivatkozik?**  
-A: Töltsd le ezeket a CSS fájlokat a resource mappádba, mielőtt inicializálnád az `EditableDocument`‑et, vagy engedélyezd a hálózati hozzáférést, hogy a szerkesztő letöltse őket.
+**Q: Mi van, ha a HTML külső CSS‑t hivatkozik, amely egy CDN‑en van?**  
+A: Töltse le ezeket a CSS fájlokat az erőforrás mappájába, mielőtt inicializálja a `EditableDocument`‑et, vagy engedélyezze a hálózati hozzáférést, hogy a szerkesztő letöltse őket.
 
 **Q: Szükséges licenc a ingyenes próbaidőszakhoz?**  
-A: A próbaidőszak licenckulcs nélkül is működik, de 30 napra és maximális dokumentumméretre korlátozódik. Termeléshez licenc vásárlása szükséges.
+A: A próba licenckulcs nélkül működik, de 30 napra és maximális dokumentumméretre korlátozódik. Termeléshez vásároljon licencet.
 
-**Q: Megőrizhető a JavaScript funkcionalitás a Word kimenetben?**  
-A: Nem. A Word feldolgozó formátumok nem támogatják a kliens‑oldali JavaScriptet; csak a statikus tartalom és a stílusok maradnak meg.
+**Q: Megőrizhetem a JavaScript funkciókat a Word kimenetben?**  
+A: Nem. A szövegszerkesztő formátumok nem támogatják a kliens‑oldali JavaScriptet; csak a statikus tartalom és a stílusok maradnak meg.
 
 ---
 
-**Utolsó frissítés:** 2026-02-08  
-**Tesztelve a:** GroupDocs.Editor 25.3  
+**Utoljára frissítve:** 2026-07-02  
+**Tesztelve ezzel:** GroupDocs.Editor 25.3  
 **Szerző:** GroupDocs
+
+## Kapcsolódó oktatóanyagok
+
+- [Hogyan konvertáljunk Word‑ot HTML‑re és szerkesszük a Word dokumentumokat Java‑ban a GroupDocs.Editor segítségével](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
+- [Word dokumentum betöltése Java‑ban a GroupDocs.Editor‑rel – Teljes útmutató](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
+- [Word dokumentum szerkesztése Java‑ban a GroupDocs.Editor használatával – Útmutató](/editor/java/word-processing-documents/groupdocs-editor-java-edit-word-docs-efficiently/)

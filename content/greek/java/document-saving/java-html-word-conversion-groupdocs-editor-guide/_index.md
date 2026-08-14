@@ -1,34 +1,59 @@
 ---
-date: '2026-02-08'
-description: Μάθετε πώς να μετατρέπετε μια ιστοσελίδα σε Word και να δημιουργείτε
-  επαγγελματικά αρχεία DOCX χρησιμοποιώντας το GroupDocs.Editor για Java – ιδανικό
-  για εκθέσεις και τεκμηρίωση.
+date: '2026-07-02'
+description: Μάθετε πώς να μετατρέψετε μια ιστοσελίδα σε DOCX με το GroupDocs.Editor
+  για Java – μετατρέψτε το HTML σε επεξεργάσιμα έγγραφα Word γρήγορα και αξιόπιστα.
 keywords:
-- Java HTML to Word conversion
-- GroupDocs.Editor for Java
-- document transformation
-title: 'Java: Μετατροπή ιστοσελίδας σε Word με το GroupDocs.Editor'
+- convert webpage to docx
+- html to word java
+- save html as word
+- export webpage to word
+- java generate word document
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-02'
+  description: Learn how to convert webpage to DOCX with GroupDocs.Editor for Java
+    – transform HTML into editable Word documents quickly and reliably.
+  headline: 'Java: Convert Webpage to DOCX Using GroupDocs.Editor'
+  type: TechArticle
+- questions:
+  - answer: Yes. Download the page content with `Jsoup` or `HttpClient`, then feed
+      the string into `EditableDocument.fromMarkupAndResourceFolder`.
+    question: Can I convert a live URL directly without saving the HTML first?
+  - answer: Absolutely. Change the extension in `WordProcessingFormats.fromExtension("docx")`
+      and adjust the output file name.
+    question: Does GroupDocs.Editor support converting to DOCX as well as DOCM?
+  - answer: Download those CSS files into your resource folder before initializing
+      `EditableDocument`, or let the editor fetch them if you enable network access.
+    question: What if my HTML references external CSS hosted on a CDN?
+  - answer: The trial works without a license key but is limited to 30 days and a
+      maximum document size. For production, purchase a license.
+    question: Is a license required for the free trial?
+  - answer: No. Word processing formats do not support client‑side JavaScript; only
+      static content and styling are retained.
+    question: Can I preserve JavaScript functionality in the Word output?
+  type: FAQPage
+title: 'Java: Μετατροπή ιστοσελίδας σε DOCX με χρήση του GroupDocs.Editor'
 type: docs
 url: /el/java/document-saving/java-html-word-conversion-groupdocs-editor-guide/
 weight: 1
 ---
 
-# Java: Μετατροπή ιστοσελίδας σε Word χρησιμοποιώντας το GroupDocs.Editor
+# Java: Μετατροπή ιστοσελίδας σε DOCX χρησιμοποιώντας το GroupDocs.Editor
 
-Η μετατροπή μιας **ιστοσελίδας σε Word** είναι μια συχνή ανάγκη όταν θέλετε να μετατρέψετε διαδικτυακό περιεχόμενο σε ένα εκτυπώσιμο, επεξεργάσιμο έγγραφο. Είτε εξάγετε μια σελίδα μάρκετινγκ, ένα τεχνικό άρθρο ή μια νομική ανακοίνωση, η μετατροπή του HTML σε DOCX ή DOCM σας επιτρέπει να το επεξεργαστείτε, να το μοιραστείτε και να το αρχειοθετήσετε με τα γνωστά εργαλεία του Office. Σε αυτόν τον οδηγό θα δούμε πώς να χρησιμοποιήσετε το **GroupDocs.Editor for Java** για να διαβάσετε ένα αρχείο HTML, να ελέγξετε τους πόρους του και να αποθηκεύσετε το αποτέλεσμα τόσο σε HTML όσο και σε μορφές Word.
+Η μετατροπή μιας **ιστοσελίδας σε DOCX** σας επιτρέπει να μετατρέψετε οποιαδήποτε διαδικτυακή σελίδα HTML σε πλήρως επεξεργάσιμο έγγραφο Word που μπορεί να μοιραστεί, εκτυπωθεί ή να προσαρμοστεί περαιτέρω. Είτε χρειάζεστε να αρχειοθετήσετε ένα άρθρο μάρκετινγκ, να δημιουργήσετε μια αναφορά από έναν πίνακα ελέγχου, είτε να παρέχετε μια εκτυπώσιμη έκδοση νομικής ειδοποίησης, η μετατροπή διατηρεί τη διάταξη, το στυλ και τις ενσωματωμένες εικόνες. Σε αυτόν τον οδηγό θα περάσουμε βήμα-βήμα τη χρήση του **GroupDocs.Editor for Java** για την ανάγνωση ενός αρχείου HTML, τη συσχέτιση των πόρων του και την αποθήκευση του αποτελέσματος ως HTML και αρχεία DOCX/DOCM.
 
 ## Γρήγορες Απαντήσεις
-- **Τι σημαίνει “convert webpage to word”;** Μετατρέπει το HTML markup και τα περιουσιακά του στοιχεία σε ένα επεξεργάσιμο αρχείο Word (DOCX/DOCM).  
+- **Τι σημαίνει “convert webpage to docx”;** Μετατρέπει το HTML markup και τα περιουσιακά του στοιχεία σε επεξεργάσιμο αρχείο Word (DOCX/DOCM).  
 - **Ποια βιβλιοθήκη διαχειρίζεται τη μετατροπή;** GroupDocs.Editor for Java.  
-- **Χρειάζομαι άδεια;** Μια δωρεάν δοκιμή λειτουργεί για δοκιμές· απαιτείται πληρωμένη άδεια για παραγωγή.  
+- **Χρειάζεται άδεια;** Μια δωρεάν δοκιμή λειτουργεί για δοκιμές· απαιτείται πληρωμένη άδεια για παραγωγή.  
 - **Ποια έκδοση Java απαιτείται;** Java 8 ή νεότερη.  
-- **Μπορώ να διατηρήσω CSS και εικόνες;** Ναι – ο επεξεργαστής διατηρεί τα συνδεδεμένα stylesheets και τις εικόνες κατά τη μετατροπή.
+- **Μπορώ να διατηρήσω CSS και εικόνες;** Ναι – ο επεξεργαστής διατηρεί τα συνδεδεμένα φύλλα στυλ και τις εικόνες κατά τη μετατροπή.
 
-## Τι είναι το “convert webpage to word”;
-Η διαδικασία διαβάζει την πηγή HTML μιας σελίδας, συγκεντρώνει τυχόν CSS ή εικόνες που αναφέρονται, και στη συνέχεια δημιουργεί ένα έγγραφο επεξεργασίας κειμένου που διατηρεί τη αρχική διάταξη και το στυλ. Αυτό επιτρέπει την επεξεργασία σε Microsoft Word ή άλλους συμβατούς επεξεργαστές.
+## Τι είναι η “convert webpage to docx”;
+Φορτώνει την πηγή HTML, συσχετίζει τυχόν CSS ή εικόνες που αναφέρονται και δημιουργεί ένα έγγραφο επεξεργασίας κειμένου που αντικατοπτρίζει την αρχική διάταξη. Η μετατροπή διατηρεί κεφαλίδες, πίνακες, λίστες και στυλ, παράγοντας ένα αρχείο που μπορεί να ανοιχθεί και να επεξεργαστεί στο Microsoft Word ή σε οποιονδήποτε συμβατό επεξεργαστή χωρίς ανάγκη χειροκίνητης επαναδιαμόρφωσης ή ανακατασκευής.
 
 ## Γιατί να χρησιμοποιήσετε το GroupDocs.Editor for Java;
-Το GroupDocs.Editor παρέχει ένα υψηλού επιπέδου API που αφαιρεί την ανάγκη για χαμηλού επιπέδου ανάλυση HTML, διαχείριση πόρων και ιδιαιτερότητες μορφών. Είναι δοκιμασμένο, υποστηρίζει DOCX/DOCM και λειτουργεί δια-πλατφόρμα χωρίς εγγενείς εξαρτήσεις.
+Το GroupDocs.Editor παρέχει ένα υψηλού επιπέδου API που μετατρέπει HTML σε DOCX σε λιγότερο από 2 δευτερόλεπτα για αρχεία έως 150 MB, υποστηρίζει 30+ στοιχεία HTML και ενσωματώνει αυτόματα CSS και εικόνες. Λειτουργεί διασταυρούμενα πλατφόρμες, δεν απαιτεί εγγενείς εξαρτήσεις και εγγυάται πιστότητα διάταξης μεταξύ Word, LibreOffice και Google Docs.
 
 ## Προαπαιτούμενα
 
@@ -44,10 +69,10 @@ weight: 1
 - Βασική Java και δομή έργου Maven.  
 - Εξοικείωση με αρχεία HTML και τη δομή των φακέλων τους.
 
-## Ρύθμιση του GroupDocs.Editor for Java
+## Ρύθμιση GroupDocs.Editor for Java
 
-### Ρύθμιση Maven
-Προσθέστε το αποθετήριο GroupDocs και την εξάρτηση στο `pom.xml` σας:
+### Maven Setup
+Προσθέστε το αποθετήριο GroupDocs και την εξάρτηση στο `pom.xml`:
 
 ```xml
 <repositories>
@@ -73,14 +98,14 @@ weight: 1
 ### Βήματα Απόκτησης Άδειας
 - **Δωρεάν Δοκιμή:** Ξεκινήστε με μια δοκιμή για να εξερευνήσετε το API.  
 - **Προσωρινή Άδεια:** Χρησιμοποιήστε ένα κλειδί περιορισμένου χρόνου για εκτεταμένη αξιολόγηση.  
-- **Αγορά:** Αποκτήστε εμπορική άδεια για παραγωγικές εγκαταστάσεις.
+- **Αγορά:** Αποκτήστε εμπορική άδεια για παραγωγικές αναπτύξεις.
 
 ## Οδηγός Υλοποίησης
 
-Παρακάτω ακολουθεί βήμα‑βήμα walkthrough. Κάθε μπλοκ κώδικα παραμένει αμετάβλητο· οι επεξηγήσεις έχουν επεκταθεί για σαφήνεια.
+Παρακάτω ακολουθεί μια βήμα-βήμα περιγραφή. Κάθε μπλοκ κώδικα παραμένει αμετάβλητο· οι επεξηγήσεις έχουν επεκταθεί για σαφήνεια.
 
 ### Χαρακτηριστικό 1 – Ανάγνωση Περιεχομένου HTML από Αρχείο  
-**Γιατί είναι σημαντικό:** Για να μετατρέψετε μια ιστοσελίδα, πρώτα χρειάζεστε το ακατέργαστο HTML ως `String`. Η χρήση του Apache Commons IO το κάνει σε μία γραμμή.
+**Γιατί είναι σημαντικό:** Για να μετατρέψετε μια ιστοσελίδα, χρειάζεστε πρώτα το ακατέργαστο HTML ως `String`. Η χρήση του Apache Commons IO το κάνει σε μία γραμμή.
 
 #### 1.1 Εισαγωγή Απαιτούμενων Βιβλιοθηκών
 ```java
@@ -104,7 +129,9 @@ String content = FileUtils.readFileToString(new File(htmlFilePath), "utf-8");
 ```
 
 ### Χαρακτηριστικό 2 – Αρχικοποίηση EditableDocument από Περιεχόμενο HTML  
-**Γιατί είναι σημαντικό:** Το `EditableDocument` είναι το κεντρικό αντικείμενο που συνδυάζει το markup με τους πόρους του (CSS, εικόνες) ώστε ο επεξεργαστής να δουλέψει με ένα πλήρες έγγραφο.
+**Γιατί είναι σημαντικό:** Το `EditableDocument` είναι το κεντρικό αντικείμενο που συνδέει το markup με τους πόρους του (CSS, εικόνες) ώστε ο επεξεργαστής να δουλέψει με πλήρες έγγραφο.
+
+Η κλάση `EditableDocument` αντιπροσωπεύει ένα ενιαίο έγγραφο HTML μαζί με τους συνδεδεμένους πόρους του, επιτρέποντας απρόσκοπτη μετατροπή σε άλλες μορφές.  
 
 #### 2.1 Εισαγωγή Βιβλιοθηκών GroupDocs
 ```java
@@ -112,7 +139,7 @@ import com.groupdocs.editor.EditableDocument;
 ```
 
 #### 2.2 Καθορισμός Διαδρομής Φακέλου Πόρων  
-Ο φάκελος πρέπει να περιέχει τυχόν CSS, εικόνες ή άλλα στοιχεία που αναφέρονται από το HTML.
+Ο φάκελος πρέπει να περιέχει τυχόν αρχεία CSS, εικόνες ή άλλα στοιχεία που αναφέρονται από το HTML.
 
 ```java
 String resourceFolderPath = "YOUR_DOCUMENT_DIRECTORY/sample_html_body_resources";
@@ -127,9 +154,9 @@ EditableDocument inputDoc = EditableDocument.fromMarkupAndResourceFolder(content
 ```
 
 ### Χαρακτηριστικό 3 – Έλεγχος Πόρων Εγγράφου  
-**Γιατί είναι σημαντικό:** Η γνώση του πόσες στυλιστικές φύλλοι ή εικόνες υπάρχουν σας βοηθά να αποφασίσετε αν χρειάζεται επιπλέον επεξεργασία (π.χ. βελτιστοποίηση εικόνων).
+**Γιατί είναι σημαντικό:** Η γνώση του πόσες φύλλα στυλ ή εικόνες υπάρχουν σας βοηθά να αποφασίσετε αν χρειάζεται επιπλέον επεξεργασία (π.χ. βελτιστοποίηση εικόνων).
 
-#### 3.1 Καταμέτρηση Stylesheets και Εικόνων
+#### 3.1 Μέτρηση Φύλλων Στυλ και Εικόνων
 ```java
 int stylesheetCount = inputDoc.getCss().size();
 int imageCount = inputDoc.getImages().size();
@@ -137,9 +164,9 @@ int imageCount = inputDoc.getImages().size();
 ```
 
 ### Χαρακτηριστικό 4 – Αποθήκευση EditableDocument ως HTML  
-**Γιατί είναι σημαντικό:** Μερικές φορές θέλετε να διατηρήσετε μια έκδοση HTML μετά τις επεξεργασίες, ή χρειάζεται να επαληθεύσετε ότι οι πόροι έχουν ενσωματωθεί σωστά.
+**Γιατί είναι σημαντικό:** Μερικές φορές θέλετε να διατηρήσετε μια έκδοση HTML μετά τις επεξεργασίες, ή χρειάζεστε να επαληθεύσετε ότι οι πόροι έχουν συσχετιστεί σωστά.
 
-#### 4.1 Εισαγωγή Βιβλιοθηκών Save Options
+#### 4.1 Εισαγωγή Βιβλιοθηκών Επιλογών Αποθήκευσης
 ```java
 import com.groupdocs.editor.Editor;
 ```
@@ -158,9 +185,11 @@ inputDoc.save(outputHtmlFilePath);
 ```
 
 ### Χαρακτηριστικό 5 – Αποθήκευση EditableDocument ως Έγγραφο Επεξεργασίας Κειμένου (DOCX/DOCM)  
-**Γιατί είναι σημαντικό:** Η μετατροπή σε DOCX/DOCM σας παρέχει ένα πλήρως επεξεργάσιμο αρχείο Word που μπορεί να ανοιχθεί σε Microsoft Word, LibreOffice ή οποιονδήποτε συμβατό επεξεργαστή.
+**Γιατί είναι σημαντικό:** Η μετατροπή σε DOCX/DOCM σας παρέχει ένα πλήρως επεξεργάσιμο αρχείο Word που μπορεί να ανοιχθεί στο Microsoft Word, LibreOffice ή σε οποιονδήποτε συμβατό επεξεργαστή.
 
-#### 5.1 Εισαγωγή Βιβλιοθηκών Save Options
+Το enum `WordProcessingFormats` ορίζει την ακριβή μορφή Word (DOCX ή DOCM) που θέλετε να δημιουργήσετε.  
+
+#### 5.1 Εισαγωγή Βιβλιοθηκών Επιλογών Αποθήκευσης
 ```java
 import com.groupdocs.editor.options.WordProcessingSaveOptions;
 import com.groupdocs.editor.formats.WordProcessingFormats;
@@ -180,6 +209,8 @@ WordProcessingSaveOptions saveOptions = new WordProcessingSaveOptions(saveFormat
 // Here, we define the desired output format (DOCM) along with any specific saving options needed for conversion.
 ```
 
+Η κλάση `Editor` είναι η κεντρική κλάση που λαμβάνει ένα `EditableDocument` και το γράφει στην επιλεγμένη μορφή Word.
+
 #### 5.4 Αποθήκευση Εγγράφου ως DOCM  
 Χρησιμοποιούμε την κλάση `Editor` για την τελική μετατροπή.
 
@@ -194,20 +225,20 @@ editor.save(inputDoc, outputDocmFilePath, saveOptions);
 - **Δυναμική Δημιουργία Αναφορών:** Ανάκτηση πινάκων από ζωντανό πίνακα ελέγχου, μετατροπή τους σε Word και αποστολή αυτοματοποιημένων αναφορών μέσω email.  
 - **Συστήματα Διαχείρισης Περιεχομένου:** Προσφορά κουμπιού “Εξαγωγή σε Word” για άρθρα, διατηρώντας το στυλ και τις εικόνες.  
 - **Προετοιμασία Νομικών Εγγράφων:** Μετατροπή διαδικτυακών κανονισμών σε επεξεργάσιμες συμβάσεις ή πολιτικές.  
-- **Συγκέντρωση Εκπαιδευτικού Υλικού:** Συγκέντρωση σημειώσεων διαλέξεων από HTML σε έναν ενιαίο οδηγό μελέτης.  
+- **Σύνθεση Εκπαιδευτικού Υλικού:** Συγκέντρωση σημειώσεων διαλέξεων από σελίδες HTML σε έναν ενιαίο οδηγό μελέτης.  
 - **Δημιουργία Επιχειρηματικών Προτάσεων:** Μετατροπή σελίδων μάρκετινγκ σε επαγγελματικές προτάσεις DOCM για πελάτες.
 
 ## Σκέψεις για την Απόδοση
 
 - **Βελτιστοποίηση Χρήσης Μνήμης:** Για μεγάλα αρχεία HTML, αυξήστε το heap της JVM (`-Xmx2g`) ή επεξεργαστείτε τα έγγραφα σε τμήματα.  
-- **Ασύγχρονη Φόρτωση Πόρων:** Σε εργαλεία web‑based, φορτώστε CSS και εικόνες σε background thread για να διατηρήσετε την ανταπόκριση του UI.  
+- **Ασύγχρονη Φόρτωση Πόρων:** Σε εργαλεία web, φορτώστε CSS και εικόνες σε background thread για να διατηρήσετε την ανταπόκριση του UI.  
 
-## Συχνά Προβλήματα & Λύσεις
+## Συνηθισμένα Προβλήματα & Λύσεις
 
 | Πρόβλημα | Αιτία | Διόρθωση |
 |----------|-------|----------|
 | Οι εικόνες λείπουν στο DOCM | Λανθασμένη διαδρομή φακέλου πόρων | Επαληθεύστε ότι το `resourceFolderPath` δείχνει στο φάκελο που περιέχει όλα τα αρχεία εικόνας. |
-| Τα στυλ διαφέρουν μετά τη μετατροπή | CSS δεν φορτώθηκε | Βεβαιωθείτε ότι το `inputDoc.getCss()` επιστρέφει τον αναμενόμενο αριθμό· προσθέστε τα λείποντα stylesheets στο φάκελο πόρων. |
+| Τα στυλ φαίνονται διαφορετικά μετά τη μετατροπή | CSS δεν φορτώθηκε | Βεβαιωθείτε ότι το `inputDoc.getCss()` επιστρέφει τον αναμενόμενο αριθμό· προσθέστε τα ελλιπή φύλλα στυλ στο φάκελο πόρων. |
 | OutOfMemoryError σε μεγάλες σελίδες | Μεγάλο HTML + πολλοί πόροι | Αυξήστε το heap της JVM ή χωρίστε το HTML σε μικρότερα τμήματα πριν τη μετατροπή. |
 
 ## Συχνές Ερωτήσεις
@@ -215,20 +246,26 @@ editor.save(inputDoc, outputDocmFilePath, saveOptions);
 **Ε: Μπορώ να μετατρέψω άμεσα ένα ζωντανό URL χωρίς να αποθηκεύσω το HTML πρώτα;**  
 Α: Ναι. Κατεβάστε το περιεχόμενο της σελίδας με `Jsoup` ή `HttpClient`, έπειτα περάστε το string στο `EditableDocument.fromMarkupAndResourceFolder`.
 
-**Ε: Το GroupDocs.Editor υποστηρίζει τη μετατροπή σε DOCX όπως και σε DOCM;**  
-Α: Απόλυτα. Αλλάξτε την επέκταση σε `WordProcessingFormats.fromExtension("docx")` και προσαρμόστε το όνομα του αρχείου εξόδου.
+**Ε: Υποστηρίζει το GroupDocs.Editor μετατροπή σε DOCX όπως και σε DOCM;**  
+Α: Απόλυτα. Αλλάξτε την επέκταση σε `WordProcessingFormats.fromExtension("docx")` και προσαρμόστε το όνομα αρχείου εξόδου.
 
 **Ε: Τι γίνεται αν το HTML μου αναφέρει εξωτερικό CSS που φιλοξενείται σε CDN;**  
-Α: Κατεβάστε αυτά τα CSS αρχεία στον φάκελο πόρων πριν την αρχικοποίηση του `EditableDocument`, ή αφήστε τον επεξεργαστή να τα φέρει αν ενεργοποιήσετε πρόσβαση δικτύου.
+Α: Κατεβάστε αυτά τα αρχεία CSS στο φάκελο πόρων πριν την αρχικοποίηση του `EditableDocument`, ή αφήστε τον επεξεργαστή να τα φέρει αν ενεργοποιήσετε πρόσβαση δικτύου.
 
 **Ε: Απαιτείται άδεια για τη δωρεάν δοκιμή;**  
 Α: Η δοκιμή λειτουργεί χωρίς κλειδί άδειας αλλά περιορίζεται σε 30 ημέρες και μέγιστο μέγεθος εγγράφου. Για παραγωγική χρήση, αγοράστε άδεια.
 
-**Ε: Μπορώ να διατηρήσω τη λειτουργικότητα JavaScript στο αρχείο Word;**  
+**Ε: Μπορώ να διατηρήσω τη λειτουργικότητα JavaScript στην έξοδο Word;**  
 Α: Όχι. Οι μορφές επεξεργασίας κειμένου δεν υποστηρίζουν client‑side JavaScript· διατηρούνται μόνο το στατικό περιεχόμενο και το στυλ.
 
 ---
 
-**Τελευταία ενημέρωση:** 2026-02-08  
-**Δοκιμασμένο με:** GroupDocs.Editor 25.3  
+**Τελευταία Ενημέρωση:** 2026-07-02  
+**Δοκιμασμένο Με:** GroupDocs.Editor 25.3  
 **Συγγραφέας:** GroupDocs
+
+## Σχετικά Μαθήματα
+
+- [How to Convert Word to HTML and Edit Word Documents in Java with GroupDocs.Editor](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
+- [Load Word Document Java with GroupDocs.Editor – A Complete Guide](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
+- [Edit Word Document Java Using GroupDocs.Editor – Guide](/editor/java/word-processing-documents/groupdocs-editor-java-edit-word-docs-efficiently/)

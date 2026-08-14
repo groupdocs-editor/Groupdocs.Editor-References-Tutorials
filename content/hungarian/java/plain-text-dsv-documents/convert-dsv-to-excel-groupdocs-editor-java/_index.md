@@ -1,53 +1,83 @@
 ---
-date: '2026-02-11'
+date: '2026-07-02'
 description: Ismerje meg, hogyan konvertálhat DSV fájlokat Excel XLSM formátumba a
-  GroupDocs.Editor for Java segítségével. Ez a lépésről‑lépésre útmutató bemutatja
+  GroupDocs.Editor for Java használatával. Ez a lépésről‑lépésre útmutató bemutatja
   a beállítást, a megvalósítást és a hibaelhárítást.
 keywords:
-- GroupDocs Editor for Java
-- Convert DSV to Excel XLSM
-- Edit and Save DSV as Excel
-title: Hogyan konvertáljunk DSV-t Excel XLSM formátumba a GroupDocs Java segítségével
+- how to convert dsv
+- macro enabled xlsm
+- delimiter separated values excel
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-02'
+  description: Learn how to convert DSV files to Excel XLSM using GroupDocs.Editor
+    for Java. This step‑by‑step guide shows setup, implementation, and troubleshooting.
+  headline: How to Convert DSV to Excel XLSM Using GroupDocs.Editor for Java
+  type: TechArticle
+- description: Learn how to convert DSV files to Excel XLSM using GroupDocs.Editor
+    for Java. This step‑by‑step guide shows setup, implementation, and troubleshooting.
+  name: How to Convert DSV to Excel XLSM Using GroupDocs.Editor for Java
+  steps:
+  - name: Load the Editable Document
+    text: '`edit()` loads the DSV content into an editable object that you can manipulate
+      or directly convert.'
+  - name: Configure Save Options for XLSM
+    text: '`SpreadsheetSaveOptions` lets you specify the target format (XLSM) and
+      additional settings such as password protection.'
+  - name: Save the Document as an Excel Spreadsheet
+    text: The `save()` method writes the edited content to the path you provided,
+      producing a macro‑enabled Excel file.
+  type: HowTo
+- questions:
+  - answer: GroupDocs.Editor for Java
+    question: What is the primary library?
+  - answer: No, you need to load, edit, configure save options, and then save.
+    question: Can I convert DSV to XLSM in one line?
+  - answer: Yes, a trial or permanent license is required for production use.
+    question: Do I need a license?
+  - answer: Java 8+ (compatible with the latest GroupDocs.Editor releases).
+    question: Which Java version is supported?
+  - answer: Yes, XLSM files retain macro support.
+    question: Is the output macro‑enabled?
+  type: FAQPage
+title: Hogyan konvertáljunk DSV fájlokat Excel XLSM formátumba a GroupDocs.Editor
+  for Java segítségével
 type: docs
 url: /hu/java/plain-text-dsv-documents/convert-dsv-to-excel-groupdocs-editor-java/
 weight: 1
 ---
 
-# Hogyan konvertáljunk DSV-t Excel XLSM-re a GroupDocs.Editor for Java segítségével
+# Hogyan konvertáljuk a DSV-t Excel XLSM formátumba a GroupDocs.Editor for Java segítségével
 
-Ha valaha is azon tűnődtél, **hogyan konvertáljunk DSV** fájlokat egy olyan formátumba, amelyet az üzleti felhasználók szeretnek – az Excelbe –, akkor jó helyen jársz. Ebben az útmutatóban végigvezetünk a szerkesztett DSV fájl XLSM táblázatba való konvertálásának teljes folyamatán a GroupDocs.Editor for Java segítségével. Áttekintést kapsz arról, miért fontos ez, a pontos lépésekről, valamint tippeket a gyakori hibák elkerüléséhez.
+Ha valaha is azon tűnődött, **hogyan konvertáljuk a DSV** fájlokat egy olyan formátumba, amelyet az üzleti felhasználók szeretnek—Excel—akkor jó helyen jár. Ebben az útmutatóban végigvezetjük a teljes folyamatot, amely során egy szerkesztett DSV fájlt XLSM táblázattá konvertálunk a GroupDocs.Editor for Java használatával. Megtudja, miért fontos ez, milyen pontos lépéseket kell követni, és gyakorlati tippeket a gyakori buktatók elkerüléséhez.
 
 ## Gyors válaszok
 - **Mi a fő könyvtár?** GroupDocs.Editor for Java  
-- **Konvertálhatok DSV-t XLSM-re egy sorban?** Nem, be kell tölteni, szerkeszteni, beállítani a mentési opciókat, majd menteni.  
-- **Szükségem van licencre?** Igen, a termelési használathoz próbaverzió vagy állandó licenc szükséges.  
-- **Melyik Java verzió támogatott?** Java 8+ (kompatibilis a legújabb GroupDocs.Editor kiadásokkal).  
-- **A kimenet makró‑támogatott?** Igen, az XLSM fájlok megőrzik a makrókat.
+- **Konvertálhatom a DSV-t XLSM-re egy sorban?** Nem, be kell tölteni, szerkeszteni, beállítani a mentési opciókat, majd menteni.  
+- **Szükségem van licencre?** Igen, egy próba vagy állandó licenc szükséges a termeléshez.  
+- **Mely Java verzió támogatott?** Java 8+ (kompatibilis a legújabb GroupDocs.Editor kiadásokkal).  
+- **Makró‑támogatott a kimenet?** Igen, az XLSM fájlok megőrzik a makró támogatást.
 
 ## Mi az a DSV és miért konvertáljuk?
 
-A DSV (Delimiter‑Separated Values) egy egyszerű szöveges formátum, ahol a mezőket egy egyedi elválasztó karakter választja el (gyakran függőleges vonal `|` vagy pontosvessző `;`). Bár rugalmas, a DSV fájlok nehezen kezelhetők a nem technikai felhasználók számára. **Excel XLSM**-re konvertálva egy ismerős, interaktív táblázatot kapsz, amely VBA makrókat is tárolhat.
+A DSV (Delimiter‑Separated Values) egy egyszerű szöveges fájl, amelyben a mezőket egy egyedi elválasztó, például egy csővezeték `|` vagy pontosvessző `;` választja el. Az Excel XLSM‑re való konvertálás lehetővé teszi az üzleti felhasználók számára, hogy a adatokat egy ismerős táblázatos felületen tekintsék meg, szűrjék és makrókat futtassanak rajtuk, ezáltal a nyers szöveget interaktív elemző eszközzé alakítva.
 
-## Miért használjuk a GroupDocs.Editor for Java-t?
+## Miért használjuk a GroupDocs.Editor for Java‑t?
 
-A GroupDocs.Editor elrejti az alacsony szintű elemzési és formázási feladatokat, így az üzleti logikára koncentrálhatsz. Kezeli:
-
-- Az elválasztók automatikus felismerését  
-- A cellastílusok és képletek megőrzését  
-- A makró‑támogatott XLSM fájlok zökkenőmentes mentését  
+A GroupDocs.Editor for Java beépített támogatást nyújt **több mint 50 bemeneti és kimeneti formátumhoz**, automatikus elválasztó felismerést, valamint a cellastílusok, képletek és makrók megőrzését XLSM‑re mentéskor, ami a konvertálást gyors, megbízható és termelés‑kész megoldássá teszi.
 
 ## Előfeltételek
 
-1. **Java Development Kit (JDK) 8 vagy újabb** telepítve.  
-2. **Maven** (vagy más build eszköz) a függőségek kezeléséhez.  
-3. Egy **IDE**, például IntelliJ IDEA vagy Eclipse a könnyű hibakereséshez.  
-4. Hozzáférés egy **GroupDocs.Editor licenchez** (az ingyenes próba a teszteléshez megfelelő).  
+- **Java Development Kit (JDK) 8 vagy újabb** telepítve.  
+- **Maven** (vagy más build eszköz) a függőségek kezeléséhez.  
+- IDE, például IntelliJ IDEA vagy Eclipse a könnyű hibakereséshez.  
+- Hozzáférés egy **GroupDocs.Editor licenchez** (az ingyenes próba a teszteléshez elegendő).  
 
 ## A GroupDocs.Editor for Java beállítása
 
 ### Telepítési információk
 
-Adja hozzá a GroupDocs tárolót és függőséget a `pom.xml`-hez:
+Add the GroupDocs repository and dependency to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -67,19 +97,19 @@ Adja hozzá a GroupDocs tárolót és függőséget a `pom.xml`-hez:
 </dependencies>
 ```
 
-> **Pro tipp:** Tartsa a verziószámot szinkronban a hivatalos oldalon elérhető legújabb kiadással.
+> **Pro tip:** Keep the version number in sync with the latest release on the official site.
 
-Ha nem szeretne Maven-t használni, letöltheti a JAR-t közvetlenül a hivatalos letöltési oldalról: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+If you prefer not to use Maven, you can download the JAR directly from the official download page: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 ### Licenc beszerzése
 
 - **Ingyenes próba:** Regisztráljon a GroupDocs portálon, és kap egy ideiglenes licenckulcsot.  
-- **Ideiglenes licenc:** Szerezzen egyet a [GroupDocs hivatalos oldalán](https://purchase.groupdocs.com/temporary-license).  
-- **Teljes vásárlás:** Vegyen egy termelési licencet korlátlan használatra.  
+- **Ideiglenes licenc:** Szerezze be a [GroupDocs hivatalos oldalán](https://purchase.groupdocs.com/temporary-license).  
+- **Teljes vásárlás:** Vásároljon termelési licencet korlátlan használatra.
 
 ### Alapvető inicializálás
 
-Hozzon létre egy `Editor` példányt, amely a DSV fájlra mutat:
+`Editor` is the core class in GroupDocs.Editor that loads, edits, and saves documents. Create an `Editor` instance pointing at your DSV file:
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -89,18 +119,23 @@ String filePath = "path/to/your/input.dsv";
 Editor editor = new Editor(filePath);
 ```
 
-Most már készen áll a dokumentum betöltésére, szerkesztésére és mentésére.
+Now you’re ready to load, edit, and save the document.
 
-## Hogyan konvertáljunk DSV-t Excel XLSM-re
+## Hogyan konvertáljuk a DSV-t Excel XLSM formátumba?
 
-### 1. lépés: A szerkeszthető dokumentum betöltése
+Load the DSV file with an `Editor` instance, call `edit()` to obtain an editable document, configure `SpreadsheetSaveOptions` to set the output format to XLSM, and then invoke `save()` with the desired file path; this three‑step flow produces a macro‑enabled Excel workbook.
+
+### 1. lépés: Az szerkeszthető dokumentum betöltése
+
+`edit()` loads the DSV content into an editable object that you can manipulate or directly convert.
 
 ```java
 EditableDocument afterEdit = editor.edit();
 ```
-*Az `edit()` hívás betölti a DSV tartalmat egy szerkeszthető objektumba, amelyet manipulálhat vagy közvetlenül konvertálhat.*
 
-### 2. lépés: A mentési beállítások konfigurálása XLSM-hez
+### 2. lépés: Mentési beállítások konfigurálása XLSM-hez
+
+`SpreadsheetSaveOptions` lets you specify the target format (XLSM) and additional settings such as password protection.
 
 ```java
 import com.groupdocs.editor.options.SpreadsheetSaveOptions;
@@ -109,49 +144,49 @@ import com.groupdocs.editor.formats.SpreadsheetFormats;
 String outputCellsPath = "YOUR_OUTPUT_DIRECTORY/edited.xlsm";
 SpreadsheetSaveOptions cellsSaveOptions = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 ```
-*A `SpreadsheetSaveOptions` lehetővé teszi a célformátum (XLSM) és további beállítások, például jelszóvédelem megadását.*
 
-### 3. lépés: A dokumentum mentése Excel táblázatként
+### 3. lépés: Dokumentum mentése Excel táblázatként
+
+The `save()` method writes the edited content to the path you provided, producing a macro‑enabled Excel file.
 
 ```java
 document.save(afterEdit, outputCellsPath, cellsSaveOptions);
 ```
-*A `save()` metódus a szerkesztett tartalmat a megadott útvonalra írja, így egy makró‑támogatott Excel fájlt hoz létre.*
 
 #### Hibaelhárítási tippek
-- **Fájlútvonal problémák:** Használjon abszolút útvonalakat, vagy ellenőrizze, hogy a relatív útvonalak helyesen oldódnak-e fel a projekt gyökeréből.  
-- **Verziókompatibilitás:** Győződjön meg arról, hogy a GroupDocs.Editor verziója egyezik a használt JDK-val.  
-- **Memória korlátok:** Nagyon nagy DSV fájlok esetén fontolja meg a feldolgozást darabokban, és a művelet után hívja meg az `editor.close()`-t.  
+- **Fájlútvonal problémák:** Használjon abszolút útvonalakat, vagy ellenőrizze, hogy a relatív útvonalak helyesen oldódnak fel a projekt gyökeréből.  
+- **Verzió kompatibilitás:** Győződjön meg róla, hogy a GroupDocs.Editor verzió egyezik a használt JDK-val.  
+- **Memória korlátok:** Nagyon nagy DSV fájlok esetén fontolja meg a feldolgozást darabokban, és hívja meg az `editor.close()`‑t a művelet után.
 
 ## Gyakorlati alkalmazások
 
-1. **Adat elemzés:** Nyers naplóadatok (DSV) konvertálása Excelbe pivot táblák és diagramok számára.  
-2. **Automatizált jelentéskészítés:** A konvertálás integrálása éjszakai batch feladatokba, amelyek XLSM jelentéseket generálnak.  
-3. **Pénzügyi modellezés:** Az elválasztóval tagolt pénzügyi adatfolyamok átalakítása makró‑támogatott táblázatokba összetett számításokhoz.  
+1. **Adat elemzés:** Konvertálja a nyers naplóadatokat (DSV) Excelbe pivot táblák és diagramok számára.  
+2. **Automatizált jelentéskészítés:** Integrálja a konverziót éjszakai batch feladatokba, amelyek XLSM jelentéseket generálnak.  
+3. **Pénzügyi modellezés:** Alakítsa át a határolóval elválasztott pénzügyi adatfolyamokat makró‑támogatott táblázatokba összetett számításokhoz.
 
 ## Teljesítmény szempontok
 
-- **Erőforrás-kezelés:** Hívja meg az `editor.close()`-t, amikor befejezte, hogy felszabadítsa a fájlkezelőket.  
-- **Memória optimalizálás:** Nagy fájlok esetén streamelje őket a teljes dokumentum memóriába betöltése helyett, ha lehetséges.  
+- **Erőforrás kezelés:** Hívja meg az `editor.close()`‑t, amikor befejezte, hogy felszabadítsa a fájlkezelőket.  
+- **Memória optimalizálás:** Streamelje a nagy fájlokat ahelyett, hogy az egész dokumentumot memóriába töltené, ha lehetséges.
 
-## Gyakran Ismételt Kérdések
+## Gyakran ismételt kérdések
 
-**Q:** *Konvertálhatok más táblázatformátumokat a GroupDocs.Editor segítségével?*  
+**Q:** *Konvertálhatok más táblázatformátumokat a GroupDocs.Editor‑rel?*  
 **A:** Igen, olyan formátumok, mint a CSV, XLSX és ODS támogatottak.
 
 **Q:** *Mik a leggyakoribb problémák fájlok mentésekor?*  
-**A:** Helytelen fájlútvonalak és nem egyező könyvtárverziók a szokásos hibaforrások. Ellenőrizze a `pom.xml`-t, és győződjön meg arról, hogy a kimeneti könyvtár létezik.
+**A:** Helytelen fájlútvonalak és nem megfelelő könyvtárverziók a szokásos hibaforrások. Ellenőrizze a `pom.xml`‑t, és győződjön meg arról, hogy a kimeneti könyvtár létezik.
 
 **Q:** *Hogyan kezeljem a nagyon nagy DSV fájlokat?*  
-**A:** A fájlt kisebb adagokban dolgozza fel, és minden adag után zárja be az `Editor` példányt a memória felszabadításához.
+**A:** Feldolgozza a fájlt kisebb adagokban, és minden adag után zárja be az `Editor` példányt a memória felszabadításához.
 
-**Q:** *A GroupDocs.Editor kompatibilis a legújabb Java kiadásokkal?*  
-**A:** Teljesen. A könyvtár rendszeresen frissül, hogy támogassa a legújabb Java verziókat – csak ellenőrizze a kompatibilitási mátrixot a termékoldalon.
+**Q:** *Kompatibilis a GroupDocs.Editor a legújabb Java kiadásokkal?*  
+**A:** Teljes mértékben. A könyvtár rendszeresen frissül, hogy támogassa a legújabb Java verziókat—csak ellenőrizze a kompatibilitási mátrixot a termékoldalon.
 
-**Q:** *Beágyazhatom ezt a konvertálási logikát egy webalkalmazásba?*  
-**A:** Igen. A konvertálást REST végpontként teheti elérhetővé Spring Boot vagy bármely Java EE keretrendszer használatával.
+**Q:** *Beágyazhatom ezt a konverziós logikát egy webalkalmazásba?*  
+**A:** Igen. A konverziót REST végpontként is kiexponálhatja Spring Boot vagy bármely Java EE keretrendszer segítségével.
 
-## Források
+## Erőforrások
 - [Dokumentáció](https://docs.groupdocs.com/editor/java/)
 - [API referencia](https://reference.groupdocs.com/editor/java/)
 - [Letöltés](https://releases.groupdocs.com/editor/java/)
@@ -161,6 +196,14 @@ document.save(afterEdit, outputCellsPath, cellsSaveOptions);
 
 ---
 
-**Utoljára frissítve:** 2026-02-11  
-**Tesztelve ezzel:** GroupDocs.Editor 25.3 for Java  
-**Szerző:** GroupDocs
+**Utolsó frissítés:** 2026-07-02  
+**Tesztelve:** GroupDocs.Editor 25.3 for Java  
+**Szerző:** GroupDocs  
+
+---
+
+## Kapcsolódó oktatóanyagok
+
+- [DSV konvertálása Excel Java-ra a GroupDocs.Editor egyszerű szöveggel](/editor/java/plain-text-dsv-documents/)
+- [Excel védelme Java-val: A GroupDocs.Editor jelszóvédelem és kezelés mestersége](/editor/java/advanced-features/excel-file-security-java-groupdocs-editor/)
+- [Hogyan szerkesszünk Excel és Word fájlokat Java-val a GroupDocs.Editor segítségével](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)

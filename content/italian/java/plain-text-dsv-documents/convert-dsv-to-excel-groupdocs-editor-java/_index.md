@@ -1,53 +1,80 @@
 ---
-date: '2026-02-11'
+date: '2026-07-02'
 description: Scopri come convertire i file DSV in Excel XLSM usando GroupDocs.Editor
-  per Java. Questa guida passo‑passo mostra la configurazione, l'implementazione e
-  la risoluzione dei problemi.
+  per Java. Questa guida passo‑passo mostra l'installazione, l'implementazione e la
+  risoluzione dei problemi.
 keywords:
-- GroupDocs Editor for Java
-- Convert DSV to Excel XLSM
-- Edit and Save DSV as Excel
-title: Come convertire DSV in Excel XLSM con GroupDocs Java
+- how to convert dsv
+- macro enabled xlsm
+- delimiter separated values excel
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-02'
+  description: Learn how to convert DSV files to Excel XLSM using GroupDocs.Editor
+    for Java. This step‑by‑step guide shows setup, implementation, and troubleshooting.
+  headline: How to Convert DSV to Excel XLSM Using GroupDocs.Editor for Java
+  type: TechArticle
+- description: Learn how to convert DSV files to Excel XLSM using GroupDocs.Editor
+    for Java. This step‑by‑step guide shows setup, implementation, and troubleshooting.
+  name: How to Convert DSV to Excel XLSM Using GroupDocs.Editor for Java
+  steps:
+  - name: Load the Editable Document
+    text: '`edit()` loads the DSV content into an editable object that you can manipulate
+      or directly convert.'
+  - name: Configure Save Options for XLSM
+    text: '`SpreadsheetSaveOptions` lets you specify the target format (XLSM) and
+      additional settings such as password protection.'
+  - name: Save the Document as an Excel Spreadsheet
+    text: The `save()` method writes the edited content to the path you provided,
+      producing a macro‑enabled Excel file.
+  type: HowTo
+- questions:
+  - answer: GroupDocs.Editor for Java
+    question: What is the primary library?
+  - answer: No, you need to load, edit, configure save options, and then save.
+    question: Can I convert DSV to XLSM in one line?
+  - answer: Yes, a trial or permanent license is required for production use.
+    question: Do I need a license?
+  - answer: Java 8+ (compatible with the latest GroupDocs.Editor releases).
+    question: Which Java version is supported?
+  - answer: Yes, XLSM files retain macro support.
+    question: Is the output macro‑enabled?
+  type: FAQPage
+title: Come convertire DSV in Excel XLSM usando GroupDocs.Editor per Java
 type: docs
 url: /it/java/plain-text-dsv-documents/convert-dsv-to-excel-groupdocs-editor-java/
 weight: 1
 ---
 
- So fine.
+# Come convertire DSV in Excel XLSM usando GroupDocs.Editor per Java
 
-Now produce final content.# Come Convertire DSV in Excel XLSM Utilizzando GroupDocs.Editor per Java
+Se ti sei mai chiesto **come convertire DSV** in un formato che gli utenti aziendali adorano—Excel—sei nel posto giusto. In questo tutorial percorreremo l'intero processo di conversione di un file DSV modificato in un foglio di calcolo XLSM con GroupDocs.Editor per Java. Vedrai perché è importante, i passaggi esatti da seguire e consigli pratici per evitare gli errori più comuni.
 
-Se ti sei mai chiesto **come convertire DSV** in un formato che gli utenti business amano—Excel—sei nel posto giusto. In questo tutorial vedremo l'intero processo di conversione di un file DSV modificato in un foglio di calcolo XLSM con GroupDocs.Editor per Java. Avrai una chiara comprensione del perché sia importante, i passaggi esatti da seguire e consigli per evitare gli errori più comuni.
-
-## Risposte Rapide
+## Risposte rapide
 - **Qual è la libreria principale?** GroupDocs.Editor for Java  
-- **Posso convertire DSV in XLSM in una sola riga?** No, è necessario caricare, modificare, configurare le opzioni di salvataggio e poi salvare.  
-- **È necessaria una licenza?** Sì, è richiesta una licenza di prova o permanente per l'uso in produzione.  
-- **Quale versione di Java è supportata?** Java 8+ (compatibile con le ultime versioni di GroupDocs.Editor).  
-- **Il file di output è abilitato alle macro?** Sì, i file XLSM mantengono il supporto alle macro.
+- **Posso convertire DSV in XLSM in una sola riga?** No, devi caricare, modificare, configurare le opzioni di salvataggio e poi salvare.  
+- **Ho bisogno di una licenza?** Sì, è necessaria una licenza di prova o permanente per l'uso in produzione.  
+- **Quale versione di Java è supportata?** Java 8+ (compatibile con le ultime release di GroupDocs.Editor).  
+- **L'output è abilitato alle macro?** Sì, i file XLSM mantengono il supporto alle macro.
 
-## Cos'è DSV e Perché Convertirlo?
+## Cos'è DSV e perché convertirlo?
 
-DSV (Delimiter‑Separated Values) è un formato di testo semplice in cui i campi sono separati da un delimitatore personalizzato (spesso una barra verticale `|` o un punto e virgola `;`). Sebbene flessibile, i file DSV sono difficili da esplorare per gli utenti non tecnici. Convertirli in **Excel XLSM** ti fornisce un foglio di calcolo familiare e interattivo che può anche contenere macro VBA.
+DSV (Delimiter‑Separated Values) è un file di testo semplice in cui i campi sono separati da un delimitatore personalizzato, come una barra verticale `|` o un punto e virgola `;`. Convertirlo in Excel XLSM consente agli utenti aziendali di visualizzare, filtrare ed eseguire macro sui dati in un'interfaccia di foglio di calcolo familiare, trasformando il testo grezzo in uno strumento di analisi interattivo.
 
-## Perché Usare GroupDocs.Editor per Java?
+## Perché usare GroupDocs.Editor per Java?
 
-GroupDocs.Editor astrae il lavoro di parsing e formattazione a basso livello, permettendoti di concentrarti sulla logica di business. Gestisce:
-
-- Rilevamento automatico dei delimitatori  
-- Conservazione degli stili delle celle e delle formule  
-- Salvataggio senza problemi in file XLSM abilitati alle macro  
+GroupDocs.Editor per Java fornisce supporto pronto all'uso per **oltre 50 formati di input e output**, rilevamento automatico del delimitatore e la possibilità di preservare stili di cella, formule e macro durante il salvataggio in XLSM, rendendo la conversione veloce, affidabile e pronta per la produzione.
 
 ## Prerequisiti
 
-1. **Java Development Kit (JDK) 8 o successivo** installato.  
-2. **Maven** (o un altro strumento di build) per gestire le dipendenze.  
-3. Un **IDE** come IntelliJ IDEA o Eclipse per un facile debug.  
-4. Accesso a una **licenza GroupDocs.Editor** (la prova gratuita funziona per i test).  
+- **Java Development Kit (JDK) 8 o più recente** installato.  
+- **Maven** (o un altro strumento di build) per gestire le dipendenze.  
+- Un **IDE** come IntelliJ IDEA o Eclipse per un facile debug.  
+- Accesso a una **licenza GroupDocs.Editor** (la prova gratuita funziona per i test).  
 
-## Configurare GroupDocs.Editor per Java
+## Configurazione di GroupDocs.Editor per Java
 
-### Informazioni sull'Installazione
+### Informazioni sull'installazione
 
 Aggiungi il repository GroupDocs e la dipendenza al tuo `pom.xml`:
 
@@ -69,19 +96,19 @@ Aggiungi il repository GroupDocs e la dipendenza al tuo `pom.xml`:
 </dependencies>
 ```
 
-> **Suggerimento:** Mantieni il numero di versione sincronizzato con l'ultima release sul sito ufficiale.
+> **Suggerimento professionale:** Mantieni il numero di versione sincronizzato con l'ultima release sul sito ufficiale.
 
-Se preferisci non usare Maven, puoi scaricare il JAR direttamente dalla pagina di download ufficiale: [GroupDocs.Editor per Java releases](https://releases.groupdocs.com/editor/java/).
+Se preferisci non usare Maven, puoi scaricare il JAR direttamente dalla pagina di download ufficiale: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-### Acquisizione della Licenza
+### Acquisizione della licenza
 
-- **Prova Gratuita:** Registrati sul portale GroupDocs e ricevi una chiave di licenza temporanea.  
-- **Licenza Temporanea:** Ottienila tramite il [sito ufficiale di GroupDocs](https://purchase.groupdocs.com/temporary-license).  
-- **Acquisto Completo:** Acquista una licenza di produzione per uso illimitato.
+- **Prova gratuita:** Registrati sul portale GroupDocs e ricevi una chiave di licenza temporanea.  
+- **Licenza temporanea:** Ottienila tramite il [sito ufficiale di GroupDocs](https://purchase.groupdocs.com/temporary-license).  
+- **Acquisto completo:** Acquista una licenza di produzione per uso illimitato.
 
-### Inizializzazione di Base
+### Inizializzazione di base
 
-Crea un'istanza `Editor` che punti al tuo file DSV:
+`Editor` è la classe principale in GroupDocs.Editor che carica, modifica e salva documenti. Crea un'istanza di `Editor` che punta al tuo file DSV:
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -91,18 +118,23 @@ String filePath = "path/to/your/input.dsv";
 Editor editor = new Editor(filePath);
 ```
 
-Adesso sei pronto per caricare, modificare e salvare il documento.
+Ora sei pronto a caricare, modificare e salvare il documento.
 
-## Come Convertire DSV in Excel XLSM
+## Come convertire DSV in Excel XLSM?
 
-### Passo 1: Caricare il Documento Modificabile
+Carica il file DSV con un'istanza di `Editor`, chiama `edit()` per ottenere un documento modificabile, configura `SpreadsheetSaveOptions` per impostare il formato di output su XLSM, quindi invoca `save()` con il percorso file desiderato; questo flusso a tre passaggi produce una cartella di lavoro Excel abilitata alle macro.
+
+### Passo 1: Carica il documento modificabile
+
+`edit()` carica il contenuto DSV in un oggetto modificabile che puoi manipolare o convertire direttamente.
 
 ```java
 EditableDocument afterEdit = editor.edit();
 ```
-*La chiamata `edit()` carica il contenuto DSV in un oggetto modificabile che puoi manipolare o convertire direttamente.*
 
-### Passo 2: Configurare le Opzioni di Salvataggio per XLSM
+### Passo 2: Configura le opzioni di salvataggio per XLSM
+
+`SpreadsheetSaveOptions` ti consente di specificare il formato di destinazione (XLSM) e impostazioni aggiuntive come la protezione con password.
 
 ```java
 import com.groupdocs.editor.options.SpreadsheetSaveOptions;
@@ -111,38 +143,38 @@ import com.groupdocs.editor.formats.SpreadsheetFormats;
 String outputCellsPath = "YOUR_OUTPUT_DIRECTORY/edited.xlsm";
 SpreadsheetSaveOptions cellsSaveOptions = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 ```
-*`SpreadsheetSaveOptions` ti consente di specificare il formato di destinazione (XLSM) e impostazioni aggiuntive come la protezione con password.*
 
-### Passo 3: Salvare il Documento come Foglio di Calcolo Excel
+### Passo 3: Salva il documento come foglio di calcolo Excel
+
+Il metodo `save()` scrive il contenuto modificato nel percorso fornito, producendo un file Excel abilitato alle macro.
 
 ```java
 document.save(afterEdit, outputCellsPath, cellsSaveOptions);
 ```
-*Il metodo `save()` scrive il contenuto modificato nel percorso fornito, producendo un file Excel abilitato alle macro.*
 
-#### Suggerimenti per la Risoluzione dei Problemi
-- **Problemi di Percorso File:** Usa percorsi assoluti o verifica che i percorsi relativi vengano risolti correttamente dalla radice del progetto.  
-- **Compatibilità di Versione:** Assicurati che la versione di GroupDocs.Editor corrisponda al JDK in uso.  
-- **Vincoli di Memoria:** Per file DSV molto grandi, considera l'elaborazione a blocchi e invoca `editor.close()` dopo l'operazione.  
+#### Suggerimenti per la risoluzione dei problemi
+- **Problemi di percorso file:** Usa percorsi assoluti o verifica che i percorsi relativi vengano risolti correttamente dalla radice del progetto.  
+- **Compatibilità di versione:** Assicurati che la versione di GroupDocs.Editor corrisponda al JDK in uso.  
+- **Vincoli di memoria:** Per file DSV molto grandi, considera l'elaborazione a blocchi e invoca `editor.close()` dopo l'operazione.
 
-## Applicazioni Pratiche
+## Applicazioni pratiche
 
-1. **Analisi dei Dati:** Converti i dati grezzi dei log (DSV) in Excel per tabelle pivot e grafici.  
-2. **Reportistica Automatizzata:** Integra la conversione nei job batch notturni che generano report XLSM.  
-3. **Modellazione Finanziaria:** Trasforma i feed finanziari separati da delimitatori in fogli di calcolo abilitati alle macro per calcoli complessi.  
+1. **Analisi dei dati:** Converti i dati di log grezzi (DSV) in Excel per tabelle pivot e grafici.  
+2. **Reportistica automatizzata:** Integra la conversione nei job batch notturni che generano report XLSM.  
+3. **Modellazione finanziaria:** Trasforma feed finanziari delimitati in fogli di calcolo abilitati alle macro per calcoli complessi.
 
-## Considerazioni sulle Prestazioni
+## Considerazioni sulle prestazioni
 
-- **Gestione delle Risorse:** Chiama `editor.close()` quando hai finito per rilasciare i handle dei file.  
-- **Ottimizzazione della Memoria:** Esegui lo streaming di file grandi invece di caricare l'intero documento in memoria quando possibile.  
+- **Gestione delle risorse:** Chiama `editor.close()` quando hai finito per rilasciare i handle dei file.  
+- **Ottimizzazione della memoria:** Esegui lo streaming di file grandi invece di caricare l'intero documento in memoria quando possibile.
 
-## Domande Frequenti
+## Domande frequenti
 
 **Q:** *Posso convertire altri formati di foglio di calcolo con GroupDocs.Editor?*  
 **A:** Sì, sono supportati formati come CSV, XLSX e ODS.
 
 **Q:** *Quali sono i problemi più comuni durante il salvataggio dei file?*  
-**A:** Percorsi file errati e versioni della libreria non corrispondenti sono i colpevoli abituali. Controlla attentamente il tuo `pom.xml` e assicurati che la directory di output esista.
+**A:** Percorsi file errati e versioni della libreria non corrispondenti sono i colpevoli abituali. Controlla nuovamente il tuo `pom.xml` e assicurati che la directory di output esista.
 
 **Q:** *Come devo gestire file DSV molto grandi?*  
 **A:** Elabora il file in batch più piccoli e chiudi l'istanza `Editor` dopo ogni batch per liberare memoria.
@@ -157,12 +189,20 @@ document.save(afterEdit, outputCellsPath, cellsSaveOptions);
 - [Documentazione](https://docs.groupdocs.com/editor/java/)
 - [Riferimento API](https://reference.groupdocs.com/editor/java/)
 - [Download](https://releases.groupdocs.com/editor/java/)
-- [Prova Gratuita](https://releases.groupdocs.com/editor/java/)
-- [Licenza Temporanea](https://purchase.groupdocs.com/temporary-license)
-- [Forum di Supporto](https://forum.groupdocs.com/c/editor/)
+- [Prova gratuita](https://releases.groupdocs.com/editor/java/)
+- [Licenza temporanea](https://purchase.groupdocs.com/temporary-license)
+- [Forum di supporto](https://forum.groupdocs.com/c/editor/)
 
 ---
 
-**Ultimo Aggiornamento:** 2026-02-11  
-**Testato Con:** GroupDocs.Editor 25.3 per Java  
-**Autore:** GroupDocs
+**Ultimo aggiornamento:** 2026-07-02  
+**Testato con:** GroupDocs.Editor 25.3 per Java  
+**Autore:** GroupDocs  
+
+---
+
+## Tutorial correlati
+
+- [Converti DSV in Excel Java con GroupDocs.Editor Plain Text](/editor/java/plain-text-dsv-documents/)
+- [Proteggi Excel con Java: padroneggiare GroupDocs.Editor per la protezione e gestione delle password](/editor/java/advanced-features/excel-file-security-java-groupdocs-editor/)
+- [Come modificare file Excel e Word in Java con GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
