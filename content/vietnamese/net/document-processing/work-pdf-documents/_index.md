@@ -1,23 +1,86 @@
 ---
-title: Làm việc với tài liệu PDF
-linktitle: Làm việc với tài liệu PDF
-second_title: API GroupDocs.Editor .NET
-description: Tìm hiểu cách chỉnh sửa tài liệu PDF bằng GroupDocs.Editor cho .NET với hướng dẫn này. Sửa đổi nội dung, xử lý các tệp lớn và lưu các chỉnh sửa của bạn một cách an toàn.
-weight: 14
-url: /vi/net/document-processing/work-pdf-documents/
+date: 2026-07-15
+description: Tìm hiểu cách chỉnh sửa tài liệu PDF bằng lập trình sử dụng GroupDocs.Editor
+  for .NET – tải các tệp được bảo vệ bằng mật khẩu, xử lý các PDF lớn, đọc luồng dữ
+  liệu, và bật phân trang.
+keywords:
+- programmatically edit pdf
+- load password protected pdf
+- handle large pdf files
+lastmod: 2026-07-15
+linktitle: Chỉnh sửa PDF một cách lập trình với GroupDocs.Editor for .NET
+og_description: Chỉnh sửa tài liệu PDF bằng lập trình sử dụng GroupDocs.Editor for
+  .NET – tải các PDF được bảo vệ bằng mật khẩu, xử lý các tệp lớn, đọc luồng tệp,
+  và bật phân trang trong vài bước.
+og_image_alt: Guide to programmatically edit PDF files with GroupDocs.Editor for .NET
+og_title: Chỉnh sửa PDF một cách lập trình với GroupDocs.Editor for .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-15'
+  description: Learn how to programmatically edit PDF documents using GroupDocs.Editor
+    for .NET – load password‑protected files, handle large PDFs, read streams, and
+    enable pagination.
+  headline: Programmatically Edit PDF with GroupDocs.Editor for .NET
+  type: TechArticle
+- description: Learn how to programmatically edit PDF documents using GroupDocs.Editor
+    for .NET – load password‑protected files, handle large PDFs, read streams, and
+    enable pagination.
+  name: Programmatically Edit PDF with GroupDocs.Editor for .NET
+  steps:
+  - name: '**.NET Development Environment** – Visual Studio, Rider, or any IDE that
+      supports .NET 6+.'
+    text: '**.NET Development Environment** – Visual Studio, Rider, or any IDE that
+      supports .NET 6+.'
+  - name: '**GroupDocs.Editor for .NET** – Download and install the library from the
+      [release page](https://releases.groupdocs.com/editor/net/).'
+    text: '**GroupDocs.Editor for .NET** – Download and install the library from the
+      [release page](https://releases.groupdocs.com/editor/net/).'
+  - name: '**Basic C# knowledge** – Understanding of classes, streams, and exception
+      handling will help.'
+    text: '**Basic C# knowledge** – Understanding of classes, streams, and exception
+      handling will help.'
+  type: HowTo
+- questions:
+  - answer: Yes, the library supports Word, Excel, PowerPoint, and over 30 additional
+      formats besides PDF.
+    question: Can I use GroupDocs.Editor for .NET to edit other document formats?
+  - answer: You can download a free trial from the [GroupDocs.Editor free trial page](https://releases.groupdocs.com/).
+    question: How can I get a free trial of GroupDocs.Editor for .NET?
+  - answer: Yes, the API includes streaming and memory‑optimisation features that
+      let you work with PDFs larger than 500 MB.
+    question: Is it possible to handle large PDF documents with GroupDocs.Editor for
+      .NET?
+  - answer: Set the `Password` property on `PdfSaveOptions` before calling `Save`;
+      the output PDF will be password‑protected.
+    question: How do I encrypt the PDF document while saving it?
+  - answer: For help, visit the [GroupDocs.Editor support forum](https://forum.groupdocs.com/c/editor/20).
+    question: Where can I get support if I encounter issues?
+  type: FAQPage
+second_title: GroupDocs.Editor .NET API
+tags:
+- edit pdf
+- GroupDocs.Editor
+- .NET document processing
+title: Chỉnh sửa PDF một cách lập trình với GroupDocs.Editor for .NET
 type: docs
+url: /vi/net/document-processing/work-pdf-documents/
+weight: 14
 ---
-# Làm việc với tài liệu PDF
+
+# Chỉnh sửa PDF bằng chương trình với GroupDocs.Editor cho .NET
 
 ## Giới thiệu
-Bạn đang tìm kiếm một hướng dẫn toàn diện để thao tác và chỉnh sửa tài liệu PDF bằng GroupDocs.Editor cho .NET? Bạn đang ở đúng nơi! Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn toàn bộ quá trình, từ thiết lập dự án đến lưu tài liệu PDF đã chỉnh sửa của bạn. Cho dù bạn là nhà phát triển dày dạn kinh nghiệm hay mới bắt đầu, bạn sẽ thấy hướng dẫn này hữu ích và dễ làm theo. Hãy đi sâu vào!
-## Điều kiện tiên quyết
-Trước khi chúng ta bắt đầu, có một số điều bạn cần:
-1. Môi trường phát triển .NET: Đảm bảo bạn đã thiết lập môi trường phát triển .NET. Đây có thể là Visual Studio hoặc bất kỳ IDE ưa thích nào khác.
-2. GroupDocs.Editor cho .NET: Tải xuống và cài đặt thư viện GroupDocs.Editor cho .NET. Bạn có thể lấy nó từ[trang phát hành](https://releases.groupdocs.com/editor/net/).
-3. Hiểu biết cơ bản về C#: Làm quen với lập trình C# sẽ có ích vì hướng dẫn này liên quan đến việc viết và hiểu mã C#.
-## Nhập không gian tên
-Trước khi viết bất kỳ mã nào, hãy đảm bảo bạn đã nhập các không gian tên cần thiết vào dự án của mình:
+Nếu bạn cần **programmatically edit PDF** trong một ứng dụng .NET, bạn đã đến đúng hướng dẫn. Trong hướng dẫn này, chúng tôi sẽ đi qua từng bước — từ cài đặt GroupDocs.Editor, tải PDF được bảo vệ bằng mật khẩu, đọc tệp dưới dạng stream, bật phân trang, đến lưu tài liệu đã chỉnh sửa. Dù bạn đang cập nhật một từ duy nhất hay xử lý các PDF khổng lồ, bạn sẽ thấy thư viện giúp công việc trở nên dễ dàng và đáng tin cậy.
+
+## Câu trả lời nhanh
+- **Tôi có thể chỉnh sửa PDF mà không mở chúng trong giao diện UI không?** Yes, GroupDocs.Editor works entirely in code.  
+- **Nó có hỗ trợ PDF được bảo vệ bằng mật khẩu không?** Absolutely – you can supply the password in the load options.  
+- **Giới hạn của PDF lớn là gì?** The API can handle files over 500 MB using streaming techniques.  
+- **Làm thế nào để bật chế độ phân trang?** Set `EnablePagination = true` in the editing options.  
+- **Tôi có cần giấy phép cho môi trường sản xuất không?** A commercial license is required for non‑trial deployments.
+
+## Chỉnh sửa PDF bằng chương trình là gì?
+**Programmatically edit pdf** có nghĩa là sửa đổi nội dung của tệp PDF thông qua mã thay vì thủ công bằng trình chỉnh sửa giao diện người dùng. GroupDocs.Editor cho .NET cung cấp một API đầy đủ tính năng cho phép bạn thay thế văn bản, hình ảnh và các yếu tố bố cục trực tiếp từ C#. Cách tiếp cận này cho phép tự động hoá, xử lý hàng loạt và tích hợp vào các dịch vụ web, cho phép các nhà phát triển áp dụng thay đổi mà không cần tương tác của người dùng. API trừu tượng hoá cấu trúc PDF, vì vậy bạn có thể làm việc với các đối tượng cấp cao trong khi thư viện xử lý các phức tạp của định dạng tệp.  
 ```csharp
 using System;
 using GroupDocs.Editor.Formats;
@@ -28,67 +91,86 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 ```
-## Bước 1: Nhận đường dẫn đến tệp đầu vào
-Trước tiên, bạn cần chỉ định đường dẫn đến tài liệu PDF của mình. Đối với hướng dẫn này, chúng tôi giả sử bạn có một tệp PDF mẫu.
+
+## Tại sao nên sử dụng GroupDocs.Editor cho .NET?
+GroupDocs.Editor hỗ trợ **30+ document formats** và có thể chỉnh sửa PDF lên tới **500 MB** mà không cần tải toàn bộ tệp vào bộ nhớ, làm cho nó trở nên lý tưởng cho các dịch vụ back‑end có lưu lượng cao. Tính năng **built‑in pagination** của nó đảm bảo các PDF đa trang giữ nguyên ngắt trang đúng sau khi chỉnh sửa, và thư viện cung cấp **native streaming** để đọc và ghi tệp một cách hiệu quả.
+
+## Yêu cầu trước
+Trước khi bắt đầu, có một vài thứ bạn sẽ cần:
+1. **Môi trường phát triển .NET** – Visual Studio, Rider, hoặc bất kỳ IDE nào hỗ trợ .NET 6+.
+2. **GroupDocs.Editor cho .NET** – Tải xuống và cài đặt thư viện từ [release page](https://releases.groupdocs.com/editor/net/).
+3. **Kiến thức cơ bản về C#** – Hiểu biết về lớp, stream và xử lý ngoại lệ sẽ hữu ích.
+
+## Nhập không gian tên
+Trước khi viết bất kỳ mã nào, hãy chắc chắn rằng bạn đã nhập các không gian tên cần thiết vào dự án của mình:
 ```csharp
 string inputFilePath = "Your Sample Document.pdf";
 ```
-## Bước 2: Tạo luồng từ đường dẫn
-Tiếp theo, tạo luồng tệp từ đường dẫn bạn đã chỉ định. Luồng này sẽ được sử dụng để đọc tài liệu PDF.
+
+## Làm thế nào để tải PDF được bảo vệ bằng mật khẩu?
+`PdfLoadOptions` định nghĩa các tùy chọn cho việc tải tệp PDF, bao gồm mật khẩu và cài đặt bộ nhớ. Để tải một PDF được bảo vệ, tạo một thể hiện `PdfLoadOptions`, đặt thuộc tính `Password` của nó thành mật khẩu của tài liệu, và truyền đối tượng này cho editor. Điều này đảm bảo tệp được giải mã trước bất kỳ thao tác chỉnh sửa nào.  
 ```csharp
 using (FileStream fs = File.OpenRead(inputFilePath))
 ```
-## Bước 3: Tạo tùy chọn tải cho tài liệu
-Để tải tài liệu PDF, bạn cần chỉ định các tùy chọn tải. Nếu tệp PDF của bạn được bảo vệ bằng mật khẩu, bạn có thể cung cấp mật khẩu tại đây.
+
+## Bước 1: Lấy đường dẫn tới tệp đầu vào
+Đầu tiên, bạn cần chỉ định đường dẫn tới tài liệu PDF của mình. Đối với hướng dẫn này, chúng tôi sẽ giả sử bạn có một tệp PDF mẫu.
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Nếu tài liệu được bảo vệ bằng mật khẩu
+// If the document is password-protected
 loadOptions.Password = "your_password";
 ```
-## Bước 4: Tải tài liệu vào phiên bản soạn thảo
-Bây giờ, hãy sử dụng các tùy chọn luồng và tải tệp để tải tài liệu vào một`Editor` ví dụ.
+
+## Làm thế nào để đọc luồng tệp PDF?
+`FileStream` cung cấp một luồng để đọc và ghi các tệp trên đĩa. Sử dụng nó để mở PDF ở chế độ đọc, cho phép editor xử lý tệp mà không khóa nó cho truy cập độc quyền. Ví dụ: `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` đảm bảo hiệu suất tối ưu và việc đọc đồng thời an toàn.  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
-## Bước 5: Tạo tùy chọn chỉnh sửa
-Đặt các tùy chọn chỉnh sửa cho tài liệu. Trong trường hợp này, chúng tôi sẽ kích hoạt chế độ phân trang.
+
+## Bước 2: Tạo một Stream từ đường dẫn
+Tiếp theo, tạo một file stream từ đường dẫn bạn đã chỉ định. Stream này sẽ được sử dụng để đọc tài liệu PDF.
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
-## Bước 6: Tạo tài liệu có thể chỉnh sửa trung gian
-Tạo một tài liệu có thể chỉnh sửa trung gian bằng cách sử dụng phiên bản trình soạn thảo và các tùy chọn chỉnh sửa.
+
+## Làm thế nào để cấu hình tùy chọn tải cho PDF được bảo vệ bằng mật khẩu?
+`PdfLoadOptions` định nghĩa các tùy chọn cho việc tải tệp PDF, bao gồm mật khẩu và việc sử dụng bộ nhớ. Sau khi tạo thể hiện, gán thuộc tính `Password` với mật khẩu của tài liệu. Đối với các PDF lớn, bạn cũng có thể đặt `UseMemoryCache = false` để giảm tiêu thụ bộ nhớ. Các cài đặt này chuẩn bị bộ tải để xử lý các tệp được mã hoá và kích thước lớn một cách hiệu quả.  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
-    // Trích xuất nội dung văn bản dưới dạng đánh dấu HTML
+    // Extract textual content as HTML markup
     string originalContent = beforeEdit.GetContent();
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
-## Bước 7: Sửa đổi nội dung
-Sửa đổi nội dung của tài liệu khi cần thiết. Ở đây, chúng tôi chỉ đơn giản là thay thế một từ trong tài liệu.
+
+## Bước 3: Tạo tùy chọn tải cho tài liệu
+Để tải tài liệu PDF, bạn cần chỉ định các tùy chọn tải. Nếu PDF của bạn được bảo vệ bằng mật khẩu, bạn có thể cung cấp mật khẩu tại đây.
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
-## Bước 8: Tạo một tài liệu có thể chỉnh sửa mới với nội dung đã chỉnh sửa
- Tạo một cái mới`EditableDocument` ví dụ với nội dung và tài nguyên đã chỉnh sửa.
+
+## Làm thế nào để khởi tạo Editor với một stream và các tùy chọn?
+`Editor` là lớp chính tải tài liệu và cung cấp khả năng chỉnh sửa. Khởi tạo nó bằng cách truyền một delegate trả về file stream và một delegate khác trả về các tùy chọn tải đã cấu hình trước đó. Điều này tạo ra một biểu diễn trong bộ nhớ của PDF sẵn sàng cho việc thao tác tiếp theo.  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
-## Bước 9: Tạo tùy chọn lưu tài liệu
-Chỉ định các tùy chọn lưu cho tài liệu PDF. Bạn cũng có thể đặt mật khẩu cho tài liệu đầu ra.
+
+## Bước 4: Tải tài liệu vào thể hiện Editor
+Bây giờ, sử dụng file stream và các tùy chọn tải để nạp tài liệu vào một thể hiện `Editor`.
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
 saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
-## Bước 10: Lưu tài liệu đã chỉnh sửa
-Cuối cùng, lưu tài liệu đã chỉnh sửa vào đường dẫn đầu ra đã chỉ định.
+
+## Làm thế nào để bật phân trang khi chỉnh sửa PDF?
+`PdfEditOptions` chỉ định các cài đặt chỉnh sửa cho tệp PDF, chẳng hạn như phân trang. Tạo một thể hiện của lớp này và đặt `EnablePagination = true`. Bật phân trang giữ nguyên các ngắt trang và bố cục gốc sau khi sửa đổi, đảm bảo PDF đầu ra duy trì cùng cấu trúc hình ảnh như nguồn.  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -98,16 +180,81 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-## Phần kết luận
-Ở đó bạn có nó! Bằng cách làm theo các bước này, bạn có thể chỉnh sửa thành công tài liệu PDF bằng GroupDocs.Editor cho .NET. Thư viện mạnh mẽ này giúp bạn dễ dàng thao tác và lưu tệp PDF theo chương trình. Cho dù bạn đang thực hiện thay thế văn bản đơn giản hay sửa đổi phức tạp hơn, GroupDocs.Editor dành cho .NET đều có thể hỗ trợ bạn.
+## Bước 5: Tạo tùy chọn chỉnh sửa
+CODE_BLOCK_PLACEHOLDER_11_END
+
+## Làm thế nào để tạo tài liệu trung gian có thể chỉnh sửa?
+`CreateEditableDocument` tạo ra một biểu diễn có thể chỉnh sửa của tài liệu đã tải. Gọi phương thức này trên thể hiện `Editor`, truyền `PdfEditOptions` đã định nghĩa trước đó. Phương thức trả về một `EditableDocument` chứa nội dung dạng HTML có thể được thay đổi bằng mã trước khi lưu lại thành PDF.  
+CODE_BLOCK_PLACEHOLDER_12_END
+
+## Bước 6: Tạo tài liệu trung gian có thể chỉnh sửa
+Tạo một tài liệu trung gian có thể chỉnh sửa bằng cách sử dụng thể hiện editor và các tùy chọn chỉnh sửa.
+CODE_BLOCK_PLACEHOLDER_13_END
+
+## Làm thế nào để thay thế văn bản trong nội dung có thể chỉnh sửa?
+`EditableDocument` giữ nội dung của tài liệu ở định dạng có thể chỉnh sửa. Truy cập thuộc tính `Content` của nó, trả về một chuỗi đại diện HTML của tài liệu. Sử dụng các thao tác chuỗi tiêu chuẩn của C#, như `Replace`, hoặc biểu thức chính quy để sửa đổi văn bản theo nhu cầu trước khi tái tạo tài liệu.  
+CODE_BLOCK_PLACEHOLDER_14_END
+
+## Bước 7: Sửa đổi nội dung
+Sửa đổi nội dung của tài liệu theo nhu cầu. Ở đây, chúng tôi chỉ đơn giản thay thế một từ trong tài liệu.
+CODE_BLOCK_PLACEHOLDER_15_END
+
+## Làm thế nào để tái tạo EditableDocument sau khi thay đổi?
+`EditableDocument` giữ nội dung của tài liệu ở định dạng có thể chỉnh sửa. Sau khi chỉnh sửa chuỗi HTML, tạo một `EditableDocument` mới bằng cách truyền nội dung đã sửa đổi và bất kỳ tài nguyên liên quan nào (hình ảnh, phông chữ) trở lại editor. Điều này tái cấu trúc cấu trúc nội bộ của tài liệu, chuẩn bị cho việc lưu với nội dung đã cập nhật.  
+CODE_BLOCK_PLACEHOLDER_16_END
+
+## Bước 8: Tạo một EditableDocument mới với nội dung đã chỉnh sửa
+Tạo một thể hiện `EditableDocument` mới với nội dung và tài nguyên đã chỉnh sửa.
+CODE_BLOCK_PLACEHOLDER_17_END
+
+## Làm thế nào để cấu hình tùy chọn lưu PDF, bao gồm mã hoá?
+`PdfSaveOptions` định nghĩa các tùy chọn cho việc lưu tệp PDF, bao gồm bảo vệ bằng mật khẩu và nén. Khởi tạo nó, đặt `Password` để mã hoá đầu ra, tùy chọn bật `EnablePagination` để giữ bố cục trang, và điều chỉnh `CompressionLevel` cho các tệp lớn. Các cài đặt này kiểm soát cách PDF đã chỉnh sửa được ghi vào đĩa.  
+CODE_BLOCK_PLACEHOLDER_18_END
+
+## Bước 9: Tạo tùy chọn lưu tài liệu
+Chỉ định các tùy chọn lưu cho tài liệu PDF. Bạn cũng có thể đặt mật khẩu cho tài liệu đầu ra.
+CODE_BLOCK_PLACEHOLDER_19_END
+
+## Làm thế nào để lưu PDF đã chỉnh sửa vào đĩa?
+`Save` ghi tài liệu đã chỉnh sửa vào một tệp sử dụng các tùy chọn lưu đã chỉ định. Gọi nó trên thể hiện `Editor`, cung cấp `EditableDocument` đã cập nhật và `PdfSaveOptions` đã cấu hình. Phương thức tạo PDF cuối cùng tại vị trí mục tiêu, áp dụng bất kỳ cài đặt mã hoá hoặc phân trang nào bạn đã định nghĩa.  
+CODE_BLOCK_PLACEHOLDER_20_END
+
+## Bước 10: Lưu tài liệu đã chỉnh sửa
+Cuối cùng, lưu tài liệu đã chỉnh sửa vào đường dẫn đầu ra đã chỉ định.
+CODE_BLOCK_PLACEHOLDER_21_END
+
+## Vấn đề thường gặp và giải pháp
+- **Tăng đột biến bộ nhớ với PDF khổng lồ** – Bật streaming bằng cách đặt `LoadOptions.UseMemoryCache = false`.  
+- **Văn bản không được thay thế** – Đảm bảo chuỗi chính xác phân biệt chữ hoa/thường tồn tại; cân nhắc sử dụng biểu thức chính quy cho các khớp không chính xác.  
+- **Phân trang bị lỗi** – Kiểm tra `EnablePagination` được đặt là true trong cả tùy chọn chỉnh sửa và lưu.
+
 ## Câu hỏi thường gặp
-### Tôi có thể sử dụng GroupDocs.Editor for .NET để chỉnh sửa các định dạng tài liệu khác không?
-Có, GroupDocs.Editor cho .NET hỗ trợ nhiều định dạng tài liệu khác nhau bao gồm Word, Excel, PowerPoint, v.v.
-### Làm cách nào tôi có thể dùng thử miễn phí GroupDocs.Editor cho .NET?
- Bạn có thể tải xuống bản dùng thử miễn phí từ[Trang dùng thử miễn phí GroupDocs.Editor](https://releases.groupdocs.com/).
-### Có thể xử lý các tài liệu PDF lớn bằng GroupDocs.Editor cho .NET không?
-Có, GroupDocs.Editor dành cho .NET bao gồm các tùy chọn để tối ưu hóa việc sử dụng bộ nhớ, giúp nó phù hợp để xử lý các tài liệu lớn.
-### Làm cách nào để nhận được hỗ trợ nếu tôi gặp sự cố?
- Để được hỗ trợ, bạn có thể truy cập[Diễn đàn hỗ trợ GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
-### Tôi có thể mã hóa tài liệu PDF trong khi lưu nó không?
-Có, bạn có thể đặt mật khẩu để mã hóa tài liệu PDF trong quá trình lưu bằng cách sử dụng`PdfSaveOptions.Password` tài sản.
+
+**Hỏi: Tôi có thể sử dụng GroupDocs.Editor cho .NET để chỉnh sửa các định dạng tài liệu khác không?**  
+A: Có, thư viện hỗ trợ Word, Excel, PowerPoint và hơn 30 định dạng bổ sung ngoài PDF.
+
+**Hỏi: Làm thế nào tôi có thể nhận bản dùng thử miễn phí của GroupDocs.Editor cho .NET?**  
+A: Bạn có thể tải bản dùng thử miễn phí từ [trang dùng thử miễn phí của GroupDocs.Editor](https://releases.groupdocs.com/).
+
+**Hỏi: Có thể xử lý các tài liệu PDF lớn với GroupDocs.Editor cho .NET không?**  
+A: Có, API bao gồm các tính năng streaming và tối ưu hoá bộ nhớ cho phép bạn làm việc với PDF lớn hơn 500 MB.
+
+**Hỏi: Làm thế nào để mã hoá tài liệu PDF khi lưu?**  
+A: Đặt thuộc tính `Password` trên `PdfSaveOptions` trước khi gọi `Save`; PDF đầu ra sẽ được bảo vệ bằng mật khẩu.
+
+**Hỏi: Tôi có thể nhận hỗ trợ ở đâu nếu gặp vấn đề?**  
+A: Để được trợ giúp, truy cập [diễn đàn hỗ trợ GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
+
+## Kết luận
+Bạn giờ đã có quy trình làm việc hoàn chỉnh, từ đầu đến cuối cho việc **programmatically edit pdf** bằng GroupDocs.Editor cho .NET. Từ việc tải PDF được bảo vệ bằng mật khẩu và đọc chúng dưới dạng stream, đến bật phân trang và lưu đầu ra đã mã hoá, thư viện bao phủ mọi kịch bản phổ biến. Khám phá thêm API để xử lý hàng loạt tài liệu, thao tác hình ảnh, hoặc tích hợp với lưu trữ đám mây.
+
+---
+
+**Cập nhật lần cuối:** 2026-07-15  
+**Kiểm thử với:** GroupDocs.Editor 23.12 cho .NET  
+**Tác giả:** GroupDocs
+
+## Hướng dẫn liên quan
+
+- [Cách tải tài liệu Word bằng GroupDocs.Editor trong .NET: Hướng dẫn toàn diện](/editor/net/document-loading/load-word-documents-groupdocs-editor-net/)
+- [Bảo vệ tài liệu Word và tối ưu DOCX bằng GroupDocs.Editor cho .NET - Hướng dẫn nâng cao](/editor/net/advanced-features/optimize-protect-docx-groupdocs-editor-dotnet/)

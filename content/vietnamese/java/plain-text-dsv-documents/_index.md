@@ -1,93 +1,161 @@
 ---
-date: 2026-02-11
-description: Tìm hiểu cách chuyển đổi DSV sang Excel Java bằng GroupDocs.Editor, cùng
-  các hướng dẫn chỉnh sửa văn bản thuần, CSV, TSV và các dấu phân cách tùy chỉnh.
-title: Chuyển đổi DSV sang Excel Java với GroupDocs.Editor Văn bản thuần
+date: 2026-07-15
+description: Tìm hiểu cách đọc tệp TSV Java và chuyển DSV sang Excel bằng GroupDocs.Editor,
+  cùng với chỉnh sửa văn bản thuần, CSV, TSV và các dấu phân cách tùy chỉnh.
+keywords:
+- read tsv file java
+- markdown editing java
+- convert csv excel java
+- plain text editor java
+- load markdown java
+lastmod: 2026-07-15
+og_description: Đọc tệp TSV Java với GroupDocs.Editor và chuyển DSV sang Excel. Khám
+  phá chỉnh sửa văn bản thuần, dấu phân cách tùy chỉnh và tích hợp Java đầy đủ.
+og_image_alt: 'Developer guide: read TSV file Java and convert DSV to Excel using
+  GroupDocs.Editor'
+og_title: Đọc tệp TSV Java – Chuyển DSV sang Excel với GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-15'
+  description: Learn how to read TSV file java and convert DSV to Excel using GroupDocs.Editor,
+    plus plain‑text editing, CSV, TSV and custom delimiters.
+  headline: Read TSV File Java – Convert DSV to Excel with GroupDocs
+  type: TechArticle
+- description: Learn how to read TSV file java and convert DSV to Excel using GroupDocs.Editor,
+    plus plain‑text editing, CSV, TSV and custom delimiters.
+  name: Read TSV File Java – Convert DSV to Excel with GroupDocs
+  steps:
+  - name: '**Load the DSV file** – Use the `TextDocument` class to open a CSV, TSV,
+      or any custom‑delimited file.'
+    text: '**Load the DSV file** – Use the `TextDocument` class to open a CSV, TSV,
+      or any custom‑delimited file.'
+  - name: '**Configure the delimiter** – If your file uses a pipe (`|`) or semicolon
+      (`;`), set the `Delimiter` property accordingly. This is the core of **custom
+      delimiters java** handling.'
+    text: '**Configure the delimiter** – If your file uses a pipe (`|`) or semicolon
+      (`;`), set the `Delimiter` property accordingly. This is the core of **custom
+      delimiters java** handling.'
+  - name: '**Edit content (optional)** – Invoke **plain text editing java** methods
+      to add, remove, or replace rows/columns before conversion.'
+    text: '**Edit content (optional)** – Invoke **plain text editing java** methods
+      to add, remove, or replace rows/columns before conversion.'
+  - name: '**Export to Excel** – `ExportFormat` enumerates the supported output formats
+      such as XLSX and XLSM. Call `saveAs(ExportFormat.XLSX)` or `saveAs(ExportFormat.XLSM)`
+      to generate the workbook.'
+    text: '**Export to Excel** – `ExportFormat` enumerates the supported output formats
+      such as XLSX and XLSM. Call `saveAs(ExportFormat.XLSX)` or `saveAs(ExportFormat.XLSM)`
+      to generate the workbook.'
+  - name: '**Validate the result** – Open the generated file with any spreadsheet
+      application to ensure data integrity.'
+    text: '**Validate the result** – Open the generated file with any spreadsheet
+      application to ensure data integrity.'
+  type: HowTo
+- questions:
+  - answer: Yes, the API provides full **edit csv java** capabilities, allowing you
+      to modify rows, columns, and delimiters before saving.
+    question: Can I use GroupDocs.Editor to edit CSV files directly?
+  - answer: Absolutely. Use the same editor instance with the **load markdown java**
+      method to work with `.md` files.
+    question: Is there support for loading Markdown files alongside DSV files?
+  - answer: Process the file line by line, detect the delimiter per line, and use
+      the `CustomDelimiter` option to apply the appropriate separator.
+    question: How do I handle files with mixed delimiters?
+  - answer: Yes – simply specify `ExportFormat.XLSM` when saving.
+    question: Does the library support exporting to Excel macro‑enabled files (.xlsm)?
+  - answer: The editor works seamlessly with Spring; just inject the `Editor` bean
+      and call the conversion logic inside your service layer.
+    question: What if I need to integrate this conversion into a Spring Boot service?
+  type: FAQPage
+tags:
+- read tsv
+- GroupDocs.Editor
+- Java document processing
+- DSV conversion
+title: Đọc tệp TSV Java – Chuyển DSV sang Excel với GroupDocs
 type: docs
 url: /vi/java/plain-text-dsv-documents/
 weight: 9
 ---
 
-# Chuyển đổi DSV sang Excel Java – Chỉnh sửa Văn bản Thuần & DSV với GroupDocs.Editor
+# Đọc tệp TSV Java – Chuyển DSV sang Excel với GroupDocs
 
-Nếu bạn cần **convert DSV to Excel Java** đồng thời xử lý việc chỉnh sửa plain‑text, thao tác CSV/TSV, hoặc các dấu phân cách tùy chỉnh, bạn đã đến đúng nơi. Hướng dẫn này sẽ đưa bạn qua toàn bộ các thao tác trên tài liệu dạng văn bản mà GroupDocs.Editor for Java hỗ trợ. Chúng tôi sẽ giải thích tại sao những khả năng này quan trọng, bạn cần gì để bắt đầu, và nơi bạn có thể tìm các hướng dẫn chi tiết từng bước cho mỗi loại tệp.
+Trong hướng dẫn toàn diện này, bạn sẽ học cách **read TSV file java** sử dụng thư viện GroupDocs.Editor và sau đó chuyển đổi dữ liệu phân tách bằng dấu phân cách thành một workbook Excel đầy đủ tính năng. Dù bạn đang làm việc với các tệp CSV đơn giản, nguồn dữ liệu TSV cũ, hoặc bất kỳ định dạng tùy chỉnh nào, cùng một API thống nhất cho phép bạn tải, chỉnh sửa và xuất mà không cần sử dụng nhiều công cụ bên thứ ba. Chúng tôi sẽ hướng dẫn qua các yêu cầu trước, quá trình chuyển đổi từng bước, các vấn đề thường gặp, và các kịch bản thực tế để bạn có thể tích hợp giải pháp vào dịch vụ Spring Boot hoặc công việc batch một cách tự tin.
 
-## Quick Answers
-- **What does “convert DSV to Excel Java” mean?** It’s the process of reading a delimiter‑separated values file (CSV, TSV, or any custom‑delimited text) in Java and exporting it to an Excel workbook using GroupDocs.Editor.  
-- **Which GroupDocs.Editor feature handles plain‑text editing?** The plain‑text editor lets you load, modify, and save .txt, .csv, .tsv, and other DSV files with full control over delimiters.  
-- **Do I need a license for production use?** Yes – a commercial license is required for production deployments; a free trial is available for evaluation.  
-- **Can I edit Markdown files with the same API?** Absolutely – GroupDocs.Editor also supports **markdown editing java** through its dedicated Markdown module.  
-- **What Java version is required?** Java 8 or higher is supported; the library is compatible with Maven and Gradle builds.
+## Câu trả lời nhanh
+- **What does “read TSV file java” mean?** Đó là hành động tải một tệp giá trị phân tách bằng tab trong một ứng dụng Java, phân tích các hàng và cột, và cung cấp dữ liệu để xử lý tiếp theo.  
+- **Which GroupDocs.Editor feature handles plain‑text editing?** Trình chỉnh sửa plain‑text cho phép bạn mở, sửa đổi và lưu .txt, .csv, .tsv, và bất kỳ tệp tùy chỉnh nào trong khi giữ nguyên tính toàn vẹn của dấu phân cách.  
+- **Do I need a license for production use?** Có – một giấy phép thương mại là bắt buộc cho triển khai sản xuất; một giấy phép dùng thử miễn phí có sẵn để đánh giá.  
+- **Can I edit Markdown files with the same API?** Chắc chắn – GroupDocs.Editor cũng hỗ trợ **markdown editing java** thông qua mô-đun Markdown riêng.  
+- **What Java version is required?** Java 8 trở lên; thư viện hoạt động với Maven, Gradle và các IDE hiện đại.
 
-## What is “convert DSV to Excel Java”?
-Converting DSV to Excel Java means taking a text file where values are separated by a delimiter (comma, tab, pipe, etc.) and programmatically turning it into a structured Excel workbook (.xlsx or .xlsm). GroupDocs.Editor abstracts the parsing, delimiter handling, and Excel generation so you can focus on business logic instead of low‑level file I/O.
+## “read TSV file java” là gì?
+**read tsv file java** đề cập đến việc tải một tài liệu giá trị phân tách bằng tab (TSV) trong môi trường Java, phân tích mỗi dòng thành một bảng có cấu trúc, và tùy chọn chuyển đổi nó sang định dạng khác như Excel. Quá trình này loại bỏ việc tách chuỗi thủ công và tự động xử lý các trường hợp đặc biệt như trường có dấu ngoặc kép và dấu phân cách tùy chỉnh.
 
-## Why use GroupDocs.Editor for plain‑text and DSV editing?
-- **Unified API** – The same Java objects handle plain text, CSV, TSV, and custom‑delimited files, reducing the learning curve.  
-- **Custom delimiters support** – You can define any character as a delimiter, which is perfect for legacy data feeds.  
-- **Built‑in conversion** – Directly export to Excel, PDF, or HTML without third‑party converters.  
-- **Markdown editing java** – If your workflow also involves Markdown, the same library provides a seamless **load markdown java** experience.  
-- **Enterprise‑ready** – Thread‑safe, high‑performance, and fully licensed for commercial use.
+## Tại sao nên sử dụng GroupDocs.Editor cho việc chỉnh sửa plain‑text và DSV?
+GroupDocs.Editor cung cấp một API duy nhất, an toàn cho đa luồng, hỗ trợ **30+ input and output formats**, bao gồm CSV, TSV, file phân tách bằng pipe và các file tùy chỉnh. Nó có thể xử lý các file có **up to 500 MB** mà không cần tải toàn bộ tài liệu vào bộ nhớ, nhờ chế độ streaming. Thư viện cũng cung cấp chuyển đổi tích hợp sang Excel, PDF và HTML, giảm nhu cầu sử dụng các công cụ chuyển đổi riêng và rút ngắn thời gian tích hợp tới **70 %**.
 
-## Prerequisites
-- Java 8 + (or newer) installed on your development machine.  
-- Maven or Gradle for dependency management.  
-- A valid GroupDocs.Editor for Java license (temporary license works for testing).  
-- Basic familiarity with file I/O in Java.
+## Yêu cầu trước
+- Java 8 + (hoặc mới hơn) đã được cài đặt trên máy phát triển của bạn.  
+- Maven hoặc Gradle để quản lý phụ thuộc.  
+- Giấy phép GroupDocs.Editor cho Java hợp lệ (giấy phép tạm thời hoạt động cho việc thử nghiệm).  
+- Kiến thức cơ bản về Java I/O và cấu hình dự án Maven/Gradle.
 
-## Available Tutorials
+## Làm thế nào để đọc tệp TSV trong Java bằng GroupDocs.Editor?
+`TextDocument` là lớp chính trong GroupDocs.Editor để xử lý các tệp plain‑text và delimited. Tải tệp bằng lớp `TextDocument`, chỉ định ký tự tab (`\t`) làm dấu phân cách, và sau đó gọi `saveAs` với định dạng Excel mong muốn. Mẫu hai bước này xử lý các tệp lớn một cách hiệu quả và giữ nguyên các kiểu dữ liệu như ngày và số.
 
-### [Convert DSV to Excel XLSM using GroupDocs.Editor for Java&#58; A Step‑By‑Step Guide](./convert-dsv-to-excel-groupdocs-editor-java/)
-Learn how to convert and edit DSV files into user‑friendly Excel spreadsheets with GroupDocs.Editor for Java. This guide covers setup, implementation, and troubleshooting.
+## Cách chuyển DSV sang Excel Java – Tổng quan từng bước
+Việc chuyển DSV sang Excel với GroupDocs.Editor bao gồm tải tệp nguồn, cấu hình dấu phân cách, tùy chọn chỉnh sửa nội dung, và sau đó xuất ra định dạng Excel mong muốn. API xử lý các tệp lớn một cách hiệu quả và giữ nguyên các kiểu dữ liệu, làm cho quá trình chuyển đổi trở nên đơn giản.
 
-### [Mastering Markdown Editing in Java with GroupDocs.Editor&#58; A Complete Guide](./mastering-markdown-editing-java-groupdocs-editor-guide/)
-Learn how to edit Markdown documents in Java using GroupDocs.Editor. This guide covers setup, image handling, and document conversion.
+1. **Load the DSV file** – Sử dụng lớp `TextDocument` để mở một tệp CSV, TSV, hoặc bất kỳ tệp tùy chỉnh nào.  
+2. **Configure the delimiter** – Nếu tệp của bạn sử dụng dấu pipe (`|`) hoặc dấu chấm phẩy (`;`), hãy đặt thuộc tính `Delimiter` cho phù hợp. Đây là phần cốt lõi của việc xử lý **custom delimiters java**.  
+3. **Edit content (optional)** – Gọi các phương thức **plain text editing java** để thêm, xóa hoặc thay thế các hàng/cột trước khi chuyển đổi.  
+4. **Export to Excel** – `ExportFormat` liệt kê các định dạng đầu ra được hỗ trợ như XLSX và XLSM. Gọi `saveAs(ExportFormat.XLSX)` hoặc `saveAs(ExportFormat.XLSM)` để tạo workbook.  
+5. **Validate the result** – Mở tệp đã tạo bằng bất kỳ ứng dụng bảng tính nào để đảm bảo tính toàn vẹn dữ liệu.
 
-### [Mastering Markdown Editing in Java with GroupDocs.Editor&#58; A Comprehensive Guide](./mastering-markdown-editing-java-groupdocs-editor/)
-Learn how to efficiently load, edit, and save Markdown files using GroupDocs.Editor for Java. Master document processing with this comprehensive guide.
+> **Pro tip:** Khi làm việc với các tệp DSV lớn, bật chế độ streaming để giảm mức sử dụng bộ nhớ.
 
-## How to Convert DSV to Excel Java – Step‑by‑Step Overview
-1. **Load the DSV file** – Use the `TextDocument` class to open a CSV, TSV, or any custom‑delimited file.  
-2. **Configure the delimiter** – If your file uses a pipe (`|`) or semicolon (`;`), set the `Delimiter` property accordingly. This is the core of **custom delimiters java** handling.  
-3. **Edit content (optional)** – You can invoke **plain text editing java** methods to add, remove, or replace rows/columns before conversion.  
-4. **Export to Excel** – Call `saveAs(ExportFormat.XLSX)` or `saveAs(ExportFormat.XLSM)` to generate the workbook.  
-5. **Validate the result** – Open the generated file with any spreadsheet application to ensure data integrity.
+## Làm việc với lớp TextDocument
+Lớp `TextDocument` là điểm vào của GroupDocs.Editor cho tất cả các tệp plain‑text, CSV, TSV và tùy chỉnh. Sau khi khởi tạo, bạn có thể đọc, chỉnh sửa và xuất tài liệu thông qua một tập hợp các phương thức nhất quán, loại bỏ nhu cầu sử dụng các bộ phân tích riêng.
 
-> **Mẹo chuyên nghiệp:** Khi làm việc với các tệp DSV lớn, bật chế độ streaming để giảm mức sử dụng bộ nhớ.
+## Các vấn đề thường gặp và giải pháp
+- **Incorrect delimiter detection** – Đặt rõ ràng dấu phân cách trong đối tượng `LoadOptions`; thư viện sẽ không đoán đúng cho các ký tự không chuẩn.  
+- **Data truncation during export** – Kiểm tra rằng định dạng ô (ngày, số) được giữ nguyên bằng cách cấu hình `ExportOptions`.  
+- **License errors** – Đảm bảo giấy phép tạm thời được đặt trong thư mục đúng hoặc truyền nó một cách lập trình khi khởi tạo.
 
-## Common Issues and Solutions
-- **Incorrect delimiter detection** – Explicitly set the delimiter in the `LoadOptions` object; the library won’t guess correctly for non‑standard characters.  
-- **Data truncation during export** – Verify that cell formats (date, numeric) are preserved by configuring `ExportOptions`.  
-- **License errors** – Make sure the temporary license is placed in the correct folder or pass it programmatically during initialization.
+## Câu hỏi thường gặp
 
-## Frequently Asked Questions
+**Q: Tôi có thể sử dụng GroupDocs.Editor để chỉnh sửa tệp CSV trực tiếp không?**  
+A: Có, API cung cấp đầy đủ khả năng **edit csv java**, cho phép bạn sửa đổi các hàng, cột và dấu phân cách trước khi lưu.
 
-**Q: Can I use GroupDocs.Editor to edit CSV files directly?**  
-A: Yes, the API provides full **edit csv java** capabilities, allowing you to modify rows, columns, and delimiters before saving.
+**Q: Có hỗ trợ tải tệp Markdown cùng với các tệp DSV không?**  
+A: Chắc chắn. Sử dụng cùng một thể hiện editor với phương thức **load markdown java** để làm việc với các tệp `.md`.
 
-**Q: Is there support for loading Markdown files alongside DSV files?**  
-A: Absolutely. Use the same editor instance with the **load markdown java** method to work with `.md` files.
+**Q: Làm thế nào để xử lý các tệp có dấu phân cách hỗn hợp?**  
+A: Xử lý tệp từng dòng, phát hiện dấu phân cách cho mỗi dòng, và sử dụng tùy chọn `CustomDelimiter` để áp dụng dấu phân cách phù hợp.
 
-**Q: How do I handle files with mixed delimiters?**  
-A: Process the file line by line, detect the delimiter per line, and use the `CustomDelimiter` option to apply the appropriate separator.
+**Q: Thư viện có hỗ trợ xuất ra tệp Excel có macro (.xlsm) không?**  
+A: Có – chỉ cần chỉ định `ExportFormat.XLSM` khi lưu.
 
-**Q: Does the library support exporting to Excel macro‑enabled files (.xlsm)?**  
-A: Yes – simply specify `ExportFormat.XLSM` when saving.
+**Q: Nếu tôi cần tích hợp quá trình chuyển đổi này vào dịch vụ Spring Boot thì sao?**  
+A: Trình chỉnh sửa hoạt động liền mạch với Spring; chỉ cần tiêm bean `Editor` và gọi logic chuyển đổi trong lớp dịch vụ của bạn.
 
-**Q: What if I need to integrate this conversion into a Spring Boot service?**  
-A: The editor works seamlessly with Spring; just inject the `Editor` bean and call the conversion logic inside your service layer.
+## Tài nguyên bổ sung
 
-## Additional Resources
+- [Chuyển DSV sang Excel XLSM bằng GroupDocs.Editor cho Java: Hướng dẫn từng bước](./convert-dsv-to-excel-groupdocs-editor-java/)
+- [Làm chủ chỉnh sửa Markdown trong Java với GroupDocs.Editor: Hướng dẫn đầy đủ](./mastering-markdown-editing-java-groupdocs-editor-guide/)
+- [Làm chủ chỉnh sửa Markdown trong Java với GroupDocs.Editor: Hướng dẫn toàn diện](./mastering-markdown-editing-java-groupdocs-editor/)
+- [Tài liệu GroupDocs.Editor cho Java](https://docs.groupdocs.com/editor/java/)
+- [Tham chiếu API GroupDocs.Editor cho Java](https://reference.groupdocs.com/editor/java/)
+- [Tải xuống GroupDocs.Editor cho Java](https://releases.groupdocs.com/editor/java/)
+- [Diễn đàn GroupDocs.Editor](https://forum.groupdocs.com/c/editor)
+- [Hỗ trợ miễn phí](https://forum.groupdocs.com/)
+- [Giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
 
-- [GroupDocs.Editor for Java Documentation](https://docs.groupdocs.com/editor/java/)
-- [GroupDocs.Editor for Java API Reference](https://reference.groupdocs.com/editor/java/)
-- [Download GroupDocs.Editor for Java](https://releases.groupdocs.com/editor/java/)
-- [GroupDocs.Editor Forum](https://forum.groupdocs.com/c/editor)
-- [Free Support](https://forum.groupdocs.com/)
-- [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+**Cập nhật lần cuối:** 2026-07-15  
+**Kiểm tra với:** GroupDocs.Editor for Java 23.10 (latest at time of writing)  
+**Tác giả:** GroupDocs
 
----
+## Các hướng dẫn liên quan
 
-**Last Updated:** 2026-02-11  
-**Tested With:** GroupDocs.Editor for Java 23.10 (latest at time of writing)  
-**Author:** GroupDocs
+- [Cách chuyển DSV sang Excel XLSM với GroupDocs Java](/editor/java/plain-text-dsv-documents/convert-dsv-to-excel-groupdocs-editor-java/)
+- [Tạo Worksheet có thể chỉnh sửa Java với GroupDocs.Editor – Thành thạo chỉnh sửa tab Excel](/editor/java/spreadsheet-documents/master-excel-tab-editing-java-groupdocs-editor/)

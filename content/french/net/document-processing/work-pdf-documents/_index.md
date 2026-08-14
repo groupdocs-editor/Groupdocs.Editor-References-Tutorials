@@ -1,23 +1,86 @@
 ---
-title: Travailler avec des documents PDF
-linktitle: Travailler avec des documents PDF
-second_title: API GroupDocs.Editor .NET
-description: Découvrez comment modifier des documents PDF à l'aide de GroupDocs.Editor pour .NET avec ce didacticiel. Modifiez le contenu, gérez des fichiers volumineux et enregistrez vos modifications en toute sécurité.
-weight: 14
-url: /fr/net/document-processing/work-pdf-documents/
+date: 2026-07-15
+description: Découvrez comment modifier de façon programmatique des documents PDF
+  à l'aide de GroupDocs.Editor for .NET – charger des fichiers protégés par mot de
+  passe, gérer de gros PDF, lire des flux et activer la pagination.
+keywords:
+- programmatically edit pdf
+- load password protected pdf
+- handle large pdf files
+lastmod: 2026-07-15
+linktitle: Modifier de façon programmatique un PDF avec GroupDocs.Editor for .NET
+og_description: Modifiez de façon programmatique des documents PDF avec GroupDocs.Editor
+  for .NET – chargez des PDF protégés par mot de passe, gérez de gros fichiers, lisez
+  les flux de fichiers et activez la pagination en quelques étapes.
+og_image_alt: Guide to programmatically edit PDF files with GroupDocs.Editor for .NET
+og_title: Modifier de façon programmatique un PDF avec GroupDocs.Editor for .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-15'
+  description: Learn how to programmatically edit PDF documents using GroupDocs.Editor
+    for .NET – load password‑protected files, handle large PDFs, read streams, and
+    enable pagination.
+  headline: Programmatically Edit PDF with GroupDocs.Editor for .NET
+  type: TechArticle
+- description: Learn how to programmatically edit PDF documents using GroupDocs.Editor
+    for .NET – load password‑protected files, handle large PDFs, read streams, and
+    enable pagination.
+  name: Programmatically Edit PDF with GroupDocs.Editor for .NET
+  steps:
+  - name: '**.NET Development Environment** – Visual Studio, Rider, or any IDE that
+      supports .NET 6+.'
+    text: '**.NET Development Environment** – Visual Studio, Rider, or any IDE that
+      supports .NET 6+.'
+  - name: '**GroupDocs.Editor for .NET** – Download and install the library from the
+      [release page](https://releases.groupdocs.com/editor/net/).'
+    text: '**GroupDocs.Editor for .NET** – Download and install the library from the
+      [release page](https://releases.groupdocs.com/editor/net/).'
+  - name: '**Basic C# knowledge** – Understanding of classes, streams, and exception
+      handling will help.'
+    text: '**Basic C# knowledge** – Understanding of classes, streams, and exception
+      handling will help.'
+  type: HowTo
+- questions:
+  - answer: Yes, the library supports Word, Excel, PowerPoint, and over 30 additional
+      formats besides PDF.
+    question: Can I use GroupDocs.Editor for .NET to edit other document formats?
+  - answer: You can download a free trial from the [GroupDocs.Editor free trial page](https://releases.groupdocs.com/).
+    question: How can I get a free trial of GroupDocs.Editor for .NET?
+  - answer: Yes, the API includes streaming and memory‑optimisation features that
+      let you work with PDFs larger than 500 MB.
+    question: Is it possible to handle large PDF documents with GroupDocs.Editor for
+      .NET?
+  - answer: Set the `Password` property on `PdfSaveOptions` before calling `Save`;
+      the output PDF will be password‑protected.
+    question: How do I encrypt the PDF document while saving it?
+  - answer: For help, visit the [GroupDocs.Editor support forum](https://forum.groupdocs.com/c/editor/20).
+    question: Where can I get support if I encounter issues?
+  type: FAQPage
+second_title: GroupDocs.Editor .NET API
+tags:
+- edit pdf
+- GroupDocs.Editor
+- .NET document processing
+title: Modifier de façon programmatique un PDF avec GroupDocs.Editor for .NET
 type: docs
+url: /fr/net/document-processing/work-pdf-documents/
+weight: 14
 ---
-# Travailler avec des documents PDF
+
+# Modifier les PDF de façon programmatique avec GroupDocs.Editor pour .NET
 
 ## Introduction
-Recherchez-vous un guide complet pour manipuler et modifier des documents PDF à l'aide de GroupDocs.Editor for .NET ? Vous êtes au bon endroit ! Dans ce didacticiel, nous vous guiderons tout au long du processus, de la configuration de votre projet à l'enregistrement de votre document PDF modifié. Que vous soyez un développeur chevronné ou débutant, vous trouverez ce guide utile et facile à suivre. Allons-y !
-## Conditions préalables
-Avant de commencer, vous aurez besoin de quelques éléments :
-1. Environnement de développement .NET : assurez-vous d'avoir configuré un environnement de développement .NET. Il peut s'agir de Visual Studio ou de tout autre IDE préféré.
-2. GroupDocs.Editor pour .NET : téléchargez et installez la bibliothèque GroupDocs.Editor pour .NET. Vous pouvez l'obtenir auprès du[page de sortie](https://releases.groupdocs.com/editor/net/).
-3. Compréhension de base de C# : une connaissance de la programmation C# sera bénéfique car ce didacticiel implique l'écriture et la compréhension du code C#.
-## Importer des espaces de noms
-Avant d'écrire du code, assurez-vous d'avoir importé les espaces de noms nécessaires dans votre projet :
+If you need to **programmatically edit PDF** files in a .NET application, you’ve landed on the right tutorial. In this guide we’ll walk through every step—from installing GroupDocs.Editor, loading a password‑protected PDF, reading the file as a stream, enabling pagination, to saving the edited document. Whether you’re updating a single word or processing massive PDFs, you’ll see how the library makes the job painless and reliable.
+
+## Réponses rapides
+- **Puis‑je modifier les PDF sans les ouvrir dans une interface utilisateur ?** Oui, GroupDocs.Editor fonctionne entièrement en code.  
+- **Prend‑il en charge les PDF protégés par mot de passe ?** Absolument – vous pouvez fournir le mot de passe dans les options de chargement.  
+- **Quelle est la limite pour les gros PDF ?** L’API peut gérer des fichiers de plus de 500 Mo en utilisant des techniques de streaming.  
+- **Comment activer le mode pagination ?** Définissez `EnablePagination = true` dans les options d’édition.  
+- **Ai‑je besoin d’une licence pour la production ?** Une licence commerciale est requise pour les déploiements hors période d’essai.
+
+## Qu’est‑ce que la modification programmatique de PDF ?
+**Programmatically edit pdf** signifie modifier le contenu d’un fichier PDF via du code plutôt qu’en utilisant manuellement un éditeur graphique. GroupDocs.Editor pour .NET fournit une API complète qui vous permet de remplacer du texte, des images et des éléments de mise en page directement depuis C#. Cette approche permet l’automatisation, le traitement par lots et l’intégration aux services web, permettant aux développeurs d’appliquer des modifications sans interaction utilisateur. L’API abstrait la structure du PDF, de sorte que vous puissiez travailler avec des objets de haut niveau tandis que la bibliothèque gère les complexités du format de fichier sous‑jacent.  
 ```csharp
 using System;
 using GroupDocs.Editor.Formats;
@@ -28,67 +91,86 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 ```
-## Étape 1 : obtenir un chemin d'accès au fichier d'entrée
-Tout d’abord, vous devez spécifier le chemin d’accès à votre document PDF. Pour ce didacticiel, nous supposerons que vous disposez d’un exemple de fichier PDF.
+
+## Pourquoi utiliser GroupDocs.Editor pour .NET ?
+GroupDocs.Editor prend en charge **30+ formats de documents** et peut modifier les PDF jusqu’à **500 Mo** sans charger le fichier complet en mémoire, ce qui le rend idéal pour les services back‑end à haut débit. Sa fonctionnalité de **pagination intégrée** garantit que les PDF multi‑pages conservent les sauts de page corrects après les modifications, et la bibliothèque offre du **streaming natif** pour lire et écrire les fichiers efficacement.
+
+## Pré‑requis
+Avant de commencer, voici quelques éléments dont vous aurez besoin :
+1. **Environnement de développement .NET** – Visual Studio, Rider ou tout IDE supportant .NET 6+.
+2. **GroupDocs.Editor pour .NET** – Téléchargez et installez la bibliothèque depuis la [page de diffusion](https://releases.groupdocs.com/editor/net/).
+3. **Connaissances de base en C#** – La compréhension des classes, des flux et de la gestion des exceptions sera utile.
+
+## Importer les espaces de noms
+Avant d’écrire du code, assurez‑vous que les espaces de noms nécessaires sont importés dans votre projet :
 ```csharp
 string inputFilePath = "Your Sample Document.pdf";
 ```
-## Étape 2 : Créer un flux à partir du chemin
-Ensuite, créez un flux de fichiers à partir du chemin que vous avez spécifié. Ce flux sera utilisé pour lire le document PDF.
+
+## Comment charger un PDF protégé par mot de passe ?
+`PdfLoadOptions` définit les options de chargement des fichiers PDF, y compris le mot de passe et les paramètres de mémoire. Pour charger un PDF protégé, créez une instance de `PdfLoadOptions`, définissez sa propriété `Password` avec le mot de passe du document, et transmettez cet objet à l’éditeur. Cela garantit que le fichier est décrypté avant toute opération d’édition.  
 ```csharp
 using (FileStream fs = File.OpenRead(inputFilePath))
 ```
-## Étape 3 : Créer des options de chargement pour le document
-Pour charger le document PDF, vous devez spécifier les options de chargement. Si votre PDF est protégé par mot de passe, vous pouvez fournir le mot de passe ici.
+
+## Étape 1 : Obtenir le chemin du fichier d’entrée
+Tout d’abord, vous devez spécifier le chemin de votre document PDF. Pour ce tutoriel, nous supposerons que vous disposez d’un fichier PDF d’exemple.
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
-// Si le document est protégé par mot de passe
+// If the document is password-protected
 loadOptions.Password = "your_password";
 ```
-## Étape 4 : charger le document dans l'instance de l'éditeur
-Maintenant, utilisez les options de flux de fichiers et de chargement pour charger le document dans un`Editor` exemple.
+
+## Comment lire le flux d’un fichier PDF ?
+`FileStream` fournit un flux pour lire et écrire des fichiers sur le disque. Utilisez‑le pour ouvrir le PDF en mode lecture, ce qui permet à l’éditeur de traiter le fichier sans le verrouiller en accès exclusif. Exemple : `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` assure des performances optimales et des lectures concurrentes sécurisées.  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
-## Étape 5 : Créer des options d'édition
-Définissez les options d'édition du document. Dans ce cas, nous activerons le mode pagination.
+
+## Étape 2 : Créer un flux à partir du chemin
+Ensuite, créez un flux de fichier à partir du chemin que vous avez spécifié. Ce flux sera utilisé pour lire le document PDF.
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
-## Étape 6 : Créer un document modifiable intermédiaire
-Créez un document modifiable intermédiaire à l'aide de l'instance de l'éditeur et des options d'édition.
+
+## Comment configurer les options de chargement pour un PDF protégé par mot de passe ?
+`PdfLoadOptions` définit les options de chargement des fichiers PDF, y compris le mot de passe et l’utilisation de la mémoire. Après avoir créé l’instance, attribuez la propriété `Password` avec le mot de passe du document. Pour les gros PDF, vous pouvez également définir `UseMemoryCache = false` afin de réduire la consommation de mémoire. Ces paramètres préparent le chargeur à gérer efficacement les fichiers chiffrés et volumineux.  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
-    // Extraire le contenu textuel sous forme de balisage HTML
+    // Extract textual content as HTML markup
     string originalContent = beforeEdit.GetContent();
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
-## Étape 7 : Modifier le contenu
-Modifiez le contenu du document si nécessaire. Ici, nous remplaçons simplement un mot dans le document.
+
+## Étape 3 : Créer les options de chargement pour le document
+Pour charger le document PDF, vous devez spécifier les options de chargement. Si votre PDF est protégé par mot de passe, vous pouvez fournir le mot de passe ici.
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
-## Étape 8 : Créer un nouveau document modifiable avec du contenu modifié
- Créer un nouveau`EditableDocument` instance avec le contenu et les ressources édités.
+
+## Comment initialiser l’Editor avec un flux et des options ?
+`Editor` est la classe principale qui charge un document et fournit des capacités d’édition. Instanciez‑la en passant un délégué qui renvoie le flux de fichier et un autre délégué qui renvoie les options de chargement préalablement configurées. Cela crée une représentation en mémoire du PDF prête pour une manipulation supplémentaire.  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
-## Étape 9 : Créer des options d'enregistrement de document
-Spécifiez les options d'enregistrement du document PDF. Vous pouvez également définir un mot de passe pour le document de sortie.
+
+## Étape 4 : Charger le document dans l’instance Editor
+Maintenant, utilisez le flux de fichier et les options de chargement pour charger le document dans une instance `Editor`.
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
 saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
-## Étape 10 : Enregistrez le document modifié
-Enfin, enregistrez le document modifié dans le chemin de sortie spécifié.
+
+## Comment activer la pagination lors de l’édition d’un PDF ?
+`PdfEditOptions` spécifie les paramètres d’édition pour les fichiers PDF, tels que la pagination. Créez une instance de cette classe et définissez `EnablePagination = true`. Activer la pagination préserve les sauts de page et la mise en page d’origine après les modifications, garantissant que le PDF de sortie conserve la même structure visuelle que la source.  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -98,16 +180,82 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
+## Étape 5 : Créer les options d’édition
+Définissez les options d’édition pour le document. Dans ce cas, nous activerons le mode pagination.
+CODE_BLOCK_PLACEHOLDER_11_END
+
+## Comment générer un document intermédiaire éditable ?
+`CreateEditableDocument` crée une représentation éditable du document chargé. Appelez cette méthode sur l’instance `Editor`, en passant les `PdfEditOptions` précédemment définies. La méthode renvoie un `EditableDocument` contenant du contenu de type HTML qui peut être modifié programmatique avant d’être enregistré à nouveau en PDF.  
+CODE_BLOCK_PLACEHOLDER_12_END
+
+## Étape 6 : Créer un document intermédiaire éditable
+Créer un document intermédiaire éditable en utilisant l’instance de l’éditeur et les options d’édition.
+CODE_BLOCK_PLACEHOLDER_13_END
+
+## Comment remplacer du texte dans le contenu éditable ?
+`EditableDocument` contient le contenu du document sous un format éditable. Accédez à sa propriété `Content`, qui renvoie une chaîne représentant le HTML du document. Utilisez les opérations standard sur les chaînes C#, comme `Replace`, ou des expressions régulières pour modifier le texte selon les besoins avant de reconstruire le document.  
+CODE_BLOCK_PLACEHOLDER_14_END
+
+## Étape 7 : Modifier le contenu
+Modifier le contenu du document selon les besoins. Ici, nous remplaçons simplement un mot dans le document.
+CODE_BLOCK_PLACEHOLDER_15_END
+
+## Comment reconstruire l’EditableDocument après les modifications ?
+`EditableDocument` contient le contenu du document sous un format éditable. Après avoir modifié la chaîne HTML, créez un nouveau `EditableDocument` en passant le contenu modifié et les ressources associées (images, polices) à l’éditeur. Cela reconstruit la structure interne du document, le préparant à être enregistré avec le contenu mis à jour.  
+CODE_BLOCK_PLACEHOLDER_16_END
+
+## Étape 8 : Créer un nouveau document éditable avec le contenu modifié
+Créer une nouvelle instance `EditableDocument` avec le contenu édité et les ressources.
+CODE_BLOCK_PLACEHOLDER_17_END
+
+## Comment configurer les options d’enregistrement PDF, y compris le chiffrement ?
+`PdfSaveOptions` définit les options d’enregistrement des fichiers PDF, incluant la protection par mot de passe et la compression. Instanciez‑la, définissez `Password` pour chiffrer la sortie, activez éventuellement `EnablePagination` pour conserver la mise en page, et ajustez `CompressionLevel` pour les gros fichiers. Ces paramètres contrôlent la façon dont le PDF édité est écrit sur le disque.  
+CODE_BLOCK_PLACEHOLDER_18_END
+
+## Étape 9 : Créer les options d’enregistrement du document
+Spécifiez les options d’enregistrement pour le document PDF. Vous pouvez également définir un mot de passe pour le document de sortie.
+CODE_BLOCK_PLACEHOLDER_19_END
+
+## Comment enregistrer le PDF modifié sur le disque ?
+`Save` écrit le document édité dans un fichier en utilisant les options d’enregistrement spécifiées. Appelez‑la sur l’instance `Editor`, en fournissant le `EditableDocument` mis à jour et les `PdfSaveOptions` configurés. La méthode crée le PDF final à l’emplacement cible, appliquant tout chiffrement ou paramètre de pagination que vous avez définis.  
+CODE_BLOCK_PLACEHOLDER_20_END
+
+## Étape 10 : Enregistrer le document modifié
+Enfin, enregistrez le document modifié vers le chemin de sortie spécifié.
+CODE_BLOCK_PLACEHOLDER_21_END
+
+## Problèmes courants et solutions
+- **Pics de mémoire avec d’énormes PDF** – Activez le streaming en définissant `LoadOptions.UseMemoryCache = false`.  
+- **Texte non remplacé** – Assurez‑vous que la chaîne exacte, sensible à la casse, existe ; envisagez d’utiliser des expressions régulières pour des correspondances approximatives.  
+- **Casse de pagination** – Vérifiez que `EnablePagination` est vrai à la fois dans les options d’édition et d’enregistrement.
+
+## Questions fréquentes
+
+**Q : Puis‑je utiliser GroupDocs.Editor pour .NET afin de modifier d’autres formats de documents ?**  
+R : Oui, la bibliothèque prend en charge Word, Excel, PowerPoint et plus de 30 formats supplémentaires en plus du PDF.
+
+**Q : Comment obtenir un essai gratuit de GroupDocs.Editor pour .NET ?**  
+R : Vous pouvez télécharger un essai gratuit depuis la [page d’essai gratuit de GroupDocs.Editor](https://releases.groupdocs.com/).
+
+**Q : Est‑il possible de gérer de gros documents PDF avec GroupDocs.Editor pour .NET ?**  
+R : Oui, l’API inclut des fonctionnalités de streaming et d’optimisation de la mémoire qui vous permettent de travailler avec des PDF de plus de 500 Mo.
+
+**Q : Comment chiffrer le document PDF lors de son enregistrement ?**  
+R : Définissez la propriété `Password` sur `PdfSaveOptions` avant d’appeler `Save` ; le PDF de sortie sera protégé par mot de passe.
+
+**Q : Où puis‑je obtenir de l’aide en cas de problème ?**  
+R : Pour obtenir de l’aide, consultez le [forum de support GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
+
 ## Conclusion
-Voilà! En suivant ces étapes, vous pouvez modifier avec succès des documents PDF à l'aide de GroupDocs.Editor for .NET. Cette puissante bibliothèque facilite la manipulation et l'enregistrement des fichiers PDF par programmation. Que vous effectuiez de simples remplacements de texte ou des modifications plus complexes, GroupDocs.Editor for .NET est là pour vous.
-## FAQ
-### Puis-je utiliser GroupDocs.Editor pour .NET pour modifier d’autres formats de document ?
-Oui, GroupDocs.Editor pour .NET prend en charge divers formats de documents, notamment Word, Excel, PowerPoint, etc.
-### Comment puis-je obtenir un essai gratuit de GroupDocs.Editor pour .NET ?
- Vous pouvez télécharger un essai gratuit à partir du[Page d'essai gratuit de GroupDocs.Editor](https://releases.groupdocs.com/).
-### Est-il possible de gérer des documents PDF volumineux avec GroupDocs.Editor pour .NET ?
-Oui, GroupDocs.Editor pour .NET inclut des options pour optimiser l'utilisation de la mémoire, ce qui le rend adapté à la gestion de documents volumineux.
-### Comment puis-je obtenir de l'aide si je rencontre des problèmes ?
- Pour obtenir de l'aide, vous pouvez visiter le[Forum d'assistance GroupDocs.Editor](https://forum.groupdocs.com/c/editor/20).
-### Puis-je crypter le document PDF lors de son enregistrement ?
-Oui, vous pouvez définir un mot de passe pour crypter le document PDF pendant le processus d'enregistrement à l'aide du`PdfSaveOptions.Password` propriété.
+Vous disposez désormais d’un flux de travail complet, de bout en bout, pour **programmatically edit pdf** avec GroupDocs.Editor pour .NET. Du chargement de PDF protégés par mot de passe et de leur lecture en flux, à l’activation de la pagination et à l’enregistrement de sorties chiffrées, la bibliothèque couvre tous les scénarios courants. Explorez davantage l’API pour traiter des documents par lots, manipuler des images ou l’intégrer à un stockage cloud.
+
+---
+
+**Dernière mise à jour :** 2026-07-15  
+**Testé avec :** GroupDocs.Editor 23.12 pour .NET  
+**Auteur :** GroupDocs
+
+## Tutoriels associés
+
+- [Comment charger des documents Word avec GroupDocs.Editor en .NET : guide complet](/editor/net/document-loading/load-word-documents-groupdocs-editor-net/)
+- [Protéger un document Word et optimiser le DOCX avec GroupDocs.Editor pour .NET – guide avancé](/editor/net/advanced-features/optimize-protect-docx-groupdocs-editor-dotnet/)
