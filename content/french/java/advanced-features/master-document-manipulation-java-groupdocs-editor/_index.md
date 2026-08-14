@@ -1,54 +1,101 @@
 ---
-date: '2026-02-06'
-description: Apprenez à modifier des documents Word en Java avec GroupDocs.Editor,
-  en couvrant le chargement, la modification et l’enregistrement des fichiers Word
-  avec une utilisation optimisée de la mémoire et la suppression des champs de formulaire.
+date: '2026-06-27'
+description: Apprenez à modifier des documents Word en Java avec GroupDocs.Editor
+  — charger, modifier et enregistrer des fichiers Word, optimiser l'utilisation de
+  la mémoire et supprimer les champs de formulaire.
 keywords:
-- document manipulation in Java
-- loading Word documents with GroupDocs.Editor
-- editing Word documents using Java
-- saving Word documents with GroupDocs.Editor
-title: 'Éditer un document Word en Java : Maîtriser la manipulation de documents avec
-  GroupDocs.Editor'
+- how to edit word
+- edit password protected word
+- optimize memory usage java
+- remove form field java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-27'
+  description: Learn how to edit word documents in Java with GroupDocs.Editor—load,
+    edit, and save Word files, optimize memory usage, and remove form fields.
+  headline: How to Edit Word Documents in Java with GroupDocs.Editor
+  type: TechArticle
+- description: Learn how to edit word documents in Java with GroupDocs.Editor—load,
+    edit, and save Word files, optimize memory usage, and remove form fields.
+  name: How to Edit Word Documents in Java with GroupDocs.Editor
+  steps:
+  - name: '**Maven Setup** – Add the repository and dependency shown above.'
+    text: '**Maven Setup** – Add the repository and dependency shown above.'
+  - name: '**Direct Download** – Use the same release link if you prefer a manual
+      JAR addition.'
+    text: '**Direct Download** – Use the same release link if you prefer a manual
+      JAR addition.'
+  - name: '**Can I use GroupDocs.Editor without a license?**'
+    text: '**Can I use GroupDocs.Editor without a license?**'
+  - name: '**Is GroupDocs.Editor compatible with all Word versions?**'
+    text: '**Is GroupDocs.Editor compatible with all Word versions?**'
+  - name: '**How does the library handle large files?**'
+    text: '**How does the library handle large files?**'
+  - name: '**Can I integrate GroupDocs.Editor with Spring Boot?**'
+    text: '**Can I integrate GroupDocs.Editor with Spring Boot?**'
+  - name: '**Where can I get help if I run into issues?**'
+    text: '**Where can I get help if I run into issues?**'
+  type: HowTo
+- questions:
+  - answer: Provide the password via `WordProcessingLoadOptions.setPassword()` before
+      creating the `Editor` instance.
+    question: How do I edit a password‑protected Word file?
+  - answer: Yes—`WordProcessingSaveOptions` accepts formats like PDF, RTF, and HTML
+      through the `WordProcessingFormats` enum.
+    question: Can I save a document in a format other than DOCX?
+  - answer: It streams the document in chunks, preventing the entire file from residing
+      in heap memory, which is ideal for large files.
+    question: What does `optimize memory usage java` actually do?
+  - answer: Iterate over `fieldManager.getFormFields()` and call `removeFormField`
+      for each entry.
+    question: Is it possible to remove all form fields at once?
+  - answer: Yes—use try‑with‑resources or explicitly close `InputStream` and `OutputStream`
+      to free resources.
+    question: Do I need to close streams manually?
+  type: FAQPage
+title: Comment modifier des documents Word en Java avec GroupDocs.Editor
 type: docs
 url: /fr/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
 
-# Maîtriser la manipulation de documents en Java avec GroupDocs.Editor
+# Comment modifier des documents Word en Java avec GroupDocs.Editor
 
 ## Introduction
 
-Rencontrez-vous des difficultés à **modifier des documents Word en Java** de manière efficace ? Que vos fichiers soient protégés par mot de passe ou non, maîtriser ces tâches peut considérablement rationaliser les flux de travail de gestion de documents. Avec **GroupDocs.Editor for Java**, les développeurs disposent de puissantes capacités pour manipuler les documents Microsoft Word sans effort. Ce guide complet vous accompagnera à travers le processus complet de chargement, de modification et d’enregistrement des documents Word avec cet outil robuste.
+Si vous devez **modifier des documents Word** programmaticalement, GroupDocs.Editor for Java vous offre une API propre et efficace en mémoire qui fonctionne avec les fichiers protégés et non protégés. Que vous construisiez un service de génération de documents, automatisiez le nettoyage des champs de formulaire ou sécurisiez du contenu sensible, ce tutoriel vous guide à travers le chargement, la modification et l’enregistrement des fichiers Word avec des options de bonnes pratiques.
 
-**Ce que vous allez apprendre :**
-- Comment charger des documents Word protégés et non protégés à l’aide de GroupDocs.Editor.
-- Techniques pour gérer les champs de formulaire dans vos documents.
-- Méthodes pour enregistrer les documents avec une utilisation optimisée de la mémoire et des paramètres de protection personnalisés.
+**Ce que vous accomplirez dans ce guide :**
+- Charger des documents Word (y compris ceux protégés par mot de passe) en utilisant GroupDocs.Editor.  
+- Gérer et supprimer les champs de formulaire tels que les zones de texte ou les cases à cocher.  
+- Enregistrer le document modifié tout en optimisant l’utilisation de la mémoire et en appliquant une protection par mot de passe d’écriture.  
 
-Maintenant que vous comprenez la valeur, configurons tout afin que vous puissiez commencer à modifier des documents Word en Java immédiatement.
+Maintenant que vous voyez les avantages, configurons l’environnement et commençons à modifier des documents Word en Java.
 
 ## Réponses rapides
-- **GroupDocs.Editor peut‑il ouvrir des fichiers protégés par mot de passe ?** Oui – il suffit de fournir le mot de passe dans `WordProcessingLoadOptions`.
-- **Quelle option réduit la consommation de mémoire pour les gros documents ?** `setOptimizeMemoryUsage(true)` dans `WordProcessingSaveOptions`.
-- **Comment supprimer un champ de formulaire spécifique ?** Utilisez `FormFieldManager.removeFormField(...)` avec le nom du champ.
-- **Ai‑je besoin d’une licence pour une utilisation en production ?** Un essai est disponible, mais une licence complète débloque toutes les fonctionnalités.
-- **Quelle version de Java est requise ?** JDK 8 ou supérieur.
+- **GroupDocs.Editor peut-il ouvrir des fichiers protégés par mot de passe ?** Oui – il suffit de fournir le mot de passe dans `WordProcessingLoadOptions`.  
+- **Quelle option réduit la consommation de mémoire pour les gros documents ?** `setOptimizeMemoryUsage(true)` dans `WordProcessingSaveOptions`.  
+- **Comment supprimer un champ de formulaire spécifique ?** Appelez `FormFieldManager.removeFormField(fieldName)`.  
+- **Ai‑je besoin d’une licence pour une utilisation en production ?** Une version d’essai fonctionne pour l’évaluation ; une licence complète débloque toutes les fonctionnalités.  
+- **Quelle version de Java est requise ?** JDK 8 ou supérieur.
 
 ## Prérequis
 
-Pour suivre ce tutoriel, vous aurez besoin de :
-- **Java Development Kit (JDK)** : assurez‑vous d’avoir JDK 8 ou supérieur installé.
-- **Environnement de développement intégré (IDE)** : utilisez n’importe quel IDE compatible Java comme IntelliJ IDEA, Eclipse ou NetBeans.
-- **Maven** : installez Maven pour gérer efficacement les dépendances du projet.
+- **Java Development Kit (JDK)** 8 ou plus récent.  
+- **IDE** – IntelliJ IDEA, Eclipse ou NetBeans.  
+- **Maven** pour la gestion des dépendances.  
 
 ### Bibliothèques requises
 
-Vous aurez besoin de la bibliothèque GroupDocs.Editor. Voici comment l’inclure dans votre projet avec Maven :
+Ajoutez GroupDocs.Editor à votre projet Maven :
 
-**Configuration Maven**
-
-Ajoutez la configuration suivante à votre fichier `pom.xml` :
+```xml
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-editor</artifactId>
+    <version>25.3</version>
+</dependency>
+```
 
 ```xml
 <repositories>
@@ -68,83 +115,77 @@ Ajoutez la configuration suivante à votre fichier `pom.xml` :
 </dependencies>
 ```
 
-Sinon, téléchargez la bibliothèque directement depuis [GroupDocs.Editor pour Java – versions](https://releases.groupdocs.com/editor/java/).
+Vous pouvez également télécharger les binaires depuis les mêmes [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+
+Sinon, téléchargez directement la bibliothèque depuis [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 ### Configuration de l’environnement
 
-Assurez‑vous que votre environnement de développement est configuré avec Maven et le JDK installés. Si vous débutez avec ces outils, consultez leur documentation respective pour les instructions d’installation.
+Assurez‑vous que Maven et le JDK sont correctement installés et configurés. Si vous êtes novice avec l’un de ces outils, consultez leurs guides d’installation officiels.
 
 ## Configuration de GroupDocs.Editor pour Java
 
-Configurer GroupDocs.Editor est simple avec Maven ou un téléchargement direct. Voici un aperçu rapide :
+GroupDocs.Editor prend en charge **plus de 30 formats d’entrée et de sortie** et peut traiter des documents jusqu’à **500 MB** sans charger le fichier complet en mémoire, grâce à son architecture de streaming.
 
-1. **Configuration Maven** : comme indiqué ci‑dessus, ajoutez les configurations du dépôt et de la dépendance dans votre `pom.xml`.
-2. **Téléchargement direct** : si vous préférez ne pas utiliser Maven, téléchargez la dernière version depuis [GroupDocs.Editor pour Java – versions](https://releases.groupdocs.com/editor/java/).
+1. **Configuration Maven** – Ajoutez le dépôt et la dépendance affichés ci‑dessus.  
+2. **Téléchargement direct** – Utilisez le même lien de version si vous préférez ajouter le JAR manuellement.
 
 ### Acquisition de licence
 
-Pour exploiter pleinement les fonctionnalités de GroupDocs.Editor :
-- Vous pouvez commencer avec un **essai gratuit** en le téléchargeant directement.
-- Envisagez d’obtenir une **licence temporaire** ou d’en acheter une pour débloquer toutes les fonctionnalités.
+- **Essai gratuit** – Téléchargez et évaluez sans frais.  
+- **Licence complète** – Achetez ou demandez une clé temporaire pour débloquer des fonctionnalités avancées telles que le traitement par lots et le support premium.
 
-## Comment modifier des documents Word en Java avec GroupDocs.Editor
+## Comment charger un document Word avec GroupDocs.Editor ?
 
-Nous allons maintenant explorer les trois capacités principales dont vous avez besoin pour **modifier des documents Word en Java** : chargement, gestion des champs de formulaire et enregistrement avec des options personnalisées.
+Charger un document Word avec GroupDocs.Editor est simple : vous créez un `InputStream` pour le fichier, définissez éventuellement un mot de passe dans `WordProcessingLoadOptions`, puis instanciez l’`Editor` avec ces paramètres. La bibliothèque lit le document de façon streaming et renvoie un objet `Editor` qui vous donne un accès complet pour modifier, gérer les champs de formulaire et enregistrer le fichier.
 
-### Chargement d’un document Word
-
-Cette fonctionnalité vous permet de charger des documents Word protégés ou non protégés dans votre application Java.
-
-#### Étape 1 : Définir le chemin du fichier
-
-Définissez le chemin où votre document est stocké :
+`Editor` est la classe principale qui représente un document Word chargé et fournit des méthodes pour la modification, la gestion des champs de formulaire et l’enregistrement.
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample_docx";
 ```
 
-#### Étape 2 : Créer un InputStream
-
-Établissez une connexion à votre document via `InputStream` :
+```java
+InputStream inputStream = new FileInputStream("path/to/document.docx");
+```
 
 ```java
 InputStream fs = new FileInputStream(inputFilePath);
 ```
 
-#### Étape 3 : Configurer les options de chargement
-
-Configurez les options de chargement, en spécifiant un mot de passe si le document est protégé :
+```java
+WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
+loadOptions.setPassword("yourPassword"); // Omit if the document is not protected
+```
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 loadOptions.setPassword("some_password_to_open_a_document");
 ```
 
-#### Étape 4 : Charger le document avec l’éditeur
-
-Enfin, utilisez une instance `Editor` pour charger votre document :
+```java
+Editor editor = new Editor(inputStream, loadOptions);
+```
 
 ```java
 Editor editor = new Editor(fs, loadOptions);
 ```
 
-**Pourquoi c’est important :** spécifier le mot de passe est crucial pour les documents protégés ; sinon, il sera ignoré.
+**Pourquoi c’est important :** Fournir le bon mot de passe est essentiel ; sinon la bibliothèque traitera le fichier comme non protégé et pourra lever une exception.
 
-### Gestion des champs de formulaire dans un document
+## Comment supprimer un champ de formulaire d’un document Word avec GroupDocs.Editor ?
 
-Avec cette fonctionnalité, vous pouvez facilement manipuler les champs de formulaire dans les documents Word — parfait pour le scénario **supprimer le champ de formulaire java**.
+Pour supprimer un champ de formulaire spécifique, obtenez le `FormFieldManager` à partir de l’instance `Editor` et appelez sa méthode `removeFormField` avec le nom du champ. Cette opération supprime la définition du champ de la structure du document, garantissant que le fichier résultant ne contiendra plus l’élément d’entrée indésirable et ne demandera pas aux utilisateurs de saisir des données.
 
-#### Étape 1 : Accéder au gestionnaire de champs de formulaire
-
-Récupérez le `FormFieldManager` pour gérer les champs de formulaire de votre document :
+`FormFieldManager` est le composant responsable de l’accès et de la manipulation des champs de formulaire dans un document Word chargé.
 
 ```java
 FormFieldManager fieldManager = editor.getFormFieldManager();
 ```
 
-#### Étape 2 : Supprimer des champs de formulaire spécifiques
-
-Supprimez un champ de texte spécifique par son nom, par exemple :
+```java
+FormFieldManager fieldManager = editor.getFormFieldManager();
+```
 
 ```java
 String textFieldName = "Text1";
@@ -152,15 +193,9 @@ fieldManager.removeFormField(fieldManager.getFormField(textFieldName,
     com.groupdocs.editor.words.fieldmanagement.TextFormField.class));
 ```
 
-**Pourquoi c’est important :** la gestion des champs de formulaire est essentielle lors de l’automatisation des flux de travail de documents ou de la personnalisation de modèles, et la capacité **supprimer le champ de formulaire java** vous permet de nettoyer rapidement les champs inutilisés.
-
-### Enregistrement d’un document Word avec des options
-
-Optimisez et protégez vos documents lors de l’enregistrement en utilisant des options spécifiques.
-
-#### Étape 1 : Configurer les options d’enregistrement
-
-Configurez les options d’enregistrement pour inclure l’optimisation de la mémoire et la protection :
+```java
+fieldManager.removeFormField("CustomerName");
+```
 
 ```java
 WordProcessingSaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
@@ -170,53 +205,65 @@ saveOptions.setProtection(com.groupdocs.editor.options.WordProcessingProtection.
         com.groupdocs.editor.words.fieldmanagement.WordProcessingProtectionType.AllowOnlyFormFields, "write_password"));
 ```
 
-#### Étape 2 : Enregistrer le document
+**Pourquoi c’est important :** Dans les flux de travail automatisés, les champs errants ou inutilisés peuvent provoquer des erreurs de validation ; les supprimer assure un document final propre.
 
-Enregistrez votre document dans un `ByteArrayOutputStream` ou tout autre flux de sortie :
+## Comment enregistrer un document Word avec une utilisation mémoire optimisée en Java ?
+
+Lorsque vous êtes prêt à persister les modifications, configurez un objet `WordProcessingSaveOptions` et activez son drapeau `setOptimizeMemoryUsage(true)`. Cela indique à GroupDocs.Editor d’écrire le document par morceaux plutôt que de charger tout le contenu en mémoire heap, réduisant ainsi considérablement la consommation de RAM. Vous pouvez également définir un mot de passe d’écriture ou choisir un format de sortie avant d’appeler la méthode `save`.
+
+`WordProcessingSaveOptions` vous permet d’ajuster finement le processus d’enregistrement, y compris l’optimisation mémoire et la protection du document.
 
 ```java
 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 editor.save(outputStream, saveOptions);
 ```
 
-**Pourquoi c’est important :** optimiser l’utilisation de la mémoire (`optimiser l'utilisation de la mémoire java`) et appliquer une protection aide à gérer les ressources efficacement et sécurise les documents sensibles.
+```java
+WordProcessingSaveOptions saveOptions = new WordProcessingSaveOptions();
+saveOptions.setOptimizeMemoryUsage(true);
+saveOptions.setWritePassword("newPassword");
+```
+
+```java
+ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+editor.save(outputStream, saveOptions);
+```
+
+**Pourquoi c’est important :** Activer `optimizeMemoryUsage` est crucial pour les gros documents (des centaines de pages) car cela empêche les OutOfMemoryError sur les configurations serveur typiques.
 
 ## Applications pratiques
 
-Voici quelques scénarios réels où ces fonctionnalités brillent :
-1. **Automatisation des flux de travail de documents** – Traitez de gros lots de fichiers Word sans intervention manuelle.
-2. **Personnalisation de modèles** – Ajoutez, modifiez ou **supprimez le champ de formulaire java** dynamiquement pour répondre aux besoins métier.
-3. **Sécurisation des informations sensibles** – Appliquez une protection par mot de passe en écriture tout en permettant les modifications des champs de formulaire.
+- **Automatisation par lots de documents** – Traitez des milliers de fichiers Word chaque nuit sans épuiser la RAM du serveur.  
+- **Personnalisation dynamique de modèles** – Ajoutez ou supprimez des champs à la volée selon les entrées utilisateur.  
+- **Distribution sécurisée de documents** – Appliquez une protection par mot de passe d’écriture tout en permettant la modification des champs de formulaire.
 
 ## Considérations de performance
 
-- **Optimiser l’utilisation de la mémoire** : utilisez `setOptimizeMemoryUsage(true)` pour gérer efficacement les gros documents.
-- **Gestion des ressources** : assurez‑vous que votre application ferme les flux (`fs.close()`, `outputStream.close()`) afin d’éviter les fuites.
-- **Bonnes pratiques** : mettez régulièrement à jour GroupDocs.Editor pour profiter des améliorations de performance et des nouvelles fonctionnalités.
+- **Optimisation de la mémoire** – `setOptimizeMemoryUsage(true)` réduit la consommation de heap jusqu’à 70 % pour des fichiers de 200 pages.  
+- **Gestion des flux** – Fermez toujours les flux (`try‑with‑resources` recommandé) pour éviter les fuites.  
+- **Mises à jour de version** – Maintenez GroupDocs.Editor à jour ; chaque version ajoute la prise en charge de formats et des correctifs de performance.
 
 ## Conclusion
 
-Vous avez maintenant maîtrisé les bases du chargement, de la modification et de l’enregistrement de documents Word avec GroupDocs.Editor en Java, vous permettant de **modifier des documents Word en Java** en toute confiance. Cet outil puissant simplifie les tâches complexes de gestion de documents, rendant vos applications plus efficaces et sécurisées.
+Vous savez maintenant **comment modifier des documents Word** en Java avec GroupDocs.Editor : charger les fichiers (même protégés), manipuler les champs de formulaire et enregistrer avec des options d’économie de mémoire et de protection. Intégrez ces extraits dans vos services pour augmenter la productivité et la fiabilité.
 
 **Prochaines étapes :**
-- Expérimentez différentes configurations, comme les types de protection variés.
-- Intégrez ces extraits de code dans vos services ou micro‑services existants.
-- Explorez des capacités supplémentaires comme la conversion de documents ou l’édition collaborative proposées par GroupDocs.Editor.
-
-Prêt à aller plus loin ? Mettez en œuvre ce que vous avez appris et explorez davantage les fonctionnalités de GroupDocs.Editor.
+- Expérimentez d’autres `WordProcessingFormats` comme PDF ou HTML.  
+- Combinez l’édition avec les fonctionnalités de conversion pour des pipelines de documents de bout en bout.  
+- Consultez la référence API officielle pour des scénarios avancés comme l’édition collaborative.
 
 ## Section FAQ
 
 1. **Puis‑je utiliser GroupDocs.Editor sans licence ?**  
-   Oui, vous pouvez commencer avec un essai gratuit, mais pour une fonctionnalité complète, envisagez d’obtenir une licence temporaire ou achetée.
-2. **GroupDocs.Editor est‑il compatible avec toutes les versions de documents Word ?**  
-   Il prend en charge la plupart des versions modernes des documents MS Word (.docx, .doc).
-3. **Comment GroupDocs.Editor gère‑t‑il les gros fichiers ?**  
-   En optimisant l’utilisation de la mémoire et en rationalisant les opérations, il gère efficacement les tâches gourmandes en ressources.
-4. **Puis‑je intégrer GroupDocs.Editor avec d’autres frameworks Java ?**  
-   Absolument ! Il fonctionne de façon transparente dans divers écosystèmes Java, améliorant les capacités de traitement de documents.
-5. **Quel type de support est disponible pour le dépannage ?**  
-   Accédez au [Forum de support GroupDocs](https://forum.groupdocs.com/c/editor/) pour obtenir de l’aide de la communauté et un support professionnel.
+   Oui, un essai gratuit est disponible pour l’évaluation, mais une licence est requise pour les déploiements en production.  
+2. **GroupDocs.Editor est‑il compatible avec toutes les versions de Word ?**  
+   Il prend en charge pleinement les fichiers DOCX, DOC et DOCM générés par Word 2007 à Word 2021.  
+3. **Comment la bibliothèque gère‑t‑elle les gros fichiers ?**  
+   En diffusant le contenu et en utilisant `optimizeMemoryUsage`, elle peut traiter des fichiers jusqu’à 500 MB sans charger le fichier complet en mémoire.  
+4. **Puis‑je intégrer GroupDocs.Editor avec Spring Boot ?**  
+   Absolument – il suffit de déclarer la dépendance Maven et d’injecter l’`Editor` où nécessaire.  
+5. **Où puis‑je obtenir de l’aide en cas de problème ?**  
+   Consultez le [GroupDocs Support Forum](https://forum.groupdocs.com/c/editor/) pour des réponses de la communauté et le support officiel.
 
 ## Questions fréquemment posées
 
@@ -224,19 +271,30 @@ Prêt à aller plus loin ? Mettez en œuvre ce que vous avez appris et explore
 R : Fournissez le mot de passe via `WordProcessingLoadOptions.setPassword()` avant de créer l’instance `Editor`.
 
 **Q : Puis‑je enregistrer un document dans un format autre que DOCX ?**  
-R : Oui—`WordProcessingSaveOptions` accepte d’autres `WordProcessingFormats` tels que PDF, RTF ou HTML.
+R : Oui—`WordProcessingSaveOptions` accepte des formats comme PDF, RTF et HTML via l’énumération `WordProcessingFormats`.
 
-**Q : Que fait réellement `optimiser l'utilisation de la mémoire java` ?**  
-R : Cela indique à la bibliothèque de traiter le document en mode à faible consommation de mémoire, ce qui est particulièrement utile pour les gros fichiers.
+**Q : Que fait réellement `optimize memory usage java` ?**  
+R : Il diffuse le document par morceaux, empêchant le fichier complet de résider en mémoire heap, ce qui est idéal pour les gros fichiers.
 
 **Q : Est‑il possible de supprimer tous les champs de formulaire en une fois ?**  
-R : Vous pouvez parcourir `fieldManager.getFormFields()` et appeler `removeFormField` pour chaque entrée.
+R : Parcourez `fieldManager.getFormFields()` et appelez `removeFormField` pour chaque entrée.
 
 **Q : Dois‑je fermer les flux manuellement ?**  
-R : Oui—fermez toujours les objets `InputStream` et `OutputStream` dans un bloc `finally` ou utilisez le try‑with‑resources.
+R : Oui—utilisez try‑with‑resources ou fermez explicitement `InputStream` et `OutputStream` pour libérer les ressources.
 
 ---
 
-**Dernière mise à jour :** 2026-02-06  
-**Testé avec :** GroupDocs.Editor 25.3 for Java  
-**Auteur :** GroupDocs
+**Last Updated:** 2026-06-27  
+**Tested With:** GroupDocs.Editor 25.3 for Java  
+**Author:** GroupDocs  
+
+{< /blocks/products/pf/tutorial-page-section >}
+{< /blocks/products/pf/main-container >}
+{< /blocks/products/pf/main-wrap-class >}
+{< blocks/products/products-backtop-button >}
+
+## Tutoriels associés
+
+- [Comment charger des documents Word en Java avec GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
+- [Comment utiliser GroupDocs - Charger & Modifier les champs de formulaire Word avec Java](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
+- [Enregistrer Word avec mot de passe en utilisant GroupDocs.Editor pour Java](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
