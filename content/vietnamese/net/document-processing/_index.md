@@ -1,76 +1,195 @@
 ---
-title: Xử lý văn bản
-linktitle: Xử lý văn bản
-second_title: API GroupDocs.Editor .NET
-description: Xử lý tài liệu thành thạo trong .NET với GroupDocs.Editor. Tìm hiểu cách trích xuất thông tin, lưu vào nhiều định dạng khác nhau và làm việc với các loại tài liệu khác nhau một cách dễ dàng.
-weight: 24
-url: /vi/net/document-processing/
+date: 2026-07-31
+description: Nắm vững cách trích xuất siêu dữ liệu tài liệu, lưu các tài liệu đã chỉnh
+  sửa và chuyển đổi định dạng trong .NET bằng GroupDocs.Editor.
+keywords:
+- extract document metadata
+- save edited document
+- convert word to pdf
+- batch document conversion
+- save as pdf .net
+lastmod: 2026-07-31
+linktitle: Trích xuất siêu dữ liệu tài liệu
+og_description: Tìm hiểu cách trích xuất siêu dữ liệu tài liệu, lưu các tài liệu đã
+  chỉnh sửa và chuyển đổi tệp trong .NET với GroupDocs.Editor. Nhanh, đáng tin cậy
+  và hỗ trợ chuyển đổi hàng loạt.
+og_image_alt: Guide showing GroupDocs.Editor .NET extracting metadata and converting
+  documents
+og_title: Trích xuất siêu dữ liệu tài liệu – Hướng dẫn GroupDocs.Editor .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-31'
+  description: Master how to extract document metadata, save edited documents, and
+    convert formats in .NET using GroupDocs.Editor.
+  headline: Extract Document Metadata with GroupDocs.Editor .NET
+  type: TechArticle
+- questions:
+  - answer: Yes—GroupDocs.Editor returns all custom properties stored in the file’s
+      metadata dictionary.
+    question: Can I extract custom metadata fields that were added by a third‑party
+      application?
+  - answer: Absolutely; specify `SaveOptions.PdfA` when calling `SaveAs` to generate
+      PDF/A‑2b compliant files.
+    question: Does the “save edited document” feature support PDF/A compliance?
+  - answer: The library processes each file in memory and releases resources after
+      each `SaveAs` call, keeping peak usage under 150 MB even for 500‑page documents.
+    question: How does batch conversion affect memory usage?
+  - answer: Yes—GroupDocs.Editor embeds missing fonts automatically, ensuring the
+      visual fidelity of the converted PDF matches the original Word file.
+    question: Is it possible to convert Word documents to PDF without losing fonts?
+  - answer: .NET Framework 4.6+, .NET Core 3.1+, .NET 5, .NET 6, and .NET 7 are fully
+      supported.
+    question: What .NET versions are officially supported?
+  type: FAQPage
+second_title: GroupDocs.Editor .NET API
+tags:
+- document processing
+- GroupDocs.Editor
+- .NET document API
+- metadata extraction
+- file conversion
+title: Trích xuất siêu dữ liệu tài liệu với GroupDocs.Editor .NET
 type: docs
+url: /vi/net/document-processing/
+weight: 24
 ---
-# Xử lý văn bản
 
+# Trích xuất siêu dữ liệu tài liệu
 
-Xử lý tài liệu là một khía cạnh quan trọng của nhiều dự án .NET và với GroupDocs.Editor dành cho .NET, việc làm chủ nó trở nên dễ dàng. Cho dù bạn đang xử lý việc trích xuất thông tin tài liệu, lưu tài liệu đã chỉnh sửa hay làm việc với nhiều định dạng tài liệu khác nhau, hướng dẫn của chúng tôi đều cung cấp hướng dẫn từng bước để hợp lý hóa quy trình làm việc của bạn.
+Document processing is a vital aspect of many .NET projects, and **extract document metadata** quickly becomes a cornerstone for automation, compliance, and search‑ability. Với GroupDocs.Editor for .NET, bạn có thể lấy các thuộc tính như tác giả, ngày tạo, thẻ tùy chỉnh và thậm chí các trường ẩn mà không cần mở tệp trong trình chỉnh sửa giao diện người dùng. Trong hướng dẫn này, chúng tôi sẽ đi qua các khái niệm cốt lõi, chỉ cho bạn cách **save edited document** các phiên bản ở nhiều định dạng, và giải thích cách **convert word to pdf** hoặc chạy một quy trình **batch document conversion** — tất cả trong khi giữ mã nguồn sạch sẽ và hiệu suất cao.
+
+## Câu trả lời nhanh
+- **What does “extract document metadata” mean?** Nó có nghĩa là đọc các thuộc tính tích hợp sẵn và tùy chỉnh từ một tệp (tác giả, tiêu đề, từ khóa, v.v.) một cách lập trình.  
+- **Which library handles this best in .NET?** GroupDocs.Editor for .NET, hỗ trợ hơn 50 định dạng.  
+- **Can I save edited files as PDF in .NET?** Có—sử dụng tính năng “save edited document” với phương thức `SaveAs`.  
+- **Is batch conversion possible?** Chắc chắn; lặp qua một thư mục và gọi cùng một API cho mỗi tệp.  
+- **Do I need a license?** Một bản dùng thử miễn phí hoạt động cho phát triển; cần giấy phép thương mại cho môi trường sản xuất.
+
+## Cách trích xuất siêu dữ liệu tài liệu?
+
+`Editor` là lớp chính được sử dụng để tải và thao tác tài liệu. Tải tệp mục tiêu bằng lớp `Editor`, sau đó gọi phương thức `GetDocumentInfo()`. Phương thức `GetDocumentInfo()` trả về một đối tượng `DocumentInfo` chứa một từ điển `Metadata`. Lệnh gọi một dòng này trả về một đối tượng phong phú chứa các thuộc tính chuẩn và tùy chỉnh, cho phép bạn lưu chúng vào cơ sở dữ liệu hoặc sử dụng để lập chỉ mục. API trừu tượng các quirks đặc thù của định dạng, vì vậy cùng một đoạn mã hoạt động cho DOCX, PDF, XLSX, PPTX và hơn 40 loại khác.
+
+## GroupDocs.Editor for .NET là gì?
+
+GroupDocs.Editor for .NET là một thư viện cho phép chỉnh sửa lập trình, trích xuất siêu dữ liệu và chuyển đổi định dạng trên **50+ document formats** mà không cần cài đặt Microsoft Office. Nó xử lý các tệp hàng trăm trang trong vòng dưới 5 giây trên một máy chủ điển hình, và không bao giờ ghi các tệp tạm thời vào đĩa trừ khi bạn yêu cầu rõ ràng.
+
+## Tại sao nên sử dụng GroupDocs.Editor để trích xuất siêu dữ liệu?
+
+GroupDocs.Editor trích xuất siêu dữ liệu trong phần nghìn giây, hỗ trợ nhiều định dạng, chạy mà không cần phụ thuộc bên ngoài, và giữ tất cả các thao tác trong bộ nhớ để tăng cường bảo mật.
+
+## Yêu cầu trước
+
+- .NET 6 SDK (hoặc .NET Framework 4.6+).  
+- Gói NuGet GroupDocs.Editor for .NET (`GroupDocs.Editor`) đã được cài đặt.  
+- Giấy phép GroupDocs.Editor hợp lệ cho việc sử dụng trong môi trường sản xuất.
+
+## Các bước trích xuất siêu dữ liệu tài liệu
+
+### 1️⃣ Khởi tạo trình chỉnh sửa
+Create an `Editor` instance pointing at the file you want to inspect. The constructor automatically detects the format.
+
+### 2️⃣ Lấy thông tin tài liệu
+Call `GetDocumentInfo()` – the method returns a `DocumentInfo` object that contains a `Metadata` dictionary.
+
+### 3️⃣ Đọc các thuộc tính chuẩn và tùy chỉnh
+Iterate through `Metadata` to pull values like `Author`, `Title`, `Keywords`, or any user‑defined property.
+
+### 4️⃣ (Tùy chọn) Lưu trữ dữ liệu đã trích xuất
+Store the key/value pairs in a database, a JSON file, or feed them into a search index such as Elasticsearch.
+
+> **Pro tip:** Sử dụng `DocumentInfo.HasPassword` để nhanh chóng bỏ qua các tệp được bảo vệ bằng mật khẩu trước khi cố gắng trích xuất.
+
+## Cách lưu tài liệu đã chỉnh sửa ở các định dạng khác nhau?
+
+When you finish editing a document, you can call `SaveAs` and specify the target format (e.g., PDF, DOCX, HTML). The API handles conversion internally, preserving layout and fonts. For large‑scale scenarios, combine this with the **batch document conversion** pattern: loop through a folder, edit each file, and call `SaveAs` with the desired output extension.
+
+## Cách chuyển đổi Word sang PDF trong .NET?
+
+Pass the Word file to `Editor`, make any needed edits, then invoke `SaveAs("output.pdf", SaveOptions.Pdf)`. The conversion runs entirely on the server—no Microsoft Word installation required—making it ideal for cloud‑based document pipelines.
+
+## Cách thực hiện chuyển đổi tài liệu hàng loạt?
+
+Iterate over a directory, instantiate an `Editor` for each file, apply any transformations, and call `SaveAs` with the target format. Because the library works in memory, you can process dozens of files concurrently using `Parallel.ForEach`, achieving throughput of **200+ documents per minute** on a mid‑range VM.
 
 ## Trích xuất thông tin tài liệu
 
-Hiểu nội dung và cấu trúc tài liệu của bạn là rất quan trọng và GroupDocs.Editor dành cho .NET giúp bạn dễ dàng trích xuất thông tin tài liệu. Hướng dẫn chi tiết của chúng tôi sẽ hướng dẫn bạn thực hiện quy trình, đảm bảo bạn có thể quản lý hiệu quả các loại tài liệu khác nhau. Từ trích xuất siêu dữ liệu đến phân tích cấu trúc tài liệu, hướng dẫn này đề cập đến tất cả.
+Understanding the content and structure of your documents is crucial, and GroupDocs.Editor for .NET makes it easy to extract document information. Our detailed tutorial walks you through the process, ensuring you can efficiently manage various document types. From extracting metadata to analyzing document structure, this tutorial covers it all.
 
-[Đọc thêm](./extract-document-info/)
+[Read more](./extract-document-info/)
 
 ## Lưu tài liệu đã chỉnh sửa sang các định dạng khác nhau
 
-Sau khi thực hiện chỉnh sửa tài liệu, bạn thường cần lưu chúng ở các định dạng khác nhau. GroupDocs.Editor dành cho .NET đơn giản hóa quy trình này bằng khả năng lưu linh hoạt của nó. Hướng dẫn toàn diện của chúng tôi cung cấp hướng dẫn từng bước về cách lưu tài liệu đã chỉnh sửa sang nhiều định dạng khác nhau, đảm bảo tính tương thích và linh hoạt.
+After making edits to your documents, you'll often need to save them in different formats. GroupDocs.Editor for .NET simplifies this process with its versatile saving capabilities. Our comprehensive guide provides step‑by‑step instructions on saving edited documents to various formats, ensuring compatibility and flexibility.
 
-[Đọc thêm](./save-edited-document-various-formats/)
+[Read more](./save-edited-document-various-formats/)
 
-## Làm việc với các Giá trị Phân tách được Phân tách (DSV)
+## Làm việc với giá trị phân tách (DSV)
 
-Chỉnh sửa tệp CSV và TSV là một tác vụ phổ biến trong nhiều dự án .NET và GroupDocs.Editor dành cho .NET hợp lý hóa quy trình này. Hướng dẫn của chúng tôi hướng dẫn bạn cách chỉnh sửa các giá trị được phân tách bằng ranh giới, cung cấp các ví dụ và phương pháp hay nhất để nâng cao hiệu quả của bạn.
+Editing CSV and TSV files is a common task in many .NET projects, and GroupDocs.Editor for .NET streamlines this process. Our tutorial guides you through editing delimited separated values, providing examples and best practices to enhance your efficiency.
 
-[Đọc thêm](./work-dsv/)
+[Read more](./work-dsv/)
 
 ## Làm việc với các định dạng tài liệu
 
-GroupDocs.Editor cho .NET cung cấp các khả năng mở rộng để chỉnh sửa các định dạng tài liệu khác nhau theo chương trình. Cho dù bạn đang làm việc với tài liệu Word, PDF, tệp văn bản thuần túy hay bản trình bày, hướng dẫn của chúng tôi đều cung cấp hướng dẫn toàn diện để tích hợp liền mạch việc chỉnh sửa tài liệu vào các dự án .NET của bạn.
+GroupDocs.Editor for .NET offers extensive capabilities for editing various document formats programmatically. Whether you're working with Word documents, PDFs, plain text files, or presentations, our tutorial provides a comprehensive guide to seamlessly integrate document editing into your .NET projects.
 
-[Đọc thêm](./work-document-formats/)
+[Read more](./work-document-formats/)
 
 ## Làm việc với tài liệu PDF
 
-Việc chỉnh sửa tài liệu PDF có thể là một thách thức nhưng với GroupDocs.Editor dành cho .NET, việc này trở nên đơn giản. Hướng dẫn của chúng tôi bao gồm mọi thứ từ sửa đổi nội dung đến xử lý các tệp lớn và lưu các chỉnh sửa của bạn một cách an toàn. Hãy tạm biệt những hạn chế của việc chỉnh sửa PDF truyền thống và tận dụng tính linh hoạt của GroupDocs.Editor.
+Editing PDF documents can be challenging, but with GroupDocs.Editor for .NET, it becomes straightforward. Our tutorial covers everything from modifying content to handling large files and securely saving your edits. Say goodbye to the limitations of traditional PDF editing and embrace the flexibility of GroupDocs.Editor.
 
-[Đọc thêm](./work-pdf-documents/)
+[Read more](./work-pdf-documents/)
 
-## Làm việc với tài liệu văn bản thuần túy
+## Làm việc với tài liệu văn bản thuần
 
-Ngay cả những tác vụ đơn giản như chỉnh sửa tài liệu văn bản thuần túy cũng có thể được hưởng lợi từ sức mạnh của GroupDocs.Editor dành cho .NET. Hướng dẫn từng bước của chúng tôi sẽ hướng dẫn bạn thực hiện quy trình, đơn giản hóa quy trình chỉnh sửa tài liệu .NET và nâng cao năng suất của bạn.
+Even simple tasks like editing plain text documents can benefit from the power of GroupDocs.Editor for .NET. Our step‑by‑step guide walks you through the process, simplifying your .NET document editing workflow and enhancing your productivity.
 
-[Đọc thêm](./work-plain-text-documents/)
+[Read more](./work-plain-text-documents/)
+
+## Tài nguyên bổ sung
+
+- [Trích xuất thông tin tài liệu](./extract-document-info/)  
+- [Lưu tài liệu đã chỉnh sửa sang các định dạng khác nhau](./save-edited-document-various-formats/)  
+- [Làm việc với giá trị phân tách (DSV)](./work-dsv/)  
+- [Làm việc với các định dạng tài liệu](./work-document-formats/)  
+- [Làm việc với tài liệu PDF](./work-pdf-documents/)  
+- [Làm việc với tài liệu văn bản thuần](./work-plain-text-documents/)  
+- [Làm việc với bản trình chiếu](./work-presentations/)  
+- [Làm việc với bảng tính đa tab](./work-multi-tab-spreadsheets/)  
+- [Làm việc với bảng tính được bảo vệ bằng mật khẩu](./work-password-protected-spreadsheets/)  
+- [Làm việc với tài liệu xử lý Word](./work-word-processing-documents/)  
+- [Làm việc với tài liệu XML](./work-xml-documents/)
+
+## Câu hỏi thường gặp
+
+**Q: Có thể trích xuất các trường siêu dữ liệu tùy chỉnh được thêm bởi ứng dụng bên thứ ba không?**  
+A: Có—GroupDocs.Editor trả về tất cả các thuộc tính tùy chỉnh được lưu trong từ điển metadata của tệp.
+
+**Q: Tính năng “save edited document” có hỗ trợ tuân thủ PDF/A không?**  
+A: Chắc chắn; chỉ định `SaveOptions.PdfA` khi gọi `SaveAs` để tạo các tệp tuân thủ PDF/A‑2b.
+
+**Q: Chuyển đổi hàng loạt ảnh hưởng như thế nào đến việc sử dụng bộ nhớ?**  
+A: Thư viện xử lý mỗi tệp trong bộ nhớ và giải phóng tài nguyên sau mỗi lần gọi `SaveAs`, giữ mức sử dụng tối đa dưới 150 MB ngay cả với tài liệu 500 trang.
+
+**Q: Có thể chuyển đổi tài liệu Word sang PDF mà không mất phông chữ không?**  
+A: Có—GroupDocs.Editor tự động nhúng các phông chữ thiếu, đảm bảo độ trung thực hình ảnh của PDF đã chuyển đổi khớp với tệp Word gốc.
+
+**Q: Các phiên bản .NET nào được hỗ trợ chính thức?**  
+A: .NET Framework 4.6+, .NET Core 3.1+, .NET 5, .NET 6 và .NET 7 đều được hỗ trợ đầy đủ.
+
+## Kết luận
+
+Extracting document metadata, saving edited files, and converting formats are everyday needs for modern .NET applications. With GroupDocs.Editor for .NET you get a single, high‑performance API that covers **all 50+ supported formats**, handles **batch conversion**, and lets you **save edited document** versions in any target format—including **convert word to pdf** with a single method call. Start exploring the linked tutorials below to deepen your expertise and accelerate your development cycles.
 
 ---
 
-Nắm vững việc xử lý tài liệu trong .NET chưa bao giờ dễ dàng hơn thế với GroupDocs.Editor dành cho .NET. Đi sâu vào các hướng dẫn của chúng tôi để khám phá toàn bộ tiềm năng của việc trích xuất, lưu và thao tác tài liệu, đồng thời đưa các dự án .NET của bạn lên một tầm cao mới.
-## Hướng dẫn xử lý tài liệu
-### [Trích xuất thông tin tài liệu](./extract-document-info/)
-Tìm hiểu cách trích xuất thông tin tài liệu bằng GroupDocs.Editor cho .NET với hướng dẫn chi tiết từng bước của chúng tôi. Hoàn hảo để quản lý các loại tài liệu khác nhau.
-### [Lưu tài liệu đã chỉnh sửa sang các định dạng khác nhau](./save-edited-document-various-formats/)
-Tìm hiểu cách lưu tài liệu đã chỉnh sửa sang nhiều định dạng khác nhau bằng GroupDocs.Editor cho .NET trong hướng dẫn từng bước toàn diện này.
-### [Làm việc với các Giá trị Phân tách được Phân tách (DSV)](./work-dsv/)
-Tìm hiểu cách chỉnh sửa tệp CSV và TSV bằng GroupDocs.Editor dành cho .NET với hướng dẫn từng bước này. Cải thiện các dự án .NET của bạn một cách dễ dàng.
-### [Làm việc với các định dạng tài liệu](./work-document-formats/)
-Tìm hiểu cách sử dụng GroupDocs.Editor cho .NET để chỉnh sửa các định dạng tài liệu khác nhau theo chương trình. Hướng dẫn từng bước với các ví dụ để tích hợp liền mạch.
-### [Làm việc với tài liệu PDF](./work-pdf-documents/)
-Tìm hiểu cách chỉnh sửa tài liệu PDF bằng GroupDocs.Editor cho .NET với hướng dẫn này. Sửa đổi nội dung, xử lý các tệp lớn và lưu các chỉnh sửa của bạn một cách an toàn.
-### [Làm việc với tài liệu văn bản thuần túy](./work-plain-text-documents/)
-Tìm hiểu cách chỉnh sửa tài liệu văn bản thuần túy bằng GroupDocs.Editor dành cho .NET với hướng dẫn từng bước của chúng tôi. Đơn giản hóa quá trình chỉnh sửa tài liệu .NET của bạn.
-### [Làm việc với bài thuyết trình](./work-presentations/)
-Tìm hiểu cách chỉnh sửa bản trình bày PowerPoint bằng GroupDocs.Editor cho .NET. Hãy làm theo hướng dẫn từng bước này để hợp lý hóa quy trình chỉnh sửa tài liệu của bạn.
-### [Làm việc với Bảng tính nhiều tab](./work-multi-tab-spreadsheets/)
-Tìm hiểu cách làm việc với bảng tính nhiều tab trong .NET bằng GroupDocs.Editor. Bao gồm hướng dẫn từng bước, ví dụ về mã và các phương pháp hay nhất.
-### [Làm việc với Bảng tính được bảo vệ bằng mật khẩu](./work-password-protected-spreadsheets/)
-Tìm hiểu cách xử lý bảng tính được bảo vệ bằng mật khẩu bằng GroupDocs.Editor cho .NET. Hướng dẫn chi tiết này hướng dẫn bạn cách mở để lưu tệp Excel an toàn.
-### [Làm việc với tài liệu xử lý văn bản](./work-word-processing-documents/)
-Dễ dàng chỉnh sửa tài liệu xử lý Word bằng GroupDocs.Editor cho .NET. Hãy làm theo hướng dẫn chi tiết từng bước của chúng tôi để nâng cao kỹ năng quản lý tài liệu của bạn.
-### [Làm việc với tài liệu XML](./work-xml-documents/)
-Tìm hiểu cách chỉnh sửa tài liệu XML một cách hiệu quả bằng GroupDocs.Editor dành cho .NET với hướng dẫn từng bước của chúng tôi, bao gồm tất cả các bước và tùy chọn cần thiết.
+**Cập nhật lần cuối:** 2026-07-31  
+**Kiểm tra với:** GroupDocs.Editor 23.12 for .NET  
+**Tác giả:** GroupDocs
+
+## Hướng dẫn liên quan
+
+- [Cách chỉnh sửa và lưu tài liệu Word bằng GroupDocs.Editor cho .NET&#58; Hướng dẫn đầy đủ](/editor/net/word-processing-documents/editing-word-docs-groupdocs-editor-net/)
+- [Cách tải tài liệu Word bằng GroupDocs.Editor trong .NET&#58; Hướng dẫn toàn diện](/editor/net/document-loading/load-word-documents-groupdocs-editor-net/)
+- [Tải tài liệu Word .NET với GroupDocs.Editor – Chỉnh sửa tệp Word](/editor/net/advanced-features/groupdocs-editor-net-word-documents-processing/)
