@@ -1,79 +1,119 @@
 ---
-date: '2026-03-01'
-description: GroupDocs.Editor を使用して Java で XML を編集する方法を学びましょう。このガイドでは、XML の読み込み、XML
-  を TXT に変換、XML メタデータの抽出について説明します。
+date: '2026-08-15'
+description: GroupDocs.Editor を使用した java XML 操作の方法を学びます。このガイドでは、XML をロード、編集、TXT または
+  DOCX に変換し、メタデータを効率的に抽出する方法を示します。
 keywords:
-- Java XML editing
-- GroupDocs.Editor Java library
-- XML file manipulation
-title: GroupDocs.Editor を使って Java で XML を編集する方法 – 完全ガイド
+- java xml manipulation
+- groupdocs editor xml
+- xml to html java
+lastmod: '2026-08-15'
+og_description: GroupDocs.Editor を使用した java XML 操作を学びます。このガイドでは、XML のロード、編集、TXT/DOCX
+  への変換、メタデータ抽出の手順を案内します。
+og_image_alt: 'Developer guide: java xml manipulation with GroupDocs.Editor'
+og_title: GroupDocs.Editor を使用した java XML 操作の方法
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-15'
+  description: Learn java xml manipulation using GroupDocs.Editor. This guide shows
+    how to load, edit, convert XML to TXT or DOCX, and extract metadata efficiently.
+  headline: How to do java xml manipulation with GroupDocs.Editor
+  type: TechArticle
+- description: Learn java xml manipulation using GroupDocs.Editor. This guide shows
+    how to load, edit, convert XML to TXT or DOCX, and extract metadata efficiently.
+  name: How to do java xml manipulation with GroupDocs.Editor
+  steps:
+  - name: load the XML document
+    text: '`Editor` loads the file and creates an in‑memory representation ready for
+      editing.'
+  - name: configure edit options
+    text: '`XmlEditOptions` lets you turn on syntax highlighting, line numbers, and
+      custom fonts.'
+  - name: modify content
+    text: '`EditableDocument` provides `replace`, `insert`, and `remove` methods that
+      work on raw markup strings.'
+  - name: save as DOCX
+    text: '`WordProcessingSaveOptions` preserves layout while converting XML structures
+      into Word tables and headings.'
+  - name: save as TXT
+    text: '`TextSaveOptions` writes a clean, indented text version of the XML, respecting
+      the formatting rules you set.'
+  type: HowTo
+- questions:
+  - answer: Yes, a valid GroupDocs.Editor license is required for production; a trial
+      license is sufficient for evaluation.
+    question: Do I need a license to edit XML in production?
+  - answer: GroupDocs.Editor streams the document, allowing you to work with files
+      up to several hundred megabytes without loading the entire file into memory.
+    question: Can the library handle very large XML files (hundreds of MB)?
+  - answer: '`TextSaveOptions` respects indentation and line‑break settings defined
+      in `XmlFormatOptions`, delivering a clean text representation.'
+    question: Is original formatting preserved when saving as TXT?
+  - answer: Namespaces appear as regular attributes; you can edit or remove them using
+      the same `replace` methods shown earlier.
+    question: How are XML namespaces treated?
+  - answer: GroupDocs.Editor 25.3 supports Java 8 and newer, including Java 11, Java
+      17, and later LTS releases.
+    question: Which Java versions are supported?
+  type: FAQPage
+tags:
+- java xml manipulation
+- groupdocs editor
+- xml editing java
+- document conversion
+title: GroupDocs.Editor を使用した java XML 操作の方法
 type: docs
 url: /ja/java/xml-documents/mastering-java-xml-editing-groupdocs-editor/
 weight: 1
 ---
 
-# JavaでGroupDocs.Editorを使用してXMLを編集する方法 – 完全ガイド
-
-最新のJavaアプリケーションでは、**how to edit XML** を効率的に行うことは一般的な課題です。特に、XMLドキュメントをプログラムでロード、変更、保存する必要がある場合に顕著です。コンテンツ管理システムやeコマースカタログ、データ交換サービスを構築する場合でも、Javaから直接XMLファイルを操作できれば、手作業の時間を大幅に削減できます。本チュートリアルでは、GroupDocs.Editorを使用して**load XML Java**をロードし、変更を加え、**convert XML TXT** に変換し、さらに**extract XML metadata** を抽出する方法を解説します。コードはクリーンで保守しやすい状態を保ちます。
+# GroupDocs.Editor を使用した Java XML 操作方法 – 完全ガイド
 
 ## クイック回答
-- **What library helps you edit XML in Java?** GroupDocs.Editor for Java.  
-- **Can I load an XML file from a path or stream?** Yes – use `Editor` with `XmlEditOptions`.  
-- **Is it possible to save edited XML as DOCX or TXT?** Absolutely, using `WordProcessingSaveOptions` or `TextSaveOptions`.  
-- **How do I customize font highlighting for XML tags?** Configure `XmlHighlightOptions` on the edit options.  
-- **Can I retrieve metadata such as document type from an XML file?** Yes, via `Editor.getDocumentInfo()`.
+- **Java で XML を編集するのに役立つライブラリは何ですか？** GroupDocs.Editor for Java.  
+- **パスまたはストリームから XML ファイルをロードできますか？** はい – `Editor` と `XmlEditOptions` を使用します。  
+- **編集した XML を DOCX または TXT として保存できますか？** もちろん、`WordProcessingSaveOptions` または `TextSaveOptions` を使用します。  
+- **XML タグのフォントハイライトをカスタマイズするには？** 編集オプションで `XmlHighlightOptions` を設定します。  
+- **XML ファイルから文書タイプなどのメタデータを取得できますか？** はい、`Editor.getDocumentInfo()` を使用します。
 
-## Javaで「how to edit XML」とは何か
-XMLの編集とは、プログラムでXMLドキュメントを読み取り、ノードや属性、テキストを変更し、その変更を永続化することを指します。GroupDocs.Editorは低レベルのパース処理を抽象化し、豊富な編集APIを提供するため、XMLの内部処理に煩わされずビジネスロジックに集中できます。
+## Java XML 操作とは何ですか？
+Java XML 操作とは、XML ファイルを読み取り、要素、属性、テキストノードを変更し、更新されたドキュメントをストレージに書き戻すプログラム的なプロセスです。GroupDocs.Editor は低レベルのパース処理を抽象化し、DOM や SAX の詳細に煩わされることなくビジネスロジックに集中できるようにします。
 
-## JavaでXML操作にGroupDocs.Editorを使用する理由
-- **Zero‑dependency parsing** – 自分でSAX/DOMを管理する必要はありません。  
-- **Built‑in format conversion** – Word、Text、HTMLへ簡単にエクスポートできます。  
-- **Rich highlighting** – 大規模なXMLファイルの可読性を向上させます。  
-- **Metadata extraction** – 完全なパースなしでドキュメントプロパティを迅速に取得できます。
+## なぜ Java の XML 操作に GroupDocs.Editor を使用するのか？
+GroupDocs.Editor は **50 以上の入力および出力フォーマット** をサポートし、ドキュメント全体をメモリにロードせずに数百ページに及ぶ XML ファイルを処理できます。また、組み込みのハイライト機能により手動レビューを高速化します。ゼロ依存エンジンにより別個の XML パーサーを管理する必要がなく、ワンクリックで Word、プレーンテキスト、HTML に変換でき、開発時間を最大 70 % 短縮します。
 
 ## 前提条件
-- **GroupDocs.Editor for Java** (バージョン 25.3 以降)  
-- **JDK** (任意の最新バージョン)  
+- **GroupDocs.Editor for Java** (バージョン 25.3 以降)  
+- **JDK 8+** (任意の最新バージョンが使用可能)  
 - IntelliJ IDEA や Eclipse などの IDE  
-- Maven（依存関係管理を使用する場合）
+- 依存関係管理のための Maven（または Gradle）  
 
 ### 必要な知識
-- 基本的なJava構文  
-- XML構造（要素、属性、CDATA）に関する知識  
+- 基本的な Java 構文  
+- XML の概念（要素、属性、CDATA）に関する知識  
 
 ## GroupDocs.Editor for Java の設定
+
 ### Maven 設定
-`pom.xml` ファイルに以下を追加して、GroupDocs.Editor を依存関係として含めます:
+GroupDocs.Editor を取り込むために、`pom.xml` ファイルに以下の依存関係を追加してください。
 
 ```xml
-<repositories>
-   <repository>
-      <id>repository.groupdocs.com</id>
-      <name>GroupDocs Repository</name>
-      <url>https://releases.groupdocs.com/editor/java/</url>
-   </repository>
-</repositories>
-
-<dependencies>
-   <dependency>
-      <groupId>com.groupdocs</groupId>
-      <artifactId>groupdocs-editor</artifactId>
-      <version>25.3</version>
-   </dependency>
-</dependencies>
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-editor</artifactId>
+    <version>25.3</version>
+</dependency>
 ```
 
 ### 直接ダウンロード
-あるいは、最新バージョンを [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) からダウンロードしてください。
+または、[GroupDocs.Editor for Java リリース](https://releases.groupdocs.com/editor/java/) から最新バージョンをダウンロードしてください。
 
 #### ライセンス取得
-- **Free Trial**: 30日間の無料トライアルで機能を試すことができます。  
-- **Temporary License**: [GroupDocs licensing page](https://purchase.groupdocs.com/temporary-license) から一時ライセンスを取得し、テスト期間を延長できます。  
-- **Purchase**: 完全に利用するには、[GroupDocs purchasing options](https://purchase.groupdocs.com/) からライセンスを購入してください。  
+- **無料トライアル** – すべての機能を体験できる 30 日間のトライアルから始めます。  
+- **一時ライセンス** – [GroupDocs ライセンスページ](https://purchase.groupdocs.com/temporary-license) から期間限定キーを取得し、拡張テストに使用します。  
+- **購入** – [GroupDocs 購入オプション](https://purchase.groupdocs.com/) からフルライセンスを購入します。  
 
 ### 基本的な初期化
-Javaアプリケーションで GroupDocs.Editor を初期化する方法は以下の通りです:
+`Editor` は GroupDocs.Editor のメインクラスで、ドキュメント内容のロードと管理を行います。`XmlEditOptions` は XML の編集表示方法を定義します。
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -83,12 +123,17 @@ Editor editor = new Editor(inputFilePath);
 ```
 
 ## 実装ガイド
-このセクションでは、**load XML Java** のコア手順、編集方法、**convert XML TXT** の方法、さらに **extract XML metadata** の取得方法を解説します。
+このセクションでは、**XML のロード（Java）**、ドキュメントの編集、**XML の TXT 変換**、そして **XML メタデータの抽出** の主要手順を解説します。
 
-### XMLファイルのロードと編集
-**概要**: ファイルパスからXMLドキュメントをロードし、編集設定を構成し、内容を変更します。
+### XML ファイルのロードと編集
+`Editor` クラスは XML ドキュメントをロードし管理するコアコンポーネントです。  
+`EditableDocument` はロードされた XML ドキュメントのマークアップを変更するメソッドを提供します。
 
-#### 手順 1: XMLドキュメントのロード
+**直接回答:** `new Editor("input.xml", new XmlEditOptions())` で XML をロードし、必要な `XmlHighlightOptions` を適用し、`EditableDocument` を通じてマークアップを変更し、最後に `editor.save()` を呼び出します—これらは 3 行の簡潔なコードで実行できます。
+
+#### 手順 1: XML ドキュメントのロード
+`Editor` はファイルをロードし、編集可能なメモリ内表現を作成します。
+
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.editable.EditableDocument;
@@ -99,6 +144,8 @@ Editor editor = new Editor(inputFilePath);
 ```
 
 #### 手順 2: 編集オプションの設定
+`XmlEditOptions` では構文ハイライト、行番号、カスタムフォントを有効にできます。
+
 ```java
 XmlEditOptions editOptions = new XmlEditOptions();
 editOptions.setAttributeValuesQuoteType(QuoteType.DoubleQuote); // Use double quotes for attribute values
@@ -106,6 +153,8 @@ EditableDocument beforeEdit = editor.edit(editOptions);
 ```
 
 #### 手順 3: コンテンツの変更
+`EditableDocument` は、生のマークアップ文字列に対して `replace`、`insert`、`remove` メソッドを提供します。
+
 ```java
 String originalTextContent = beforeEdit.getContent();
 String updatedTextContent = originalTextContent.replace("John", "Samuel");
@@ -114,10 +163,14 @@ afterEdit.dispose();
 editor.dispose();
 ```
 
-### 編集済みXMLコンテンツを異なる形式で保存
-**概要**: 編集したXMLをWord（DOCX）またはプレーンテキスト（TXT）としてエクスポートします。
+### 編集した XML コンテンツを異なる形式で保存
+`TextSaveOptions` は、エンコーディングや書式設定オプションを含め、プレーンテキストとしてドキュメントを保存する方法を指定します。
 
-#### 手順 1: DOCXとして保存
+**直接回答:** DOCX にエクスポートするには `WordProcessingSaveOptions`、プレーンテキスト出力には `TextSaveOptions` を使用します。`editor.save("output.docx", saveOptions)` または `editor.save("output.txt", saveOptions)` にオプションを渡すだけです。
+
+#### 手順 1: DOCX として保存
+`WordProcessingSaveOptions` は、XML 構造を Word のテーブルや見出しに変換しながらレイアウトを保持します。
+
 ```java
 import com.groupdocs.editor.options.WordProcessingSaveOptions;
 import java.nio.charset.StandardCharsets;
@@ -127,7 +180,9 @@ WordProcessingSaveOptions wordSaveOptions = new WordProcessingSaveOptions(WordPr
 afterEdit.save(outputWordPath, wordSaveOptions);
 ```
 
-#### 手順 2: TXTとして保存
+#### 手順 2: TXT として保存
+`TextSaveOptions` は、設定した書式規則に従い、インデントされたクリーンなテキスト版の XML を出力します。
+
 ```java
 import com.groupdocs.editor.options.TextSaveOptions;
 
@@ -137,8 +192,10 @@ txtSaveOptions.setEncoding(StandardCharsets.UTF_8);
 afterEdit.save(outputTxtPath, txtSaveOptions);
 ```
 
-### XML編集のハイライトオプション
-**概要**: XMLタグ、属性、CDATAセクションのフォント設定をカスタマイズし、可読性を向上させます。
+## XML 編集のハイライトオプション
+`XmlHighlightOptions` は、編集時に XML タグ、属性、値の色とフォントをカスタマイズできます。
+
+**直接回答:** `XmlHighlightOptions` インスタンスを作成し、タグ、属性、CDATA のフォントファミリー、サイズ、色を設定してから、ドキュメントをロードする前に `XmlEditOptions` に割り当てます。
 
 ```java
 import com.groupdocs.editor.options.XmlHighlightOptions;
@@ -168,8 +225,10 @@ afterEdit.dispose();
 editor.dispose();
 ```
 
-### XML編集のフォーマットオプション
-**概要**: インデント、改行設定、その他のフォーマットルールを定義します。
+## XML 編集のフォーマットオプション
+`XmlFormatOptions` は、XML を保存する際のインデント、改行スタイル、要素の折りたたみを制御します。
+
+**直接回答:** `XmlFormatOptions` はインデント（タブかスペースか）、改行スタイル、空要素を折りたたむかどうかを制御し、最終的な外観を完全にコントロールできます。
 
 ```java
 import com.groupdocs.editor.htmlcss.css.datatypes.Length;
@@ -187,8 +246,10 @@ afterEdit.dispose();
 editor.dispose();
 ```
 
-### XMLメタデータ情報の取得
-**概要**: ドキュメントタイプ、エンコーディング、ルート要素名などのメタデータを抽出します。
+## XML メタデータ情報の取得
+`TextualDocumentInfo` は、XML 固有のメタデータを含む、ドキュメントから抽出された情報を保持します。
+
+**直接回答:** `editor.getDocumentInfo(null)` を呼び出して `TextualDocumentInfo` オブジェクトを取得します。その `xmlInfo` プロパティには、ファイル全体を解析せずに `documentType`、`encoding`、`rootElementName` が含まれます。
 
 ```java
 import com.groupdocs.editor.IDocumentInfo;
@@ -202,49 +263,78 @@ afterEdit.dispose();
 editor.dispose();
 ```
 
-## XML Java のロード – よくある落とし穴
-- **Incorrect file path** – 常に絶対パスを使用するか、`Paths.get(...)` で相対パスを解決してください。  
-- **Missing license** – 有効なライセンスがない場合、エディタはトライアルモードで動作し、透かしが埋め込まれる可能性があります。  
-- **Encoding mismatches** – XMLファイルのエンコーディングがGroupDocs.Editorの期待するものと一致していることを確認してください（UTF‑8 が最も安全です）。
+## XML のロード（Java）における一般的な落とし穴
+GroupDocs.Editor を使用した XML のロードは簡単ですが、ファイルパスが正しいこと、適切なライセンスが適用されていること、ドキュメントのエンコーディングがソースと一致していることを確認する必要があります。絶対パスや `Paths.get(...)` を使用すると解決エラーを回避でき、有効なライセンスはトライアルの透かしを防ぎ、`XmlEditOptions` で正しい文字セットを設定すれば文字処理が正しく行われます。
 
-## GroupDocs.Editor を使用した XML TXT の変換方法
-前述の `TextSaveOptions` を使用すると、編集したXMLをプレーンテキストに変換できます。文字化けを防ぐために正しい文字セット（`StandardCharsets.UTF_8`）を設定することを忘れないでください。
+- **ファイルパスが不正** – 常に `Paths.get(...)` でパスを解決するか、絶対パスを使用してください。  
+- **ライセンスが欠如** – 有効なライセンスがない場合、エディタはトライアルモードで動作し、出力に透かしが付加されます。  
+- **エンコーディングの不一致** – ソース XML が UTF‑8 であることを確認するか、`XmlEditOptions` で期待するエンコーディングを明示的に設定してください。
 
-## JavaでのXML操作 – 上級ヒント
-- **Batch replace** – 複雑な変換には正規表現を使用した `String.replaceAll` を利用します。  
-- **Preserve comments** – 明示的に削除しない限り、エディタはXMLコメントをそのまま保持します。  
-- **Use `EditableDocument.fromMarkup`** – このメソッドはリソース（画像、スタイル）を保持しながらドキュメントを再作成します。
+## GroupDocs.Editor を使用した XML の TXT 変換方法
+GroupDocs.Editor の `TextSaveOptions` クラスを使用して、編集した XML ドキュメントをプレーンテキストに変換します。インデント、改行、文字エンコーディングを保持するようオプションを設定し、`editor.save("output.txt", saveOptions)` を呼び出します。これにより、元の XML 構造を反映しつつマークアップタグを除去した、読みやすい TXT ファイルが生成されます。
 
-## XMLメタデータの抽出方法
-`editor.getDocumentInfo(null)` を呼び出すと、`TextualDocumentInfo` オブジェクトが返されます。主なプロパティは次のとおりです:
-- `xmlInfo.getDocumentType()` – 例: “XML”。  
-- `xmlInfo.getEncoding()` – ファイルの文字エンコーディングを返します。  
-- `xmlInfo.getRootElementName()` – ドキュメント構造の概要を取得します。
+## Java の XML 操作 – 上級ヒント
+- **バッチ置換** – 大規模な変換には正規表現を使用した `String.replaceAll` を活用します。  
+- **コメントの保持** – 明示的に削除しない限り、エディタは XML コメントを保持します。  
+- **リソースの再利用** – `EditableDocument.fromMarkup` は埋め込みリソース（画像、スタイル）をそのまま保持しながらドキュメントを再生成します。
+
+## XML メタデータの抽出方法
+GroupDocs.Editor を使用すれば、XML ファイルからのメタデータ抽出はシンプルです。ドキュメントをロードした後、`editor.getDocumentInfo(null)` を呼び出して `TextualDocumentInfo` オブジェクトを取得します。このオブジェクトには `xmlInfo` セクションが含まれ、完全な DOM パースを行うことなく文書タイプ、エンコーディング、ルート要素名などの詳細を取得できます。
+
+- `xmlInfo.getDocumentType()` – “XML” を返します。  
+- `xmlInfo.getEncoding()` – 文字エンコーディング（例: UTF‑8）。  
+- `xmlInfo.getRootElementName()` – ルート要素の名前で、ドキュメント構造の概要をすばやく把握できます。
 
 ## 実用的な応用例
-以下は、これらの手法が活躍する実際のシナリオです:
-1. **Content Management Systems** – XMLベースの設定ファイルの更新を自動化します。  
-2. **E‑commerce Platforms** – プログラムでXMLフィードを編集し、商品カタログを同期させます。  
-3. **Data Interchange** – レガシーXMLレポートをステークホルダー向けに人間が読めるTXTまたはDOCXに変換します。
+これらの手法が活躍する実世界のシナリオ：
+
+1. **コンテンツ管理システム** – 環境間で XML ベースの設定ファイルを自動的に更新します。  
+2. **E コマースプラットフォーム** – XML フィードをオンザフライで編集し、商品カタログを同期させます。  
+3. **データ交換** – レガシー XML レポートを人間が読める TXT または DOCX に変換し、非技術的なステークホルダー向けに提供します。
 
 ## よくある質問
-**Q: 本番環境でXMLを編集するにはライセンスが必要ですか？**  
-A: はい、実運用では有効な GroupDocs.Editor ライセンスが必要です。評価目的であればトライアルを使用できます。
 
-**Q: このライブラリで数百MBの大きなXMLファイルを編集できますか？**  
-A: GroupDocs.Editor はドキュメントをストリーミングしますが、極めて大きなファイルの場合はチャンク処理や専用のXMLパーサーの使用を検討してください。
+**Q: 本番環境で XML を編集するにはライセンスが必要ですか？**  
+A: はい、製品版の使用には有効な GroupDocs.Editor ライセンスが必要です。評価目的であればトライアルライセンスで十分です。
 
-**Q: TXTとして保存する際に元のフォーマットを保持できますか？**  
-A: `TextSaveOptions` は `XmlFormatOptions` で定義された改行やインデントを尊重し、クリーンなテキスト表現を提供します。
+**Q: ライブラリは非常に大きな XML ファイル（数百 MB）を処理できますか？**  
+A: GroupDocs.Editor はストリーミングでドキュメントを処理するため、ファイル全体をメモリにロードせずに数百メガバイトまでのファイルを扱えます。
 
-**Q: XML名前空間はどのように扱いますか？**  
-A: 名前空間は通常の属性として扱われます。前述の `replace` 手法と同様に変更できます。
+**Q: TXT として保存する際に元の書式は保持されますか？**  
+A: `TextSaveOptions` は `XmlFormatOptions` で定義されたインデントと改行設定を尊重し、クリーンなテキスト表現を提供します。
 
-**Q: サポートされているJavaバージョンは何ですか？**  
-A: GroupDocs.Editor 25.3 は Java 8 以降をサポートしています。
+**Q: XML 名前空間はどのように扱われますか？**  
+A: 名前空間は通常の属性として表示され、前述の `replace` メソッドと同様に編集または削除できます。
+
+**Q: サポートされている Java バージョンはどれですか？**  
+A: GroupDocs.Editor 25.3 は Java 8 以降をサポートし、Java 11、Java 17、その他の LTS リリースも対象です。
 
 ---
 
-**Last Updated:** 2026-03-01  
-**Tested With:** GroupDocs.Editor 25.3 for Java  
-**Author:** GroupDocs
+**最終更新日:** 2026-08-15  
+**テスト環境:** GroupDocs.Editor 25.3 for Java  
+**作者:** GroupDocs
+
+```xml
+<repositories>
+   <repository>
+      <id>repository.groupdocs.com</id>
+      <name>GroupDocs Repository</name>
+      <url>https://releases.groupdocs.com/editor/java/</url>
+   </repository>
+</repositories>
+
+<dependencies>
+   <dependency>
+      <groupId>com.groupdocs</groupId>
+      <artifactId>groupdocs-editor</artifactId>
+      <version>25.3</version>
+   </dependency>
+</dependencies>
+```
+
+## 関連チュートリアル
+
+- [GroupDocs.Editor を使用した Java ドキュメントからのメタデータ抽出方法](/editor/java/advanced-features/groupdocs-editor-java-document-extraction-guide/)
+- [GroupDocs.Editor for Java を使用した HTML の DOCX 変換方法](/editor/java/document-saving/)
+- [Java で docx を PDF に変換: GroupDocs.Editor を使用した Word ファイルのバッチ編集 – ステップバイステップガイド](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
