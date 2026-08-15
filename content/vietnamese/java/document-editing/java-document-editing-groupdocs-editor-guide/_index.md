@@ -1,49 +1,84 @@
 ---
-date: '2026-02-19'
-description: Tìm hiểu cách tải tài liệu Word trong Java bằng GroupDocs.Editor, chỉnh
-  sửa docx, chuyển đổi docx sang HTML và trích xuất HTML từ các tệp Word.
+date: '2026-07-20'
+description: Tìm hiểu cách chuyển docx sang html và tải tài liệu Word trong Java bằng
+  GroupDocs.Editor, chỉnh sửa docx và trích xuất HTML từ các tệp Word.
 keywords:
-- GroupDocs.Editor Java
+- convert docx to html
+- extract html from word
+- edit docx java
+- edit word document java
+- read word file java
+- load docx java
+lastmod: '2026-07-20'
+og_description: Chuyển DOCX sang HTML trong Java bằng GroupDocs.Editor. Hướng dẫn
+  này sẽ chỉ cho bạn cách tải tệp Word, chỉnh sửa nội dung, trích xuất HTML nhúng
+  và xử lý các tài liệu lớn một cách hiệu quả.
+og_image_alt: 'Developer guide: Convert DOCX to HTML in Java with GroupDocs.Editor'
+og_title: Chuyển DOCX sang HTML trong Java với GroupDocs.Editor
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-20'
+  description: Learn how to convert docx to html and load word documents in Java using
+    GroupDocs.Editor, edit docx, and extract HTML from Word files.
+  headline: Convert DOCX to HTML in Java with GroupDocs.Editor
+  type: TechArticle
+- questions:
+  - answer: Use `Editor` together with `WordProcessingLoadOptions`.
+    question: What is the easiest way to load a Word document in Java?
+  - answer: Yes – call `EditableDocument.getEmbeddedHtml()` after opening the document.
+    question: Can I convert docx to html with the same library?
+  - answer: A free trial works for testing; a permanent license is required for production.
+    question: Do I need a license for development?
+  - answer: JDK 8 or later.
+    question: Which Java version is supported?
+  - answer: Maven provides the simplest dependency management, but direct JAR download
+      is also supported.
+    question: Is Maven the preferred installation method?
+  type: FAQPage
+tags:
+- convert docx to html
+- GroupDocs.Editor
 - Java document editing
-- Word document editing in Java
-title: Cách tải tài liệu Word trong Java bằng GroupDocs.Editor
+- Word document Java
+- edit docx java
+title: Chuyển DOCX sang HTML trong Java với GroupDocs.Editor
 type: docs
 url: /vi/java/document-editing/java-document-editing-groupdocs-editor-guide/
 weight: 1
 ---
 
-# Cách tải tài liệu Word trong Java với GroupDocs.Editor
+# Chuyển đổi DOCX sang HTML trong Java với GroupDocs.Editor
 
-Nếu bạn đang xây dựng một hệ thống quản lý nội dung dựa trên Java, một trình soạn thảo trực tuyến, hoặc bất kỳ quy trình báo cáo tự động nào, **how to load word** một cách hiệu quả là nền tảng cho quy trình làm việc suôn sẻ. Trong hướng dẫn này, chúng tôi sẽ đi qua toàn bộ quy trình tải tài liệu Word bằng GroupDocs.Editor, chỉnh sửa nội dung, chuyển đổi docx sang html, và trích xuất HTML nhúng để tích hợp web liền mạch.
+Chuyển đổi DOCX sang HTML là một yêu cầu thường gặp khi tích hợp nội dung Microsoft Word vào các ứng dụng web. Nếu bạn đang xây dựng một hệ thống quản lý nội dung dựa trên Java, một trình soạn thảo trực tuyến, hoặc một quy trình báo cáo tự động, việc tải các tệp Word một cách hiệu quả là nền tảng cho quy trình làm việc suôn sẻ. Trong hướng dẫn này, chúng tôi sẽ đi qua toàn bộ quá trình tải tài liệu Word bằng GroupDocs.Editor, chỉnh sửa nội dung của nó, chuyển đổi docx sang html, và trích xuất HTML nhúng để tích hợp web liền mạch.
 
-## Quick Answers
+## Câu trả lời nhanh
 - **Cách dễ nhất để tải tài liệu Word trong Java là gì?** Sử dụng `Editor` cùng với `WordProcessingLoadOptions`.
 - **Tôi có thể chuyển đổi docx sang html bằng cùng thư viện không?** Có – gọi `EditableDocument.getEmbeddedHtml()` sau khi mở tài liệu.
-- **Tôi có cần giấy phép cho việc phát triển không?** Bản dùng thử miễn phí đủ cho việc thử nghiệm; giấy phép vĩnh viễn cần thiết cho môi trường sản xuất.
+- **Tôi có cần giấy phép cho việc phát triển không?** Bản dùng thử miễn phí hoạt động cho việc kiểm tra; giấy phép vĩnh viễn cần thiết cho môi trường sản xuất.
 - **Phiên bản Java nào được hỗ trợ?** JDK 8 hoặc mới hơn.
 - **Maven có phải là phương pháp cài đặt ưu tiên không?** Maven cung cấp quản lý phụ thuộc đơn giản nhất, nhưng tải JAR trực tiếp cũng được hỗ trợ.
 
 ## “how to load word” là gì trong ngữ cảnh Java?
+Tải một tài liệu Word có nghĩa là mở tệp .docx hoặc .doc vào bộ nhớ để bạn có thể đọc, chỉnh sửa hoặc chuyển đổi nội dung của nó. GroupDocs.Editor trừu tượng hoá quá trình phân tích cấp thấp và cung cấp cho bạn một API cấp cao để làm việc với tài liệu như một đối tượng có thể chỉnh sửa. Quá trình này tạo ra một đối tượng EditableDocument có thể được thao tác hoặc chuyển đổi thêm khi cần.
 
-Tải một tài liệu Word có nghĩa là mở một tệp .docx hoặc .doc vào bộ nhớ để bạn có thể đọc, chỉnh sửa hoặc chuyển đổi nội dung của nó. GroupDocs.Editor trừu tượng hoá quá trình phân tích cấp thấp và cung cấp cho bạn một API cấp cao để làm việc với tài liệu như một đối tượng có thể chỉnh sửa.
+## Tại sao nên sử dụng GroupDocs.Editor cho Java?
+GroupDocs.Editor cho Java cung cấp một bộ tính năng toàn diện giúp đơn giản hoá việc xử lý tài liệu, cho phép các nhà phát triển chỉnh sửa, chuyển đổi và trích xuất nội dung mà không cần dựa vào Microsoft Office. Nó cung cấp khả năng hiển thị độ trung thực cao, hỗ trợ các tệp được bảo vệ bằng mật khẩu, và dễ dàng tích hợp với các ứng dụng Java hiện có.
 
-## Why use GroupDocs.Editor for Java?
-
-- **Chỉnh sửa đầy đủ tính năng** – sửa đổi văn bản, hình ảnh, bảng và hơn thế nữa mà không mất định dạng.  
+- **Chỉnh sửa đầy đủ tính năng** – chỉnh sửa văn bản, hình ảnh, bảng và hơn thế nữa mà không mất định dạng.  
 - **Trích xuất HTML** – hoàn hảo cho các trình xem dựa trên web hoặc tích hợp CMS, cho phép **convert docx to html** trong một lần gọi.  
-- **Hỗ trợ định dạng mạnh mẽ** – xử lý các tệp DOCX, DOC và tệp có bảo vệ bằng mật khẩu.  
-- **Hiệu năng mở rộng** – tối ưu cho tài liệu lớn với các tùy chọn tải có thể cấu hình.
+- **Hỗ trợ định dạng mạnh mẽ** – xử lý các tệp DOCX, DOC và các tệp được bảo vệ bằng mật khẩu.  
+- **Hiệu năng mở rộng** – tối ưu cho tài liệu lớn; nó có thể xử lý các tệp lên tới 500 MB mà không cần tải toàn bộ tệp vào bộ nhớ, và hỗ trợ hơn 30 định dạng đầu vào và đầu ra.
 
-## Prerequisites
+## Yêu cầu trước
 
 Trước khi bắt đầu, hãy chắc chắn bạn có những thứ sau:
 
-- Một IDE tương thích (IntelliJ IDEA, Eclipse, hoặc VS Code)  
-- JDK 8 hoặc mới hơn đã được cài đặt  
+- Một IDE tương thích (IntelliJ IDEA, Eclipse, hoặc VS Code)
+- JDK 8 hoặc mới hơn đã được cài đặt
 - Kiến thức cơ bản về Maven (hoặc khả năng thêm JAR thủ công)
 
-### Required Libraries and Dependencies
-Để sử dụng GroupDocs.Editor cho Java, bao gồm các thư viện này trong dự án của bạn. Đối với người dùng Maven, thêm những dòng sau vào tệp `pom.xml` của bạn:
+### Thư viện và phụ thuộc cần thiết
+Để sử dụng GroupDocs.Editor cho Java, bao gồm các thư viện này trong dự án của bạn. Đối với người dùng Maven, thêm các đoạn sau vào tệp `pom.xml` của bạn:
 
 ```xml
 <repositories>
@@ -63,21 +98,21 @@ Trước khi bắt đầu, hãy chắc chắn bạn có những thứ sau:
 </dependencies>
 ```
 
-Hoặc tải phiên bản mới nhất từ [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+Bạn cũng có thể tìm chi tiết kho Maven trên trang [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/). Ngoài ra, tải phiên bản mới nhất từ [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-### License Acquisition
-Bắt đầu với bản dùng thử miễn phí để thử nghiệm GroupDocs.Editor. Đối với việc sử dụng lâu dài, hãy cân nhắc mua giấy phép tạm thời qua [GroupDocs](https://purchase.groupdocs.com/temporary-license). Đối với môi trường sản xuất, nên sử dụng giấy phép đầy đủ.
+### Nhận giấy phép
+Bắt đầu với bản dùng thử miễn phí để thử nghiệm GroupDocs.Editor. Đối với việc sử dụng kéo dài, hãy cân nhắc mua giấy phép tạm thời qua [GroupDocs](https://purchase.groupdocs.com/temporary-license). Đối với môi trường sản xuất, nên sử dụng giấy phép đầy đủ.
 
-## How to Set Up GroupDocs.Editor for Java
+## Cách thiết lập GroupDocs.Editor cho Java
 
-### Installation via Maven
+### Cài đặt qua Maven
 Thêm kho lưu trữ và đoạn phụ thuộc đã hiển thị ở trên vào `pom.xml` của bạn. Maven sẽ tự động tải các binary mới nhất.
 
-### Direct Download Installation
-Nếu bạn không muốn sử dụng Maven, truy cập [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) và tải các tệp JAR. Đặt chúng vào thư mục `libs` của dự án và thêm vào đường dẫn biên dịch.
+### Cài đặt tải xuống trực tiếp
+Nếu bạn không muốn sử dụng Maven, truy cập vào [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) và tải các tệp JAR. Đặt chúng vào thư mục `libs` của dự án và thêm vào đường dẫn biên dịch.
 
-### Basic Initialization (How to load word)
-Sau khi thư viện đã có trong classpath, bạn có thể khởi tạo lớp `Editor` với đường dẫn tài liệu:
+### Khởi tạo cơ bản (How to load word)
+`Editor` là lớp điểm vào cung cấp các phương thức để tải, chỉnh sửa và chuyển đổi tài liệu Word. Sau khi thư viện đã có trong classpath, bạn có thể khởi tạo lớp `Editor` với một đường dẫn tài liệu:
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -87,14 +122,14 @@ import com.groupdocs.editor.options.WordProcessingLoadOptions;
 editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx", new WordProcessingLoadOptions());
 ```
 
-`WordProcessingLoadOptions` cho phép bạn chỉ định mật khẩu, mã hoá và các tham số khác ảnh hưởng đến việc **how to load word** các tệp một cách an toàn.
+`WordProcessingLoadOptions` cho phép bạn chỉ định mật khẩu, mã hoá và các tham số khác ảnh hưởng đến việc **how to load word** tệp một cách an toàn.
 
-## Implementation Guide
+## Hướng dẫn triển khai
 
-### Loading a Word Document with Custom Options (how to load word)
+### Tải tài liệu Word với tùy chọn tùy chỉnh (how to load word)
 
 **Bước 1 – Tạo tùy chọn tải**  
-Cấu hình `WordProcessingLoadOptions` phù hợp với kịch bản của bạn (ví dụ: tệp được bảo vệ bằng mật khẩu).
+`WordProcessingLoadOptions` là một đối tượng cấu hình xác định cách tài liệu được phân tích (ví dụ: xử lý mật khẩu, mã hoá). Cấu hình nó phù hợp với kịch bản của bạn:
 
 ```java
 import com.groupdocs.editor.options.WordProcessingLoadOptions;
@@ -104,7 +139,7 @@ WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 ```
 
 **Bước 2 – Khởi tạo Editor**  
-Chuyển các tùy chọn tải khi tạo đối tượng `Editor`.
+Chuyển các tùy chọn tải khi tạo thể hiện `Editor`. Lớp `Editor` điều phối toàn bộ quy trình làm việc.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -112,10 +147,10 @@ import com.groupdocs.editor.Editor;
 editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx", loadOptions);
 ```
 
-### Editing Document and Retrieving Embedded HTML Content (edit docx java, how to retrieve html)
+### Chỉnh sửa tài liệu và truy xuất nội dung HTML nhúng (edit docx java, how to retrieve html)
 
 **Bước 3 – Mở tài liệu để chỉnh sửa**  
-Sử dụng phương thức `edit()` cùng với `WordProcessingEditOptions` để nhận được một biểu diễn có thể chỉnh sửa.
+`EditableDocument` là đại diện trong bộ nhớ của một tệp Word mà bạn có thể sửa đổi. Sử dụng phương thức `edit()` cùng với `WordProcessingEditOptions` để nhận một đại diện có thể chỉnh sửa:
 
 ```java
 import com.groupdocs.editor.EditableDocument;
@@ -125,7 +160,7 @@ EditableDocument document = editor.edit(new WordProcessingEditOptions());
 ```
 
 **Bước 4 – Trích xuất HTML (convert docx to html)**  
-`EditableDocument` cung cấp HTML nhúng, được mã hoá Base64 để bảo mật.
+`EditableDocument` cung cấp HTML nhúng, được mã hoá Base64 để bảo mật. Lấy nó bằng `getEmbeddedHtml()`:
 
 ```java
 String embeddedHtmlContent = document.getEmbeddedHtml();
@@ -133,41 +168,45 @@ String embeddedHtmlContent = document.getEmbeddedHtml();
 
 Bây giờ bạn có thể giải mã chuỗi Base64 và nhúng HTML vào trang web, cho phép các quy trình **java document automation** như tạo báo cáo động. Đây cũng là cách đơn giản nhất để **extract html from docx** mà không cần viết bộ phân tích tùy chỉnh.
 
-#### Troubleshooting Tips
-- Kiểm tra đường dẫn tệp đúng và ứng dụng có quyền đọc.  
+#### Mẹo khắc phục sự cố
+- Xác minh đường dẫn tệp đúng và ứng dụng có quyền đọc.  
 - Nếu tài liệu được bảo vệ bằng mật khẩu, đặt mật khẩu trên `WordProcessingLoadOptions`.  
-- Đối với các tệp rất lớn, theo dõi việc sử dụng bộ nhớ và cân nhắc streaming đầu ra.  
+- Đối với các tệp rất lớn, giám sát việc sử dụng bộ nhớ và cân nhắc streaming đầu ra.  
 
-## Practical Applications (java document automation)
+## Ứng dụng thực tiễn (java document automation)
 
 GroupDocs.Editor tỏa sáng trong các kịch bản thực tế:
 
 - **Chuyển đổi tài liệu tự động** – Chuyển đổi các tệp DOCX sang HTML để xuất bản trên web.  
 - **Hệ thống quản lý nội dung** – Cho phép biên tập viên tải lên tệp Word, chỉnh sửa ngay tại chỗ và lưu HTML kết quả.  
-- **Nền tảng cộng tác** – Cho phép người dùng chia sẻ, chỉnh sửa và xem tài liệu Word mà không rời khỏi ứng dụng.  
+- **Nền tảng hợp tác** – Cho phép người dùng chia sẻ, chỉnh sửa và xem tài liệu Word mà không rời khỏi ứng dụng.  
 
-## Performance Considerations
+## Các cân nhắc về hiệu năng
 
 - **Quản lý bộ nhớ** – Tài liệu lớn có thể tiêu tốn không gian heap đáng kể; điều chỉnh các tùy chọn JVM cho phù hợp.  
-- **Tối ưu hoá tùy chọn tải** – Tắt các tính năng không cần thiết (ví dụ: trích xuất hình ảnh) để tăng tốc độ tải.  
-- **Thu gom rác** – Giải phóng các tham chiếu `EditableDocument` ngay sau khi sử dụng.
+- **Tối ưu hoá tùy chọn tải** – Tắt các tính năng không cần thiết (ví dụ: trích xuất hình ảnh) để tăng tốc tải.  
+- **Thu gom rác** – Giải phóng các tham chiếu `EditableDocument` ngay sau khi sử dụng.  
 
-## Common Issues and Solutions
+## Các vấn đề thường gặp và giải pháp
 
 | Vấn đề | Nguyên nhân | Giải pháp |
-|-------|-------|----------|
-| `FileNotFoundException` | Đường dẫn tệp sai hoặc thiếu quyền đọc | Kiểm tra lại đường dẫn tuyệt đối/định tương và đảm bảo tiến trình có quyền truy cập hệ thống tệp. |
+|-------|-------------|----------|
+| `FileNotFoundException` | Đường dẫn tệp sai hoặc thiếu quyền đọc | Kiểm tra lại đường dẫn tuyệt đối/độ tương đối và đảm bảo tiến trình có quyền truy cập hệ thống tệp. |
 | `PasswordRequiredException` | Tài liệu được bảo vệ bằng mật khẩu nhưng không cung cấp mật khẩu | Đặt `loadOptions.setPassword("yourPassword")` trước khi khởi tạo `Editor`. |
-| Out‑of‑Memory for large DOCX | Tải toàn bộ tài liệu vào heap | Tăng cờ JVM `-Xmx` hoặc xử lý tài liệu theo từng phần bằng các API streaming. |
-| HTML appears garbled | Base64 chưa được giải mã trước khi hiển thị | Sử dụng `java.util.Base64.getDecoder().decode(embeddedHtmlContent)` trước khi chèn vào trang. |
+| Thiếu bộ nhớ khi xử lý DOCX lớn | Tải toàn bộ tài liệu vào heap | Tăng cờ `-Xmx` của JVM hoặc xử lý tài liệu theo từng phần bằng API streaming. |
+| HTML hiển thị lỗi | Base64 chưa được giải mã trước khi hiển thị | Sử dụng `java.util.Base64.getDecoder().decode(embeddedHtmlContent)` trước khi chèn vào trang. |
 
-## Frequently Asked Questions (FAQ)
+## Cách chuyển đổi DOCX sang HTML?
 
-**Q1: GroupDocs.Editor có tương thích với tất cả các định dạng Word không?**  
+Tải DOCX của bạn bằng `new Editor(new File("sample.docx"), loadOptions)`, gọi `editableDocument.getEmbeddedHtml()`, giải mã chuỗi Base64 và nhúng kết quả vào trang web của bạn. Mẫu hai bước này tự động xử lý bảng, hình ảnh và kiểu dáng, cung cấp một bản đại diện HTML chính xác mà không cần Microsoft Word trên máy chủ.
+
+## Câu hỏi thường gặp (FAQ)
+
+**Q1: GroupDocs.Editor có tương thích với mọi định dạng Word không?**  
 A1: Có, nó hỗ trợ DOCX, DOC và nhiều định dạng legacy. Xem [API reference](https://reference.groupdocs.com/editor/java/) để biết chi tiết.
 
 **Q2: GroupDocs.Editor xử lý tài liệu lớn như thế nào?**  
-A2: Hiệu năng phụ thuộc vào kích thước tài liệu. Sử dụng `LoadOptions` được tối ưu và theo dõi việc sử dụng bộ nhớ để duy trì độ phản hồi.
+A2: Hiệu năng phụ thuộc vào kích thước tài liệu. Sử dụng `LoadOptions` được tối ưu và giám sát việc sử dụng bộ nhớ để duy trì độ phản hồi; thư viện có thể xử lý các tệp lên tới 500 MB mà không cần tải toàn bộ vào bộ nhớ.
 
 **Q3: Tôi có thể tích hợp GroupDocs.Editor vào các ứng dụng Java hiện có không?**  
 A3: Chắc chắn. Thư viện hoạt động với Maven, Gradle hoặc bao gồm JAR trực tiếp, giúp việc tích hợp trở nên đơn giản.
@@ -179,22 +218,28 @@ A4: Cần một Java Development Kit (JDK) phiên bản 8 hoặc mới hơn.
 A5: Kiểm tra lại đường dẫn tệp, quyền truy cập và bất kỳ cài đặt mật khẩu nào trong `LoadOptions`. Ghi log stack trace của ngoại lệ thường tiết lộ nguyên nhân gốc.
 
 **Q6: Có cách nào chuyển đổi tài liệu Word trực tiếp sang HTML mà không cần trích xuất HTML nhúng không?**  
-A6: Có, bạn có thể dùng `WordProcessingEditOptions` kết hợp với `EditableDocument.save()` để tạo tệp HTML, nhưng việc trích xuất HTML nhúng thường nhanh hơn cho các kịch bản web.
+A6: Có, bạn có thể dùng `WordProcessingEditOptions` cùng với `EditableDocument.save()` để tạo tệp HTML, nhưng việc trích xuất HTML nhúng thường nhanh hơn cho các kịch bản web.
 
 **Q7: GroupDocs.Editor có hỗ trợ chỉnh sửa bảng và hình ảnh trong DOCX không?**  
-A7: Có. Mô hình `EditableDocument` cung cấp cho bạn quyền truy cập lập trình vào bảng, hình ảnh, header, footer và hơn thế nữa.
+A7: Có. Mô hình `EditableDocument` cung cấp quyền truy cập lập trình vào bảng, hình ảnh, header, footer và hơn thế nữa.
 
-## Conclusion
+## Kết luận
 
-Bạn giờ đã có một cái nhìn toàn diện, từng bước về **how to load word** tài liệu trong Java bằng GroupDocs.Editor, cách chỉnh sửa chúng, và cách **convert docx to html** để tích hợp web liền mạch. Bằng cách tận dụng API mạnh mẽ của thư viện, bạn có thể tự động hoá quy trình tài liệu, làm phong phú các nền tảng CMS và cung cấp nội dung động với ít nỗ lực.
+Bạn hiện đã có một cái nhìn toàn diện, từng bước về **how to load word** tài liệu trong Java bằng GroupDocs.Editor, cách chỉnh sửa chúng, và cách **convert docx to html** để tích hợp web liền mạch. Bằng cách tận dụng API mạnh mẽ của thư viện, bạn có thể tự động hoá quy trình tài liệu, làm giàu các nền tảng CMS, và cung cấp nội dung động với ít nỗ lực.
 
-**Next Steps**
+**Các bước tiếp theo**
 - Thử nghiệm các `WordProcessingEditOptions` khác nhau để tùy chỉnh hành vi chỉnh sửa.  
-- Khám phá toàn bộ [GroupDocs documentation](https://docs.groupdocs.com/editor/java/) để biết các tính năng nâng cao như theo dõi thay đổi, bình luận và định dạng tùy chỉnh.  
+- Khám phá toàn bộ [GroupDocs documentation](https://docs.groupdocs.com/editor/java/) để biết các tính năng nâng cao như theo dõi thay đổi, bình luận và tùy chỉnh kiểu dáng.  
 - Triển khai xử lý lỗi và ghi log mạnh mẽ để làm cho tự động hoá của bạn sẵn sàng cho môi trường sản xuất.
 
 ---
 
-**Cập nhật lần cuối:** 2026-02-19  
+**Cập nhật lần cuối:** 2026-07-20  
 **Kiểm tra với:** GroupDocs.Editor 25.3 for Java  
 **Tác giả:** GroupDocs
+
+## Hướng dẫn liên quan
+
+- [Tải tài liệu Word Java với GroupDocs.Editor – Hướng dẫn toàn diện](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
+- [Cách trích xuất tài nguyên từ tài liệu Word – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
+- [html sang docx java – Chuyển đổi HTML sang DOCX với GroupDocs.Editor](/editor/java/document-saving/convert-html-docx-groupdocs-java-guide/)

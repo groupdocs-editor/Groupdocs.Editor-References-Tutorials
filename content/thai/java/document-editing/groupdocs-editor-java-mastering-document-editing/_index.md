@@ -1,36 +1,102 @@
 ---
-date: '2026-02-19'
-description: เรียนรู้วิธีโหลดไฟล์ข้อความใน Java, แทนที่ข้อความในเอกสาร, และตัดช่องว่างส่วนท้ายโดยใช้
-  GroupDocs.Editor สำหรับ Java. เหมาะสำหรับการประมวลผลไฟล์ขนาดใหญ่ใน Java.
+date: '2026-07-20'
+description: เรียนรู้วิธี load text file java, replace text in document, และ trim
+  trailing spaces ด้วย GroupDocs.Editor for Java. เหมาะสำหรับ processing large files
+  java.
 keywords:
+- load text file java
+- trim trailing spaces java
+- replace text java
+- process large documents java
 - GroupDocs.Editor for Java
-- document editing in Java
-- Java text editing library
-title: 'โหลดไฟล์ข้อความใน Java: การแก้ไขเอกสารขั้นสูงด้วย GroupDocs.Editor'
+lastmod: '2026-07-20'
+og_description: Load text file java อย่างรวดเร็วด้วย GroupDocs.Editor for Java. เรียนรู้การ
+  replace text, trim trailing spaces, และ process large documents อย่างมีประสิทธิภาพ.
+og_image_alt: 'Guide: Load and edit text files in Java with GroupDocs.Editor'
+og_title: Load Text File Java — การแก้ไขเอกสารขั้นสูงด้วย GroupDocs.Editor
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-20'
+  description: Learn how to load text file java, replace text in document, and trim
+    trailing spaces using GroupDocs.Editor for Java. Ideal for processing large files
+    java.
+  headline: 'Load Text File Java: Master Document Editing with GroupDocs.Editor'
+  type: TechArticle
+- description: Learn how to load text file java, replace text in document, and trim
+    trailing spaces using GroupDocs.Editor for Java. Ideal for processing large files
+    java.
+  name: 'Load Text File Java: Master Document Editing with GroupDocs.Editor'
+  steps:
+  - name: Create an Editor Instance
+    text: 'The `Editor` class is the entry point for loading and editing documents
+      in GroupDocs.Editor. It represents a single source file and provides methods
+      to load, edit, and save content. *Explanation*: Instantiating `Editor` with
+      the file path prepares the library to read the file using the default (or s'
+  - name: Configure Text Editing Options
+    text: '`TextEditOptions` defines how the raw text is interpreted, including encoding
+      and whitespace handling. Setting UTF‑8 ensures all Unicode characters are preserved,
+      while trimming trailing spaces cleans up the document. *Explanation*: These
+      options tell GroupDocs.Editor how to interpret the text. Sett'
+  - name: Edit the Document
+    text: '`EditableDocument` represents the in‑memory editable version of the loaded
+      text. It exposes methods for searching, replacing, and inserting text. *Explanation*:
+      The `edit` call returns an `EditableDocument` that reflects the applied options,
+      ready for content manipulation.'
+  - name: Modify Text Content
+    text: 'The `replace` method performs find‑and‑replace operations on the document
+      content while preserving layout. You can chain multiple replacements, apply
+      regular‑expression patterns, or inject new sections as required. *Explanation*:
+      This simple example **replace text in document**. You can chain multip'
+  type: HowTo
+- questions:
+  - answer: Absolutely. The library is stateless and can be called from any Java‑based
+      service.
+    question: Can I use GroupDocs.Editor in a microservice architecture?
+  - answer: Use the `EditableDocument.replace` method; formatting is retained unless
+      you explicitly modify it.
+    question: How do I replace text in document while preserving formatting?
+  - answer: Loop over file paths, create an `Editor` for each, and apply the same
+      `TextEditOptions`. Remember to release resources after each iteration.
+    question: Is there a way to batch‑process multiple files?
+  - answer: Java 8 or newer is supported.
+    question: What Java version is required?
+  - answer: Call `EditableDocument.save()` with an `OutputStream` to keep the result
+      in memory.
+    question: How can I test my edits without writing to disk?
+  type: FAQPage
+tags:
+- load text file
+- GroupDocs.Editor
+- Java document editing
+- batch edit text files
+- large file processing
+title: 'Load Text File Java: การแก้ไขเอกสารขั้นสูงด้วย GroupDocs.Editor'
 type: docs
 url: /th/java/document-editing/groupdocs-editor-java-mastering-document-editing/
 weight: 1
 ---
 
-# โหลดไฟล์ข้อความ Java: การแก้ไขเอกสารขั้นสูงด้วย GroupDocs.Editor
+# โหลดไฟล์ข้อความ Java: การแก้ไขเอกสารหลักด้วย GroupDocs.Editor
 
-การทำงานอัตโนมัติในการจัดการเอกสารด้วย Java มักเริ่มจากความต้องการ **load text file java** อย่างรวดเร็วและแก้ไขเนื้อหาได้อย่างเชื่อถือ ไม่ว่าคุณจะอัปเดตไฟล์การกำหนดค่า ทำความสะอาดข้อมูลบันทึก หรือแปลงรายงานข้อความธรรมดา GroupDocs.Editor จะมอบ API ที่แข็งแกร่งเพื่อจัดการงานเหล่านี้ ในคู่มือนี้คุณจะได้เรียนรู้วิธีโหลดไฟล์ข้อความ, แทนที่ข้อความในเอกสาร, ตั้งค่าเข้ารหัส UTF‑8, ตัดช่องว่างส่วนท้าย, และแม้กระทั่งประมวลผลไฟล์ขนาดใหญ่ java อย่างมีประสิทธิภาพ.
+การทำงานอัตโนมัติกับเอกสารใน Java มักเริ่มจากความต้องการ **load text file java** อย่างรวดเร็วและแก้ไขเนื้อหาได้อย่างเชื่อถือ ไม่ว่าจะเป็นการอัปเดตไฟล์กำหนดค่า, ทำความสะอาดข้อมูลบันทึก, หรือแปลงรายงานข้อความธรรมดา, GroupDocs.Editor มอบ API ที่แข็งแกร่งเพื่อจัดการงานเหล่านี้ ในคู่มือนี้คุณจะได้เรียนรู้วิธีโหลดไฟล์ข้อความ, แทนที่ข้อความในเอกสาร, ตั้งค่าเข้ารหัส UTF‑8, ตัดช่องว่างท้ายบรรทัด, และแม้กระทั่งประมวลผลไฟล์ขนาดใหญ่ใน Java อย่างมีประสิทธิภาพ.
 
-## คำตอบอย่างรวดเร็ว
+## คำตอบด่วน
 - **ไลบรารีใดที่ทำให้การแก้ไขข้อความใน Java ง่ายขึ้น?** GroupDocs.Editor for Java.  
 - **ฉันจะโหลดไฟล์ข้อความได้อย่างไร?** ใช้คลาส `Editor` พร้อมเส้นทางไฟล์.  
-- **ฉันสามารถตั้งค่าเข้ารหัส UTF‑8 ได้หรือไม่?** ได้, ผ่าน `TextEditOptions.setEncoding(StandardCharsets.UTF_8)`.  
-- **ส่วนของช่องว่างส่วนท้ายล่ะ?** ตั้งค่า `TextTrailingSpacesOptions.Trim` เพื่อกำจัดมัน.  
-- **การจัดการไฟล์ขนาดใหญ่ได้รับการสนับสนุนหรือไม่?** ประมวลผลเอกสารเป็นชิ้นส่วนและปรับตั้งค่า heap ของ JVM.
+- **ฉันสามารถตั้งค่าเข้ารหัส UTF‑8 ได้หรือไม่?** ได้, โดยใช้ `TextEditOptions.setEncoding(StandardCharsets.UTF_8)`.  
+- **ส่วนของช่องว่างท้ายบรรทัดล่ะ?** กำหนดค่า `TextTrailingSpacesOptions.Trim` เพื่อเอาออก.  
+- **รองรับการจัดการไฟล์ขนาดใหญ่หรือไม่?** ประมวลผลเอกสารเป็นชิ้นส่วนและปรับการตั้งค่า heap ของ JVM.
 
 ## “load text file java” คืออะไร?
-การโหลดไฟล์ข้อความใน Java หมายถึงการอ่านไบต์ดิบของไฟล์, แปลความด้วยชุดอักขระที่ถูกต้อง, และเปิดเผยเนื้อหาเพื่อการจัดการแบบโปรแกรม GroupDocs.Editor จะสรุปขั้นตอนเหล่านี้ให้คุณสามารถมุ่งเน้นที่ตรรกะการแก้ไขได้
+การโหลดไฟล์ข้อความใน Java หมายถึงการอ่านไบต์ดิบของไฟล์, แปลความด้วยชุดอักขระที่ถูกต้อง, และเปิดเผยเนื้อหาเพื่อการจัดการโปรแกรม GroupDocs.Editor แยกขั้นตอนเหล่านี้ออก, ให้คุณมุ่งเน้นที่ตรรกะการแก้ไข มันจัดการการลงท้ายบรรทัด, ตรวจจับการเข้ารหัสอัตโนมัติเมื่อเป็นไปได้, และให้ API ที่สะอาดสำหรับการปรับเปลี่ยนต่อไป
 
 ## ทำไมต้องใช้ GroupDocs.Editor สำหรับ Java?
-- **การสนับสนุนรูปแบบที่หลากหลาย** – ทำงานกับ TXT, DOCX, PDF และรูปแบบอื่น ๆ อีกมาก  
-- **การจัดการการเข้ารหัสในตัว** – รับประกันการประมวลผล Unicode ที่ถูกต้อง  
-- **ตัวเลือกการจัดรูปแบบขั้นสูง** – จำแนกรายการ, จัดการช่องว่างส่วนต้น/ส่วนท้าย, และรักษาเค้าโครง  
-- **ประสิทธิภาพที่ปรับขนาดได้** – ออกแบบให้จัดการเอกสารขนาดใหญ่เมื่อคุณกำหนดค่าหน่วยความจำและการประมวลผลเป็นชิ้นส่วน  
+GroupDocs.Editor for Java มีโซลูชันครบวงจรสำหรับจัดการรูปแบบเอกสารที่หลากหลาย, ทำให้การประมวลผลข้อความ, การจัดการการเข้ารหัส, และการเพิ่มประสิทธิภาพการทำงานเป็นไปอย่างเชื่อถือ มันทำให้ภาระการแก้ไขที่ซับซ้อนง่ายขึ้น, ลดความพยายามในการพัฒนา, และรองรับการดำเนินงานขนาดใหญ่, ทำให้เหมาะกับแอปพลิเคชันระดับองค์กร
+
+- **Broad format support** – ทำงานกับรูปแบบเข้าและออกกว่า 30 แบบ, รวมถึง TXT, DOCX, PDF, และ HTML.  
+- **Built‑in encoding handling** – รับประกันการประมวลผล Unicode ที่ถูกต้อง, โดยเฉพาะ UTF‑8.  
+- **Advanced formatting options** – จดจำรายการ, จัดการช่องว่างนำ/ตาม, และรักษาเค้าโครง.  
+- **Scalable performance** – ออกแบบให้จัดการเอกสารขนาดสูงสุด 500 MB เมื่อเปิดใช้งานการประมวลผลเป็นชิ้นส่วนและกำหนดค่าเมโมรี JVM.
 
 ## ข้อกำหนดเบื้องต้น
 - **Java Development Kit (JDK)** 8 หรือสูงกว่า.  
@@ -41,7 +107,7 @@ weight: 1
 ## การตั้งค่า GroupDocs.Editor สำหรับ Java
 
 ### การกำหนดค่า Maven
-หากคุณต้องการใช้ Maven ให้เพิ่ม repository และ dependency ลงในไฟล์ `pom.xml` ของคุณ:
+หากคุณต้องการใช้ Maven, เพิ่ม repository และ dependency ลงในไฟล์ `pom.xml` ของคุณ:
 
 ```xml
 <repositories>
@@ -66,24 +132,32 @@ weight: 1
 
 ### การรับใบอนุญาต
 คุณสามารถเริ่มต้นด้วยการทดลองใช้ฟรีเพื่อประเมินไลบรารี สำหรับการใช้งานในสภาพแวดล้อมจริง:
-- รับใบอนุญาตชั่วคราวสำหรับการประเมิน: [Temporary License](https://purchase.groupdocs.com/temporary-license).  
+
+- รับใบอนุญาตชั่วคราวเพื่อการประเมิน: [Temporary License](https://purchase.groupdocs.com/temporary-license).  
 - ซื้อใบอนุญาตเต็มจาก [GroupDocs website](https://purchase.groupdocs.com/).
 
-วางไฟล์ใบอนุญาตในโปรเจคของคุณตามที่อธิบายในเอกสารอย่างเป็นทางการ.
+วางไฟล์ใบอนุญาตในโปรเจกต์ของคุณตามที่อธิบายในเอกสารอย่างเป็นทางการ.
+
+หากต้องการความช่วยเหลือเพิ่มเติม, เยี่ยมชม [Support Forum](https://forum.groupdocs.com/c/editor/).
 
 ## คู่มือการใช้งาน
 
 ### วิธีโหลดไฟล์ข้อความ java ด้วย GroupDocs.Editor
+การโหลดไฟล์ข้อความด้วย GroupDocs.Editor เป็นกระบวนการสามขั้นตอนที่คุณทำได้ภายในไม่กี่วินาที ขั้นแรกคุณสร้างอินสแตนซ์ `Editor` ชี้ไปที่เส้นทางไฟล์ จากนั้นกำหนดค่า `TextEditOptions` เพื่อระบุการเข้ารหัสและพฤติกรรมการตัดท้ายบรรทัด สุดท้ายเรียกเมธอด `edit` เพื่อรับ `EditableDocument` ที่สามารถจัดการได้โดยโปรแกรม
 
 #### ขั้นตอนที่ 1: สร้างอินสแตนซ์ Editor
+คลาส `Editor` เป็นจุดเริ่มต้นสำหรับการโหลดและแก้ไขเอกสารใน GroupDocs.Editor มันแทนไฟล์ต้นฉบับเดียวและให้เมธอดสำหรับโหลด, แก้ไข, และบันทึกเนื้อหา.
+
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.txt";
 Editor editor = new Editor(inputFilePath);
 ```
 
-*คำอธิบาย*: การสร้างอินสแตนซ์ `Editor` ด้วยเส้นทางไฟล์ทำให้ไลบรารีพร้อมอ่านไฟล์โดยใช้การเข้ารหัสเริ่มต้น (หรือที่ระบุ).
+*Explanation*: การสร้างอินสแตนซ์ `Editor` ด้วยเส้นทางไฟล์ทำให้ไลบรารีเตรียมพร้อมอ่านไฟล์โดยใช้การเข้ารหัสเริ่มต้น (หรือที่ระบุ).
 
 #### ขั้นตอนที่ 2: กำหนดค่าตัวเลือกการแก้ไขข้อความ
+`TextEditOptions` กำหนดวิธีการตีความข้อความดิบ, รวมถึงการเข้ารหัสและการจัดการช่องว่าง การตั้งค่า UTF‑8 ทำให้ตัวอักษร Unicode ทั้งหมดถูกเก็บไว้, ส่วนการตัดช่องว่างท้ายบรรทัดทำความสะอาดเอกสาร.
+
 ```java
 TextEditOptions editOptions = new TextEditOptions();
 editOptions.setEncoding(StandardCharsets.UTF_8); // set utf-8 encoding
@@ -92,87 +166,98 @@ editOptions.setLeadingSpaces(TextLeadingSpacesOptions.ConvertToIndent);
 editOptions.setTrailingSpaces(TextTrailingSpacesOptions.Trim); // trim trailing spaces
 ```
 
-*คำอธิบาย*: ตัวเลือกเหล่านี้บอก GroupDocs.Editor ว่าจะตีความข้อความอย่างไร การตั้งค่า UTF‑8 ทำให้แน่ใจว่าตัวอักษร Unicode ทั้งหมดถูกเก็บไว้, ในขณะที่การตัดช่องว่างส่วนท้ายทำความสะอาดเอกสาร.
+*Explanation*: ตัวเลือกเหล่านี้บอก GroupDocs.Editor ว่าจะตีความข้อความอย่างไร การตั้งค่า UTF‑8 ทำให้ตัวอักษร Unicode ทั้งหมดถูกเก็บไว้, ส่วนการตัดช่องว่างท้ายบรรทัดทำความสะอาดเอกสาร.
 
 #### ขั้นตอนที่ 3: แก้ไขเอกสาร
+`EditableDocument` แสดงเวอร์ชันที่แก้ไขได้ในหน่วยความจำของข้อความที่โหลด มันเปิดเผยเมธอดสำหรับการค้นหา, แทนที่, และแทรกข้อความ.
+
 ```java
 EditableDocument beforeEdit = editor.edit(editOptions);
 ```
 
-*คำอธิบาย*: การเรียก `edit` จะคืนค่า `EditableDocument` ที่สะท้อนตัวเลือกที่ใช้แล้ว พร้อมสำหรับการจัดการเนื้อหา.
+*Explanation*: การเรียก `edit` จะคืนค่า `EditableDocument` ที่สะท้อนตัวเลือกที่กำหนด, พร้อมสำหรับการจัดการเนื้อหา.
 
 #### ขั้นตอนที่ 4: แก้ไขเนื้อหาข้อความ
+เมธอด `replace` ทำการค้นหาและแทนที่ในเนื้อหาเอกสารพร้อมรักษาเค้าโครง คุณสามารถเชื่อมต่อการแทนที่หลายครั้ง, ใช้รูปแบบ regular‑expression, หรือแทรกส่วนใหม่ตามต้องการ.
+
 ```java
 String originalTextContent = beforeEdit.getContent();
 String updatedTextContent = originalTextContent.replace("text", "updated text");
 ```
 
-*คำอธิบาย*: ตัวอย่างง่ายนี้ **replace text in document**. คุณสามารถเชื่อมต่อการแทนที่หลายรายการ, ใช้รูปแบบ regex, หรือแทรกส่วนใหม่ตามที่ต้องการ.
+*Explanation*: ตัวอย่างง่ายนี้ **replace text in document**. คุณสามารถเชื่อมต่อการแทนที่หลายครั้ง, ใช้รูปแบบ regex, หรือแทรกส่วนใหม่ตามต้องการ.
 
-### การประยุกต์ใช้งานจริง
-GroupDocs.Editor ส่องสว่างในสถานการณ์เช่น:
-- **การจัดการการกำหนดค่า** – ทำการอัปเดตไฟล์ `.properties` หรือ `.config` อย่างอัตโนมัติ.  
-- **การทำความสะอาดข้อมูล** – ลบช่องว่างที่ไม่ต้องการ, ปรับรูปแบบการขึ้นบรรทัดใหม่ให้เป็นมาตรฐาน, หรือกรองข้อมูลที่เป็นความลับ.  
-- **การแปลงเอกสาร** – แปลงรายงานข้อความธรรมดาเป็นรูปแบบที่มีความสมบูรณ์ (DOCX, PDF) หลังการแก้ไข.
+### การประยุกต์ใช้ในเชิงปฏิบัติ
+GroupDocs.Editor มีประสิทธิภาพในสถานการณ์เช่น:
 
-## ข้อควรพิจารณาด้านประสิทธิภาพสำหรับการประมวลผลไฟล์ขนาดใหญ่ Java
+- **Configuration Management** – ทำการอัปเดตไฟล์ `.properties` หรือ `.config` อัตโนมัติ.  
+- **Data Cleaning** – ลบช่องว่างที่ไม่ต้องการ, ปรับรูปแบบการลงท้ายบรรทัด, หรือกรองข้อมูลที่เป็นความลับ.  
+- **Document Transformation** – แปลงรายงานข้อความธรรมดาเป็นรูปแบบที่มีความสมบูรณ์ (DOCX, PDF) หลังจากแก้ไข.
+
+## พิจารณาด้านประสิทธิภาพสำหรับการประมวลผลไฟล์ขนาดใหญ่ใน Java
 เมื่อจัดการกับไฟล์ข้อความขนาดมหาศาล:
-- **การประมวลผลเป็นชิ้นส่วน** – อ่านและแก้ไขไฟล์เป็นส่วนย่อยเพื่อรักษาการใช้หน่วยความจำน้อย.  
-- **การปรับจูน JVM** – เพิ่มขนาด heap (`-Xmx2g` หรือมากกว่า) หากต้องโหลดไฟล์ทั้งหมด.  
-- **StringBuilder** – ใช้บัฟเฟอร์ที่เปลี่ยนแปลงได้สำหรับการจัดการข้อความอย่างหนักเพื่อลดภาระ.
 
-การปฏิบัติตามเคล็ดลับเหล่านี้จะช่วยให้คุณ **process large files java** โดยไม่เจอข้อผิดพลาด OutOfMemory.
+- **Chunk Processing** – อ่านและแก้ไขไฟล์เป็นส่วนย่อยเพื่อรักษาการใช้หน่วยความจำน้อย.  
+- **JVM Tuning** – เพิ่มขนาด heap (`-Xmx2g` หรือสูงกว่า) หากต้องโหลดไฟล์ทั้งหมด.  
+- **StringBuilder** – ใช้บัฟเฟอร์ที่เปลี่ยนแปลงได้สำหรับการจัดการข้อความหนักเพื่อ ลดภาระ.
+
+การปฏิบัติตามเคล็ดลับเหล่านี้ช่วยให้คุณ **process large files java** โดยไม่เจอข้อผิดพลาด OutOfMemory.
 
 ## ปัญหาทั่วไปและวิธีแก้
 
 | ปัญหา | วิธีแก้ |
 |-------|----------|
-| **อักขระไม่ถูกต้องหลังการโหลด** | ตรวจสอบว่าได้ใช้ `setEncoding(StandardCharsets.UTF_8)` หรือระบุ charset ที่ถูกต้องสำหรับไฟล์ต้นทางของคุณ. |
-| **ช่องว่างส่วนท้ายไม่ถูกลบ** | ตรวจสอบว่าได้ตั้งค่า `TextTrailingSpacesOptions.Trim`; นอกจากนี้ตรวจสอบว่าไฟล์ต้นทางไม่มีอักขระช่องว่างที่ไม่เป็นมาตรฐาน. |
-| **ประสิทธิภาพช้าลงบนไฟล์ >100 MB** | เปลี่ยนไปใช้การประมวลผลเป็นชิ้นส่วนและเพิ่มขนาด heap ของ JVM ตามที่อธิบายข้างต้น. |
-| **ไม่พบใบอนุญาต** | วางไฟล์ `.lic` ไว้ที่รากของ classpath หรือกำหนดค่า `License.setLicense("path/to/license.lic")` ก่อนสร้าง `Editor`. |
+| **Incorrect characters after loading** | ตรวจสอบว่าได้ใช้ `setEncoding(StandardCharsets.UTF_8)` หรือระบุ charset ที่ถูกต้องสำหรับไฟล์ต้นฉบับ. |
+| **Trailing spaces not removed** | ตรวจสอบว่าได้ตั้งค่า `TextTrailingSpacesOptions.Trim`; นอกจากนี้ตรวจสอบว่าไฟล์ต้นฉบับไม่มีอักขระช่องว่างที่ไม่เป็นมาตรฐาน. |
+| **Performance slowdown on >100 MB files** | เปลี่ยนเป็นการประมวลผลเป็นชิ้นส่วนและเพิ่ม heap ของ JVM ตามที่อธิบายข้างต้น. |
+| **License not recognized** | วางไฟล์ `.lic` ไว้ที่รูทของ classpath หรือกำหนด `License.setLicense("path/to/license.lic")` ก่อนสร้าง `Editor`. |
 
 ## ส่วนคำถามที่พบบ่อย
-1. **GroupDocs.Editor จัดการไฟล์ขนาดใหญ่อย่างไร?**  
-   - มันประมวลผลเอกสารอย่างมีประสิทธิภาพ, แต่ควรพิจารณาการประมวลผลเป็นชิ้นส่วนสำหรับไฟล์ที่ใหญ่มากเพื่อเพิ่มประสิทธิภาพ.  
-2. **GroupDocs.Editor รองรับรูปแบบข้อความทั้งหมดหรือไม่?**  
-   - แม้ว่าจะรองรับหลายรูปแบบ, ควรตรวจสอบประเภทไฟล์ของคุณในเอกสาร.  
-3. **ฉันสามารถรวม GroupDocs.Editor กับโซลูชันจัดเก็บข้อมูลบนคลาวด์ได้หรือไม่?**  
-   - ได้, คุณสามารถสตรีมเอกสารจากคลาวด์โดยตรงเข้าสู่ GroupDocs.Editor เพื่อประมวลผล.  
-4. **ปัญหาทั่วไปที่พบเมื่อใช้ GroupDocs.Editor มีอะไรบ้าง?**  
-   - ตรวจสอบเวอร์ชันและการกำหนดค่าของไลบรารีให้ถูกต้อง; หากต้องการความช่วยเหลือให้ดูที่ฟอรั่มสนับสนุน: [Support Forum](https://forum.groupdocs.com/c/editor/).  
-5. **GroupDocs.Editor ต้องการใบอนุญาตสำหรับทุกฟีเจอร์หรือไม่?**  
-   - มีการทดลองใช้ฟรี, แต่การใช้งานเต็มรูปแบบต้องมีใบอนุญาตที่ถูกต้อง.
+
+| ปัญหา | วิธีแก้ |
+|-------|----------|
+| **Incorrect characters after loading** | ตรวจสอบว่าได้ใช้ `setEncoding(StandardCharsets.UTF_8)` หรือระบุ charset ที่ถูกต้องสำหรับไฟล์ต้นฉบับ. |
+| **Trailing spaces not removed** | ตรวจสอบว่าได้ตั้งค่า `TextTrailingSpacesOptions.Trim`; นอกจากนี้ตรวจสอบว่าไฟล์ต้นฉบับไม่มีอักขระช่องว่างที่ไม่เป็นมาตรฐาน. |
+| **Performance slowdown on >100 MB files** | เปลี่ยนเป็นการประมวลผลเป็นชิ้นส่วนและเพิ่ม heap ของ JVM ตามที่อธิบายข้างต้น. |
+| **License not recognized** | วางไฟล์ `.lic` ไว้ที่รูทของ classpath หรือกำหนด `License.setLicense("path/to/license.lic")` ก่อนสร้าง `Editor`. |
 
 ## คำถามที่พบบ่อย
-**Q: ฉันสามารถใช้ GroupDocs.Editor ในสถาปัตยกรรมไมโครเซอร์วิสได้หรือไม่?**  
-A: แน่นอน. ไลบรารีเป็นแบบไม่มีสถานะและสามารถเรียกใช้จากบริการใด ๆ ที่ใช้ Java ได้.
 
-**Q: ฉันจะแทนที่ข้อความในเอกสารโดยคงรูปแบบไว้ได้อย่างไร?**  
-A: ใช้ API `EditableDocument` เพื่อแก้ไขเนื้อหา; รูปแบบจะถูกเก็บไว้ยกเว้นคุณเปลี่ยนแปลงโดยเจตนา.
+**Q: Can I use GroupDocs.Editor in a microservice architecture?**  
+A: Absolutely. The library is stateless and can be called from any Java‑based service.
 
-**Q: มีวิธีการประมวลผลหลายไฟล์เป็นชุดได้หรือไม่?**  
-A: วนลูปผ่านเส้นทางไฟล์, สร้าง `Editor` สำหรับแต่ละไฟล์, และใช้ `TextEditOptions` เดียวกัน. อย่าลืมปล่อยทรัพยากรหลังจากแต่ละรอบ.
+**Q: How do I replace text in document while preserving formatting?**  
+A: Use the `EditableDocument.replace` method; formatting is retained unless you explicitly modify it.
 
-**Q: ต้องการเวอร์ชัน Java ใด?**  
-A: รองรับ Java 8 หรือใหม่กว่า.
+**Q: Is there a way to batch‑process multiple files?**  
+A: Loop over file paths, create an `Editor` for each, and apply the same `TextEditOptions`. Remember to release resources after each iteration.
 
-**Q: ฉันจะทดสอบการแก้ไขของฉันโดยไม่ต้องเขียนลงดิสก์ได้อย่างไร?**  
-A: เรียก `EditableDocument.save()` พร้อม `OutputStream` เพื่อเก็บผลลัพธ์ในหน่วยความจำ.
+**Q: What Java version is required?**  
+A: Java 8 or newer is supported.
+
+**Q: How can I test my edits without writing to disk?**  
+A: Call `EditableDocument.save()` with an `OutputStream` to keep the result in memory.
 
 ## สรุป
-เราได้อธิบายวิธี **load text file java**, ตั้งค่าการเข้ารหัส UTF‑8, ตัดช่องว่างส่วนท้าย, และ **replace text in document** ด้วย GroupDocs.Editor สำหรับ Java. ด้วยการทำตามขั้นตอนและใช้เคล็ดลับด้านประสิทธิภาพ, คุณจะสามารถจัดการไฟล์การกำหนดค่าขนาดเล็กและบันทึกขนาดใหญ่ในแอปพลิเคชัน Java ของคุณได้อย่างมั่นใจ.
 
-**ขั้นตอนต่อไป**: สำรวจรูปแบบที่รองรับอื่น ๆ (DOCX, PDF), ทดลองคุณลักษณะการแก้ไขร่วมกัน, และรวมเวิร์กโฟลว์นี้เข้าสู่ pipeline CI/CD ของคุณเพื่ออัปเดตเอกสารอัตโนมัติ.
+เราได้อธิบายวิธี **load text file java**, ตั้งค่าเข้ารหัส UTF‑8, ตัดช่องว่างท้ายบรรทัด, และ **replace text in document** ด้วย GroupDocs.Editor for Java โดยทำตามขั้นตอนและเคล็ดลับด้านประสิทธิภาพ คุณจึงสามารถจัดการไฟล์กำหนดค่าขนาดเล็กและบันทึกขนาดใหญ่ในแอปพลิเคชัน Java ของคุณได้อย่างมั่นใจ
+
+**Next Steps:** สำรวจรูปแบบที่รองรับอื่น ๆ (DOCX, PDF), ทดลองฟีเจอร์การแก้ไขร่วมกัน, และผสานกระบวนการทำงานเข้าสู่ pipeline CI/CD ของคุณเพื่ออัปเดตเอกสารโดยอัตโนมัติ.
 
 ---
 
-**อัปเดตล่าสุด:** 2026-02-19  
-**ทดสอบด้วย:** GroupDocs.Editor 25.3 for Java  
-**ผู้เขียน:** GroupDocs  
+**Last Updated:** 2026-07-20  
+**Tested With:** GroupDocs.Editor 25.3 for Java  
+**Author:** GroupDocs  
 
-**แหล่งข้อมูล**
-- **เอกสาร**: ค้นหาเพิ่มเติมได้ที่ [GroupDocs Documentation](https://docs.groupdocs.com/editor/java/)  
-- **อ้างอิง API**: ศึกษารายละเอียดทางเทคนิคที่ [API Reference](https://reference.groupdocs.com/editor/java/)  
-- **ดาวน์โหลด GroupDocs.Editor**: รับเวอร์ชันล่าสุดจาก [here](https://releases.groupdocs.com/editor/java/).  
-- **ทดลองใช้ฟรีและการจัดการใบอนุญาต**: เริ่มต้นด้วยการทดลองหรือรับใบอนุญาตจาก [GroupDocs Purchase](https://purchase.groupdocs.com/temporary-license).
+**Resources**
+- **Documentation**: Explore more at [GroupDocs Documentation](https://docs.groupdocs.com/editor/java/)  
+- **API Reference**: Dive into technical details at [API Reference](https://reference.groupdocs.com/editor/java/)  
+- **Download GroupDocs.Editor**: Get the latest version from [here](https://releases.groupdocs.com/editor/java/).  
+- **Free Trial and Licensing**: Start with a trial or acquire a license from [GroupDocs Purchase](https://purchase.groupdocs.com/temporary-license).
+
+## บทแนะนำที่เกี่ยวข้อง
+
+- [How to Load Document Java with GroupDocs.Editor](/editor/java/document-loading/)
+- [Convert Document to HTML – Document Editing Tutorials for GroupDocs.Editor Java](/editor/java/document-editing/)
+- [Java Document Management using GroupDocs.Editor](/editor/java/advanced-features/groupdocs-editor-java-comprehensive-guide/)
