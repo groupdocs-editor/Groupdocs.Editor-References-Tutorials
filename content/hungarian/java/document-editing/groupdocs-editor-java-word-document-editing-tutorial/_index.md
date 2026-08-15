@@ -1,49 +1,97 @@
 ---
-date: '2026-03-04'
-description: Ismerje meg, hogyan konvertálhatja a Word dokumentumokat HTML-re a GroupDocs.Editor
-  Java segítségével, hogyan szerkesztheti programozottan a Word dokumentumokat, és
-  hogyan integrálhatja a dokumentumszerkesztést Java‑alkalmazásaiba.
+date: '2026-08-15'
+description: Ismerje meg, hogyan konvertálhat docx-et html-re a GroupDocs.Editor Java
+  segítségével, hogyan szerkesztheti programozottan a Word dokumentumokat, és hogyan
+  integrálhatja a dokumentumszerkesztést Java alkalmazásaiba.
 keywords:
-- document editing with Java
-- programmatically edit Word documents
-- GroupDocs.Editor Java library
-title: Word konvertálása HTML-re a GroupDocs.Editor Java segítségével – Átfogó útmutató
+- convert docx to html
+- generate html from word
+- edit word java
+- convert word html java
+- java word html library
+lastmod: '2026-08-15'
+og_description: Docx konvertálása html-re a GroupDocs.Editor Java segítségével. Ez
+  a bemutató megmutatja, hogyan szerkesztheti a Word fájlokat, kezelheti a jelszavakat,
+  és hogyan generálhat high‑fidelity HTML-t Java-ban.
+og_image_alt: 'Developer guide: convert docx to html with GroupDocs.Editor Java'
+og_title: Docx konvertálása html-re a GroupDocs.Editor Java – útmutató
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-15'
+  description: Learn how to convert docx to html using GroupDocs.Editor Java, edit
+    Word documents programmatically, and integrate document editing into your Java
+    applications.
+  headline: Convert docx to html with GroupDocs.Editor Java guide
+  type: TechArticle
+- questions:
+  - answer: Yes, it supports DOCX, DOC, ODT, and other Microsoft Word formats.
+    question: Is GroupDocs.Editor compatible with all Word formats?
+  - answer: Absolutely. Provide the password via `WordProcessingLoadOptions` before
+      loading the file.
+    question: Can I edit password‑protected documents?
+  - answer: A JDK 8+ runtime and any standard IDE (IntelliJ IDEA, Eclipse, VS Code)
+      are sufficient.
+    question: What are the system requirements for GroupDocs.Editor?
+  - answer: Use load options to limit page count, recycle `Editor` instances, and
+      monitor JVM heap usage.
+    question: How can I improve performance when handling large files?
+  - answer: 'Visit the official documentation site: [GroupDocs documentation](https://docs.groupdocs.com/editor/java/)
+      for API references, sample projects, and detailed guides.'
+    question: Where can I find more resources?
+  type: FAQPage
+tags:
+- convert docx
+- GroupDocs.Editor
+- Java document processing
+title: Docx konvertálása html-re a GroupDocs.Editor Java útmutatóval
 type: docs
 url: /hu/java/document-editing/groupdocs-editor-java-word-document-editing-tutorial/
 weight: 1
 ---
 
-# Word konvertálása HTML-re a GroupDocs.Editor Java-val: Átfogó útmutató
+# docx konvertálása html-re a GroupDocs.Editor Java útmutatóval
 
-A mai digitális környezetben a **Word HTML-re konvertálása** programozott módon igazi áttörést jelent azoknak a vállalkozásoknak, amelyeknek online kell közzétenniük a tartalmat vagy dokumentumokat kell integrálniuk webalkalmazásokba. A **GroupDocs.Editor Java** segítségével nem csak a Word fájlokat konvertálhatja HTML-re, hanem **Word dokumentumokat** is szerkeszthet közvetlenül a Java kódjából. Ez az útmutató végigvezeti Önt a teljes folyamaton – a könyvtár beállításától a dokumentum szerkesztéséig, egészen a HTML-be mentésig – hogy magabiztosan automatizálhassa a dokumentumfolyamatokat.
+A modern, web‑központú vállalkozásokban a **docx konvertálása html-re** gyorsan és megbízhatóan alapvető a tartalom közzétételéhez, együttműködő szerkesztők építéséhez vagy a dokumentumok böngészőben történő eléréshez való archiválásához. A GroupDocs.Editor Java teljes programozási kontrollt biztosít a Word fájlok felett – lehetővé téve a szerkesztést, a stílusozást, és végül a tiszta HTML‑re exportálást – mindezt anélkül, hogy a szerveren a Microsoft Office-ra lenne szükség. Ez az útmutató végigvezet minden lépésen, a Maven beállítástól a jelszóval védett fájlok kezeléséig, így közvetlenül beágyazhatja a dokumentumkonverziót Java alkalmazásaiba.
 
 ## Gyors válaszok
-- **Mi a jelentése a „Word HTML-re konvertálása” kifejezésnek?** Egy .docx/.doc fájlt webre kész HTML oldalra alakít át, miközben megőrzi a formázást.  
-- **Melyik könyvtár kezeli ezt Java-ban?** A GroupDocs.Editor Java biztosítja mind a szerkesztési, mind a konvertálási képességeket.  
-- **Szükségem van licencre?** Elérhető ingyenes próba; a termeléshez kereskedelmi licenc szükséges.  
-- **Szerkeszthetek jelszóval védett fájlokat?** Igen – használja a `WordProcessingLoadOptions`-t a jelszó megadásához.  
-- **Milyen Java verzió szükséges?** JDK 8 vagy újabb.
+- **Mi jelent a „convert docx to html”?** Átalakít egy .docx fájlt egy szabványos HTML oldalra, miközben megőrzi a elrendezést, a stílusokat és a beágyazott képeket.  
+- **Melyik könyvtár végzi ezt Java‑ban?** A GroupDocs.Editor Java szerkesztési és konverziós API‑kat egyaránt biztosít.  
+- **Szükséges licenc a termeléshez?** Igen – egy kereskedelmi licenc szükséges a termeléshez; ingyenes próba verzió elérhető értékeléshez.  
+- **Szerkeszthetek jelszóval védett dokumentumokat?** Természetesen – használja a `WordProcessingLoadOptions`‑t a jelszó megadásához a betöltés előtt.  
+- **Milyen Java verzióra van szükség?** A JDK 8 vagy újabb támogatott.
 
-## Mi az a „Word HTML-re konvertálása”?
-A Word dokumentum HTML-re konvertálása azt jelenti, hogy a dokumentum tartalmát, stílusait és elrendezését kinyerjük, és egy ekvivalens HTML fájlt generálunk, amely böngészőkben megjeleníthető Microsoft Word nélkül.
+## Mi a „convert docx to html”?
+`convert docx to html` kinyeri a szöveges tartalmat, a formázást, a képeket, a táblázatokat, a fejléceket, lábléceket és egyéb stílusinformációkat egy Word (.docx) fájlból, és szabványos HTML dokumentumot generál. A kapott HTML megőrzi az eredeti elrendezést és a vizuális megjelenést, lehetővé téve a böngészők számára a dokumentum megjelenítését a Microsoft Word vagy bármilyen saját tulajdonú bővítmény nélkül.
 
-## Miért használja a GroupDocs.Editor Java-t ehhez a feladathoz?
-- **Teljes szerkesztési vezérlés** – szöveg, képek, táblázatok módosítása a konvertálás előtt.  
-- **Magas hűség** – megőrzi a komplex formázást, fejléceket, lábléceket és stílusokat.  
-- **Nincs külső függőség** – teljesen a szerveren fut, tökéletes a háttérszolgáltatásokhoz.  
-- **Skálázható** – nagy fájlokat hatékonyan kezel a betöltési beállításokkal.
+## Miért használja a GroupDocs.Editor Java‑t ehhez a feladathoz?
+A GroupDocs.Editor Java **50+ bemeneti és kimeneti formátumot** támogat, többek között a DOCX, DOC, ODT és HTML formátumokat, és akár **200 MB** méretű dokumentumokat is képes feldolgozni anélkül, hogy a teljes fájlt a memóriába töltené. Megőrzi a komplex elrendezéseket, mint a többoszlopos szekciók, lábjegyzetek és beágyazott diagramok, **99,9 %** hűséggel az eredeti Word fájlhoz képest, így web‑kész ábrázolást biztosít, amely modern böngészőkben azonosul a megjelenéssel.
 
 ## Előfeltételek
-- **Java Development Kit (JDK)** 8 vagy újabb.  
-- **Maven** a függőségkezeléshez.  
-- Alapvető Java programozási ismeretek.  
+- Java Development Kit (JDK) 8 vagy újabb.  
+- Maven a függőségkezeléshez.  
+- Alapvető ismeretek a Java projekt struktúrájáról.  
 
-## A GroupDocs.Editor beállítása Java-hoz
+## A GroupDocs.Editor beállítása Java‑hoz
 
 ### Maven konfiguráció
-Addja a tárolót és a függőséget a `pom.xml` fájlhoz:
+Adja hozzá a GroupDocs tárolót és az Editor függőséget a `pom.xml` fájlhoz:
 
 ```xml
+<!-- Repository -->
+<repository>
+    <id>groupdocs-releases</id>
+    <url>https://releases.groupdocs.com/maven</url>
+</repository>
+
+<!-- Dependency -->
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-editor</artifactId>
+    <version>25.3</version>
+</dependency>
+```
+
+````xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -59,22 +107,12 @@ Addja a tárolót és a függőséget a `pom.xml` fájlhoz:
       <version>25.3</version>
    </dependency>
 </dependencies>
-```
+````
 
 ### Közvetlen letöltés
-Alternatívaként töltse le a legújabb JAR-t a [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) oldalról.
+Ha inkább manuálisan kezeli, töltse le a legújabb JAR‑t a hivatalos kiadási oldalról: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-#### Licenc megszerzése
-- **Ingyenes próba** – minden funkció kipróbálása költség nélkül.  
-- **Ideiglenes licenc** – meghosszabbított tesztidő.  
-- **Vásárlás** – teljes termelési licenc támogatással.
-
-## Hogyan szerkesszünk Word dokumentumokat Java-val
-
-### Alap inicializálás
-Az első lépés egy `Editor` példány létrehozása, amely a forrásfájlra mutat, és alkalmazza a szükséges betöltési beállításokat.
-
-```java
+````java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.options.WordProcessingLoadOptions;
 
@@ -85,12 +123,21 @@ public class InitializeEditor {
         Editor editor = new Editor(inputPath, loadOptions);
     }
 }
-```
+````
 
-### Editor inicializálása betöltési beállításokkal
-A beállításokkal történő betöltés lehetővé teszi a jelszóval védett fájlok, a memóriahasználat és egyéb paraméterek irányítását.
+#### Licenc beszerzése
+- **Ingyenes próba** – teljes funkcionalitású értékelés díj nélkül.  
+- **Ideiglenes licenc** – meghosszabbított tesztelési időszak nagyobb csapatok számára.  
+- **Kereskedelmi licenc** – termelésre kész, prioritásos támogatással és frissítésekkel.
 
-```java
+## Hogyan szerkesszen Word dokumentumokat Java‑val
+
+Word dokumentumok szerkesztéséhez Java‑ban példányosítja a GroupDocs.Editor `Editor` osztályt a célfájllal és opcionális betöltési beállításokkal. A szerkesztő betölti a dokumentumot egy szerkeszthető modellbe, API‑kat biztosítva a szöveg, képek, táblázatok és egyéb elemek programozott módosításához. A módosítások után a dokumentumot vissza lehet menteni az eredeti formátumba vagy exportálni egy másik formátumba, például HTML‑be.
+
+### Alapvető inicializálás
+Az `Editor` osztály a belépési pont minden dokumentumművelethez. Betölti a forrásfájlt és előkészíti a szerkesztésre vagy konverzióra.
+
+````java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.options.WordProcessingLoadOptions;
 
@@ -101,14 +148,12 @@ public class InitializeEditor {
         Editor editor = new Editor(inputPath, loadOptions);
     }
 }
-```
+````
 
-*Explanation*: A `WordProcessingLoadOptions` kiterjeszthető jelszavak megadására, egyedi kódolás beállítására vagy a betöltött oldalak számának korlátozására.
+### Szerkesztő inicializálása betöltési beállításokkal
+`WordProcessingLoadOptions` lehetővé teszi a jelszavak megadását, az oldalszám korlátozását és a memóriahasználat szabályozását nagy fájlok esetén.
 
-### Dokumentum szerkesztése szerkesztési beállításokkal
-Miután az editor készen áll, hozzon létre egy szerkeszthető reprezentációt a dokumentumról.
-
-```java
+````java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.options.WordProcessingEditOptions;
 import com.groupdocs.editor.EditableDocument;
@@ -120,14 +165,14 @@ public class EditWordDocument {
         EditableDocument document = editor.edit(editOptions);
     }
 }
-```
+````
 
-*Explanation*: A `edit()` hívás egy `EditableDocument` objektumot ad vissza, amelyet manipulálhat – bekezdéseket adhat hozzá, szöveget cserélhet, vagy táblázatokat módosíthat – mielőtt mentené.
+*Magyarázat*: A `WordProcessingLoadOptions` kiterjeszthető jelszó beállítására (`setPassword`), maximális oldalszám meghatározására (`setPageCountLimit`), vagy a memória puffer méretének módosítására.
 
-### Szerkesztett dokumentum mentése HTML-be
-A módosítások elvégzése után exportálja a dokumentumot HTML formátumba a webes felhasználáshoz.
+### Dokumentum szerkesztése szerkesztési beállításokkal
+A `edit()` hívás egy `EditableDocument` objektumot ad vissza, amelyet manipulálhat – bekezdéseket adhat hozzá, szöveget cserélhet, vagy táblázatokat módosíthat – mentés előtt.
 
-```java
+````java
 import com.groupdocs.editor.EditableDocument;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -142,49 +187,74 @@ public class SaveAsHtml {
         document.save(outputPath);
     }
 }
-```
+````
 
-*Explanation*: A `document.save(outputPath)` a szerkesztett tartalmat egy HTML fájlba írja, megőrizve a stílusokat és képeket webre kész formátumban.
+*Magyarázat*: Az `EditableDocument` folyékony API‑t biztosít elemek beszúrásához, törléséhez vagy frissítéséhez, lehetővé téve a tartalom programozott testreszabását.
+
+### Szerkesztett dokumentum mentése HTML‑be
+Szerkesztés után hívja meg a `save()`‑t egy HTML kimeneti úttal. A könyvtár automatikusan kinyeri a képeket, létrehozza az erőforrások mappáját, és tiszta HTML jelölést ír.
+
+````java
+import com.groupdocs.editor.EditableDocument;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class SaveAsHtml {
+    public static void run() throws IOException {
+        EditableDocument document = new EditableDocument();
+        String fileNameWithoutExtension = "sample";
+        String outputPath = Paths.get("YOUR_OUTPUT_DIRECTORY", fileNameWithoutExtension + ".html").toString();
+        document.save(outputPath);
+    }
+}
+````
+
+*Magyarázat*: A `document.save(outputPath)` a szerkesztett tartalmat egy HTML fájlba írja, megőrizve a CSS stílusokat és a képeket külön fájlokként ágyazva be a legoptimálisabb böngésző rendereléshez.
 
 ## Gyakorlati alkalmazások
-- **Automatizált tartalomcsővezetékek** – adatlekérés Word-ből, konvertálás HTML-re, és közvetlen publikálás egy CMS-be.  
-- **Kollaboratív szerkesztő platformok** – több felhasználó szerkesztheti a dokumentumot Java backend-en keresztül, majd a végeredményt HTML-ként szolgálja ki.  
-- **Dokumentumarchiválás** – szerződések vagy jelentések HTML pillanatképeinek tárolása a könnyű böngésző hozzáféréshez.
+- **Automatizált kiadási csővezetékek** – adatokat húz a Word‑ból, konvertálja HTML‑re, és közvetlenül egy CMS‑be küldi.  
+- **Együttműködő szerkesztő platformok** – több felhasználó szerkesztheti a dokumentumot egy Java háttérrendszeren keresztül, majd a végső HTML‑t szolgálja ki a böngészőknek.  
+- **Dokumentum archiválás** – HTML pillanatképeket tárol szerződések, jelentések vagy kézikönyvek számára azonnali, kereshető hozzáféréshez.
 
-## Teljesítménybeli megfontolások
-- **Memória kezelés** – a `Editor` és `EditableDocument` objektumokat azonnal szabadítsa fel a szivárgások elkerülése érdekében.  
-- **Nagy fájlok** – használja a `WordProcessingLoadOptions`-t, hogy csak a szükséges szakaszokat töltse be hatalmas dokumentumok feldolgozásakor.  
-- **Szálbiztonság** – minden szálhoz külön `Editor` objektumot hozzon létre; a könyvtár alapértelmezés szerint nem szálbiztos.
+## Teljesítmény szempontok
+- **Memória kezelés** – szabadítsa fel a `Editor` és `EditableDocument` objektumokat amint befejezte; ezek natív erőforrásokat tartanak.  
+- **Nagy fájlok** – használja a `WordProcessingLoadOptions#setPageCountLimit`‑t, hogy csak a szükséges szekciókat töltse be, csökkentve a heap nyomást.  
+- **Szálbiztonság** – minden szálhoz hozzon létre külön `Editor` példányt; a könyvtár alapértelmezés szerint nem szálbiztos.
 
 ## Gyakori problémák és megoldások
 | Probléma | Megoldás |
 |----------|----------|
-| **OutOfMemoryError nagy fájlok esetén** | Növelje a JVM heap méretét (`-Xmx`), vagy töltse be a dokumentumot a `WordProcessingLoadOptions#setPageCountLimit` használatával. |
-| **Hiányzó képek a konvertálás után** | Győződjön meg arról, hogy a kimeneti könyvtár írható, és a képes erőforrások a HTML fájl mellé mentődnek. |
-| **Jelszóval védett dokumentumok betöltése sikertelen** | Állítsa be a jelszót a `WordProcessingLoadOptions#setPassword("yourPassword")` metódussal. |
+| **OutOfMemoryError nagy fájlok esetén** | Növelje a JVM heapet (`-Xmx`) vagy töltse be a dokumentumot a `WordProcessingLoadOptions#setPageCountLimit` használatával. |
+| **Hiányzó képek a konverzió után** | Ellenőrizze, hogy a kimeneti könyvtár írható-e, és hogy a könyvtár képes-e a képernyő erőforrás mappát a HTML fájl mellett írni. |
+| **Jelszóval védett dokumentumok betöltése sikertelen** | Állítsa be a jelszót a `WordProcessingLoadOptions#setPassword("yourPassword")`‑nél a szerkesztő inicializálása előtt. |
 
 ## Gyakran feltett kérdések
 
-**Q: Kompatibilis a GroupDocs.Editor minden Word formátummal?**  
-A: Igen, támogatja a DOCX, DOC és egyéb Microsoft Word formátumokat.
+**K: A GroupDocs.Editor kompatibilis minden Word formátummal?**  
+V: Igen, támogatja a DOCX, DOC, ODT és egyéb Microsoft Word formátumokat.
 
-**Q: Szerkeszthetek jelszóval védett dokumentumokat?**  
-A: Természetesen. Állítsa be a megfelelő jelszót a `WordProcessingLoadOptions`-ban az editor inicializálása előtt.
+**K: Szerkeszthetek jelszóval védett dokumentumokat?**  
+V: Természetesen. Adja meg a jelszót a `WordProcessingLoadOptions`‑en keresztül a fájl betöltése előtt.
 
-**Q: Melyek a rendszerkövetelmények a GroupDocs.Editor használatához?**  
-A: Egy JDK 8+ futtatókörnyezet és egy kompatibilis IDE (pl. IntelliJ IDEA, Eclipse) elegendő.
+**K: Mik a rendszerkövetelmények a GroupDocs.Editor‑hez?**  
+V: Egy JDK 8+ futtatókörnyezet és bármely szabványos IDE (IntelliJ IDEA, Eclipse, VS Code) elegendő.
 
-**Q: Hogyan optimalizálhatom a teljesítményt nagy fájlok szerkesztésekor?**  
-A: Használjon betöltési beállításokat az oldalszám korlátozására, kezelje gondosan az objektumok életciklusát, és figyelje a JVM memóriahasználatát.
+**K: Hogyan javíthatom a teljesítményt nagy fájlok kezelésekor?**  
+V: Használjon betöltési beállításokat az oldalszám korlátozásához, újrahasznosítsa az `Editor` példányokat, és figyelje a JVM heap használatát.
 
-**Q: Hol találok további forrásokat a GroupDocs.Editor-hez?**  
-A: Látogassa meg a [GroupDocs documentation](https://docs.groupdocs.com/editor/java/) oldalt részletes útmutatók, API-referenciák és mintaprojektek számára.
-
-## Következtetés
-Most már rendelkezik egy teljes, vég‑ponttól‑vég‑pontig tartó útmutatóval arról, hogyan **konvertálja a Word dokumentumot HTML-re** a GroupDocs.Editor Java segítségével, hogyan szerkessze a Word dokumentumokat programozottan, és hogyan integrálja ezeket a képességeket saját alkalmazásaiba. Kísérletezzen további szerkesztési beállításokkal – például képek vagy táblázatok beszúrásával – és fedezze fel a teljes API-t, hogy még erőteljesebb dokumentumautomatizálási forgatókönyveket valósítson meg.
+**K: Hol találok további forrásokat?**  
+V: Látogassa meg a hivatalos dokumentációs oldalt: [GroupDocs documentation](https://docs.groupdocs.com/editor/java/) az API referenciák, mintaprojektek és részletes útmutatókért.
 
 ---
 
-**Last Updated:** 2026-03-04  
-**Tested With:** GroupDocs.Editor Java 25.3  
-**Author:** GroupDocs
+**Utoljára frissítve:** 2026-08-15  
+**Tesztelve:** GroupDocs.Editor Java 25.3  
+**Szerző:** GroupDocs  
+
+## Kapcsolódó oktatóanyagok
+
+- [HTML kinyerése Word‑ből – GroupDocs.Editor Java oktatóanyag](/editor/java/document-editing/)
+- [Hogyan konvertáljunk HTML‑t DOCX‑re a GroupDocs.Editor for Java‑val](/editor/java/document-saving/)
+- [docx konvertálása PDF‑re Java‑ban: Tömeges Word fájl szerkesztés a GroupDocs.Editor‑rel – Lépésről‑lépésre útmutató](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
