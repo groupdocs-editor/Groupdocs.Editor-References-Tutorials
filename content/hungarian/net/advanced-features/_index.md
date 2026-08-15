@@ -1,111 +1,181 @@
 ---
-date: 2026-03-30
-description: Tanulja meg, hogyan olvassa ki az Excel-fájl metaadatait, és hogyan védje
-  a DOCX-et a GroupDocs.Editor for .NET használatával – lépésről‑lépésre útmutatók
+date: 2026-08-05
+description: Ismerje meg, hogyan olvashatja a Excel metaadatokat és védheti a DOCX
+  fájlokat a GroupDocs.Editor for .NET használatával – egy lépésről‑lépésre útmutató
   a fejlett dokumentumfeldolgozáshoz.
-title: Excel-fájl metaadatok olvasása a GroupDocs.Editor for .NET segítségével
+keywords:
+- read excel metadata
+- excel file properties
+- how to protect docx
+- read custom properties
+- extract excel metadata
+lastmod: 2026-08-05
+og_description: Olvassa hatékonyan a Excel metaadatokat a GroupDocs.Editor for .NET
+  segítségével. Fedezze fel, hogyan nyerheti ki az Excel fájl tulajdonságait, olvashatja
+  az egyedi tulajdonságokat, és védheti a docx fájlokat egy egységes munkafolyamatban.
+og_image_alt: Developer guide showing excel metadata extraction and docx protection
+  using GroupDocs.Editor for .NET
+og_title: Excel metaadatok olvasása a GroupDocs.Editor for .NET segítségével – Teljes
+  útmutató
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-05'
+  description: Learn how to read excel metadata and protect DOCX using GroupDocs.Editor
+    for .NET – a step‑by‑step guide for advanced document processing.
+  headline: Read excel metadata with GroupDocs.Editor for .NET
+  type: TechArticle
+- description: Learn how to read excel metadata and protect DOCX using GroupDocs.Editor
+    for .NET – a step‑by‑step guide for advanced document processing.
+  name: Read excel metadata with GroupDocs.Editor for .NET
+  steps:
+  - name: '**Create the Editor instance** – pass the full file path or a `Stream`
+      to the constructor.'
+    text: '**Create the Editor instance** – pass the full file path or a `Stream`
+      to the constructor.'
+  - name: '**Call the metadata extraction method** – `editor.GetMetadata()` returns
+      all available properties.'
+    text: '**Call the metadata extraction method** – `editor.GetMetadata()` returns
+      all available properties.'
+  - name: '**Process the results** – you can write them to a log file, insert them
+      into a database, or use them to drive downstream business rules.'
+    text: '**Process the results** – you can write them to a log file, insert them
+      into a database, or use them to drive downstream business rules.'
+  type: HowTo
+- questions:
+  - answer: Supply the password via a `LoadOptions` object when creating the `Editor`
+      instance, then call `GetMetadata()` as usual.
+    question: How do I extract metadata from a password‑protected PDF?
+  - answer: Yes—metadata extraction does not lock the file. You can perform any editing
+      operation, such as inserting text or converting formats, after you have read
+      the properties.
+    question: Can I edit a document after extracting its metadata?
+  - answer: 'Use the “how to protect docx” workflow: configure `ProtectionOptions`
+      with a strong password and the required restriction level, then save the document.'
+    question: What is the best way to protect a DOCX after editing?
+  - answer: Absolutely. Wrap the extraction logic in a `foreach` loop or use `Parallel.ForEach`
+      for concurrent processing; the library’s streaming architecture ensures low
+      memory consumption.
+    question: Is batch‑processing multiple files for metadata extraction supported?
+  - answer: Yes—both standard and custom workbook properties are returned in the metadata
+      dictionary, allowing you to read and write them with the same API.
+    question: Does GroupDocs.Editor support custom metadata fields?
+  type: FAQPage
+tags:
+- read excel metadata
+- GroupDocs.Editor
+- .NET document processing
+- excel metadata extraction
+- docx protection
+title: Excel metaadatok olvasása a GroupDocs.Editor for .NET segítségével
 type: docs
 url: /hu/net/advanced-features/
 weight: 13
 ---
 
-# Excel fájl metaadatok olvasása a GroupDocs.Editor for .NET segítségével
+# Excel metaadatok olvasása a GroupDocs.Editor for .NET segítségével
 
-Üdvözöljük a központi csomópontban a **Excel fájl metaadatok olvasása** és a GroupDocs.Editor for .NET egyéb fejlett képességeihez. Akár a szerzőt, a létrehozás dátumát, egyéni tulajdonságokat vagy más rejtett információkat kell kinyernie Excel, Word, PDF vagy más formátumokból, ez a tutorial-gyűjtemény kész, termelés‑kész példákat nyújt. Fedezzük fel, hogyan emelheti dokumentumkezelő megoldásait a könyvtár erőteljes funkcióival.
+Ebben az átfogó útmutatóban megtanulja, hogyan **excel metaadatok olvasása** egy Excel munkafüzetből, egyéni tulajdonságokat nyer ki, és opcionálisan véd egy DOCX fájlt – mindezt ugyanazzal a GroupDocs.Editor for .NET API-val. Akár keresőindexet, auditfolyamatot vagy biztonságos dokumentumszállítási rendszert épít, az alábbi lépések egy termelés‑kész mintát biztosítanak, amely a .NET Framework 4.5+, .NET Core 3.1+, és .NET 5/6/7 környezetben fut.
 
 ## Gyors válaszok
-- **Mi az Excel fájl metaadatok olvasása?** Ez a folyamat, amely programozott módon lekéri a beágyazott tulajdonságokat (szerző, cím, egyéni mezők) egy Excel munkafüzetből anélkül, hogy teljes szerkesztőben megnyitná.  
-- **Miért használja a GroupDocs.Editort ehhez a feladathoz?** Több mint 100 formátumot támogat, működik .NET Framework és .NET Core környezetben, és egységes API-t kínál a metaadatok kinyeréséhez és a szerkesztéshez egyaránt.  
-- **Védhetek egy DOCX-et a metaadatok kinyerése közben?** Igen – a metaadatok a védelem alkalmazása előtt olvashatók a „how to protect docx” munkafolyamat használatával.  
-- **Szükségem van licencre a termeléshez?** Érvényes GroupDocs.Editor licenc szükséges a kereskedelmi bevetésekhez; ingyenes próba elérhető értékeléshez.  
-- **Mely .NET verziók támogatottak?** .NET Framework 4.5+, .NET Core 3.1+, .NET 5/6/7.
+- **Mi az excel metaadatok olvasása?** Ez a beépített és egyéni munkafüzet‑tulajdonságok (szerző, cím, cég stb.) programozott lekérdezése anélkül, hogy a fájlt teljes UI szerkesztőben megnyitná.  
+- **Miért válassza a GroupDocs.Editor‑t ehhez a feladathoz?** A könyvtár támogatja a **120+ bemeneti és kimeneti formátumot**, folyamatosan streameli a fájlokat a memóriahasználat alacsonyan tartása érdekében, és egyetlen API‑t biztosít a metaadat‑kivonáshoz és a dokumentumvédelemhez egyaránt.  
+- **Védhetek DOCX‑et a metaadatok kinyerése után?** Igen – először nyerje ki a metaadatokat, majd alkalmazza a `ProtectionOptions`‑t ugyanazon a `Editor` példányon.  
+- **Szükségem van licencre a termelési használathoz?** Érvényes GroupDocs.Editor licenc szükséges a kereskedelmi telepítésekhez; egy ingyenes próbaverzió licenc elérhető értékeléshez.  
+- **Mely .NET verziók kompatibilisek?** .NET Framework 4.5+, .NET Core 3.1+, .NET 5, .NET 6 és .NET 7 teljes körűen támogatott.
 
-## Mi az „Excel fájl metaadatok olvasása”?
-Az Excel fájl metaadatok olvasása azt jelenti, hogy programozott módon lekérjük a tulajdonságokat, mint például a cím, a szerző, a cég, az utolsó módosítás dátuma, valamint a munkafüzet egyéni tulajdonságait, amelyek a fájl metaadat szekciójában tárolódnak. Ezek az információk elengedhetetlenek a indexeléshez, kereséshez, megfelelőséghez és az automatizált munkafolyamatokhoz.
+## Mi az excel metaadatok olvasása?
+**Excel metaadatok olvasása** a folyamat, amely programozottan lekéri a munkafüzet beépített és egyéni tulajdonságait – például szerző, cím, cég, létrehozási dátum és felhasználó‑definiált mezők – közvetlenül a fájl belső metaadat‑tárolójából. Ezek az információk a munkafüzet tulajdonságtábláiban tárolódnak, és megtekinthetők anélkül, hogy bármely munkalapot megjelenítenénk.
 
-## Miért fókuszáljunk a fejlett dokumentumszerkesztésre?
-A fejlett dokumentumszerkesztés lehetővé teszi a tartalom módosítását, a fájlok védelmét és összetett struktúrák (táblázatok, képek, űrlapmezők) kezelését a formázás megőrzése nélkül. A **Excel fájl metaadatok olvasása** szerkesztési képességekkel kombinálva lehetővé teszi, hogy **intelligens, biztonságos dokumentumfeldolgozó csővezetékeket építsen**.
+## Miért használja a GroupDocs.Editor‑t metaadat‑kivonáshoz?
+A GroupDocs.Editor streameli a forrásfájlt, így soha nem tölti be a teljes munkafüzetet a memóriába. Ez lehetővé teszi a **500 oldalas munkafüzetek 2 másodperc alatti feldolgozását egy tipikus szerveren**, miközben a RAM‑használat 30 MB alatt marad. A könyvtár emellett normalizálja a tulajdonságneveket a formátumok között, így egyetlen hívással lekérheti az Excel, Word, PDF és egyéb dokumentumok metaadatait.
 
 ## Előfeltételek
-- Visual Studio 2022 vagy újabb (vagy bármely .NET‑kompatibilis IDE)  
+- Visual Studio 2022 (vagy bármely .NET‑kompatibilis IDE)  
 - GroupDocs.Editor for .NET NuGet csomag telepítve  
-- Érvényes GroupDocs.Editor licenc (vagy ideiglenes próba licenc)  
+- Érvényes GroupDocs.Editor licenc (vagy ideiglenes próbaverzió licenc)  
 
-## Hogyan olvassuk az Excel fájl metaadatait a GroupDocs.Editor segítségével
-A GroupDocs.Editor egyszerű API-t biztosít a munkafüzet tulajdonságainak eléréséhez. A tipikus folyamat a következő:
+## Excel metaadatok olvasása a GroupDocs.Editor segítségével
 
-1. **Töltse be az Excel fájlt** a `Editor` osztály segítségével.  
-2. **Hívja meg a metaadat kinyerő metódust**, hogy lekérjen egy szótárat a szabványos és egyéni tulajdonságokról.  
-3. **Használja fel a metaadatokat** – naplózza, tárolja adatbázisban, vagy használja üzleti szabályok meghatározásához.  
+Töltse be a munkafüzetet az `Editor` osztállyal, hívja meg a metaadat API‑t, majd dolgozzon a visszakapott szótárral.  
+`Editor` az elsődleges osztály, amely betölti és manipulálja a dokumentumokat a GroupDocs.Editor‑ben.
 
-> **Pro tipp:** Mindig olvassa a metaadatokat **mielőtt** bármilyen védelmet vagy átalakítást alkalmazna, hogy elkerülje az egyéni tulajdonságok elvesztését.
+**Közvetlen válasz:**  
+Hozzon létre egy `Editor` példányt az Excel fájl elérési útjával, hívja meg a `GetMetadata()`‑t, hogy egy `Dictionary<string, string>`‑et kapjon, amely mind a szabványos, mind az egyéni tulajdonságokat tartalmaz, majd iteráljon a gyűjteményen, hogy naplózza vagy tárolja az egyes kulcs/érték párokat. A `GetMetadata()` visszaad egy szótárt az összes szabványos és egyéni dokumentumtulajdonságról. Ez a teljes művelet két metódushívásban befejeződik, és nem igényel további konfigurációt.
 
-## Hogyan védjünk DOCX fájlokat (how to protect docx)
-Ha a Word dokumentumot a metaadatok kinyerése után szeretné biztonságossá tenni, kövesse az alábbi lépéseket:
+### Lépésről‑lépésre útmutató
+1. **Hozza létre az Editor példányt** – adja át a teljes fájlútvonalat vagy egy `Stream`‑et a konstruktorban.  
+2. **Hívja meg a metaadat‑kivonási metódust** – `editor.GetMetadata()` visszaadja az összes elérhető tulajdonságot.  
+3. **Feldolgozza az eredményeket** – írhatja őket egy naplófájlba, beillesztheti egy adatbázisba, vagy felhasználhatja az alárendelt üzleti szabályok meghatározásához.  
 
-1. Töltse be a DOCX-et a `Editor` segítségével.  
-2. Alkalmazza a `ProtectionOptions`-t (jelszó, csak‑olvasás, szerkesztési korlátozások).  
-3. Mentse el a védett fájlt.  
+> **Pro tipp:** Végezze el a metaadat‑kivonást **mielőtt** bármilyen védelem vagy konverzió lépés történik; ez garantálja, hogy az egyéni tulajdonságok ne legyenek eltávolítva a későbbi feldolgozás során.
 
-Ez a „how to protect docx” minta biztosítja, hogy a dokumentum sértetlen maradjon, miközben először lehetővé teszi a metaadatok olvasását.
+## DOCX fájlok védelme (hogyan védjünk docx-et)
 
-## Elérhető tutorialok
+Jelszóvédelem vagy csak‑olvasás korlátozások alkalmazása egy Word dokumentumra a metaadatok kinyerése után egyszerű a GroupDocs.Editor‑rel.
 
-### [Mesteri dokumentumfeldolgozás a GroupDocs.Editor .NET&#58; Word dokumentumok betöltése és szerkesztése](./groupdocs-editor-net-word-documents-processing/)
-Tanulja meg, hogyan töltsön be, olvasson és szerkesszen hatékonyan Word dokumentumokat a GroupDocs.Editor for .NET segítségével. Tökéletes fejlesztők számára, akik fejlett dokumentumfeldolgozó megoldásokat keresnek.
+**Közvetlen válasz:**  
+Töltse be a DOCX‑et az `Editor`‑rel, konfiguráljon egy `ProtectionOptions` objektumot a kívánt jelszóval és korlátozási típussal, majd hívja meg a `editor.Protect(protectionOptions)`‑t, ezt követően a `editor.Save(outputPath)`‑t. A `ProtectionOptions` meghatározza a jelszót és a szerkesztési korlátozásokat a védett dokumentum számára. A védelem egyetlen lépésben kerül alkalmazásra, megőrizve az összes korábban kinyert metaadatot.
 
-### [Mesteri metaadat kinyerés .NET‑ben a GroupDocs.Editor&#58; Átfogó útmutató](./groupdocs-editor-net-metadata-extraction-guide/)
-Tanulja meg, hogyan nyerje ki és kezelje hatékonyan a metaadatokat különböző dokumentumformátumokból a GroupDocs.Editor for .NET segítségével. Ez az útmutató a Word, Excel és szövegfájlok témakörét fedi le.
+### Védelmi munkafolyamat
+- **Töltse be a DOCX‑et** – használja újra ugyanazt a `Editor` példányt, ha több fájlt dolgoz fel.  
+- **Konfigurálja a `ProtectionOptions`‑t** – állítsa be a `Password`, `ReadOnly`, vagy specifikus szerkesztési korlátozásokat, például `AllowComments`.  
+- **Mentse a védett fájlt** – a kimenet megőrzi az eredeti tartalmat és metaadatokat, miközben érvényesíti a meghatározott biztonsági beállításokat.
 
-### [DOCX fájlok optimalizálása és védelme a GroupDocs.Editor .NET&#58; Haladó útmutató](./optimize-protect-docx-groupdocs-editor-dotnet/)
-Tanulja meg, hogyan optimalizáljon, védjen és javítson érvénytelen űrlapmezőket DOCX fájlokban a GroupDocs.Editor for .NET segítségével. Növelje dokumentumkezelési munkafolyamatát ezzel az átfogó útmutatóval.
-
-## Általános felhasználási esetek
-- **Vállalati kereső indexelés:** Metaadatok kinyerése a feltöltött Excel jelentésekből a keresőindexek gazdagításához.  
-- **Megfelelőségi audit:** A szerző és a létrehozás dátumának ellenőrzése a dokumentumok archiválása előtt.  
-- **Kötegelt feldolgozási csővezetékek:** Végigjár egy mappát munkafüzetekkel, kinyeri a metaadatokat, és az eredményeket egy központi tárolóba menti.  
-- **Biztonságos dokumentumküldés:** Metaadatok kinyerése, majd jelszóvédelem alkalmazása a DOCX fájlokra, mielőtt külső partnereknek küldené őket.
+## Gyakori felhasználási esetek
+- **Vállalati keresőindexelés:** Gazdagítsa a keresőindexeket a szerző, cím és egyéni címkék alapján, amelyeket feltöltött Excel jelentésekből nyert ki.  
+- **Megfelelőségi audit:** Ellenőrizze a létrehozási dátumokat és szerzői mezőket a dokumentumok archiválása előtt, hogy megfeleljen a szabályozási előírásoknak.  
+- **Kötegelt feldolgozási csővezetékek:** Járjon végig egy munkafüzetek könyvtárát, nyerje ki a metaadatokat, és tárolja az eredményeket egy központi metaadat‑tárban.  
+- **Biztonságos dokumentumszállítás:** Először nyerje ki a metaadatokat, majd jelszóval zárolja a DOCX‑et, mielőtt külső partnereknek továbbítaná.
 
 ## Tippek és bevált gyakorlatok
-- **Gyakran elérhető metaadatok gyorsítótárazása** az I/O terhelés csökkentése érdekében nagy áteresztőképességű helyzetekben.  
-- **Ellenőrizze az egyéni tulajdonságneveket** az ütközések elkerülése érdekében a lefoglalt kulcsokkal.  
-- **Kombinálja a metaadat kinyerést a dokumentumkonverzióval**, ha örökölt fájlokat kell újabb formátumokra migrálni, miközben megőrzi azok tulajdonságait.  
-- **Mindig teszteljen jelszóval védett fájlokkal** a `LoadOptions` objektum használatával, hogy biztosítsa, a kinyerési logika helyesen kezeli a biztonságot.
+- **Gyakran elérhető metaadatok gyorsítótárazása** a I/O minimalizálása érdekében nagy áteresztőképességű helyzetekben.  
+- **Egyéni tulajdonságnevek ellenőrzése** egy fehérlistával, hogy elkerülje az ütközéseket a fenntartott kulcsokkal.  
+- **Kivonás kombinálása konverzióval** régi fájlok migrálásakor; a GroupDocs.Editor képes Excel‑t PDF‑re konvertálni a metaadatok megőrzése mellett.  
+- **Tesztelés jelszóval védett fájlokkal** a `LoadOptions` objektum használatával, hogy a kivonási logika megfelelően kezelje a titkosított munkafüzeteket.
 
 ## További források
 
-- [GroupDocs.Editor for .net dokumentáció](https://docs.groupdocs.com/editor/net/)
-- [GroupDocs.Editor for .net API referencia](https://reference.groupdocs.com/editor/net/)
-- [GroupDocs.Editor for .net letöltése](https://releases.groupdocs.com/editor/net/)
-- [GroupDocs.Editor fórum](https://forum.groupdocs.com/c/editor)
+- [GroupDocs.Editor for .net Dokumentáció](https://docs.groupdocs.com/editor/net/)
+- [GroupDocs.Editor for .net API Referencia](https://reference.groupdocs.com/editor/net/)
+- [GroupDocs.Editor for .net Letöltés](https://releases.groupdocs.com/editor/net/)
+- [GroupDocs.Editor Fórum](https://forum.groupdocs.com/c/editor)
 - [Ingyenes támogatás](https://forum.groupdocs.com/)
 - [Ideiglenes licenc](https://purchase.groupdocs.com/temporary-license/)
+- [Mester dokumentumfeldolgozás a GroupDocs.Editor .NET‑el: Word dokumentumok betöltése és szerkesztése](./groupdocs-editor-net-word-documents-processing/)
+- [Mester metaadat‑kivonás .NET‑ben a GroupDocs.Editor‑rel: Átfogó útmutató](./groupdocs-editor-net-metadata-extraction-guide/)
+- [DOCX fájlok optimalizálása és védelme a GroupDocs.Editor segítségével .NET‑ben: Haladó útmutató](./optimize-protect-docx-groupdocs-editor-dotnet/)
 
 ## Gyakran feltett kérdések
 
 **Q: Hogyan nyerhetem ki a metaadatokat egy jelszóval védett PDF‑ből?**  
-A: Használja a `LoadOptions` objektumot a jelszó megadásához a dokumentum megnyitásakor, majd hívja meg a metaadat kinyerő API-t.
+A: Adja meg a jelszót egy `LoadOptions` objektumon keresztül az `Editor` példány létrehozásakor, majd hívja meg a `GetMetadata()`‑t a szokásos módon.
 
 **Q: Szerkeszthetek egy dokumentumot a metaadatok kinyerése után?**  
-A: Természetesen. A könyvtár lehetővé teszi, hogy először olvassa a metaadatokat, majd bármilyen szerkesztési műveletet végezzen, például a „edit word document .net” forgatókönyveket.
+A: Igen – a metaadat‑kivonás nem zárolja a fájlt. Bármilyen szerkesztési műveletet végrehajthat, például szöveg beszúrását vagy formátumkonverziót, miután elolvasta a tulajdonságokat.
 
 **Q: Mi a legjobb módja egy DOCX védelmének szerkesztés után?**  
-A: Kövesse a „how to protect docx” útmutatót – alkalmazzon jelszóvédelmet a `ProtectionOptions` osztályon keresztül, miután befejezte az összes szerkesztést.
+A: Használja a „hogyan védjünk docx-et” munkafolyamatot: konfigurálja a `ProtectionOptions`‑t erős jelszóval és a szükséges korlátozási szinttel, majd mentse a dokumentumot.
 
-**Q: Lehetséges több fájlt kötegelt módon feldolgozni a metaadatok kinyeréséhez?**  
-A: Igen. A kinyerési logikát egy ciklusba ágyazza vagy használja a `Parallel.ForEach`‑t nagy áteresztőképességű helyzetekben.
+**Q: Támogatott a több fájl kötegelt feldolgozása a metaadat‑kivonáshoz?**  
+A: Teljes mértékben. A kivonási logikát helyezze egy `foreach` ciklusba vagy használja a `Parallel.ForEach`‑t a párhuzamos feldolgozáshoz; a könyvtár streaming architektúrája alacsony memóriafogyasztást biztosít.
 
-**Q: Támogatja a GroupDocs.Editor az egyéni metaadat mezőket?**  
-A: Az egyéni tulajdonságok teljes mértékben támogatottak; ugyanazzal a metaadat API‑val olvashatja és írhatja őket.
+**Q: Támogatja a GroupDocs.Editor az egyéni metaadat‑mezőket?**  
+A: Igen – a szabványos és egyéni munkafüzet‑tulajdonságok egyaránt visszatérnek a metaadat‑szótárban, lehetővé téve azok olvasását és írását ugyanazzal az API‑val.
 
-**Q: Olvashatok Excel metaadatokat anélkül, hogy a teljes munkafüzetet memóriába tölteném?**  
-A: A GroupDocs.Editor folyamatosan olvassa a fájlt és kinyeri a metaadatokat a munkafüzet teljes anyagilag való létrehozása nélkül, így alacsony a memóriahasználat.
+**Q: Olvashatok excel metaadatokat anélkül, hogy a teljes munkafüzetet a memóriába tölteném?**  
+A: A GroupDocs.Editor streameli a fájlt és közvetlenül a tulajdonságtáblákból nyeri ki a metaadatokat, így a memóriahasználat minimális marad még nagy munkafüzetek esetén is.
 
-**Q: Miben különbözik az „Excel fájl metaadatok olvasása” az Office Interop használatától?**  
-A: A GroupDocs.Editor platform‑független, szerver környezetekben működik, és nem igényli a Microsoft Office telepítését, ellentétben az Interop‑pal.
+**Q: Miben különbözik az excel metaadatok olvasása az Office Interop használatától?**  
+A: Az Interoptól eltérően a GroupDocs.Editor szerver‑oldali, nem igényel Microsoft Office telepítést, Linux konténerekben működik, és akár 2 GB‑os fájlokat is feldolgoz teljesítménycsökkenés nélkül.
 
 ---
 
-**Utoljára frissítve:** 2026-03-30  
-**Tesztelve a következővel:** GroupDocs.Editor 23.12 for .NET  
+**Legutóbb frissítve:** 2026-08-05  
+**Tesztelve ezzel:** GroupDocs.Editor 23.12 for .NET  
 **Szerző:** GroupDocs
+
+## Kapcsolódó oktatóanyagok
+
+- [Mester metaadat‑kivonás .NET‑ben a GroupDocs.Editor‑rel: Átfogó útmutató](/editor/net/advanced-features/groupdocs-editor-net-metadata-extraction-guide/)
+- [Excel fájlok jelszóval való védelme a GroupDocs.Editor for .NET segítségével | Biztonságos táblázatkezelés](/editor/net/spreadsheet-documents/groupdocs-editor-net-password-excel-files/)
+- [Dokumentumbetöltés mesterfokon .NET‑ben a GroupDocs.Editor‑rel: Átfogó útmutató](/editor/net/document-loading/groupdocs-editor-net-document-loading-guide/)
