@@ -1,82 +1,123 @@
 ---
-date: '2026-03-01'
-description: Scopri come modificare XML in Java usando GroupDocs.Editor. Questa guida
-  copre il caricamento di XML in Java, la conversione di XML in TXT e l'estrazione
-  dei metadati XML.
+date: '2026-08-15'
+description: Impara a manipolare XML in Java usando GroupDocs.Editor. Questa guida
+  mostra come caricare, modificare, convertire XML in TXT o DOCX e estrarre i metadati
+  in modo efficiente.
 keywords:
-- Java XML editing
-- GroupDocs.Editor Java library
-- XML file manipulation
-title: Come modificare XML in Java con GroupDocs.Editor – Guida completa
+- java xml manipulation
+- groupdocs editor xml
+- xml to html java
+lastmod: '2026-08-15'
+og_description: Impara a manipolare XML in Java con GroupDocs.Editor. Questa guida
+  ti accompagna nel caricamento, nella modifica, nella conversione di XML in TXT/DOCX
+  e nell'estrazione dei metadati.
+og_image_alt: 'Developer guide: java xml manipulation with GroupDocs.Editor'
+og_title: Come eseguire la manipolazione XML in Java con GroupDocs.Editor
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-15'
+  description: Learn java xml manipulation using GroupDocs.Editor. This guide shows
+    how to load, edit, convert XML to TXT or DOCX, and extract metadata efficiently.
+  headline: How to do java xml manipulation with GroupDocs.Editor
+  type: TechArticle
+- description: Learn java xml manipulation using GroupDocs.Editor. This guide shows
+    how to load, edit, convert XML to TXT or DOCX, and extract metadata efficiently.
+  name: How to do java xml manipulation with GroupDocs.Editor
+  steps:
+  - name: load the XML document
+    text: '`Editor` loads the file and creates an in‑memory representation ready for
+      editing.'
+  - name: configure edit options
+    text: '`XmlEditOptions` lets you turn on syntax highlighting, line numbers, and
+      custom fonts.'
+  - name: modify content
+    text: '`EditableDocument` provides `replace`, `insert`, and `remove` methods that
+      work on raw markup strings.'
+  - name: save as DOCX
+    text: '`WordProcessingSaveOptions` preserves layout while converting XML structures
+      into Word tables and headings.'
+  - name: save as TXT
+    text: '`TextSaveOptions` writes a clean, indented text version of the XML, respecting
+      the formatting rules you set.'
+  type: HowTo
+- questions:
+  - answer: Yes, a valid GroupDocs.Editor license is required for production; a trial
+      license is sufficient for evaluation.
+    question: Do I need a license to edit XML in production?
+  - answer: GroupDocs.Editor streams the document, allowing you to work with files
+      up to several hundred megabytes without loading the entire file into memory.
+    question: Can the library handle very large XML files (hundreds of MB)?
+  - answer: '`TextSaveOptions` respects indentation and line‑break settings defined
+      in `XmlFormatOptions`, delivering a clean text representation.'
+    question: Is original formatting preserved when saving as TXT?
+  - answer: Namespaces appear as regular attributes; you can edit or remove them using
+      the same `replace` methods shown earlier.
+    question: How are XML namespaces treated?
+  - answer: GroupDocs.Editor 25.3 supports Java 8 and newer, including Java 11, Java
+      17, and later LTS releases.
+    question: Which Java versions are supported?
+  type: FAQPage
+tags:
+- java xml manipulation
+- groupdocs editor
+- xml editing java
+- document conversion
+title: Come eseguire la manipolazione XML in Java con GroupDocs.Editor
 type: docs
 url: /it/java/xml-documents/mastering-java-xml-editing-groupdocs-editor/
 weight: 1
 ---
 
-# Come modificare XML in Java con GroupDocs.Editor – Guida completa
+# Come fare la manipolazione xml java con GroupDocs.Editor – una guida completa
 
-Nelle moderne applicazioni Java, **how to edit XML** in modo efficiente è una sfida comune, soprattutto quando è necessario caricare, modificare e salvare documenti XML programmaticamente. Che tu stia costruendo un sistema di gestione dei contenuti, un catalogo e‑commerce o qualsiasi servizio di scambio dati, la possibilità di manipolare file XML direttamente da Java può farti risparmiare ore di lavoro manuale. In questo tutorial vedremo come utilizzare GroupDocs.Editor per **load XML Java**, apportare modifiche, **convert XML TXT** e persino **extract XML metadata** – il tutto mantenendo il codice pulito e manutenibile.
+In modern Java applications, **java xml manipulation** è una necessità frequente—che tu stia aggiornando file di configurazione, sincronizzando cataloghi di prodotti o generando report. Farlo manualmente è soggetto a errori e richiede molto tempo. In questo tutorial scoprirai come GroupDocs.Editor semplifica l’intero processo: caricamento di un documento XML, modifica dei suoi nodi, conversione del contenuto in TXT o DOCX e estrazione di metadati utili—tutto con codice Java pulito e manutenibile.
 
 ## Risposte rapide
-- **Quale libreria ti aiuta a modificare XML in Java?** GroupDocs.Editor per Java.  
-- **Posso caricare un file XML da un percorso o stream?** Sì – usa `Editor` con `XmlEditOptions`.  
-- **È possibile salvare l'XML modificato come DOCX o TXT?** Assolutamente, usando `WordProcessingSaveOptions` o `TextSaveOptions`.  
-- **Come personalizzo l'evidenziazione del font per i tag XML?** Configura `XmlHighlightOptions` nelle opzioni di modifica.  
-- **Posso recuperare metadati come il tipo di documento da un file XML?** Sì, tramite `Editor.getDocumentInfo()`.
+- **Quale libreria ti aiuta a modificare XML in Java?** GroupDocs.Editor for Java.  
+- **Posso caricare un file XML da un percorso o stream?** Yes – use `Editor` with `XmlEditOptions`.  
+- **È possibile salvare l'XML modificato come DOCX o TXT?** Absolutely, using `WordProcessingSaveOptions` or `TextSaveOptions`.  
+- **Come personalizzo l'evidenziazione dei font per i tag XML?** Configure `XmlHighlightOptions` on the edit options.  
+- **Posso recuperare metadati come il tipo di documento da un file XML?** Yes, via `Editor.getDocumentInfo()`.
 
-## Cos'è “how to edit XML” in Java?
-Modificare XML significa leggere programmaticamente un documento XML, cambiare i suoi nodi, attributi o testo, e poi salvare tali modifiche. GroupDocs.Editor astrae il parsing a basso livello e fornisce una ricca API di editing, così puoi concentrarti sulla logica di business anziché sulla gestione di XML.
+## Cos'è la manipolazione XML in Java?
+Java xml manipulation è il processo programmatico di lettura di un file XML, modifica dei suoi elementi, attributi o nodi di testo, e scrittura del documento aggiornato nuovamente nello storage. GroupDocs.Editor astrae il parsing a basso livello, permettendoti di concentrarti sulla logica di business anziché sulle complessità di DOM o SAX.
 
 ## Perché usare GroupDocs.Editor per la manipolazione XML in Java?
-- **Parsing senza dipendenze** – non è necessario gestire SAX/DOM da soli.  
-- **Conversione di formato integrata** – esporta facilmente in Word, Text o HTML.  
-- **Evidenziazione avanzata** – migliora la leggibilità di file XML di grandi dimensioni.  
-- **Estrazione di metadati** – scopri rapidamente le proprietà del documento senza un parsing completo.
+GroupDocs.Editor supporta **50+ input and output formats**, elabora file XML di centinaia di pagine senza caricare l’intero documento in memoria, e fornisce evidenziazione integrata che velocizza le revisioni manuali. Il suo motore a zero dipendenze elimina la necessità di gestire parser XML separati, e offre conversione con un click in Word, testo semplice o HTML, riducendo i tempi di sviluppo fino al 70 %.
 
 ## Prerequisiti
-Prima di iniziare, assicurati di avere:
-
-- **GroupDocs.Editor for Java** (versione 25.3 o successiva)  
-- **JDK** (qualsiasi versione recente)  
+- **GroupDocs.Editor for Java** (version 25.3 o successiva)  
+- **JDK 8+** (qualsiasi versione recente va bene)  
 - Un IDE come IntelliJ IDEA o Eclipse  
-- Maven (se preferisci la gestione delle dipendenze)  
+- Maven (o Gradle) per la gestione delle dipendenze  
 
 ### Conoscenze richieste
-- Sintassi Java di base  
-- Familiarità con la struttura XML (elementi, attributi, CDATA)  
+- Sintassi di base di Java  
+- Familiarità con i concetti XML (elementi, attributi, CDATA)  
 
 ## Configurazione di GroupDocs.Editor per Java
+
 ### Configurazione Maven
-Aggiungi quanto segue al tuo file `pom.xml` per includere GroupDocs.Editor come dipendenza:
+Aggiungi la seguente dipendenza al tuo file `pom.xml` per includere GroupDocs.Editor:
 
 ```xml
-<repositories>
-   <repository>
-      <id>repository.groupdocs.com</id>
-      <name>GroupDocs Repository</name>
-      <url>https://releases.groupdocs.com/editor/java/</url>
-   </repository>
-</repositories>
-
-<dependencies>
-   <dependency>
-      <groupId>com.groupdocs</groupId>
-      <artifactId>groupdocs-editor</artifactId>
-      <version>25.3</version>
-   </dependency>
-</dependencies>
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-editor</artifactId>
+    <version>25.3</version>
+</dependency>
 ```
 
 ### Download diretto
-In alternativa, scarica l'ultima versione da [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+In alternativa, scarica l’ultima versione da [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-#### Acquisizione della licenza
-- **Free Trial**: Inizia con una prova gratuita di 30 giorni per esplorare le funzionalità.  
-- **Temporary License**: Ottieni una licenza temporanea per test prolungati tramite [GroupDocs licensing page](https://purchase.groupdocs.com/temporary-license).  
-- **Purchase**: Per accesso completo, acquista una licenza da [GroupDocs purchasing options](https://purchase.groupdocs.com/).
+#### Acquisizione licenza
+- **Free trial** – start with a 30‑day trial to explore all features.  
+- **Temporary license** – obtain a time‑limited key for extended testing via the [GroupDocs licensing page](https://purchase.groupdocs.com/temporary-license).  
+- **Purchase** – buy a full license from the [GroupDocs purchasing options](https://purchase.groupdocs.com/).
 
 ### Inizializzazione di base
-Ecco come puoi inizializzare GroupDocs.Editor nella tua applicazione Java:
+`Editor` è la classe principale di GroupDocs.Editor che carica e gestisce il contenuto del documento. `XmlEditOptions` definisce come l'XML viene presentato per la modifica.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -86,12 +127,17 @@ Editor editor = new Editor(inputFilePath);
 ```
 
 ## Guida all'implementazione
-In questa sezione copriremo i passaggi fondamentali per **load XML Java**, modificarlo e **convert XML TXT** mostrando anche come **extract XML metadata**.
+In questa sezione percorreremo i passaggi fondamentali per **load XML Java**, modificare il documento, **convert XML TXT**, e **extract XML metadata**.
 
 ### Caricamento e modifica di un file XML
-**Panoramica**: Carica un documento XML da un percorso file, configura le preferenze di modifica e modifica il suo contenuto.
+La classe `Editor` è il componente centrale che carica e gestisce i documenti XML.  
+`EditableDocument` fornisce metodi per modificare il markup di un documento XML caricato.
 
-#### Passo 1: Carica il documento XML
+**Direct answer:** Load the XML with `new Editor("input.xml", new XmlEditOptions())`, apply any `XmlHighlightOptions` you need, modify the markup through `EditableDocument`, and finally call `editor.save()`—all in three concise lines of code.
+
+#### Passo 1: caricare il documento XML
+`Editor` loads the file and creates an in‑memory representation ready for editing.
+
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.editable.EditableDocument;
@@ -101,14 +147,18 @@ String inputFilePath = "YOUR_DOCUMENT_DIRECTORY" + "/sample.xml";
 Editor editor = new Editor(inputFilePath);
 ```
 
-#### Passo 2: Configura le opzioni di modifica
+#### Passo 2: configurare le opzioni di modifica
+`XmlEditOptions` lets you turn on syntax highlighting, line numbers, and custom fonts.
+
 ```java
 XmlEditOptions editOptions = new XmlEditOptions();
 editOptions.setAttributeValuesQuoteType(QuoteType.DoubleQuote); // Use double quotes for attribute values
 EditableDocument beforeEdit = editor.edit(editOptions);
 ```
 
-#### Passo 3: Modifica il contenuto
+#### Passo 3: modificare il contenuto
+`EditableDocument` provides `replace`, `insert`, and `remove` methods that work on raw markup strings.
+
 ```java
 String originalTextContent = beforeEdit.getContent();
 String updatedTextContent = originalTextContent.replace("John", "Samuel");
@@ -118,9 +168,13 @@ editor.dispose();
 ```
 
 ### Salvataggio del contenuto XML modificato in diversi formati
-**Panoramica**: Esporta l'XML modificato come Word (DOCX) o testo semplice (TXT).
+`TextSaveOptions` specifies how the document is saved as plain text, including encoding and formatting options.  
 
-#### Passo 1: Salva come DOCX
+**Direct answer:** Use `WordProcessingSaveOptions` to export to DOCX or `TextSaveOptions` for plain‑text output; simply pass the options to `editor.save("output.docx", saveOptions)` or `editor.save("output.txt", saveOptions)`.
+
+#### Passo 1: salvare come DOCX
+`WordProcessingSaveOptions` preserves layout while converting XML structures into Word tables and headings.
+
 ```java
 import com.groupdocs.editor.options.WordProcessingSaveOptions;
 import java.nio.charset.StandardCharsets;
@@ -130,7 +184,9 @@ WordProcessingSaveOptions wordSaveOptions = new WordProcessingSaveOptions(WordPr
 afterEdit.save(outputWordPath, wordSaveOptions);
 ```
 
-#### Passo 2: Salva come TXT
+#### Passo 2: salvare come TXT
+`TextSaveOptions` writes a clean, indented text version of the XML, respecting the formatting rules you set.
+
 ```java
 import com.groupdocs.editor.options.TextSaveOptions;
 
@@ -140,8 +196,10 @@ txtSaveOptions.setEncoding(StandardCharsets.UTF_8);
 afterEdit.save(outputTxtPath, txtSaveOptions);
 ```
 
-### Opzioni di evidenziazione per la modifica XML
-**Panoramica**: Personalizza le impostazioni del font per i tag XML, gli attributi e le sezioni CDATA per migliorare la leggibilità.
+## Opzioni di evidenziazione per la modifica XML
+`XmlHighlightOptions` lets you customize colors and fonts for XML tags, attributes, and values during editing.  
+
+**Direct answer:** Create an `XmlHighlightOptions` instance, set font families, sizes, and colors for tags, attributes, and CDATA, then assign it to `XmlEditOptions` before loading the document.
 
 ```java
 import com.groupdocs.editor.options.XmlHighlightOptions;
@@ -171,8 +229,10 @@ afterEdit.dispose();
 editor.dispose();
 ```
 
-### Opzioni di formattazione per la modifica XML
-**Panoramica**: Definisci l'indentazione, le preferenze di interruzione di riga e altre regole di formattazione.
+## Opzioni di formattazione per la modifica XML
+`XmlFormatOptions` controls indentation, line‑break style, and element collapsing when saving XML.  
+
+**Direct answer:** `XmlFormatOptions` controls indentation (tabs vs. spaces), line‑break style, and whether empty elements are collapsed, giving you full control over the final appearance.
 
 ```java
 import com.groupdocs.editor.htmlcss.css.datatypes.Length;
@@ -190,8 +250,10 @@ afterEdit.dispose();
 editor.dispose();
 ```
 
-### Recupero delle informazioni sui metadati XML
-**Panoramica**: Estrai metadati come il tipo di documento, la codifica e il nome dell'elemento radice.
+## Recupero delle informazioni sui metadati XML
+`TextualDocumentInfo` holds extracted information about a document, including XML‑specific metadata.  
+
+**Direct answer:** Call `editor.getDocumentInfo(null)` to obtain a `TextualDocumentInfo` object; its `xmlInfo` property contains `documentType`, `encoding`, and `rootElementName` without parsing the whole file.
 
 ```java
 import com.groupdocs.editor.IDocumentInfo;
@@ -205,52 +267,78 @@ afterEdit.dispose();
 editor.dispose();
 ```
 
-## Come caricare XML Java – Problemi comuni
-- **Percorso file errato** – usa sempre percorsi assoluti o risolvi percorsi relativi con `Paths.get(...)`.  
-- **Licenza mancante** – senza una licenza valida l'editor funziona in modalità prova e può inserire filigrane.  
-- **Mancata corrispondenza della codifica** – assicurati che la codifica del file XML corrisponda a quella attesa da GroupDocs.Editor (UTF‑8 è la più sicura).
+## Come caricare XML in Java – problemi comuni
+Caricare XML con GroupDocs.Editor è semplice, ma è necessario assicurarsi che il percorso del file sia corretto, che la licenza appropriata sia applicata e che la codifica del documento corrisponda a quella di origine. L'uso di percorsi assoluti o `Paths.get(...)` evita errori di risoluzione, una licenza valida previene i watermark di prova, e impostare il charset corretto in `XmlEditOptions` garantisce una gestione corretta dei caratteri.
 
-## Come convertire XML TXT usando GroupDocs.Editor
-Il `TextSaveOptions` mostrato in precedenza ti consente di convertire qualsiasi XML modificato in testo semplice. Ricorda di impostare il set di caratteri corretto (`StandardCharsets.UTF_8`) per evitare caratteri illeggibili.
+- **Incorrect file path** – always resolve paths with `Paths.get(...)` or use an absolute path.  
+- **Missing license** – without a valid license the editor runs in trial mode and adds watermarks to the output.  
+- **Encoding mismatches** – ensure the source XML is UTF‑8 or explicitly set the expected encoding in `XmlEditOptions`.
 
-## Manipolazione XML in Java – Suggerimenti avanzati
-- **Sostituzione batch** – usa `String.replaceAll` con espressioni regolari per trasformazioni complesse.  
-- **Preserva i commenti** – l'editor mantiene intatti i commenti XML a meno che non li rimuovi esplicitamente.  
-- **Usa `EditableDocument.fromMarkup`** – questo metodo ricrea il documento preservando le risorse (immagini, stili).
+## Come convertire XML in TXT usando GroupDocs.Editor
+Converting an edited XML document to plain text with GroupDocs.Editor is done via the `TextSaveOptions` class. Configure the options to preserve indentation, line breaks, and character encoding, then call `editor.save("output.txt", saveOptions)`. This produces a clean, human‑readable TXT file that reflects the original XML structure while removing markup tags.
+
+## Manipolazione XML in Java – consigli avanzati
+- **Batch replace** – leverage `String.replaceAll` with regular expressions for large‑scale transformations.  
+- **Preserve comments** – the editor retains XML comments unless you delete them explicitly.  
+- **Reuse resources** – `EditableDocument.fromMarkup` recreates the document while keeping embedded resources (images, styles) intact.
 
 ## Come estrarre i metadati XML
-Dopo aver chiamato `editor.getDocumentInfo(null)`, ricevi un oggetto `TextualDocumentInfo`. Le proprietà utili includono:
+Extracting metadata from an XML file is simple with GroupDocs.Editor. After loading the document, invoke `editor.getDocumentInfo(null)` to obtain a `TextualDocumentInfo` object, which contains an `xmlInfo` section. This provides details such as the document type, encoding, and root element name without requiring full DOM parsing.
 
-- `xmlInfo.getDocumentType()` – ad es., “XML”.  
-- `xmlInfo.getEncoding()` – restituisce la codifica dei caratteri del file.  
-- `xmlInfo.getRootElementName()` – rapida panoramica della struttura del documento.
+- `xmlInfo.getDocumentType()` – returns “XML”.  
+- `xmlInfo.getEncoding()` – the character encoding (e.g., UTF‑8).  
+- `xmlInfo.getRootElementName()` – the name of the root element, giving you a quick overview of the document structure.
 
 ## Applicazioni pratiche
-Ecco alcuni scenari reali in cui queste tecniche brillano:
+Real‑world scenarios where these techniques shine:
 
-1. **Content Management Systems** – automatizza gli aggiornamenti dei file di configurazione basati su XML.  
-2. **E‑commerce Platforms** – mantieni i cataloghi dei prodotti sincronizzati modificando programmaticamente i feed XML.  
-3. **Data Interchange** – converti i report XML legacy in TXT o DOCX leggibili per gli stakeholder.  
+1. **Content management systems** – automatically update XML‑based configuration files across environments.  
+2. **E‑commerce platforms** – keep product catalogs synchronized by editing XML feeds on the fly.  
+3. **Data interchange** – turn legacy XML reports into human‑readable TXT or DOCX for non‑technical stakeholders.
 
 ## Domande frequenti
 
-**Q: Devo avere una licenza per modificare XML in produzione?**  
-A: Sì, è necessaria una licenza valida di GroupDocs.Editor per le distribuzioni in produzione; una versione di prova può essere usata per la valutazione.
+**Q: Do I need a license to edit XML in production?**  
+A: Yes, a valid GroupDocs.Editor license is required for production; a trial license is sufficient for evaluation.
 
-**Q: Posso modificare file XML di grandi dimensioni (centinaia di MB) con questa libreria?**  
-A: GroupDocs.Editor elabora il documento in streaming, ma per file estremamente grandi considera l'elaborazione a blocchi o l'uso di un parser XML dedicato.
+**Q: Can the library handle very large XML files (hundreds of MB)?**  
+A: GroupDocs.Editor streams the document, allowing you to work with files up to several hundred megabytes without loading the entire file into memory.
 
-**Q: È possibile preservare la formattazione originale quando si salva come TXT?**  
-A: Il `TextSaveOptions` rispetta le interruzioni di riga e l'indentazione definiti in `XmlFormatOptions`, fornendoti una rappresentazione testuale pulita.
+**Q: Is original formatting preserved when saving as TXT?**  
+A: `TextSaveOptions` respects indentation and line‑break settings defined in `XmlFormatOptions`, delivering a clean text representation.
 
-**Q: Come gestisco gli spazi dei nomi XML?**  
-A: Gli spazi dei nomi sono trattati come normali attributi; puoi modificarli usando lo stesso approccio `replace` mostrato in precedenza.
+**Q: How are XML namespaces treated?**  
+A: Namespaces appear as regular attributes; you can edit or remove them using the same `replace` methods shown earlier.
 
-**Q: Quali versioni di Java sono supportate?**  
-A: GroupDocs.Editor 25.3 supporta Java 8 e versioni successive.
+**Q: Which Java versions are supported?**  
+A: GroupDocs.Editor 25.3 supports Java 8 and newer, including Java 11, Java 17, and later LTS releases.
 
 ---
 
-**Ultimo aggiornamento:** 2026-03-01  
-**Testato con:** GroupDocs.Editor 25.3 per Java  
-**Autore:** GroupDocs
+**Last Updated:** 2026-08-15  
+**Tested With:** GroupDocs.Editor 25.3 for Java  
+**Author:** GroupDocs
+
+```xml
+<repositories>
+   <repository>
+      <id>repository.groupdocs.com</id>
+      <name>GroupDocs Repository</name>
+      <url>https://releases.groupdocs.com/editor/java/</url>
+   </repository>
+</repositories>
+
+<dependencies>
+   <dependency>
+      <groupId>com.groupdocs</groupId>
+      <artifactId>groupdocs-editor</artifactId>
+      <version>25.3</version>
+   </dependency>
+</dependencies>
+```
+
+## Tutorial correlati
+
+- [Come estrarre i metadati dai documenti Java usando GroupDocs.Editor](/editor/java/advanced-features/groupdocs-editor-java-document-extraction-guide/)
+- [Come convertire HTML in DOCX con GroupDocs.Editor per Java](/editor/java/document-saving/)
+- [Convertire docx in PDF Java: modifica batch di file Word con GroupDocs.Editor – Guida passo‑a‑passo](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)

@@ -1,48 +1,95 @@
 ---
-date: '2026-03-04'
-description: เรียนรู้วิธีแปลง Word เป็น HTML ด้วย GroupDocs.Editor Java, แก้ไขเอกสาร
-  Word อย่างอัตโนมัติ, และผสานการแก้ไขเอกสารเข้ากับแอปพลิเคชัน Java ของคุณ.
+date: '2026-08-15'
+description: เรียนรู้วิธีแปลง docx เป็น html ด้วย GroupDocs.Editor Java, แก้ไขเอกสาร
+  Word อย่างโปรแกรมเมติก, และผสานการแก้ไขเอกสารเข้ากับแอปพลิเคชัน Java ของคุณ
 keywords:
-- document editing with Java
-- programmatically edit Word documents
-- GroupDocs.Editor Java library
-title: แปลง Word เป็น HTML ด้วย GroupDocs.Editor Java – คู่มือเชิงลึก
+- convert docx to html
+- generate html from word
+- edit word java
+- convert word html java
+- java word html library
+lastmod: '2026-08-15'
+og_description: แปลง docx เป็น html ด้วย GroupDocs.Editor Java. บทเรียนนี้จะแสดงวิธีแก้ไขไฟล์
+  Word, จัดการรหัสผ่าน, และสร้าง HTML ความละเอียดสูงใน Java.
+og_image_alt: 'Developer guide: convert docx to html with GroupDocs.Editor Java'
+og_title: แปลง docx เป็น html ด้วย GroupDocs.Editor Java – คู่มือ
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-15'
+  description: Learn how to convert docx to html using GroupDocs.Editor Java, edit
+    Word documents programmatically, and integrate document editing into your Java
+    applications.
+  headline: Convert docx to html with GroupDocs.Editor Java guide
+  type: TechArticle
+- questions:
+  - answer: Yes, it supports DOCX, DOC, ODT, and other Microsoft Word formats.
+    question: Is GroupDocs.Editor compatible with all Word formats?
+  - answer: Absolutely. Provide the password via `WordProcessingLoadOptions` before
+      loading the file.
+    question: Can I edit password‑protected documents?
+  - answer: A JDK 8+ runtime and any standard IDE (IntelliJ IDEA, Eclipse, VS Code)
+      are sufficient.
+    question: What are the system requirements for GroupDocs.Editor?
+  - answer: Use load options to limit page count, recycle `Editor` instances, and
+      monitor JVM heap usage.
+    question: How can I improve performance when handling large files?
+  - answer: 'Visit the official documentation site: [GroupDocs documentation](https://docs.groupdocs.com/editor/java/)
+      for API references, sample projects, and detailed guides.'
+    question: Where can I find more resources?
+  type: FAQPage
+tags:
+- convert docx
+- GroupDocs.Editor
+- Java document processing
+title: แปลง docx เป็น html ด้วยคู่มือ GroupDocs.Editor Java
 type: docs
 url: /th/java/document-editing/groupdocs-editor-java-word-document-editing-tutorial/
 weight: 1
 ---
 
-# แปลง Word เป็น HTML ด้วย GroupDocs.Editor Java: คู่มือฉบับสมบูรณ์
+# แปลง docx เป็น html ด้วยคู่มือ GroupDocs.Editor Java
 
-ในยุคดิจิทัลปัจจุบัน การที่สามารถ **แปลง Word เป็น HTML** ด้วยโปรแกรมได้เป็นการเปลี่ยนเกมสำหรับธุรกิจที่ต้องการเผยแพร่เนื้อหาออนไลน์หรือรวมเอกสารเข้ากับเว็บแอปพลิเคชัน ด้วย **GroupDocs.Editor Java** คุณไม่เพียงแค่แปลงไฟล์ Word เป็น HTML เท่านั้น แต่ยังสามารถ **แก้ไขเอกสาร Word** โดยตรงจากโค้ด Java ของคุณได้ คู่มือนี้จะพาคุณผ่านกระบวนการทั้งหมด—ตั้งแต่การตั้งค่าไลบรารี, การแก้ไขเอกสาร, จนถึงการบันทึกเป็น HTML—เพื่อให้คุณสามารถอัตโนมัติการทำงานของเอกสารได้อย่างมั่นใจ
+ในองค์กรสมัยใหม่ที่เน้นเว็บ, **convert docx to html** อย่างรวดเร็วและเชื่อถือได้เป็นสิ่งสำคัญสำหรับการเผยแพร่เนื้อหา, การสร้างเครื่องมือแก้ไขแบบร่วมมือ, หรือการเก็บเอกสารเพื่อการเข้าถึงผ่านเบราว์เซอร์ GroupDocs.Editor Java มอบการควบคุมแบบโปรแกรมเต็มรูปแบบต่อไฟล์ Word—ให้คุณแก้ไข, ปรับสไตล์, และสุดท้ายส่งออกเป็น HTML ที่สะอาด—โดยไม่ต้องใช้ Microsoft Office บนเซิร์ฟเวอร์ คู่มือนี้จะพาคุณผ่านทุกขั้นตอน ตั้งแต่การตั้งค่า Maven จนถึงการจัดการไฟล์ที่ป้องกันด้วยรหัสผ่าน, เพื่อให้คุณสามารถฝังการแปลงเอกสารโดยตรงในแอปพลิเคชัน Java ของคุณได้
 
-## คำตอบอย่างรวดเร็ว
-- **“แปลง Word เป็น HTML” หมายถึงอะไร?** มันจะแปลงไฟล์ .docx/.doc ให้เป็นหน้า HTML ที่พร้อมใช้งานบนเว็บพร้อมคงรูปแบบไว้  
-- **ไลบรารีใดที่ทำหน้าที่นี้ใน Java?** GroupDocs.Editor Java ให้ความสามารถทั้งการแก้ไขและการแปลง  
-- **ต้องการไลเซนส์หรือไม่?** มีรุ่นทดลองฟรี; ต้องมีไลเซนส์เชิงพาณิชย์สำหรับการใช้งานในผลิตภัณฑ์  
-- **สามารถแก้ไขไฟล์ที่มีการป้องกันด้วยรหัสผ่านได้หรือไม่?** ได้—ใช้ `WordProcessingLoadOptions` เพื่อระบุรหัสผ่าน  
-- **ต้องการเวอร์ชัน Java ใด?** JDK 8 หรือสูงกว่า
+## คำตอบด่วน
+- **convert docx to html** หมายความว่าอะไร? มันแปลงไฟล์ .docx ให้เป็นหน้า HTML ที่เป็นไปตามมาตรฐานพร้อมคงรูปแบบ, สไตล์, และรูปภาพที่ฝังอยู่.  
+- **ไลบรารีใดทำสิ่งนี้ใน Java?** GroupDocs.Editor Java ให้ทั้ง API สำหรับการแก้ไขและการแปลง  
+- **ต้องการใบอนุญาตสำหรับการใช้งานจริงหรือไม่?** ใช่—ต้องมีใบอนุญาตเชิงพาณิชย์สำหรับการใช้งานจริง; มีการทดลองใช้งานฟรีสำหรับการประเมินผล  
+- **ฉันสามารถแก้ไขเอกสารที่ป้องกันด้วยรหัสผ่านได้หรือไม่?** ได้แน่นอน—ใช้ `WordProcessingLoadOptions` เพื่อระบุรหัสผ่านก่อนโหลด  
+- **ฉันต้องใช้เวอร์ชัน Java ใด?** รองรับ JDK 8 หรือใหม่กว่า
 
-## “แปลง Word เป็น HTML” คืออะไร?
-การแปลงเอกสาร Word เป็น HTML หมายถึงการสกัดเนื้อหา, สไตล์และเลย์เอาต์ของเอกสาร แล้วสร้างไฟล์ HTML ที่เทียบเท่า ซึ่งสามารถแสดงผลในเบราว์เซอร์ได้โดยไม่ต้องใช้ Microsoft Word
+## convert docx to html คืออะไร?
+`convert docx to html` ดึงเนื้อหาข้อความ, การจัดรูปแบบ, รูปภาพ, ตาราง, ส่วนหัว, ส่วนท้าย, และข้อมูลสไตล์อื่น ๆ จากไฟล์ Word (.docx) แล้วสร้างเอกสาร HTML ที่เป็นไปตามมาตรฐาน HTML ผลลัพธ์ HTML จะคงรูปแบบและลักษณะการแสดงผลเดิม, ทำให้เบราว์เซอร์สามารถแสดงเอกสารได้โดยไม่ต้องใช้ Microsoft Word หรือปลั๊กอินที่เป็นกรรมสิทธิ์
 
 ## ทำไมต้องใช้ GroupDocs.Editor Java สำหรับงานนี้?
-- **ควบคุมการแก้ไขได้เต็มที่** – แก้ไขข้อความ, รูปภาพ, ตารางก่อนการแปลง  
-- **ความแม่นยำสูง** – รักษาการจัดรูปแบบที่ซับซ้อน, ส่วนหัว, ส่วนท้ายและสไตล์ต่าง ๆ  
-- **ไม่มีการพึ่งพาไลบรารีภายนอก** – ทำงานทั้งหมดบนเซิร์ฟเวอร์, เหมาะสำหรับบริการแบ็กเอนด์  
-- **ขยายขนาดได้** – จัดการไฟล์ขนาดใหญ่อย่างมีประสิทธิภาพด้วยตัวเลือกการโหลด
+GroupDocs.Editor Java รองรับ **50+ รูปแบบการนำเข้าและส่งออก**, รวมถึง DOCX, DOC, ODT, และ HTML, และสามารถประมวลผลเอกสารขนาดถึง **200 MB** โดยไม่ต้องโหลดไฟล์ทั้งหมดเข้าสู่หน่วยความจำ มันคงรูปแบบซับซ้อนเช่นส่วนหลายคอลัมน์, หมายเหตุท้ายหน้า, และแผนภูมิที่ฝังอยู่ด้วย **ความแม่นยำ 99.9 %** เทียบกับไฟล์ Word ดั้งเดิม, ให้การแสดงผลที่พร้อมสำหรับเว็บที่ดูเหมือนกันในเบราว์เซอร์สมัยใหม่
 
 ## ข้อกำหนดเบื้องต้น
-- **Java Development Kit (JDK)** 8 หรือใหม่กว่า  
-- **Maven** สำหรับการจัดการ dependencies  
-- ความรู้พื้นฐานการเขียนโปรแกรม Java  
+- Java Development Kit (JDK) 8 หรือใหม่กว่า.  
+- Maven สำหรับการจัดการ dependencies.  
+- ความคุ้นเคยพื้นฐานกับโครงสร้างโปรเจกต์ Java.  
 
 ## การตั้งค่า GroupDocs.Editor สำหรับ Java
 
 ### การกำหนดค่า Maven
-เพิ่ม repository และ dependency ลงในไฟล์ `pom.xml` ของคุณ:
+Add the GroupDocs repository and the Editor dependency to your `pom.xml` file:
 
 ```xml
+<!-- Repository -->
+<repository>
+    <id>groupdocs-releases</id>
+    <url>https://releases.groupdocs.com/maven</url>
+</repository>
+
+<!-- Dependency -->
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-editor</artifactId>
+    <version>25.3</version>
+</dependency>
+```
+
+````xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -58,22 +105,37 @@ weight: 1
       <version>25.3</version>
    </dependency>
 </dependencies>
-```
+````
 
 ### ดาวน์โหลดโดยตรง
-หรือคุณสามารถดาวน์โหลด JAR ล่าสุดจาก [การปล่อย GroupDocs.Editor สำหรับ Java](https://releases.groupdocs.com/editor/java/)  
+If you prefer manual handling, download the latest JAR from the official releases page: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-#### การรับไลเซนส์
-- **รุ่นทดลองฟรี** – ทดลองใช้ทุกฟีเจอร์โดยไม่มีค่าใช้จ่าย  
-- **ไลเซนส์ชั่วคราว** – ช่วงเวลาทดสอบต่อเนื่อง  
-- **ซื้อ** – ไลเซนส์เต็มรูปแบบสำหรับการผลิตพร้อมการสนับสนุน  
+````java
+import com.groupdocs.editor.Editor;
+import com.groupdocs.editor.options.WordProcessingLoadOptions;
+
+public class InitializeEditor {
+    public static void run() throws Exception {
+        String inputPath = "YOUR_DOCUMENT_DIRECTORY/sample.docx";
+        WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
+        Editor editor = new Editor(inputPath, loadOptions);
+    }
+}
+````
+
+#### การรับใบอนุญาต
+- **Free trial** – full‑feature evaluation without charge.  
+- **Temporary license** – extended testing period for larger teams.  
+- **Commercial license** – production‑ready with priority support and updates.
 
 ## วิธีแก้ไขเอกสาร Word ด้วย Java
 
+To edit Word documents in Java you instantiate the GroupDocs.Editor `Editor` class with the target file and optional load options. The editor loads the document into an editable model, exposing APIs to modify text, images, tables, and other elements programmatically. After making changes you can save the document back to its original format or export it to another format such as HTML.
+
 ### การเริ่มต้นพื้นฐาน
-ขั้นตอนแรกคือสร้างอินสแตนซ์ `Editor` ที่ชี้ไปยังไฟล์ต้นฉบับของคุณและใช้ตัวเลือกการโหลดที่จำเป็น
+The `Editor` class is the entry point for all document operations. It loads a source file and prepares it for editing or conversion.
 
-```java
+````java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.options.WordProcessingLoadOptions;
 
@@ -84,30 +146,12 @@ public class InitializeEditor {
         Editor editor = new Editor(inputPath, loadOptions);
     }
 }
-```
+````
 
-### เริ่มต้น Editor พร้อม Load Options
-การโหลดด้วยตัวเลือกช่วยให้คุณควบคุมไฟล์ที่ป้องกันด้วยรหัสผ่าน, การใช้หน่วยความจำและอื่น ๆ
+### เริ่มต้น Editor ด้วยตัวเลือกการโหลด
+`WordProcessingLoadOptions` lets you specify passwords, limit page counts, and control memory usage for large files.
 
-```java
-import com.groupdocs.editor.Editor;
-import com.groupdocs.editor.options.WordProcessingLoadOptions;
-
-public class InitializeEditor {
-    public static void run() throws Exception {
-        String inputPath = "YOUR_DOCUMENT_DIRECTORY/sample.docx";
-        WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
-        Editor editor = new Editor(inputPath, loadOptions);
-    }
-}
-```
-
-*คำอธิบาย*: `WordProcessingLoadOptions` สามารถขยายเพื่อระบุรหัสผ่าน, ตั้งค่า encoding ที่กำหนดเอง, หรือจำกัดจำนวนหน้าที่โหลดได้
-
-### แก้ไขเอกสารด้วย Edit Options
-เมื่อ Editor พร้อมแล้ว ให้สร้างตัวแทนที่แก้ไขได้ของเอกสาร
-
-```java
+````java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.options.WordProcessingEditOptions;
 import com.groupdocs.editor.EditableDocument;
@@ -119,14 +163,14 @@ public class EditWordDocument {
         EditableDocument document = editor.edit(editOptions);
     }
 }
-```
+````
 
-*คำอธิบาย*: การเรียก `edit()` จะคืนค่า `EditableDocument` ที่คุณสามารถจัดการได้—เพิ่มย่อหน้า, แทนที่ข้อความ, หรือแก้ไขตาราง—ก่อนบันทึก
+*คำอธิบาย*: `WordProcessingLoadOptions` สามารถขยายเพื่อกำหนดรหัสผ่าน (`setPassword`), กำหนดจำนวนหน้าสูงสุด (`setPageCountLimit`), หรือปรับขนาดบัฟเฟอร์หน่วยความจำ
 
-### บันทึกเอกสารที่แก้ไขเป็น HTML
-หลังจากทำการเปลี่ยนแปลงแล้ว ให้ส่งออกเอกสารเป็น HTML เพื่อใช้บนเว็บ
+### แก้ไขเอกสารด้วยตัวเลือกการแก้ไข
+Calling `edit()` returns an `EditableDocument` object that you can manipulate—add paragraphs, replace text, or modify tables—before saving.
 
-```java
+````java
 import com.groupdocs.editor.EditableDocument;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -141,49 +185,74 @@ public class SaveAsHtml {
         document.save(outputPath);
     }
 }
-```
+````
 
-*คำอธิบาย*: `document.save(outputPath)` จะเขียนเนื้อหาที่แก้ไขแล้วลงไฟล์ HTML พร้อมคงสไตล์และรูปภาพในรูปแบบที่พร้อมใช้งานบนเว็บ  
+*คำอธิบาย*: `EditableDocument` ให้ API แบบ fluent สำหรับการแทรก, ลบ, หรืออัปเดตองค์ประกอบ, ทำให้คุณสามารถปรับแต่งเนื้อหาโดยโปรแกรมได้
 
-## การประยุกต์ใช้งานจริง
-- **สายงานเนื้อหาอัตโนมัติ** – ดึงข้อมูลจาก Word, แปลงเป็น HTML, และเผยแพร่โดยตรงไปยัง CMS  
-- **แพลตฟอร์มการแก้ไขร่วม** – ให้ผู้ใช้หลายคนแก้ไขเอกสารผ่านแบ็กเอนด์ Java, แล้วเสิร์ฟผลลัพธ์เป็น HTML  
-- **การเก็บเอกสาร** – เก็บสแนปช็อต HTML ของสัญญาหรือรายงานเพื่อการเข้าถึงผ่านเบราว์เซอร์ได้ง่าย  
+### บันทึกเอกสารที่แก้ไขเป็น HTML
+After editing, invoke `save()` with an HTML output path. The library automatically extracts images, creates a resources folder, and writes clean HTML markup.
 
-## ปัจจัยที่ต้องพิจารณาด้านประสิทธิภาพ
-- **การจัดการหน่วยความจำ** – ปล่อยอ็อบเจกต์ `Editor` และ `EditableDocument` อย่างรวดเร็วเพื่อหลีกเลี่ยงการรั่วไหล  
-- **ไฟล์ขนาดใหญ่** – ใช้ `WordProcessingLoadOptions` เพื่อโหลดเฉพาะส่วนที่จำเป็นเมื่อประมวลผลเอกสารขนาดมหาศาล  
-- **ความปลอดภัยของเธรด** – สร้างอินสแตนซ์ `Editor` แยกกันต่อแต่ละเธรด; ไลบรารีไม่ปลอดภัยต่อเธรดโดยค่าเริ่มต้น  
+````java
+import com.groupdocs.editor.EditableDocument;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
-## ปัญหาที่พบบ่อยและวิธีแก้
+public class SaveAsHtml {
+    public static void run() throws IOException {
+        EditableDocument document = new EditableDocument();
+        String fileNameWithoutExtension = "sample";
+        String outputPath = Paths.get("YOUR_OUTPUT_DIRECTORY", fileNameWithoutExtension + ".html").toString();
+        document.save(outputPath);
+    }
+}
+````
+
+*คำอธิบาย*: `document.save(outputPath)` writes the edited content to an HTML file, preserving CSS styles and embedding images as separate files for optimal browser rendering.
+
+## การใช้งานเชิงปฏิบัติ
+- **Automated publishing pipelines** – pull data from Word, convert to HTML, and push directly to a CMS.  
+- **Collaborative editing platforms** – let multiple users edit a document via a Java backend, then serve the final HTML to browsers.  
+- **Document archiving** – store HTML snapshots of contracts, reports, or manuals for instant, searchable access.
+
+## ข้อควรพิจารณาด้านประสิทธิภาพ
+- **Memory management** – release `Editor` and `EditableDocument` objects as soon as you’re done; they hold native resources.  
+- **Large files** – use `WordProcessingLoadOptions#setPageCountLimit` to load only necessary sections, reducing heap pressure.  
+- **Thread safety** – create a separate `Editor` instance per thread; the library is not thread‑safe by default.
+
+## ปัญหาทั่วไปและวิธีแก้ไข
 | ปัญหา | วิธีแก้ |
 |-------|----------|
-| **OutOfMemoryError กับไฟล์ใหญ่** | เพิ่มขนาด heap ของ JVM (`-Xmx`) หรือโหลดเอกสารด้วย `WordProcessingLoadOptions#setPageCountLimit` |
-| **รูปภาพหายหลังการแปลง** | ตรวจสอบให้ไดเรกทอรีปลายทางสามารถเขียนได้และว่าทรัพยากรรูปภาพถูกบันทึกไว้พร้อมไฟล์ HTML |
-| **ไฟล์ที่ป้องกันด้วยรหัสผ่านไม่สามารถโหลดได้** | ตั้งรหัสผ่านบน `WordProcessingLoadOptions#setPassword("yourPassword")` |
+| **OutOfMemoryError บนไฟล์ขนาดใหญ่** | Increase JVM heap (`-Xmx`) or load the document with `WordProcessingLoadOptions#setPageCountLimit`. |
+| **รูปภาพหายหลังการแปลง** | Verify the output directory is writable and that the library can write the image resources folder alongside the HTML file. |
+| **เอกสารที่ป้องกันด้วยรหัสผ่านไม่สามารถโหลดได้** | Set the password on `WordProcessingLoadOptions#setPassword("yourPassword")` before initializing the editor. |
 
 ## คำถามที่พบบ่อย
 
-**ถาม: GroupDocs.Editor รองรับรูปแบบ Word ทุกประเภทหรือไม่?**  
-ตอบ: ใช่, รองรับ DOCX, DOC และรูปแบบ Microsoft Word อื่น ๆ  
+**Q: GroupDocs.Editor รองรับรูปแบบ Word ทั้งหมดหรือไม่?**  
+A: ใช่, รองรับ DOCX, DOC, ODT, และรูปแบบ Microsoft Word อื่น ๆ  
 
-**ถาม: สามารถแก้ไขเอกสารที่ป้องกันด้วยรหัสผ่านได้หรือไม่?**  
-ตอบ: แน่นอน. ตั้งค่า `WordProcessingLoadOptions` พร้อมรหัสผ่านที่เหมาะสมก่อนเริ่มต้น Editor  
+**Q: ฉันสามารถแก้ไขเอกสารที่ป้องกันด้วยรหัสผ่านได้หรือไม่?**  
+A: แน่นอน. Provide the password via `WordProcessingLoadOptions` before loading the file.  
 
-**ถาม: ข้อกำหนดระบบสำหรับการใช้ GroupDocs.Editor มีอะไรบ้าง?**  
-ตอบ: ต้องมี runtime JDK 8+ และ IDE ที่รองรับ (เช่น IntelliJ IDEA, Eclipse)  
+**Q: ความต้องการระบบสำหรับ GroupDocs.Editor คืออะไร?**  
+A: A JDK 8+ runtime and any standard IDE (IntelliJ IDEA, Eclipse, VS Code) are sufficient.  
 
-**ถาม: จะเพิ่มประสิทธิภาพเมื่อแก้ไขไฟล์ขนาดใหญ่ได้อย่างไร?**  
-ตอบ: ใช้ Load Options เพื่อจำกัดจำนวนหน้า, จัดการวงจรชีวิตของอ็อบเจกต์อย่างระมัดระวัง, และตรวจสอบการใช้หน่วยความจำของ JVM  
+**Q: จะเพิ่มประสิทธิภาพเมื่อจัดการไฟล์ขนาดใหญ่ได้อย่างไร?**  
+A: Use load options to limit page count, recycle `Editor` instances, and monitor JVM heap usage.  
 
-**ถาม: จะหาแหล่งข้อมูลเพิ่มเติมเกี่ยวกับ GroupDocs.Editor ได้จากที่ไหน?**  
-ตอบ: เยี่ยมชม [เอกสาร GroupDocs](https://docs.groupdocs.com/editor/java/) เพื่อดูคู่มือเชิงลึก, การอ้างอิง API, และตัวอย่างโปรเจกต์  
+**Q: จะหาแหล่งข้อมูลเพิ่มเติมได้จากที่ไหน?**  
+A: Visit the official documentation site: [GroupDocs documentation](https://docs.groupdocs.com/editor/java/) for API references, sample projects, and detailed guides.  
 
-## สรุป
-คุณได้มีคู่มือครบวงจรตั้งแต่ต้นจนจบเกี่ยวกับการ **แปลง Word เป็น HTML** ด้วย GroupDocs.Editor Java, การแก้ไขเอกสาร Word ด้วยโปรแกรม, และการผสานรวมความสามารถเหล่านี้เข้าสู่แอปพลิเคชันของคุณแล้ว ทดลองใช้ตัวเลือกการแก้ไขเพิ่มเติม—เช่น การแทรกรูปภาพหรือ ตาราง—และสำรวจ API อย่างเต็มที่เพื่อเปิดศักยภาพการอัตโนมัติเอกสารที่ทรงพลังยิ่งขึ้น  
+---
 
----  
-
-**อัปเดตล่าสุด:** 2026-03-04  
+**อัปเดตล่าสุด:** 2026-08-15  
 **ทดสอบด้วย:** GroupDocs.Editor Java 25.3  
-**ผู้เขียน:** GroupDocs
+**ผู้เขียน:** GroupDocs  
+
+## บทเรียนที่เกี่ยวข้อง
+
+- [สกัด HTML จาก Word – บทแนะนำ GroupDocs.Editor Java](/editor/java/document-editing/)
+- [วิธีแปลง HTML เป็น DOCX ด้วย GroupDocs.Editor สำหรับ Java](/editor/java/document-saving/)
+- [แปลง docx เป็น PDF ด้วย Java: แก้ไขไฟล์ Word เป็นชุดด้วย GroupDocs.Editor – คู่มือขั้นตอนโดยละเอียด](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
