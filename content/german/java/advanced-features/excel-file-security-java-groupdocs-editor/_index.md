@@ -64,10 +64,6 @@ url: /de/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Excel Java mit GroupDocs.Editor schützen
 
 In diesem umfassenden Tutorial erfahren Sie, wie Sie **protect Excel Java** Anwendungen mithilfe der robusten Sicherheitsfunktionen von GroupDocs.Editor schützen. Wir führen Sie durch das Laden einer passwortgeschützten Arbeitsmappe, den Umgang mit falschen Passwörtern, das Anwenden eines neuen Passworts beim Speichern und das Aktivieren des Schreibschutzes – und das alles bei geringem Speicherverbrauch für große Tabellen.
@@ -343,8 +339,3 @@ Durch die Befolgung dieses Tutorials wissen Sie nun, wie Sie **protect Excel Jav
 - [Batch‑Bearbeitung von Word‑Dateien in Java mit GroupDocs.Editor – Schritt‑für‑Schritt‑Anleitung](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [Wie man Excel‑ und Word‑Dateien in Java mit GroupDocs.Editor bearbeitet](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Wie man eine Lizenz für GroupDocs.Editor in Java mit InputStream festlegt: Ein umfassender Leitfaden](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
