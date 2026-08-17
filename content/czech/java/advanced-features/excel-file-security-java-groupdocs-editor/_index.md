@@ -64,10 +64,6 @@ url: /cs/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Chraňte Excel Java pomocí GroupDocs.Editor
 
 V tomto komplexním tutoriálu se dozvíte, jak **chránit Excel Java** aplikace pomocí robustních bezpečnostních funkcí GroupDocs.Editor. Provedeme vás načítáním sešitu chráněného heslem, zpracováním nesprávných hesel, nastavením nového hesla při ukládání a povolením ochrany proti zápisu – vše při nízké spotřebě paměti pro velké tabulky.
@@ -343,8 +339,3 @@ Po absolvování tohoto tutoriálu nyní víte, jak **chránit Excel Java** pomo
 - [Hromadná úprava souborů Word v Javě s GroupDocs.Editor – průvodce krok za krokem](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [jak upravit soubory Excel a Word v Javě s GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Jak nastavit licenci pro GroupDocs.Editor v Javě pomocí InputStream: komplexní průvodce](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
