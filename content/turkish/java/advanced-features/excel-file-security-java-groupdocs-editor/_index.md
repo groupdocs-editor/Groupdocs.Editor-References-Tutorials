@@ -64,10 +64,6 @@ url: /tr/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # GroupDocs.Editor ile Excel Java'yi Koruma
 
 Bu kapsamlı öğreticide, GroupDocs.Editor'ın güçlü güvenlik özelliklerini kullanarak **Excel Java'yi koruma** uygulamalarını nasıl **koruyacağınızı** keşfedeceksiniz. Parola korumalı bir çalışma kitabını yüklemeyi, yanlış parolaları ele almayı, kaydederken yeni bir parola uygulamayı ve yazma korumasını etkinleştirmeyi adım adım göstereceğiz — büyük elektronik tablolarda bellek kullanımını düşük tutarken.
@@ -343,7 +339,3 @@ Bu öğreticiyi izleyerek, GroupDocs.Editor kullanarak **Excel Java**'yi nasıl 
 - [Java'da GroupDocs.Editor ile Word Dosyalarını Toplu Düzenleme – Adım‑Adım Kılavuz](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [Java'da GroupDocs.Editor ile Excel ve Word dosyalarını nasıl düzenlenir](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Java'da GroupDocs.Editor için InputStream Kullanarak Lisans Ayarlama: Kapsamlı Kılavuz](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
