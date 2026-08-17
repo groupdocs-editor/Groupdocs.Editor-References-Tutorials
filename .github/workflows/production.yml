@@ -55,7 +55,17 @@ jobs:
           node-version: '22'
       - name: Install Theme Dependencies
         run: npm install
-        working-directory: ./themes/tutorials-theme      
+        working-directory: ./themes/tutorials-theme
+      - name: DEBUG theme shortcode lookup
+        run: |
+          echo "--- theme HEAD ---"
+          cd themes/tutorials-theme && git log -1 --format='%H %ci %s' && cd -
+          echo "--- searching for main-wrap-class anywhere in theme ---"
+          find themes/tutorials-theme -iname '*main-wrap-class*' || true
+          echo "--- listing layouts/shortcodes/blocks/products/pf ---"
+          find themes/tutorials-theme -path '*shortcodes*blocks*products*pf*' | sort
+          echo "--- top-level theme layout dirs ---"
+          find themes/tutorials-theme -maxdepth 3 -type d | sort
       # Step 2 - Sets up the latest version of Hugo
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
