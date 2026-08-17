@@ -62,10 +62,6 @@ schemas:
       for multi‑node scenarios.
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Protect Excel Java with GroupDocs.Editor
 
 In this comprehensive tutorial you’ll discover how to **protect Excel Java** applications by using GroupDocs.Editor’s robust security features. We’ll walk through loading a password‑protected workbook, handling wrong passwords, applying a new password on save, and enabling write‑protection—all while keeping memory usage low for large spreadsheets.
@@ -341,8 +337,3 @@ By following this tutorial, you now know how to **protect Excel Java** using Gro
 - [Batch Edit Word Files in Java with GroupDocs.Editor – Step‑by‑Step Guide](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [how to edit excel and Word files in Java with GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [How to Set a License for GroupDocs.Editor in Java Using InputStream: A Comprehensive Guide](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
