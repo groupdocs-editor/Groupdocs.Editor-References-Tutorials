@@ -64,10 +64,6 @@ url: /id/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Melindungi Excel Java dengan GroupDocs.Editor
 
 Dalam tutorial komprehensif ini Anda akan menemukan cara **protect Excel Java** aplikasi dengan menggunakan fitur keamanan yang kuat dari GroupDocs.Editor. Kami akan membahas cara memuat workbook yang dilindungi kata sandi, menangani kata sandi yang salah, menerapkan kata sandi baru saat menyimpan, dan mengaktifkan proteksi penulisan—semua sambil menjaga penggunaan memori tetap rendah untuk spreadsheet besar.
@@ -343,8 +339,3 @@ Dengan mengikuti tutorial ini, Anda kini tahu cara **protect Excel Java** menggu
 - [Edit Batch File Word di Java dengan GroupDocs.Editor – Panduan Langkah‑per‑Langkah](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [cara mengedit file excel dan Word di Java dengan GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Cara Menetapkan Lisensi untuk GroupDocs.Editor di Java Menggunakan InputStream: Panduan Komprehensif](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
