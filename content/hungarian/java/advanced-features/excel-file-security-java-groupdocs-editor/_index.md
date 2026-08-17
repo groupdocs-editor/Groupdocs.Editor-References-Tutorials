@@ -64,10 +64,6 @@ url: /hu/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Excel Java védelme a GroupDocs.Editor segítségével
 
 Ebben az átfogó útmutatóban megtudja, hogyan **protect Excel Java** alkalmazásokat a GroupDocs.Editor robusztus biztonsági funkcióinak használatával. Végigvezetjük a jelszóval védett munkafüzet betöltésén, a helytelen jelszavak kezelésén, az új jelszó mentéskor történő alkalmazásán és az írásvédelem engedélyezésén — mindezt úgy, hogy nagy táblázatok esetén alacsony memóriahasználatot biztosítunk.
@@ -343,7 +339,3 @@ Ezzel az útmutatóval most már tudja, hogyan **protect Excel Java** a GroupDoc
 - [Word fájlok kötegelt szerkesztése Java-ban a GroupDocs.Editor‑rel – Lépésről‑lépésre útmutató](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [Hogyan szerkesszünk Excel és Word fájlokat Java-ban a GroupDocs.Editor segítségével](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Hogyan állítsunk be licencet a GroupDocs.Editor számára Java-ban InputStream használatával: Átfogó útmutató](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
