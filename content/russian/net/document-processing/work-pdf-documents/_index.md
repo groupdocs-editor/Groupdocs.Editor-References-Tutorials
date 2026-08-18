@@ -103,40 +103,90 @@ GroupDocs.Editor поддерживает **30+ форматов докумен�
 ## Импорт пространств имён
 Перед написанием кода убедитесь, что необходимые пространства имён импортированы в ваш проект:
 ```csharp
-string inputFilePath = "Your Sample Document.pdf";
+using System;
+using GroupDocs.Editor.Formats;
+using GroupDocs.Editor.HtmlCss.Resources;
+using GroupDocs.Editor.Options;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 ```
 
 ## Как загрузить PDF, защищённый паролем?
 `PdfLoadOptions` определяет параметры загрузки PDF‑файлов, включая пароль и настройки памяти. Чтобы загрузить защищённый PDF, создайте экземпляр `PdfLoadOptions`, установите его свойство `Password` в пароль документа и передайте этот объект редактору. Это гарантирует, что файл будет расшифрован перед любыми операциями редактирования.  
-```csharp
-using (FileStream fs = File.OpenRead(inputFilePath))
-```
-
-## Шаг 1: Получить путь к входному файлу
-Сначала необходимо указать путь к вашему PDF‑документу. Для этого учебника будем считать, что у вас есть пример PDF‑файла.
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
 // If the document is password-protected
 loadOptions.Password = "your_password";
 ```
 
+## Шаг 1: Получить путь к входному файлу
+Сначала необходимо указать путь к вашему PDF‑документу. Для этого учебника будем считать, что у вас есть пример PDF‑файла.
+```csharp
+string inputFilePath = "Your Sample Document.pdf";
+```
+
 ## Как прочитать поток PDF‑файла?
 `FileStream` предоставляет поток для чтения и записи файлов на диске. Используйте его, чтобы открыть PDF в режиме чтения, что позволяет редактору обрабатывать файл без блокировки его для эксклюзивного доступа. Пример: `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` обеспечивает оптимальную производительность и безопасное параллельное чтение.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Шаг 2: Создать поток из пути
+Далее создайте файловый поток из указанного пути. Этот поток будет использоваться для чтения PDF‑документа.
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Как настроить параметры загрузки для PDF, защищённого паролем?
+`PdfLoadOptions` определяет параметры загрузки PDF‑файлов, включая пароль и использование памяти. После создания экземпляра присвойте свойству `Password` пароль документа. Для больших PDF вы также можете установить `UseMemoryCache = false`, чтобы снизить потребление памяти. Эти настройки подготавливают загрузчик к эффективной работе с зашифрованными и крупными файлами.
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Шаг 3: Создать параметры загрузки для документа
+Чтобы загрузить PDF‑документ, необходимо указать параметры загрузки. Если ваш PDF защищён паролем, вы можете указать пароль здесь.
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Как инициализировать Editor с потоком и параметрами?
+`Editor` — основной класс, который загружает документ и предоставляет возможности редактирования. Создайте его, передав делегат, возвращающий файловый поток, и другой делегат, возвращающий ранее сконфигурированные параметры загрузки. Это создаёт представление PDF в памяти, готовое к дальнейшей обработке.
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
 
-## Шаг 2: Создать поток из пути
-Далее создайте файловый поток из указанного пути. Этот поток будет использоваться для чтения PDF‑документа.
+## Шаг 4: Загрузить документ в экземпляр Editor
+Теперь используйте файловый поток и параметры загрузки, чтобы загрузить документ в экземпляр `Editor`.
+```csharp
+using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
+{
+    var documentInfo = editor.GetDocumentInfo(null);
+```
+
+## Как включить пагинацию при редактировании PDF?
+`PdfEditOptions` задаёт параметры редактирования PDF‑файлов, такие как пагинация. Создайте экземпляр этого класса и установите `EnablePagination = true`. Включение пагинации сохраняет оригинальные разрывы страниц и макет после изменений, гарантируя, что выходной PDF сохраняет ту же визуальную структуру, что и исходный.
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
 
-## Как настроить параметры загрузки для PDF, защищённого паролем?
-`PdfLoadOptions` определяет параметры загрузки PDF‑файлов, включая пароль и использование памяти. После создания экземпляра присвойте свойству `Password` пароль документа. Для больших PDF вы также можете установить `UseMemoryCache = false`, чтобы снизить потребление памяти. Эти настройки подготавливают загрузчик к эффективной работе с зашифрованными и крупными файлами.
+## Шаг 5: Создать параметры редактирования
+Установите параметры редактирования для документа. В данном случае мы включим режим пагинации.
+```csharp
+Options.PdfEditOptions editOptions = new PdfEditOptions();
+editOptions.EnablePagination = true;
+```
+
+## Как создать редактируемый промежуточный документ?
+`CreateEditableDocument` создаёт редактируемое представление загруженного документа. Вызовите этот метод у экземпляра `Editor`, передав ранее определённые `PdfEditOptions`. Метод возвращает `EditableDocument`, содержащий контент, похожий на HTML, который можно программно изменить перед сохранением обратно в PDF.
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
@@ -145,22 +195,46 @@ using (EditableDocument beforeEdit = editor.Edit(editOptions))
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
 
-## Шаг 3: Создать параметры загрузки для документа
-Чтобы загрузить PDF‑документ, необходимо указать параметры загрузки. Если ваш PDF защищён паролем, вы можете указать пароль здесь.
+## Шаг 6: Создать промежуточный редактируемый документ
+Создайте промежуточный редактируемый документ, используя экземпляр редактора и параметры редактирования.
+```csharp
+using (EditableDocument beforeEdit = editor.Edit(editOptions))
+{
+    // Extract textual content as HTML markup
+    string originalContent = beforeEdit.GetContent();
+    List<IHtmlResource> allResources = beforeEdit.AllResources;
+```
+
+## Как заменить текст внутри редактируемого контента?
+`EditableDocument` хранит содержимое документа в редактируемом формате. Доступ к его свойству `Content` возвращает строку с HTML‑представлением документа. Используйте стандартные операции со строками C#, такие как `Replace`, или регулярные выражения, чтобы изменить текст по необходимости перед перестроением документа.
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
 
-## Как инициализировать Editor с потоком и параметрами?
-`Editor` — основной класс, который загружает документ и предоставляет возможности редактирования. Создайте его, передав делегат, возвращающий файловый поток, и другой делегат, возвращающий ранее сконфигурированные параметры загрузки. Это создаёт представление PDF в памяти, готовое к дальнейшей обработке.
+## Шаг 7: Изменить содержимое
+Измените содержимое документа по необходимости. Здесь мы просто заменяем слово в документе.
+```csharp
+string editedContent = originalContent.Replace("document", "edited document");
+```
+
+## Как перестроить EditableDocument после изменений?
+`EditableDocument` хранит содержимое документа в редактируемом формате. После редактирования HTML‑строки создайте новый `EditableDocument`, передав изменённый контент и любые связанные ресурсы (изображения, шрифты) обратно в редактор. Это восстанавливает внутреннюю структуру документа, подготавливая его к сохранению с обновлённым содержимым.
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
 
-## Шаг 4: Загрузить документ в экземпляр Editor
-Теперь используйте файловый поток и параметры загрузки, чтобы загрузить документ в экземпляр `Editor`.
+## Шаг 8: Создать новый EditableDocument с отредактированным содержимым
+Создайте новый экземпляр `EditableDocument` с отредактированным содержимым и ресурсами.
+```csharp
+using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
+{
+    string originalContent3 = afterEdit.GetContent();
+```
+
+## Как настроить параметры сохранения PDF, включая шифрование?
+`PdfSaveOptions` определяет параметры сохранения PDF‑файлов, включая защиту паролем и сжатие. Создайте его, установите `Password` для шифрования вывода, при необходимости включите `EnablePagination`, чтобы сохранить макет страниц, и настройте `CompressionLevel` для больших файлов. Эти настройки управляют тем, как отредактированный PDF записывается на диск.
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
@@ -168,8 +242,17 @@ saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
 
-## Как включить пагинацию при редактировании PDF?
-`PdfEditOptions` задаёт параметры редактирования PDF‑файлов, такие как пагинация. Создайте экземпляр этого класса и установите `EnablePagination = true`. Включение пагинации сохраняет оригинальные разрывы страниц и макет после изменений, гарантируя, что выходной PDF сохраняет ту же визуальную структуру, что и исходный.
+## Шаг 9: Создать параметры сохранения документа
+Укажите параметры сохранения для PDF‑документа. Вы также можете задать пароль для выходного документа.
+```csharp
+FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
+Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
+saveOptions.Password = "output_password";
+saveOptions.OptimizeMemoryUsage = true;
+```
+
+## Как сохранить отредактированный PDF на диск?
+`Save` записывает отредактированный документ в файл, используя указанные параметры сохранения. Вызовите его у экземпляра `Editor`, передав обновлённый `EditableDocument` и сконфигурированные `PdfSaveOptions`. Метод создаёт окончательный PDF в целевом месте, применяя любые настройки шифрования или пагинации, которые вы задали.
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -179,49 +262,16 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-## Шаг 5: Создать параметры редактирования
-Установите параметры редактирования для документа. В данном случае мы включим режим пагинации.
-CODE_BLOCK_PLACEHOLDER_11_END
-
-## Как создать редактируемый промежуточный документ?
-`CreateEditableDocument` создаёт редактируемое представление загруженного документа. Вызовите этот метод у экземпляра `Editor`, передав ранее определённые `PdfEditOptions`. Метод возвращает `EditableDocument`, содержащий контент, похожий на HTML, который можно программно изменить перед сохранением обратно в PDF.
-CODE_BLOCK_PLACEHOLDER_12_END
-
-## Шаг 6: Создать промежуточный редактируемый документ
-Создайте промежуточный редактируемый документ, используя экземпляр редактора и параметры редактирования.
-CODE_BLOCK_PLACEHOLDER_13_END
-
-## Как заменить текст внутри редактируемого контента?
-`EditableDocument` хранит содержимое документа в редактируемом формате. Доступ к его свойству `Content` возвращает строку с HTML‑представлением документа. Используйте стандартные операции со строками C#, такие как `Replace`, или регулярные выражения, чтобы изменить текст по необходимости перед перестроением документа.
-CODE_BLOCK_PLACEHOLDER_14_END
-
-## Шаг 7: Изменить содержимое
-Измените содержимое документа по необходимости. Здесь мы просто заменяем слово в документе.
-CODE_BLOCK_PLACEHOLDER_15_END
-
-## Как перестроить EditableDocument после изменений?
-`EditableDocument` хранит содержимое документа в редактируемом формате. После редактирования HTML‑строки создайте новый `EditableDocument`, передав изменённый контент и любые связанные ресурсы (изображения, шрифты) обратно в редактор. Это восстанавливает внутреннюю структуру документа, подготавливая его к сохранению с обновлённым содержимым.
-CODE_BLOCK_PLACEHOLDER_16_END
-
-## Шаг 8: Создать новый EditableDocument с отредактированным содержимым
-Создайте новый экземпляр `EditableDocument` с отредактированным содержимым и ресурсами.
-CODE_BLOCK_PLACEHOLDER_17_END
-
-## Как настроить параметры сохранения PDF, включая шифрование?
-`PdfSaveOptions` определяет параметры сохранения PDF‑файлов, включая защиту паролем и сжатие. Создайте его, установите `Password` для шифрования вывода, при необходимости включите `EnablePagination`, чтобы сохранить макет страниц, и настройте `CompressionLevel` для больших файлов. Эти настройки управляют тем, как отредактированный PDF записывается на диск.
-CODE_BLOCK_PLACEHOLDER_18_END
-
-## Шаг 9: Создать параметры сохранения документа
-Укажите параметры сохранения для PDF‑документа. Вы также можете задать пароль для выходного документа.
-CODE_BLOCK_PLACEHOLDER_19_END
-
-## Как сохранить отредактированный PDF на диск?
-`Save` записывает отредактированный документ в файл, используя указанные параметры сохранения. Вызовите его у экземпляра `Editor`, передав обновлённый `EditableDocument` и сконфигурированные `PdfSaveOptions`. Метод создаёт окончательный PDF в целевом месте, применяя любые настройки шифрования или пагинации, которые вы задали.
-CODE_BLOCK_PLACEHOLDER_20_END
-
 ## Шаг 10: Сохранить отредактированный документ
 Наконец, сохраните отредактированный документ по указанному пути вывода.
-CODE_BLOCK_PLACEHOLDER_21_END
+```csharp
+string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
+string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
+using (FileStream outputStream = File.Create(outputPath))
+{
+    editor.Save(afterEdit, outputStream, saveOptions);
+}
+```
 
 ## Распространённые проблемы и решения
 - **Пики использования памяти при огромных PDF** — включите потоковую обработку, установив `LoadOptions.UseMemoryCache = false`.  
