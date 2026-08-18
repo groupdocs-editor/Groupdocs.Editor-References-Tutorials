@@ -102,40 +102,90 @@ GroupDocs.Editor는 **30개 이상의 문서 형식**을 지원하며, 전체 �
 ## 네임스페이스 가져오기
 코드를 작성하기 전에 프로젝트에 필요한 네임스페이스가 임포트되어 있는지 확인하십시오:
 ```csharp
-string inputFilePath = "Your Sample Document.pdf";
+using System;
+using GroupDocs.Editor.Formats;
+using GroupDocs.Editor.HtmlCss.Resources;
+using GroupDocs.Editor.Options;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 ```
 
 ## 비밀번호로 보호된 PDF를 어떻게 로드합니까?
 `PdfLoadOptions`는 비밀번호 및 메모리 설정을 포함한 PDF 로드 옵션을 정의합니다. 보호된 PDF를 로드하려면 `PdfLoadOptions` 인스턴스를 생성하고 `Password` 속성을 문서 비밀번호로 설정한 뒤 이 객체를 에디터에 전달합니다. 이렇게 하면 편집 작업 전에 파일이 복호화됩니다.  
-```csharp
-using (FileStream fs = File.OpenRead(inputFilePath))
-```
-
-## 단계 1: 입력 파일 경로 가져오기
-먼저 PDF 문서의 경로를 지정해야 합니다. 이 튜토리얼에서는 샘플 PDF 파일이 있다고 가정합니다.
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
 // If the document is password-protected
 loadOptions.Password = "your_password";
 ```
 
+## 단계 1: 입력 파일 경로 가져오기
+먼저 PDF 문서의 경로를 지정해야 합니다. 이 튜토리얼에서는 샘플 PDF 파일이 있다고 가정합니다.
+```csharp
+string inputFilePath = "Your Sample Document.pdf";
+```
+
 ## PDF 파일 스트림을 어떻게 읽나요?
 `FileStream`은 디스크에 있는 파일을 읽고 쓸 수 있는 스트림을 제공합니다. 이를 사용해 PDF를 읽기 모드로 열면 에디터가 파일을 독점적으로 잠그지 않고 처리할 수 있습니다. 예: `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)`는 최적의 성능과 안전한 동시 읽기를 보장합니다.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## 단계 2: 경로에서 스트림 생성
+앞서 지정한 경로에서 파일 스트림을 생성합니다. 이 스트림은 PDF 문서를 읽는 데 사용됩니다.
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## 비밀번호로 보호된 PDF의 로드 옵션을 어떻게 구성합니까?
+`PdfLoadOptions`는 비밀번호 및 메모리 사용량을 포함한 PDF 로드 옵션을 정의합니다. 인스턴스를 만든 후 `Password` 속성에 문서 비밀번호를 할당합니다. 대용량 PDF의 경우 `UseMemoryCache = false` 로 설정해 메모리 사용량을 줄일 수 있습니다. 이러한 설정은 암호화된 파일과 대용량 파일을 효율적으로 처리하도록 로더를 준비합니다.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## 단계 3: 문서 로드 옵션 생성
+PDF 문서를 로드하려면 로드 옵션을 지정해야 합니다. PDF가 비밀번호로 보호된 경우 여기에서 비밀번호를 제공하면 됩니다.
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## 스트림과 옵션으로 Editor를 초기화하는 방법은?
+`Editor`는 문서를 로드하고 편집 기능을 제공하는 주요 클래스입니다. 파일 스트림을 반환하는 대리자와 앞서 구성한 로드 옵션을 반환하는 대리자를 전달해 인스턴스를 생성합니다. 이렇게 하면 PDF의 메모리 내 표현이 생성되어 추가 조작이 가능해집니다.  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
 
-## 단계 2: 경로에서 스트림 생성
-앞서 지정한 경로에서 파일 스트림을 생성합니다. 이 스트림은 PDF 문서를 읽는 데 사용됩니다.
+## 단계 4: 문서를 Editor 인스턴스로 로드
+이제 파일 스트림과 로드 옵션을 사용해 `Editor` 인스턴스에 문서를 로드합니다.
+```csharp
+using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
+{
+    var documentInfo = editor.GetDocumentInfo(null);
+```
+
+## PDF 편집 시 페이지 매김을 활성화하는 방법은?
+`PdfEditOptions`는 PDF 파일의 편집 설정을 지정합니다. 이 클래스의 인스턴스를 생성하고 `EnablePagination = true` 로 설정합니다. 페이지 매김을 활성화하면 수정 후에도 원본 페이지 구분과 레이아웃이 유지되어 출력 PDF가 원본과 동일한 시각적 구조를 유지합니다.  
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
 
-## 비밀번호로 보호된 PDF의 로드 옵션을 어떻게 구성합니까?
-`PdfLoadOptions`는 비밀번호 및 메모리 사용량을 포함한 PDF 로드 옵션을 정의합니다. 인스턴스를 만든 후 `Password` 속성에 문서 비밀번호를 할당합니다. 대용량 PDF의 경우 `UseMemoryCache = false` 로 설정해 메모리 사용량을 줄일 수 있습니다. 이러한 설정은 암호화된 파일과 대용량 파일을 효율적으로 처리하도록 로더를 준비합니다.  
+## 단계 5: 편집 옵션 생성
+문서에 대한 편집 옵션을 설정합니다. 여기서는 페이지 매김 모드를 활성화합니다.
+```csharp
+Options.PdfEditOptions editOptions = new PdfEditOptions();
+editOptions.EnablePagination = true;
+```
+
+## 편집 가능한 중간 문서를 생성하는 방법은?
+`CreateEditableDocument`는 로드된 문서의 편집 가능한 표현을 생성합니다. 이전에 정의한 `PdfEditOptions`를 전달해 `Editor` 인스턴스에서 이 메서드를 호출합니다. 메서드는 HTML과 유사한 콘텐츠를 포함하는 `EditableDocument`를 반환하며, 이를 프로그래밍 방식으로 변경한 뒤 PDF로 다시 저장할 수 있습니다.  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
@@ -144,22 +194,46 @@ using (EditableDocument beforeEdit = editor.Edit(editOptions))
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
 
-## 단계 3: 문서 로드 옵션 생성
-PDF 문서를 로드하려면 로드 옵션을 지정해야 합니다. PDF가 비밀번호로 보호된 경우 여기에서 비밀번호를 제공하면 됩니다.
+## 단계 6: 중간 편집 가능한 문서 생성
+에디터 인스턴스와 편집 옵션을 사용해 중간 편집 가능한 문서를 생성합니다.
+```csharp
+using (EditableDocument beforeEdit = editor.Edit(editOptions))
+{
+    // Extract textual content as HTML markup
+    string originalContent = beforeEdit.GetContent();
+    List<IHtmlResource> allResources = beforeEdit.AllResources;
+```
+
+## 편집 가능한 콘텐츠 내 텍스트를 교체하는 방법은?
+`EditableDocument`는 문서 내용을 편집 가능한 형식으로 보유합니다. `Content` 속성을 통해 문서의 HTML 표현 문자열을 얻을 수 있습니다. 필요에 따라 `Replace` 같은 표준 C# 문자열 연산이나 정규식을 사용해 텍스트를 수정한 뒤 문서를 재구성합니다.  
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
 
-## 스트림과 옵션으로 Editor를 초기화하는 방법은?
-`Editor`는 문서를 로드하고 편집 기능을 제공하는 주요 클래스입니다. 파일 스트림을 반환하는 대리자와 앞서 구성한 로드 옵션을 반환하는 대리자를 전달해 인스턴스를 생성합니다. 이렇게 하면 PDF의 메모리 내 표현이 생성되어 추가 조작이 가능해집니다.  
+## 단계 7: 콘텐츠 수정
+문서의 콘텐츠를 필요에 따라 수정합니다. 여기서는 문서 내의 단어를 간단히 교체하고 있습니다.
+```csharp
+string editedContent = originalContent.Replace("document", "edited document");
+```
+
+## 변경 후 EditableDocument를 재구성하는 방법은?
+HTML 문자열을 편집한 후, 수정된 콘텐츠와 관련 리소스(이미지, 폰트 등)를 에디터에 다시 전달해 새로운 `EditableDocument`를 생성합니다. 이렇게 하면 내부 구조가 재구성되어 업데이트된 내용으로 저장할 준비가 됩니다.  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
 
-## 단계 4: 문서를 Editor 인스턴스로 로드
-이제 파일 스트림과 로드 옵션을 사용해 `Editor` 인스턴스에 문서를 로드합니다.
+## 단계 8: 편집된 콘텐츠로 새 EditableDocument 생성
+편집된 콘텐츠와 리소스를 사용해 새로운 `EditableDocument` 인스턴스를 생성합니다.
+```csharp
+using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
+{
+    string originalContent3 = afterEdit.GetContent();
+```
+
+## 암호화를 포함한 PDF 저장 옵션을 구성하는 방법은?
+`PdfSaveOptions`는 비밀번호 보호 및 압축을 포함한 PDF 저장 옵션을 정의합니다. 인스턴스를 생성하고 `Password`를 설정해 출력 파일을 암호화하며, 필요에 따라 `EnablePagination`을 활성화해 페이지 레이아웃을 유지하고, 대용량 파일을 위해 `CompressionLevel`을 조정합니다. 이러한 설정은 편집된 PDF가 디스크에 기록되는 방식을 제어합니다.  
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
@@ -167,8 +241,17 @@ saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
 
-## PDF 편집 시 페이지 매김을 활성화하는 방법은?
-`PdfEditOptions`는 PDF 파일의 편집 설정을 지정합니다. 이 클래스의 인스턴스를 생성하고 `EnablePagination = true` 로 설정합니다. 페이지 매김을 활성화하면 수정 후에도 원본 페이지 구분과 레이아웃이 유지되어 출력 PDF가 원본과 동일한 시각적 구조를 유지합니다.  
+## 단계 9: 문서 저장 옵션 생성
+PDF 문서의 저장 옵션을 지정합니다. 출력 문서에 비밀번호를 설정할 수도 있습니다.
+```csharp
+FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
+Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
+saveOptions.Password = "output_password";
+saveOptions.OptimizeMemoryUsage = true;
+```
+
+## 편집된 PDF를 디스크에 저장하는 방법은?
+`Save` 메서드는 지정된 저장 옵션을 사용해 편집된 문서를 파일에 기록합니다. `Editor` 인스턴스에서 업데이트된 `EditableDocument`와 구성된 `PdfSaveOptions`를 제공해 호출하면, 최종 PDF가 대상 위치에 생성되며 지정한 암호화 및 페이지 매김 설정이 적용됩니다.  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -178,49 +261,16 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-## 단계 5: 편집 옵션 생성
-문서에 대한 편집 옵션을 설정합니다. 여기서는 페이지 매김 모드를 활성화합니다.
-CODE_BLOCK_PLACEHOLDER_11_END
-
-## 편집 가능한 중간 문서를 생성하는 방법은?
-`CreateEditableDocument`는 로드된 문서의 편집 가능한 표현을 생성합니다. 이전에 정의한 `PdfEditOptions`를 전달해 `Editor` 인스턴스에서 이 메서드를 호출합니다. 메서드는 HTML과 유사한 콘텐츠를 포함하는 `EditableDocument`를 반환하며, 이를 프로그래밍 방식으로 변경한 뒤 PDF로 다시 저장할 수 있습니다.  
-CODE_BLOCK_PLACEHOLDER_12_END
-
-## 단계 6: 중간 편집 가능한 문서 생성
-에디터 인스턴스와 편집 옵션을 사용해 중간 편집 가능한 문서를 생성합니다.
-CODE_BLOCK_PLACEHOLDER_13_END
-
-## 편집 가능한 콘텐츠 내 텍스트를 교체하는 방법은?
-`EditableDocument`는 문서 내용을 편집 가능한 형식으로 보유합니다. `Content` 속성을 통해 문서의 HTML 표현 문자열을 얻을 수 있습니다. 필요에 따라 `Replace` 같은 표준 C# 문자열 연산이나 정규식을 사용해 텍스트를 수정한 뒤 문서를 재구성합니다.  
-CODE_BLOCK_PLACEHOLDER_14_END
-
-## 단계 7: 콘텐츠 수정
-문서의 콘텐츠를 필요에 따라 수정합니다. 여기서는 문서 내의 단어를 간단히 교체하고 있습니다.
-CODE_BLOCK_PLACEHOLDER_15_END
-
-## 변경 후 EditableDocument를 재구성하는 방법은?
-HTML 문자열을 편집한 후, 수정된 콘텐츠와 관련 리소스(이미지, 폰트 등)를 에디터에 다시 전달해 새로운 `EditableDocument`를 생성합니다. 이렇게 하면 내부 구조가 재구성되어 업데이트된 내용으로 저장할 준비가 됩니다.  
-CODE_BLOCK_PLACEHOLDER_16_END
-
-## 단계 8: 편집된 콘텐츠로 새 EditableDocument 생성
-편집된 콘텐츠와 리소스를 사용해 새로운 `EditableDocument` 인스턴스를 생성합니다.
-CODE_BLOCK_PLACEHOLDER_17_END
-
-## 암호화를 포함한 PDF 저장 옵션을 구성하는 방법은?
-`PdfSaveOptions`는 비밀번호 보호 및 압축을 포함한 PDF 저장 옵션을 정의합니다. 인스턴스를 생성하고 `Password`를 설정해 출력 파일을 암호화하며, 필요에 따라 `EnablePagination`을 활성화해 페이지 레이아웃을 유지하고, 대용량 파일을 위해 `CompressionLevel`을 조정합니다. 이러한 설정은 편집된 PDF가 디스크에 기록되는 방식을 제어합니다.  
-CODE_BLOCK_PLACEHOLDER_18_END
-
-## 단계 9: 문서 저장 옵션 생성
-PDF 문서의 저장 옵션을 지정합니다. 출력 문서에 비밀번호를 설정할 수도 있습니다.
-CODE_BLOCK_PLACEHOLDER_19_END
-
-## 편집된 PDF를 디스크에 저장하는 방법은?
-`Save` 메서드는 지정된 저장 옵션을 사용해 편집된 문서를 파일에 기록합니다. `Editor` 인스턴스에서 업데이트된 `EditableDocument`와 구성된 `PdfSaveOptions`를 제공해 호출하면, 최종 PDF가 대상 위치에 생성되며 지정한 암호화 및 페이지 매김 설정이 적용됩니다.  
-CODE_BLOCK_PLACEHOLDER_20_END
-
 ## 단계 10: 편집된 문서 저장
 마지막으로 지정된 출력 경로에 편집된 문서를 저장합니다.
-CODE_BLOCK_PLACEHOLDER_21_END
+```csharp
+string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
+string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
+using (FileStream outputStream = File.Create(outputPath))
+{
+    editor.Save(afterEdit, outputStream, saveOptions);
+}
+```
 
 ## 일반적인 문제 및 해결책
 - **대용량 PDF에서 메모리 급증** – `LoadOptions.UseMemoryCache = false` 로 스트리밍을 활성화합니다.  
