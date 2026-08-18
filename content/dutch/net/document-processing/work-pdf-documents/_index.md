@@ -104,40 +104,89 @@ Voordat we beginnen, zijn er een paar dingen die je nodig hebt:
 ## Namespaces importeren
 Voordat je code schrijft, zorg ervoor dat de benodigde namespaces in je project zijn geïmporteerd:
 ```csharp
-string inputFilePath = "Your Sample Document.pdf";
+using System;
+using GroupDocs.Editor.Formats;
+using GroupDocs.Editor.HtmlCss.Resources;
+using GroupDocs.Editor.Options;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 ```
 
 ## Hoe laad je een met wachtwoord beveiligde PDF?
 `PdfLoadOptions` definieert opties voor het laden van PDF‑bestanden, inclusief wachtwoord- en geheugeninstellingen. Om een beveiligde PDF te laden, maak je een `PdfLoadOptions`‑instantie, stel je de `Password`‑eigenschap in op het wachtwoord van het document, en geef je dit object door aan de editor. Dit zorgt ervoor dat het bestand wordt gedecodeerd vóór bewerkingsbewerkingen.  
-```csharp
-using (FileStream fs = File.OpenRead(inputFilePath))
-```
-
-## Stap 1: Verkrijg een pad naar het invoerbestand
-Eerst moet je het pad naar je PDF‑document opgeven. Voor deze tutorial gaan we ervan uit dat je een voorbeeld‑PDF‑bestand hebt.  
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
 // If the document is password-protected
 loadOptions.Password = "your_password";
 ```
 
+## Stap 1: Verkrijg een pad naar het invoerbestand
+Eerst moet je het pad naar je PDF‑document opgeven. Voor deze tutorial gaan we ervan uit dat je een voorbeeld‑PDF‑bestand hebt.  
+```csharp
+string inputFilePath = "Your Sample Document.pdf";
+```
+
 ## Hoe lees je een PDF‑bestandstroom?
 `FileStream` biedt een stream voor het lezen van en schrijven naar bestanden op schijf. Gebruik het om de PDF in leesmodus te openen, zodat de editor het bestand kan verwerken zonder het exclusief te vergrendelen. Voorbeeld: `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` zorgt voor optimale prestaties en veilige gelijktijdige reads.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Stap 2: Maak een stream van het pad
+Maak vervolgens een bestandsstream van het opgegeven pad. Deze stream wordt gebruikt om het PDF‑document te lezen.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Hoe configureer je laadinstructies voor een met wachtwoord beveiligde PDF?
+`PdfLoadOptions` definieert opties voor het laden van PDF‑bestanden, inclusief wachtwoord- en geheugeninstellingen. Na het maken van de instantie, wijs je de `Password`‑eigenschap toe met het wachtwoord van het document. Voor grote PDF's kun je ook `UseMemoryCache = false` instellen om het geheugenverbruik te verminderen. Deze instellingen bereiden de loader voor op het efficiënt verwerken van versleutelde en omvangrijke bestanden.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Stap 3: Maak laadopties voor het document
+Om het PDF‑document te laden, moet je laadopties opgeven. Als je PDF wachtwoord‑beveiligd is, kun je hier het wachtwoord opgeven.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Hoe initialiseert u de Editor met een stream en opties?
+`Editor` is de hoofdklasse die een document laadt en bewerkingsmogelijkheden biedt. Instantieer deze door een delegate door te geven die de bestandsstream retourneert en een andere delegate die de eerder geconfigureerde laadopties retourneert. Dit creëert een in‑memory representatie van de PDF die klaar is voor verdere manipulatie.  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
 
-## Stap 2: Maak een stream van het pad
-Maak vervolgens een bestandsstream van het opgegeven pad. Deze stream wordt gebruikt om het PDF‑document te lezen.  
+## Stap 4: Laad het document in de Editor‑instantie
+Gebruik nu de bestandsstream en laadopties om het document te laden in een `Editor`‑instantie.  
+```csharp
+using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
+{
+    var documentInfo = editor.GetDocumentInfo(null);
+```
+
+## Hoe schakel je paginering in bij het bewerken van een PDF?
+`PdfEditOptions` specificeert bewerkingsinstellingen voor PDF‑bestanden, zoals paginering. Maak een instantie van deze klasse en stel `EnablePagination = true` in. Het inschakelen van paginering behoudt de oorspronkelijke pagina‑breuken en lay-out na wijzigingen, waardoor de output‑PDF dezelfde visuele structuur als de bron behoudt.  
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
 
-## Hoe configureer je laadinstructies voor een met wachtwoord beveiligde PDF?
-`PdfLoadOptions` definieert opties voor het laden van PDF‑bestanden, inclusief wachtwoord- en geheugeninstellingen. Na het maken van de instantie, wijs je de `Password`‑eigenschap toe met het wachtwoord van het document. Voor grote PDF's kun je ook `UseMemoryCache = false` instellen om het geheugenverbruik te verminderen. Deze instellingen bereiden de loader voor op het efficiënt verwerken van versleutelde en omvangrijke bestanden.  
+## Stap 5: Maak bewerkingsopties
+```csharp
+Options.PdfEditOptions editOptions = new PdfEditOptions();
+editOptions.EnablePagination = true;
+```
+
+## Hoe genereer je een bewerkbaar tussendocument?
+`CreateEditableDocument` maakt een bewerkbare representatie van het geladen document. Roep deze methode aan op de `Editor`‑instantie, waarbij je de eerder gedefinieerde `PdfEditOptions` doorgeeft. De methode retourneert een `EditableDocument` met HTML‑achtige inhoud die programmatisch kan worden aangepast voordat deze terug naar PDF wordt opgeslagen.  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
@@ -146,22 +195,44 @@ using (EditableDocument beforeEdit = editor.Edit(editOptions))
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
 
-## Stap 3: Maak laadopties voor het document
-Om het PDF‑document te laden, moet je laadopties opgeven. Als je PDF wachtwoord‑beveiligd is, kun je hier het wachtwoord opgeven.  
+## Stap 6: Maak een tussentijds bewerkbaar document
+```csharp
+using (EditableDocument beforeEdit = editor.Edit(editOptions))
+{
+    // Extract textual content as HTML markup
+    string originalContent = beforeEdit.GetContent();
+    List<IHtmlResource> allResources = beforeEdit.AllResources;
+```
+
+## Hoe vervang je tekst in de bewerkbare inhoud?
+`EditableDocument` bevat de inhoud van het document in een bewerkbaar formaat. Benader de `Content`‑eigenschap, die een string van de HTML‑representatie van het document retourneert. Gebruik standaard C#‑stringbewerkingen, zoals `Replace`, of reguliere expressies om de tekst naar behoefte te wijzigen voordat je het document opnieuw opbouwt.  
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
 
-## Hoe initialiseert u de Editor met een stream en opties?
-`Editor` is de hoofdklasse die een document laadt en bewerkingsmogelijkheden biedt. Instantieer deze door een delegate door te geven die de bestandsstream retourneert en een andere delegate die de eerder geconfigureerde laadopties retourneert. Dit creëert een in‑memory representatie van de PDF die klaar is voor verdere manipulatie.  
+## Stap 7: Wijzig de inhoud
+Wijzig de inhoud van het document naar behoefte. Hier vervangen we simpelweg een woord in het document.  
+```csharp
+string editedContent = originalContent.Replace("document", "edited document");
+```
+
+## Hoe bouw je het EditableDocument opnieuw op na wijzigingen?
+`EditableDocument` bevat de inhoud van het document in een bewerkbaar formaat. Na het bewerken van de HTML‑string, maak je een nieuw `EditableDocument` door de gewijzigde inhoud en eventuele bijbehorende bronnen (afbeeldingen, lettertypen) terug aan de editor te geven. Dit reconstrueert de interne structuur van het document, zodat het klaar is om te worden opgeslagen met de bijgewerkte inhoud.  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
 
-## Stap 4: Laad het document in de Editor‑instantie
-Gebruik nu de bestandsstream en laadopties om het document te laden in een `Editor`‑instantie.  
+## Stap 8: Maak een nieuw bewerkbaar document met bewerkte inhoud
+```csharp
+using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
+{
+    string originalContent3 = afterEdit.GetContent();
+```
+
+## Hoe configureer je PDF‑opslaoptopties, inclusief versleuteling?
+`PdfSaveOptions` definieert opties voor het opslaan van PDF‑bestanden, inclusief wachtwoordbeveiliging en compressie. Instantieer deze, stel `Password` in om de output te versleutelen, schakel optioneel `EnablePagination` in om de paginalay-out te behouden, en pas `CompressionLevel` aan voor grote bestanden. Deze instellingen bepalen hoe de bewerkte PDF naar schijf wordt geschreven.  
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
@@ -169,8 +240,17 @@ saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
 
-## Hoe schakel je paginering in bij het bewerken van een PDF?
-`PdfEditOptions` specificeert bewerkingsinstellingen voor PDF‑bestanden, zoals paginering. Maak een instantie van deze klasse en stel `EnablePagination = true` in. Het inschakelen van paginering behoudt de oorspronkelijke pagina‑breuken en lay-out na wijzigingen, waardoor de output‑PDF dezelfde visuele structuur als de bron behoudt.  
+## Stap 9: Maak documentopslaoptopties
+Specificeer de opslaoptopties voor het PDF‑document. Je kunt ook een wachtwoord instellen voor het uitvoerdocument.  
+```csharp
+FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
+Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
+saveOptions.Password = "output_password";
+saveOptions.OptimizeMemoryUsage = true;
+```
+
+## Hoe sla je de bewerkte PDF op schijf op?
+`Save` schrijft het bewerkte document naar een bestand met behulp van de opgegeven opslaoptopties. Roep deze aan op de `Editor`‑instantie, waarbij je het bijgewerkte `EditableDocument` en de geconfigureerde `PdfSaveOptions` doorgeeft. De methode maakt de uiteindelijke PDF op de doellocatie aan, met eventuele versleuteling of paginering die je hebt gedefinieerd.  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -180,46 +260,16 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-## Stap 5: Maak bewerkingsopties
-CODE_BLOCK_PLACEHOLDER_11_END
-
-## Hoe genereer je een bewerkbaar tussendocument?
-`CreateEditableDocument` maakt een bewerkbare representatie van het geladen document. Roep deze methode aan op de `Editor`‑instantie, waarbij je de eerder gedefinieerde `PdfEditOptions` doorgeeft. De methode retourneert een `EditableDocument` met HTML‑achtige inhoud die programmatisch kan worden aangepast voordat deze terug naar PDF wordt opgeslagen.  
-CODE_BLOCK_PLACEHOLDER_12_END
-
-## Stap 6: Maak een tussentijds bewerkbaar document
-CODE_BLOCK_PLACEHOLDER_13_END
-
-## Hoe vervang je tekst in de bewerkbare inhoud?
-`EditableDocument` bevat de inhoud van het document in een bewerkbaar formaat. Benader de `Content`‑eigenschap, die een string van de HTML‑representatie van het document retourneert. Gebruik standaard C#‑stringbewerkingen, zoals `Replace`, of reguliere expressies om de tekst naar behoefte te wijzigen voordat je het document opnieuw opbouwt.  
-CODE_BLOCK_PLACEHOLDER_14_END
-
-## Stap 7: Wijzig de inhoud
-Wijzig de inhoud van het document naar behoefte. Hier vervangen we simpelweg een woord in het document.  
-CODE_BLOCK_PLACEHOLDER_15_END
-
-## Hoe bouw je het EditableDocument opnieuw op na wijzigingen?
-`EditableDocument` bevat de inhoud van het document in een bewerkbaar formaat. Na het bewerken van de HTML‑string, maak je een nieuw `EditableDocument` door de gewijzigde inhoud en eventuele bijbehorende bronnen (afbeeldingen, lettertypen) terug aan de editor te geven. Dit reconstrueert de interne structuur van het document, zodat het klaar is om te worden opgeslagen met de bijgewerkte inhoud.  
-CODE_BLOCK_PLACEHOLDER_16_END
-
-## Stap 8: Maak een nieuw bewerkbaar document met bewerkte inhoud
-CODE_BLOCK_PLACEHOLDER_17_END
-
-## Hoe configureer je PDF‑opslaoptopties, inclusief versleuteling?
-`PdfSaveOptions` definieert opties voor het opslaan van PDF‑bestanden, inclusief wachtwoordbeveiliging en compressie. Instantieer deze, stel `Password` in om de output te versleutelen, schakel optioneel `EnablePagination` in om de paginalay-out te behouden, en pas `CompressionLevel` aan voor grote bestanden. Deze instellingen bepalen hoe de bewerkte PDF naar schijf wordt geschreven.  
-CODE_BLOCK_PLACEHOLDER_18_END
-
-## Stap 9: Maak documentopslaoptopties
-Specificeer de opslaoptopties voor het PDF‑document. Je kunt ook een wachtwoord instellen voor het uitvoerdocument.  
-CODE_BLOCK_PLACEHOLDER_19_END
-
-## Hoe sla je de bewerkte PDF op schijf op?
-`Save` schrijft het bewerkte document naar een bestand met behulp van de opgegeven opslaoptopties. Roep deze aan op de `Editor`‑instantie, waarbij je het bijgewerkte `EditableDocument` en de geconfigureerde `PdfSaveOptions` doorgeeft. De methode maakt de uiteindelijke PDF op de doellocatie aan, met eventuele versleuteling of paginering die je hebt gedefinieerd.  
-CODE_BLOCK_PLACEHOLDER_20_END
-
 ## Stap 10: Sla het bewerkte document op
 Sla tenslotte het bewerkte document op het opgegeven uitvoerpad op.  
-CODE_BLOCK_PLACEHOLDER_21_END
+```csharp
+string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
+string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
+using (FileStream outputStream = File.Create(outputPath))
+{
+    editor.Save(afterEdit, outputStream, saveOptions);
+}
+```
 
 ## Veelvoorkomende problemen en oplossingen
 - **Geheugenspikes bij enorme PDF's** – Schakel streaming in door `LoadOptions.UseMemoryCache = false` in te stellen.  
