@@ -104,40 +104,90 @@ Mielőtt elkezdenénk, néhány dologra szükséged lesz:
 ## Névterek importálása
 Mielőtt kódot írnál, győződj meg róla, hogy a szükséges névterek importálva vannak a projektedbe:  
 ```csharp
-string inputFilePath = "Your Sample Document.pdf";
+using System;
+using GroupDocs.Editor.Formats;
+using GroupDocs.Editor.HtmlCss.Resources;
+using GroupDocs.Editor.Options;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 ```
 
 ## Hogyan töltünk be jelszóval védett PDF-et?
 A `PdfLoadOptions` határozza meg a PDF fájlok betöltésének beállításait, beleértve a jelszót és a memória beállításokat. Jelszóval védett PDF betöltéséhez hozz létre egy `PdfLoadOptions` példányt, állítsd be a `Password` tulajdonságot a dokumentum jelszavára, majd add át ezt az objektumot a szerkesztőnek. Ez biztosítja, hogy a fájl a szerkesztési műveletek előtt fel legyen titkosítva.  
-```csharp
-using (FileStream fs = File.OpenRead(inputFilePath))
-```
-
-## 1. lépés: Adja meg a bemeneti fájl elérési útját
-Először meg kell adnod a PDF dokumentum elérési útját. Ebben a tutorialban egy minta PDF fájlt feltételezünk.  
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
 // If the document is password-protected
 loadOptions.Password = "your_password";
 ```
 
+## 1. lépés: Adja meg a bemeneti fájl elérési útját
+Először meg kell adnod a PDF dokumentum elérési útját. Ebben a tutorialban egy minta PDF fájlt feltételezünk.  
+```csharp
+string inputFilePath = "Your Sample Document.pdf";
+```
+
 ## Hogyan olvasunk PDF fájl streamet?
 A `FileStream` streamet biztosít a lemezen lévő fájlok olvasásához és írásához. Használd a PDF megnyitásához olvasási módban, ami lehetővé teszi a szerkesztő számára a fájl feldolgozását anélkül, hogy kizárólagos hozzáférést zárolna. Példa: `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` biztosítja az optimális teljesítményt és a biztonságos egyidejű olvasásokat.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## 2. lépés: Stream létrehozása az útvonalból
+Ezután hozz létre egy fájl streamet a megadott útvonalból. Ez a stream lesz használva a PDF dokumentum olvasásához.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Hogyan konfiguráljuk a betöltési beállításokat jelszóval védett PDF-hez?
+A `PdfLoadOptions` határozza meg a PDF fájlok betöltésének beállításait, beleértve a jelszót és a memóriahasználatot. A példány létrehozása után állítsd be a `Password` tulajdonságot a dokumentum jelszavára. Nagy PDF-ek esetén beállíthatod a `UseMemoryCache = false` értéket is a memóriafogyasztás csökkentése érdekében. Ezek a beállítások felkészítik a betöltőt a titkosított és nagy méretű fájlok hatékony kezelésére.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## 3. lépés: Betöltési beállítások létrehozása a dokumentumhoz
+A PDF dokumentum betöltéséhez meg kell adnod a betöltési beállításokat. Ha a PDF jelszóval védett, itt adhatod meg a jelszót.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Hogyan inicializáljuk a Szerkesztőt streammel és beállításokkal?
+Az `Editor` a fő osztály, amely betölti a dokumentumot és szerkesztési lehetőségeket biztosít. Példányosítsd úgy, hogy egy delegátumot adsz át, amely visszaadja a fájl streamet, és egy másik delegátumot, amely visszaadja a korábban konfigurált betöltési beállításokat. Ez egy memóriában lévő PDF reprezentációt hoz létre, amely készen áll a további manipulációra.  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
 
-## 2. lépés: Stream létrehozása az útvonalból
-Ezután hozz létre egy fájl streamet a megadott útvonalból. Ez a stream lesz használva a PDF dokumentum olvasásához.  
+## 4. lépés: Dokumentum betöltése a Szerkesztő példányba
+Most használd a fájl streamet és a betöltési beállításokat a dokumentum betöltéséhez egy `Editor` példányba.  
+```csharp
+using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
+{
+    var documentInfo = editor.GetDocumentInfo(null);
+```
+
+## Hogyan engedélyezzük a lapozást PDF szerkesztésekor?
+A `PdfEditOptions` a PDF fájlok szerkesztési beállításait határozza meg, például a lapozást. Hozz létre egy példányt ebből az osztályból, és állítsd be az `EnablePagination = true` értéket. A lapozás engedélyezése megőrzi az eredeti oldaltöréseket és az elrendezést a módosítások után, biztosítva, hogy a kimeneti PDF ugyanazt a vizuális struktúrát tartsa meg, mint a forrás.  
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
 
-## Hogyan konfiguráljuk a betöltési beállításokat jelszóval védett PDF-hez?
-A `PdfLoadOptions` határozza meg a PDF fájlok betöltésének beállításait, beleértve a jelszót és a memóriahasználatot. A példány létrehozása után állítsd be a `Password` tulajdonságot a dokumentum jelszavára. Nagy PDF-ek esetén beállíthatod a `UseMemoryCache = false` értéket is a memóriafogyasztás csökkentése érdekében. Ezek a beállítások felkészítik a betöltőt a titkosított és nagy méretű fájlok hatékony kezelésére.  
+## 5. lépés: Szerkesztési beállítások létrehozása
+Állítsd be a dokumentum szerkesztési opcióit. Ebben az esetben engedélyezni fogjuk a lapozási módot.  
+```csharp
+Options.PdfEditOptions editOptions = new PdfEditOptions();
+editOptions.EnablePagination = true;
+```
+
+## Hogyan generáljunk szerkeszthető köztes dokumentumot?
+A `CreateEditableDocument` egy szerkeszthető reprezentációt hoz létre a betöltött dokumentumról. Hívd meg ezt a metódust az `Editor` példányon, átadva a korábban definiált `PdfEditOptions`-t. A metódus egy `EditableDocument`‑et ad vissza, amely HTML‑szerű tartalmat tartalmaz, és programozottan módosítható a PDF‑be való visszamentés előtt.  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
@@ -146,22 +196,46 @@ using (EditableDocument beforeEdit = editor.Edit(editOptions))
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
 
-## 3. lépés: Betöltési beállítások létrehozása a dokumentumhoz
-A PDF dokumentum betöltéséhez meg kell adnod a betöltési beállításokat. Ha a PDF jelszóval védett, itt adhatod meg a jelszót.  
+## 6. lépés: Köztes szerkeszthető dokumentum létrehozása
+Készíts egy köztes szerkeszthető dokumentumot a szerkesztő példány és a szerkesztési opciók használatával.  
+```csharp
+using (EditableDocument beforeEdit = editor.Edit(editOptions))
+{
+    // Extract textual content as HTML markup
+    string originalContent = beforeEdit.GetContent();
+    List<IHtmlResource> allResources = beforeEdit.AllResources;
+```
+
+## Hogyan cseréljünk szöveget a szerkeszthető tartalomban?
+Az `EditableDocument` a dokumentum tartalmát szerkeszthető formátumban tárolja. A `Content` tulajdonságon keresztül érheted el, amely a dokumentum HTML‑reprezentációjának karakterláncát adja vissza. Használj standard C# string műveleteket, például `Replace`‑et, vagy reguláris kifejezéseket a szöveg módosításához a dokumentum újraépítése előtt.  
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
 
-## Hogyan inicializáljuk a Szerkesztőt streammel és beállításokkal?
-Az `Editor` a fő osztály, amely betölti a dokumentumot és szerkesztési lehetőségeket biztosít. Példányosítsd úgy, hogy egy delegátumot adsz át, amely visszaadja a fájl streamet, és egy másik delegátumot, amely visszaadja a korábban konfigurált betöltési beállításokat. Ez egy memóriában lévő PDF reprezentációt hoz létre, amely készen áll a további manipulációra.  
+## 7. lépés: Tartalom módosítása
+Módosítsd a dokumentum tartalmát a szükséges módon. Ebben a példában egyszerűen egy szót cserélünk a dokumentumban.  
+```csharp
+string editedContent = originalContent.Replace("document", "edited document");
+```
+
+## Hogyan állítsuk újra az EditableDocument-et a módosítások után?
+Az `EditableDocument` a dokumentum tartalmát szerkeszthető formátumban tárolja. A HTML‑string szerkesztése után hozz létre egy új `EditableDocument`‑et, amely a módosított tartalmat és a kapcsolódó erőforrásokat (képek, betűtípusok) adja vissza a szerkesztőnek. Ez újraépíti a dokumentum belső struktúráját, felkészítve a mentésre a frissített tartalommal.  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
 
-## 4. lépés: Dokumentum betöltése a Szerkesztő példányba
-Most használd a fájl streamet és a betöltési beállításokat a dokumentum betöltéséhez egy `Editor` példányba.  
+## 8. lépés: Új szerkeszthető dokumentum létrehozása a módosított tartalommal
+Hozz létre egy új `EditableDocument` példányt a szerkesztett tartalommal és erőforrásokkal.  
+```csharp
+using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
+{
+    string originalContent3 = afterEdit.GetContent();
+```
+
+## Hogyan konfiguráljuk a PDF mentési beállításokat, beleértve a titkosítást?
+A `PdfSaveOptions` határozza meg a PDF fájlok mentési beállításait, beleértve a jelszóvédelem és a tömörítés opciókat. Példányosítsd, állítsd be a `Password` tulajdonságot a kimenet titkosításához, opcionálisan engedélyezd az `EnablePagination`‑t a lapelrendezés megtartásához, és állítsd be a `CompressionLevel`‑et nagy fájlok esetén. Ezek a beállítások szabályozzák, hogyan kerül a szerkesztett PDF lemezre írásra.  
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
@@ -169,8 +243,17 @@ saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
 
-## Hogyan engedélyezzük a lapozást PDF szerkesztésekor?
-A `PdfEditOptions` a PDF fájlok szerkesztési beállításait határozza meg, például a lapozást. Hozz létre egy példányt ebből az osztályból, és állítsd be az `EnablePagination = true` értéket. A lapozás engedélyezése megőrzi az eredeti oldaltöréseket és az elrendezést a módosítások után, biztosítva, hogy a kimeneti PDF ugyanazt a vizuális struktúrát tartsa meg, mint a forrás.  
+## 9. lépés: Dokumentum mentési beállítások létrehozása
+Add meg a PDF dokumentum mentési opcióit. A kimeneti dokumentumhoz jelszót is beállíthatsz.  
+```csharp
+FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
+Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
+saveOptions.Password = "output_password";
+saveOptions.OptimizeMemoryUsage = true;
+```
+
+## Hogyan mentjük a szerkesztett PDF-et lemezre?
+A `Save` a szerkesztett dokumentumot egy fájlba írja a megadott mentési beállításokkal. Hívd meg az `Editor` példányon, átadva a frissített `EditableDocument`‑et és a konfigurált `PdfSaveOptions`‑t. A metódus létrehozza a végleges PDF‑et a célhelyen, alkalmazva a definiált titkosítási vagy lapozási beállításokat.  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -180,49 +263,16 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-## 5. lépés: Szerkesztési beállítások létrehozása
-Állítsd be a dokumentum szerkesztési opcióit. Ebben az esetben engedélyezni fogjuk a lapozási módot.  
-CODE_BLOCK_PLACEHOLDER_11_END
-
-## Hogyan generáljunk szerkeszthető köztes dokumentumot?
-A `CreateEditableDocument` egy szerkeszthető reprezentációt hoz létre a betöltött dokumentumról. Hívd meg ezt a metódust az `Editor` példányon, átadva a korábban definiált `PdfEditOptions`-t. A metódus egy `EditableDocument`‑et ad vissza, amely HTML‑szerű tartalmat tartalmaz, és programozottan módosítható a PDF‑be való visszamentés előtt.  
-CODE_BLOCK_PLACEHOLDER_12_END
-
-## 6. lépés: Köztes szerkeszthető dokumentum létrehozása
-Készíts egy köztes szerkeszthető dokumentumot a szerkesztő példány és a szerkesztési opciók használatával.  
-CODE_BLOCK_PLACEHOLDER_13_END
-
-## Hogyan cseréljünk szöveget a szerkeszthető tartalomban?
-Az `EditableDocument` a dokumentum tartalmát szerkeszthető formátumban tárolja. A `Content` tulajdonságon keresztül érheted el, amely a dokumentum HTML‑reprezentációjának karakterláncát adja vissza. Használj standard C# string műveleteket, például `Replace`‑et, vagy reguláris kifejezéseket a szöveg módosításához a dokumentum újraépítése előtt.  
-CODE_BLOCK_PLACEHOLDER_14_END
-
-## 7. lépés: Tartalom módosítása
-Módosítsd a dokumentum tartalmát a szükséges módon. Ebben a példában egyszerűen egy szót cserélünk a dokumentumban.  
-CODE_BLOCK_PLACEHOLDER_15_END
-
-## Hogyan állítsuk újra az EditableDocument-et a módosítások után?
-Az `EditableDocument` a dokumentum tartalmát szerkeszthető formátumban tárolja. A HTML‑string szerkesztése után hozz létre egy új `EditableDocument`‑et, amely a módosított tartalmat és a kapcsolódó erőforrásokat (képek, betűtípusok) adja vissza a szerkesztőnek. Ez újraépíti a dokumentum belső struktúráját, felkészítve a mentésre a frissített tartalommal.  
-CODE_BLOCK_PLACEHOLDER_16_END
-
-## 8. lépés: Új szerkeszthető dokumentum létrehozása a módosított tartalommal
-Hozz létre egy új `EditableDocument` példányt a szerkesztett tartalommal és erőforrásokkal.  
-CODE_BLOCK_PLACEHOLDER_17_END
-
-## Hogyan konfiguráljuk a PDF mentési beállításokat, beleértve a titkosítást?
-A `PdfSaveOptions` határozza meg a PDF fájlok mentési beállításait, beleértve a jelszóvédelem és a tömörítés opciókat. Példányosítsd, állítsd be a `Password` tulajdonságot a kimenet titkosításához, opcionálisan engedélyezd az `EnablePagination`‑t a lapelrendezés megtartásához, és állítsd be a `CompressionLevel`‑et nagy fájlok esetén. Ezek a beállítások szabályozzák, hogyan kerül a szerkesztett PDF lemezre írásra.  
-CODE_BLOCK_PLACEHOLDER_18_END
-
-## 9. lépés: Dokumentum mentési beállítások létrehozása
-Add meg a PDF dokumentum mentési opcióit. A kimeneti dokumentumhoz jelszót is beállíthatsz.  
-CODE_BLOCK_PLACEHOLDER_19_END
-
-## Hogyan mentjük a szerkesztett PDF-et lemezre?
-A `Save` a szerkesztett dokumentumot egy fájlba írja a megadott mentési beállításokkal. Hívd meg az `Editor` példányon, átadva a frissített `EditableDocument`‑et és a konfigurált `PdfSaveOptions`‑t. A metódus létrehozza a végleges PDF‑et a célhelyen, alkalmazva a definiált titkosítási vagy lapozási beállításokat.  
-CODE_BLOCK_PLACEHOLDER_20_END
-
 ## 10. lépés: A szerkesztett dokumentum mentése
 Végül mentsd a szerkesztett dokumentumot a megadott kimeneti útvonalra.  
-CODE_BLOCK_PLACEHOLDER_21_END
+```csharp
+string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
+string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
+using (FileStream outputStream = File.Create(outputPath))
+{
+    editor.Save(afterEdit, outputStream, saveOptions);
+}
+```
 
 ## Gyakori problémák és megoldások
 - **Memóriacsúcsok hatalmas PDF-ek esetén** – Engedélyezd a streaminget a `LoadOptions.UseMemoryCache = false` beállítással.  
