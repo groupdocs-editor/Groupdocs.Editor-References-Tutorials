@@ -103,40 +103,90 @@ GroupDocs.Editor podporuje **30+ formátů dokumentů** a dokáže upravovat PDF
 ## Importovat jmenné prostory
 Před psaním jakéhokoli kódu se ujistěte, že máte v projektu importovány potřebné jmenné prostory:
 ```csharp
-string inputFilePath = "Your Sample Document.pdf";
+using System;
+using GroupDocs.Editor.Formats;
+using GroupDocs.Editor.HtmlCss.Resources;
+using GroupDocs.Editor.Options;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 ```
 
 ## Jak načíst PDF chráněné heslem?
 `PdfLoadOptions` definuje možnosti pro načítání PDF souborů, včetně hesla a nastavení paměti. Pro načtení chráněného PDF vytvořte instanci `PdfLoadOptions`, nastavte její vlastnost `Password` na heslo dokumentu a předávejte tento objekt editoru. Tím zajistíte, že soubor bude dešifrován před jakýmikoli úpravami.  
-```csharp
-using (FileStream fs = File.OpenRead(inputFilePath))
-```
-
-## Krok 1: Získat cestu k vstupnímu souboru
-Nejprve musíte zadat cestu k vašemu PDF dokumentu. Pro tento tutoriál předpokládáme, že máte ukázkový PDF soubor.  
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
 // If the document is password-protected
 loadOptions.Password = "your_password";
 ```
 
+## Krok 1: Získat cestu k vstupnímu souboru
+Nejprve musíte zadat cestu k vašemu PDF dokumentu. Pro tento tutoriál předpokládáme, že máte ukázkový PDF soubor.  
+```csharp
+string inputFilePath = "Your Sample Document.pdf";
+```
+
 ## Jak číst stream PDF souboru?
 `FileStream` poskytuje stream pro čtení a zápis souborů na disku. Použijte jej k otevření PDF v režimu čtení, což umožní editoru zpracovat soubor bez jeho uzamčení pro výhradní přístup. Příklad: `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` zajišťuje optimální výkon a bezpečné souběžné čtení.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Krok 2: Vytvořit stream z cesty
+Dále vytvořte souborový stream z cesty, kterou jste zadali. Tento stream bude použit k načtení PDF dokumentu.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Jak nakonfigurovat možnosti načítání pro PDF chráněné heslem?
+`PdfLoadOptions` definuje možnosti pro načítání PDF souborů, včetně hesla a využití paměti. Po vytvoření instance přiřaďte vlastnost `Password` s heslem dokumentu. Pro velké PDF můžete také nastavit `UseMemoryCache = false`, aby se snížila spotřeba paměti. Tato nastavení připraví načítač na efektivní zpracování šifrovaných a objemných souborů.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Krok 3: Vytvořit možnosti načítání pro dokument
+Pro načtení PDF dokumentu musíte specifikovat možnosti načítání. Pokud je vaše PDF chráněno heslem, můžete zde zadat heslo.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Jak inicializovat Editor pomocí streamu a možností?
+`Editor` je hlavní třída, která načítá dokument a poskytuje možnosti úprav. Vytvořte její instanci předáním delegáta, který vrací souborový stream, a dalšího delegáta, který vrací dříve nakonfigurované možnosti načítání. Tím se vytvoří in‑memory reprezentace PDF připravená k dalším úpravám.  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
 
-## Krok 2: Vytvořit stream z cesty
-Dále vytvořte souborový stream z cesty, kterou jste zadali. Tento stream bude použit k načtení PDF dokumentu.  
+## Krok 4: Načíst dokument do instance Editoru
+Nyní použijte souborový stream a možnosti načítání k načtení dokumentu do instance `Editor`.  
+```csharp
+using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
+{
+    var documentInfo = editor.GetDocumentInfo(null);
+```
+
+## Jak povolit stránkování při úpravě PDF?
+`PdfEditOptions` určuje nastavení úprav pro PDF soubory, například stránkování. Vytvořte instanci této třídy a nastavte `EnablePagination = true`. Povolení stránkování zachová původní zalomení stránek a rozvržení po úpravách, čímž zajistí, že výstupní PDF zachová stejnou vizuální strukturu jako zdroj.  
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
 
-## Jak nakonfigurovat možnosti načítání pro PDF chráněné heslem?
-`PdfLoadOptions` definuje možnosti pro načítání PDF souborů, včetně hesla a využití paměti. Po vytvoření instance přiřaďte vlastnost `Password` s heslem dokumentu. Pro velké PDF můžete také nastavit `UseMemoryCache = false`, aby se snížila spotřeba paměti. Tato nastavení připraví načítač na efektivní zpracování šifrovaných a objemných souborů.  
+## Krok 5: Vytvořit možnosti úprav
+Nastavte možnosti úprav pro dokument. V tomto případě povolíme režim stránkování.  
+```csharp
+Options.PdfEditOptions editOptions = new PdfEditOptions();
+editOptions.EnablePagination = true;
+```
+
+## Jak vygenerovat editovatelný mezidokument?
+`CreateEditableDocument` vytvoří editovatelnou reprezentaci načteného dokumentu. Zavolejte tuto metodu na instanci `Editor`, předáním dříve definovaných `PdfEditOptions`. Metoda vrací `EditableDocument`, který obsahuje HTML‑podobný obsah, jež lze programově upravit před uložením zpět do PDF.  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
@@ -145,22 +195,46 @@ using (EditableDocument beforeEdit = editor.Edit(editOptions))
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
 
-## Krok 3: Vytvořit možnosti načítání pro dokument
-Pro načtení PDF dokumentu musíte specifikovat možnosti načítání. Pokud je vaše PDF chráněno heslem, můžete zde zadat heslo.  
+## Krok 6: Vytvořit mezidokument k úpravě
+Vytvořte mezidokument k úpravě pomocí instance editoru a možností úprav.  
+```csharp
+using (EditableDocument beforeEdit = editor.Edit(editOptions))
+{
+    // Extract textual content as HTML markup
+    string originalContent = beforeEdit.GetContent();
+    List<IHtmlResource> allResources = beforeEdit.AllResources;
+```
+
+## Jak nahradit text v editovatelném obsahu?
+`EditableDocument` obsahuje obsah dokumentu v editovatelném formátu. Přistupte k jeho vlastnosti `Content`, která vrací řetězec HTML reprezentace dokumentu. Použijte standardní C# operace s řetězci, jako je `Replace`, nebo regulární výrazy k úpravě textu podle potřeby před opětovným sestavením dokumentu.  
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
 
-## Jak inicializovat Editor pomocí streamu a možností?
-`Editor` je hlavní třída, která načítá dokument a poskytuje možnosti úprav. Vytvořte její instanci předáním delegáta, který vrací souborový stream, a dalšího delegáta, který vrací dříve nakonfigurované možnosti načítání. Tím se vytvoří in‑memory reprezentace PDF připravená k dalším úpravám.  
+## Krok 7: Upravit obsah
+Upravte obsah dokumentu podle potřeby. Zde jednoduše nahrazujeme slovo v dokumentu.  
+```csharp
+string editedContent = originalContent.Replace("document", "edited document");
+```
+
+## Jak znovu sestavit EditableDocument po změnách?
+`EditableDocument` obsahuje obsah dokumentu v editovatelném formátu. Po úpravě HTML řetězce vytvořte nový `EditableDocument` předáním upraveného obsahu a všech souvisejících zdrojů (obrázky, fonty) zpět editoru. Tím se znovu vytvoří vnitřní struktura dokumentu, připravená k uložení s aktualizovaným obsahem.  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
 
-## Krok 4: Načíst dokument do instance Editoru
-Nyní použijte souborový stream a možnosti načítání k načtení dokumentu do instance `Editor`.  
+## Krok 8: Vytvořit nový EditableDocument s upraveným obsahem
+Vytvořte novou instanci `EditableDocument` s upraveným obsahem a zdroji.  
+```csharp
+using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
+{
+    string originalContent3 = afterEdit.GetContent();
+```
+
+## Jak nakonfigurovat možnosti uložení PDF, včetně šifrování?
+`PdfSaveOptions` definuje možnosti pro ukládání PDF souborů, včetně ochrany heslem a komprese. Vytvořte jeho instanci, nastavte `Password` pro šifrování výstupu, volitelně povolte `EnablePagination` pro zachování rozvržení stránek a upravte `CompressionLevel` pro velké soubory. Tato nastavení řídí, jak bude upravené PDF zapsáno na disk.  
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
@@ -168,8 +242,17 @@ saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
 
-## Jak povolit stránkování při úpravě PDF?
-`PdfEditOptions` určuje nastavení úprav pro PDF soubory, například stránkování. Vytvořte instanci této třídy a nastavte `EnablePagination = true`. Povolení stránkování zachová původní zalomení stránek a rozvržení po úpravách, čímž zajistí, že výstupní PDF zachová stejnou vizuální strukturu jako zdroj.  
+## Krok 9: Vytvořit možnosti uložení dokumentu
+Zadejte možnosti uložení pro PDF dokument. Můžete také nastavit heslo pro výstupní dokument.  
+```csharp
+FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
+Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
+saveOptions.Password = "output_password";
+saveOptions.OptimizeMemoryUsage = true;
+```
+
+## Jak uložit upravené PDF na disk?
+`Save` zapíše upravený dokument do souboru pomocí zadaných možností uložení. Zavolejte jej na instanci `Editor`, předáním aktualizovaného `EditableDocument` a nakonfigurovaných `PdfSaveOptions`. Metoda vytvoří finální PDF na cílovém umístění a aplikuje veškeré šifrovací nebo stránkovací nastavení, které jste definovali.  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -179,49 +262,16 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-## Krok 5: Vytvořit možnosti úprav
-Nastavte možnosti úprav pro dokument. V tomto případě povolíme režim stránkování.  
-CODE_BLOCK_PLACEHOLDER_11_END
-
-## Jak vygenerovat editovatelný mezidokument?
-`CreateEditableDocument` vytvoří editovatelnou reprezentaci načteného dokumentu. Zavolejte tuto metodu na instanci `Editor`, předáním dříve definovaných `PdfEditOptions`. Metoda vrací `EditableDocument`, který obsahuje HTML‑podobný obsah, jež lze programově upravit před uložením zpět do PDF.  
-CODE_BLOCK_PLACEHOLDER_12_END
-
-## Krok 6: Vytvořit mezidokument k úpravě
-Vytvořte mezidokument k úpravě pomocí instance editoru a možností úprav.  
-CODE_BLOCK_PLACEHOLDER_13_END
-
-## Jak nahradit text v editovatelném obsahu?
-`EditableDocument` obsahuje obsah dokumentu v editovatelném formátu. Přistupte k jeho vlastnosti `Content`, která vrací řetězec HTML reprezentace dokumentu. Použijte standardní C# operace s řetězci, jako je `Replace`, nebo regulární výrazy k úpravě textu podle potřeby před opětovným sestavením dokumentu.  
-CODE_BLOCK_PLACEHOLDER_14_END
-
-## Krok 7: Upravit obsah
-Upravte obsah dokumentu podle potřeby. Zde jednoduše nahrazujeme slovo v dokumentu.  
-CODE_BLOCK_PLACEHOLDER_15_END
-
-## Jak znovu sestavit EditableDocument po změnách?
-`EditableDocument` obsahuje obsah dokumentu v editovatelném formátu. Po úpravě HTML řetězce vytvořte nový `EditableDocument` předáním upraveného obsahu a všech souvisejících zdrojů (obrázky, fonty) zpět editoru. Tím se znovu vytvoří vnitřní struktura dokumentu, připravená k uložení s aktualizovaným obsahem.  
-CODE_BLOCK_PLACEHOLDER_16_END
-
-## Krok 8: Vytvořit nový EditableDocument s upraveným obsahem
-Vytvořte novou instanci `EditableDocument` s upraveným obsahem a zdroji.  
-CODE_BLOCK_PLACEHOLDER_17_END
-
-## Jak nakonfigurovat možnosti uložení PDF, včetně šifrování?
-`PdfSaveOptions` definuje možnosti pro ukládání PDF souborů, včetně ochrany heslem a komprese. Vytvořte jeho instanci, nastavte `Password` pro šifrování výstupu, volitelně povolte `EnablePagination` pro zachování rozvržení stránek a upravte `CompressionLevel` pro velké soubory. Tato nastavení řídí, jak bude upravené PDF zapsáno na disk.  
-CODE_BLOCK_PLACEHOLDER_18_END
-
-## Krok 9: Vytvořit možnosti uložení dokumentu
-Zadejte možnosti uložení pro PDF dokument. Můžete také nastavit heslo pro výstupní dokument.  
-CODE_BLOCK_PLACEHOLDER_19_END
-
-## Jak uložit upravené PDF na disk?
-`Save` zapíše upravený dokument do souboru pomocí zadaných možností uložení. Zavolejte jej na instanci `Editor`, předáním aktualizovaného `EditableDocument` a nakonfigurovaných `PdfSaveOptions`. Metoda vytvoří finální PDF na cílovém umístění a aplikuje veškeré šifrovací nebo stránkovací nastavení, které jste definovali.  
-CODE_BLOCK_PLACEHOLDER_20_END
-
 ## Krok 10: Uložit upravený dokument
 Nakonec uložte upravený dokument na určenou výstupní cestu.  
-CODE_BLOCK_PLACEHOLDER_21_END
+```csharp
+string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
+string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
+using (FileStream outputStream = File.Create(outputPath))
+{
+    editor.Save(afterEdit, outputStream, saveOptions);
+}
+```
 
 ## Časté problémy a řešení
 - **Paměťové špičky u obrovských PDF** – Povolit streamování nastavením `LoadOptions.UseMemoryCache = false`.  
