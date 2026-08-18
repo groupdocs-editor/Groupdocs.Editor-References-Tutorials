@@ -104,40 +104,90 @@ using System.Reflection;
 ## استيراد المساحات الاسمية
 قبل كتابة أي كود، تأكد من استيراد المساحات الاسمية اللازمة إلى مشروعك:
 ```csharp
-string inputFilePath = "Your Sample Document.pdf";
+using System;
+using GroupDocs.Editor.Formats;
+using GroupDocs.Editor.HtmlCss.Resources;
+using GroupDocs.Editor.Options;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 ```
 
 ## كيف تقوم بتحميل PDF محمي بكلمة مرور؟
 `PdfLoadOptions` يحدد خيارات تحميل ملفات PDF، بما في ذلك كلمة المرور وإعدادات الذاكرة. لتحميل PDF محمي، أنشئ مثيلًا من `PdfLoadOptions`، عيّن خاصية `Password` إلى كلمة مرور المستند، ومرّر هذا الكائن إلى المحرر. يضمن ذلك فك تشفير الملف قبل أي عمليات تحرير.  
-```csharp
-using (FileStream fs = File.OpenRead(inputFilePath))
-```
-
-## الخطوة 1: الحصول على مسار ملف الإدخال
-أولاً، تحتاج إلى تحديد مسار ملف PDF الخاص بك. لهذا الدليل، سنفترض أن لديك ملف PDF تجريبي.  
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
 // If the document is password-protected
 loadOptions.Password = "your_password";
 ```
 
+## الخطوة 1: الحصول على مسار ملف الإدخال
+أولاً، تحتاج إلى تحديد مسار ملف PDF الخاص بك. لهذا الدليل، سنفترض أن لديك ملف PDF تجريبي.  
+```csharp
+string inputFilePath = "Your Sample Document.pdf";
+```
+
 ## كيف تقرأ تدفق ملف PDF؟
 `FileStream` يوفر تدفقًا لقراءة وكتابة الملفات على القرص. استخدمه لفتح PDF في وضع القراءة، مما يسمح للمحرر بمعالجة الملف دون حجزه للوصول الحصري. مثال: `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` يضمن أداءً مثاليًا وقراءات متزامنة آمنة.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## الخطوة 2: إنشاء تدفق من المسار
+بعد ذلك، أنشئ تدفق ملف من المسار الذي حددته. سيُستخدم هذا التدفق لقراءة مستند PDF.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## كيف تقوم بتكوين خيارات التحميل لملف PDF محمي بكلمة مرور؟
+`PdfLoadOptions` يحدد خيارات تحميل ملفات PDF، بما في ذلك كلمة المرور واستخدام الذاكرة. بعد إنشاء المثيل، عيّن خاصية `Password` إلى كلمة مرور المستند. للملفات الكبيرة يمكنك أيضًا تعيين `UseMemoryCache = false` لتقليل استهلاك الذاكرة. تُعد هذه الإعدادات المحمل للتعامل مع الملفات المشفرة والكبيرة بكفاءة.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## الخطوة 3: إنشاء خيارات التحميل للمستند
+لتحميل مستند PDF، تحتاج إلى تحديد خيارات التحميل. إذا كان PDF محميًا بكلمة مرور، يمكنك توفير كلمة المرور هنا.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## كيف تقوم بتهيئة Editor باستخدام تدفق وخيارات؟
+`Editor` هو الفئة الرئيسية التي تحمل المستند وتوفر إمكانيات التحرير. أنشئه بتمرير دالة تُرجع تدفق الملف ودالة أخرى تُرجع خيارات التحميل التي تم تكوينها مسبقًا. هذا يُنشئ تمثيلًا في الذاكرة للـ PDF جاهزًا للمزيد من التلاعب.  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
 
-## الخطوة 2: إنشاء تدفق من المسار
-بعد ذلك، أنشئ تدفق ملف من المسار الذي حددته. سيُستخدم هذا التدفق لقراءة مستند PDF.  
+## الخطوة 4: تحميل المستند إلى كائن Editor
+الآن، استخدم تدفق الملف وخيارات التحميل لتحميل المستند إلى مثيل `Editor`.  
+```csharp
+using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
+{
+    var documentInfo = editor.GetDocumentInfo(null);
+```
+
+## كيف تقوم بتمكين الترميز الصفحات عند تحرير PDF؟
+`PdfEditOptions` يحدد إعدادات التحرير لملفات PDF، مثل الترميز الصفحات. أنشئ مثيلًا من هذه الفئة وعيّن `EnablePagination = true`. تمكين الترميز يحافظ على فواصل الصفحات الأصلية وتخطيط المستند بعد التعديلات، مما يضمن أن PDF الناتج يحتفظ بنفس البنية البصرية للمصدر.  
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
 
-## كيف تقوم بتكوين خيارات التحميل لملف PDF محمي بكلمة مرور؟
-`PdfLoadOptions` يحدد خيارات تحميل ملفات PDF، بما في ذلك كلمة المرور واستخدام الذاكرة. بعد إنشاء المثيل، عيّن خاصية `Password` إلى كلمة مرور المستند. للملفات الكبيرة يمكنك أيضًا تعيين `UseMemoryCache = false` لتقليل استهلاك الذاكرة. تُعد هذه الإعدادات المحمل للتعامل مع الملفات المشفرة والكبيرة بكفاءة.  
+## الخطوة 5: إنشاء خيارات التحرير
+عيّن خيارات التحرير للمستند. في هذه الحالة، سنُفعّل وضع الترميز الصفحات.  
+```csharp
+Options.PdfEditOptions editOptions = new PdfEditOptions();
+editOptions.EnablePagination = true;
+```
+
+## كيف تنشئ مستندًا وسيطًا قابلًا للتحرير؟
+`CreateEditableDocument` ينشئ تمثيلًا قابلًا للتحرير للمستند المحمل. استدعِ هذه الطريقة على مثيل `Editor`، مع تمرير `PdfEditOptions` التي تم تعريفها مسبقًا. تُعيد الطريقة كائن `EditableDocument` يحتوي على محتوى شبيه بـ HTML يمكن تعديله برمجيًا قبل حفظه مرة أخرى كـ PDF.  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
@@ -146,22 +196,46 @@ using (EditableDocument beforeEdit = editor.Edit(editOptions))
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
 
-## الخطوة 3: إنشاء خيارات التحميل للمستند
-لتحميل مستند PDF، تحتاج إلى تحديد خيارات التحميل. إذا كان PDF محميًا بكلمة مرور، يمكنك توفير كلمة المرور هنا.  
+## الخطوة 6: إنشاء مستند وسيط قابل للتحرير
+أنشئ مستندًا وسيطًا قابلًا للتحرير باستخدام كائن المحرر وخيارات التحرير.  
+```csharp
+using (EditableDocument beforeEdit = editor.Edit(editOptions))
+{
+    // Extract textual content as HTML markup
+    string originalContent = beforeEdit.GetContent();
+    List<IHtmlResource> allResources = beforeEdit.AllResources;
+```
+
+## كيف تستبدل النص داخل المحتوى القابل للتحرير؟
+`EditableDocument` يحتفظ بمحتوى المستند بصيغة قابلة للتحرير. يمكنك الوصول إلى خاصية `Content` التي تُرجع سلسلة تمثّل المستند بصيغة HTML. استخدم عمليات السلسلة القياسية في C# مثل `Replace`، أو تعبيرات نمطية لتعديل النص حسب الحاجة قبل إعادة بناء المستند.  
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
 
-## كيف تقوم بتهيئة Editor باستخدام تدفق وخيارات؟
-`Editor` هو الفئة الرئيسية التي تحمل المستند وتوفر إمكانيات التحرير. أنشئه بتمرير دالة تُرجع تدفق الملف ودالة أخرى تُرجع خيارات التحميل التي تم تكوينها مسبقًا. هذا يُنشئ تمثيلًا في الذاكرة للـ PDF جاهزًا للمزيد من التلاعب.  
+## الخطوة 7: تعديل المحتوى
+عدّل محتوى المستند حسب الحاجة. هنا، نستبدل كلمة واحدة في المستند ببساطة.  
+```csharp
+string editedContent = originalContent.Replace("document", "edited document");
+```
+
+## كيف تعيد بناء EditableDocument بعد التغييرات؟
+`EditableDocument` يحتفظ بمحتوى المستند بصيغة قابلة للتحرير. بعد تعديل سلسلة HTML، أنشئ `EditableDocument` جديدًا بتمرير المحتوى المعدل وأي موارد مرتبطة (صور، خطوط) إلى المحرر. يعيد هذا بناء الهيكل الداخلي للمستند، مهيئًا لحفظه بالمحتوى المحدث.  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
 
-## الخطوة 4: تحميل المستند إلى كائن Editor
-الآن، استخدم تدفق الملف وخيارات التحميل لتحميل المستند إلى مثيل `Editor`.  
+## الخطوة 8: إنشاء مستند قابل للتحرير جديد بالمحتوى المعدل
+أنشئ مثيلًا جديدًا من `EditableDocument` بالمحتوى والموارد المعدلة.  
+```csharp
+using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
+{
+    string originalContent3 = afterEdit.GetContent();
+```
+
+## كيف تقوم بتكوين خيارات حفظ PDF، بما في ذلك التشفير؟
+`PdfSaveOptions` يحدد خيارات حفظ ملفات PDF، بما في ذلك حماية كلمة المرور والضغط. أنشئه، عيّن `Password` لتشفير الناتج، ويمكنك تمكين `EnablePagination` للحفاظ على تخطيط الصفحات، وضبط `CompressionLevel` للملفات الكبيرة. تتحكم هذه الإعدادات في كيفية كتابة PDF المعدل إلى القرص.  
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
@@ -169,8 +243,17 @@ saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
 
-## كيف تقوم بتمكين الترميز الصفحات عند تحرير PDF؟
-`PdfEditOptions` يحدد إعدادات التحرير لملفات PDF، مثل الترميز الصفحات. أنشئ مثيلًا من هذه الفئة وعيّن `EnablePagination = true`. تمكين الترميز يحافظ على فواصل الصفحات الأصلية وتخطيط المستند بعد التعديلات، مما يضمن أن PDF الناتج يحتفظ بنفس البنية البصرية للمصدر.  
+## الخطوة 9: إنشاء خيارات حفظ المستند
+حدد خيارات الحفظ لملف PDF. يمكنك أيضًا تعيين كلمة مرور للمستند الناتج.  
+```csharp
+FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
+Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
+saveOptions.Password = "output_password";
+saveOptions.OptimizeMemoryUsage = true;
+```
+
+## كيف تقوم بحفظ PDF المعدل على القرص؟
+`Save` يكتب المستند المعدل إلى ملف باستخدام خيارات الحفظ المحددة. استدعِه على مثيل `Editor`، مع توفير `EditableDocument` المحدث و`PdfSaveOptions` المكوَّنة. تُنشئ الطريقة PDF النهائي في الموقع المستهدف، مطبقة أي إعدادات تشفير أو ترقيم صفحات حددتها.  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -180,49 +263,16 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-## الخطوة 5: إنشاء خيارات التحرير
-عيّن خيارات التحرير للمستند. في هذه الحالة، سنُفعّل وضع الترميز الصفحات.  
-CODE_BLOCK_PLACEHOLDER_11_END
-
-## كيف تنشئ مستندًا وسيطًا قابلًا للتحرير؟
-`CreateEditableDocument` ينشئ تمثيلًا قابلًا للتحرير للمستند المحمل. استدعِ هذه الطريقة على مثيل `Editor`، مع تمرير `PdfEditOptions` التي تم تعريفها مسبقًا. تُعيد الطريقة كائن `EditableDocument` يحتوي على محتوى شبيه بـ HTML يمكن تعديله برمجيًا قبل حفظه مرة أخرى كـ PDF.  
-CODE_BLOCK_PLACEHOLDER_12_END
-
-## الخطوة 6: إنشاء مستند وسيط قابل للتحرير
-أنشئ مستندًا وسيطًا قابلًا للتحرير باستخدام كائن المحرر وخيارات التحرير.  
-CODE_BLOCK_PLACEHOLDER_13_END
-
-## كيف تستبدل النص داخل المحتوى القابل للتحرير؟
-`EditableDocument` يحتفظ بمحتوى المستند بصيغة قابلة للتحرير. يمكنك الوصول إلى خاصية `Content` التي تُرجع سلسلة تمثّل المستند بصيغة HTML. استخدم عمليات السلسلة القياسية في C# مثل `Replace`، أو تعبيرات نمطية لتعديل النص حسب الحاجة قبل إعادة بناء المستند.  
-CODE_BLOCK_PLACEHOLDER_14_END
-
-## الخطوة 7: تعديل المحتوى
-عدّل محتوى المستند حسب الحاجة. هنا، نستبدل كلمة واحدة في المستند ببساطة.  
-CODE_BLOCK_PLACEHOLDER_15_END
-
-## كيف تعيد بناء EditableDocument بعد التغييرات؟
-`EditableDocument` يحتفظ بمحتوى المستند بصيغة قابلة للتحرير. بعد تعديل سلسلة HTML، أنشئ `EditableDocument` جديدًا بتمرير المحتوى المعدل وأي موارد مرتبطة (صور، خطوط) إلى المحرر. يعيد هذا بناء الهيكل الداخلي للمستند، مهيئًا لحفظه بالمحتوى المحدث.  
-CODE_BLOCK_PLACEHOLDER_16_END
-
-## الخطوة 8: إنشاء مستند قابل للتحرير جديد بالمحتوى المعدل
-أنشئ مثيلًا جديدًا من `EditableDocument` بالمحتوى والموارد المعدلة.  
-CODE_BLOCK_PLACEHOLDER_17_END
-
-## كيف تقوم بتكوين خيارات حفظ PDF، بما في ذلك التشفير؟
-`PdfSaveOptions` يحدد خيارات حفظ ملفات PDF، بما في ذلك حماية كلمة المرور والضغط. أنشئه، عيّن `Password` لتشفير الناتج، ويمكنك تمكين `EnablePagination` للحفاظ على تخطيط الصفحات، وضبط `CompressionLevel` للملفات الكبيرة. تتحكم هذه الإعدادات في كيفية كتابة PDF المعدل إلى القرص.  
-CODE_BLOCK_PLACEHOLDER_18_END
-
-## الخطوة 9: إنشاء خيارات حفظ المستند
-حدد خيارات الحفظ لملف PDF. يمكنك أيضًا تعيين كلمة مرور للمستند الناتج.  
-CODE_BLOCK_PLACEHOLDER_19_END
-
-## كيف تقوم بحفظ PDF المعدل على القرص؟
-`Save` يكتب المستند المعدل إلى ملف باستخدام خيارات الحفظ المحددة. استدعِه على مثيل `Editor`، مع توفير `EditableDocument` المحدث و`PdfSaveOptions` المكوَّنة. تُنشئ الطريقة PDF النهائي في الموقع المستهدف، مطبقة أي إعدادات تشفير أو ترقيم صفحات حددتها.  
-CODE_BLOCK_PLACEHOLDER_20_END
-
 ## الخطوة 10: حفظ المستند المعدل
 أخيرًا، احفظ المستند المعدل إلى المسار المحدد.  
-CODE_BLOCK_PLACEHOLDER_21_END
+```csharp
+string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
+string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
+using (FileStream outputStream = File.Create(outputPath))
+{
+    editor.Save(afterEdit, outputStream, saveOptions);
+}
+```
 
 ## المشكلات الشائعة والحلول
 - **Memory spikes with huge PDFs** – Enable streaming by setting `LoadOptions.UseMemoryCache = false`.  
