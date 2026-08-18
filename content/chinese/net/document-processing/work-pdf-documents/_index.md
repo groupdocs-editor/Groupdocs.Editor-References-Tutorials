@@ -100,40 +100,90 @@ GroupDocs.Editor 支持**30 多种文档格式**，并且能够在不将整个�
 ## 导入命名空间
 在编写任何代码之前，请确保已将必要的命名空间导入到项目中：  
 ```csharp
-string inputFilePath = "Your Sample Document.pdf";
+using System;
+using GroupDocs.Editor.Formats;
+using GroupDocs.Editor.HtmlCss.Resources;
+using GroupDocs.Editor.Options;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 ```
 
 ## 如何加载受密码保护的 PDF？
 `PdfLoadOptions` 定义了加载 PDF 文件的选项，包括密码和内存设置。要加载受保护的 PDF，创建一个 `PdfLoadOptions` 实例，将其 `Password` 属性设为文档的密码，然后将该对象传递给编辑器。这确保文件在任何编辑操作之前已被解密。  
-```csharp
-using (FileStream fs = File.OpenRead(inputFilePath))
-```
-
-## 步骤 1：获取输入文件的路径
-首先，需要指定 PDF 文档的路径。本文教程中，我们假设您已有一个示例 PDF 文件。  
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
 // If the document is password-protected
 loadOptions.Password = "your_password";
 ```
 
+## 步骤 1：获取输入文件的路径
+首先，需要指定 PDF 文档的路径。本文教程中，我们假设您已有一个示例 PDF 文件。  
+```csharp
+string inputFilePath = "Your Sample Document.pdf";
+```
+
 ## 如何读取 PDF 文件流？
 `FileStream` 提供了对磁盘上文件的读取和写入流。使用它以读取模式打开 PDF，使编辑器能够在不锁定文件的情况下处理文件。例如：`new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` 可确保最佳性能并支持安全的并发读取。  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## 步骤 2：从路径创建流
+接下来，从您指定的路径创建文件流。该流将用于读取 PDF 文档。  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## 如何为受密码保护的 PDF 配置加载选项？
+`PdfLoadOptions` 定义了加载 PDF 文件的选项，包括密码和内存使用情况。创建实例后，将 `Password` 属性设置为文档的密码。对于大 PDF，您还可以将 `UseMemoryCache = false` 以降低内存消耗。这些设置使加载器能够高效处理加密和大型文件。  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## 步骤 3：为文档创建加载选项
+要加载 PDF 文档，需要指定加载选项。如果您的 PDF 受密码保护，可在此提供密码。  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## 如何使用流和选项初始化 Editor？
+`Editor` 是加载文档并提供编辑功能的主要类。通过传入返回文件流的委托以及返回先前配置的加载选项的委托来实例化它。这将在内存中创建 PDF 的表示，准备进一步操作。  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
 
-## 步骤 2：从路径创建流
-接下来，从您指定的路径创建文件流。该流将用于读取 PDF 文档。  
+## 步骤 4：将文档加载到 Editor 实例中
+现在，使用文件流和加载选项将文档加载到 `Editor` 实例中。  
+```csharp
+using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
+{
+    var documentInfo = editor.GetDocumentInfo(null);
+```
+
+## 如何在编辑 PDF 时启用分页？
+`PdfEditOptions` 指定了 PDF 文件的编辑设置，例如分页。创建该类的实例并将 `EnablePagination = true`。启用分页可在修改后保留原始的分页和布局，确保输出 PDF 与源文件保持相同的视觉结构。  
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
 
-## 如何为受密码保护的 PDF 配置加载选项？
-`PdfLoadOptions` 定义了加载 PDF 文件的选项，包括密码和内存使用情况。创建实例后，将 `Password` 属性设置为文档的密码。对于大 PDF，您还可以将 `UseMemoryCache = false` 以降低内存消耗。这些设置使加载器能够高效处理加密和大型文件。  
+## 步骤 5：创建编辑选项
+为文档设置编辑选项。本例中，我们将启用分页模式。  
+```csharp
+Options.PdfEditOptions editOptions = new PdfEditOptions();
+editOptions.EnablePagination = true;
+```
+
+## 如何生成可编辑的中间文档？
+`CreateEditableDocument` 会创建已加载文档的可编辑表示。对 `Editor` 实例调用此方法，并传入先前定义的 `PdfEditOptions`。该方法返回一个包含类似 HTML 内容的 `EditableDocument`，您可以在保存回 PDF 之前对其进行编程修改。  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
@@ -142,22 +192,46 @@ using (EditableDocument beforeEdit = editor.Edit(editOptions))
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
 
-## 步骤 3：为文档创建加载选项
-要加载 PDF 文档，需要指定加载选项。如果您的 PDF 受密码保护，可在此提供密码。  
+## 步骤 6：创建中间可编辑文档
+使用编辑器实例和编辑选项创建中间可编辑文档。  
+```csharp
+using (EditableDocument beforeEdit = editor.Edit(editOptions))
+{
+    // Extract textual content as HTML markup
+    string originalContent = beforeEdit.GetContent();
+    List<IHtmlResource> allResources = beforeEdit.AllResources;
+```
+
+## 如何替换可编辑内容中的文本？
+`EditableDocument` 以可编辑格式保存文档内容。访问其 `Content` 属性，可获得文档的 HTML 表示字符串。使用标准的 C# 字符串操作（如 `Replace`）或正则表达式在重新构建文档之前修改所需的文本。  
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
 
-## 如何使用流和选项初始化 Editor？
-`Editor` 是加载文档并提供编辑功能的主要类。通过传入返回文件流的委托以及返回先前配置的加载选项的委托来实例化它。这将在内存中创建 PDF 的表示，准备进一步操作。  
+## 步骤 7：修改内容
+根据需要修改文档内容。本例中，我们仅替换文档中的一个单词。  
+```csharp
+string editedContent = originalContent.Replace("document", "edited document");
+```
+
+## 更改后如何重建 EditableDocument？
+`EditableDocument` 以可编辑格式保存文档内容。编辑完 HTML 字符串后，创建一个新的 `EditableDocument`，将修改后的内容以及任何相关资源（图像、字体）传回编辑器。这会重新构建文档的内部结构，为保存更新后的内容做好准备。  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
 
-## 步骤 4：将文档加载到 Editor 实例中
-现在，使用文件流和加载选项将文档加载到 `Editor` 实例中。  
+## 步骤 8：使用编辑内容创建新 EditableDocument
+使用编辑后的内容和资源创建新的 `EditableDocument` 实例。  
+```csharp
+using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
+{
+    string originalContent3 = afterEdit.GetContent();
+```
+
+## 如何配置 PDF 保存选项，包括加密？
+`PdfSaveOptions` 定义了保存 PDF 文件的选项，包括密码保护和压缩。实例化后，将 `Password` 设置为对输出进行加密，必要时启用 `EnablePagination` 以保持页面布局，并根据大文件调整 `CompressionLevel`。这些设置控制编辑后 PDF 的写入方式。  
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
@@ -165,8 +239,17 @@ saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
 
-## 如何在编辑 PDF 时启用分页？
-`PdfEditOptions` 指定了 PDF 文件的编辑设置，例如分页。创建该类的实例并将 `EnablePagination = true`。启用分页可在修改后保留原始的分页和布局，确保输出 PDF 与源文件保持相同的视觉结构。  
+## 步骤 9：创建文档保存选项
+指定 PDF 文档的保存选项。您还可以为输出文档设置密码。  
+```csharp
+FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
+Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
+saveOptions.Password = "output_password";
+saveOptions.OptimizeMemoryUsage = true;
+```
+
+## 如何将编辑后的 PDF 持久化到磁盘？
+`Save` 使用指定的保存选项将编辑后的文档写入文件。对 `Editor` 实例调用此方法，提供更新后的 `EditableDocument` 和配置好的 `PdfSaveOptions`。该方法会在目标位置创建最终的 PDF，并应用您定义的任何加密或分页设置。  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -176,49 +259,16 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-## 步骤 5：创建编辑选项
-为文档设置编辑选项。本例中，我们将启用分页模式。  
-CODE_BLOCK_PLACEHOLDER_11_END
-
-## 如何生成可编辑的中间文档？
-`CreateEditableDocument` 会创建已加载文档的可编辑表示。对 `Editor` 实例调用此方法，并传入先前定义的 `PdfEditOptions`。该方法返回一个包含类似 HTML 内容的 `EditableDocument`，您可以在保存回 PDF 之前对其进行编程修改。  
-CODE_BLOCK_PLACEHOLDER_12_END
-
-## 步骤 6：创建中间可编辑文档
-使用编辑器实例和编辑选项创建中间可编辑文档。  
-CODE_BLOCK_PLACEHOLDER_13_END
-
-## 如何替换可编辑内容中的文本？
-`EditableDocument` 以可编辑格式保存文档内容。访问其 `Content` 属性，可获得文档的 HTML 表示字符串。使用标准的 C# 字符串操作（如 `Replace`）或正则表达式在重新构建文档之前修改所需的文本。  
-CODE_BLOCK_PLACEHOLDER_14_END
-
-## 步骤 7：修改内容
-根据需要修改文档内容。本例中，我们仅替换文档中的一个单词。  
-CODE_BLOCK_PLACEHOLDER_15_END
-
-## 更改后如何重建 EditableDocument？
-`EditableDocument` 以可编辑格式保存文档内容。编辑完 HTML 字符串后，创建一个新的 `EditableDocument`，将修改后的内容以及任何相关资源（图像、字体）传回编辑器。这会重新构建文档的内部结构，为保存更新后的内容做好准备。  
-CODE_BLOCK_PLACEHOLDER_16_END
-
-## 步骤 8：使用编辑内容创建新 EditableDocument
-使用编辑后的内容和资源创建新的 `EditableDocument` 实例。  
-CODE_BLOCK_PLACEHOLDER_17_END
-
-## 如何配置 PDF 保存选项，包括加密？
-`PdfSaveOptions` 定义了保存 PDF 文件的选项，包括密码保护和压缩。实例化后，将 `Password` 设置为对输出进行加密，必要时启用 `EnablePagination` 以保持页面布局，并根据大文件调整 `CompressionLevel`。这些设置控制编辑后 PDF 的写入方式。  
-CODE_BLOCK_PLACEHOLDER_18_END
-
-## 步骤 9：创建文档保存选项
-指定 PDF 文档的保存选项。您还可以为输出文档设置密码。  
-CODE_BLOCK_PLACEHOLDER_19_END
-
-## 如何将编辑后的 PDF 持久化到磁盘？
-`Save` 使用指定的保存选项将编辑后的文档写入文件。对 `Editor` 实例调用此方法，提供更新后的 `EditableDocument` 和配置好的 `PdfSaveOptions`。该方法会在目标位置创建最终的 PDF，并应用您定义的任何加密或分页设置。  
-CODE_BLOCK_PLACEHOLDER_20_END
-
 ## 步骤 10：保存编辑后的文档
 最后，将编辑后的文档保存到指定的输出路径。  
-CODE_BLOCK_PLACEHOLDER_21_END
+```csharp
+string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
+string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
+using (FileStream outputStream = File.Create(outputPath))
+{
+    editor.Save(afterEdit, outputStream, saveOptions);
+}
+```
 
 ## 常见问题及解决方案
 - **处理超大 PDF 时内存激增** – 通过将 `LoadOptions.UseMemoryCache = false` 启用流式处理。  
