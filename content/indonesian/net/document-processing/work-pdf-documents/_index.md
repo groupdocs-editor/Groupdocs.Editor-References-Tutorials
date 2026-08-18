@@ -104,40 +104,90 @@ Sebelum kita mulai, ada beberapa hal yang Anda perlukan:
 ## Impor Namespace
 Sebelum menulis kode apa pun, pastikan Anda telah mengimpor namespace yang diperlukan ke dalam proyek Anda:
 ```csharp
-string inputFilePath = "Your Sample Document.pdf";
+using System;
+using GroupDocs.Editor.Formats;
+using GroupDocs.Editor.HtmlCss.Resources;
+using GroupDocs.Editor.Options;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 ```
 
 ## Bagaimana cara memuat PDF yang dilindungi password?
 `PdfLoadOptions` mendefinisikan opsi untuk memuat file PDF, termasuk password dan pengaturan memori. Untuk memuat PDF yang dilindungi, buat instance `PdfLoadOptions`, set properti `Password`‑nya ke password dokumen, dan berikan objek ini ke editor. Ini memastikan file didekripsi sebelum operasi pengeditan apa pun dilakukan.  
-```csharp
-using (FileStream fs = File.OpenRead(inputFilePath))
-```
-
-## Langkah 1: Dapatkan Path ke File Input
-Pertama, Anda perlu menentukan path ke dokumen PDF Anda. Untuk tutorial ini, kami mengasumsikan Anda memiliki file PDF contoh.  
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
 // If the document is password-protected
 loadOptions.Password = "your_password";
 ```
 
+## Langkah 1: Dapatkan Path ke File Input
+Pertama, Anda perlu menentukan path ke dokumen PDF Anda. Untuk tutorial ini, kami mengasumsikan Anda memiliki file PDF contoh.  
+```csharp
+string inputFilePath = "Your Sample Document.pdf";
+```
+
 ## Bagaimana cara membaca aliran file PDF?
 `FileStream` menyediakan aliran untuk membaca dan menulis file di disk. Gunakan untuk membuka PDF dalam mode baca, yang memungkinkan editor memproses file tanpa mengunci akses eksklusif. Contoh: `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` memastikan kinerja optimal dan pembacaan bersamaan yang aman.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Langkah 2: Buat Stream dari Path
+Selanjutnya, buat file stream dari path yang Anda tentukan. Stream ini akan digunakan untuk membaca dokumen PDF.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Bagaimana cara mengkonfigurasi load options untuk PDF yang dilindungi password?
+`PdfLoadOptions` mendefinisikan opsi untuk memuat file PDF, termasuk password dan penggunaan memori. Setelah membuat instance, tetapkan properti `Password` dengan password dokumen. Untuk PDF besar Anda juga dapat mengatur `UseMemoryCache = false` guna mengurangi konsumsi memori. Pengaturan ini menyiapkan loader untuk menangani file terenkripsi dan berukuran besar secara efisien.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Langkah 3: Buat Load Options untuk Dokumen
+Untuk memuat dokumen PDF, Anda perlu menentukan load options. Jika PDF Anda dilindungi password, Anda dapat menyediakan password di sini.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Bagaimana cara menginisialisasi Editor dengan stream dan opsi?
+`Editor` adalah kelas utama yang memuat dokumen dan menyediakan kemampuan pengeditan. Instansiasikan dengan memberikan delegate yang mengembalikan file stream dan delegate lain yang mengembalikan load options yang telah dikonfigurasi sebelumnya. Ini membuat representasi dalam memori dari PDF siap untuk manipulasi lebih lanjut.  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
 
-## Langkah 2: Buat Stream dari Path
-Selanjutnya, buat file stream dari path yang Anda tentukan. Stream ini akan digunakan untuk membaca dokumen PDF.  
+## Langkah 4: Muat Dokumen ke Instance Editor
+Sekarang, gunakan file stream dan load options untuk memuat dokumen ke dalam instance `Editor`.  
+```csharp
+using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
+{
+    var documentInfo = editor.GetDocumentInfo(null);
+```
+
+## Bagaimana cara mengaktifkan pagination saat mengedit PDF?
+`PdfEditOptions` menentukan pengaturan pengeditan untuk file PDF, seperti pagination. Buat instance kelas ini dan set `EnablePagination = true`. Mengaktifkan pagination mempertahankan pemisahan halaman dan tata letak asli setelah modifikasi, memastikan PDF output tetap memiliki struktur visual yang sama dengan sumbernya.  
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
 
-## Bagaimana cara mengkonfigurasi load options untuk PDF yang dilindungi password?
-`PdfLoadOptions` mendefinisikan opsi untuk memuat file PDF, termasuk password dan penggunaan memori. Setelah membuat instance, tetapkan properti `Password` dengan password dokumen. Untuk PDF besar Anda juga dapat mengatur `UseMemoryCache = false` guna mengurangi konsumsi memori. Pengaturan ini menyiapkan loader untuk menangani file terenkripsi dan berukuran besar secara efisien.  
+## Langkah 5: Buat Opsi Pengeditan
+Set opsi pengeditan untuk dokumen. Dalam kasus ini, kami akan mengaktifkan mode pagination.  
+```csharp
+Options.PdfEditOptions editOptions = new PdfEditOptions();
+editOptions.EnablePagination = true;
+```
+
+## Bagaimana cara menghasilkan dokumen perantara yang dapat diedit?
+`CreateEditableDocument` membuat representasi yang dapat diedit dari dokumen yang dimuat. Panggil metode ini pada instance `Editor`, dengan memberikan `PdfEditOptions` yang telah didefinisikan sebelumnya. Metode ini mengembalikan `EditableDocument` yang berisi konten mirip HTML yang dapat diubah secara programatis sebelum disimpan kembali ke PDF.  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
@@ -146,22 +196,46 @@ using (EditableDocument beforeEdit = editor.Edit(editOptions))
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
 
-## Langkah 3: Buat Load Options untuk Dokumen
-Untuk memuat dokumen PDF, Anda perlu menentukan load options. Jika PDF Anda dilindungi password, Anda dapat menyediakan password di sini.  
+## Langkah 6: Buat Dokumen Perantara yang Dapat Diedit
+Buat dokumen perantara yang dapat diedit menggunakan instance editor dan opsi pengeditan.  
+```csharp
+using (EditableDocument beforeEdit = editor.Edit(editOptions))
+{
+    // Extract textual content as HTML markup
+    string originalContent = beforeEdit.GetContent();
+    List<IHtmlResource> allResources = beforeEdit.AllResources;
+```
+
+## Bagaimana cara mengganti teks di dalam konten yang dapat diedit?
+`EditableDocument` menyimpan konten dokumen dalam format yang dapat diedit. Akses properti `Content`‑nya, yang mengembalikan string representasi HTML dokumen. Gunakan operasi string standar C#, seperti `Replace`, atau ekspresi reguler untuk memodifikasi teks sesuai kebutuhan sebelum membangun kembali dokumen.  
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
 
-## Bagaimana cara menginisialisasi Editor dengan stream dan opsi?
-`Editor` adalah kelas utama yang memuat dokumen dan menyediakan kemampuan pengeditan. Instansiasikan dengan memberikan delegate yang mengembalikan file stream dan delegate lain yang mengembalikan load options yang telah dikonfigurasi sebelumnya. Ini membuat representasi dalam memori dari PDF siap untuk manipulasi lebih lanjut.  
+## Langkah 7: Modifikasi Konten
+Modifikasi konten dokumen sesuai kebutuhan. Di sini, kami hanya mengganti satu kata dalam dokumen.  
+```csharp
+string editedContent = originalContent.Replace("document", "edited document");
+```
+
+## Bagaimana cara membangun kembali EditableDocument setelah perubahan?
+`EditableDocument` menyimpan konten dokumen dalam format yang dapat diedit. Setelah mengedit string HTML, buat `EditableDocument` baru dengan memberikan konten yang telah dimodifikasi dan sumber daya terkait (gambar, font) kembali ke editor. Ini merekonstruksi struktur internal dokumen, mempersiapkannya untuk disimpan dengan konten yang diperbarui.  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
 
-## Langkah 4: Muat Dokumen ke Instance Editor
-Sekarang, gunakan file stream dan load options untuk memuat dokumen ke dalam instance `Editor`.  
+## Langkah 8: Buat EditableDocument Baru dengan Konten yang Diedit
+Buat instance `EditableDocument` baru dengan konten yang telah diedit dan sumber daya terkait.  
+```csharp
+using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
+{
+    string originalContent3 = afterEdit.GetContent();
+```
+
+## Bagaimana cara mengkonfigurasi opsi penyimpanan PDF, termasuk enkripsi?
+`PdfSaveOptions` mendefinisikan opsi untuk menyimpan file PDF, termasuk perlindungan password dan kompresi. Instansiasikan, set `Password` untuk mengenkripsi output, opsional aktifkan `EnablePagination` untuk mempertahankan tata letak halaman, dan sesuaikan `CompressionLevel` untuk file besar. Pengaturan ini mengontrol cara PDF yang diedit ditulis ke disk.  
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
@@ -169,8 +243,17 @@ saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
 
-## Bagaimana cara mengaktifkan pagination saat mengedit PDF?
-`PdfEditOptions` menentukan pengaturan pengeditan untuk file PDF, seperti pagination. Buat instance kelas ini dan set `EnablePagination = true`. Mengaktifkan pagination mempertahankan pemisahan halaman dan tata letak asli setelah modifikasi, memastikan PDF output tetap memiliki struktur visual yang sama dengan sumbernya.  
+## Langkah 9: Buat Opsi Penyimpanan Dokumen
+Tentukan opsi penyimpanan untuk dokumen PDF. Anda juga dapat mengatur password untuk dokumen output.  
+```csharp
+FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
+Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
+saveOptions.Password = "output_password";
+saveOptions.OptimizeMemoryUsage = true;
+```
+
+## Bagaimana cara menyimpan PDF yang diedit ke disk?
+`Save` menulis dokumen yang telah diedit ke file menggunakan opsi penyimpanan yang ditentukan. Panggil pada instance `Editor`, berikan `EditableDocument` yang telah diperbarui dan `PdfSaveOptions` yang telah dikonfigurasi. Metode ini membuat PDF final di lokasi target, menerapkan enkripsi atau pengaturan pagination yang Anda tentukan.  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -180,49 +263,16 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-## Langkah 5: Buat Opsi Pengeditan
-Set opsi pengeditan untuk dokumen. Dalam kasus ini, kami akan mengaktifkan mode pagination.  
-CODE_BLOCK_PLACEHOLDER_11_END
-
-## Bagaimana cara menghasilkan dokumen perantara yang dapat diedit?
-`CreateEditableDocument` membuat representasi yang dapat diedit dari dokumen yang dimuat. Panggil metode ini pada instance `Editor`, dengan memberikan `PdfEditOptions` yang telah didefinisikan sebelumnya. Metode ini mengembalikan `EditableDocument` yang berisi konten mirip HTML yang dapat diubah secara programatis sebelum disimpan kembali ke PDF.  
-CODE_BLOCK_PLACEHOLDER_12_END
-
-## Langkah 6: Buat Dokumen Perantara yang Dapat Diedit
-Buat dokumen perantara yang dapat diedit menggunakan instance editor dan opsi pengeditan.  
-CODE_BLOCK_PLACEHOLDER_13_END
-
-## Bagaimana cara mengganti teks di dalam konten yang dapat diedit?
-`EditableDocument` menyimpan konten dokumen dalam format yang dapat diedit. Akses properti `Content`‑nya, yang mengembalikan string representasi HTML dokumen. Gunakan operasi string standar C#, seperti `Replace`, atau ekspresi reguler untuk memodifikasi teks sesuai kebutuhan sebelum membangun kembali dokumen.  
-CODE_BLOCK_PLACEHOLDER_14_END
-
-## Langkah 7: Modifikasi Konten
-Modifikasi konten dokumen sesuai kebutuhan. Di sini, kami hanya mengganti satu kata dalam dokumen.  
-CODE_BLOCK_PLACEHOLDER_15_END
-
-## Bagaimana cara membangun kembali EditableDocument setelah perubahan?
-`EditableDocument` menyimpan konten dokumen dalam format yang dapat diedit. Setelah mengedit string HTML, buat `EditableDocument` baru dengan memberikan konten yang telah dimodifikasi dan sumber daya terkait (gambar, font) kembali ke editor. Ini merekonstruksi struktur internal dokumen, mempersiapkannya untuk disimpan dengan konten yang diperbarui.  
-CODE_BLOCK_PLACEHOLDER_16_END
-
-## Langkah 8: Buat EditableDocument Baru dengan Konten yang Diedit
-Buat instance `EditableDocument` baru dengan konten yang telah diedit dan sumber daya terkait.  
-CODE_BLOCK_PLACEHOLDER_17_END
-
-## Bagaimana cara mengkonfigurasi opsi penyimpanan PDF, termasuk enkripsi?
-`PdfSaveOptions` mendefinisikan opsi untuk menyimpan file PDF, termasuk perlindungan password dan kompresi. Instansiasikan, set `Password` untuk mengenkripsi output, opsional aktifkan `EnablePagination` untuk mempertahankan tata letak halaman, dan sesuaikan `CompressionLevel` untuk file besar. Pengaturan ini mengontrol cara PDF yang diedit ditulis ke disk.  
-CODE_BLOCK_PLACEHOLDER_18_END
-
-## Langkah 9: Buat Opsi Penyimpanan Dokumen
-Tentukan opsi penyimpanan untuk dokumen PDF. Anda juga dapat mengatur password untuk dokumen output.  
-CODE_BLOCK_PLACEHOLDER_19_END
-
-## Bagaimana cara menyimpan PDF yang diedit ke disk?
-`Save` menulis dokumen yang telah diedit ke file menggunakan opsi penyimpanan yang ditentukan. Panggil pada instance `Editor`, berikan `EditableDocument` yang telah diperbarui dan `PdfSaveOptions` yang telah dikonfigurasi. Metode ini membuat PDF final di lokasi target, menerapkan enkripsi atau pengaturan pagination yang Anda tentukan.  
-CODE_BLOCK_PLACEHOLDER_20_END
-
 ## Langkah 10: Simpan Dokumen yang Diedit
 Akhirnya, simpan dokumen yang telah diedit ke path output yang ditentukan.  
-CODE_BLOCK_PLACEHOLDER_21_END
+```csharp
+string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
+string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
+using (FileStream outputStream = File.Create(outputPath))
+{
+    editor.Save(afterEdit, outputStream, saveOptions);
+}
+```
 
 ## Masalah Umum dan Solusinya
 - **Lonjakan memori dengan PDF besar** – Aktifkan streaming dengan mengatur `LoadOptions.UseMemoryCache = false`.  
