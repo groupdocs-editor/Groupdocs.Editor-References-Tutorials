@@ -104,40 +104,90 @@ Innan vi börjar, finns det några saker du behöver:
 ## Importera namnrymder
 Innan du skriver någon kod, se till att de nödvändiga namnrymderna är importerade i ditt projekt:  
 ```csharp
-string inputFilePath = "Your Sample Document.pdf";
+using System;
+using GroupDocs.Editor.Formats;
+using GroupDocs.Editor.HtmlCss.Resources;
+using GroupDocs.Editor.Options;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 ```
 
 ## Hur laddar du ett lösenordsskyddat PDF?
 `PdfLoadOptions` definierar alternativ för att ladda PDF‑filer, inklusive lösenord och minnesinställningar. För att ladda ett skyddat PDF, skapa en `PdfLoadOptions`‑instans, sätt dess `Password`‑egenskap till dokumentets lösenord, och skicka detta objekt till editorn. Detta säkerställer att filen dekrypteras innan någon redigeringsoperation.  
-```csharp
-using (FileStream fs = File.OpenRead(inputFilePath))
-```
-
-## Steg 1: Hämta en sökväg till indatafilen
-Först måste du ange sökvägen till ditt PDF‑dokument. För den här handledningen antar vi att du har en exempel‑PDF‑fil.  
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
 // If the document is password-protected
 loadOptions.Password = "your_password";
 ```
 
+## Steg 1: Hämta en sökväg till indatafilen
+Först måste du ange sökvägen till ditt PDF‑dokument. För den här handledningen antar vi att du har en exempel‑PDF‑fil.  
+```csharp
+string inputFilePath = "Your Sample Document.pdf";
+```
+
 ## Hur läser du en PDF‑filström?
 `FileStream` tillhandahåller en ström för att läsa från och skriva till filer på disk. Använd den för att öppna PDF‑filen i läsläge, vilket låter editorn bearbeta filen utan att låsa den för exklusiv åtkomst. Exempel: `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` säkerställer optimal prestanda och säker samtidig läsning.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Steg 2: Skapa en ström från sökvägen
+Nästa steg är att skapa en filström från den angivna sökvägen. Denna ström kommer att användas för att läsa PDF‑dokumentet.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Hur konfigurerar du laddningsalternativ för ett lösenordsskyddat PDF?
+`PdfLoadOptions` definierar alternativ för att ladda PDF‑filer, inklusive lösenord och minnesanvändning. Efter att du skapat instansen, tilldela `Password`‑egenskapen med dokumentets lösenord. För stora PDF‑filer kan du också sätta `UseMemoryCache = false` för att minska minnesförbrukningen. Dessa inställningar förbereder laddaren för att hantera krypterade och stora filer effektivt.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Steg 3: Skapa laddningsalternativ för dokumentet
+För att ladda PDF‑dokumentet måste du ange laddningsalternativ. Om ditt PDF är lösenordsskyddat kan du ange lösenordet här.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Hur initierar du editorn med en ström och alternativ?
+`Editor` är huvudklassen som laddar ett dokument och erbjuder redigeringsmöjligheter. Instansiera den genom att skicka en delegat som returnerar filströmmen och en annan delegat som returnerar de tidigare konfigurerade laddningsalternativen. Detta skapar en in‑minnesrepresentation av PDF‑filen redo för vidare manipulation.  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
 
-## Steg 2: Skapa en ström från sökvägen
-Nästa steg är att skapa en filström från den angivna sökvägen. Denna ström kommer att användas för att läsa PDF‑dokumentet.  
+## Steg 4: Ladda dokumentet i Editor‑instansen
+Nu använder du filströmmen och laddningsalternativen för att ladda dokumentet i en `Editor`‑instans.  
+```csharp
+using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
+{
+    var documentInfo = editor.GetDocumentInfo(null);
+```
+
+## Hur aktiverar du paginering när du redigerar ett PDF?
+`PdfEditOptions` specificerar redigeringsinställningar för PDF‑filer, såsom paginering. Skapa en instans av denna klass och sätt `EnablePagination = true`. Att aktivera paginering bevarar de ursprungliga sidbrytningarna och layouten efter ändringar, vilket säkerställer att den resulterande PDF‑filen behåller samma visuella struktur som källan.  
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
 
-## Hur konfigurerar du laddningsalternativ för ett lösenordsskyddat PDF?
-`PdfLoadOptions` definierar alternativ för att ladda PDF‑filer, inklusive lösenord och minnesanvändning. Efter att du skapat instansen, tilldela `Password`‑egenskapen med dokumentets lösenord. För stora PDF‑filer kan du också sätta `UseMemoryCache = false` för att minska minnesförbrukningen. Dessa inställningar förbereder laddaren för att hantera krypterade och stora filer effektivt.  
+## Steg 5: Skapa redigeringsalternativ
+Ställ in redigeringsalternativen för dokumentet. I detta fall kommer vi att aktivera pagineringsläge.  
+```csharp
+Options.PdfEditOptions editOptions = new PdfEditOptions();
+editOptions.EnablePagination = true;
+```
+
+## Hur genererar du ett redigerbart mellandokument?
+`CreateEditableDocument` skapar en redigerbar representation av det laddade dokumentet. Anropa denna metod på `Editor`‑instansen och skicka de tidigare definierade `PdfEditOptions`. Metoden returnerar ett `EditableDocument` som innehåller HTML‑liknande innehåll som kan modifieras programatiskt innan det sparas tillbaka till PDF.  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
@@ -146,22 +196,46 @@ using (EditableDocument beforeEdit = editor.Edit(editOptions))
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
 
-## Steg 3: Skapa laddningsalternativ för dokumentet
-För att ladda PDF‑dokumentet måste du ange laddningsalternativ. Om ditt PDF är lösenordsskyddat kan du ange lösenordet här.  
+## Steg 6: Skapa ett mellandelbart redigerbart dokument
+Skapa ett mellandelbart redigerbart dokument med hjälp av editor‑instansen och redigeringsalternativen.  
+```csharp
+using (EditableDocument beforeEdit = editor.Edit(editOptions))
+{
+    // Extract textual content as HTML markup
+    string originalContent = beforeEdit.GetContent();
+    List<IHtmlResource> allResources = beforeEdit.AllResources;
+```
+
+## Hur ersätter du text i det redigerbara innehållet?
+`EditableDocument` innehåller dokumentets innehåll i ett redigerbart format. Åtkomst till dess `Content`‑egenskap ger en sträng med dokumentets HTML‑representation. Använd vanliga C#‑strängoperationer, såsom `Replace`, eller reguljära uttryck för att modifiera texten efter behov innan du bygger om dokumentet.  
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
 
-## Hur initierar du editorn med en ström och alternativ?
-`Editor` är huvudklassen som laddar ett dokument och erbjuder redigeringsmöjligheter. Instansiera den genom att skicka en delegat som returnerar filströmmen och en annan delegat som returnerar de tidigare konfigurerade laddningsalternativen. Detta skapar en in‑minnesrepresentation av PDF‑filen redo för vidare manipulation.  
+## Steg 7: Modifiera innehållet
+Modifiera dokumentets innehåll efter behov. Här ersätter vi helt enkelt ett ord i dokumentet.  
+```csharp
+string editedContent = originalContent.Replace("document", "edited document");
+```
+
+## Hur bygger du om EditableDocument efter ändringar?
+`EditableDocument` innehåller dokumentets innehåll i ett redigerbart format. Efter att ha redigerat HTML‑strängen, skapa ett nytt `EditableDocument` genom att skicka det modifierade innehållet och eventuella associerade resurser (bilder, teckensnitt) tillbaka till editorn. Detta rekonstruerar dokumentets interna struktur och förbereder det för sparande med det uppdaterade innehållet.  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
 
-## Steg 4: Ladda dokumentet i Editor‑instansen
-Nu använder du filströmmen och laddningsalternativen för att ladda dokumentet i en `Editor`‑instans.  
+## Steg 8: Skapa ett nytt EditableDocument med redigerat innehåll
+Skapa en ny `EditableDocument`‑instans med det redigerade innehållet och resurserna.  
+```csharp
+using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
+{
+    string originalContent3 = afterEdit.GetContent();
+```
+
+## Hur konfigurerar du PDF‑sparalternativ, inklusive kryptering?
+`PdfSaveOptions` definierar alternativ för att spara PDF‑filer, inklusive lösenordsskydd och komprimering. Instansiera den, sätt `Password` för att kryptera utdata, aktivera eventuellt `EnablePagination` för att behålla sidlayout, och justera `CompressionLevel` för stora filer. Dessa inställningar styr hur den redigerade PDF‑filen skrivs till disk.  
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
@@ -169,8 +243,17 @@ saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
 
-## Hur aktiverar du paginering när du redigerar ett PDF?
-`PdfEditOptions` specificerar redigeringsinställningar för PDF‑filer, såsom paginering. Skapa en instans av denna klass och sätt `EnablePagination = true`. Att aktivera paginering bevarar de ursprungliga sidbrytningarna och layouten efter ändringar, vilket säkerställer att den resulterande PDF‑filen behåller samma visuella struktur som källan.  
+## Steg 9: Skapa sparalternativ för dokumentet
+Ange sparalternativen för PDF‑dokumentet. Du kan också sätta ett lösenord för utdatafilen.  
+```csharp
+FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
+Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
+saveOptions.Password = "output_password";
+saveOptions.OptimizeMemoryUsage = true;
+```
+
+## Hur sparar du den redigerade PDF‑filen till disk?
+`Save` skriver det redigerade dokumentet till en fil med de angivna sparalternativen. Anropa den på `Editor`‑instansen, ge det uppdaterade `EditableDocument` och de konfigurerade `PdfSaveOptions`. Metoden skapar den slutgiltiga PDF‑filen på målplatsen och tillämpar eventuell kryptering eller pagineringsinställningar du har definierat.  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -180,49 +263,16 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-## Steg 5: Skapa redigeringsalternativ
-Ställ in redigeringsalternativen för dokumentet. I detta fall kommer vi att aktivera pagineringsläge.  
-CODE_BLOCK_PLACEHOLDER_11_END
-
-## Hur genererar du ett redigerbart mellandokument?
-`CreateEditableDocument` skapar en redigerbar representation av det laddade dokumentet. Anropa denna metod på `Editor`‑instansen och skicka de tidigare definierade `PdfEditOptions`. Metoden returnerar ett `EditableDocument` som innehåller HTML‑liknande innehåll som kan modifieras programatiskt innan det sparas tillbaka till PDF.  
-CODE_BLOCK_PLACEHOLDER_12_END
-
-## Steg 6: Skapa ett mellandelbart redigerbart dokument
-Skapa ett mellandelbart redigerbart dokument med hjälp av editor‑instansen och redigeringsalternativen.  
-CODE_BLOCK_PLACEHOLDER_13_END
-
-## Hur ersätter du text i det redigerbara innehållet?
-`EditableDocument` innehåller dokumentets innehåll i ett redigerbart format. Åtkomst till dess `Content`‑egenskap ger en sträng med dokumentets HTML‑representation. Använd vanliga C#‑strängoperationer, såsom `Replace`, eller reguljära uttryck för att modifiera texten efter behov innan du bygger om dokumentet.  
-CODE_BLOCK_PLACEHOLDER_14_END
-
-## Steg 7: Modifiera innehållet
-Modifiera dokumentets innehåll efter behov. Här ersätter vi helt enkelt ett ord i dokumentet.  
-CODE_BLOCK_PLACEHOLDER_15_END
-
-## Hur bygger du om EditableDocument efter ändringar?
-`EditableDocument` innehåller dokumentets innehåll i ett redigerbart format. Efter att ha redigerat HTML‑strängen, skapa ett nytt `EditableDocument` genom att skicka det modifierade innehållet och eventuella associerade resurser (bilder, teckensnitt) tillbaka till editorn. Detta rekonstruerar dokumentets interna struktur och förbereder det för sparande med det uppdaterade innehållet.  
-CODE_BLOCK_PLACEHOLDER_16_END
-
-## Steg 8: Skapa ett nytt EditableDocument med redigerat innehåll
-Skapa en ny `EditableDocument`‑instans med det redigerade innehållet och resurserna.  
-CODE_BLOCK_PLACEHOLDER_17_END
-
-## Hur konfigurerar du PDF‑sparalternativ, inklusive kryptering?
-`PdfSaveOptions` definierar alternativ för att spara PDF‑filer, inklusive lösenordsskydd och komprimering. Instansiera den, sätt `Password` för att kryptera utdata, aktivera eventuellt `EnablePagination` för att behålla sidlayout, och justera `CompressionLevel` för stora filer. Dessa inställningar styr hur den redigerade PDF‑filen skrivs till disk.  
-CODE_BLOCK_PLACEHOLDER_18_END
-
-## Steg 9: Skapa sparalternativ för dokumentet
-Ange sparalternativen för PDF‑dokumentet. Du kan också sätta ett lösenord för utdatafilen.  
-CODE_BLOCK_PLACEHOLDER_19_END
-
-## Hur sparar du den redigerade PDF‑filen till disk?
-`Save` skriver det redigerade dokumentet till en fil med de angivna sparalternativen. Anropa den på `Editor`‑instansen, ge det uppdaterade `EditableDocument` och de konfigurerade `PdfSaveOptions`. Metoden skapar den slutgiltiga PDF‑filen på målplatsen och tillämpar eventuell kryptering eller pagineringsinställningar du har definierat.  
-CODE_BLOCK_PLACEHOLDER_20_END
-
 ## Steg 10: Spara det redigerade dokumentet
 Till sist sparar du det redigerade dokumentet till den angivna utdatavägen.  
-CODE_BLOCK_PLACEHOLDER_21_END
+```csharp
+string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
+string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
+using (FileStream outputStream = File.Create(outputPath))
+{
+    editor.Save(afterEdit, outputStream, saveOptions);
+}
+```
 
 ## Vanliga problem och lösningar
 - **Minnesökningar med enorma PDF‑filer** – Aktivera streaming genom att sätta `LoadOptions.UseMemoryCache = false`.  
