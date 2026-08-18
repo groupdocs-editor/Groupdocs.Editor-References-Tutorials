@@ -104,40 +104,90 @@ GroupDocs.Editor **30+ दस्तावेज़ फ़ॉर्मेट** �
 ## नामस्थान आयात करें
 कोड लिखने से पहले, सुनिश्चित करें कि आवश्यक नामस्थान आपके प्रोजेक्ट में आयात किए गए हैं:
 ```csharp
-string inputFilePath = "Your Sample Document.pdf";
+using System;
+using GroupDocs.Editor.Formats;
+using GroupDocs.Editor.HtmlCss.Resources;
+using GroupDocs.Editor.Options;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 ```
 
 ## आप पासवर्ड‑सुरक्षित PDF को कैसे लोड करेंगे?
 `PdfLoadOptions` PDF फ़ाइलों को लोड करने के विकल्प निर्धारित करता है, जिसमें पासवर्ड और मेमोरी सेटिंग्स शामिल हैं। एक संरक्षित PDF लोड करने के लिए, एक `PdfLoadOptions` इंस्टेंस बनाएं, उसकी `Password` प्रॉपर्टी को दस्तावेज़ के पासवर्ड पर सेट करें, और इस ऑब्जेक्ट को एडिटर को पास करें। यह सुनिश्चित करता है कि फ़ाइल किसी भी संपादन ऑपरेशन से पहले डिक्रिप्ट हो जाए।  
-```csharp
-using (FileStream fs = File.OpenRead(inputFilePath))
-```
-
-## चरण 1: इनपुट फ़ाइल का पाथ प्राप्त करें
-सबसे पहले, आपको अपने PDF दस्तावेज़ का पाथ निर्दिष्ट करना होगा। इस ट्यूटोरियल के लिए, हम मान लेते हैं कि आपके पास एक सैंपल PDF फ़ाइल है।
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
 // If the document is password-protected
 loadOptions.Password = "your_password";
 ```
 
+## चरण 1: इनपुट फ़ाइल का पाथ प्राप्त करें
+सबसे पहले, आपको अपने PDF दस्तावेज़ का पाथ निर्दिष्ट करना होगा। इस ट्यूटोरियल के लिए, हम मान लेते हैं कि आपके पास एक सैंपल PDF फ़ाइल है।
+```csharp
+string inputFilePath = "Your Sample Document.pdf";
+```
+
 ## आप PDF फ़ाइल स्ट्रीम को कैसे पढ़ेंगे?
 `FileStream` डिस्क पर फ़ाइलों को पढ़ने और लिखने के लिए एक स्ट्रीम प्रदान करता है। इसे PDF को रीड मोड में खोलने के लिए उपयोग करें, जिससे एडिटर फ़ाइल को एक्सक्लूसिव एक्सेस के लिए लॉक किए बिना प्रोसेस कर सके। उदाहरण: `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` इष्टतम प्रदर्शन और सुरक्षित समवर्ती रीड्स सुनिश्चित करता है।  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## चरण 2: पाथ से एक स्ट्रीम बनाएं
+अगला, आपने जो पाथ निर्दिष्ट किया है, उससे एक फ़ाइल स्ट्रीम बनाएं। यह स्ट्रीम PDF दस्तावेज़ को पढ़ने के लिए उपयोग होगी।  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## आप पासवर्ड‑सुरक्षित PDF के लिए लोड विकल्प कैसे कॉन्फ़िगर करेंगे?
+`PdfLoadOptions` PDF फ़ाइलों को लोड करने के विकल्प निर्धारित करता है, जिसमें पासवर्ड और मेमोरी उपयोग शामिल है। इंस्टेंस बनाने के बाद, `Password` प्रॉपर्टी को दस्तावेज़ के पासवर्ड से असाइन करें। बड़े PDFs के लिए आप `UseMemoryCache = false` सेट करके मेमोरी खपत को कम कर सकते हैं। ये सेटिंग्स लोडर को एन्क्रिप्टेड और बड़े फ़ाइलों को कुशलतापूर्वक संभालने के लिए तैयार करती हैं।  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## चरण 3: दस्तावेज़ के लिए लोड विकल्प बनाएं
+PDF दस्तावेज़ को लोड करने के लिए, आपको लोड विकल्प निर्दिष्ट करने होंगे। यदि आपका PDF पासवर्ड‑सुरक्षित है, तो आप यहाँ पासवर्ड प्रदान कर सकते हैं।  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## आप स्ट्रीम और विकल्पों के साथ एडिटर को कैसे इनिशियलाइज़ करेंगे?
+`Editor` मुख्य क्लास है जो दस्तावेज़ को लोड करता है और संपादन क्षमताएँ प्रदान करता है। इसे एक डेलीगेट पास करके इंस्टैंसिएट करें जो फ़ाइल स्ट्रीम लौटाता है और दूसरा डेलीगेट जो पहले कॉन्फ़िगर किए गए लोड विकल्प लौटाता है। यह PDF का इन‑मेमोरी प्रतिनिधित्व बनाता है जो आगे की मैनिपुलेशन के लिए तैयार है।  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
 
-## चरण 2: पाथ से एक स्ट्रीम बनाएं
-अगला, आपने जो पाथ निर्दिष्ट किया है, उससे एक फ़ाइल स्ट्रीम बनाएं। यह स्ट्रीम PDF दस्तावेज़ को पढ़ने के लिए उपयोग होगी।  
+## चरण 4: दस्तावेज़ को एडिटर इंस्टेंस में लोड करें
+अब, फ़ाइल स्ट्रीम और लोड विकल्पों का उपयोग करके दस्तावेज़ को `Editor` इंस्टेंस में लोड करें।  
+```csharp
+using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
+{
+    var documentInfo = editor.GetDocumentInfo(null);
+```
+
+## PDF संपादित करते समय आप पेजिनेशन कैसे सक्षम करेंगे?
+`PdfEditOptions` PDF फ़ाइलों के लिए संपादन सेटिंग्स निर्दिष्ट करता है, जैसे पेजिनेशन। इस क्लास का एक इंस्टेंस बनाएं और `EnablePagination = true` सेट करें। पेजिनेशन सक्षम करने से संशोधनों के बाद मूल पेज ब्रेक और लेआउट बरकरार रहता है, जिससे आउटपुट PDF स्रोत के समान दृश्य संरचना बनाए रखता है।  
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
 
-## आप पासवर्ड‑सुरक्षित PDF के लिए लोड विकल्प कैसे कॉन्फ़िगर करेंगे?
-`PdfLoadOptions` PDF फ़ाइलों को लोड करने के विकल्प निर्धारित करता है, जिसमें पासवर्ड और मेमोरी उपयोग शामिल है। इंस्टेंस बनाने के बाद, `Password` प्रॉपर्टी को दस्तावेज़ के पासवर्ड से असाइन करें। बड़े PDFs के लिए आप `UseMemoryCache = false` सेट करके मेमोरी खपत को कम कर सकते हैं। ये सेटिंग्स लोडर को एन्क्रिप्टेड और बड़े फ़ाइलों को कुशलतापूर्वक संभालने के लिए तैयार करती हैं।  
+## चरण 5: संपादन विकल्प बनाएं
+दस्तावेज़ के लिए संपादन विकल्प सेट करें। इस मामले में, हम पेजिनेशन मोड को सक्षम करेंगे।  
+```csharp
+Options.PdfEditOptions editOptions = new PdfEditOptions();
+editOptions.EnablePagination = true;
+```
+
+## आप एक संपादन योग्य मध्यवर्ती दस्तावेज़ कैसे जनरेट करेंगे?
+`CreateEditableDocument` लोड किए गए दस्तावेज़ का एक संपादन योग्य प्रतिनिधित्व बनाता है। इस मेथड को `Editor` इंस्टेंस पर कॉल करें, पहले परिभाषित `PdfEditOptions` पास करते हुए। यह मेथड एक `EditableDocument` लौटाता है जिसमें HTML‑जैसा कंटेंट होता है जिसे प्रोग्रामेटिकली बदल कर PDF में वापस सहेजा जा सकता है।  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
@@ -146,22 +196,46 @@ using (EditableDocument beforeEdit = editor.Edit(editOptions))
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
 
-## चरण 3: दस्तावेज़ के लिए लोड विकल्प बनाएं
-PDF दस्तावेज़ को लोड करने के लिए, आपको लोड विकल्प निर्दिष्ट करने होंगे। यदि आपका PDF पासवर्ड‑सुरक्षित है, तो आप यहाँ पासवर्ड प्रदान कर सकते हैं।  
+## चरण 6: एक मध्यवर्ती संपादन योग्य दस्तावेज़ बनाएं
+एडिटर इंस्टेंस और संपादन विकल्पों का उपयोग करके एक मध्यवर्ती संपादन योग्य दस्तावेज़ बनाएं।  
+```csharp
+using (EditableDocument beforeEdit = editor.Edit(editOptions))
+{
+    // Extract textual content as HTML markup
+    string originalContent = beforeEdit.GetContent();
+    List<IHtmlResource> allResources = beforeEdit.AllResources;
+```
+
+## आप संपादन योग्य कंटेंट के अंदर टेक्स्ट कैसे बदलेंगे?
+`EditableDocument` दस्तावेज़ की सामग्री को एक संपादन योग्य फ़ॉर्मेट में रखता है। इसकी `Content` प्रॉपर्टी तक पहुंचें, जो दस्तावेज़ के HTML प्रतिनिधित्व की स्ट्रिंग लौटाती है। आवश्यकतानुसार टेक्स्ट को बदलने के लिए मानक C# स्ट्रिंग ऑपरेशन्स, जैसे `Replace`, या रेगुलर एक्सप्रेशन्स का उपयोग करें, इससे पहले कि आप दस्तावेज़ को पुनः बनाएं।  
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
 
-## आप स्ट्रीम और विकल्पों के साथ एडिटर को कैसे इनिशियलाइज़ करेंगे?
-`Editor` मुख्य क्लास है जो दस्तावेज़ को लोड करता है और संपादन क्षमताएँ प्रदान करता है। इसे एक डेलीगेट पास करके इंस्टैंसिएट करें जो फ़ाइल स्ट्रीम लौटाता है और दूसरा डेलीगेट जो पहले कॉन्फ़िगर किए गए लोड विकल्प लौटाता है। यह PDF का इन‑मेमोरी प्रतिनिधित्व बनाता है जो आगे की मैनिपुलेशन के लिए तैयार है।  
+## चरण 7: कंटेंट संशोधित करें
+दस्तावेज़ की सामग्री को आवश्यकतानुसार संशोधित करें। यहाँ, हम बस दस्तावेज़ में एक शब्द को बदल रहे हैं।  
+```csharp
+string editedContent = originalContent.Replace("document", "edited document");
+```
+
+## परिवर्तनों के बाद आप EditableDocument को कैसे पुनः बनाते हैं?
+`EditableDocument` दस्तावेज़ की सामग्री को एक संपादन योग्य फ़ॉर्मेट में रखता है। HTML स्ट्रिंग को संपादित करने के बाद, संशोधित कंटेंट और किसी भी संबंधित रिसोर्सेज़ (इमेज, फ़ॉन्ट) को एडिटर को पास करके एक नया `EditableDocument` बनाएं। यह दस्तावेज़ की आंतरिक संरचना को पुनः बनाता है, जिससे अपडेटेड कंटेंट के साथ सहेजने के लिए तैयार हो जाता है।  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
 
-## चरण 4: दस्तावेज़ को एडिटर इंस्टेंस में लोड करें
-अब, फ़ाइल स्ट्रीम और लोड विकल्पों का उपयोग करके दस्तावेज़ को `Editor` इंस्टेंस में लोड करें।  
+## चरण 8: संशोधित कंटेंट के साथ नया EditableDocument बनाएं
+संशोधित कंटेंट और रिसोर्सेज़ के साथ एक नया `EditableDocument` इंस्टेंस बनाएं।  
+```csharp
+using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
+{
+    string originalContent3 = afterEdit.GetContent();
+```
+
+## आप PDF सहेजने के विकल्प, जिसमें एन्क्रिप्शन भी शामिल है, कैसे कॉन्फ़िगर करेंगे?
+`PdfSaveOptions` PDF फ़ाइलों को सहेजने के विकल्प निर्धारित करता है, जिसमें पासवर्ड प्रोटेक्शन और कम्प्रेशन शामिल हैं। इसे इंस्टैंसिएट करें, आउटपुट को एन्क्रिप्ट करने के लिए `Password` सेट करें, वैकल्पिक रूप से पेज लेआउट बनाए रखने के लिए `EnablePagination` सक्षम करें, और बड़े फ़ाइलों के लिए `CompressionLevel` समायोजित करें। ये सेटिंग्स नियंत्रित करती हैं कि संपादित PDF डिस्क पर कैसे लिखा जाता है।  
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
@@ -169,8 +243,17 @@ saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
 
-## PDF संपादित करते समय आप पेजिनेशन कैसे सक्षम करेंगे?
-`PdfEditOptions` PDF फ़ाइलों के लिए संपादन सेटिंग्स निर्दिष्ट करता है, जैसे पेजिनेशन। इस क्लास का एक इंस्टेंस बनाएं और `EnablePagination = true` सेट करें। पेजिनेशन सक्षम करने से संशोधनों के बाद मूल पेज ब्रेक और लेआउट बरकरार रहता है, जिससे आउटपुट PDF स्रोत के समान दृश्य संरचना बनाए रखता है।  
+## चरण 9: दस्तावेज़ सहेजने के विकल्प बनाएं
+PDF दस्तावेज़ के लिए सहेजने के विकल्प निर्दिष्ट करें। आप आउटपुट दस्तावेज़ के लिए पासवर्ड भी सेट कर सकते हैं।  
+```csharp
+FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
+Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
+saveOptions.Password = "output_password";
+saveOptions.OptimizeMemoryUsage = true;
+```
+
+## आप संपादित PDF को डिस्क पर कैसे सहेजते हैं?
+`Save` निर्दिष्ट सहेजने के विकल्पों का उपयोग करके संपादित दस्तावेज़ को फ़ाइल में लिखता है। इसे `Editor` इंस्टेंस पर कॉल करें, अपडेटेड `EditableDocument` और कॉन्फ़िगर किए गए `PdfSaveOptions` प्रदान करते हुए। यह मेथड लक्ष्य स्थान पर अंतिम PDF बनाता है, जिसमें आपने परिभाषित कोई भी एन्क्रिप्शन या पेजिनेशन सेटिंग्स लागू होती हैं।  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -180,49 +263,16 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-## चरण 5: संपादन विकल्प बनाएं
-दस्तावेज़ के लिए संपादन विकल्प सेट करें। इस मामले में, हम पेजिनेशन मोड को सक्षम करेंगे।  
-CODE_BLOCK_PLACEHOLDER_11_END
-
-## आप एक संपादन योग्य मध्यवर्ती दस्तावेज़ कैसे जनरेट करेंगे?
-`CreateEditableDocument` लोड किए गए दस्तावेज़ का एक संपादन योग्य प्रतिनिधित्व बनाता है। इस मेथड को `Editor` इंस्टेंस पर कॉल करें, पहले परिभाषित `PdfEditOptions` पास करते हुए। यह मेथड एक `EditableDocument` लौटाता है जिसमें HTML‑जैसा कंटेंट होता है जिसे प्रोग्रामेटिकली बदल कर PDF में वापस सहेजा जा सकता है।  
-CODE_BLOCK_PLACEHOLDER_12_END
-
-## चरण 6: एक मध्यवर्ती संपादन योग्य दस्तावेज़ बनाएं
-एडिटर इंस्टेंस और संपादन विकल्पों का उपयोग करके एक मध्यवर्ती संपादन योग्य दस्तावेज़ बनाएं।  
-CODE_BLOCK_PLACEHOLDER_13_END
-
-## आप संपादन योग्य कंटेंट के अंदर टेक्स्ट कैसे बदलेंगे?
-`EditableDocument` दस्तावेज़ की सामग्री को एक संपादन योग्य फ़ॉर्मेट में रखता है। इसकी `Content` प्रॉपर्टी तक पहुंचें, जो दस्तावेज़ के HTML प्रतिनिधित्व की स्ट्रिंग लौटाती है। आवश्यकतानुसार टेक्स्ट को बदलने के लिए मानक C# स्ट्रिंग ऑपरेशन्स, जैसे `Replace`, या रेगुलर एक्सप्रेशन्स का उपयोग करें, इससे पहले कि आप दस्तावेज़ को पुनः बनाएं।  
-CODE_BLOCK_PLACEHOLDER_14_END
-
-## चरण 7: कंटेंट संशोधित करें
-दस्तावेज़ की सामग्री को आवश्यकतानुसार संशोधित करें। यहाँ, हम बस दस्तावेज़ में एक शब्द को बदल रहे हैं।  
-CODE_BLOCK_PLACEHOLDER_15_END
-
-## परिवर्तनों के बाद आप EditableDocument को कैसे पुनः बनाते हैं?
-`EditableDocument` दस्तावेज़ की सामग्री को एक संपादन योग्य फ़ॉर्मेट में रखता है। HTML स्ट्रिंग को संपादित करने के बाद, संशोधित कंटेंट और किसी भी संबंधित रिसोर्सेज़ (इमेज, फ़ॉन्ट) को एडिटर को पास करके एक नया `EditableDocument` बनाएं। यह दस्तावेज़ की आंतरिक संरचना को पुनः बनाता है, जिससे अपडेटेड कंटेंट के साथ सहेजने के लिए तैयार हो जाता है।  
-CODE_BLOCK_PLACEHOLDER_16_END
-
-## चरण 8: संशोधित कंटेंट के साथ नया EditableDocument बनाएं
-संशोधित कंटेंट और रिसोर्सेज़ के साथ एक नया `EditableDocument` इंस्टेंस बनाएं।  
-CODE_BLOCK_PLACEHOLDER_17_END
-
-## आप PDF सहेजने के विकल्प, जिसमें एन्क्रिप्शन भी शामिल है, कैसे कॉन्फ़िगर करेंगे?
-`PdfSaveOptions` PDF फ़ाइलों को सहेजने के विकल्प निर्धारित करता है, जिसमें पासवर्ड प्रोटेक्शन और कम्प्रेशन शामिल हैं। इसे इंस्टैंसिएट करें, आउटपुट को एन्क्रिप्ट करने के लिए `Password` सेट करें, वैकल्पिक रूप से पेज लेआउट बनाए रखने के लिए `EnablePagination` सक्षम करें, और बड़े फ़ाइलों के लिए `CompressionLevel` समायोजित करें। ये सेटिंग्स नियंत्रित करती हैं कि संपादित PDF डिस्क पर कैसे लिखा जाता है।  
-CODE_BLOCK_PLACEHOLDER_18_END
-
-## चरण 9: दस्तावेज़ सहेजने के विकल्प बनाएं
-PDF दस्तावेज़ के लिए सहेजने के विकल्प निर्दिष्ट करें। आप आउटपुट दस्तावेज़ के लिए पासवर्ड भी सेट कर सकते हैं।  
-CODE_BLOCK_PLACEHOLDER_19_END
-
-## आप संपादित PDF को डिस्क पर कैसे सहेजते हैं?
-`Save` निर्दिष्ट सहेजने के विकल्पों का उपयोग करके संपादित दस्तावेज़ को फ़ाइल में लिखता है। इसे `Editor` इंस्टेंस पर कॉल करें, अपडेटेड `EditableDocument` और कॉन्फ़िगर किए गए `PdfSaveOptions` प्रदान करते हुए। यह मेथड लक्ष्य स्थान पर अंतिम PDF बनाता है, जिसमें आपने परिभाषित कोई भी एन्क्रिप्शन या पेजिनेशन सेटिंग्स लागू होती हैं।  
-CODE_BLOCK_PLACEHOLDER_20_END
-
 ## चरण 10: संपादित दस्तावेज़ को सहेजें
 अंत में, संपादित दस्तावेज़ को निर्दिष्ट आउटपुट पाथ पर सहेजें।  
-CODE_BLOCK_PLACEHOLDER_21_END
+```csharp
+string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
+string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
+using (FileStream outputStream = File.Create(outputPath))
+{
+    editor.Save(afterEdit, outputStream, saveOptions);
+}
+```
 
 ## सामान्य समस्याएँ और समाधान
 - **Memory spikes with huge PDFs** – `LoadOptions.UseMemoryCache = false` सेट करके स्ट्रीमिंग सक्षम करें।  
