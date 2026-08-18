@@ -210,8 +210,3 @@ A: JDK 8 และใหม่กว่า (รวมถึง 11, 17, แล�
 **อัปเดตล่าสุด:** 2026-04-02  
 **ทดสอบด้วย:** GroupDocs.Editor 25.3 for Java  
 **ผู้เขียน:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

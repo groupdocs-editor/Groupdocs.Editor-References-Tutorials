@@ -288,11 +288,6 @@ Tak—użyj try‑with‑resources lub ręcznie zamknij `InputStream` i `OutputS
 **Testowano z:** GroupDocs.Editor 25.3 for Java  
 **Autor:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Powiązane samouczki
 
 - [Jak wczytać dokumenty Word w Javie z GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)

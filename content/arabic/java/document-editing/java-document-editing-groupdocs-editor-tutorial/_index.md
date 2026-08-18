@@ -210,8 +210,3 @@ for (IFormField formField : collection) {
 **آخر تحديث:** 2026-04-02  
 **تم الاختبار مع:** GroupDocs.Editor 25.3 for Java  
 **المؤلف:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

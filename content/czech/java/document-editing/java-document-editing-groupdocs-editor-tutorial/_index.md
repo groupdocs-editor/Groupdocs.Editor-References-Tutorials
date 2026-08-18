@@ -210,8 +210,3 @@ Nyní máte kompletní, krok‑za‑krokem průvodce o **how to load Word docume
 **Poslední aktualizace:** 2026-04-02  
 **Testováno s:** GroupDocs.Editor 25.3 for Java  
 **Autor:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

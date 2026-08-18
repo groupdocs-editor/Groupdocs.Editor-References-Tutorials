@@ -285,11 +285,6 @@ A: Ja—använd try‑with‑resources eller stäng explicit `InputStream` och `
 **Testad med:** GroupDocs.Editor 25.3 för Java  
 **Författare:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Relaterade handledningar
 
 - [Hur man laddar Word-dokument i Java med GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)

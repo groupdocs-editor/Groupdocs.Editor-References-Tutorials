@@ -287,11 +287,6 @@ A: Sim—use try‑with‑resources ou feche explicitamente `InputStream` e `Out
 **Testado com:** GroupDocs.Editor 25.3 for Java  
 **Autor:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Tutoriais Relacionados
 
 - [Como carregar documentos Word em Java com GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)

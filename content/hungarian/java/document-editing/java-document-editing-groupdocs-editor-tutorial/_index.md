@@ -211,8 +211,3 @@ Most már rendelkezik egy teljes, lépésről‑lépésre útmutatóval arról, 
 **Legutóbb frissítve:** 2026-04-02  
 **Tesztelve ezzel:** GroupDocs.Editor 25.3 for Java  
 **Szerző:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

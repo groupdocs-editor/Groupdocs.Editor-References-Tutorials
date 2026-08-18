@@ -287,11 +287,6 @@ editor.save(outputStream, saveOptions);
 **Tested With:** GroupDocs.Editor 25.3 for Java  
 **Author:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## دروس ذات صلة
 
 - [كيفية تحميل مستندات Word في Java باستخدام GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)

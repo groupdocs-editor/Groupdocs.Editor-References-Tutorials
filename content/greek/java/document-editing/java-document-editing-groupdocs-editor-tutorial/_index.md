@@ -211,8 +211,3 @@ A: Το JDK 8 και νεότερα (συμπεριλαμβανομένων τ
 **Τελευταία ενημέρωση:** 2026-04-02  
 **Δοκιμή με:** GroupDocs.Editor 25.3 for Java  
 **Συγγραφέας:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

@@ -209,8 +209,3 @@ A: 完全相容 JDK 8 以上（包括 11、17 及更高版本）。
 **最後更新：** 2026-04-02  
 **測試環境：** GroupDocs.Editor 25.3 for Java  
 **作者：** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

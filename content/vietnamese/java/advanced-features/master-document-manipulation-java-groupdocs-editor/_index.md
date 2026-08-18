@@ -287,11 +287,6 @@ A: Có—sử dụng try‑with‑resources hoặc đóng rõ ràng `InputStream
 **Đã kiểm tra với:** GroupDocs.Editor 25.3 cho Java  
 **Tác giả:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Hướng dẫn liên quan
 
 - [Cách tải tài liệu Word trong Java với GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)

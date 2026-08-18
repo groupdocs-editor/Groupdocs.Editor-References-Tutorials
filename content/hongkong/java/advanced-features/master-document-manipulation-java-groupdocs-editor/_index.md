@@ -286,11 +286,6 @@ editor.save(outputStream, saveOptions);
 **測試環境：** GroupDocs.Editor 25.3 for Java  
 **作者：** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## 相關教學
 
 - [如何在 Java 中使用 GroupDocs.Editor 載入 Word 文件](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)

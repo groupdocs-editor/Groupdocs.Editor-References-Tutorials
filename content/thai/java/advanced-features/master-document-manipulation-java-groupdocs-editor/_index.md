@@ -287,11 +287,6 @@ A: ใช่—ใช้ try‑with‑resources หรือปิด `InputStre
 **ทดสอบกับ:** GroupDocs.Editor 25.3 for Java  
 **ผู้เขียน:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## บทแนะนำที่เกี่ยวข้อง
 
 - [วิธีโหลดเอกสาร Word ใน Java ด้วย GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)

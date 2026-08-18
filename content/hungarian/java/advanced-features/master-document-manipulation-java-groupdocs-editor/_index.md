@@ -288,11 +288,6 @@ A: Igen—használjon try‑with‑resources‑t vagy explicit módon zárja be 
 **Tesztelve:** GroupDocs.Editor 25.3 for Java  
 **Szerző:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Kapcsolódó bemutatók
 
 - [Hogyan töltsünk be Word dokumentumokat Java-ban a GroupDocs.Editor segítségével](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)

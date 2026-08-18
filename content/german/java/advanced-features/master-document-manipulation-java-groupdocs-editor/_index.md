@@ -287,11 +287,6 @@ A: Ja – verwenden Sie `try‑with‑resources` oder schließen Sie `InputStrea
 **Getestet mit:** GroupDocs.Editor 25.3 for Java  
 **Autor:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Verwandte Tutorials
 
 - [How to Load Word Documents in Java with GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)

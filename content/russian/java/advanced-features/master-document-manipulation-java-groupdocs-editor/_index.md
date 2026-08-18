@@ -288,11 +288,6 @@ editor.save(outputStream, saveOptions);
 **Тестировано с:** GroupDocs.Editor 25.3 for Java  
 **Автор:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Связанные руководства
 
 - [Как загрузить документы Word в Java с помощью GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)

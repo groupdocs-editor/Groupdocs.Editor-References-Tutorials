@@ -212,8 +212,3 @@ Vous disposez maintenant d’un guide complet, étape par étape, sur **how to l
 **Dernière mise à jour :** 2026-04-02  
 **Testé avec :** GroupDocs.Editor 25.3 for Java  
 **Auteur :** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

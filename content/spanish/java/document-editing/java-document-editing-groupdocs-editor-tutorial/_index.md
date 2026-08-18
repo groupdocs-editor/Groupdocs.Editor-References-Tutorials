@@ -211,8 +211,3 @@ Ahora tienes una guía completa, paso a paso, sobre **how to load Word document 
 **Última actualización:** 2026-04-02  
 **Probado con:** GroupDocs.Editor 25.3 for Java  
 **Autor:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
