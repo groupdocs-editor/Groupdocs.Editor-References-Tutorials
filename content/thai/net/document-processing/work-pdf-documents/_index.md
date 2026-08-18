@@ -102,40 +102,90 @@ GroupDocs.Editor รองรับ **30+ document formats** และสาม�
 ## นำเข้า Namespaces
 ก่อนเขียนโค้ดใด ๆ, ตรวจสอบว่าคุณได้นำเข้า namespaces ที่จำเป็นเข้าสู่โปรเจกต์ของคุณแล้ว:  
 ```csharp
-string inputFilePath = "Your Sample Document.pdf";
+using System;
+using GroupDocs.Editor.Formats;
+using GroupDocs.Editor.HtmlCss.Resources;
+using GroupDocs.Editor.Options;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 ```
 
 ## วิธีโหลด PDF ที่มีการป้องกันด้วยรหัสผ่าน?
 `PdfLoadOptions` กำหนดตัวเลือกสำหรับการโหลดไฟล์ PDF, รวมถึงรหัสผ่านและการตั้งค่าหน่วยความจำ. เพื่อโหลด PDF ที่ถูกป้องกัน, สร้างอินสแตนซ์ของ `PdfLoadOptions`, ตั้งค่า `Password` ให้เป็นรหัสผ่านของเอกสาร, แล้วส่งอ็อบเจ็กต์นี้ให้กับ editor. วิธีนี้ทำให้ไฟล์ถูกถอดรหัสก่อนทำการแก้ไขใด ๆ.  
-```csharp
-using (FileStream fs = File.OpenRead(inputFilePath))
-```
-
-## ขั้นตอนที่ 1: รับเส้นทางไปยังไฟล์อินพุต
-ก่อนอื่น, คุณต้องระบุเส้นทางไปยังไฟล์ PDF ของคุณ. สำหรับบทเรียนนี้, เราจะสมมติว่าคุณมีไฟล์ PDF ตัวอย่าง.  
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
 // If the document is password-protected
 loadOptions.Password = "your_password";
 ```
 
+## ขั้นตอนที่ 1: รับเส้นทางไปยังไฟล์อินพุต
+ก่อนอื่น, คุณต้องระบุเส้นทางไปยังไฟล์ PDF ของคุณ. สำหรับบทเรียนนี้, เราจะสมมติว่าคุณมีไฟล์ PDF ตัวอย่าง.  
+```csharp
+string inputFilePath = "Your Sample Document.pdf";
+```
+
 ## วิธีอ่านสตรีมไฟล์ PDF?
 `FileStream` ให้สตรีมสำหรับการอ่านและเขียนไฟล์บนดิสก์. ใช้เพื่อเปิด PDF ในโหมดอ่าน, ซึ่งทำให้ editor สามารถประมวลผลไฟล์โดยไม่ล็อกไฟล์สำหรับการเข้าถึงแบบเฉพาะ. ตัวอย่าง: `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` รับประกันประสิทธิภาพที่ดีที่สุดและการอ่านพร้อมกันอย่างปลอดภัย.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## ขั้นตอนที่ 2: สร้างสตรีมจากเส้นทาง
+ต่อไป, สร้างไฟล์สตรีมจากเส้นทางที่คุณระบุ. สตรีมนี้จะใช้เพื่ออ่านเอกสาร PDF.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## วิธีกำหนดค่าตัวเลือกการโหลดสำหรับ PDF ที่มีการป้องกันด้วยรหัสผ่าน?
+`PdfLoadOptions` กำหนดตัวเลือกสำหรับการโหลดไฟล์ PDF, รวมถึงรหัสผ่านและการใช้หน่วยความจำ. หลังจากสร้างอินสแตนซ์, กำหนดค่า `Password` ให้เป็นรหัสผ่านของเอกสาร. สำหรับ PDF ขนาดใหญ่คุณยังสามารถตั้งค่า `UseMemoryCache = false` เพื่อลดการใช้หน่วยความจำ. การตั้งค่าเหล่านี้เตรียม loader ให้จัดการไฟล์ที่เข้ารหัสและขนาดใหญ่ได้อย่างมีประสิทธิภาพ.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## ขั้นตอนที่ 3: สร้าง Load Options สำหรับเอกสาร
+เพื่อโหลดเอกสาร PDF, คุณต้องระบุตัวเลือกการโหลด. หาก PDF ของคุณมีการป้องกันด้วยรหัสผ่าน, คุณสามารถระบุรหัสผ่านที่นี่.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## วิธีเริ่มต้น Editor ด้วยสตรีมและตัวเลือก?
+`Editor` เป็นคลาสหลักที่โหลดเอกสารและให้ความสามารถในการแก้ไข. สร้างอินสแตนซ์โดยส่ง delegate ที่คืนสตรีมไฟล์และอีก delegate ที่คืนค่า load options ที่กำหนดไว้ก่อนหน้า. วิธีนี้จะสร้างการแสดงผลในหน่วยความจำของ PDF ที่พร้อมสำหรับการจัดการต่อไป.  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
 
-## ขั้นตอนที่ 2: สร้างสตรีมจากเส้นทาง
-ต่อไป, สร้างไฟล์สตรีมจากเส้นทางที่คุณระบุ. สตรีมนี้จะใช้เพื่ออ่านเอกสาร PDF.  
+## ขั้นตอนที่ 4: โหลดเอกสารเข้าสู่ Editor Instance
+ตอนนี้, ใช้สตรีมไฟล์และ load options เพื่อโหลดเอกสารเข้าสู่อินสแตนซ์ของ `Editor`.  
+```csharp
+using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
+{
+    var documentInfo = editor.GetDocumentInfo(null);
+```
+
+## วิธีเปิดใช้งานการแบ่งหน้าเมื่อแก้ไข PDF?
+`PdfEditOptions` ระบุการตั้งค่าการแก้ไขสำหรับไฟล์ PDF, เช่น การแบ่งหน้า. สร้างอินสแตนซ์ของคลาสนี้และตั้งค่า `EnablePagination = true`. การเปิดใช้งานการแบ่งหน้าจะคงการแบ่งหน้าและการจัดรูปแบบเดิมหลังการแก้ไข, ทำให้ PDF ผลลัพธ์รักษาโครงสร้างภาพเดียวกับต้นฉบับ.  
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
 
-## วิธีกำหนดค่าตัวเลือกการโหลดสำหรับ PDF ที่มีการป้องกันด้วยรหัสผ่าน?
-`PdfLoadOptions` กำหนดตัวเลือกสำหรับการโหลดไฟล์ PDF, รวมถึงรหัสผ่านและการใช้หน่วยความจำ. หลังจากสร้างอินสแตนซ์, กำหนดค่า `Password` ให้เป็นรหัสผ่านของเอกสาร. สำหรับ PDF ขนาดใหญ่คุณยังสามารถตั้งค่า `UseMemoryCache = false` เพื่อลดการใช้หน่วยความจำ. การตั้งค่าเหล่านี้เตรียม loader ให้จัดการไฟล์ที่เข้ารหัสและขนาดใหญ่ได้อย่างมีประสิทธิภาพ.  
+## ขั้นตอนที่ 5: สร้าง Editing Options
+ตั้งค่าตัวเลือกการแก้ไขสำหรับเอกสาร. ในกรณีนี้, เราจะเปิดใช้งานโหมดการแบ่งหน้า.  
+```csharp
+Options.PdfEditOptions editOptions = new PdfEditOptions();
+editOptions.EnablePagination = true;
+```
+
+## วิธีสร้างเอกสารกลางที่สามารถแก้ไขได้?
+`CreateEditableDocument` สร้างการแสดงผลที่สามารถแก้ไขได้ของเอกสารที่โหลด. เรียกเมธอดนี้บนอินสแตนซ์ `Editor`, โดยส่ง `PdfEditOptions` ที่กำหนดไว้ก่อนหน้า. เมธอดจะคืนค่า `EditableDocument` ที่มีเนื้อหาแบบ HTML‑like ซึ่งสามารถแก้ไขโดยโปรแกรมก่อนบันทึกกลับเป็น PDF.  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
@@ -144,22 +194,46 @@ using (EditableDocument beforeEdit = editor.Edit(editOptions))
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
 
-## ขั้นตอนที่ 3: สร้าง Load Options สำหรับเอกสาร
-เพื่อโหลดเอกสาร PDF, คุณต้องระบุตัวเลือกการโหลด. หาก PDF ของคุณมีการป้องกันด้วยรหัสผ่าน, คุณสามารถระบุรหัสผ่านที่นี่.  
+## ขั้นตอนที่ 6: สร้างเอกสารกลางที่สามารถแก้ไขได้
+สร้างเอกสารกลางที่สามารถแก้ไขได้โดยใช้อินสแตนซ์ editor และตัวเลือกการแก้ไข.  
+```csharp
+using (EditableDocument beforeEdit = editor.Edit(editOptions))
+{
+    // Extract textual content as HTML markup
+    string originalContent = beforeEdit.GetContent();
+    List<IHtmlResource> allResources = beforeEdit.AllResources;
+```
+
+## วิธีแทนที่ข้อความภายในเนื้อหาที่สามารถแก้ไขได้?
+`EditableDocument` เก็บเนื้อหาของเอกสารในรูปแบบที่สามารถแก้ไขได้. เข้าถึงคุณสมบัติ `Content` ของมัน, ซึ่งคืนสตริงของการแสดงผล HTML ของเอกสาร. ใช้การดำเนินการสตริงมาตรฐานของ C#, เช่น `Replace`, หรือ regular expressions เพื่อแก้ไขข้อความตามต้องการก่อนสร้างเอกสารใหม่.  
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
 
-## วิธีเริ่มต้น Editor ด้วยสตรีมและตัวเลือก?
-`Editor` เป็นคลาสหลักที่โหลดเอกสารและให้ความสามารถในการแก้ไข. สร้างอินสแตนซ์โดยส่ง delegate ที่คืนสตรีมไฟล์และอีก delegate ที่คืนค่า load options ที่กำหนดไว้ก่อนหน้า. วิธีนี้จะสร้างการแสดงผลในหน่วยความจำของ PDF ที่พร้อมสำหรับการจัดการต่อไป.  
+## ขั้นตอนที่ 7: แก้ไขเนื้อหา
+แก้ไขเนื้อหาของเอกสารตามต้องการ. ที่นี่, เราเพียงแค่แทนที่คำหนึ่งในเอกสาร.  
+```csharp
+string editedContent = originalContent.Replace("document", "edited document");
+```
+
+## วิธีสร้าง EditableDocument ใหม่หลังจากการเปลี่ยนแปลง?
+`EditableDocument` เก็บเนื้อหาของเอกสารในรูปแบบที่สามารถแก้ไขได้. หลังจากแก้ไขสตริง HTML, สร้าง `EditableDocument` ใหม่โดยส่งเนื้อหาที่แก้ไขและทรัพยากรที่เกี่ยวข้อง (รูปภาพ, ฟอนต์) กลับไปยัง editor. วิธีนี้จะสร้างโครงสร้างภายในของเอกสารใหม่, เตรียมพร้อมสำหรับการบันทึกด้วยเนื้อหาที่อัปเดต.  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
 
-## ขั้นตอนที่ 4: โหลดเอกสารเข้าสู่ Editor Instance
-ตอนนี้, ใช้สตรีมไฟล์และ load options เพื่อโหลดเอกสารเข้าสู่อินสแตนซ์ของ `Editor`.  
+## ขั้นตอนที่ 8: สร้าง Editable Document ใหม่ด้วยเนื้อหาที่แก้ไข
+สร้างอินสแตนซ์ `EditableDocument` ใหม่ด้วยเนื้อหาที่แก้ไขและทรัพยากร.  
+```csharp
+using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
+{
+    string originalContent3 = afterEdit.GetContent();
+```
+
+## วิธีกำหนดค่า PDF Save Options รวมถึงการเข้ารหัส?
+`PdfSaveOptions` กำหนดตัวเลือกสำหรับการบันทึกไฟล์ PDF, รวมถึงการป้องกันด้วยรหัสผ่านและการบีบอัด. สร้างอินสแตนซ์, ตั้งค่า `Password` เพื่อเข้ารหัสไฟล์ผลลัพธ์, สามารถเปิด `EnablePagination` เพื่อรักษาการจัดหน้า, และปรับ `CompressionLevel` สำหรับไฟล์ขนาดใหญ่. การตั้งค่าเหล่านี้ควบคุมวิธีที่ PDF ที่แก้ไขจะถูกเขียนลงดิสก์.  
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
@@ -167,8 +241,17 @@ saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
 
-## วิธีเปิดใช้งานการแบ่งหน้าเมื่อแก้ไข PDF?
-`PdfEditOptions` ระบุการตั้งค่าการแก้ไขสำหรับไฟล์ PDF, เช่น การแบ่งหน้า. สร้างอินสแตนซ์ของคลาสนี้และตั้งค่า `EnablePagination = true`. การเปิดใช้งานการแบ่งหน้าจะคงการแบ่งหน้าและการจัดรูปแบบเดิมหลังการแก้ไข, ทำให้ PDF ผลลัพธ์รักษาโครงสร้างภาพเดียวกับต้นฉบับ.  
+## ขั้นตอนที่ 9: สร้าง Document Save Options
+ระบุตัวเลือกการบันทึกสำหรับเอกสาร PDF. คุณยังสามารถตั้งรหัสผ่านสำหรับเอกสารผลลัพธ์ได้.  
+```csharp
+FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
+Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
+saveOptions.Password = "output_password";
+saveOptions.OptimizeMemoryUsage = true;
+```
+
+## วิธีบันทึก PDF ที่แก้ไขลงดิสก์?
+`Save` เขียนเอกสารที่แก้ไขลงไฟล์โดยใช้ตัวเลือกการบันทึกที่ระบุ. เรียกเมธอดนี้บนอินสแตนซ์ `Editor`, โดยให้ `EditableDocument` ที่อัปเดตและ `PdfSaveOptions` ที่กำหนดไว้. เมธอดจะสร้าง PDF สุดท้ายที่ตำแหน่งเป้าหมาย, พร้อมใช้การเข้ารหัสหรือการตั้งค่าการแบ่งหน้าที่คุณกำหนด.  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -178,49 +261,16 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-## ขั้นตอนที่ 5: สร้าง Editing Options
-ตั้งค่าตัวเลือกการแก้ไขสำหรับเอกสาร. ในกรณีนี้, เราจะเปิดใช้งานโหมดการแบ่งหน้า.  
-CODE_BLOCK_PLACEHOLDER_11_END
-
-## วิธีสร้างเอกสารกลางที่สามารถแก้ไขได้?
-`CreateEditableDocument` สร้างการแสดงผลที่สามารถแก้ไขได้ของเอกสารที่โหลด. เรียกเมธอดนี้บนอินสแตนซ์ `Editor`, โดยส่ง `PdfEditOptions` ที่กำหนดไว้ก่อนหน้า. เมธอดจะคืนค่า `EditableDocument` ที่มีเนื้อหาแบบ HTML‑like ซึ่งสามารถแก้ไขโดยโปรแกรมก่อนบันทึกกลับเป็น PDF.  
-CODE_BLOCK_PLACEHOLDER_12_END
-
-## ขั้นตอนที่ 6: สร้างเอกสารกลางที่สามารถแก้ไขได้
-สร้างเอกสารกลางที่สามารถแก้ไขได้โดยใช้อินสแตนซ์ editor และตัวเลือกการแก้ไข.  
-CODE_BLOCK_PLACEHOLDER_13_END
-
-## วิธีแทนที่ข้อความภายในเนื้อหาที่สามารถแก้ไขได้?
-`EditableDocument` เก็บเนื้อหาของเอกสารในรูปแบบที่สามารถแก้ไขได้. เข้าถึงคุณสมบัติ `Content` ของมัน, ซึ่งคืนสตริงของการแสดงผล HTML ของเอกสาร. ใช้การดำเนินการสตริงมาตรฐานของ C#, เช่น `Replace`, หรือ regular expressions เพื่อแก้ไขข้อความตามต้องการก่อนสร้างเอกสารใหม่.  
-CODE_BLOCK_PLACEHOLDER_14_END
-
-## ขั้นตอนที่ 7: แก้ไขเนื้อหา
-แก้ไขเนื้อหาของเอกสารตามต้องการ. ที่นี่, เราเพียงแค่แทนที่คำหนึ่งในเอกสาร.  
-CODE_BLOCK_PLACEHOLDER_15_END
-
-## วิธีสร้าง EditableDocument ใหม่หลังจากการเปลี่ยนแปลง?
-`EditableDocument` เก็บเนื้อหาของเอกสารในรูปแบบที่สามารถแก้ไขได้. หลังจากแก้ไขสตริง HTML, สร้าง `EditableDocument` ใหม่โดยส่งเนื้อหาที่แก้ไขและทรัพยากรที่เกี่ยวข้อง (รูปภาพ, ฟอนต์) กลับไปยัง editor. วิธีนี้จะสร้างโครงสร้างภายในของเอกสารใหม่, เตรียมพร้อมสำหรับการบันทึกด้วยเนื้อหาที่อัปเดต.  
-CODE_BLOCK_PLACEHOLDER_16_END
-
-## ขั้นตอนที่ 8: สร้าง Editable Document ใหม่ด้วยเนื้อหาที่แก้ไข
-สร้างอินสแตนซ์ `EditableDocument` ใหม่ด้วยเนื้อหาที่แก้ไขและทรัพยากร.  
-CODE_BLOCK_PLACEHOLDER_17_END
-
-## วิธีกำหนดค่า PDF Save Options รวมถึงการเข้ารหัส?
-`PdfSaveOptions` กำหนดตัวเลือกสำหรับการบันทึกไฟล์ PDF, รวมถึงการป้องกันด้วยรหัสผ่านและการบีบอัด. สร้างอินสแตนซ์, ตั้งค่า `Password` เพื่อเข้ารหัสไฟล์ผลลัพธ์, สามารถเปิด `EnablePagination` เพื่อรักษาการจัดหน้า, และปรับ `CompressionLevel` สำหรับไฟล์ขนาดใหญ่. การตั้งค่าเหล่านี้ควบคุมวิธีที่ PDF ที่แก้ไขจะถูกเขียนลงดิสก์.  
-CODE_BLOCK_PLACEHOLDER_18_END
-
-## ขั้นตอนที่ 9: สร้าง Document Save Options
-ระบุตัวเลือกการบันทึกสำหรับเอกสาร PDF. คุณยังสามารถตั้งรหัสผ่านสำหรับเอกสารผลลัพธ์ได้.  
-CODE_BLOCK_PLACEHOLDER_19_END
-
-## วิธีบันทึก PDF ที่แก้ไขลงดิสก์?
-`Save` เขียนเอกสารที่แก้ไขลงไฟล์โดยใช้ตัวเลือกการบันทึกที่ระบุ. เรียกเมธอดนี้บนอินสแตนซ์ `Editor`, โดยให้ `EditableDocument` ที่อัปเดตและ `PdfSaveOptions` ที่กำหนดไว้. เมธอดจะสร้าง PDF สุดท้ายที่ตำแหน่งเป้าหมาย, พร้อมใช้การเข้ารหัสหรือการตั้งค่าการแบ่งหน้าที่คุณกำหนด.  
-CODE_BLOCK_PLACEHOLDER_20_END
-
 ## ขั้นตอนที่ 10: บันทึกเอกสารที่แก้ไข
 สุดท้าย, บันทึกเอกสารที่แก้ไขไปยังเส้นทางผลลัพธ์ที่ระบุ.  
-CODE_BLOCK_PLACEHOLDER_21_END
+```csharp
+string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
+string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
+using (FileStream outputStream = File.Create(outputPath))
+{
+    editor.Save(afterEdit, outputStream, saveOptions);
+}
+```
 
 ## ปัญหาทั่วไปและวิธีแก้
 - **Memory spikes with huge PDFs** – เปิดใช้งานสตรีมโดยตั้งค่า `LoadOptions.UseMemoryCache = false`.  
