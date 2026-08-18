@@ -104,40 +104,90 @@ Prima di iniziare, avrai bisogno di:
 ## Importa Namespace
 Prima di scrivere qualsiasi codice, assicurati di aver importato i namespace necessari nel tuo progetto:
 ```csharp
-string inputFilePath = "Your Sample Document.pdf";
+using System;
+using GroupDocs.Editor.Formats;
+using GroupDocs.Editor.HtmlCss.Resources;
+using GroupDocs.Editor.Options;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 ```
 
 ## Come caricare un PDF protetto da password?
 `PdfLoadOptions` definisce le opzioni per il caricamento dei file PDF, inclusi password e impostazioni di memoria. Per caricare un PDF protetto, crea un'istanza di `PdfLoadOptions`, imposta la proprietà `Password` con la password del documento e passa questo oggetto all'editor. In questo modo il file viene decrittato prima di qualsiasi operazione di modifica.  
-```csharp
-using (FileStream fs = File.OpenRead(inputFilePath))
-```
-
-## Passo 1: Ottieni il percorso del file di input
-Per prima cosa devi specificare il percorso del tuo documento PDF. Per questo tutorial, supporremo che tu abbia un file PDF di esempio.  
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
 // If the document is password-protected
 loadOptions.Password = "your_password";
 ```
 
+## Passo 1: Ottieni il percorso del file di input
+Per prima cosa devi specificare il percorso del tuo documento PDF. Per questo tutorial, supporremo che tu abbia un file PDF di esempio.  
+```csharp
+string inputFilePath = "Your Sample Document.pdf";
+```
+
 ## Come leggere lo stream di un file PDF?
 `FileStream` fornisce uno stream per leggere e scrivere file su disco. Usalo per aprire il PDF in modalità lettura, consentendo all'editor di elaborare il file senza bloccarlo per accesso esclusivo. Esempio: `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` garantisce prestazioni ottimali e letture concorrenti sicure.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Passo 2: Crea uno stream dal percorso
+Successivamente, crea uno stream di file dal percorso specificato. Questo stream sarà usato per leggere il documento PDF.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Come configurare le opzioni di caricamento per un PDF protetto da password?
+`PdfLoadOptions` definisce le opzioni per il caricamento dei file PDF, inclusi password e utilizzo della memoria. Dopo aver creato l'istanza, assegna alla proprietà `Password` la password del documento. Per PDF di grandi dimensioni puoi anche impostare `UseMemoryCache = false` per ridurre il consumo di memoria. Queste impostazioni preparano il loader a gestire file crittografati e di grandi dimensioni in modo efficiente.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Passo 3: Crea le opzioni di caricamento per il documento
+Per caricare il documento PDF, devi specificare le opzioni di caricamento. Se il tuo PDF è protetto da password, puoi fornire la password qui.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Come inizializzare l'Editor con uno stream e opzioni?
+`Editor` è la classe principale che carica un documento e fornisce capacità di modifica. Istanziala passando un delegato che restituisce lo stream del file e un altro delegato che restituisce le opzioni di caricamento precedentemente configurate. Questo crea una rappresentazione in memoria del PDF pronta per ulteriori manipolazioni.  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
 
-## Passo 2: Crea uno stream dal percorso
-Successivamente, crea uno stream di file dal percorso specificato. Questo stream sarà usato per leggere il documento PDF.  
+## Passo 4: Carica il documento nell'istanza Editor
+Ora, usa lo stream del file e le opzioni di caricamento per caricare il documento in un'istanza `Editor`.  
+```csharp
+using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
+{
+    var documentInfo = editor.GetDocumentInfo(null);
+```
+
+## Come abilitare la paginazione durante la modifica di un PDF?
+`PdfEditOptions` specifica le impostazioni di modifica per i file PDF, come la paginazione. Crea un'istanza di questa classe e imposta `EnablePagination = true`. Abilitare la paginazione preserva le interruzioni di pagina e il layout originali dopo le modifiche, garantendo che il PDF di output mantenga la stessa struttura visiva della sorgente.  
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
 
-## Come configurare le opzioni di caricamento per un PDF protetto da password?
-`PdfLoadOptions` definisce le opzioni per il caricamento dei file PDF, inclusi password e utilizzo della memoria. Dopo aver creato l'istanza, assegna alla proprietà `Password` la password del documento. Per PDF di grandi dimensioni puoi anche impostare `UseMemoryCache = false` per ridurre il consumo di memoria. Queste impostazioni preparano il loader a gestire file crittografati e di grandi dimensioni in modo efficiente.  
+## Passo 5: Crea le opzioni di modifica
+Imposta le opzioni di modifica per il documento. In questo caso, abiliteremo la modalità paginazione.  
+```csharp
+Options.PdfEditOptions editOptions = new PdfEditOptions();
+editOptions.EnablePagination = true;
+```
+
+## Come generare un documento intermedio modificabile?
+`CreateEditableDocument` crea una rappresentazione modificabile del documento caricato. Chiama questo metodo sull'istanza `Editor`, passando le `PdfEditOptions` precedentemente definite. Il metodo restituisce un `EditableDocument` contenente contenuto simile a HTML che può essere alterato programmaticamente prima di salvarlo nuovamente in PDF.  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
@@ -146,22 +196,46 @@ using (EditableDocument beforeEdit = editor.Edit(editOptions))
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
 
-## Passo 3: Crea le opzioni di caricamento per il documento
-Per caricare il documento PDF, devi specificare le opzioni di caricamento. Se il tuo PDF è protetto da password, puoi fornire la password qui.  
+## Passo 6: Crea un documento intermedio modificabile
+Crea un documento intermedio modificabile usando l'istanza dell'editor e le opzioni di modifica.  
+```csharp
+using (EditableDocument beforeEdit = editor.Edit(editOptions))
+{
+    // Extract textual content as HTML markup
+    string originalContent = beforeEdit.GetContent();
+    List<IHtmlResource> allResources = beforeEdit.AllResources;
+```
+
+## Come sostituire il testo all'interno del contenuto modificabile?
+`EditableDocument` contiene il contenuto del documento in un formato modificabile. Accedi alla sua proprietà `Content`, che restituisce una stringa della rappresentazione HTML del documento. Usa le operazioni standard sulle stringhe C#, come `Replace`, o espressioni regolari per modificare il testo secondo necessità prima di ricostruire il documento.  
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
 
-## Come inizializzare l'Editor con uno stream e opzioni?
-`Editor` è la classe principale che carica un documento e fornisce capacità di modifica. Istanziala passando un delegato che restituisce lo stream del file e un altro delegato che restituisce le opzioni di caricamento precedentemente configurate. Questo crea una rappresentazione in memoria del PDF pronta per ulteriori manipolazioni.  
+## Passo 7: Modifica il contenuto
+Modifica il contenuto del documento secondo necessità. Qui, stiamo semplicemente sostituendo una parola nel documento.  
+```csharp
+string editedContent = originalContent.Replace("document", "edited document");
+```
+
+## Come ricostruire l'EditableDocument dopo le modifiche?
+`EditableDocument` contiene il contenuto del documento in un formato modificabile. Dopo aver modificato la stringa HTML, crea un nuovo `EditableDocument` passando il contenuto modificato e le eventuali risorse associate (immagini, font) all'editor. Questo ricostruisce la struttura interna del documento, preparandolo per il salvataggio con il contenuto aggiornato.  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
 
-## Passo 4: Carica il documento nell'istanza Editor
-Ora, usa lo stream del file e le opzioni di caricamento per caricare il documento in un'istanza `Editor`.  
+## Passo 8: Crea un nuovo EditableDocument con contenuto modificato
+Crea una nuova istanza di `EditableDocument` con il contenuto e le risorse modificati.  
+```csharp
+using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
+{
+    string originalContent3 = afterEdit.GetContent();
+```
+
+## Come configurare le opzioni di salvataggio PDF, inclusa la crittografia?
+`PdfSaveOptions` definisce le opzioni per il salvataggio dei file PDF, inclusa la protezione con password e la compressione. Istanziala, imposta `Password` per crittografare l'output, opzionalmente abilita `EnablePagination` per mantenere il layout delle pagine, e regola `CompressionLevel` per file di grandi dimensioni. Queste impostazioni controllano come il PDF modificato viene scritto su disco.  
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
@@ -169,8 +243,17 @@ saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
 
-## Come abilitare la paginazione durante la modifica di un PDF?
-`PdfEditOptions` specifica le impostazioni di modifica per i file PDF, come la paginazione. Crea un'istanza di questa classe e imposta `EnablePagination = true`. Abilitare la paginazione preserva le interruzioni di pagina e il layout originali dopo le modifiche, garantendo che il PDF di output mantenga la stessa struttura visiva della sorgente.  
+## Passo 9: Crea le opzioni di salvataggio del documento
+Specifica le opzioni di salvataggio per il documento PDF. Puoi anche impostare una password per il documento di output.  
+```csharp
+FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
+Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
+saveOptions.Password = "output_password";
+saveOptions.OptimizeMemoryUsage = true;
+```
+
+## Come persistere il PDF modificato su disco?
+`Save` scrive il documento modificato su un file usando le opzioni di salvataggio specificate. Invocalo sull'istanza `Editor`, fornendo l'`EditableDocument` aggiornato e le `PdfSaveOptions` configurate. Il metodo crea il PDF finale nella posizione di destinazione, applicando eventuali impostazioni di crittografia o paginazione definite.  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -180,49 +263,16 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-## Passo 5: Crea le opzioni di modifica
-Imposta le opzioni di modifica per il documento. In questo caso, abiliteremo la modalità paginazione.  
-CODE_BLOCK_PLACEHOLDER_11_END
-
-## Come generare un documento intermedio modificabile?
-`CreateEditableDocument` crea una rappresentazione modificabile del documento caricato. Chiama questo metodo sull'istanza `Editor`, passando le `PdfEditOptions` precedentemente definite. Il metodo restituisce un `EditableDocument` contenente contenuto simile a HTML che può essere alterato programmaticamente prima di salvarlo nuovamente in PDF.  
-CODE_BLOCK_PLACEHOLDER_12_END
-
-## Passo 6: Crea un documento intermedio modificabile
-Crea un documento intermedio modificabile usando l'istanza dell'editor e le opzioni di modifica.  
-CODE_BLOCK_PLACEHOLDER_13_END
-
-## Come sostituire il testo all'interno del contenuto modificabile?
-`EditableDocument` contiene il contenuto del documento in un formato modificabile. Accedi alla sua proprietà `Content`, che restituisce una stringa della rappresentazione HTML del documento. Usa le operazioni standard sulle stringhe C#, come `Replace`, o espressioni regolari per modificare il testo secondo necessità prima di ricostruire il documento.  
-CODE_BLOCK_PLACEHOLDER_14_END
-
-## Passo 7: Modifica il contenuto
-Modifica il contenuto del documento secondo necessità. Qui, stiamo semplicemente sostituendo una parola nel documento.  
-CODE_BLOCK_PLACEHOLDER_15_END
-
-## Come ricostruire l'EditableDocument dopo le modifiche?
-`EditableDocument` contiene il contenuto del documento in un formato modificabile. Dopo aver modificato la stringa HTML, crea un nuovo `EditableDocument` passando il contenuto modificato e le eventuali risorse associate (immagini, font) all'editor. Questo ricostruisce la struttura interna del documento, preparandolo per il salvataggio con il contenuto aggiornato.  
-CODE_BLOCK_PLACEHOLDER_16_END
-
-## Passo 8: Crea un nuovo EditableDocument con contenuto modificato
-Crea una nuova istanza di `EditableDocument` con il contenuto e le risorse modificati.  
-CODE_BLOCK_PLACEHOLDER_17_END
-
-## Come configurare le opzioni di salvataggio PDF, inclusa la crittografia?
-`PdfSaveOptions` definisce le opzioni per il salvataggio dei file PDF, inclusa la protezione con password e la compressione. Istanziala, imposta `Password` per crittografare l'output, opzionalmente abilita `EnablePagination` per mantenere il layout delle pagine, e regola `CompressionLevel` per file di grandi dimensioni. Queste impostazioni controllano come il PDF modificato viene scritto su disco.  
-CODE_BLOCK_PLACEHOLDER_18_END
-
-## Passo 9: Crea le opzioni di salvataggio del documento
-Specifica le opzioni di salvataggio per il documento PDF. Puoi anche impostare una password per il documento di output.  
-CODE_BLOCK_PLACEHOLDER_19_END
-
-## Come persistere il PDF modificato su disco?
-`Save` scrive il documento modificato su un file usando le opzioni di salvataggio specificate. Invocalo sull'istanza `Editor`, fornendo l'`EditableDocument` aggiornato e le `PdfSaveOptions` configurate. Il metodo crea il PDF finale nella posizione di destinazione, applicando eventuali impostazioni di crittografia o paginazione definite.  
-CODE_BLOCK_PLACEHOLDER_20_END
-
 ## Passo 10: Salva il documento modificato
 Infine, salva il documento modificato nel percorso di output specificato.  
-CODE_BLOCK_PLACEHOLDER_21_END
+```csharp
+string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
+string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
+using (FileStream outputStream = File.Create(outputPath))
+{
+    editor.Save(afterEdit, outputStream, saveOptions);
+}
+```
 
 ## Problemi comuni e soluzioni
 - **Picchi di memoria con PDF enormi** – Abilita lo streaming impostando `LoadOptions.UseMemoryCache = false`.  
