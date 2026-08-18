@@ -104,40 +104,89 @@ Trước khi bắt đầu, có một vài thứ bạn sẽ cần:
 ## Nhập không gian tên
 Trước khi viết bất kỳ mã nào, hãy chắc chắn rằng bạn đã nhập các không gian tên cần thiết vào dự án của mình:
 ```csharp
-string inputFilePath = "Your Sample Document.pdf";
+using System;
+using GroupDocs.Editor.Formats;
+using GroupDocs.Editor.HtmlCss.Resources;
+using GroupDocs.Editor.Options;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 ```
 
 ## Làm thế nào để tải PDF được bảo vệ bằng mật khẩu?
 `PdfLoadOptions` định nghĩa các tùy chọn cho việc tải tệp PDF, bao gồm mật khẩu và cài đặt bộ nhớ. Để tải một PDF được bảo vệ, tạo một thể hiện `PdfLoadOptions`, đặt thuộc tính `Password` của nó thành mật khẩu của tài liệu, và truyền đối tượng này cho editor. Điều này đảm bảo tệp được giải mã trước bất kỳ thao tác chỉnh sửa nào.  
-```csharp
-using (FileStream fs = File.OpenRead(inputFilePath))
-```
-
-## Bước 1: Lấy đường dẫn tới tệp đầu vào
-Đầu tiên, bạn cần chỉ định đường dẫn tới tài liệu PDF của mình. Đối với hướng dẫn này, chúng tôi sẽ giả sử bạn có một tệp PDF mẫu.
 ```csharp
 Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
 // If the document is password-protected
 loadOptions.Password = "your_password";
 ```
 
+## Bước 1: Lấy đường dẫn tới tệp đầu vào
+Đầu tiên, bạn cần chỉ định đường dẫn tới tài liệu PDF của mình. Đối với hướng dẫn này, chúng tôi sẽ giả sử bạn có một tệp PDF mẫu.
+```csharp
+string inputFilePath = "Your Sample Document.pdf";
+```
+
 ## Làm thế nào để đọc luồng tệp PDF?
 `FileStream` cung cấp một luồng để đọc và ghi các tệp trên đĩa. Sử dụng nó để mở PDF ở chế độ đọc, cho phép editor xử lý tệp mà không khóa nó cho truy cập độc quyền. Ví dụ: `new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read)` đảm bảo hiệu suất tối ưu và việc đọc đồng thời an toàn.  
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Bước 2: Tạo một Stream từ đường dẫn
+Tiếp theo, tạo một file stream từ đường dẫn bạn đã chỉ định. Stream này sẽ được sử dụng để đọc tài liệu PDF.
+```csharp
+using (FileStream fs = File.OpenRead(inputFilePath))
+```
+
+## Làm thế nào để cấu hình tùy chọn tải cho PDF được bảo vệ bằng mật khẩu?
+`PdfLoadOptions` định nghĩa các tùy chọn cho việc tải tệp PDF, bao gồm mật khẩu và việc sử dụng bộ nhớ. Sau khi tạo thể hiện, gán thuộc tính `Password` với mật khẩu của tài liệu. Đối với các PDF lớn, bạn cũng có thể đặt `UseMemoryCache = false` để giảm tiêu thụ bộ nhớ. Các cài đặt này chuẩn bị bộ tải để xử lý các tệp được mã hoá và kích thước lớn một cách hiệu quả.  
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Bước 3: Tạo tùy chọn tải cho tài liệu
+Để tải tài liệu PDF, bạn cần chỉ định các tùy chọn tải. Nếu PDF của bạn được bảo vệ bằng mật khẩu, bạn có thể cung cấp mật khẩu tại đây.
+```csharp
+Options.PdfLoadOptions loadOptions = new PdfLoadOptions();
+// If the document is password-protected
+loadOptions.Password = "your_password";
+```
+
+## Làm thế nào để khởi tạo Editor với một stream và các tùy chọn?
+`Editor` là lớp chính tải tài liệu và cung cấp khả năng chỉnh sửa. Khởi tạo nó bằng cách truyền một delegate trả về file stream và một delegate khác trả về các tùy chọn tải đã cấu hình trước đó. Điều này tạo ra một biểu diễn trong bộ nhớ của PDF sẵn sàng cho việc thao tác tiếp theo.  
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
     var documentInfo = editor.GetDocumentInfo(null);
 ```
 
-## Bước 2: Tạo một Stream từ đường dẫn
-Tiếp theo, tạo một file stream từ đường dẫn bạn đã chỉ định. Stream này sẽ được sử dụng để đọc tài liệu PDF.
+## Bước 4: Tải tài liệu vào thể hiện Editor
+Bây giờ, sử dụng file stream và các tùy chọn tải để nạp tài liệu vào một thể hiện `Editor`.
+```csharp
+using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
+{
+    var documentInfo = editor.GetDocumentInfo(null);
+```
+
+## Làm thế nào để bật phân trang khi chỉnh sửa PDF?
+`PdfEditOptions` chỉ định các cài đặt chỉnh sửa cho tệp PDF, chẳng hạn như phân trang. Tạo một thể hiện của lớp này và đặt `EnablePagination = true`. Bật phân trang giữ nguyên các ngắt trang và bố cục gốc sau khi sửa đổi, đảm bảo PDF đầu ra duy trì cùng cấu trúc hình ảnh như nguồn.  
 ```csharp
 Options.PdfEditOptions editOptions = new PdfEditOptions();
 editOptions.EnablePagination = true;
 ```
 
-## Làm thế nào để cấu hình tùy chọn tải cho PDF được bảo vệ bằng mật khẩu?
-`PdfLoadOptions` định nghĩa các tùy chọn cho việc tải tệp PDF, bao gồm mật khẩu và việc sử dụng bộ nhớ. Sau khi tạo thể hiện, gán thuộc tính `Password` với mật khẩu của tài liệu. Đối với các PDF lớn, bạn cũng có thể đặt `UseMemoryCache = false` để giảm tiêu thụ bộ nhớ. Các cài đặt này chuẩn bị bộ tải để xử lý các tệp được mã hoá và kích thước lớn một cách hiệu quả.  
+## Bước 5: Tạo tùy chọn chỉnh sửa
+```csharp
+Options.PdfEditOptions editOptions = new PdfEditOptions();
+editOptions.EnablePagination = true;
+```
+
+## Làm thế nào để tạo tài liệu trung gian có thể chỉnh sửa?
+`CreateEditableDocument` tạo ra một biểu diễn có thể chỉnh sửa của tài liệu đã tải. Gọi phương thức này trên thể hiện `Editor`, truyền `PdfEditOptions` đã định nghĩa trước đó. Phương thức trả về một `EditableDocument` chứa nội dung dạng HTML có thể được thay đổi bằng mã trước khi lưu lại thành PDF.  
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
@@ -146,22 +195,46 @@ using (EditableDocument beforeEdit = editor.Edit(editOptions))
     List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
 
-## Bước 3: Tạo tùy chọn tải cho tài liệu
-Để tải tài liệu PDF, bạn cần chỉ định các tùy chọn tải. Nếu PDF của bạn được bảo vệ bằng mật khẩu, bạn có thể cung cấp mật khẩu tại đây.
+## Bước 6: Tạo tài liệu trung gian có thể chỉnh sửa
+Tạo một tài liệu trung gian có thể chỉnh sửa bằng cách sử dụng thể hiện editor và các tùy chọn chỉnh sửa.
+```csharp
+using (EditableDocument beforeEdit = editor.Edit(editOptions))
+{
+    // Extract textual content as HTML markup
+    string originalContent = beforeEdit.GetContent();
+    List<IHtmlResource> allResources = beforeEdit.AllResources;
+```
+
+## Làm thế nào để thay thế văn bản trong nội dung có thể chỉnh sửa?
+`EditableDocument` giữ nội dung của tài liệu ở định dạng có thể chỉnh sửa. Truy cập thuộc tính `Content` của nó, trả về một chuỗi đại diện HTML của tài liệu. Sử dụng các thao tác chuỗi tiêu chuẩn của C#, như `Replace`, hoặc biểu thức chính quy để sửa đổi văn bản theo nhu cầu trước khi tái tạo tài liệu.  
 ```csharp
 string editedContent = originalContent.Replace("document", "edited document");
 ```
 
-## Làm thế nào để khởi tạo Editor với một stream và các tùy chọn?
-`Editor` là lớp chính tải tài liệu và cung cấp khả năng chỉnh sửa. Khởi tạo nó bằng cách truyền một delegate trả về file stream và một delegate khác trả về các tùy chọn tải đã cấu hình trước đó. Điều này tạo ra một biểu diễn trong bộ nhớ của PDF sẵn sàng cho việc thao tác tiếp theo.  
+## Bước 7: Sửa đổi nội dung
+Sửa đổi nội dung của tài liệu theo nhu cầu. Ở đây, chúng tôi chỉ đơn giản thay thế một từ trong tài liệu.
+```csharp
+string editedContent = originalContent.Replace("document", "edited document");
+```
+
+## Làm thế nào để tái tạo EditableDocument sau khi thay đổi?
+`EditableDocument` giữ nội dung của tài liệu ở định dạng có thể chỉnh sửa. Sau khi chỉnh sửa chuỗi HTML, tạo một `EditableDocument` mới bằng cách truyền nội dung đã sửa đổi và bất kỳ tài nguyên liên quan nào (hình ảnh, phông chữ) trở lại editor. Điều này tái cấu trúc cấu trúc nội bộ của tài liệu, chuẩn bị cho việc lưu với nội dung đã cập nhật.  
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
     string originalContent3 = afterEdit.GetContent();
 ```
 
-## Bước 4: Tải tài liệu vào thể hiện Editor
-Bây giờ, sử dụng file stream và các tùy chọn tải để nạp tài liệu vào một thể hiện `Editor`.
+## Bước 8: Tạo một EditableDocument mới với nội dung đã chỉnh sửa
+Tạo một thể hiện `EditableDocument` mới với nội dung và tài nguyên đã chỉnh sửa.
+```csharp
+using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
+{
+    string originalContent3 = afterEdit.GetContent();
+```
+
+## Làm thế nào để cấu hình tùy chọn lưu PDF, bao gồm mã hoá?
+`PdfSaveOptions` định nghĩa các tùy chọn cho việc lưu tệp PDF, bao gồm bảo vệ bằng mật khẩu và nén. Khởi tạo nó, đặt `Password` để mã hoá đầu ra, tùy chọn bật `EnablePagination` để giữ bố cục trang, và điều chỉnh `CompressionLevel` cho các tệp lớn. Các cài đặt này kiểm soát cách PDF đã chỉnh sửa được ghi vào đĩa.  
 ```csharp
 FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
 Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
@@ -169,8 +242,17 @@ saveOptions.Password = "output_password";
 saveOptions.OptimizeMemoryUsage = true;
 ```
 
-## Làm thế nào để bật phân trang khi chỉnh sửa PDF?
-`PdfEditOptions` chỉ định các cài đặt chỉnh sửa cho tệp PDF, chẳng hạn như phân trang. Tạo một thể hiện của lớp này và đặt `EnablePagination = true`. Bật phân trang giữ nguyên các ngắt trang và bố cục gốc sau khi sửa đổi, đảm bảo PDF đầu ra duy trì cùng cấu trúc hình ảnh như nguồn.  
+## Bước 9: Tạo tùy chọn lưu tài liệu
+Chỉ định các tùy chọn lưu cho tài liệu PDF. Bạn cũng có thể đặt mật khẩu cho tài liệu đầu ra.
+```csharp
+FixedLayoutFormats docmFormat = FixedLayoutFormats.Pdf;
+Options.PdfSaveOptions saveOptions = new PdfSaveOptions();
+saveOptions.Password = "output_password";
+saveOptions.OptimizeMemoryUsage = true;
+```
+
+## Làm thế nào để lưu PDF đã chỉnh sửa vào đĩa?
+`Save` ghi tài liệu đã chỉnh sửa vào một tệp sử dụng các tùy chọn lưu đã chỉ định. Gọi nó trên thể hiện `Editor`, cung cấp `EditableDocument` đã cập nhật và `PdfSaveOptions` đã cấu hình. Phương thức tạo PDF cuối cùng tại vị trí mục tiêu, áp dụng bất kỳ cài đặt mã hoá hoặc phân trang nào bạn đã định nghĩa.  
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
 string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
@@ -180,48 +262,16 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-## Bước 5: Tạo tùy chọn chỉnh sửa
-CODE_BLOCK_PLACEHOLDER_11_END
-
-## Làm thế nào để tạo tài liệu trung gian có thể chỉnh sửa?
-`CreateEditableDocument` tạo ra một biểu diễn có thể chỉnh sửa của tài liệu đã tải. Gọi phương thức này trên thể hiện `Editor`, truyền `PdfEditOptions` đã định nghĩa trước đó. Phương thức trả về một `EditableDocument` chứa nội dung dạng HTML có thể được thay đổi bằng mã trước khi lưu lại thành PDF.  
-CODE_BLOCK_PLACEHOLDER_12_END
-
-## Bước 6: Tạo tài liệu trung gian có thể chỉnh sửa
-Tạo một tài liệu trung gian có thể chỉnh sửa bằng cách sử dụng thể hiện editor và các tùy chọn chỉnh sửa.
-CODE_BLOCK_PLACEHOLDER_13_END
-
-## Làm thế nào để thay thế văn bản trong nội dung có thể chỉnh sửa?
-`EditableDocument` giữ nội dung của tài liệu ở định dạng có thể chỉnh sửa. Truy cập thuộc tính `Content` của nó, trả về một chuỗi đại diện HTML của tài liệu. Sử dụng các thao tác chuỗi tiêu chuẩn của C#, như `Replace`, hoặc biểu thức chính quy để sửa đổi văn bản theo nhu cầu trước khi tái tạo tài liệu.  
-CODE_BLOCK_PLACEHOLDER_14_END
-
-## Bước 7: Sửa đổi nội dung
-Sửa đổi nội dung của tài liệu theo nhu cầu. Ở đây, chúng tôi chỉ đơn giản thay thế một từ trong tài liệu.
-CODE_BLOCK_PLACEHOLDER_15_END
-
-## Làm thế nào để tái tạo EditableDocument sau khi thay đổi?
-`EditableDocument` giữ nội dung của tài liệu ở định dạng có thể chỉnh sửa. Sau khi chỉnh sửa chuỗi HTML, tạo một `EditableDocument` mới bằng cách truyền nội dung đã sửa đổi và bất kỳ tài nguyên liên quan nào (hình ảnh, phông chữ) trở lại editor. Điều này tái cấu trúc cấu trúc nội bộ của tài liệu, chuẩn bị cho việc lưu với nội dung đã cập nhật.  
-CODE_BLOCK_PLACEHOLDER_16_END
-
-## Bước 8: Tạo một EditableDocument mới với nội dung đã chỉnh sửa
-Tạo một thể hiện `EditableDocument` mới với nội dung và tài nguyên đã chỉnh sửa.
-CODE_BLOCK_PLACEHOLDER_17_END
-
-## Làm thế nào để cấu hình tùy chọn lưu PDF, bao gồm mã hoá?
-`PdfSaveOptions` định nghĩa các tùy chọn cho việc lưu tệp PDF, bao gồm bảo vệ bằng mật khẩu và nén. Khởi tạo nó, đặt `Password` để mã hoá đầu ra, tùy chọn bật `EnablePagination` để giữ bố cục trang, và điều chỉnh `CompressionLevel` cho các tệp lớn. Các cài đặt này kiểm soát cách PDF đã chỉnh sửa được ghi vào đĩa.  
-CODE_BLOCK_PLACEHOLDER_18_END
-
-## Bước 9: Tạo tùy chọn lưu tài liệu
-Chỉ định các tùy chọn lưu cho tài liệu PDF. Bạn cũng có thể đặt mật khẩu cho tài liệu đầu ra.
-CODE_BLOCK_PLACEHOLDER_19_END
-
-## Làm thế nào để lưu PDF đã chỉnh sửa vào đĩa?
-`Save` ghi tài liệu đã chỉnh sửa vào một tệp sử dụng các tùy chọn lưu đã chỉ định. Gọi nó trên thể hiện `Editor`, cung cấp `EditableDocument` đã cập nhật và `PdfSaveOptions` đã cấu hình. Phương thức tạo PDF cuối cùng tại vị trí mục tiêu, áp dụng bất kỳ cài đặt mã hoá hoặc phân trang nào bạn đã định nghĩa.  
-CODE_BLOCK_PLACEHOLDER_20_END
-
 ## Bước 10: Lưu tài liệu đã chỉnh sửa
 Cuối cùng, lưu tài liệu đã chỉnh sửa vào đường dẫn đầu ra đã chỉ định.
-CODE_BLOCK_PLACEHOLDER_21_END
+```csharp
+string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + docmFormat.Extension;
+string outputPath = Path.Combine("OutputDirectoryPath", outputFilename);
+using (FileStream outputStream = File.Create(outputPath))
+{
+    editor.Save(afterEdit, outputStream, saveOptions);
+}
+```
 
 ## Vấn đề thường gặp và giải pháp
 - **Tăng đột biến bộ nhớ với PDF khổng lồ** – Bật streaming bằng cách đặt `LoadOptions.UseMemoryCache = false`.  
