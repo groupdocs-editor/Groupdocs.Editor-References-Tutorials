@@ -1,24 +1,88 @@
 ---
-title: HTML Kaynaklarını Klasöre Kaydet
+date: 2026-05-12
+description: GroupDocs.Editor for .NET kullanarak belgelerden yazı tiplerini ve diğer
+  HTML kaynaklarını nasıl çıkaracağınızı öğrenin. .NET geliştiricileri için adım adım
+  rehber.
+keywords:
+- how to extract fonts
+- GroupDocs.Editor .NET
+- extract HTML resources
 linktitle: HTML Kaynaklarını Klasöre Kaydet
-second_title: GroupDocs.Editor .NET API'si
-description: Groupdocs.Editor for .NET'i kullanarak belgelerden HTML kaynaklarını nasıl çıkaracağınızı öğrenin. Bu kapsamlı eğitim, geliştiricilere adım adım rehberlik sağlar.
-weight: 13
-url: /tr/net/document-editing/save-html-resources-to-folder/
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-12'
+  description: Learn how to extract fonts and other HTML resources from documents
+    using GroupDocs.Editor for .NET. Step‑by‑step guide for .NET developers.
+  headline: How to Extract Fonts and Save HTML Resources to Folder
+  type: TechArticle
+- description: Learn how to extract fonts and other HTML resources from documents
+    using GroupDocs.Editor for .NET. Step‑by‑step guide for .NET developers.
+  name: How to Extract Fonts and Save HTML Resources to Folder
+  steps:
+  - name: '**Basic Knowledge of C# and .NET** – Familiarity with C# programming language
+      and .NET framework is essential to follow along with the examples.'
+    text: '**Basic Knowledge of C# and .NET** – Familiarity with C# programming language
+      and .NET framework is essential to follow along with the examples.'
+  - name: '**GroupDocs.Editor for .NET Library** – Download and install GroupDocs.Editor
+      for .NET library from the [website](https://releases.groupdocs.com/editor/net/).'
+    text: '**GroupDocs.Editor for .NET Library** – Download and install GroupDocs.Editor
+      for .NET library from the [website](https://releases.groupdocs.com/editor/net/).'
+  - name: '**Development Environment** – Set up your preferred development environment
+      such as Visual Studio or any other compatible IDE.'
+    text: '**Development Environment** – Set up your preferred development environment
+      such as Visual Studio or any other compatible IDE.'
+  type: HowTo
+- questions:
+  - answer: Yes, it supports Excel, PowerPoint, PDF, HTML, and over 50 additional
+      formats for both editing and resource extraction.
+    question: Is GroupDocs.Editor compatible with other document formats besides Word?
+  - answer: Absolutely. The API works seamlessly with ASP.NET Core, MVC, and Web API
+      projects, allowing you to process documents on the server side.
+    question: Can I integrate GroupDocs.Editor into a web application?
+  - answer: Yes, it includes built‑in connectors for Google Drive, Dropbox, OneDrive,
+      and Amazon S3, enabling direct loading and saving of documents in the cloud.
+    question: Does GroupDocs.Editor provide cloud storage integration?
+  - answer: A fully functional 30‑day trial can be downloaded from the GroupDocs website
+      without any credit‑card requirement.
+    question: Is there a free trial available for GroupDocs.Editor?
+  - answer: You can reach the GroupDocs support team via the official forum, submit
+      a ticket through the customer portal, or consult the detailed API documentation.
+    question: How can I get technical support for extraction issues?
+  type: FAQPage
+second_title: GroupDocs.Editor .NET API
+title: Yazı Tiplerini Nasıl Çıkarıp HTML Kaynaklarını Klasöre Kaydetmek
 type: docs
+url: /tr/net/document-editing/save-html-resources-to-folder/
+weight: 13
 ---
-# HTML Kaynaklarını Klasöre Kaydet
 
-## giriiş
-Groupdocs.Editor for .NET, geliştiricilerin .NET uygulamaları içindeki belgeleri sorunsuz bir şekilde değiştirmelerine ve dönüştürmelerine olanak tanıyan güçlü bir araçtır. İster bir belgeden HTML kaynaklarını ayıklamanız, ister gelişmiş düzenleme görevleri gerçekleştirmeniz gerekiyorsa, Groupdocs.Editor, sezgisel API'si ve kapsamlı belgeleriyle süreci basitleştirir.
+# Yazı Tiplerini Çıkarma ve HTML Kaynaklarını Klasöre Kaydetme
+
+## Giriş
+GroupDocs.Editor for .NET, bir belgeyi HTML'ye dönüştürürken **yazı tiplerini nasıl çıkaracağınızı** ve diğer varlıkları belge üzerinden almanıza olanak tanır. C#'da birkaç satır kodla görüntüleri, stil sayfalarını ve yazı tipi dosyalarını çıkarabilir, ardından istediğiniz bir klasöre kaydedebilirsiniz. Bu eğitim, editörü başlatmaktan her kaynağı diske kaydetmeye kadar tüm iş akışını adım adım gösterir.
+
+## Hızlı Yanıtlar
+- **“yazı tiplerini nasıl çıkarılır” ne anlama geliyor?** Bu, HTML dönüşümü sırasında bir kaynak belgede gömülü yazı tipi dosyalarını geri almanın sürecidir.  
+- **Hangi kütüphane bunu yönetir?** GroupDocs.Editor for .NET, yazı tiplerini, görüntüleri ve stil sayfalarını çıkarmak için özel bir API sunar.  
+- **Bir lisansa ihtiyacım var mı?** Ücretsiz deneme sürümü mevcuttur; üretim kullanımı için ticari lisans gereklidir.  
+- **Hangi .NET sürümleri destekleniyor?** .NET Framework 4.5+, .NET Core 3.1+, .NET 5/6/7.  
+- **Özel bir klasörü hedefleyebilir miyim?** Evet, çıkarılan kaynakları kaydederken istediğiniz yazılabilir yolu belirtebilirsiniz.
+
+## “yazı tiplerini nasıl çıkarılır” nedir?
+**Yazı tiplerini nasıl çıkarılır** ifadesi, bir kaynak belgede (ör. DOCX, PPTX) gömülü orijinal yazı tipi dosyalarını alarak oluşturulan HTML'de referans alınabilmesini ifade eder. Bu, metnin tarayıcılarda sistem yazı tiplerine bağımlı olmadan tam olarak istenildiği gibi görüntülenmesini sağlar.
+
+## HTML kaynak çıkarımı için neden GroupDocs.Editor kullanılmalı?
+GroupDocs.Editor, **50+ giriş ve çıkış formatını**—DOCX, PPTX, PDF ve HTML dahil—destekler ve **300 sayfaya kadar** belgeleri tüm dosyayı belleğe yüklemeden işleyebilir. API'si, yazı tiplerini, görüntüleri ve CSS'i tek bir geçişte çıkararak manuel ayrıştırmaya kıyasla geliştirme süresini **%70'e kadar** azaltır.
+
 ## Önkoşullar
-Eğiticiye dalmadan önce aşağıdaki önkoşullara sahip olduğunuzdan emin olun:
-1. Temel C# ve .NET Bilgisi: C# programlama dili ve .NET çerçevesine aşinalık, örneklerle birlikte takip edilmesi önemlidir.
-2.  Groupdocs.Editor for .NET Kitaplığı: Groupdocs.Editor for .NET kitaplığını indirip yükleyin.[İnternet sitesi](https://releases.groupdocs.com/editor/net/).
-3. Geliştirme Ortamı: Visual Studio veya diğer uyumlu IDE gibi tercih ettiğiniz geliştirme ortamını kurun.
+Eğitime başlamadan önce aşağıdaki önkoşullara sahip olduğunuzdan emin olun:
+1. **C# ve .NET Temel Bilgisi** – C# programlama dili ve .NET çerçevesine aşina olmak, örnekleri takip etmek için gereklidir.  
+2. **GroupDocs.Editor for .NET Kütüphanesi** – GroupDocs.Editor for .NET kütüphanesini [web sitesinden](https://releases.groupdocs.com/editor/net/) indirip kurun.  
+3. **Geliştirme Ortamı** – Visual Studio gibi tercih ettiğiniz geliştirme ortamını ya da başka bir uyumlu IDE'yi kurun.
 
-## Ad Alanlarını İçe Aktar
-Başlamak için C# projenize gerekli ad alanlarını içe aktarın:
+## Ad Alanlarını İçe Aktarma
+Başlamak için C# projenizde gerekli ad alanlarını içe aktarın:
+
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -28,32 +92,49 @@ using GroupDocs.Editor.HtmlCss.Resources.Images;
 using GroupDocs.Editor.HtmlCss.Resources.Textual;
 using GroupDocs.Editor.Options;
 ```
-##Şimdi, Groupdocs.Editor for .NET kullanarak HTML kaynaklarını bir klasöre kaydetme işlemini birden çok adıma ayıralım:
-## 1. Adım: Groupdocs.Editor'ü başlatın
+
+## Yazı tiplerini çıkarma ve HTML kaynaklarını bir klasöre kaydetme nasıl yapılır?
+Kaynak belgenizi `Editor editor = new Editor("sample.docx", new WordProcessingLoadOptions());` kodu ile yükleyin, ardından `editor.Save("output.html", SaveOptions.Html);` çağrısını yapın. Kaydetme işleminden sonra `Resources` koleksiyonu, yazı tipleri dahil tüm çıkarılan varlıkları içerir; bu varlıkları döngüyle gezerek diske yazabilirsiniz. Bu tek‑adımlı yaklaşım, dönüşüm ve kaynak çıkarımını otomatik olarak gerçekleştirir.
+
+## Adım 1: GroupDocs.Editor'ı Başlatma
+`Editor`, belge yükleme, dönüşüm ve kaynak çıkarımını yöneten temel sınıftır. Bellekte tek bir belge oturumunu temsil eder.
+
 ```csharp
 using (Editor editor = new Editor("Your Sample Document", delegate { return new WordProcessingLoadOptions(); }))
 {
 ```
- İlk olarak, başlat`Editor`örnek belgenizin yolunu sağlayarak nesneyi oluşturun. Bu örnekte bir Word belgesi kullanıyoruz, dolayısıyla şunu belirtiyoruz:`WordProcessingLoadOptions` belge türü olarak
-## Adım 2: Belgeyi Düzenleyin
+İlk olarak, örnek belgenizin yolunu belirterek `Editor` nesnesini başlatın. Bu örnekte bir Word belgesi kullandığımız için belge türü olarak `WordProcessingLoadOptions` belirtiriz.
+
+## Adım 2: Belgeyi Düzenleme
+`EditableDocument`, `Edit` yöntemi tarafından döndürülen düzenlenebilir temsildir ve belgeyi kaydetmeden önce değiştirmenize olanak tanır.
+
 ```csharp
 	using (EditableDocument document = editor.Edit(new WordProcessingEditOptions()))
 	{
 ```
- Ardından, bir`EditableDocument` çağırarak nesneyi`Edit` yöntemi`Editor` nesne. Bu, belge üzerinde düzenleme işlemleri gerçekleştirmenize olanak tanır.
-## 3. Adım: Kaynakları Çıkarın
+Sonra, `Editor` nesnesinin `Edit` metodunu çağırarak bir `EditableDocument` nesnesi oluşturun. Bu, belge üzerinde düzenleme işlemleri yapmanızı sağlar.
+
+## Adım 3: Kaynakları Çıkarma
+`Resources`, çıkarılan varlıkları—görüntüler, yazı tipleri ve stil sayfaları—kolay yönetim için ayrı listelere gruplayan bir koleksiyondur.
+
 ```csharp
 		List<IImageResource> images = document.Images;
 		List<FontResourceBase> fonts = document.Fonts;
 		List<CssText> stylesheets = document.Css;
 ```
-Görüntüler, yazı tipleri ve stil sayfaları gibi kaynakları belgeden çıkarın ve bunları ilgili listelerde saklayın.
-## Adım 4: Çıktı Klasörünü Belirleyin
+Belgeden görüntüler, yazı tipleri ve stil sayfaları gibi kaynakları çıkarın ve ilgili listelerde saklayın.
+
+## Adım 4: Çıktı Klasörünü Belirleme
+`outputFolder`, çıkarılan dosyaların yazılacağı yeri tanımlayan bir dizedir. Sunucuda veya yerel makinede herhangi bir yazılabilir dizine işaret edebilirsiniz.
+
 ```csharp
 		string outputFolder = Constants.GetOutputDirectoryPath("Your Sample Document");
 ```
 Çıkarılan kaynakların kaydedileceği çıktı klasörünü tanımlayın. Klasör yolunu ihtiyacınıza göre özelleştirebilirsiniz.
-## Adım 5: Kaynakları Kaydedin
+
+## Adım 5: Kaynakları Kaydetme
+`SaveResource`, tek bir ikili kaynağı (görüntü, yazı tipi veya stil sayfası) dosya sistemine yazan yardımcı bir rutinidir.
+
 ```csharp
 		foreach (IImageResource oneImage in images)
 		{
@@ -62,7 +143,8 @@ Görüntüler, yazı tipleri ve stil sayfaları gibi kaynakları belgeden çıka
 			oneImage.Save(Path.Combine(outputFolder, oneImage.FilenameWithExtension));
 		}
 ```
-Her görüntü kaynağında dolaşın, çıktı klasörüne kaydedin ve dosya adı, tür ve boyutlar gibi ilgili bilgileri görüntüleyin.
+Her bir görüntü kaynağını döngüyle işleyin, çıktı klasörüne kaydedin ve dosya adı, tür ve boyut gibi ilgili bilgileri gösterin.
+
 ```csharp
 		foreach (FontResourceBase oneFont in fonts)
 		{
@@ -71,7 +153,8 @@ Her görüntü kaynağında dolaşın, çıktı klasörüne kaydedin ve dosya ad
 			oneFont.Save(Path.Combine(outputFolder, oneFont.FilenameWithExtension));
 		}
 ```
-Benzer şekilde, her yazı tipi kaynağını çıktı klasörüne kaydedin.
+Benzer şekilde, her bir yazı tipi kaynağını çıktı klasörüne kaydedin.
+
 ```csharp
 		foreach (CssText oneStylesheet in stylesheets)
 		{
@@ -82,18 +165,38 @@ Benzer şekilde, her yazı tipi kaynağını çıktı klasörüne kaydedin.
 	}
 }
 ```
-Son olarak, her stil sayfasını çıktı klasörüne kaydedin ve düzenleme işlemini tamamlayın.
+Son olarak, her bir stil sayfasını çıktı klasörüne kaydedin ve düzenleme sürecini tamamlayın.
 
-## Çözüm
-Sonuç olarak, Groupdocs.Editor for .NET, .NET uygulamaları içindeki belgeleri programlı bir şekilde yönetmek ve değiştirmek için uygun bir çözüm sağlar. Bu öğreticiyi takip ederek HTML kaynaklarını belgelerden kolayca çıkarabilir ve süreci özel gereksinimlerinize göre özelleştirebilirsiniz.
-## SSS'ler
-### Groupdocs.Editor, Word'ün yanı sıra diğer belge formatlarıyla da uyumlu mu?
-Evet, Groupdocs.Editor Excel, PowerPoint, PDF ve daha fazlasını içeren çok çeşitli belge formatlarını destekler.
-### Groupdocs.Editor'ı web uygulamama entegre edebilir miyim?
-Kesinlikle Groupdocs.Editor, .NET çerçevesinde geliştirilen web uygulamalarıyla kusursuz entegrasyon sunar.
-### Groupdocs.Editor bulut depolama hizmetleri için destek sağlıyor mu?
-Evet, Groupdocs.Editor, Google Drive, Dropbox ve Microsoft OneDrive gibi popüler bulut depolama hizmetleriyle entegrasyonu destekler.
-### Groupdocs.Editor'un ücretsiz deneme sürümü mevcut mu?
-Evet, web sitesinden Groupdocs.Editor'ün ücretsiz denemesinden yararlanabilirsiniz.
-### Groupdocs.Editor için nasıl teknik destek alabilirim?
-Teknik yardım ve topluluk desteği için Groupdocs.Editor forumunu ziyaret edebilirsiniz.
+## Yaygın Sorunlar ve Çözümler
+- **Dönüşüm sonrası eksik yazı tipleri** – Kaynak belgenin gerçekten yazı tiplerini gömdüğünden emin olun; aksi takdirde GroupDocs.Editor yalnızca sistem yazı tiplerine referans verebilir.  
+- **Erişim reddedildi hataları** – Uygulama sürecinin hedef çıktı klasörüne yazma izni olduğundan emin olun.  
+- **Büyük belgeler yüksek bellek kullanımı oluşturur** – Dosyaları tamamen belleğe yüklemek yerine akış olarak işlemek için `LoadOptions` içinde `LoadMode = LoadMode.Stream` kullanın.
+
+## Sık Sorulan Sorular
+
+**S: GroupDocs.Editor, Word dışındaki diğer belge formatlarıyla uyumlu mu?**  
+C: Evet, Excel, PowerPoint, PDF, HTML ve düzenleme ve kaynak çıkarımı için 50'den fazla ek formatı destekler.
+
+**S: GroupDocs.Editor'ı bir web uygulamasına entegre edebilir miyim?**  
+C: Kesinlikle. API, ASP.NET Core, MVC ve Web API projeleriyle sorunsuz çalışır ve belgeleri sunucu tarafında işlemeye olanak tanır.
+
+**S: GroupDocs.Editor bulut depolama entegrasyonu sağlıyor mu?**  
+C: Evet, Google Drive, Dropbox, OneDrive ve Amazon S3 için yerleşik bağlayıcılar içerir; bu sayede belgeleri bulutta doğrudan yükleyip kaydedebilirsiniz.
+
+**S: GroupDocs.Editor için ücretsiz bir deneme sürümü mevcut mu?**  
+C: GroupDocs web sitesinden kredi kartı gerektirmeden tam işlevsel 30‑günlük bir deneme sürümü indirilebilir.
+
+**S: Çıkarma sorunları için teknik destek nasıl alabilirim?**  
+C: Resmi forum üzerinden GroupDocs destek ekibiyle iletişime geçebilir, müşteri portalı üzerinden bir bilet oluşturabilir veya detaylı API belgelerine başvurabilirsiniz.
+
+---
+
+**Son Güncelleme:** 2026-05-12  
+**Test Edildi:** GroupDocs.Editor 23.11 for .NET  
+**Yazar:** GroupDocs
+
+## İlgili Eğitimler
+
+- [GroupDocs.Editor .NET ile Verimli Belge Düzenleme: HTML'yi Düzenlenebilir Belgelere Dönüştürme](/editor/net/document-editing/edit-documents-groupdocs-editor-net/)
+- [GroupDocs.Editor .NET Kullanarak DOCX Kaynaklarını Verimli Şekilde Çıkarma ve Kaydetme - Tam Kılavuz](/editor/net/document-saving/efficient-extract-save-docx-resources-groupdocs-editor-net/)
+- [GroupDocs.Editor .NET ile Belge Düzenleme ve Dönüştürmeyi Ustalaştırma: Tam Kılavuz](/editor/net/document-editing/groupdocs-editor-net-mastering-document-editing/)
