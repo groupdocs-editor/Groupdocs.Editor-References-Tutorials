@@ -1,158 +1,205 @@
 ---
-date: 2026-03-01
-description: GroupDocs.Editor for .NET के साथ HTML सामग्री निकालना और संपादित PDF
-  फ़ाइलें सहेजना सीखें, जिसमें दस्तावेज़ संपादन, प्रोसेसिंग और अधिक शामिल है।
+date: 2026-08-20
+description: GroupDocs.Editor for .NET का उपयोग करके pdf से html निकालना सीखें, जिसमें
+  server‑side processing, format support, और edited PDFs को सहेजना शामिल है।
 is_root: true
-linktitle: GroupDocs.Editor for .NET Tutorials
-title: .NET के लिए GroupDocs.Editor का उपयोग करके HTML सामग्री निकालें
+keywords:
+- extract html from pdf
+- how to extract html
+- convert document to html
+- server side document processing
+lastmod: 2026-08-20
+linktitle: GroupDocs.Editor for .NET ट्यूटोरियल्स
+og_description: GroupDocs.Editor for .NET के साथ pdf फ़ाइलों से html निकालना सीखें,
+  जिसमें server‑side processing, format support, और edited PDFs को सहेजना शामिल है।
+og_image_alt: Screenshot showing GroupDocs.Editor extracting HTML from a PDF in a
+  .NET application
+og_title: GroupDocs.Editor for .NET का उपयोग करके pdf से html निकालें
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-20'
+  description: Learn how to extract html from pdf using GroupDocs.Editor for .NET,
+    covering server‑side processing, format support, and saving edited PDFs.
+  headline: How to extract html from pdf with GroupDocs.Editor for .NET
+  type: TechArticle
+- questions:
+  - answer: Yes. Provide the password when opening the document; the API will decrypt
+      it before extraction.
+    question: Can I extract HTML from a password‑protected PDF?
+  - answer: Absolutely. After extraction you can feed the HTML into the editor’s `Load`
+      method and save it as DOCX.
+    question: Is it possible to convert the extracted HTML back into a Word document?
+  - answer: Yes, you can loop through a collection of files and call the extraction
+      or save methods for each one.
+    question: Does GroupDocs.Editor support batch processing?
+  - answer: The library embeds font references automatically; you can also manually
+      add CSS `@font-face` rules if required.
+    question: What if I need to preserve custom fonts in the extracted HTML?
+  - answer: While there’s no hard limit, very large files benefit from streaming and
+      incremental processing to reduce memory usage.
+    question: Are there any limits on the size of documents I can process?
+  type: FAQPage
+tags:
+- extract html
+- GroupDocs.Editor
+- .NET document processing
+title: GroupDocs.Editor for .NET के साथ pdf से html निकालने का तरीका
 type: docs
 url: /hi/net/
 weight: 10
 ---
 
-# GroupDocs.Editor for .NET के साथ HTML सामग्री निकालें
+# GroupDocs.Editor for .NET के साथ PDF से HTML निकालें
 
-Ready to unlock the full potential of GroupDocs.Editor for .NET? In this guide you’ll learn **how to extract html content** from a variety of document formats and discover practical ways to **save edited pdf**, **edit excel spreadsheet**, **edit powerpoint slides**, **edit pdf forms**, and **edit xml document**. Whether you’re a beginner or an experienced developer, these tutorials give you the step‑by‑step instructions you need to streamline your document‑management workflow and boost productivity.
+इस गाइड में आप GroupDocs.Editor for .NET का उपयोग करके PDF फ़ाइलों से **HTML निकालने** के तरीके सीखेंगे और व्यावहारिक तरीकों की खोज करेंगे जैसे **संपादित PDF सहेजना**, **Excel स्प्रेडशीट संपादित करना**, **PowerPoint स्लाइड्स संपादित करना**, **PDF फ़ॉर्म्स संपादित करना**, और **XML दस्तावेज़ संपादित करना**। चाहे आप एक शुरुआती हों या अनुभवी डेवलपर, चरण‑दर‑चरण निर्देश आपके दस्तावेज़‑प्रबंधन कार्यप्रवाह को सुव्यवस्थित करने और उत्पादकता बढ़ाने में मदद करेंगे।
 
-## Quick Answers
-- **What does “extract html content” mean?** It means retrieving the raw HTML markup that represents a document’s body, styles, and resources.  
-- **Which file types can I extract HTML from?** DOCX, PDF, PPTX, XLSX, XML, and plain‑text files are all supported.  
-- **Do I need a license to use GroupDocs.Editor?** Yes, a valid GroupDocs.Editor license is required for production use.  
-- **Can I save the edited document as PDF?** Absolutely – you can **save edited pdf** files directly from the editor.  
-- **Is the API compatible with .NET 6+?** Yes, the library works with .NET Framework, .NET Core, and .NET 5/6+.
+GroupDocs.Editor for .NET एक सर्वर‑साइड लाइब्रेरी है जो क्लाइंट प्लगइन्स के बिना Office और PDF दस्तावेज़ों को संपादित करने और रूपांतरण करने में सक्षम बनाती है। यह 30 से अधिक इनपुट फ़ॉर्मेट का समर्थन करता है और पूरी फ़ाइल को मेमोरी में लोड किए बिना 500 MB तक की फ़ाइलों को प्रोसेस कर सकता है, जिससे आपको मानक सर्वर हार्डवेयर पर तेज़, विश्वसनीय प्रदर्शन मिलता है।
 
-## What is “extract html content”?
-Extracting HTML content means pulling the HTML representation of a document so you can display, modify, or embed it in web applications. GroupDocs.Editor parses the source file, reconstructs the HTML structure, and returns it as a clean string that preserves formatting, images, and CSS.
+## त्वरित उत्तर
+- **“extract html from pdf” का क्या अर्थ है?** इसका मतलब है PDF के बॉडी, स्टाइल्स और रिसोर्सेज़ का प्रतिनिधित्व करने वाले कच्चे HTML मार्कअप को प्राप्त करना।  
+- **मैं किन फ़ाइल प्रकारों से HTML निकाल सकता हूँ?** DOCX, PDF, PPTX, XLSX, XML, और plain‑text फ़ाइलें सभी समर्थित हैं।  
+- **क्या GroupDocs.Editor उपयोग करने के लिए लाइसेंस आवश्यक है?** हाँ, प्रोडक्शन उपयोग के लिए एक वैध GroupDocs.Editor लाइसेंस आवश्यक है।  
+- **क्या मैं संपादित दस्तावेज़ को PDF के रूप में सहेज सकता हूँ?** बिल्कुल – आप सीधे एडिटर से **save edited pdf** फ़ाइलें सहेज सकते हैं।  
+- **क्या API .NET 6+ के साथ संगत है?** हाँ, लाइब्रेरी .NET Framework, .NET Core, और .NET 5/6+ के साथ काम करती है।
 
-## Why use GroupDocs.Editor for .NET?
-- **Fast integration** – add powerful document editing capabilities with just a few lines of code.  
-- **Cross‑format support** – work with Word, Excel, PowerPoint, PDF, XML, and plain‑text files.  
-- **Server‑side processing** – no client plugins required, perfect for web services and APIs.  
-- **Rich editing features** – beyond HTML extraction you can **save edited pdf**, **edit excel spreadsheet**, **edit powerpoint slides**, and more.
+## “extract html content” क्या है?
+HTML सामग्री निकालना मतलब दस्तावेज़ का HTML प्रतिनिधित्व प्राप्त करना है ताकि आप इसे वेब एप्लिकेशन में प्रदर्शित, संशोधित या एम्बेड कर सकें। GroupDocs.Editor स्रोत फ़ाइल को पार्स करता है, HTML संरचना को पुनः निर्मित करता है, और इसे एक साफ़ स्ट्रिंग के रूप में लौटाता है जो फ़ॉर्मेटिंग, इमेज़ और CSS को संरक्षित रखती है।
 
-## Prerequisites
-- .NET 6 (or .NET Framework 4.7+) installed.  
-- A valid GroupDocs.Editor for .NET license file.  
-- Basic familiarity with C# and Visual Studio.
+## GroupDocs.Editor for .NET का उपयोग क्यों करें?
+GroupDocs.Editor for .NET एक उच्च‑प्रदर्शन, सर्वर‑साइड समाधान प्रदान करता है जो आपको क्लाइंट‑साइड प्लगइन्स की आवश्यकता के बिना दस्तावेज़ों को संपादित और रूपांतरित करने देता है। यह विभिन्न फ़ॉर्मेट्स का व्यापक समर्थन करता है, बड़े फ़ाइलों को कुशलता से संभालता है, और मौजूदा .NET एप्लिकेशन के साथ आसानी से एकीकृत होता है, जिससे दस्तावेज़ प्रबंधन तेज़ और अधिक विश्वसनीय बनता है।
 
-## Core Tutorial Sections
+- **तेज़ एकीकरण** – केवल कुछ पंक्तियों के कोड के साथ शक्तिशाली दस्तावेज़ संपादन क्षमताएँ जोड़ें।  
+- **क्रॉस‑फ़ॉर्मेट समर्थन** – Word, Excel, PowerPoint, PDF, XML, और plain‑text फ़ाइलों के साथ काम करें।  
+- **सर्वर‑साइड प्रोसेसिंग** – कोई क्लाइंट प्लगइन आवश्यक नहीं, वेब सेवाओं और APIs के लिए उपयुक्त।  
+- **समृद्ध संपादन सुविधाएँ** – HTML निष्कर्षण के अलावा आप **save edited pdf**, **edit excel spreadsheet**, **edit powerpoint slides**, और अधिक कर सकते हैं।
 
-### Document Editing
-Discover the power of document editing with GroupDocs.Editor for .NET. Our tutorials cover everything from creating, editing, and saving documents to enhancing your document management workflow. Learn how to streamline your processes and boost productivity with ease. [Read more](./document-editing/)
+## पूर्वापेक्षाएँ
+- .NET 6 (या .NET Framework 4.7+) स्थापित है।  
+- एक वैध GroupDocs.Editor for .NET लाइसेंस फ़ाइल।  
+- C# और Visual Studio की बुनियादी परिचितता।
 
-### CSS Handling
-Effortlessly handle CSS content with GroupDocs.Editor for .NET. Learn how to extract external CSS content and handle CSS content with prefixes seamlessly. Our step‑by‑step guides empower you to manage CSS effectively and streamline your document management workflow. [Read more](./css-handling/)
+## मुख्य ट्यूटोरियल सेक्शन
 
-### HTML Content Retrieval
-Unlock the secrets of HTML content retrieval with GroupDocs.Editor for .NET. Our tutorials provide step‑by‑step guidance on retrieving body content and working with custom prefixes. Whether you're a beginner or an experienced developer, these tutorials have you covered. [Read more](./html-content-retrieval/)
+### दस्तावेज़ संपादन
+GroupDocs.Editor for .NET के साथ दस्तावेज़ संपादन की शक्ति की खोज करें। हमारे ट्यूटोरियल में दस्तावेज़ बनाना, संपादित करना, सहेजना और आपके दस्तावेज़ प्रबंधन कार्यप्रवाह को बेहतर बनाना शामिल है। जानें कैसे आप अपने प्रक्रियाओं को सुव्यवस्थित कर सकते हैं और आसानी से उत्पादकता बढ़ा सकते हैं। [और पढ़ें](./document-editing/)
 
-### Form Field Management
-Master form field management in .NET with GroupDocs.Editor. Learn to edit, fix, work with legacy, and remove form field collections seamlessly. Our tutorials provide comprehensive guidance for developers seeking to streamline their form field management workflow. [Read more](./form-field-management/)
+### CSS हैंडलिंग
+GroupDocs.Editor for .NET के साथ CSS सामग्री को सहजता से संभालें। सीखें कैसे बाहरी CSS सामग्री निकालें और प्रीफ़िक्स के साथ CSS सामग्री को बिना रुकावट के संभालें। हमारे चरण‑दर‑चरण गाइड आपको CSS को प्रभावी ढंग से प्रबंधित करने और आपके दस्तावेज़ प्रबंधन कार्यप्रवाह को सुव्यवस्थित करने में सक्षम बनाते हैं। [और पढ़ें](./css-handling/)
 
-### Document Processing
-Take your document processing skills to the next level with GroupDocs.Editor for .NET. Learn to extract information, save to various formats, and work with different document types effortlessly. Our tutorials empower you to become a document processing expert. [Read more](./document-processing/)
+### HTML सामग्री पुनर्प्राप्ति
+GroupDocs.Editor for .NET के साथ HTML सामग्री पुनर्प्राप्ति के रहस्य खोलें। हमारे ट्यूटोरियल चरण‑दर‑चरण मार्गदर्शन प्रदान करते हैं कि बॉडी सामग्री कैसे प्राप्त करें और कस्टम प्रीफ़िक्स के साथ कैसे काम करें। चाहे आप शुरुआती हों या अनुभवी डेवलपर, ये ट्यूटोरियल आपकी सभी जरूरतों को पूरा करते हैं। [और पढ़ें](./html-content-retrieval/)
 
-### Quick Start Guide
-New to GroupDocs.Editor for .NET? Dive into our quick start guide and learn how to use GroupDocs.Editor with ease. From setting licenses to integrating features, our comprehensive tutorials simplify the learning process and help you unlock powerful document editing capabilities. [Read more](./quick-start-guide/)
+### फ़ॉर्म फ़ील्ड प्रबंधन
+GroupDocs.Editor के साथ .NET में फ़ॉर्म फ़ील्ड प्रबंधन में निपुण बनें। सीखें कैसे फ़ॉर्म फ़ील्ड संग्रह को संपादित, ठीक, लेगसी के साथ काम और सहजता से हटाएँ। हमारे ट्यूटोरियल डेवलपर्स के लिए व्यापक मार्गदर्शन प्रदान करते हैं जो अपने फ़ॉर्म फ़ील्ड प्रबंधन कार्यप्रवाह को सुव्यवस्थित करना चाहते हैं। [और पढ़ें](./form-field-management/)
 
-## Additional Tutorial Index
+### दस्तावेज़ प्रोसेसिंग
+GroupDocs.Editor for .NET के साथ अपने दस्तावेज़ प्रोसेसिंग कौशल को अगले स्तर पर ले जाएँ। सीखें कैसे जानकारी निकालें, विभिन्न फ़ॉर्मेट में सहेजें, और विभिन्न दस्तावेज़ प्रकारों के साथ सहजता से काम करें। हमारे ट्यूटोरियल आपको दस्तावेज़ प्रोसेसिंग विशेषज्ञ बनने में सक्षम बनाते हैं। [और पढ़ें](./document-processing/)
 
-### [HTML Content Retrieval](./html-content-retrieval/)
-Discover how to retrieve HTML content using GroupDocs.Editor for .NET. Step‑by‑step guides for retrieving body content and custom prefixes included.
+### त्वरित प्रारंभ गाइड
+क्या आप GroupDocs.Editor for .NET में नए हैं? हमारे त्वरित प्रारंभ गाइड में डुबकी लगाएँ और जानें कैसे आसानी से GroupDocs.Editor का उपयोग करें। लाइसेंस सेट करने से लेकर फीचर इंटीग्रेशन तक, हमारे व्यापक ट्यूटोरियल सीखने की प्रक्रिया को सरल बनाते हैं और आपको शक्तिशाली दस्तावेज़ संपादन क्षमताओं को अनलॉक करने में मदद करते हैं। [और पढ़ें](./quick-start-guide/)
 
-### [Form Field Management](./form-field-management/)
-Master form field management in .NET with GroupDocs.Editor. Learn to edit, fix, work with legacy, and remove form field collections seamlessly.
+## अतिरिक्त ट्यूटोरियल अनुक्रमणिका
 
-### [Document Processing](./document-processing/)
-Master document processing in .NET with GroupDocs.Editor. Learn to extract info, save to various formats, and work with different document types effortlessly.
+### [HTML सामग्री पुनर्प्राप्ति](./html-content-retrieval/)
+GroupDocs.Editor for .NET का उपयोग करके HTML सामग्री कैसे प्राप्त करें, खोजें। बॉडी सामग्री और कस्टम प्रीफ़िक्स प्राप्त करने के लिए चरण‑दर‑चरण गाइड शामिल हैं।
 
-### [Quick Start Guide](./quick-start-guide/)
-Learn to use GroupDocs.Editor for .NET with our comprehensive tutorials. Set licenses, integrate features, and unlock powerful document editing capabilities.
+### [फ़ॉर्म फ़ील्ड प्रबंधन](./form-field-management/)
+GroupDocs.Editor के साथ .NET में फ़ॉर्म फ़ील्ड प्रबंधन में निपुण बनें। सीखें कैसे फ़ॉर्म फ़ील्ड संग्रह को संपादित, ठीक, लेगसी के साथ काम और सहजता से हटाएँ।
 
-### [Document Loading](./document-loading/)
-Explore different approaches for loading documents into GroupDocs.Editor for .NET. These tutorials cover loading from files, streams, and various sources with proper configuration.
+### [दस्तावेज़ प्रोसेसिंग](./document-processing/)
+GroupDocs.Editor के साथ .NET में दस्तावेज़ प्रोसेसिंग में निपुण बनें। जानकारी निकालना, विभिन्न फ़ॉर्मेट में सहेजना, और विभिन्न दस्तावेज़ प्रकारों के साथ सहजता से काम करना सीखें।
 
-### [Document Editing](./document-editing/)
-Learn core editing capabilities with GroupDocs.Editor for .NET. These tutorials demonstrate how to edit documents, modify content, and implement document editing workflows in your applications.
+### [त्वरित प्रारंभ गाइड](./quick-start-guide/)
+हमारे व्यापक ट्यूटोरियल के साथ GroupDocs.Editor for .NET का उपयोग सीखें। लाइसेंस सेट करें, फीचर इंटीग्रेट करें, और शक्तिशाली दस्तावेज़ संपादन क्षमताओं को अनलॉक करें।
 
-### [HTML Manipulation](./html-manipulation/)
-Discover how to work with HTML content in GroupDocs.Editor for .NET. Learn to extract HTML body content, manipulate HTML structures, and handle HTML resources effectively.
+### [दस्तावेज़ लोडिंग](./document-loading/)
+GroupDocs.Editor for .NET में दस्तावेज़ लोड करने के विभिन्न तरीकों की खोज करें। ये ट्यूटोरियल फ़ाइलों, स्ट्रीम्स, और विभिन्न स्रोतों से उचित कॉन्फ़िगरेशन के साथ लोड करने को कवर करते हैं।
 
-### [CSS Handling](./css-handling/)
-Learn how to handle CSS content effectively with GroupDocs.Editor for .NET. Extract external CSS content and handle CSS content with prefixes effortlessly.
+### [दस्तावेज़ संपादन](./document-editing/)
+GroupDocs.Editor for .NET के साथ कोर संपादन क्षमताएँ सीखें। ये ट्यूटोरियल दिखाते हैं कि कैसे दस्तावेज़ संपादित करें, सामग्री संशोधित करें, और अपने एप्लिकेशन में दस्तावेज़ संपादन कार्यप्रवाह लागू करें।
 
-### [Word Processing Documents](./word-processing-documents/)
-Explore specialized editing features for Word documents (DOCX, DOC, RTF, etc.) with GroupDocs.Editor for .NET. Learn format‑specific techniques and best practices.
+### [HTML हेरफेर](./html-manipulation/)
+GroupDocs.Editor for .NET में HTML सामग्री के साथ काम करने की खोज करें। HTML बॉडी सामग्री निकालना, HTML संरचनाओं को बदलना, और HTML रिसोर्सेज़ को प्रभावी ढंग से संभालना सीखें।
 
-### [Spreadsheet Documents](./spreadsheet-documents/)
-Discover how to edit Excel and other spreadsheet formats with GroupDocs.Editor. These tutorials cover cell editing, formula handling, and multi‑tab worksheet processing.
+### [CSS हैंडलिंग](./css-handling/)
+GroupDocs.Editor for .NET के साथ CSS सामग्री को प्रभावी ढंग से संभालना सीखें। बाहरी CSS सामग्री निकालें और प्रीफ़िक्स के साथ CSS सामग्री को सहजता से संभालें।
 
-### [Presentation Documents](./presentation-documents/)
-Learn to edit PowerPoint presentations and other slide formats effectively. These tutorials show how to modify slides, manage presentation elements, and preserve animations.
+### [वर्ड प्रोसेसिंग दस्तावेज़](./word-processing-documents/)
+GroupDocs.Editor for .NET के साथ Word दस्तावेज़ों (DOCX, DOC, RTF आदि) के लिए विशेष संपादन सुविधाओं की खोज करें। फ़ॉर्मेट‑विशिष्ट तकनीकों और सर्वोत्तम प्रथाओं को सीखें।
 
-### [PDF Documents](./pdf-documents/)
-Master PDF editing capabilities with GroupDocs.Editor for .NET. These tutorials demonstrate how to modify PDF content, handle forms, and maintain PDF‑specific features.
+### [स्प्रेडशीट दस्तावेज़](./spreadsheet-documents/)
+GroupDocs.Editor के साथ Excel और अन्य स्प्रेडशीट फ़ॉर्मेट को संपादित करने की खोज करें। ये ट्यूटोरियल सेल एडिटिंग, फ़ॉर्मूला हैंडलिंग, और मल्टी‑टैब वर्कशीट प्रोसेसिंग को कवर करते हैं।
 
-### [XML Documents](./xml-documents/)
-Learn specialized approaches for editing XML content while maintaining structure and validity with GroupDocs.Editor for .NET.
+### [प्रेजेंटेशन दस्तावेज़](./presentation-documents/)
+PowerPoint प्रेजेंटेशन और अन्य स्लाइड फ़ॉर्मेट को प्रभावी ढंग से संपादित करना सीखें। ये ट्यूटोरियल स्लाइड्स को संशोधित करने, प्रेजेंटेशन तत्वों को प्रबंधित करने, और एनीमेशन को संरक्षित रखने को दर्शाते हैं।
 
-### [Form Fields](./form-fields/)
-Master form field manipulation with GroupDocs.Editor. These tutorials cover editing form fields, fixing invalid collections, and managing legacy form fields.
+### [PDF दस्तावेज़](./pdf-documents/)
+GroupDocs.Editor for .NET के साथ PDF संपादन क्षमताओं में निपुण बनें। ये ट्यूटोरियल PDF सामग्री को संशोधित करना, फ़ॉर्म्स को संभालना, और PDF‑विशिष्ट सुविधाओं को बनाए रखना दिखाते हैं।
 
-### [Advanced Features](./advanced-features/)
-Discover powerful capabilities for implementing complex document editing workflows, optimizations, and specialized features in GroupDocs.Editor for .NET.
+### [XML दस्तावेज़](./xml-documents/)
+GroupDocs.Editor for .NET के साथ XML सामग्री को संपादित करने के विशेष तरीकों को सीखें, जबकि संरचना और वैधता को बनाए रखें।
 
-### [Licensing & Configuration](./licensing-configuration/)
-Configure GroupDocs.Editor properly in your projects with these licensing tutorials covering various deployment scenarios and environments.
+### [फ़ॉर्म फ़ील्ड](./form-fields/)
+GroupDocs.Editor के साथ फ़ॉर्म फ़ील्ड हेरफेर में निपुण बनें। ये ट्यूटोरियल फ़ॉर्म फ़ील्ड संपादन, अमान्य संग्रह को ठीक करना, और लेगसी फ़ॉर्म फ़ील्ड को प्रबंधित करने को कवर करते हैं।
 
-### [Document Saving and Export Tutorials for GroupDocs.Editor .NET](./document-saving/)
-Step‑by‑step tutorials for saving edited documents to various formats and implementing export capabilities using GroupDocs.Editor for .NET.
+### [उन्नत सुविधाएँ](./advanced-features/)
+GroupDocs.Editor for .NET में जटिल दस्तावेज़ संपादन कार्यप्रवाह, अनुकूलन, और विशेष सुविधाओं को लागू करने के लिए शक्तिशाली क्षमताओं की खोज करें।
 
-### [HTML Document Editing Tutorials for GroupDocs.Editor .NET](./html-web-documents/)
-Learn to work with HTML content, web documents, and HTML resources using GroupDocs.Editor for .NET tutorials.
+### [लाइसेंसिंग और कॉन्फ़िगरेशन](./licensing-configuration/)
+इन लाइसेंसिंग ट्यूटोरियल के साथ अपने प्रोजेक्ट में GroupDocs.Editor को सही ढंग से कॉन्फ़िगर करें, जो विभिन्न डिप्लॉयमेंट परिदृश्यों और वातावरण को कवर करते हैं।
 
-### [Plain Text and DSV Document Editing Tutorials](./plain-text-dsv-documents/)
-Complete tutorials for editing plain text documents, CSV, TSV, and delimited text files using GroupDocs.Editor for .NET.
+### [GroupDocs.Editor .NET के लिए दस्तावेज़ सहेजना और निर्यात ट्यूटोरियल](./document-saving/)
+विभिन्न फ़ॉर्मेट में संपादित दस्तावेज़ सहेजने और GroupDocs.Editor for .NET का उपयोग करके निर्यात क्षमताओं को लागू करने के लिए चरण‑दर‑चरण ट्यूटोरियल।
 
-## How to Save Edited PDF Files
-When you’ve finished extracting HTML or making changes, you can easily **save edited pdf** output. The editor provides a `Save` method that accepts the desired format, letting you generate a PDF version of the edited document in a single call.
+### [GroupDocs.Editor .NET के लिए HTML दस्तावेज़ संपादन ट्यूटोरियल](./html-web-documents/)
+GroupDocs.Editor for .NET ट्यूटोरियल का उपयोग करके HTML सामग्री, वेब दस्तावेज़, और HTML रिसोर्सेज़ के साथ काम करना सीखें।
 
-## How to Edit Excel Spreadsheet Files
-GroupDocs.Editor also supports **edit excel spreadsheet** functionality. You can modify cell values, add formulas, and even restructure worksheets before exporting the result back to XLSX or CSV.
+### [सादा पाठ और DSV दस्तावेज़ संपादन ट्यूटोरियल](./plain-text-dsv-documents/)
+GroupDocs.Editor for .NET का उपयोग करके सादा पाठ दस्तावेज़, CSV, TSV, और डिलिमिटेड टेक्स्ट फ़ाइलों को संपादित करने के पूर्ण ट्यूटोरियल।
 
-## How to Edit PowerPoint Slides
-If your project involves presentations, the library lets you **edit powerpoint slides** programmatically—changing text, images, and slide order without leaving the .NET environment.
+## संपादित PDF फ़ाइलें कैसे सहेजें
+`Editor` क्लास समर्थित दस्तावेज़ फ़ॉर्मेट के लिए सर्वर‑साइड संपादन क्षमताएँ प्रदान करता है। `Save` मेथड वर्तमान दस्तावेज़ की स्थिति को डिस्क पर निर्दिष्ट फ़ॉर्मेट में लिखता है। `SaveFormat.Pdf` एक enum मान है जो PDF आउटपुट फ़ॉर्मेट को दर्शाता है। `Editor` इंस्टेंस के साथ संपादित दस्तावेज़ लोड करें, फिर `Save` मेथड को `SaveFormat.Pdf` निर्दिष्ट करके कॉल करें। यह एकल कॉल अपडेटेड सामग्री को PDF फ़ाइल में लिखता है जबकि लेआउट, इमेज़, और वेक्टर ग्राफ़िक्स को संरक्षित रखता है।
 
-## How to Edit PDF Forms
-For interactive documents, you can **edit pdf forms** by accessing form fields, updating values, and flattening the form when needed.
+## Excel स्प्रेडशीट फ़ाइलें कैसे संपादित करें
+`Spreadsheet` API आपको Excel वर्कशीट, सेल और फ़ॉर्मूले तक प्रोग्रामेटिक एक्सेस देता है। `SaveFormat.Xlsx` Excel वर्कबुक आउटपुट फ़ॉर्मेट को दर्शाता है, जबकि `SaveFormat.Csv` कॉमा‑सेपरेटेड वैल्यूज़ को दर्शाता है। एक XLSX फ़ाइल के लिए एडिटर को इंस्टैंसिएट करें, `Spreadsheet` API के माध्यम से सेल्स को संशोधित करें, और अंत में `Save` को `SaveFormat.Xlsx` या `SaveFormat.Csv` के साथ कॉल करें। यह ऑपरेशन फ़ॉर्मूले, स्टाइल्स, और वर्कशीट संरचनाओं को अपडेट करता है बिना सर्वर पर Microsoft Excel की आवश्यकता के।
 
-## How to Edit XML Document
-When dealing with configuration or data files, the editor can **edit xml document** content while preserving the original schema and indentation.
+## PowerPoint स्लाइड्स कैसे संपादित करें
+`Presentation` API आपको PowerPoint स्लाइड्स को मैनीपुलेट करने देता है, जिसमें टेक्स्ट, इमेज़, और एनीमेशन शामिल हैं। `SaveFormat.Pptx` PowerPoint आउटपुट फ़ॉर्मेट के लिए enum मान है। एडिटर का उपयोग करके PPTX फ़ाइल खोलें, `Presentation` API के माध्यम से स्लाइड टेक्स्ट या इमेज़ बदलें, और `Save` को `SaveFormat.Pptx` के साथ कॉल करें। लाइब्रेरी एनीमेशन, ट्रांज़िशन, और एम्बेडेड मीडिया को बनाए रखती है जबकि सर्वर‑साइड पर संशोधन करती है।
 
-## Common Issues & Troubleshooting
-- **Missing CSS after extraction** – Ensure you call the CSS extraction helper after retrieving the HTML body.  
-- **Large files cause memory spikes** – Use streaming APIs to load documents in chunks.  
-- **License not found** – Verify the license file path is correct and that the license version matches your library version.
+## PDF फ़ॉर्म्स कैसे संपादित करें
+`FormField` कलेक्शन PDF दस्तावेज़ के भीतर इंटरैक्टिव फ़ील्ड्स को दर्शाता है। `SaveFormat.Pdf` PDF आउटपुट फ़ॉर्मेट को इंगित करता है। फ़ॉर्म फ़ील्ड्स वाले PDF को लोड करें, `FormField` कलेक्शन का उपयोग करके नए मान सेट करें, और वैकल्पिक रूप से फ़ॉर्म को फ्लैटेन करके फ़ील्ड्स को रीड‑ओनली बनाएं। `Save` को `SaveFormat.Pdf` के साथ कॉल करके अंतिम दस्तावेज़ उत्पन्न करें जिसे सीधे अंतिम उपयोगकर्ताओं को सर्व किया जा सकता है।
 
-## Frequently Asked Questions
+## XML दस्तावेज़ कैसे संपादित करें
+XML हैंडलिंग मॉड्यूल XML दस्तावेज़ों को पार्स और संशोधित करता है जबकि संरचना और नेमस्पेस को संरक्षित रखता है। यह नोड्स, एट्रीब्यूट्स, और वैल्यूज़ को सुरक्षित रूप से संपादित करने के मेथड्स प्रदान करता है। एडिटर के XML हैंडलिंग मॉड्यूल से XML फ़ाइल को पार्स करें, मानक DOM मेथड्स का उपयोग करके नोड्स या एट्रीब्यूट्स को संशोधित करें, और परिणाम को फिर से `.xml` में सहेजें। यह प्रक्रिया मूल फ़ॉर्मेटिंग, नेमस्पेस, और स्कीमा वैलिडेशन प्रतिबंधों को संरक्षित रखती है।
 
-**Q: Can I extract HTML from a password‑protected PDF?**  
-A: Yes. Provide the password when opening the document; the API will decrypt it before extraction.
+## सामान्य समस्याएँ और ट्रबलशूटिंग
+- **एक्सट्रैक्शन के बाद CSS गायब** – HTML बॉडी प्राप्त करने के बाद CSS एक्सट्रैक्शन हेल्पर को कॉल करना सुनिश्चित करें।  
+- **बड़ी फ़ाइलें मेमोरी स्पाइक का कारण बनती हैं** – दस्तावेज़ों को चंक्स में लोड करने के लिए स्ट्रीमिंग APIs का उपयोग करें।  
+- **लाइसेंस नहीं मिला** – लाइसेंस फ़ाइल पाथ सही है और लाइसेंस संस्करण आपके लाइब्रेरी संस्करण से मेल खाता है, यह सत्यापित करें।
 
-**Q: Is it possible to convert the extracted HTML back into a Word document?**  
-A: Absolutely. After extraction you can feed the HTML into the editor’s `Load` method and save it as DOCX.
+## अक्सर पूछे जाने वाले प्रश्न
 
-**Q: Does GroupDocs.Editor support batch processing?**  
-A: Yes, you can loop through a collection of files and call the extraction or save methods for each one.
+**प्रश्न: क्या मैं पासवर्ड‑सुरक्षित PDF से HTML निकाल सकता हूँ?**  
+**उत्तर:** हाँ। दस्तावेज़ खोलते समय पासवर्ड प्रदान करें; API एक्सट्रैक्शन से पहले इसे डिक्रिप्ट कर देगा।
 
-**Q: What if I need to preserve custom fonts in the extracted HTML?**  
-A: The library embeds font references automatically; you can also manually add CSS `@font-face` rules if required.
+**प्रश्न: क्या निकाले गए HTML को वापस Word दस्तावेज़ में बदलना संभव है?**  
+**उत्तर:** बिल्कुल। एक्सट्रैक्शन के बाद आप HTML को एडिटर की `Load` मेथड में फीड कर सकते हैं और इसे DOCX के रूप में सहेज सकते हैं।
 
-**Q: Are there any limits on the size of documents I can process?**  
-A: While there’s no hard limit, very large files benefit from streaming and incremental processing to reduce memory usage.
+**प्रश्न: क्या GroupDocs.Editor बैच प्रोसेसिंग का समर्थन करता है?**  
+**उत्तर:** हाँ, आप फ़ाइलों के संग्रह पर लूप कर सकते हैं और प्रत्येक के लिए एक्सट्रैक्शन या सहेजने की मेथड्स को कॉल कर सकते हैं।
 
----
+**प्रश्न: यदि मुझे निकाले गए HTML में कस्टम फ़ॉन्ट्स को संरक्षित रखना हो तो क्या करें?**  
+**उत्तर:** लाइब्रेरी फ़ॉन्ट रेफ़रेंसेज़ को स्वचालित रूप से एम्बेड करती है; यदि आवश्यक हो तो आप मैन्युअली CSS `@font-face` नियम भी जोड़ सकते हैं।
 
-**Last Updated:** 2026-03-01  
-**Tested With:** GroupDocs.Editor for .NET 23.12  
-**Author:** GroupDocs
+**प्रश्न: क्या मैं जिन दस्तावेज़ों को प्रोसेस कर सकता हूँ, उनके आकार पर कोई सीमा है?**  
+**उत्तर:** जबकि कोई कठोर सीमा नहीं है, बहुत बड़ी फ़ाइलों को मेमोरी उपयोग कम करने के लिए स्ट्रीमिंग और इन्क्रिमेंटल प्रोसेसिंग से लाभ मिलता है।
+
+**अंतिम अपडेट:** 2026-08-20  
+**परीक्षण किया गया:** GroupDocs.Editor for .NET 23.12  
+**लेखक:** GroupDocs
+
+## संबंधित ट्यूटोरियल
+
+- [GroupDocs.Editor for .NET के साथ PDF दस्तावेज़ संपादन ट्यूटोरियल](/editor/net/pdf-documents/)
+- [GroupDocs.Editor .NET के लिए दस्तावेज़ सहेजना और निर्यात ट्यूटोरियल](/editor/net/document-saving/)
+- [GroupDocs.Editor .NET के लिए HTML दस्तावेज़ संपादन ट्यूटोरियल](/editor/net/html-web-documents/)
