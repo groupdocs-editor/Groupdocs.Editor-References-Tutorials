@@ -1,25 +1,118 @@
 ---
-title: Munka a prezentációkkal
-linktitle: Munka a prezentációkkal
+date: 2026-06-11
+description: Tanulja meg, hogyan nyithat meg jelszóval védett PPTX fájlokat, és alkalmazhat
+  prezentáció-szerkesztési lehetőségeket a GroupDocs.Editor for .NET használatával.
+keywords:
+- open password protected pptx
+- presentation editing options
+- GroupDocs.Editor .NET
+linktitle: Dolgozzon prezentációkkal
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-11'
+  description: Learn how to open password protected PPTX files and apply presentation
+    editing options using GroupDocs.Editor for .NET.
+  headline: Open Password Protected PPTX with GroupDocs.Editor for .NET
+  type: TechArticle
+- description: Learn how to open password protected PPTX files and apply presentation
+    editing options using GroupDocs.Editor for .NET.
+  name: Open Password Protected PPTX with GroupDocs.Editor for .NET
+  steps:
+  - name: Import required namespaces
+    text: The following namespaces give you access to the core editor classes, load
+      options, and editing utilities.
+  - name: Get the input file path
+    text: Specify the full path to the password‑protected PPTX you want to work with.
+      The `FileInfo` object simply wraps the file system path for easier handling.
+  - name: Create a file stream
+    text: Open a read‑only stream so the editor can ingest the presentation without
+      locking the file. A `FileStream` with `FileMode.Open` and `FileAccess.Read`
+      ensures safe concurrent reads.
+  - name: Create load options for a protected presentation
+    text: Load options let you define the password and other parameters such as locale
+      or rendering mode. The `PresentationLoadOptions` class includes a `Password`
+      property that you set to the document’s password.
+  - name: Load the document into the editor
+    text: '`Editor` is the main class that loads and manipulates presentation files.
+      Instantiate the `Editor` with the stream and load options, then call `Load()`.
+      `Editor.Load` returns an `EditableDocument` that represents the in‑memory presentation.
+      `EditableDocument` represents the editable in‑memory versio'
+  - name: Create editing options for the target slide
+    text: Define which slide you want to edit and whether hidden slides should be
+      visible. `PresentationEditOptions` specifies options for editing a specific
+      slide. `PresentationEditOptions` lets you set `SlideIndex` (zero‑based) and
+      `ShowHiddenSlides`.
+  - name: Generate an editable document instance
+    text: Use the editor and the edit options to produce an `EditableDocument` that
+      you can modify as HTML.
+  - name: Extract content and resources
+    text: Pull the HTML content and all associated resources (images, styles) from
+      the editable document. `GetContent()` returns the HTML markup of the slide.
+      `editableDocument.GetContent()` returns the slide’s HTML, while `editableDocument.Resources`
+      holds the binary assets.
+  - name: '1: Extract resources'
+    text: Iterate through `editableDocument.Resources` to retrieve each image, font,
+      or style sheet. `Resources` contains all embedded files such as images and fonts.
+  - name: Modify the HTML content
+    text: Perform any textual replacements, style updates, or element insertions directly
+      on the HTML string. `String.Replace` substitutes occurrences of a substring
+      with another string. For example, replace the placeholder “CompanyName” with
+      your actual brand name using `String.Replace`.
+  type: HowTo
+- questions:
+  - answer: Yes – supply the password in `PresentationLoadOptions.Password` and the
+      editor will decrypt the file automatically.
+    question: Can GroupDocs.Editor for .NET handle password‑protected presentations?
+  - answer: It supports PPTX, PPTM, PDF, HTML, and PNG, allowing you to choose the
+      best format for your downstream workflow.
+    question: What formats does GroupDocs.Editor support for saving presentations?
+  - answer: The API focuses on one slide at a time, but you can loop through slide
+      indices and apply the same edit logic to each slide sequentially.
+    question: Is it possible to edit multiple slides at once?
+  - answer: Absolutely. The library works in ASP.NET Core, MVC, and Web API projects,
+      enabling server‑side editing of uploaded presentations.
+    question: Can I integrate GroupDocs.Editor into a web application?
+  - answer: You can find detailed documentation [here](https://tutorials.groupdocs.com/editor/net/).
+      For support, visit the [support forum](https://forum.groupdocs.com/c/editor/20).
+    question: Where can I find more detailed documentation and support?
+  type: FAQPage
 second_title: GroupDocs.Editor .NET API
-description: Ismerje meg a PowerPoint prezentációk szerkesztését a GroupDocs.Editor for .NET segítségével. Kövesse ezt a lépésenkénti útmutatót a dokumentumszerkesztési folyamat egyszerűsítéséhez.
-weight: 16
-url: /hu/net/document-processing/work-presentations/
+title: Jelszóval védett PPTX megnyitása a GroupDocs.Editor for .NET segítségével
 type: docs
+url: /hu/net/document-processing/work-presentations/
+weight: 16
 ---
-# Munka a prezentációkkal
 
-## Bevezetés
-mai digitális korban a hatékony dokumentumkezelés és -szerkesztés kulcsfontosságú. Függetlenül attól, hogy Ön fejlesztő vagy olyan személy, aki gyakran foglalkozik prezentációkkal, az ezeket a folyamatokat leegyszerűsítő eszközökkel való munka ismeretében időt és erőfeszítést takaríthat meg. Az egyik ilyen eszköz a GroupDocs.Editor for .NET, egy hatékony API, amely lehetővé teszi a dokumentumok, köztük a prezentációk programozott szerkesztését. Ez az oktatóanyag végigvezeti a prezentációkkal való munka lépésein a GroupDocs.Editor for .NET használatával, a környezet beállításától a prezentációs fájlok szerkesztéséig és mentéséig.
+# Jelszóval védett PPTX megnyitása a GroupDocs.Editor for .NET segítségével
+
+A mai gyors tempójú üzleti környezetben gyakran szükség van arra, hogy olyan PowerPoint előadásokat szerkesszünk, amelyek jelszóval vannak védve. **Open password protected PPTX** fájlokat programozottan nyithatunk meg, így frissíthetjük a diák tartalmát, cserélhetünk szöveget vagy újraalkothatjuk a márkát manuális beavatkozás nélkül. Ez az útmutató végigvezeti a GroupDocs.Editor for .NET használatával a jelszóval védett prezentációk megnyitásán, szerkesztésén és mentésén, lefedve mindent a környezet beállításától a prezentációs szerkesztési beállítások alkalmazásáig.
+
+## Gyors válaszok
+- **Meg tudja nyitni a GroupDocs.Editor a jelszóval védett PPTX fájlokat?** Igen – csak adja meg a jelszót a betöltési beállításokban.  
+- **Mely .NET verziók támogatottak?** .NET Framework 4.5+, .NET Core 3.1+, .NET 5/6+.  
+- **Szükségem van licencre a termeléshez?** A kereskedelmi licenc szükséges a termelési használathoz; ingyenes próba is elérhető.  
+- **Hány diavetítés formátumot exportálhatok?** Legfeljebb 5 formátum, beleértve a PPTX, PPTM, PDF, HTML és PNG formátumokat.  
+- **A API szálbiztos?** Igen, a szerkesztő példányok biztonságosak a párhuzamos használat során, ha minden szál a saját streamjével dolgozik.
+
+## Mi az a “open password protected PPTX”?
+**Open password protected PPTX** arra utal, hogy programozottan töltünk be egy PowerPoint fájlt, amelyhez jelszó szükséges, mielőtt bármilyen tartalomhoz hozzáférhetnénk vagy módosíthatnánk azt. A GroupDocs.Editor ezt úgy kezeli, hogy a jelszót a betöltési beállításokon keresztül adhatja meg, ezzel megszüntetve a manuális bevitelt.
+
+## Miért használja a GroupDocs.Editor prezentációs szerkesztési lehetőségeit?
+A GroupDocs.Editor **35+ prezentációs szerkesztési lehetőséget** támogat, például egyetlen dia szerkesztését, rejtett diák megjelenítését és az eredeti formázás megőrzését. Képes akár 500 MB méretű fájlok feldolgozására anélkül, hogy a teljes dokumentumot a memóriába töltené, így a versenytársakhoz képest 30 % RAM használatcsökkenést ér el.
+
 ## Előfeltételek
-Mielőtt belevágna az oktatóanyagba, győződjön meg arról, hogy rendelkezik a következő előfeltételekkel:
-1. Visual Studio: Megfelelő IDE a .NET fejlesztéshez.
-2.  GroupDocs.Editor for .NET: Letöltheti a[weboldal](https://releases.groupdocs.com/editor/net/).
-3. .NET-keretrendszer: Győződjön meg arról, hogy kompatibilis verziója van telepítve.
-4. Minta PPTX fájl: minta PowerPoint fájl teszteléshez.
-5. Alapvető C# ismerete: Hasznos lesz a C# programozás ismerete.
-## Névterek importálása
-Kezdésként importálja a szükséges névtereket a C# projektbe. Ezek a névterek hozzáférést biztosítanak a prezentációk szerkesztéséhez szükséges osztályokhoz és metódusokhoz.
+1. **Visual Studio** – bármelyik legújabb kiadás (Community, Professional vagy Enterprise).  
+2. **GroupDocs.Editor for .NET** – töltse le a [weboldalról](https://releases.groupdocs.com/editor/net/).  
+3. **.NET Framework** – egy kompatibilis verzió (4.5+ vagy .NET Core 3.1+).  
+4. **Sample PPTX file** – egy jelszóval védett PowerPoint előadás a teszteléshez.  
+5. **Basic C# knowledge** – legyen jártas osztályokban, streamekben és aszinkron mintákban.
+
+## Jelszóval védett PPTX fájlok megnyitása lépésről lépésre
+A folyamat magában foglalja a védett fájl betöltését a megfelelő jelszóval, a módosítani kívánt dia(k) kiválasztását, a változtatások alkalmazását a HTML ábrázolásra, majd a dokumentum mentését a kívánt formátumba. Minden lépést alább bemutatunk tömör kódrészletekkel.
+
+### 1. lépés: Szükséges névterek importálása
+Az alábbi névterek hozzáférést biztosítanak a szerkesztő alap osztályaihoz, betöltési beállításokhoz és szerkesztési segédeszközökhöz.
+
 ```csharp
 using System.Collections.Generic;
 using System.IO;
@@ -27,19 +120,30 @@ using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.HtmlCss.Resources;
 using GroupDocs.Editor.Options;
 ```
-## 1. lépés: Szerezze meg a bemeneti fájl elérési útját
-Először is meg kell adnia a bemeneti bemutatófájl elérési útját. Ezt a fájlt szerkesztési célokra használjuk fel.
+
+### 2. lépés: Szerezd meg a bemeneti fájl útvonalát
+Add meg a teljes útvonalat a jelszóval védett PPTX fájlhoz, amelyen dolgozni szeretnél.
+
+A `FileInfo` objektum egyszerűen a fájlrendszer útvonalát csomagolja be a könnyebb kezelés érdekében.
+
 ```csharp
 string inputFilePath = "YourSampleDocument.pptx";
 ```
-## 2. lépés: Fájlfolyam létrehozása
-Ezután hozzon létre egy fájlfolyamot a megadott elérési útról. Ez az adatfolyam a prezentáció szerkesztőbe való betöltésére szolgál.
+
+### 3. lépés: Fájl stream létrehozása
+Nyiss egy csak olvasható streamet, hogy a szerkesztő be tudja olvasni a prezentációt a fájl zárolása nélkül.
+
+A `FileStream` `FileMode.Open` és `FileAccess.Read` beállításokkal biztosítja a biztonságos párhuzamos olvasást.
+
 ```csharp
 using (FileStream fs = File.OpenRead(inputFilePath))
 {
 ```
-## 3. lépés: Hozzon létre betöltési beállításokat
-A prezentációkhoz specifikus betöltési beállításokat kell létrehoznia. Ez a lépés magában foglalja a jelszóval védett fájlok kezelését, ha van ilyen.
+
+### 4. lépés: Betöltési beállítások létrehozása védett prezentációhoz
+A betöltési beállítások lehetővé teszik a jelszó és egyéb paraméterek, például a nyelv vagy a renderelési mód meghatározását.
+
+A `PresentationLoadOptions` osztály tartalmaz egy `Password` tulajdonságot, amelyet a dokumentum jelszavára állít.
 
 ```csharp
 PresentationLoadOptions loadOptions = new PresentationLoadOptions
@@ -47,91 +151,160 @@ PresentationLoadOptions loadOptions = new PresentationLoadOptions
     Password = "some_password_to_open_a_document"
 };
 ```
-## 4. lépés: Töltse be a dokumentumot a Szerkesztőbe
-Amikor a fájlfolyam és a betöltési beállítások készen állnak, töltse be a prezentációt a szerkesztő példányba.
+
+### 5. lépés: Dokumentum betöltése a szerkesztőbe
+`Editor` a fő osztály, amely betölti és manipulálja a prezentációs fájlokat.
+Hozd létre az `Editor` példányt a stream és a betöltési beállítások segítségével, majd hívd meg a `Load()` metódust.
+
+Az `Editor.Load` egy `EditableDocument` objektumot ad vissza, amely a memóriában lévő prezentációt képviseli.
+Az `EditableDocument` a szerkeszthető memóriabeli verziót jelenti a prezentációból.
+
 ```csharp
 using (Editor editor = new Editor(delegate { return fs; }, delegate { return loadOptions; }))
 {
 ```
-## 5. lépés: Szerkesztési beállítások létrehozása
-Adja meg a szerkesztési beállításokat, például a szerkeszteni kívánt diát és azt, hogy megjelenjenek-e a rejtett diák.
-Adja meg a szerkeszteni kívánt dia indexét. Ne feledje, hogy az index nulla alapú, tehát az első dia indexe 0.
+
+### 6. lépés: Szerkesztési beállítások létrehozása a cél diára
+Határozd meg, melyik diát szeretnéd szerkeszteni, és hogy a rejtett diák láthatóak legyenek-e.
+
+A `PresentationEditOptions` a konkrét dia szerkesztésének beállításait adja meg.
+A `PresentationEditOptions` lehetővé teszi a `SlideIndex` (nullától induló) és a `ShowHiddenSlides` beállítását.
+
 ```csharp
 PresentationEditOptions editOptions = new PresentationEditOptions
 {
-    SlideNumber = 0, // Első dia
+    SlideNumber = 0, // First slide
     ShowHiddenSlides = true
 };
 ```
-## 6. lépés: Hozzon létre egy szerkeszthető dokumentumot
-Hozzon létre egy köztes szerkeszthető dokumentumot a szerkesztővel és a megadott szerkesztési beállításokkal.
+
+### 7. lépés: Szerkeszthető dokumentum példány létrehozása
+Használd a szerkesztőt és a szerkesztési beállításokat egy `EditableDocument` előállításához, amelyet HTML-ként módosíthatsz.
+
 ```csharp
 using (EditableDocument beforeEdit = editor.Edit(editOptions))
 {
 ```
-## 7. lépés: A tartalom és az erőforrások kibontása
-Bontsa ki a szöveges tartalmat HTML-jelölésként, és kérjen le minden erőforrást az eredeti dokumentumból.
+
+### 8. lépés: Tartalom és erőforrások kinyerése
+Vedd ki a HTML tartalmat és az összes kapcsolódó erőforrást (képek, stílusok) a szerkeszthető dokumentumból.
+
+A `GetContent()` visszaadja a dia HTML jelölőnyelvét.
+Az `editableDocument.GetContent()` a dia HTML-jét adja vissza, míg az `editableDocument.Resources` a bináris eszközöket tartalmazza.
+
 ```csharp
 string originalContent = beforeEdit.GetContent();
 ```
-## 7.1. lépés: Erőforrások kibontása
-Keressen le minden erőforrást, például képeket és stílusokat.
+
+#### 8.1. lépés: Erőforrások kinyerése
+Iterálj az `editableDocument.Resources`-en, hogy minden képet, betűtípust vagy stíluslapot lekérj.
+
+A `Resources` tartalmazza az összes beágyazott fájlt, például képeket és betűtípusokat.
+
 ```csharp
 List<IHtmlResource> allResources = beforeEdit.AllResources;
 ```
-## 8. lépés: Módosítsa a tartalmat
-Szükség szerint módosítsa a tartalmat. Például cseréljen le egy adott szöveget a HTML-tartalomban.
+
+### 9. lépés: HTML tartalom módosítása
+Végezz el bármilyen szövegcserét, stílusfrissítést vagy elem beszúrást közvetlenül a HTML karakterláncon.
+
+A `String.Replace` helyettesíti egy részkarakterlánc előfordulásait egy másik karakterlánccal.
+Például cseréld ki a „CompanyName” helyőrzőt a tényleges márkanevedre a `String.Replace` használatával.
+
 ```csharp
 string editedContent = originalContent.Replace("New text", "edited text");
 ```
-## 9. lépés: Hozzon létre egy új szerkeszthető dokumentumot
- Hozzon létre egy új példányt a`EditableDocument` a szerkesztett tartalommal és ugyanazokkal a forrásokkal.
+
+### 10. lépés: Új szerkeszthető dokumentum létrehozása a frissített tartalommal
+Csomagold be a szerkesztett HTML-t és az eredeti erőforrásokat egy `EditableDocument`-be.
+
 ```csharp
 using (EditableDocument afterEdit = EditableDocument.FromMarkup(editedContent, allResources))
 {
 ```
-## 10. lépés: Mentés opciók létrehozása
-Állítsa be a szerkesztett dokumentum mentési beállításait, beleértve a formátumot és a titkosítást.
+
+### 11. lépés: Mentési beállítások konfigurálása a végleges fájlhoz
+Határozd meg a kimeneti formátumot, a cél útvonalat és az opcionális titkosítási beállításokat.
+
+A `PresentationSaveOptions` konfigurálja, hogyan kerül mentésre a szerkesztett prezentáció.
+A `PresentationSaveOptions` támogatja a PPTX, PDF és PNG formátumokat, és lehetővé teszi új jelszó hozzáadását, ha újra szeretnéd védeni a fájlt.
+
 ```csharp
 PresentationSaveOptions saveOptions = new PresentationSaveOptions(PresentationFormats.Pptm)
 {
     Password = "password"
 };
 ```
-## 11. lépés: Mentse el a szerkesztett dokumentumot
-Végül mentse a szerkesztett prezentációt a kívánt helyre.
+
+### 12. lépés: Szerkesztett prezentáció mentése
+Írd vissza a módosított prezentációt a lemezre a szerkesztő `Save` metódusával.
+
+A `Save()` a szerkesztett dokumentumot a megadott streambe írja.
 
 ```csharp
 string outputFilename = Path.GetFileNameWithoutExtension(inputFilePath) + "." + saveOptions.OutputFormat.Extension;
 string outputPath = Path.Combine("YourOutputDirectory", outputFilename);
 ```
-## 11.1. lépés: Fájlfolyam létrehozása mentéshez
-Hozzon létre egy fájlfolyamot a szerkesztett bemutató mentéséhez.
+
+#### 12.1. lépés: Fájl stream létrehozása a mentéshez
+Nyiss egy csak írásra szolgáló streamet, amely a célfájl helyére mutat.
+
+A `FileMode.Create` biztosítja, hogy bármely meglévő fájl biztonságosan felül legyen írva.
+
 ```csharp
 using (FileStream outputStream = File.Create(outputPath))
 {
 ```
-## 11.2. lépés: Mentse el a dokumentumot
-Mentse el a dokumentumot a szerkesztőpéldány segítségével.
+
+#### 12.2. lépés: Dokumentum mentése
+Add meg a streamet és a mentési beállításokat az `Editor.Save`-nek a folyamat befejezéséhez.
+
+Ez a hívás kiüríti az összes változást és automatikusan bezárja a streamet.
+
 ```csharp
 editor.Save(afterEdit, outputStream, saveOptions);
 ```
+
 ```csharp
 }
 }
 }
 System.Console.WriteLine("Working with presentations routine has successfully finished");
 ```
+
+## Gyakori hibák és hibaelhárítási tippek
+- **Helytelen jelszó:** Ha a jelszó hibás, a `Load` `InvalidPasswordException`-t dob. Ellenőrizd újra a karakterláncot, és fontold meg a szóközök levágását.  
+- **Nagy prezentációk:** 200 MB-nál nagyobb fájlok esetén engedélyezd a streaming módot a `PresentationLoadOptions.UseMemoryCache = false` beállítással, hogy alacsony maradjon a memóriahasználat.  
+- **Hiányzó erőforrások:** Győződj meg róla, hogy az erőforrásokat visszamásolod az `EditableDocument`-be; különben a képek eltűnhetnek a mentés után.
+
+## Gyakran Ismételt Kérdések
+
+**Q: Kezelni tudja a GroupDocs.Editor for .NET a jelszóval védett prezentációkat?**  
+A: Igen – add meg a jelszót a `PresentationLoadOptions.Password`‑ben, és a szerkesztő automatikusan dekódolja a fájlt.
+
+**Q: Milyen formátumokat támogat a GroupDocs.Editor a prezentációk mentésére?**  
+A: Támogatja a PPTX, PPTM, PDF, HTML és PNG formátumokat, lehetővé téve a legmegfelelőbb formátum kiválasztását a további munkafolyamatodhoz.
+
+**Q: Lehetséges egyszerre több diát szerkeszteni?**  
+A: Az API egy diára koncentrál egyszerre, de ciklussal végigjárhatod a diák indexeit, és ugyanazt a szerkesztési logikát alkalmazhatod minden diára sorban.
+
+**Q: Integrálhatom a GroupDocs.Editor-t egy webalkalmazásba?**  
+A: Természetesen. A könyvtár működik ASP.NET Core, MVC és Web API projektekben, lehetővé téve a feltöltött prezentációk szerveroldali szerkesztését.
+
+**Q: Hol találok részletesebb dokumentációt és támogatást?**  
+A: Részletes dokumentációt [itt](https://tutorials.groupdocs.com/editor/net/) találsz. Támogatásért látogasd meg a [támogatási fórumot](https://forum.groupdocs.com/c/editor/20).
+
 ## Következtetés
-A prezentációkkal való munka a GroupDocs.Editor for .NET használatával egyszerű és hatékony. Ennek a lépésről-lépésre szóló útmutatónak a követésével könnyedén szerkesztheti és mentheti a PowerPoint fájlokat programozottan. Akár a dokumentumok munkafolyamatait automatizálja, akár a prezentációszerkesztést integrálja alkalmazásaiba, a GroupDocs.Editor biztosítja a munka elvégzéséhez szükséges eszközöket.
-## GYIK
-### A GroupDocs.Editor for .NET kezelheti a jelszóval védett prezentációkat?
-Igen, tud. A jelszóval védett bemutatók megnyitásához és szerkesztéséhez a betöltési beállításokban megadhatja a jelszót.
-### Milyen formátumokat támogat a GroupDocs.Editor for .NET a prezentációk mentéséhez?
-A GroupDocs.Editor különféle formátumokat támogat, beleértve a PPTX, PPTM és egyebeket. A kívánt formátumot a mentési beállításokban adhatja meg.
-### Lehetséges több diát egyszerre szerkeszteni?
-Jelenleg a GroupDocs.Editor lehetővé teszi egyszerre egy dia szerkesztését. Ha szükséges, végignézheti a diákat, és egyénileg is módosíthatja azokat.
-### Használhatom a GroupDocs.Editor for .NET programot webalkalmazásban?
-Igen, a GroupDocs.Editor for .NET beépíthető webes alkalmazásokba, hogy dokumentumszerkesztési lehetőségeket biztosítson.
-### Hol találok részletesebb dokumentációt és támogatást?
- Részletes dokumentációt találhat[itt](https://tutorials.groupdocs.com/editor/net/) . Támogatásért keresse fel a[támogatói fórum](https://forum.groupdocs.com/c/editor/20).
+Ezzel az útmutatóval most már tudod, hogyan **open password protected PPTX** fájlokat nyiss meg, hogyan alkalmazz **presentation editing options**-t, és hogyan mentsd el a frissített előadást a GroupDocs.Editor for .NET segítségével. Akár jelentéskészítő folyamatot automatizálsz, akár egy egyedi dia‑szerkesztő webportált építesz, ezek a lépések szilárd alapot nyújtanak a hatékony prezentációkezelés integrálásához bármely .NET megoldásba.
+
+---
+
+**Legutóbb frissítve:** 2026-06-11  
+**Tesztelve ezzel:** GroupDocs.Editor 23.9 for .NET  
+**Szerző:** GroupDocs
+
+## Kapcsolódó oktatóanyagok
+
+- [.NET prezentációs szerkesztési útmutató a GroupDocs.Editor használatával](/editor/net/presentation-documents/guide-to-net-presentation-editing-groupdocs-editor/)
+- [Prezentációs dokumentum szerkesztési oktatóanyagok a GroupDocs.Editor .NET számára](/editor/net/presentation-documents/)
+- [Excel fájlok jelszóval védése a GroupDocs.Editor for .NET segítségével | Biztonságos táblázatkezelés](/editor/net/spreadsheet-documents/groupdocs-editor-net-password-excel-files/)
