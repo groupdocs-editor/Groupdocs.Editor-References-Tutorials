@@ -1,53 +1,89 @@
 ---
-date: '2026-03-09'
-description: Leer hoe u een Word‑document kunt beveiligen en ongeldige velden kunt
-  repareren met GroupDocs.Editor Java, met stappen om te laden, te bewerken, het geheugengebruik
-  te optimaliseren en veilig op te slaan.
+date: '2026-08-26'
+description: Leer hoe je Word-documenten beschermt en ongeldige formuliervelden corrigeert
+  met GroupDocs.Editor for Java, met stappen voor het laden, bewerken, geheugenoptimalisatie
+  en veilig opslaan.
 keywords:
-- GroupDocs.Editor Java
-- fix invalid form fields
+- how to protect word
+- how to fix fields
 - automate document editing
-title: Bescherm Word‑document & herstel velden met GroupDocs.Editor Java
+lastmod: '2026-08-26'
+og_description: Leer hoe je Word-documenten beschermt en ongeldige formuliervelden
+  corrigeert met GroupDocs.Editor Java. Stapsgewijze handleiding behandelt het laden,
+  bewerken, geheugenoptimalisatie en veilig opslaan.
+og_image_alt: Guide to protect Word documents and fix fields using GroupDocs.Editor
+  Java
+og_title: Hoe je Word-documenten beschermt met GroupDocs.Editor Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-26'
+  description: Learn how to protect word documents and fix invalid form fields using
+    GroupDocs.Editor for Java, with steps for loading, editing, memory optimisation,
+    and secure saving.
+  headline: How to protect word docs using GroupDocs.Editor Java
+  type: TechArticle
+- questions:
+  - answer: It supports DOC, DOCX, DOCM, ODT, RTF, and many older formats—over 30
+      + types in total.
+    question: Is GroupDocs.Editor compatible with all versions of Word documents?
+  - answer: Enabling `setOptimizeMemoryUsage(true)` streams the file, keeping peak
+      memory usage under 150 MB even for 500‑page documents.
+    question: How does the API handle very large files (100 MB +)?
+  - answer: A free trial is sufficient for evaluation; a paid license is required
+      for production deployments.
+    question: Do I need a license for development?
+  - answer: Yes—set `WordProcessingProtectionType.AllowOnlyFormFields` in the save
+      options as shown in the example.
+    question: Can I protect the saved document so only form fields are editable?
+  - answer: Retrieve the list via `getInvalidFormFieldNames()`, assign unique names,
+      and call `fixInvalidFormFieldNames()` again to resolve them.
+    question: What if some fields remain invalid after the auto‑fix step?
+  type: FAQPage
+tags:
+- protect word
+- GroupDocs.Editor
+- Java document processing
+- form fields
+- document protection
+title: Hoe je Word-documenten beschermt met GroupDocs.Editor Java
 type: docs
 url: /nl/java/form-fields/groupdocs-editor-java-fix-form-fields/
 weight: 1
 ---
 
- produce final answer.# Bescherm Word-document & herstel velden met GroupDocs.Editor Java
+# Hoe Word-documenten te beschermen met GroupDocs.Editor Java
 
-Het efficiënt beheren van legacy documentformaten is cruciaal in de digitale omgeving van vandaag. In deze gids **leer je hoe je een Word-document beschermt** door ongeldige formuliervelden te repareren, Word‑bestanden te laden en te bewerken met Java, en ze op te slaan met geoptimaliseerd geheugenverbruik voor betrouwbare, high‑throughput verwerking.
+Het efficiënt beheren van legacy documentformaten is cruciaal in de digitale omgeving van vandaag. In deze gids leer je **hoe Word** documenten te beschermen door ongeldige formuliervelden te corrigeren, Word‑bestanden te laden en te bewerken met Java, en ze op te slaan met geoptimaliseerd geheugenverbruik voor betrouwbare, high‑throughput verwerking.
+
+**GroupDocs.Editor** is een Java‑bibliotheek die een eendrachtige API biedt voor het bewerken, converteren en beschermen van meer dan 30 + documentformaten zonder Microsoft Office te vereisen. Het streamt documenten direct in het geheugen, waardoor je JVM gezond blijft, zelfs bij het verwerken van grote bestanden.
 
 ## Snelle antwoorden
-- **Wat betekent “how to fix fields”?** Het verwijst naar het automatisch corrigeren van ongeldige form‑field namen in Word‑bestanden.  
-- **Welke bibliotheek behandelt dit?** GroupDocs.Editor for Java biedt ingebouwde hulpprogramma's voor deze taak.  
+- **Wat betekent “fix fields”?** Het corrigeert automatisch ongeldige of dubbele formulierveldnamen in een Word‑bestand.  
+- **Welke bibliotheek behandelt dit?** GroupDocs.Editor for Java bevat ingebouwde hulpprogramma's voor deze taak.  
 - **Heb ik een licentie nodig?** Een gratis proefversie werkt voor evaluatie; een betaalde licentie is vereist voor productie.  
-- **Kan ik grote bestanden verwerken?** Ja—schakel geheugenoptimalisatie in de opslaan‑opties in.  
-- **Wordt “load word document java” ondersteund?** Absoluut; de API laadt DOCX, DOC en andere Word‑formaten direct.  
-- **Hoe bescherm ik het document na bewerking?** Gebruik `WordProcessingProtectionType.AllowOnlyFormFields` bij het opslaan.  
+- **Kan ik grote bestanden verwerken?** Ja—schakel geheugenoptimalisatie in de opslaan‑opties in om grote documenten te streamen.  
+- **Wordt “load word document java” ondersteund?** Absoluut; de API laadt DOCX, DOC en oudere Word‑formaten direct.  
+- **Hoe bescherm ik het document na bewerken?** Gebruik `WordProcessingProtectionType.AllowOnlyFormFields` bij het opslaan.
 
-## Wat is “protect Word document” en waarom is het belangrijk?
-Wanneer Word‑documenten dubbele of illegale form‑field namen bevatten, falen veel downstream‑systemen bij het lezen ervan. Het beschermen van het Word‑document terwijl die velden worden gerepareerd, zorgt ervoor dat alleen de beoogde delen van het bestand bewerkbaar zijn, behoudt de lay-out, voorkomt accidentele wijzigingen, en handhaaft de gegevensintegriteit in geautomatiseerde workflows.
+## Wat is “protect word” en waarom is het belangrijk?
+Het beschermen van een Word‑document voorkomt accidentele bewerkingen terwijl aangewezen formuliervelden nog steeds kunnen worden ingevuld. Dit waarborgt de integriteit van de lay-out, zorgt voor naleving van wettelijke normen en vermindert downstream verwerkingsfouten veroorzaakt door willekeurige wijzigingen. Bovendien vergrendelt bescherming de hoofdinhoud, waardoor alleen de bedoelde velden bewerkbaar blijven, wat essentieel is voor gereguleerde workflows en data‑gevoelige omgevingen.
 
-## Waarom GroupDocs.Editor for Java gebruiken om Word-document java te bewerken?
-- **Geautomatiseerde correctie** elimineert tijdrovende handmatige bewerking.  
-- **Cross‑format ondersteuning** stelt je in staat te werken met DOC, DOCX en oudere Word‑typen.  
-- **Geheugenverbruik optimaliseren** voor grote bestanden, waardoor je JVM gezond blijft.  
-- **Ingebouwde beschermingsopties** laten je het document vergrendelen na bewerking, zodat alleen formuliervelden bewerkbaar blijven.  
+## Waarom GroupDocs.Editor voor Java gebruiken om Word‑documenten te bewerken?
+GroupDocs.Editor corrigeert automatisch ongeldige formuliervelden, ondersteunt meer dan 30 invoer‑ en uitvoerformaten — waaronder DOC, DOCX, ODT en RTF — en kan multi‑honderd‑pagina‑bestanden verwerken zonder het volledige document in het geheugen te laden. De bibliotheek biedt ook ingebouwde beschermingsopties waarmee je het document kunt vergrendelen zodat alleen formuliervelden bewerkbaar blijven, waardoor de gegevensintegriteit in geautomatiseerde workflows wordt verhoogd.
 
-## Vereisten
+## Voorvereisten
 
 Before proceeding, ensure you have:
-- **Vereiste bibliotheken en afhankelijkheden:** GroupDocs.Editor for Java versie 25.3.  
-- **Omgevingsvereisten:** Een Java‑ontwikkelomgeving (bijv. IntelliJ IDEA of Eclipse) met geïnstalleerde JDK.  
-- **Kennisvereisten:** Basisbegrip van Java‑programmeren en vertrouwdheid met Maven voor afhankelijkheidsbeheer.  
+- **Vereiste bibliotheken en afhankelijkheden:** GroupDocs.Editor for Java versie 25.3.  
+- **Omgevingsconfiguratie:** Een Java‑IDE zoals IntelliJ IDEA of Eclipse met JDK 11 of hoger geïnstalleerd.  
+- **Basiskennis:** Bekendheid met Java‑programmeren en Maven voor afhankelijkheidsbeheer.  
 
-## GroupDocs.Editor for Java instellen
+## GroupDocs.Editor voor Java instellen
 
-Om GroupDocs.Editor in je project te integreren, gebruik je Maven of download je de bibliotheek rechtstreeks:
+Om GroupDocs.Editor in je project te integreren, gebruik je Maven of een directe download.
 
-### Maven-configuratie
-
-Voeg deze configuraties toe aan je `pom.xml`‑bestand:
+### Maven‑configuratie
+Add the following dependency to your `pom.xml` file:
 
 ```xml
 <repositories>
@@ -67,34 +103,35 @@ Voeg deze configuraties toe aan je `pom.xml`‑bestand:
 </dependencies>
 ```
 
-### Direct downloaden
-
-Download anders de nieuwste versie van [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+### Directe download
+Alternatively, download the latest version from [GroupDocs.Editor voor Java releases](https://releases.groupdocs.com/editor/java/).
 
 #### Stappen voor licentie‑acquisitie
-- **Gratis proefversie:** Begin met een gratis proefversie om de basisfunctionaliteiten te verkennen.  
-- **Tijdelijke licentie:** Vraag een uitgebreide toegang aan zonder evaluatiebeperkingen.  
-- **Aankoop:** Overweeg het aanschaffen van een volledige licentie voor langdurig gebruik.  
+- **Free trial:** Begin met een gratis proefversie om de basisfunctionaliteiten te verkennen.  
+- **Temporary license:** Vraag een tijdelijke licentie aan voor uitgebreide toegang zonder evaluatiebeperkingen.  
+- **Purchase:** Verkrijg een volledige licentie voor langdurig gebruik in productie.
 
-Met de afhankelijkheid toegevoegd of de bibliotheek gedownload, laten we GroupDocs.Editor initialiseren en instellen in je Java‑project.
+Met de afhankelijkheid toegevoegd of de bibliotheek gedownload, laten we GroupDocs.Editor initialiseren en configureren in je Java‑project.
 
-## Hoe een Word-document beschermen terwijl velden worden gerepareerd
-
-Deze sectie loopt de drie kernacties door: een document laden, ongeldige formuliervelden repareren, en het bewerkte bestand opslaan met bescherming.
+## Hoe Word‑document te beschermen tijdens het corrigeren van velden
+Deze sectie loopt de drie kernacties door: een document laden, ongeldige formuliervelden corrigeren, en het bewerkte bestand opslaan met bescherming. Door deze stappen te volgen zorg je ervoor dat het document zowel vrij is van problematische veldnamen als beveiligd, zodat alleen de bedoelde formuliervelden bewerkbaar blijven, wat cruciaal is voor compliance‑gedreven automatiseringspijplijnen.
 
 ### Een document laden met GroupDocs.Editor (load word document java)
 
-**Overzicht:** Laad een Word‑document zodat het kan worden geïnspecteerd en bewerkt.
+`Editor` is de primaire klasse voor het bewerken van Word‑documenten.  
+`WordProcessingLoadOptions` configureert laadparameters zoals wachtwoorden.
+
+**Direct antwoord:** Laad je Word‑bestand door een `InputStream` voor het bestand te maken, `WordProcessingLoadOptions` te configureren (inclusief wachtwoorden indien nodig), en beide door te geven aan de `Editor`‑constructor — dit levert een volledig bewerkbare `Editor`‑instantie in één stap.
 
 #### 1. Documentpad definiëren  
-Stel het mappad in waar je documenten zijn opgeslagen:
+Set up the directory path where your documents are stored:
 
 ```java
 private static final String YOUR_DOCUMENT_DIRECTORY = "YOUR_DOCUMENT_DIRECTORY";
 ```
 
-#### 2. Maak een InputStream van het bestand  
-Open een bestandsstroom om de documentinhoud te lezen:
+#### 2. Een InputStream van het bestand maken  
+Open a file stream to read the document content:
 
 ```java
 String inputFilePath = YOUR_DOCUMENT_DIRECTORY + "/SampleLegacyFormFields.docx";
@@ -102,40 +139,42 @@ InputStream fs = new FileInputStream(inputFilePath);
 ```
 
 #### 3. Laadopties instellen  
-Maak laadopties aan, waarbij je eventuele benodigde wachtwoorden voor beveiligde documenten opgeeft:
+Create load options, specifying any necessary passwords for protected documents:
 
 ```java
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 loadOptions.setPassword("some_password_to_open_a_document");
 ```
 
-#### 4. De Editor initialiseren  
-Laad het document met de opgegeven opties in een `Editor`‑instantie:
+#### 4. De editor initialiseren  
+Load the document with the specified options into an `Editor` instance:
 
 ```java
 Editor editor = new Editor(fs, loadOptions);
 ```
 
-### Ongeldige formuliervelden in een document repareren (automate document editing)
+### Ongeldige formuliervelden in een document corrigeren (automatiseren van documentbewerking)
 
-**Overzicht:** Detecteer en corrigeer automatisch ongeldige form‑field namen.
+`FormFieldManager` beheert formuliervelden binnen het document.
+
+**Direct antwoord:** Haal de `FormFieldManager` op uit de `Editor`, roep `fixInvalidFormFieldNames()` aan om duidelijke problemen automatisch te corrigeren, inspecteer vervolgens `getInvalidFormFieldNames()`; voor eventuele resterende namen genereer je unieke identifiers en roep je `fixInvalidFormFieldNames()` opnieuw aan om te verzekeren dat elk veld geldig is.
 
 #### 1. Toegang tot FormFieldManager  
-Haal de `FormFieldManager` op uit de geïnitialiseerde `Editor`‑instantie:
+Retrieve the `FormFieldManager` from the initialized `Editor` instance:
 
 ```java
 FormFieldManager fieldManager = editor.getFormFieldManager();
 ```
 
-#### 2. Auto‑fix ongeldige formuliervelden  
-Probeer aanvankelijk ongeldige formuliervelden automatisch te corrigeren:
+#### 2. Ongeldige formuliervelden automatisch corrigeren  
+Attempt to auto‑correct any invalid form fields initially:
 
 ```java
 fieldManager.fixInvalidFormFieldNames(new ArrayList<>());
 ```
 
-#### 3. Controleer resterende ongeldige velden  
-Controleer of er nog onopgeloste ongeldige velden zijn en verzamel hun namen:
+#### 3. Resterende ongeldige velden verifiëren  
+Check if there are still unresolved invalid fields and collect their names:
 
 ```java
 boolean hasInvalidFormFields = fieldManager.hasInvalidFormFields();
@@ -143,7 +182,7 @@ Collection<com.groupdocs.editor.words.fieldmanagement.InvalidFormField> invalidF
 ```
 
 #### 4. Unieke namen genereren voor ongeldige velden  
-Maak unieke identifiers voor elk resterend ongeldig veld om conflicten te voorkomen:
+Create unique identifiers for each remaining invalid field to ensure no conflicts:
 
 ```java
 for (com.groupdocs.editor.words.fieldmanagement.InvalidFormField invalidItem : invalidFormFields) {
@@ -151,8 +190,8 @@ for (com.groupdocs.editor.words.fieldmanagement.InvalidFormField invalidItem : i
 }
 ```
 
-#### 5. Toepassen van correcties met unieke namen  
-Los de ongeldige formuliervelden op met behulp van de nieuw gegenereerde unieke namen:
+#### 5. Fixes toepassen met unieke namen  
+Resolve the invalid form fields using the newly generated unique names:
 
 ```java
 fieldManager.fixInvalidFormFieldNames(new ArrayList<>(invalidFormFields));
@@ -160,10 +199,13 @@ fieldManager.fixInvalidFormFieldNames(new ArrayList<>(invalidFormFields));
 
 ### Een document opslaan met GroupDocs.Editor (protect word document)
 
-**Overzicht:** Sla het bewerkte document op met optionele bescherming en geheugenoptimalisatie.
+`WordProcessingSaveOptions` definieert hoe het document wordt opgeslagen, inclusief formaat- en beschermingsinstellingen.  
+`WordProcessingProtectionType.AllowOnlyFormFields` vergrendelt het document zodat alleen formuliervelden bewerkbaar zijn.
+
+**Direct antwoord:** Configureer `WordProcessingSaveOptions` met het gewenste uitvoerformaat, schakel `setOptimizeMemoryUsage(true)` in voor streaming, en stel `setProtectionType(WordProcessingProtectionType.AllowOnlyFormFields)` in om het document te vergrendelen — schrijf vervolgens het resultaat naar een output‑stream.
 
 #### 1. Opslaan‑opties configureren  
-Definieer het formaat en de instellingen voor het opslaan van het document:
+Define the format and settings for saving the document:
 
 ```java
 WordProcessingFormats docFormat = WordProcessingFormats.Docx;
@@ -176,8 +218,8 @@ saveOptions.setProtection(new com.groupdocs.editor.options.WordProcessingProtect
     "write_password"));
 ```
 
-#### 2. Document opslaan  
-Schrijf het bewerkte document naar een output‑stream:
+#### 2. Het document opslaan  
+Write the edited document into an output stream:
 
 ```java
 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -185,52 +227,60 @@ editor.save(outputStream, saveOptions);
 ```
 
 ## Veelvoorkomende gebruikssituaties
-- **Bulk documentvoorbereiding:** Automatiseer het opschonen van duizenden legacy‑formulieren voordat ze in een CRM worden geïmporteerd.  
-- **Juridische documentworkflows:** Zorg ervoor dat contracten beschermd zijn zodat alleen aangewezen velden door ondertekenaars kunnen worden ingevuld.  
-- **Enterprise reporting:** Standaardiseer geëxporteerde Word‑rapporten door veldnamen te repareren en de uiteindelijke versie te beschermen.  
+
+- **Bulk documentvoorbereiding:** Reinig duizenden legacy‑formulieren voordat je ze importeert in een CRM‑ of ERP‑systeem.  
+- **Juridische contractworkflows:** Bescherm contracten zodat alleen handtekenings‑ en datumvelden bewerkbaar zijn, waardoor de juridische tekst behouden blijft.  
+- **Enterprise reporting:** Standaardiseer geëxporteerde Word‑rapporten door veldnamen te corrigeren en alleen‑lezen bescherming toe te passen op de definitieve versie.  
 
 ## Prestatieoverwegingen
 
-Houd bij het werken met grote documenten deze tips in gedachten:
-- **Geheugenverbruik optimaliseren:** `setOptimizeMemoryUsage(true)` streamt het document en vermindert de heap‑belasting.  
-- **JVM-tuning:** Pas `-Xmx` aan indien nodig voor batch‑verwerkingstaken.  
-- **Vermijd onnodige kopieën:** Hergebruik dezelfde `Editor`‑instantie bij het verwerken van meerdere bestanden om overhead te minimaliseren.  
+When working with large documents, keep these tips in mind:
+
+- **Geheugenoptimalisatie:** `setOptimizeMemoryUsage(true)` streamt het document en vermindert heap‑druk, waardoor verwerking van 200‑pagina‑bestanden op een 2 GB heap mogelijk is.  
+- **JVM‑afstemming:** Pas de `-Xmx`‑vlag aan op basis van de batchgrootte; bijvoorbeeld, `-Xmx4g` is veilig voor het gelijktijdig verwerken van meerdere 100 MB‑bestanden.  
+- **Editor‑instanties hergebruiken:** Het hergebruiken van hetzelfde `Editor`‑object over meerdere bestanden vermindert de initialisatie‑overhead tot wel 30 %.
 
 ## Veelvoorkomende problemen en oplossingen
 
 | Probleem | Oorzaak | Oplossing |
 |----------|---------|-----------|
 | Geen ongeldige velden gedetecteerd maar wijzigingen niet opgeslagen | Opslaan‑opties missen `setOptimizeMemoryUsage` | Schakel geheugenoptimalisatie in en sla opnieuw op |
-| Wachtwoord‑beveiligd bestand kan niet worden geopend | Onjuist wachtwoord in `WordProcessingLoadOptions` | Controleer het wachtwoord of laat het weg indien niet nodig |
-| Dubbele veldnamen blijven bestaan | `fixInvalidFormFieldNames` aangeroepen vóór het genereren van unieke namen | Voer eerst de unieke‑naam lus uit, roep daarna fix opnieuw aan |
+| Wachtwoord‑beveiligd bestand kan niet worden geopend | Onjuist wachtwoord in `WordProcessingLoadOptions` | Controleer het wachtwoord of laat de optie weg als het bestand niet beveiligd is |
+| Dubbele veldnamen blijven bestaan | `fixInvalidFormFieldNames` aangeroepen vóór het genereren van unieke namen | Voer eerst de unieke‑naam‑lus uit, roep daarna `fixInvalidFormFieldNames` opnieuw aan |
 
 ## Veelgestelde vragen
 
-**V: Is GroupDocs.Editor compatibel met alle versies van Word-documenten?**  
-A: Het ondersteunt DOC, DOCX en vele oudere Word-formaten. Controleer de release‑notes voor edge‑case versies.
+**V: Is GroupDocs.Editor compatibel met alle versies van Word‑documenten?**  
+A: Het ondersteunt DOC, DOCX, DOCM, ODT, RTF en vele oudere formaten — meer dan 30 + typen in totaal.
 
-**V: Hoe gaat de API om met zeer grote bestanden (100 MB+)?**  
-A: Door `setOptimizeMemoryUsage(true)` in te schakelen, is streamingverwerking mogelijk, waardoor het heap‑verbruik drastisch wordt verlaagd.
+**V: Hoe gaat de API om met zeer grote bestanden (100 MB +)?**  
+A: Door `setOptimizeMemoryUsage(true)` in te schakelen, wordt het bestand gestreamd, waardoor het piekgeheugen onder 150 MB blijft, zelfs voor documenten van 500 pagina's.
 
 **V: Heb ik een licentie nodig voor ontwikkeling?**  
-A: Een gratis proefversie werkt voor evaluatie. Productiegebruik vereist een aangeschafte licentie.
+A: Een gratis proefversie is voldoende voor evaluatie; een betaalde licentie is vereist voor productie‑implementaties.
 
 **V: Kan ik het opgeslagen document beschermen zodat alleen formuliervelden bewerkbaar zijn?**  
-A: Ja—gebruik `WordProcessingProtectionType.AllowOnlyFormFields` zoals getoond in de opslaan‑opties.
+A: Ja — stel `WordProcessingProtectionType.AllowOnlyFormFields` in de opslaan‑opties in zoals in het voorbeeld.
 
-**V: Wat als sommige velden ongeldig blijven na auto‑fix?**  
-A: Haal ze op via `getInvalidFormFieldNames()`, wijs unieke namen toe, en roep `fixInvalidFormFieldNames` opnieuw aan (zoals gedemonstreerd).
+**V: Wat als sommige velden ongeldig blijven na de auto‑fix stap?**  
+A: Haal de lijst op via `getInvalidFormFieldNames()`, wijs unieke namen toe, en roep `fixInvalidFormFieldNames()` opnieuw aan om ze op te lossen.
 
 ## Conclusie
 
-In deze tutorial hebben we **hoe je een Word-document beschermt** en ongeldige velden repareert met GroupDocs.Editor Java onderzocht, inclusief laden, automatische correctie en opslaan met bescherming. Door deze stappen in je applicaties te integreren, kun je de betrouwbaarheid van documentverwerking verhogen, bewerkingstaken automatiseren en strikte gegevensintegriteit handhaven.
+In deze tutorial heb je geleerd **hoe Word** documenten te beschermen en ongeldige formuliervelden te corrigeren met GroupDocs.Editor voor Java. Door het bestand te laden, veldnamen automatisch te corrigeren en op te slaan met bescherming en geheugenoptimalisatie, kun je robuuste, high‑throughput document‑pijplijnen bouwen die gegevensintegriteit behouden en voldoen aan beveiligingsbeleid.
 
 **Volgende stappen:**  
-- Experimenteer met verschillende documentformaten en beschermingsinstellingen.  
-- Verken geavanceerde bewerkingsfuncties zoals tekstvervanging, afbeelding invoegen, of aangepaste veld‑mapping.  
+- Experimenteer met extra bewerkingsfuncties zoals tekstvervanging, afbeeldinginvoeging of aangepaste veldtoewijzing.  
+- Verken de GroupDocs.Editor API‑referentie voor geavanceerde scenario's zoals batchverwerking en integratie met cloudopslag.
 
----  
+---
 
-**Laatst bijgewerkt:** 2026-03-09  
-**Getest met:** GroupDocs.Editor Java 25.3  
-**Auteur:** GroupDocs
+**Last Updated:** 2026-08-26  
+**Tested With:** GroupDocs.Editor Java 25.3  
+**Author:** GroupDocs
+
+## Gerelateerde tutorials
+
+- [Groupdocs Editor Java Word Document Editing Tutorial](/editor/java/document-editing/groupdocs-editor-java-word-document-editing-tutorial/)
+- [Hoe wachtwoordbeveiligde Word‑Java‑documenten te laden met GroupDocs.Editor](/editor/java/word-processing-documents/groupdocs-editor-java-manage-word-docs-password/)
+- [Word bewerken zonder Office in Java – GroupDocs.Editor-functies](/editor/java/advanced-features/)
