@@ -281,8 +281,3 @@ editor.save(document, savePath, saveOptions);
 - [تحويل DOCX إلى HTML في Java باستخدام GroupDocs.Editor](/editor/java/word-processing-documents/edit-word-documents-java-groupdocs-editor-tutorial/)
 - [دليل تحرير مستندات Java باستخدام GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
 - [docx إلى pdf java – إدارة مستندات Java باستخدام GroupDocs.Editor](/editor/java/advanced-features/groupdocs-editor-java-comprehensive-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}
