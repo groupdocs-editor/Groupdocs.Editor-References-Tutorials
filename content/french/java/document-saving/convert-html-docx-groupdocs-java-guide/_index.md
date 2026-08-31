@@ -60,11 +60,6 @@ url: /fr/java/document-saving/convert-html-docx-groupdocs-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/pf/main-container >}}
-
-{{< blocks/products/pf/tutorial-page-section >}}
 # Html to docx java : convertir HTML en DOCX avec GroupDocs.Editor
 
 ## Réponses rapides
@@ -289,9 +284,3 @@ R : La performance dépend de votre matériel et des paramètres JVM ; il es
 - [Convertir DOCX en HTML en Java avec GroupDocs.Editor](/editor/java/word-processing-documents/edit-word-documents-java-groupdocs-editor-tutorial/)
 - [Guide d'édition de documents Java avec GroupDocs Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
 - [docx en pdf java – Gestion de documents Java avec GroupDocs.Editor](/editor/java/advanced-features/groupdocs-editor-java-comprehensive-guide/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

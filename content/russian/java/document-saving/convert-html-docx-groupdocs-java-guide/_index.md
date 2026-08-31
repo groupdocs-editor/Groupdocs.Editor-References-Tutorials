@@ -59,11 +59,6 @@ url: /ru/java/document-saving/convert-html-docx-groupdocs-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/pf/main-container >}}
-
-{{< blocks/products/pf/tutorial-page-section >}}
 # Html to docx java: конвертировать HTML в DOCX с помощью GroupDocs.Editor
 
 В этом подробном руководстве вы узнаете **как выполнять конвертацию html в docx java** с помощью GroupDocs.Editor. Независимо от того, создаёте ли вы конвейер миграции контента, систему управления документами или одноразовую утилиту конвертации, приведённые ниже шаги предоставят готовое к производству решение, которое масштабируется и легко интегрируется с любым Java‑приложением.
@@ -286,8 +281,3 @@ editor.save(document, savePath, saveOptions);
 - [Конвертировать DOCX в HTML в Java с GroupDocs.Editor](/editor/java/word-processing-documents/edit-word-documents-java-groupdocs-editor-tutorial/)
 - [Руководство по редактированию документов Java Groupdocs Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
 - [docx в pdf java – Управление документами Java с использованием GroupDocs.Editor](/editor/java/advanced-features/groupdocs-editor-java-comprehensive-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}
