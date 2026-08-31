@@ -277,14 +277,3 @@ EditableDocument afterEditFromMarkup = EditableDocument.fromMarkup(htmlMarkup, a
 **آخر تحديث:** 2026-07-26  
 **تم الاختبار مع:** GroupDocs.Editor 25.3 for Java  
 **المؤلف:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
-## دروس ذات صلة
-
-- [كيفية تحويل Word إلى HTML وتحرير مستندات Word في Java باستخدام GroupDocs.Editor](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
-- [كيفية استخراج الموارد من مستندات Word – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
-- [تحرير دفعي لملفات Word في Java باستخدام GroupDocs.Editor – دليل خطوة بخطوة](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)

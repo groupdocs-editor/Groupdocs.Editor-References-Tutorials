@@ -281,14 +281,3 @@ A: Teljesen. A `saveAsDocx()` metódus a szerkesztett HTML-t visszaalakítja DOC
 **Legutóbb frissítve:** 2026-07-26  
 **Tesztelve a következővel:** GroupDocs.Editor 25.3 for Java  
 **Szerző:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
-## Kapcsolódó oktatóanyagok
-
-- [Hogyan konvertáljuk a Word-öt HTML-re és szerkesszük a Word dokumentumokat Java-val a GroupDocs.Editor segítségével](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
-- [Hogyan nyerjünk ki erőforrásokat Word dokumentumokból – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
-- [Kötegelt Word fájlok szerkesztése Java-val a GroupDocs.Editor-rel – Lépésről‑lépésre útmutató](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)

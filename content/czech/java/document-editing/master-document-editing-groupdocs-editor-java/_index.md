@@ -281,14 +281,3 @@ A: Rozhodně. Metoda `saveAsDocx()` převádí upravené HTML zpět do souboru D
 **Poslední aktualizace:** 2026-07-26  
 **Testováno s:** GroupDocs.Editor 25.3 for Java  
 **Autor:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
-## Související tutoriály
-
-- [Jak převést Word na HTML a upravit Word dokumenty v Javě pomocí GroupDocs.Editor](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
-- [Jak extrahovat zdroje z Word dokumentů – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
-- [Dávkové úpravy Word souborů v Javě s GroupDocs.Editor – Průvodce krok za krokem](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)

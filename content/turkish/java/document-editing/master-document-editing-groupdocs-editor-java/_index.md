@@ -282,14 +282,3 @@ C: Kesinlikle. `saveAsDocx()` yöntemi, düzenlenmiş HTML'i tekrar DOCX dosyas�
 **Last Updated:** 2026-07-26  
 **Tested With:** GroupDocs.Editor 25.3 for Java  
 **Author:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
-## İlgili Eğitimler
-
-- [Java ile Word'u HTML'e Dönüştürme ve Word Belgelerini Düzenleme - GroupDocs.Editor](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
-- [Word Belgelerinden Kaynakları Çıkarma – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
-- [Java ile Word Dosyalarını Toplu Düzenleme – Adım‑Adım Kılavuz](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)

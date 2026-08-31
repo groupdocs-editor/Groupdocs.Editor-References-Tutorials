@@ -281,14 +281,3 @@ R : Absolument. La méthode `saveAsDocx()` reconvertit le HTML édité en fich
 **Last Updated:** 2026-07-26  
 **Tested With:** GroupDocs.Editor 25.3 for Java  
 **Author:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
-## Tutoriels associés
-
-- [Comment convertir Word en HTML et modifier les documents Word en Java avec GroupDocs.Editor](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
-- [Comment extraire les ressources des documents Word – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
-- [Édition par lots de fichiers Word en Java avec GroupDocs.Editor – Guide étape par étape](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)

@@ -279,14 +279,3 @@ A: แน่นอน. เมธอด `saveAsDocx()` แปลง HTML ที�
 **อัปเดตล่าสุด:** 2026-07-26  
 **ทดสอบกับ:** GroupDocs.Editor 25.3 for Java  
 **ผู้เขียน:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
-## บทแนะนำที่เกี่ยวข้อง
-
-- [วิธีแปลง Word เป็น HTML และแก้ไขเอกสาร Word ใน Java ด้วย GroupDocs.Editor](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
-- [วิธีสกัดทรัพยากรจากเอกสาร Word – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
-- [แก้ไขไฟล์ Word เป็นชุดใน Java ด้วย GroupDocs.Editor – คู่มือแบบขั้นตอนต่อขั้นตอน](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)

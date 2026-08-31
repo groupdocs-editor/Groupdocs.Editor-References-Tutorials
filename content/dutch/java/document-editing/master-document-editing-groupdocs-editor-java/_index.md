@@ -280,14 +280,3 @@ A: Absoluut. De `saveAsDocx()`‑methode converteert de bewerkte HTML terug naar
 **Laatst bijgewerkt:** 2026-07-26  
 **Getest met:** GroupDocs.Editor 25.3 for Java  
 **Auteur:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
-## Gerelateerde tutorials
-
-- [Hoe Word naar HTML te converteren en Word‑documenten te bewerken in Java met GroupDocs.Editor](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
-- [Hoe bronnen uit Word‑documenten te extraheren – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
-- [Batch‑bewerken van Word‑bestanden in Java met GroupDocs.Editor – Stapsgewijze gids](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)

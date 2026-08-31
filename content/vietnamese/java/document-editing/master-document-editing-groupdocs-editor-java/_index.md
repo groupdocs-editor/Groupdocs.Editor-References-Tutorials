@@ -281,14 +281,3 @@ A: Chắc chắn. Phương thức `saveAsDocx()` chuyển HTML đã chỉnh sử
 **Cập nhật lần cuối:** 2026-07-26  
 **Đã kiểm tra với:** GroupDocs.Editor 25.3 for Java  
 **Tác giả:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
-## Hướng dẫn liên quan
-
-- [Cách chuyển Word sang HTML và chỉnh sửa tài liệu Word trong Java với GroupDocs.Editor](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
-- [Cách trích xuất tài nguyên từ tài liệu Word – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
-- [Chỉnh sửa hàng loạt tệp Word trong Java với GroupDocs.Editor – Hướng dẫn từng bước](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)

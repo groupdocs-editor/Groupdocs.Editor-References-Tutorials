@@ -282,14 +282,3 @@ A: Absolutely. The `saveAsDocx()` method converts the edited HTML back into a DO
 **Last Updated:** 2026-07-26  
 **Tested With:** GroupDocs.Editor 25.3 for Java  
 **Author:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
-## Related Tutorials
-
-- [How to Convert Word to HTML and Edit Word Documents in Java with GroupDocs.Editor](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
-- [How to Extract Resources from Word Docs – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
-- [Batch Edit Word Files in Java with GroupDocs.Editor – Step‑by‑Step Guide](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)

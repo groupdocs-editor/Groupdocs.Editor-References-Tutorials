@@ -283,14 +283,3 @@ A: Конечно. Метод `saveAsDocx()` конвертирует отред
 **Последнее обновление:** 2026-07-26  
 **Тестировано с:** GroupDocs.Editor 25.3 for Java  
 **Автор:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
-## Связанные руководства
-
-- [Как конвертировать Word в HTML и редактировать Word‑документы в Java с помощью GroupDocs.Editor](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
-- [Как извлечь ресурсы из Word‑документов — GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
-- [Пакетное редактирование Word‑файлов в Java с GroupDocs.Editor — пошаговое руководство](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
