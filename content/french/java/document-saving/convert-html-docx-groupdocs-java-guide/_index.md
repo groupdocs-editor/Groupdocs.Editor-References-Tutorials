@@ -60,6 +60,11 @@ url: /fr/java/document-saving/convert-html-docx-groupdocs-java-guide/
 weight: 1
 ---
 
+{{< blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/pf/main-container >}}
+
+{{< blocks/products/pf/tutorial-page-section >}}
 # Html to docx java : convertir HTML en DOCX avec GroupDocs.Editor
 
 ## Réponses rapides
