@@ -1,74 +1,140 @@
 ---
-date: 2026-03-17
-description: Aprende a editar hojas de cálculo de Excel en Java usando GroupDocs.Editor,
-  cubriendo hojas de trabajo, fórmulas, libros de trabajo con varias pestañas, archivos
-  protegidos con contraseña y manejo de libros de trabajo grandes.
-title: Cómo editar una hoja de cálculo de Excel en Java con GroupDocs.Editor
+date: 2026-09-11
+description: Aprenda a leer archivos xlsx y editar hojas de cálculo Excel en Java
+  usando GroupDocs.Editor, cubriendo worksheets, formulas, multi‑tab workbooks, password‑protected
+  files y large workbook handling.
+keywords:
+- java read xlsx file
+- load excel file java
+- java write xlsx file
+lastmod: 2026-09-11
+og_description: Aprenda a leer archivos xlsx y editar hojas de cálculo Excel en Java
+  usando GroupDocs.Editor. Esta guía muestra cómo trabajar con worksheets, formulas,
+  password‑protected files y large workbooks.
+og_image_alt: 'Developer guide: read and edit Excel files in Java with GroupDocs.Editor'
+og_title: Cómo leer archivos xlsx y editar Excel en Java con GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-11'
+  description: Learn how to read xlsx file and edit Excel spreadsheets in Java using
+    GroupDocs.Editor, covering worksheets, formulas, multi‑tab workbooks, password‑protected
+    files, and large workbook handling.
+  headline: How to read xlsx file and edit excel in java with GroupDocs
+  type: TechArticle
+- description: Learn how to read xlsx file and edit Excel spreadsheets in Java using
+    GroupDocs.Editor, covering worksheets, formulas, multi‑tab workbooks, password‑protected
+    files, and large workbook handling.
+  name: How to read xlsx file and edit excel in java with GroupDocs
+  steps:
+  - name: initialize the editor
+    text: '`Editor` is the main entry point of GroupDocs.Editor for Java that loads
+      and saves spreadsheet documents. Create an `Editor` instance, pointing it at
+      the Excel file you want to work with. If the workbook is password‑protected,
+      include the password in the load options.'
+  - name: load the workbook
+    text: Call the `load` method to obtain a `SpreadsheetDocument` object. The `SpreadsheetDocument`
+      class represents an entire Excel workbook in memory, exposing worksheets, cells,
+      and formulas.
+  - name: modify cells, formulas, or worksheets
+    text: Navigate to the required worksheet, then use the API to change cell values
+      (`setValue`) or formulas (`setFormula`). You can also add new worksheets, delete
+      existing ones, or reorder tabs. Remember to use `setFormula` for cells that
+      should contain calculations; otherwise the formula will be stored as
+  - name: save the updated workbook
+    text: When all changes are complete, invoke the `save` method to write the workbook
+      back to disk or stream it to a client. The original calculation engine remains
+      intact, so formulas recalculate when the file is opened in Excel. > **Pro tip:**
+      Work on a copy of the original file during development to avoi
+  type: HowTo
+- questions:
+  - answer: Yes, GroupDocs.Editor supports both modern and legacy Excel file types.
+    question: Can I edit both `.xlsx` and `.xls` formats?
+  - answer: All original cell styles, fonts, and colors are retained unless you explicitly
+      modify them.
+    question: Does editing preserve cell styles and formatting?
+  - answer: Process the workbook in chunks, work with individual worksheets, and release
+      resources promptly after each operation.
+    question: How do I handle very large spreadsheets efficiently?
+  - answer: Absolutely. Use the `addWorksheet` method to create new tabs within the
+      workbook.
+    question: Is it possible to add new worksheets programmatically?
+  - answer: GroupDocs.Editor offers perpetual, subscription, and temporary licenses
+      to suit various project needs.
+    question: What licensing options are available for production deployments?
+  type: FAQPage
+tags:
+- read xlsx
+- GroupDocs.Editor
+- java spreadsheet processing
+title: Cómo leer archivos xlsx y editar Excel en Java con GroupDocs
 type: docs
 url: /es/java/spreadsheet-documents/
 weight: 6
 ---
 
-# Cómo editar hojas de cálculo Excel con Java y GroupDocs.Editor
+# Cómo leer archivos xlsx y editar Excel en java con GroupDocs
 
-Si buscas **cómo editar excel** archivos directamente desde una aplicación Java, has llegado al lugar correcto. En este tutorial recorreremos el uso de GroupDocs.Editor para Java para abrir un libro de trabajo, modificar celdas, preservar fórmulas, trabajar con múltiples pestañas e incluso manejar hojas de cálculo protegidas con contraseña o muy grandes, todo sin necesidad de Microsoft Office en el servidor.
+If you need to **leer archivo xlsx** contents, modify cells, or rebuild entire workbooks from a Java application, you’re in the right place. In this tutorial we’ll walk through using GroupDocs.Editor for Java to open a workbook, edit worksheets, preserve formulas, manage multi‑tab files, and handle password‑protected or very large spreadsheets—without installing Microsoft Office on the server.
 
 ## Respuestas rápidas
-- **¿Puedo editar archivos Excel protegidos con contraseña?** Sí, solo proporcione la contraseña al cargar el documento.  
-- **¿GroupDocs.Editor preserva las fórmulas?** Absolutamente; las fórmulas siguen funcionando después de cualquier edición.  
-- **¿Se admite la edición de múltiples hojas?** Puede abrir, modificar y guardar cualquier número de hojas de cálculo en un libro.  
-- **¿Qué versión de Java se requiere?** Se recomienda Java 8 o superior.  
-- **¿Necesito una licencia para producción?** Se requiere una licencia válida de GroupDocs.Editor para Java para uso que no sea de prueba.  
+- **¿Puedo editar archivos Excel protegidos con contraseña?** Yes – just supply the password when you load the document.  
+- **¿GroupDocs.Editor conserva las fórmulas?** Absolutely; formulas stay functional after any edit.  
+- **¿Se admite la edición de varias hojas?** You can open, modify, and save any number of worksheets in a workbook.  
+- **¿Qué versión de Java se requiere?** Java 8 or higher is recommended.  
+- **¿Necesito una licencia para producción?** A valid GroupDocs.Editor for Java license is required for non‑trial use.  
 
-## ¿Qué significa “cómo editar excel” en un contexto Java?
-Editar Excel desde Java significa cargar programáticamente un archivo `.xlsx` o `.xls`, cambiar valores de celdas, agregar o eliminar filas/columnas y guardar el resultado sin interacción manual. GroupDocs.Editor abstrae las complejidades de Office Open XML, brindándole una API limpia y de alto nivel.
+## Qué significa “cómo editar Excel” en un contexto Java
 
-## ¿Por qué editar hojas de cálculo Excel en Java con GroupDocs.Editor?
-- **API completa** – Actualice celdas, preserve fórmulas y gestione hojas de cálculo con llamadas de método simples.  
-- **Multiplataforma** – Funciona en cualquier SO que soporte Java, perfecto para procesamiento por lotes del lado del servidor.  
-- **Sin dependencia de Office** – No es necesario instalar Microsoft Office ni depender de interop COM.  
-- **Listo para seguridad** – Soporte incorporado para libros de trabajo cifrados y manejo de contraseñas.  
+Editar Excel desde Java significa programáticamente loading a `.xlsx` or `.xls` file, changing cell values, adding or removing rows/columns, and saving the result without any manual interaction. GroupDocs.Editor abstracts the Office Open XML complexities, giving you a clean, high‑level API that works on any operating system.
+
+## Por qué editar hojas de cálculo Excel en Java con GroupDocs.Editor
+
+You can read xlsx file data and edit it directly because GroupDocs.Editor provides a **API completa** that supports **más de 50 formatos de entrada y salida**, processes **multi‑hundred‑page workbooks** without loading the entire file into memory, and runs on any OS that supports Java 8+. This eliminates the need for Microsoft Office, reduces licensing costs, and enables automated batch processing in cloud or on‑premise environments.
 
 ## Requisitos previos
-- Java 8 o superior instalado.  
-- Biblioteca GroupDocs.Editor para Java añadida a su proyecto (Maven/Gradle).  
-- Una licencia válida de GroupDocs.Editor para uso en producción.  
+- Java 8 or newer installed.  
+- GroupDocs.Editor for Java library added to your project (Maven/Gradle).  
+- A valid GroupDocs.Editor license for production use.  
 
 ## Guía paso a paso
 
-### Paso 1: Inicializar el Editor
-Cree una instancia de `Editor`, apuntándola al archivo Excel con el que desea trabajar. Si el libro de trabajo está protegido con contraseña, incluya la contraseña en las opciones de carga.
+### Paso 1: inicializar el editor
+`Editor` is the main entry point of GroupDocs.Editor for Java that loads and saves spreadsheet documents. Create an `Editor` instance, pointing it at the Excel file you want to work with. If the workbook is password‑protected, include the password in the load options.
 
-### Paso 2: Cargar el libro de trabajo
-Llame al método `load` para obtener un objeto `SpreadsheetDocument`. Este objeto representa todo el libro de trabajo en memoria y le brinda acceso a cada hoja.
+### Paso 2: cargar el libro de trabajo
+Call the `load` method to obtain a `SpreadsheetDocument` object. The `SpreadsheetDocument` class represents an entire Excel workbook in memory, exposing worksheets, cells, and formulas.
 
-### Paso 3: Modificar celdas, fórmulas o hojas de cálculo
-Navegue a la hoja requerida, luego use la API para cambiar valores de celdas (`setValue`) o fórmulas (`setFormula`). También puede agregar nuevas hojas, eliminar las existentes o reordenar pestañas.
+### Paso 3: modificar celdas, fórmulas o hojas de cálculo
+Navigate to the required worksheet, then use the API to change cell values (`setValue`) or formulas (`setFormula`). You can also add new worksheets, delete existing ones, or reorder tabs. Remember to use `setFormula` for cells that should contain calculations; otherwise the formula will be stored as static text.  
+`setValue` sets the value of a cell. `setFormula` assigns a formula to a cell.
 
-### Paso 4: Guardar el libro de trabajo actualizado
-Cuando todos los cambios estén completos, invoque el método `save` para escribir el libro de trabajo de nuevo en disco o transmitirlo a un cliente. El motor de cálculo original permanece intacto, por lo que las fórmulas se recalculan al abrir el archivo en Excel.
+### Paso 4: guardar el libro actualizado
+When all changes are complete, invoke the `save` method to write the workbook back to disk or stream it to a client. The original calculation engine remains intact, so formulas recalculate when the file is opened in Excel.
 
-> **Consejo profesional:** Trabaje con una copia del archivo original durante el desarrollo para evitar pérdida accidental de datos.
+> **Consejo profesional:** Work on a copy of the original file during development to avoid accidental data loss.
 
-## Cómo editar archivos Excel protegidos con contraseña con Java
-Al cargar un libro de trabajo cifrado, pase la contraseña a través del objeto `LoadOptions`. El editor descifrará el archivo en memoria, aplicará sus cambios y lo volverá a cifrar al guardarlo.
+## Cómo editar archivos Excel protegidos con contraseña con java
 
-## Manejo eficiente de libros de trabajo Excel grandes
-Los libros de trabajo grandes pueden consumir mucha memoria. Para mantener bajo el uso de recursos:
+Load your workbook with a `LoadOptions` object that contains the password, then edit it exactly like an unprotected file. The editor decrypts the file in memory, applies your changes, and re‑encrypts it on save, preserving protection.  
+`LoadOptions` specifies loading options such as the password for encrypted workbooks.
 
-- Procese una hoja a la vez en lugar de cargar todo el libro de trabajo en memoria.  
-- Utilice APIs de transmisión (si están disponibles en versiones más recientes de GroupDocs.Editor).  
-- Libere las referencias a las hojas después de terminar de editarlas.
+## Manejo eficiente de libros de Excel grandes
+
+Large workbooks can consume significant memory. To keep resource usage low:
+
+- Process one worksheet at a time instead of loading the entire workbook into memory.  
+- Use streaming APIs (available in newer GroupDocs.Editor releases) to read and write rows incrementally.  
+- Release references to worksheets after you finish editing them, allowing the garbage collector to reclaim memory.
 
 ## Problemas comunes y soluciones
-- **Las fórmulas se convierten en texto estático:** Use `setFormula` en lugar de `setValue` para celdas que deben contener fórmulas.  
-- **El archivo protegido con contraseña no se abre:** Verifique que la contraseña correcta se haya suministrado en las opciones de carga.  
-- **Presión de memoria con archivos grandes:** Divida el procesamiento por hoja o habilite la transmisión para reducir el consumo de heap.  
+- **Las fórmulas se convierten en texto estático:** Use `setFormula` instead of `setValue` for cells that should contain formulas.  
+- **El archivo protegido con contraseña no se abre:** Double‑check that the correct password is supplied in the load options.  
+- **Presión de memoria con archivos grandes:** Split processing by worksheet or enable streaming to reduce heap consumption.  
 
 ## Tutoriales disponibles
 
 ### [Domina la edición de pestañas de Excel en Java con GroupDocs.Editor: Guía completa para desarrolladores](./master-excel-tab-editing-java-groupdocs-editor/)
-Aprenda cómo editar y guardar pestañas de Excel programáticamente usando GroupDocs.Editor para Java. ¡Mejore sus habilidades de gestión de hojas de cálculo hoy!
+Learn how to edit and save Excel tabs programmatically using GroupDocs.Editor for Java. Enhance your spreadsheet management skills today!
 
 ## Recursos adicionales
 
@@ -81,23 +147,29 @@ Aprenda cómo editar y guardar pestañas de Excel programáticamente usando Grou
 
 ## Preguntas frecuentes
 
-**P: ¿Puedo editar tanto formatos `.xlsx` como `.xls`?**  
-R: Sí, GroupDocs.Editor admite tanto los tipos de archivo Excel modernos como los heredados.
+**P: ¿Puedo editar tanto los formatos `.xlsx` como `.xls`?**  
+R: Yes, GroupDocs.Editor supports both modern and legacy Excel file types.
 
-**P: ¿La edición preserva los estilos y el formato de las celdas?**  
-R: Todos los estilos de celda, fuentes y colores originales se conservan a menos que los modifique explícitamente.
+**P: ¿La edición conserva los estilos y formato de las celdas?**  
+R: All original cell styles, fonts, and colors are retained unless you explicitly modify them.
 
 **P: ¿Cómo manejo hojas de cálculo muy grandes de manera eficiente?**  
-R: Procese el libro de trabajo en fragmentos, trabaje con hojas individuales y libere los recursos rápidamente después de cada operación.
+R: Process the workbook in chunks, work with individual worksheets, and release resources promptly after each operation.
 
 **P: ¿Es posible agregar nuevas hojas de cálculo programáticamente?**  
-R: Absolutamente. Use el método `addWorksheet` para crear nuevas pestañas dentro del libro.
+R: Absolutely. Use the `addWorksheet` method to create new tabs within the workbook.
 
 **P: ¿Qué opciones de licencia están disponibles para implementaciones en producción?**  
-R: GroupDocs.Editor ofrece licencias perpetuas, por suscripción y temporales para adaptarse a diversas necesidades de proyecto.
+R: GroupDocs.Editor offers perpetual, subscription, and temporary licenses to suit various project needs.
 
 ---
 
-**Última actualización:** 2026-03-17  
-**Probado con:** GroupDocs.Editor para Java 23.9  
+**Última actualización:** 2026-09-11  
+**Probado con:** GroupDocs.Editor for Java 23.9  
 **Autor:** GroupDocs
+
+## Tutoriales relacionados
+
+- [Cómo editar hoja de cálculo Excel Java con GroupDocs.Editor](/editor/java/spreadsheet-documents/)
+- [Proteger Excel Java con GroupDocs.Editor: Guía de protección con contraseña](/editor/java/advanced-features/excel-file-security-java-groupdocs-editor/)
+- [Crear hoja de cálculo editable Java con GroupDocs.Editor – Domina la edición de pestañas de Excel](/editor/java/spreadsheet-documents/master-excel-tab-editing-java-groupdocs-editor/)
