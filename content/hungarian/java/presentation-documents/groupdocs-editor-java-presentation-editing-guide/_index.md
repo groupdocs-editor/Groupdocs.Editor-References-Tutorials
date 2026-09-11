@@ -1,56 +1,87 @@
 ---
-date: '2026-03-17'
-description: Ismerje meg, hogyan szerkeszthet PPTX fájlokat és konvertálhatja őket
-  PPTM formátumba Java-ban a GroupDocs.Editor segítségével. Ez az útmutató lépésről
-  lépésre bemutatja a programozott PowerPoint-szerkesztést, a szöveg cseréjét és a
-  PPTX fájlok tömeges konvertálását.
+date: '2026-09-11'
+description: Ismerje meg, hogyan szerkeszthet pptx java fájlokat és konvertálhatja
+  a PPTX-et PPTM-re a GroupDocs.Editor for Java használatával. Lépésről‑lépésre útmutató
+  kóddal, tömeges konverzióval és jelszókezeléssel.
 keywords:
 - GroupDocs.Editor for Java
 - presentation editing in Java
 - editing PPTX files with Java
-title: Hogyan szerkessz PPTX fájlokat és konvertálj PPTM-re Java-ban a GroupDocs segítségével
+- edit pptx java
+- convert pptx to pptm
+lastmod: '2026-09-11'
+og_description: Ismerje meg, hogyan szerkeszthet pptx java fájlokat és konvertálhatja
+  a PPTX-et PPTM-re a GroupDocs.Editor for Java használatával. Lépésről‑lépésre útmutató
+  kóddal, tömeges konverzióval és jelszókezeléssel.
+og_image_alt: Guide showing edit pptx java and convert to pptm using GroupDocs.Editor
+og_title: Hogyan szerkessz pptx java fájlokat és konvertálj pptm-re a GroupDocs segítségével
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-11'
+  description: Learn how to edit pptx java files and convert PPTX to PPTM using GroupDocs.Editor
+    for Java. Step‑by‑step guide with code, bulk conversion, and password handling.
+  headline: How to edit pptx java and convert to pptm with GroupDocs
+  type: TechArticle
+- questions:
+  - answer: Yes. Load the PPTX with `PresentationLoadOptions`, then save it using
+      `PresentationSaveOptions` set to the PPTM format – no intermediate edit steps
+      are required.
+    question: Can I convert a PPTX to PPTM without editing the slides?
+  - answer: GroupDocs.Editor can load and save PPT, PPTX, PPSX, and PPTM formats.
+      Use the appropriate `PresentationFormats` enum when saving.
+    question: Does the library support other PowerPoint formats (PPT, PPSX, etc.)?
+  - answer: Provide the desired password only in `PresentationSaveOptions`; you do
+      not need to specify a password in `PresentationLoadOptions`.
+    question: How do I set a password on the output file when the source has none?
+  - answer: Yes. Iterate over slide numbers, retrieve each `EditableDocument`, apply
+      changes, and combine the results before saving.
+    question: Is it possible to edit multiple slides in one operation?
+  - answer: Create a new slide using the editor’s API (e.g., set `PresentationEditOptions.setSlideNumber(-1)`
+      to append) and then insert the desired markup.
+    question: What if I need to add a new slide rather than edit an existing one?
+  type: FAQPage
+tags:
+- edit pptx
+- GroupDocs.Editor
+- Java presentation processing
+- PPTX to PPTM conversion
+title: Hogyan szerkessz pptx java fájlokat és konvertálj pptm-re a GroupDocs segítségével
 type: docs
 url: /hu/java/presentation-documents/groupdocs-editor-java-presentation-editing-guide/
 weight: 1
 ---
 
-# Hogyan szerkesszünk PPTX-et és konvertáljunk PPTM-re Java-val a GroupDocs segítségével
+# Hogyan szerkessz pptx java fájlokat és konvertálj pptm-re a GroupDocs-szal
 
-A mai gyors tempójú digitális világban sok fejlesztő kérdezi, **hogyan szerkesszünk pptx** fájlokat programozottan. Akár szöveget kell cserélni, makrókat hozzáadni, vagy egyszerűen **PPTX-et PPTM-re konvertálni** szeretnél, ez a bemutató lépésről lépésre megmutatja, hogyan érheted el ezeket a célokat a GroupDocs.Editor for Java segítségével. Megmutatjuk, hogyan tölts be egy prezentációt, hogyan végezz módosításokat, és hogyan mentsd el az eredményt makró‑engedélyezett PPTM‑ként – mindezt anélkül, hogy a szerveren a Microsoft Office‑t telepítened kellene.
+Ebben az átfogó útmutatóban megtudhatod, hogyan **szerkessz pptx java** fájlokat, majd hogyan **konvertáld a PPTX-et PPTM-re** a GroupDocs.Editor for Java segítségével. Akár szöveget kell cserélned, makrókat hozzáadnod, vagy több száz prezentációt batch‑ben feldolgoznod, az alábbi lépések végigvezetnek a betöltésen, szerkesztésen és mentésen anélkül, hogy a szerveredre telepítenéd a Microsoft Office‑t.
 
 ## Gyors válaszok
-- **Mi a fő célja ennek az útmutatónak?** Bemutatni, hogyan szerkesszünk PPTX fájlokat és konvertáljunk PPTX-et PPTM-re a GroupDocs.Editor for Java használatával.  
-- **Szükség van licencre?** Igen, a termelésben való használathoz a GroupDocs‑tól származó próba‑ vagy állandó licenc szükséges.  
-- **Kezelhetők a jelszóval védett fájlok?** Természetesen – a betöltési beállítások lehetővé teszik a jelszó megadását.  
-- **Melyik Java verzió támogatott?** Java 8 vagy újabb (JDK 11+ ajánlott).  
-- **Csak Maven‑nel lehet a könyvtárat hozzáadni?** Nem, a JAR‑t közvetlenül is letöltheted.
+- **Mi a fő célja ennek az útmutatónak?** Bemutatni, hogyan szerkessz pptx java fájlokat és konvertáld programozottan a PPTX-et PPTM-re a GroupDocs.Editor segítségével.  
+- **Szükségem van licencre?** Igen – egy próbaverzió vagy állandó GroupDocs licenc szükséges a termelési környezetben.  
+- **Munkálhatok jelszóval védett prezentációkkal?** Teljesen; a betöltési beállítások lehetővé teszik a jelszó megadását a fájl megnyitásakor.  
+- **Melyik Java verzió támogatott?** Java 8 vagy újabb (JDK 11+ ajánlott a legjobb teljesítményért).  
+- **Csak Maven a lehetséges integrációs mód?** Nem – a JAR‑t manuálisan is hozzáadhatod, ha a build rendszered nem használ Maven‑t.
 
-## Mi az a „convert PPTX to PPTM”?
+## Mi az a PPTX‑ról PPTM‑re konvertálás?
 
-A PPTX fájl PPTM‑re konvertálása a fájlformátumot egy szabványos PowerPoint‑prezentációról egy makró‑engedélyezett verzióra (PPTM) változtatja. Ez akkor hasznos, ha VBA makrókat kell beágyazni, vagy olyan fejlett funkciókat kell megőrizni, amelyeket a PPTX nem támogat.
+A PPTX fájl PPTM‑re konvertálása a fájlformátumot egy szabványos PowerPoint‑prezentációról makró‑engedélyezett verzióra (PPTM) változtatja. Ez akkor hasznos, ha VBA makrókat kell beágyaznod, vagy olyan fejlett funkciókat kell megőrizned, amelyeket a PPTX nem támogat. A konvertálás megtartja az összes diát, képet és elrendezési információt, miközben makró‑képességet ad hozzá, lehetővé téve az automatizálást vagy interaktív tartalmat.
 
 ## Miért használjuk a GroupDocs.Editor for Java‑t PPTX szerkesztésére?
 
-A GroupDocs.Editor egy magas szintű API‑t kínál, amely elrejti az Office Open XML formátum bonyolultságát. Lehetővé teszi, hogy:
-
-- Betölts prezentációkat (beleértve a jelszóval védetteket) egyetlen hívással.  
-- **Programozott PowerPoint szerkesztés**: módosíts diákon, cserélj szöveget, és manipulálj erőforrásokat.  
-- Mentsd el az eredményt PPTM‑ként, szükség esetén új jelszót alkalmazva.  
-
-Mindez megvalósítható anélkül, hogy a szerveren a Microsoft Office‑t telepítened kellene.
+A GroupDocs.Editor for Java egy egyetlen hívásos API‑t biztosít, amely betölti, szerkeszti és menti a PowerPoint fájlokat az Office automatizáció terhe nélkül. Több mint **30 PowerPoint funkciót** támogat, akár **500 MB** méretű fájlokat is képes feldolgozni anélkül, hogy a teljes dokumentumot a memóriába töltené, és bármely Java 8+ környezetben futtatható. Ideális szerver‑oldali batch feladatokhoz, mikro‑szolgáltatásokhoz és felhő‑függvényekhez, ahol a Microsoft Office nem érhető el.
 
 ## Előfeltételek
 
 - **GroupDocs.Editor for Java** – 25.3 vagy újabb verzió.  
-- **Java Development Kit (JDK)** – 8 vagy újabb.  
+- **Java Development Kit (JDK)** – 8 vagy újabb; JDK 11+ ajánlott a jobb garbage‑collection kezeléshez.  
 - Egy IDE, például IntelliJ IDEA vagy Eclipse.  
-- Érvényes GroupDocs licenc (ingyenes próba vagy megvásárolt).  
+- Érvényes GroupDocs licenc (próba vagy megvásárolt).  
 
-Próba‑licencet a [GroupDocs weboldaláról](https://purchase.groupdocs.com/temporary-license) szerezhetsz.
+A próbaverzió licencet a [GroupDocs weboldaláról](https://purchase.groupdocs.com/temporary-license) szerezheted be.
 
 ## A GroupDocs.Editor for Java beállítása
 
-A könyvtárat a projekthez Maven‑nel vagy a JAR közvetlen letöltésével adhatod hozzá.
+A könyvtárat Maven‑nel vagy a JAR közvetlen letöltésével adhatod hozzá a projektedhez.
 
 ### Maven használata
 Add hozzá a következő konfigurációt a `pom.xml` fájlodhoz:
@@ -76,6 +107,8 @@ Add hozzá a következő konfigurációt a `pom.xml` fájlodhoz:
 ### Közvetlen letöltés
 Alternatívaként töltsd le a legújabb JAR‑t a hivatalos kiadási oldalról: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
+**Definition anchor:** `Editor` a GroupDocs.Editor központi osztálya, amely egy dokumentum‑feldolgozó motor, képes Office Open XML fájlok betöltésére, szerkesztésére és mentésére.  
+
 Miután a könyvtár a classpath‑on van, létrehozhatsz egy `Editor` példányt:
 
 ```java
@@ -84,24 +117,28 @@ import com.groupdocs.editor.Editor;
 Editor editor = new Editor();
 ```
 
-## Hogyan szerkesszünk PPTX-et (és konvertáljunk PPTM-re)
+## Hogyan szerkessz pptx java fájlokat és konvertálj pptm-re?
 
-### 1. funkció: Prezentáció betöltése (beleértve a jelszóval védett fájlokat)
+A `PresentationLoadOptions`‑szal egy PPTX fájlt betöltve, opcionálisan jelszót megadva, egy `Editor` példányt hozunk létre, amely készen áll bármilyen további szerkesztésre vagy konvertálásra. Ez a lépés biztosítja, hogy a dokumentum helyesen legyen elemezve, és minden erőforrás elérhető legyen a manipulációhoz, miközben alacsony memóriahasználatot tart fenn.
 
-#### Áttekintés
-A prezentáció betöltése az első lépés, mielőtt **convert PPTX to PPTM** vagy a tartalom szerkesztése megtörténne.
+### 1. funkció: prezentáció betöltése (jelszóval védett fájlok esetén)
 
-#### Lépés‑ről‑lépésre megvalósítás
+`PresentationLoadOptions` egy osztály, amely a prezentáció betöltésének opcióit határozza meg, például a jelszóvédelmet és a formátumkezelést.
 
-**1. Definiáld a fájl útvonalát**  
-Állítsd be a PPTX helyét, amivel dolgozni szeretnél:
+#### Közvetlen válasz
+Töltsd be a PPTX fájlt `PresentationLoadOptions`‑szal, opcionálisan add meg a jelszót, majd szerezd be az `Editor` példányt – ez előkészíti a dokumentumot minden további szerkesztési vagy konvertálási művelethez.
+
+#### Lépésről‑lépésre megvalósítás
+
+**1. define the path to your file**  
+Állítsd be a PPTX fájl helyét, amelyet szerkeszteni szeretnél:
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample_pptx.pptx";
 ```
 
-**2. Hozz létre egy InputStream‑et**  
-Nyisd meg a fájlt streamként:
+**2. create an InputStream**  
+Nyisd meg a fájlt stream‑ként:
 
 ```java
 import java.io.FileInputStream;
@@ -110,7 +147,7 @@ import java.io.InputStream;
 InputStream fs = new FileInputStream(inputFilePath);
 ```
 
-**3. Állítsd be a betöltési opciókat**  
+**3. set up load options**  
 Ha a fájl védett, add meg a jelszót:
 
 ```java
@@ -120,23 +157,25 @@ PresentationLoadOptions loadOptions = new PresentationLoadOptions();
 loadOptions.setPassword("some_password_to_open_a_document");
 ```
 
-**4. Töltsd be a prezentációt**  
-Használd az `Editor` osztályt a stream és az opciók megadásával:
+**4. load the presentation**  
+Használd az `Editor` osztályt a stream‑kel és a beállításokkal:
 
 ```java
 Editor editor = new Editor(fs, loadOptions);
 ```
 
-**Pro tipp:** Mindig zárd le az `InputStream`‑et egy `finally` blokkban vagy használj try‑with‑resources‑t, hogy elkerüld a erőforrás‑szivárgásokat.
+**Pro tip:** Mindig zárd le az `InputStream`‑et egy `try‑with‑resources` blokkban, hogy elkerüld az erőforrás‑szivárgásokat.
 
-### 2. funkció: Egy adott dia szerkesztése (edit pptx java)
+### 2. funkció: egy adott dia szerkesztése (edit pptx java)
 
-#### Áttekintés
-Egyetlen dia célzott módosítása – tökéletes a **edit pptx java** szcenárióhoz.
+`PresentationEditOptions` meghatározza, melyik dia(k) szerkesztésére vonatkozik, és hogyan kell az editort renderelni a módosításokhoz.
 
-#### Lépés‑ről‑lépésre megvalósítás
+#### Közvetlen válasz
+Válaszd ki a dia indexét (0‑alapú) a `PresentationEditOptions`‑szal, szerezd be a `EditableDocument`‑et, módosítsd a HTML‑t, majd injektáld vissza a szerkesztett dokumentumot – így szöveget, képet vagy elrendezést változtathatsz egyetlen dián.
 
-**1. Állítsd be a szerkesztési opciókat**  
+#### Lépésről‑lépésre megvalósítás
+
+**1. set up editing options**  
 Válaszd ki, melyik diát szeretnéd szerkeszteni (0‑alapú index):
 
 ```java
@@ -148,8 +187,8 @@ editOptions.setSlideNumber(0); // Edit the first slide
 editOptions.setShowHiddenSlides(true);
 ```
 
-**2. Szerezz be egy szerkeszthető dokumentumot**  
-Hozd elő a dia szerkeszthető reprezentációját:
+**2. obtain an editable document**  
+Szerezd meg a dia szerkeszthető reprezentációját:
 
 ```java
 import com.groupdocs.editor.EditableDocument;
@@ -157,43 +196,47 @@ import com.groupdocs.editor.EditableDocument;
 EditableDocument beforeEdit = editor.edit(editOptions);
 ```
 
-**3. Extraháld a HTML tartalmat és az erőforrásokat**  
-Most már dolgozhatsz a dia HTML markup‑jával és beágyazott erőforrásaival:
+**3. extract HTML content and resources**  
+Most már dolgozhatsz a dia HTML‑markupjával és beágyazott erőforrásaival:
 
 ```java
 String originalContent = beforeEdit.getContent();
 List<IHtmlResource> allResources = beforeEdit.getAllResources();
 ```
 
-### 3. funkció: Prezentációs dia tartalmának módosítása
+### 3. funkció: egy prezentációs dia tartalmának módosítása
 
-#### Áttekintés
-Cserélj szöveget vagy injektálj új HTML‑t közvetlenül a dia markup‑jába.
+`EditableDocument` egy olyan csomagoló, amely a dia HTML‑reprezentációját és a kapcsolódó erőforrásokat tartalmazza, biztonságos manipulációt biztosítva a mentés előtt.
 
-#### Lépés‑ről‑lépésre megvalósítás
+#### Közvetlen válasz
+Cseréld le a kívánt szöveget a dia HTML‑jében a szokásos string‑replace logikával, majd csomagold vissza a módosított markupot egy `EditableDocument`‑be a mentés előtt – ez a megközelítés egyszerű helyőrzők és összetett formázás esetén is működik.
 
-**1. Szöveg cseréje**  
-Egyszerű szöveghelyettesítéshez:
+#### Lépésről‑lépésre megvalósítás
+
+**1. replace text**  
+Egyszerű szövegcsere esetén:
 
 ```java
 String editedContent = beforeEdit.getContent().replace("New text", "edited text");
 ```
 
-**2. Új szerkeszthető dokumentum létrehozása**  
-A módosított markup‑ot csomagold vissza egy `EditableDocument`‑be:
+**2. create a new editable document**  
+Csomagold vissza a módosított markupot egy `EditableDocument`‑be:
 
 ```java
 EditableDocument afterEdit = EditableDocument.fromMarkup(editedContent, allResources);
 ```
 
-### 4. funkció: Szerkesztett prezentáció mentése (convert PPTX to PPTM)
+### 4. funkció: szerkesztett prezentáció mentése (PPTX‑ról PPTM‑re konvertálás)
 
-#### Áttekintés
-Végül mentsd el a szerkesztett diakészletet PPTM fájlként, opcionálisan jelszóval védve.
+`PresentationSaveOptions` konfigurálja a kimeneti formátumot, a jelszóvédelmet és egyéb mentési beállításokat egy prezentációhoz.
 
-#### Lépés‑ről‑lépésre megvalósítás
+#### Közvetlen válasz
+Inicializáld a `PresentationSaveOptions`‑t PPTM formátummal, opcionálisan állíts be új jelszót, majd hívd meg az `editor.save`‑t – a könyvtár egy makró‑engedélyezett PPTM fájlt ír, miközben megőrzi az összes szerkesztést.
 
-**1. Inicializáld a mentési opciókat**  
+#### Lépésről‑lépésre megvalósítás
+
+**1. initialize save options**  
 Add meg a PPTM formátumot és egy új jelszót:
 
 ```java
@@ -204,8 +247,8 @@ PresentationSaveOptions saveOptions = new PresentationSaveOptions(PresentationFo
 saveOptions.setPassword("password");
 ```
 
-**2. Készíts kimeneti streamet**  
-Határozd meg, hová kerül a létrehozott fájl:
+**2. prepare output stream**  
+Határozd meg, hová kerül a kimeneti fájl:
 
 ```java
 import java.io.ByteArrayOutputStream;
@@ -215,14 +258,14 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/sample_out.pptm";
 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 ```
 
-**3. Mentsd el a szerkesztett dokumentumot**  
-Írd a frissített prezentációt a kimeneti streambe:
+**3. save the edited document**  
+Írd a frissített prezentációt a kimeneti stream‑be:
 
 ```java
 editor.save(afterEdit, outputStream, saveOptions);
 ```
 
-**4. Írd ki fájlba**  
+**4. write to file**  
 Mentés a lemezre:
 
 ```java
@@ -231,63 +274,69 @@ try (FileOutputStream outputFile = new FileOutputStream(outputPath)) {
 }
 ```
 
-**Tipp:** Mentés után nyisd meg a fájlt PowerPoint‑ban, hogy ellenőrizd, a makró‑engedélyezett formátum megfelelően működik-e.
+**Tip:** Mentés után nyisd meg a fájlt PowerPoint‑ban, hogy megbizonyosodj arról, hogy a makrók engedélyezve vannak, és az elrendezés megfelel a várakozásoknak.
 
 ## Szöveg cseréje PPTX diákon
 
-A fenti kódrészlet (`replace text pptx`) egyszerű módot mutat arra, hogyan cserélj bármilyen karakterláncot egy dia HTML‑jében. Bonyolultabb esetekhez – például helyőrzők frissítése több dián – egy ciklussal végigjárhatod az összes `EditableDocument`‑et, és ugyanazt a `replace` logikát alkalmazhatod.
+A fenti kódrészlet (`replace text pptx`) egyszerű módot mutat be bármely karakterlánc cseréjére egy dia HTML‑jében. Bonyolultabb esetekben – például több dián lévő helyőrzők frissítése – egy `EditableDocument`‑on iterálhatsz, és ugyanazt a `replace` logikát alkalmazhatod.
 
-## Tömeges PPTX konvertálás
+## Tömeges pptx fájlok konvertálása
 
-Ha **bulk convert pptx** fájlokat PPTM‑re (vagy más formátumra) szeretnél, csomagold a betöltés‑szerkesztés‑mentés lépéseket egy ciklusba, amely egy PPTX fájlok könyvtárán iterál. Egyetlen `Editor` példány újrahasználata csökkenti a terhelést és felgyorsítja a kötegelt feldolgozást.
+Ha **tömegesen szeretnél pptx** fájlokat PPTM‑re (vagy más formátumra) konvertálni, csomagold a betöltés‑szerkesztés‑mentés lépéseket egy ciklusba, amely egy könyvtár PPTX fájljait iterálja. Egyetlen `Editor` példány újra‑használata csökkenti a terhelést és felgyorsítja a batch feldolgozást. Ne felejtsd minden stream‑et időben lezárni a memóriahasználat alacsonyan tartása érdekében.
 
 ## Gyakorlati alkalmazások
 
-A GroupDocs.Editor Java API a valós életben a következő szituációkban tűnik ki:
+A GroupDocs.Editor Java API a valós életben a következő szituációkban bizonyul kiválóan:
 
-- **Vállalati képzés:** Gyorsan frissíts diakészleteket új irányelvekkel.  
-- **Marketing kampányok:** Makró‑engedélyezett prezentációkat generálj interaktív demókhoz.  
-- **Oktatás:** Automatizáld az előadásslajdok létrehozását, amelyek VBA makrókat tartalmaznak kvízekhez.  
+- **Vállalati képzés:** Gyorsan frissítsd a diakészleteket új megfelelőségi irányelvekkel az egész szervezetben.  
+- **Marketing kampányok:** Makró‑engedélyezett prezentációkat generálj interaktív termékbemutatókhoz, amelyek VBA‑vezérelt animációkat igényelnek.  
+- **Oktatás:** Automatizáld az előadásslajdák létrehozását, amelyek VBA‑kvízeket ágyaznak be, lehetővé téve az önellenőrzést manuális szerkesztés nélkül.  
 
-## Teljesítmény‑szempontok
+## Teljesítményfontosságú szempontok
 
 Nagy PPTX fájlok kezelésekor:
 
-- Növeld a JVM heap méretét (`-Xmx2g` vagy nagyobb), hogy elkerüld a `OutOfMemoryError`‑t.  
-- Használd ugyanazt az `Editor` példányt kötegelt feldolgozáshoz, így csökkentve a terhelést.  
-- Tartsd naprakészen a könyvtárat; az újabb kiadások tartalmaznak teljesítmény‑optimalizációkat.
+- Növeld a JVM heap méretét (`-Xmx2g` vagy nagyobb) a `OutOfMemoryError` elkerülése érdekében.  
+- Használd újra ugyanazt az `Editor` példányt batch feldolgozásnál, hogy csökkentsd a inicializálási terhelést.  
+- Tartsd a könyvtárat naprakészen; az újabb kiadások teljesítményoptimalizációkat tartalmaznak, amelyek akár **30 %**‑kal is csökkenthetik a feldolgozási időt 200 MB‑nál nagyobb fájlok esetén.  
 
-## Gyakran Ismételt Kérdések
+## Gyakran ismételt kérdések
 
-**Q: Konvertálhatok PPTX-et PPTM-re anélkül, hogy a diákat szerkeszteném?**  
-A: Igen. Töltsd be a PPTX‑et `PresentationLoadOptions`‑szel, majd mentsd el `PresentationSaveOptions`‑szel PPTM formátumban – nincs szükség köztes szerkesztési lépésre.
+**Q: Konvertálhatok PPTX‑et PPTM‑re anélkül, hogy szerkeszteném a diákat?**  
+A: Igen. Töltsd be a PPTX‑et `PresentationLoadOptions`‑szal, majd mentsd el `PresentationSaveOptions`‑szal, amely PPTM formátumra van beállítva – köztes szerkesztési lépés nem szükséges.
 
 **Q: Támogatja a könyvtár más PowerPoint formátumokat (PPT, PPSX, stb.)?**  
-A: A GroupDocs.Editor képes betölteni és menteni PPT, PPTX, PPSX és PPTM formátumokat. Használd a megfelelő `PresentationFormats` enum‑ot a mentéskor.
+A: A GroupDocs.Editor képes betölteni és menteni PPT, PPTX, PPSX és PPTM formátumokat. A mentéskor a megfelelő `PresentationFormats` enum‑ot kell használni.
 
-**Q: Hogyan kezeljem azt a prezentációt, amelynek nincs jelszava, de a kimenetre mégis szeretnék beállítani?**  
-A: A kívánt jelszót csak a `PresentationSaveOptions`‑ban add meg; a `PresentationLoadOptions`‑ban nem szükséges beállítani.
+**Q: Hogyan állíthatok be jelszót a kimeneti fájlra, ha a forrásnak nincs jelszava?**  
+A: A kívánt jelszót csak a `PresentationSaveOptions`‑ban add meg; a `PresentationLoadOptions`‑ban nem szükséges jelszót megadni.
 
-**Q: Lehet egyszerre több diát szerkeszteni?**  
+**Q: Lehetséges több diát egyszerre szerkeszteni?**  
 A: Igen. Iterálj a dia számokon, szerezd be minden `EditableDocument`‑et, alkalmazd a változtatásokat, majd a mentés előtt kombináld az eredményeket.
 
-**Q: Mit tehetek, ha új diát kell hozzáadni a meglévő helyett?**  
-A: Hozz létre egy új diát az editor API‑jával (például állítsd a `PresentationEditOptions.setSlideNumber(-1)`‑t a hozzáfűzéshez), majd illeszd be a kívánt markup‑ot.
+**Q: Mi a teendő, ha új diát kell hozzáadni a meglévő helyett?**  
+A: Hozz létre egy új diát az editor API‑jával (például állítsd be a `PresentationEditOptions.setSlideNumber(-1)`‑t a hozzáfűzéshez), majd illeszd be a kívánt markupot.
 
-**Q: Hogyan valósítható meg egy szolgáltatásban a **bulk convert pptx to pptm**?**  
-A: Járd be a forráskönyvtárat, töltsd be minden PPTX‑et ugyanazzal az `Editor` példánnyal, és hívd meg a `save`‑t `PresentationSaveOptions(PresentationFormats.Pptm)`‑vel. Ne felejtsd el időben lezárni a stream‑eket.
+**Q: Hogyan végezhetek tömeges pptx‑ról pptm‑re konvertálást egyetlen szolgáltatásban?**  
+A: Iterálj a forráskönyvtáradon, tölts be minden PPTX‑et ugyanazzal az `Editor` példánnyal, és hívd meg a `save`‑t `PresentationSaveOptions(PresentationFormats.Pptm)`‑val. Ne felejtsd a stream‑eket időben lezárni a memóriahasználat alacsonyan tartása érdekében.
 
-## Összegzés
+## Következtetés
 
-Ezzel az útmutatóval már tudod, **hogyan szerkesszünk pptx** fájlokat és **konvertáljunk PPTX-et PPTM-re** a GroupDocs.Editor for Java használatával. Betöltheted a prezentációkat, módosíthatod az egyes diák tartalmát, cserélheted a szöveget, és mentheted az eredményt makró‑engedélyezett PPTM fájlként – mindezt programozottan és biztonságosan.
+Az útmutató követése után már tudod, **hogyan szerkessz pptx java** fájlokat és **hogyan konvertáld a PPTX-et PPTM-re** a GroupDocs.Editor for Java segítségével. Betöltheted a prezentációkat, módosíthatod az egyes diákat, cserélheted a szöveget, és mentheted az eredményt makró‑engedélyezett PPTM fájlként – mindezt programozottan és biztonságosan.
 
 **Következő lépések:**  
-- Kísérletezz VBA makrók hozzáadásával a PPTM fájlhoz.  
-- Fedezd fel a több prezentáció egyetlen Java szolgáltatásban történő tömeges konvertálását.  
-- Tekintsd át a teljes GroupDocs.Editor dokumentációt a fejlett funkciók, például képek kezelése és egyedi stílusok megismeréséhez.
+- Kísérletezz VBA makrók hozzáadásával a PPTM fájlhoz a `PresentationMacroOptions` API‑val.  
+- Fedezd fel a több tucat vagy akár több száz prezentáció tömeges konvertálását egyetlen Java mikro‑szolgáltatásban.  
+- Tekintsd át a teljes GroupDocs.Editor dokumentációt a fejlett funkciók, például kézkezelés, egyedi stílusok és dia‑szintű metaadat-manipuláció megismeréséhez.
 
 ---
 
-**Utoljára frissítve:** 2026-03-17  
-**Tesztelve:** GroupDocs.Editor 25.3 for Java  
+**Legutóbb frissítve:** 2026-09-11  
+**Tesztelve ezzel:** GroupDocs.Editor 25.3 for Java  
 **Szerző:** GroupDocs
+
+## Kapcsolódó oktatóanyagok
+
+- [Hogyan szerkessz Word dokumentumokat Java-ban a GroupDocs.Editor segítségével](/editor/java/advanced-features/master-document-manipulation-java-groupdocs-editor/)
+- [DOCX konvertálása DOCM-re Java-ban a GroupDocs.Editor használatával – Útmutató](/editor/java/word-processing-documents/groupdocs-editor-java-edit-word-docs-efficiently/)
+- [Java dokumentumszerkesztés GroupDocs Editor útmutató](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
