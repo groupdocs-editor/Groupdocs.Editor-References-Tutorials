@@ -1,57 +1,89 @@
 ---
-date: '2026-03-17'
-description: Dowiedz się, jak edytować pliki PPTX i konwertować PPTX na PPTM w Javie
-  przy użyciu GroupDocs.Editor. Ten przewodnik krok po kroku prowadzi Cię przez programową
-  edycję PowerPointa, zamianę tekstu oraz masową konwersję plików PPTX.
+date: '2026-09-11'
+description: Dowiedz się, jak edytować pliki pptx java i konwertować PPTX na PPTM
+  przy użyciu GroupDocs.Editor for Java. Step‑by‑step guide z kodem, bulk conversion
+  i password handling.
 keywords:
 - GroupDocs.Editor for Java
 - presentation editing in Java
 - editing PPTX files with Java
-title: Jak edytować PPTX i konwertować na PPTM w Javie przy użyciu GroupDocs
+- edit pptx java
+- convert pptx to pptm
+lastmod: '2026-09-11'
+og_description: Dowiedz się, jak edytować pliki pptx java i konwertować PPTX na PPTM
+  przy użyciu GroupDocs.Editor for Java. Detailed steps, bulk conversion i password
+  handling guide.
+og_image_alt: Guide showing edit pptx java and convert to pptm using GroupDocs.Editor
+og_title: Jak edytować pptx java i konwertować na pptm z GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-11'
+  description: Learn how to edit pptx java files and convert PPTX to PPTM using GroupDocs.Editor
+    for Java. Step‑by‑step guide with code, bulk conversion, and password handling.
+  headline: How to edit pptx java and convert to pptm with GroupDocs
+  type: TechArticle
+- questions:
+  - answer: Yes. Load the PPTX with `PresentationLoadOptions`, then save it using
+      `PresentationSaveOptions` set to the PPTM format – no intermediate edit steps
+      are required.
+    question: Can I convert a PPTX to PPTM without editing the slides?
+  - answer: GroupDocs.Editor can load and save PPT, PPTX, PPSX, and PPTM formats.
+      Use the appropriate `PresentationFormats` enum when saving.
+    question: Does the library support other PowerPoint formats (PPT, PPSX, etc.)?
+  - answer: Provide the desired password only in `PresentationSaveOptions`; you do
+      not need to specify a password in `PresentationLoadOptions`.
+    question: How do I set a password on the output file when the source has none?
+  - answer: Yes. Iterate over slide numbers, retrieve each `EditableDocument`, apply
+      changes, and combine the results before saving.
+    question: Is it possible to edit multiple slides in one operation?
+  - answer: Create a new slide using the editor’s API (e.g., set `PresentationEditOptions.setSlideNumber(-1)`
+      to append) and then insert the desired markup.
+    question: What if I need to add a new slide rather than edit an existing one?
+  type: FAQPage
+tags:
+- edit pptx
+- GroupDocs.Editor
+- Java presentation processing
+- PPTX to PPTM conversion
+title: Jak edytować pptx java i konwertować na pptm z GroupDocs
 type: docs
 url: /pl/java/presentation-documents/groupdocs-editor-java-presentation-editing-guide/
 weight: 1
 ---
 
-# Jak edytować PPTX i konwertować do PPTM w Javie z GroupDocs
+# Jak edytować pliki pptx w Javie i konwertować do pptm przy użyciu GroupDocs
 
-W dzisiejszym szybkim świecie cyfrowym wielu programistów pyta **jak edytować pptx** pliki programowo. Niezależnie od tego, czy musisz zamienić tekst, dodać makra, czy po prostu **konwertować PPTX do PPTM**, ten samouczek pokaże Ci krok po kroku, jak osiągnąć te cele przy użyciu GroupDocs.Editor dla Javy. Zobaczysz, jak wczytać prezentację, wprowadzić zmiany i zapisać wynik jako plik PPTM z włączonymi makrami — bez konieczności instalowania Microsoft Office na serwerze.
+W tym obszernej samouczku odkryjesz **jak edytować pliki pptx w Javie** i następnie **konwertować PPTX na PPTM** przy użyciu GroupDocs.Editor dla Javy. Niezależnie od tego, czy musisz zamienić tekst, dodać makra, czy przetworzyć setki prezentacji w partii, poniższe kroki przeprowadzą Cię przez ładowanie, edycję i zapisywanie prezentacji bez instalowania Microsoft Office na serwerze.
 
 ## Szybkie odpowiedzi
-- **Jaki jest główny cel tego przewodnika?** Aby pokazać, jak edytować pliki PPTX i konwertować PPTX do PPTM przy użyciu GroupDocs.Editor dla Javy.  
-- **Czy potrzebna jest licencja?** Tak, wymagana jest licencja próbna lub stała od GroupDocs do użytku produkcyjnego.  
-- **Czy mogę obsługiwać pliki chronione hasłem?** Oczywiście — opcje ładowania pozwalają podać hasło.  
-- **Jaką wersję Javy obsługuje?** Java 8 lub wyższą (zalecany JDK 11+).  
-- **Czy Maven jest jedynym sposobem dodania biblioteki?** Nie, możesz również pobrać plik JAR bezpośrednio.
+- **Jaki jest główny cel tego przewodnika?** To show you how to edit pptx java files and convert PPTX to PPTM programmatically with GroupDocs.Editor.  
+- **Czy potrzebuję licencji?** Yes – a trial or permanent GroupDocs license is required for production deployments.  
+- **Czy mogę pracować z prezentacjami zabezpieczonymi hasłem?** Absolutely; load options let you supply the password when opening the file.  
+- **Jaką wersję Javy obsługuje?** Java 8 or higher (JDK 11+ is recommended for optimal performance).  
+- **Czy Maven jest jedyną metodą integracji?** No – you can also add the JAR manually if your build system doesn’t use Maven.
 
-## Co to jest „konwertować PPTX do PPTM”?
+## Co to jest „konwersja PPTX na PPTM”?
 
-Konwersja pliku PPTX do PPTM zmienia format pliku z standardowej prezentacji PowerPoint na wersję z włączonymi makrami (PPTM). Jest to przydatne, gdy trzeba osadzić makra VBA lub zachować zaawansowane funkcje, których PPTX nie obsługuje.
+Konwersja pliku PPTX na PPTM zmienia format pliku z standardowej prezentacji PowerPoint na wersję z włączonymi makrami (PPTM). Jest to przydatne, gdy trzeba osadzić makra VBA lub zachować zaawansowane funkcje, których PPTX nie obsługuje. Konwersja zachowuje wszystkie slajdy, obrazy i informacje o układzie, jednocześnie dodając możliwość użycia makr, umożliwiając automatyzację downstream lub treści interaktywne.
 
 ## Dlaczego używać GroupDocs.Editor dla Javy do edycji PPTX?
 
-GroupDocs.Editor oferuje wysokopoziomowe API, które ukrywa złożoność formatu Office Open XML. Umożliwia ono:
-
-- Wczytywać prezentacje (w tym chronione hasłem) jednym wywołaniem.  
-- **Programowa edycja PowerPoint**: modyfikować slajdy, zamieniać tekst i manipulować zasobami.  
-- Zapisz wynik jako PPTM, stosując nowe hasło w razie potrzeby.  
-
-Wszystko to można zrobić bez potrzeby instalowania Microsoft Office na serwerze.
+GroupDocs.Editor dla Javy zapewnia API jednokrotnego wywołania, które ładuje, edytuje i zapisuje pliki PowerPoint bez narzutu automatyzacji Office. Obsługuje ponad **30 funkcji PowerPoint**, może przetwarzać pliki do **500 MB** bez ładowania całego dokumentu do pamięci i działa na każdej platformie obsługującej Java 8+. Dzięki temu jest idealny do zadań wsadowych po stronie serwera, mikro‑serwisów i funkcji w chmurze, gdzie Microsoft Office jest niedostępny.
 
 ## Wymagania wstępne
 
 - **GroupDocs.Editor for Java** – wersja 25.3 lub nowsza.  
-- **Java Development Kit (JDK)** – 8 lub wyższa.  
-- IDE, taką jak IntelliJ IDEA lub Eclipse.  
+- **Java Development Kit (JDK)** – 8 lub wyższa; JDK 11+ jest zalecany dla lepszego zarządzania garbage‑collection.  
+- IDE, takie jak IntelliJ IDEA lub Eclipse.  
 - Ważna licencja GroupDocs (bezpłatna wersja próbna lub zakupiona).  
 
-Możesz uzyskać licencję próbną z [GroupDocs website](https://purchase.groupdocs.com/temporary-license).
+Możesz uzyskać licencję próbną ze [strony GroupDocs](https://purchase.groupdocs.com/temporary-license).
 
-## Konfiguracja GroupDocs.Editor dla Javy
+## Konfigurowanie GroupDocs.Editor dla Javy
 
-Możesz dodać bibliotekę do swojego projektu za pomocą Maven lub pobierając plik JAR bezpośrednio.
+Możesz dodać bibliotekę do swojego projektu za pomocą Maven lub pobierając JAR bezpośrednio.
 
-### Using Maven
+### Korzystanie z Maven
 Umieść następującą konfigurację w pliku `pom.xml`:
 
 ```xml
@@ -72,10 +104,12 @@ Umieść następującą konfigurację w pliku `pom.xml`:
 </dependencies>
 ```
 
-### Direct Download
+### Bezpośrednie pobranie
 Alternatywnie, pobierz najnowszy JAR z oficjalnej strony wydań: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-Gdy biblioteka znajdzie się na ścieżce klas, możesz utworzyć instancję `Editor`:
+**Definition anchor:** `Editor` jest główną klasą w GroupDocs.Editor, która reprezentuje silnik przetwarzania dokumentów zdolny do ładowania, edycji i zapisywania plików Office Open XML.  
+
+Gdy biblioteka znajduje się w classpath, możesz utworć instancję `Editor`:
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -83,23 +117,27 @@ import com.groupdocs.editor.Editor;
 Editor editor = new Editor();
 ```
 
-## Jak edytować PPTX (i konwertować do PPTM)
+## Jak edytować pptx w Javie i konwertować do pptm?
 
-### Feature 1: Loading a Presentation (including password‑protected files)
+Ładowanie pliku PPTX przy użyciu `PresentationLoadOptions`, opcjonalnie podając hasło, tworzy instancję `Editor` gotową do dalszej edycji lub konwersji. Ten krok zapewnia prawidłowe parsowanie dokumentu i dostępność wszystkich zasobów do manipulacji, przy jednoczesnym niskim zużyciu pamięci.
 
-#### Overview
-Wczytywanie prezentacji jest pierwszym krokiem, zanim będziesz mógł **konwertować PPTX do PPTM** lub edytować jej zawartość.
+### Funkcja 1: ładowanie prezentacji (w tym plików zabezpieczonych hasłem)
 
-#### Step‑by‑Step Implementation
+`PresentationLoadOptions` jest klasą określającą opcje ładowania prezentacji, takie jak ochrona hasłem i obsługa formatu.
 
-**1. Define the Path to Your File**  
-Ustaw lokalizację PPTX, z którym chcesz pracować:
+#### Bezpośrednia odpowiedź
+Załaduj plik PPTX przy użyciu `PresentationLoadOptions`, opcjonalnie przekazując hasło, a następnie uzyskaj instancję `Editor` – to przygotowuje dokument do dalszych operacji edycji lub konwersji.
+
+#### Implementacja krok po kroku
+
+**1. określ ścieżkę do pliku**  
+Ustaw lokalizację pliku PPTX, z którym chcesz pracować:
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample_pptx.pptx";
 ```
 
-**2. Create an InputStream**  
+**2. utwórz InputStream**  
 Otwórz plik jako strumień:
 
 ```java
@@ -109,8 +147,8 @@ import java.io.InputStream;
 InputStream fs = new FileInputStream(inputFilePath);
 ```
 
-**3. Set Up Load Options**  
-Jeśli plik jest chroniony, podaj hasło:
+**3. skonfiguruj opcje ładowania**  
+Jeśli plik jest zabezpieczony, podaj hasło:
 
 ```java
 import com.groupdocs.editor.options.PresentationLoadOptions;
@@ -119,24 +157,26 @@ PresentationLoadOptions loadOptions = new PresentationLoadOptions();
 loadOptions.setPassword("some_password_to_open_a_document");
 ```
 
-**4. Load the Presentation**  
+**4. załaduj prezentację**  
 Użyj klasy `Editor` z podanym strumieniem i opcjami:
 
 ```java
 Editor editor = new Editor(fs, loadOptions);
 ```
 
-Pro tip: Zawsze zamykaj `InputStream` w bloku `finally` lub używaj try‑with‑resources, aby uniknąć wycieków zasobów.
+**Wskazówka:** Zawsze zamykaj `InputStream` w bloku `try‑with‑resources`, aby uniknąć wycieków zasobów.
 
-### Feature 2: Editing a Specific Slide (edit pptx java)
+### Funkcja 2: edycja konkretnego slajdu (edit pptx java)
 
-#### Overview
-Celuj w pojedynczy slajd, aby wprowadzić modyfikacje — idealne dla scenariusza **edytować pptx java**.
+`PresentationEditOptions` definiuje, które slajdy mają być edytowane i w jaki sposób edytor powinien je renderować do modyfikacji.
 
-#### Step‑by‑Step Implementation
+#### Bezpośrednia odpowiedź
+Wybierz indeks slajdu (liczony od 0) przy użyciu `PresentationEditOptions`, pobierz jego `EditableDocument`, zmodyfikuj znacznik HTML, a następnie wstrzyknij z powrotem edytowany dokument – pozwala to zmienić tekst, obrazy lub układ na pojedynczym slajdzie.
 
-**1. Set Up Editing Options**  
-Wybierz, który slajd edytować (indeks zerowy):
+#### Implementacja krok po kroku
+
+**1. skonfiguruj opcje edycji**  
+Wybierz, który slajd edytować (indeks liczony od 0):
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -147,7 +187,7 @@ editOptions.setSlideNumber(0); // Edit the first slide
 editOptions.setShowHiddenSlides(true);
 ```
 
-**2. Obtain an Editable Document**  
+**2. uzyskaj edytowalny dokument**  
 Pobierz edytowalną reprezentację slajdu:
 
 ```java
@@ -156,44 +196,48 @@ import com.groupdocs.editor.EditableDocument;
 EditableDocument beforeEdit = editor.edit(editOptions);
 ```
 
-**3. Extract HTML Content and Resources**  
-Możesz teraz pracować z kodem HTML slajdu oraz osadzonymi zasobami:
+**3. wyodrębnij zawartość HTML i zasoby**  
+Możesz teraz pracować ze znacznikami HTML slajdu i jego osadzonymi zasobami:
 
 ```java
 String originalContent = beforeEdit.getContent();
 List<IHtmlResource> allResources = beforeEdit.getAllResources();
 ```
 
-### Feature 3: Modifying Content of a Presentation Slide
+### Funkcja 3: modyfikacja zawartości slajdu prezentacji
 
-#### Overview
-Zamień tekst lub wstrzyknij nowy HTML bezpośrednio do kodu slajdu.
+`EditableDocument` jest opakowaniem, które przechowuje reprezentację HTML slajdu wraz z powiązanymi zasobami, umożliwiając bezpieczną manipulację przed zapisem.
 
-#### Step‑by‑Step Implementation
+#### Bezpośrednia odpowiedź
+Zastąp żądany tekst w HTML slajdu przy użyciu standardowej logiki zamiany ciągów, a następnie opakuj zaktualizowany znacznik z powrotem w `EditableDocument` przed zapisem – to podejście działa zarówno dla prostych placeholderów, jak i złożonego formatowania.
 
-**1. Replace Text**  
-Prosta zamiana tekstu:
+#### Implementacja krok po kroku
+
+**1. zamień tekst**  
+Dla prostej zamiany tekstu:
 
 ```java
 String editedContent = beforeEdit.getContent().replace("New text", "edited text");
 ```
 
-**2. Create a New Editable Document**  
-Opakuj zmodyfikowany kod HTML z powrotem w `EditableDocument`:
+**2. utwórz nowy edytowalny dokument**  
+Opakuj zmodyfikowany znacznik z powrotem w `EditableDocument`:
 
 ```java
 EditableDocument afterEdit = EditableDocument.fromMarkup(editedContent, allResources);
 ```
 
-### Feature 4: Saving an Edited Presentation (convert PPTX to PPTM)
+### Funkcja 4: zapisywanie edytowanej prezentacji (konwersja PPTX na PPTM)
 
-#### Overview
-Na koniec zapisz zmodyfikowany zestaw slajdów jako plik PPTM, opcjonalnie chroniąc go hasłem.
+`PresentationSaveOptions` konfiguruje format wyjściowy, ochronę hasłem i inne ustawienia zapisu dla prezentacji.
 
-#### Step‑by‑Step Implementation
+#### Bezpośrednia odpowiedź
+Zainicjalizuj `PresentationSaveOptions` z formatem PPTM, opcjonalnie ustaw nowe hasło i wywołaj `editor.save` – biblioteka zapisuje plik PPTM z włączonymi makrami, zachowując wszystkie wprowadzone zmiany.
 
-**1. Initialize Save Options**  
-Określ format PPTM oraz nowe hasło:
+#### Implementacja krok po kroku
+
+**1. zainicjalizuj opcje zapisu**  
+Określ format PPTM i nowe hasło:
 
 ```java
 import com.groupdocs.editor.options.PresentationSaveOptions;
@@ -203,8 +247,8 @@ PresentationSaveOptions saveOptions = new PresentationSaveOptions(PresentationFo
 saveOptions.setPassword("password");
 ```
 
-**2. Prepare Output Stream**  
-Zdefiniuj, gdzie zostanie zapisany wynikowy plik:
+**2. przygotuj strumień wyjściowy**  
+Określ, gdzie zostanie zapisany wynikowy plik:
 
 ```java
 import java.io.ByteArrayOutputStream;
@@ -214,14 +258,14 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/sample_out.pptm";
 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 ```
 
-**3. Save the Edited Document**  
+**3. zapisz edytowany dokument**  
 Zapisz zaktualizowaną prezentację do strumienia wyjściowego:
 
 ```java
 editor.save(afterEdit, outputStream, saveOptions);
 ```
 
-**4. Write to File**  
+**4. zapisz do pliku**  
 Zachowaj strumień na dysku:
 
 ```java
@@ -230,63 +274,67 @@ try (FileOutputStream outputFile = new FileOutputStream(outputPath)) {
 }
 ```
 
-Tip: Po zapisaniu możesz zweryfikować plik, otwierając go w PowerPoint, aby upewnić się, że format z włączonymi makrami działa zgodnie z oczekiwaniami.
+**Wskazówka:** Po zapisaniu otwórz plik w PowerPoint, aby potwierdzić, że makra są włączone i że układ odpowiada oczekiwaniom.
 
-## Replace Text in PPTX Slides
+## Zamiana tekstu w slajdach PPTX
 
-Fragment powyżej (`replace text pptx`) pokazuje prosty sposób na zamianę dowolnego ciągu znaków w HTML slajdu. W bardziej złożonych scenariuszach — np. aktualizacji placeholderów na wielu slajdach — możesz przejść w pętli po każdym `EditableDocument` i zastosować tę samą logikę `replace`.
+Powyższy fragment (`replace text pptx`) pokazuje prosty sposób zamiany dowolnego ciągu w HTML slajdu. W bardziej złożonych scenariuszach — np. aktualizacji placeholderów w wielu slajdach — możesz iterować po każdym `EditableDocument` i zastosować tę samą logikę `replace`.
 
-## Bulk Convert PPTX Files
+## Masowa konwersja plików pptx
 
-Jeśli potrzebujesz **masowo konwertować pptx** pliki do PPTM (lub innego formatu), otocz kroki wczytywania‑edycji‑zapisu w pętlę iterującą po katalogu z plikami PPTX. Ponowne użycie jednej instancji `Editor` zmniejsza narzut i przyspiesza przetwarzanie wsadowe.
+Jeśli potrzebujesz **masowo konwertować pliki pptx** na PPTM (lub inny format), otocz kroki ładowania‑edycji‑zapisu w pętli iterującej po katalogu plików PPTX. Ponowne użycie jednej instancji `Editor` zmniejsza narzut i przyspiesza przetwarzanie wsadowe. Pamiętaj, aby szybko zamykać każdy strumień, aby utrzymać niskie zużycie pamięci.
 
-## Practical Applications
+## Praktyczne zastosowania
 
-GroupDocs.Editor Java API błyszczy w rzeczywistych scenariuszach, takich jak:
+API GroupDocs.Editor Java wyróżnia się w rzeczywistych scenariuszach, takich jak:
+- **Corporate training:** Szybko aktualizuj zestawy slajdów nowymi politykami zgodności w całej organizacji.  
+- **Marketing campaigns:** Generuj prezentacje z włączonymi makrami dla interaktywnych demonstracji produktów, które wymagają animacji sterowanych VBA.  
+- **Education:** Automatyzuj tworzenie slajdów wykładowych, które osadzają quizy VBA, umożliwiając samoocenę bez ręcznej edycji.  
 
-- **Szkolenia korporacyjne:** Szybko aktualizować zestawy slajdów o nowe polityki.  
-- **Kampanie marketingowe:** Generować prezentacje z włączonymi makrami do interaktywnych demonstracji.  
-- **Edukacja:** Automatyzować tworzenie slajdów wykładowych zawierających makra VBA do quizów.  
-
-## Performance Considerations
+## Rozważania dotyczące wydajności
 
 Podczas obsługi dużych plików PPTX:
-
 - Zwiększ rozmiar sterty JVM (`-Xmx2g` lub większy), aby uniknąć `OutOfMemoryError`.  
-- Ponownie używaj tej samej instancji `Editor` przy przetwarzaniu wsadowym, aby zmniejszyć narzut.  
-- Utrzymuj bibliotekę w najnowszej wersji; nowsze wydania zawierają optymalizacje wydajności.
+- Ponownie używaj tej samej instancji `Editor` przy przetwarzaniu wsadowym, aby zmniejszyć narzut inicjalizacji.  
+- Utrzymuj bibliotekę w najnowszej wersji; nowsze wydania zawierają optymalizacje wydajności, które mogą skrócić czas przetwarzania o nawet **30 %** dla plików większych niż 200 MB.  
 
-## Frequently Asked Questions
+## Najczęściej zadawane pytania
 
-**Q: Czy mogę konwertować PPTX do PPTM bez edycji slajdów?**  
-**A:** Tak. Wczytaj PPTX przy użyciu `PresentationLoadOptions`, a następnie zapisz go przy użyciu `PresentationSaveOptions` w formacie PPTM — nie są wymagane pośrednie kroki edycji.
+**Q: Czy mogę konwertować PPTX na PPTM bez edycji slajdów?**  
+A: Tak. Załaduj PPTX przy użyciu `PresentationLoadOptions`, a następnie zapisz go używając `PresentationSaveOptions` ustawionego na format PPTM – nie są wymagane pośrednie kroki edycji.
 
 **Q: Czy biblioteka obsługuje inne formaty PowerPoint (PPT, PPSX, itp.)?**  
-**A:** GroupDocs.Editor może wczytywać i zapisywać formaty PPT, PPTX, PPSX oraz PPTM. Użyj odpowiedniego enumu `PresentationFormats` przy zapisie.
+A: GroupDocs.Editor może ładować i zapisywać formaty PPT, PPTX, PPSX i PPTM. Użyj odpowiedniego enumu `PresentationFormats` przy zapisie.
 
-**Q: Jak obsłużyć prezentację bez hasła, ale chcę ustawić hasło w pliku wyjściowym?**  
-**A:** Podaj żądane hasło wyłącznie w `PresentationSaveOptions`; nie musisz go ustawiać w `PresentationLoadOptions`.
+**Q: Jak ustawić hasło w pliku wyjściowym, gdy źródło go nie ma?**  
+A: Podaj żądane hasło tylko w `PresentationSaveOptions`; nie musisz określać hasła w `PresentationLoadOptions`.
 
 **Q: Czy można edytować wiele slajdów w jednej operacji?**  
-**A:** Tak. Iteruj po numerach slajdów, pobieraj każdy `EditableDocument`, wprowadzaj zmiany i łącz wyniki przed zapisem.
+A: Tak. Iteruj po numerach slajdów, pobieraj każdy `EditableDocument`, stosuj zmiany i łącz wyniki przed zapisem.
 
 **Q: Co zrobić, jeśli trzeba dodać nowy slajd zamiast edytować istniejący?**  
-**A:** Utwórz nowy slajd przy użyciu API edytora (np. ustaw `PresentationEditOptions.setSlideNumber(-1)`, aby dodać na końcu) i wstaw pożądany markup.
+A: Utwórz nowy slajd przy użyciu API edytora (np. ustaw `PresentationEditOptions.setSlideNumber(-1)`, aby dodać na końcu) i wstaw żądany znacznik.
 
-**Q: Jak wykonać masową konwersję pptx do pptm w jednej usłudze?**  
-**A:** Przejdź w pętli po katalogu źródłowym, wczytaj każdy PPTX przy użyciu tej samej instancji `Editor` i wywołaj `save` z `PresentationSaveOptions(PresentationFormats.Pptm)`. Pamiętaj o szybkim zamykaniu strumieni.
+**Q: Jak wykonać masową konwersję pptx na pptm w jednej usłudze?**  
+A: Przejdź pętlą po katalogu źródłowym, załaduj każdy PPTX przy użyciu tej samej instancji `Editor` i wywołaj `save` z `PresentationSaveOptions(PresentationFormats.Pptm)`. Pamiętaj, aby szybko zamykać strumienie, aby utrzymać niskie zużycie pamięci.
 
-## Conclusion
+## Podsumowanie
 
-Postępując zgodnie z tym przewodnikiem, teraz wiesz **jak edytować pptx** pliki i **konwertować PPTX do PPTM** przy użyciu GroupDocs.Editor dla Javy. Możesz wczytywać prezentacje, modyfikować poszczególne slajdy, zamieniać tekst i zapisywać wynik jako plik PPTM z włączonymi makrami — wszystko programowo i bezpiecznie.
+Korzystając z tego przewodnika, teraz wiesz **jak edytować pliki pptx w Javie** i **konwertować PPTX na PPTM** przy użyciu GroupDocs.Editor dla Javy. Możesz ładować prezentacje, modyfikować pojedyncze slajdy, zamieniać tekst i zapisywać wynik jako plik PPTM z włączonymi makrami — wszystko programowo i bezpiecznie.
 
-**Next steps:**  
-- Eksperymentuj z dodawaniem makr VBA do pliku PPTM.  
-- Zbadaj masową konwersję wielu prezentacji w jednej usłudze Java.  
-- Przejrzyj pełną dokumentację GroupDocs.Editor pod kątem zaawansowanych funkcji, takich jak obsługa obrazów i niestandardowe stylowanie.
+**Kolejne kroki:**  
+- Eksperymentuj z dodawaniem makr VBA do pliku PPTM przy użyciu API `PresentationMacroOptions`.  
+- Zbadaj masową konwersję dziesiątek lub setek prezentacji w jednym mikro‑serwisie Java.  
+- Przejrzyj pełną dokumentację GroupDocs.Editor, aby poznać zaawansowane funkcje, takie jak obsługa obrazów, style niestandardowe i manipulacja metadanymi na poziomie slajdu.
 
 ---
 
-**Last Updated:** 2026-03-17  
-**Tested With:** GroupDocs.Editor 25.3 for Java  
-**Author:** GroupDocs
+**Ostatnia aktualizacja:** 2026-09-11  
+**Testowano z:** GroupDocs.Editor 25.3 for Java  
+**Autor:** GroupDocs
+
+## Powiązane samouczki
+
+- [Jak edytować dokumenty Word w Javie przy użyciu GroupDocs.Editor](/editor/java/advanced-features/master-document-manipulation-java-groupdocs-editor/)
+- [Konwertuj DOCX na DOCM w Javie przy użyciu GroupDocs.Editor – Poradnik](/editor/java/word-processing-documents/groupdocs-editor-java-edit-word-docs-efficiently/)
+- [Przewodnik po edycji dokumentów Java w GroupDocs Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)

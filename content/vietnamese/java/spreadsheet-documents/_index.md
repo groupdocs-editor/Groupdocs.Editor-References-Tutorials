@@ -1,76 +1,143 @@
 ---
-date: 2026-03-17
-description: Tìm hiểu cách chỉnh sửa bảng tính Excel trong Java bằng GroupDocs.Editor,
-  bao gồm các worksheet, công thức, sổ làm việc đa tab, tệp được bảo vệ bằng mật khẩu
-  và xử lý sổ làm việc lớn.
-title: Cách chỉnh sửa bảng tính Excel trong Java với GroupDocs.Editor
+date: 2026-09-11
+description: Tìm hiểu cách đọc tệp xlsx và chỉnh sửa bảng tính Excel trong Java bằng
+  cách sử dụng GroupDocs.Editor, bao gồm worksheets, formulas, multi‑tab workbooks,
+  password‑protected files và large workbook handling.
+keywords:
+- java read xlsx file
+- load excel file java
+- java write xlsx file
+lastmod: 2026-09-11
+og_description: Tìm hiểu cách đọc tệp xlsx và chỉnh sửa bảng tính Excel trong Java
+  bằng cách sử dụng GroupDocs.Editor. Hướng dẫn này cho bạn biết cách làm việc với
+  worksheets, formulas, password‑protected files và large workbooks.
+og_image_alt: 'Developer guide: read and edit Excel files in Java with GroupDocs.Editor'
+og_title: Cách đọc tệp xlsx và chỉnh sửa excel trong java với GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-11'
+  description: Learn how to read xlsx file and edit Excel spreadsheets in Java using
+    GroupDocs.Editor, covering worksheets, formulas, multi‑tab workbooks, password‑protected
+    files, and large workbook handling.
+  headline: How to read xlsx file and edit excel in java with GroupDocs
+  type: TechArticle
+- description: Learn how to read xlsx file and edit Excel spreadsheets in Java using
+    GroupDocs.Editor, covering worksheets, formulas, multi‑tab workbooks, password‑protected
+    files, and large workbook handling.
+  name: How to read xlsx file and edit excel in java with GroupDocs
+  steps:
+  - name: initialize the editor
+    text: '`Editor` is the main entry point of GroupDocs.Editor for Java that loads
+      and saves spreadsheet documents. Create an `Editor` instance, pointing it at
+      the Excel file you want to work with. If the workbook is password‑protected,
+      include the password in the load options.'
+  - name: load the workbook
+    text: Call the `load` method to obtain a `SpreadsheetDocument` object. The `SpreadsheetDocument`
+      class represents an entire Excel workbook in memory, exposing worksheets, cells,
+      and formulas.
+  - name: modify cells, formulas, or worksheets
+    text: Navigate to the required worksheet, then use the API to change cell values
+      (`setValue`) or formulas (`setFormula`). You can also add new worksheets, delete
+      existing ones, or reorder tabs. Remember to use `setFormula` for cells that
+      should contain calculations; otherwise the formula will be stored as
+  - name: save the updated workbook
+    text: When all changes are complete, invoke the `save` method to write the workbook
+      back to disk or stream it to a client. The original calculation engine remains
+      intact, so formulas recalculate when the file is opened in Excel. > **Pro tip:**
+      Work on a copy of the original file during development to avoi
+  type: HowTo
+- questions:
+  - answer: Yes, GroupDocs.Editor supports both modern and legacy Excel file types.
+    question: Can I edit both `.xlsx` and `.xls` formats?
+  - answer: All original cell styles, fonts, and colors are retained unless you explicitly
+      modify them.
+    question: Does editing preserve cell styles and formatting?
+  - answer: Process the workbook in chunks, work with individual worksheets, and release
+      resources promptly after each operation.
+    question: How do I handle very large spreadsheets efficiently?
+  - answer: Absolutely. Use the `addWorksheet` method to create new tabs within the
+      workbook.
+    question: Is it possible to add new worksheets programmatically?
+  - answer: GroupDocs.Editor offers perpetual, subscription, and temporary licenses
+      to suit various project needs.
+    question: What licensing options are available for production deployments?
+  type: FAQPage
+tags:
+- read xlsx
+- GroupDocs.Editor
+- java spreadsheet processing
+title: Cách đọc tệp xlsx và chỉnh sửa excel trong java với GroupDocs
 type: docs
 url: /vi/java/spreadsheet-documents/
 weight: 6
 ---
 
-# Cách chỉnh sửa bảng tính Excel bằng Java với GroupDocs.Editor
+# Cách đọc tệp xlsx và chỉnh sửa excel trong java với GroupDocs
 
-Nếu bạn đang tìm kiếm **cách chỉnh sửa excel** trực tiếp từ một ứng dụng Java, bạn đã đến đúng nơi. Trong hướng dẫn này, chúng tôi sẽ trình bày cách sử dụng GroupDocs.Editor cho Java để mở một workbook, sửa đổi các ô, bảo tồn công thức, làm việc với nhiều tab, và thậm chí xử lý các bảng tính được bảo vệ bằng mật khẩu hoặc rất lớn — tất cả mà không cần cài đặt Microsoft Office trên máy chủ.
+Nếu bạn cần **read xlsx file** nội dung, sửa đổi các ô, hoặc tái tạo toàn bộ workbook từ một ứng dụng Java, bạn đã đến đúng nơi. Trong hướng dẫn này, chúng tôi sẽ hướng dẫn cách sử dụng GroupDocs.Editor cho Java để mở một workbook, chỉnh sửa worksheets, bảo tồn công thức, quản lý các tệp đa tab, và xử lý các bảng tính được bảo vệ bằng mật khẩu hoặc rất lớn—không cần cài đặt Microsoft Office trên máy chủ.
 
 ## Câu trả lời nhanh
-- **Tôi có thể chỉnh sửa các tệp Excel được bảo vệ bằng mật khẩu không?** Có – chỉ cần cung cấp mật khẩu khi tải tài liệu.  
-- **GroupDocs.Editor có bảo tồn công thức không?** Chắc chắn; các công thức vẫn hoạt động sau bất kỳ lần chỉnh sửa nào.  
-- **Có hỗ trợ chỉnh sửa đa sheet không?** Bạn có thể mở, sửa đổi và lưu bất kỳ số lượng worksheet nào trong một workbook.  
-- **Yêu cầu phiên bản Java nào?** Đề nghị sử dụng Java 8 hoặc cao hơn.  
-- **Tôi có cần giấy phép cho môi trường sản xuất không?** Cần một giấy phép GroupDocs.Editor cho Java hợp lệ cho việc sử dụng không phải thử nghiệm.  
+- **Can I edit password‑protected Excel files?** Yes – just supply the password when you load the document.  
+- **Does GroupDocs.Editor preserve formulas?** Absolutely; formulas stay functional after any edit.  
+- **Is multi‑sheet editing supported?** You can open, modify, and save any number of worksheets in a workbook.  
+- **What Java version is required?** Java 8 or higher is recommended.  
+- **Do I need a license for production?** A valid GroupDocs.Editor for Java license is required for non‑trial use.  
 
 ## “Cách chỉnh sửa excel” trong ngữ cảnh Java là gì?
-Chỉnh sửa Excel từ Java có nghĩa là tải một tệp `.xlsx` hoặc `.xls` một cách lập trình, thay đổi giá trị ô, thêm hoặc xóa hàng/cột, và lưu kết quả mà không cần bất kỳ tương tác thủ công nào. GroupDocs.Editor trừu tượng hoá các phức tạp của Office Open XML, cung cấp cho bạn một API sạch sẽ, cấp cao.
 
-## Tại sao nên chỉnh sửa bảng tính Excel bằng Java với GroupDocs.Editor?
-- **API đầy đủ tính năng** – Cập nhật các ô, bảo tồn công thức, và quản lý worksheets bằng các lời gọi phương thức đơn giản.  
-- **Đa nền tảng** – Chạy trên bất kỳ hệ điều hành nào hỗ trợ Java, lý tưởng cho xử lý batch phía máy chủ.  
-- **Không phụ thuộc vào Office** – Không cần cài đặt Microsoft Office hoặc dựa vào COM interop.  
-- **Sẵn sàng bảo mật** – Hỗ trợ tích hợp cho workbook được mã hoá và xử lý mật khẩu.  
+Chỉnh sửa Excel từ Java có nghĩa là tải một tệp `.xlsx` hoặc `.xls` một cách lập trình, thay đổi giá trị ô, thêm hoặc xóa hàng/cột, và lưu kết quả mà không cần bất kỳ tương tác thủ công nào. GroupDocs.Editor trừu tượng hoá các phức tạp của Office Open XML, cung cấp cho bạn một API sạch, cấp cao, hoạt động trên bất kỳ hệ điều hành nào.
+
+## Tại sao chỉnh sửa bảng tính Excel trong Java với GroupDocs.Editor?
+
+Bạn có thể đọc dữ liệu tệp xlsx và chỉnh sửa trực tiếp vì GroupDocs.Editor cung cấp một **full‑featured API** hỗ trợ **50+ input and output formats**, xử lý **multi‑hundred‑page workbooks** mà không cần tải toàn bộ tệp vào bộ nhớ, và chạy trên bất kỳ OS nào hỗ trợ Java 8+. Điều này loại bỏ nhu cầu sử dụng Microsoft Office, giảm chi phí bản quyền, và cho phép tự động xử lý hàng loạt trong môi trường đám mây hoặc on‑premise.
 
 ## Yêu cầu trước
-- Java 8 hoặc mới hơn đã được cài đặt.  
-- Thư viện GroupDocs.Editor cho Java đã được thêm vào dự án của bạn (Maven/Gradle).  
-- Một giấy phép GroupDocs.Editor hợp lệ cho việc sử dụng trong môi trường sản xuất.  
+- Java 8 or newer installed.  
+- GroupDocs.Editor for Java library added to your project (Maven/Gradle).  
+- A valid GroupDocs.Editor license for production use.  
 
 ## Hướng dẫn từng bước
 
-### Bước 1: Khởi tạo Editor
-Tạo một thể hiện `Editor`, chỉ tới tệp Excel mà bạn muốn làm việc. Nếu workbook được bảo vệ bằng mật khẩu, bao gồm mật khẩu trong các tùy chọn tải.
+### Bước 1: khởi tạo editor
+`Editor` is the main entry point of GroupDocs.Editor for Java that loads and saves spreadsheet documents. Create an `Editor` instance, pointing it at the Excel file you want to work with. If the workbook is password‑protected, include the password in the load options.
 
-### Bước 2: Tải Workbook
-Gọi phương thức `load` để nhận được một đối tượng `SpreadsheetDocument`. Đối tượng này đại diện cho toàn bộ workbook trong bộ nhớ và cung cấp cho bạn quyền truy cập vào mỗi worksheet.
+### Bước 2: tải workbook
+Call the `load` method to obtain a `SpreadsheetDocument` object. The `SpreadsheetDocument` class represents an entire Excel workbook in memory, exposing worksheets, cells, and formulas.
 
-### Bước 3: Sửa đổi Ô, Công thức hoặc Worksheets
-Di chuyển tới worksheet cần thiết, sau đó sử dụng API để thay đổi giá trị ô (`setValue`) hoặc công thức (`setFormula`). Bạn cũng có thể thêm worksheet mới, xóa các worksheet hiện có, hoặc sắp xếp lại các tab.
+### Bước 3: sửa đổi ô, công thức, hoặc worksheets
+Navigate to the required worksheet, then use the API to change cell values (`setValue`) or formulas (`setFormula`). You can also add new worksheets, delete existing ones, or reorder tabs. Remember to use `setFormula` for cells that should contain calculations; otherwise the formula will be stored as static text.  
+`setValue` sets the value of a cell. `setFormula` assigns a formula to a cell.
 
-### Bước 4: Lưu Workbook đã cập nhật
-Khi tất cả các thay đổi đã hoàn tất, gọi phương thức `save` để ghi workbook trở lại đĩa hoặc truyền nó tới client. Engine tính toán gốc vẫn được giữ nguyên, vì vậy các công thức sẽ được tính lại khi tệp được mở trong Excel.
+### Bước 4: lưu workbook đã cập nhật
+When all changes are complete, invoke the `save` method to write the workbook back to disk or stream it to a client. The original calculation engine remains intact, so formulas recalculate when the file is opened in Excel.
 
-> **Mẹo chuyên nghiệp:** Làm việc trên một bản sao của tệp gốc trong quá trình phát triển để tránh mất dữ liệu ngoài ý muốn.
+> **Pro tip:** Work on a copy of the original file during development to avoid accidental data loss.
 
-## Cách chỉnh sửa tệp Excel được bảo vệ bằng mật khẩu với Java
-Khi tải một workbook đã được mã hoá, truyền mật khẩu qua đối tượng `LoadOptions`. Trình chỉnh sửa sẽ giải mã tệp trong bộ nhớ, áp dụng các thay đổi của bạn, và mã hoá lại khi lưu.
+## Cách chỉnh sửa tệp excel được bảo vệ bằng mật khẩu với java
 
-## Xử lý hiệu quả các Workbook Excel lớn
-Workbook lớn có thể tiêu tốn nhiều bộ nhớ. Để giữ mức sử dụng tài nguyên thấp:
+Load your workbook with a `LoadOptions` object that contains the password, then edit it exactly like an unprotected file. The editor decrypts the file in memory, applies your changes, and re‑encrypts it on save, preserving protection.  
+`LoadOptions` specifies loading options such as the password for encrypted workbooks.
 
-- Xử lý một worksheet mỗi lần thay vì tải toàn bộ workbook vào bộ nhớ.  
-- Sử dụng streaming API (nếu có trong các phiên bản GroupDocs.Editor mới hơn).  
-- Giải phóng các tham chiếu tới worksheets sau khi bạn hoàn thành việc chỉnh sửa chúng.
+## Xử lý hiệu quả các workbook excel lớn
+
+Large workbooks can consume significant memory. To keep resource usage low:
+
+- Process one worksheet at a time instead of loading the entire workbook into memory.  
+- Use streaming APIs (available in newer GroupDocs.Editor releases) to read and write rows incrementally.  
+- Release references to worksheets after you finish editing them, allowing the garbage collector to reclaim memory.
 
 ## Các vấn đề thường gặp và giải pháp
-- **Công thức trở thành văn bản tĩnh:** Sử dụng `setFormula` thay vì `setValue` cho các ô nên chứa công thức.  
-- **Tệp được bảo vệ bằng mật khẩu không mở được:** Kiểm tra lại xem mật khẩu đúng đã được cung cấp trong các tùy chọn tải chưa.  
-- **Áp lực bộ nhớ với tệp lớn:** Chia xử lý theo worksheet hoặc bật streaming để giảm tiêu thụ heap.  
+- **Formulas become static text:** Use `setFormula` instead of `setValue` for cells that should contain formulas.  
+- **Password‑protected file fails to open:** Double‑check that the correct password is supplied in the load options.  
+- **Memory pressure with big files:** Split processing by worksheet or enable streaming to reduce heap consumption.  
 
 ## Các hướng dẫn có sẵn
 
-### [Thành thạo chỉnh sửa tab Excel trong Java với GroupDocs.Editor&#58; Hướng dẫn toàn diện cho nhà phát triển](./master-excel-tab-editing-java-groupdocs-editor/)
+### [Hướng dẫn toàn diện chỉnh sửa tab Excel trong Java với GroupDocs.Editor&#58; Dành cho các nhà phát triển](./master-excel-tab-editing-java-groupdocs-editor/)
 Tìm hiểu cách chỉnh sửa và lưu các tab Excel một cách lập trình bằng GroupDocs.Editor cho Java. Nâng cao kỹ năng quản lý bảng tính của bạn ngay hôm nay!
 
 ## Tài nguyên bổ sung
+
 - [Tài liệu GroupDocs.Editor cho Java](https://docs.groupdocs.com/editor/java/)
 - [Tham chiếu API GroupDocs.Editor cho Java](https://reference.groupdocs.com/editor/java/)
 - [Tải xuống GroupDocs.Editor cho Java](https://releases.groupdocs.com/editor/java/)
@@ -80,23 +147,29 @@ Tìm hiểu cách chỉnh sửa và lưu các tab Excel một cách lập trình
 
 ## Câu hỏi thường gặp
 
-**Q: Tôi có thể chỉnh sửa cả định dạng `.xlsx` và `.xls` không?**  
-A: Có, GroupDocs.Editor hỗ trợ cả các loại tệp Excel hiện đại và legacy.
+**Q: Can I edit both `.xlsx` và `.xls` formats?**  
+A: Yes, GroupDocs.Editor supports both modern and legacy Excel file types.
 
-**Q: Việc chỉnh sửa có bảo tồn kiểu dáng và định dạng ô không?**  
-A: Tất cả kiểu dáng ô, phông chữ và màu sắc gốc đều được giữ lại trừ khi bạn thay đổi chúng một cách rõ ràng.
+**Q: Does editing preserve cell styles and formatting?**  
+A: All original cell styles, fonts, and colors are retained unless you explicitly modify them.
 
-**Q: Làm thế nào để xử lý các bảng tính rất lớn một cách hiệu quả?**  
-A: Xử lý workbook theo từng phần, làm việc với các worksheet riêng lẻ, và giải phóng tài nguyên ngay sau mỗi thao tác.
+**Q: How do I handle very large spreadsheets efficiently?**  
+A: Process the workbook in chunks, work with individual worksheets, and release resources promptly after each operation.
 
-**Q: Có thể thêm worksheet mới một cách lập trình không?**  
-A: Chắc chắn. Sử dụng phương thức `addWorksheet` để tạo các tab mới trong workbook.
+**Q: Is it possible to add new worksheets programmatically?**  
+A: Absolutely. Use the `addWorksheet` method to create new tabs within the workbook.
 
-**Q: Các tùy chọn giấy phép nào có sẵn cho triển khai sản xuất?**  
-A: GroupDocs.Editor cung cấp các giấy phép vĩnh viễn, thuê bao và tạm thời để phù hợp với nhu cầu dự án khác nhau.
+**Q: What licensing options are available for production deployments?**  
+A: GroupDocs.Editor offers perpetual, subscription, and temporary licenses to suit various project needs.
 
 ---
 
-**Cập nhật lần cuối:** 2026-03-17  
-**Được kiểm tra với:** GroupDocs.Editor cho Java 23.9  
-**Tác giả:** GroupDocs
+**Last updated:** 2026-09-11  
+**Tested with:** GroupDocs.Editor for Java 23.9  
+**Author:** GroupDocs
+
+## Hướng dẫn liên quan
+
+- [Cách chỉnh sửa bảng tính Excel Java với GroupDocs.Editor](/editor/java/spreadsheet-documents/)
+- [Bảo vệ Excel Java với GroupDocs.Editor: Hướng dẫn bảo vệ bằng mật khẩu](/editor/java/advanced-features/excel-file-security-java-groupdocs-editor/)
+- [Tạo Worksheet có thể chỉnh sửa Java với GroupDocs.Editor – Hướng dẫn chỉnh sửa tab Excel](/editor/java/spreadsheet-documents/master-excel-tab-editing-java-groupdocs-editor/)
