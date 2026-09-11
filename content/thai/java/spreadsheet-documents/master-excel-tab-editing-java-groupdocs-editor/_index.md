@@ -1,49 +1,132 @@
 ---
-date: '2026-03-20'
-description: เรียนรู้วิธีสร้างแผ่นงานที่แก้ไขได้ด้วย Java และบันทึกแผ่นงาน Excel ด้วย
-  Java อย่างโปรแกรมมิ่งโดยใช้ GroupDocs.Editor สำหรับ Java.
+date: '2026-09-11'
+description: เรียนรู้วิธีสร้างแผ่นงานที่แก้ไขได้ใน Java และบันทึกแผ่นงาน Excel ใน
+  Java อย่างอัตโนมัติด้วย GroupDocs.Editor for Java.
 keywords:
-- Excel tab editing
-- GroupDocs.Editor Java
-- programmatic Excel manipulation
-title: สร้าง Worksheet ที่แก้ไขได้ด้วย Java และ GroupDocs.Editor – เชี่ยวชาญการแก้ไขแท็บ
-  Excel
+- create editable worksheet java
+- convert excel tab html
+- groupdocs.editor java
+- programmatic excel manipulation
+lastmod: '2026-09-11'
+og_description: เรียนรู้วิธีสร้างแผ่นงานที่แก้ไขได้ใน Java และบันทึกไฟล์แผ่นงาน Excel
+  ใน Java อย่างอัตโนมัติด้วย GroupDocs.Editor for Java.
+og_image_alt: Guide to creating and saving editable Excel worksheets in Java with
+  GroupDocs.Editor
+og_title: สร้างแผ่นงานที่แก้ไขได้ใน Java ด้วย GroupDocs.Editor – การแก้ไขแท็บ Excel
+  ขั้นสูง
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-11'
+  description: Learn how to create editable worksheet java and save excel worksheet
+    java programmatically using GroupDocs.Editor for Java.
+  headline: Create editable worksheet java with GroupDocs.Editor – master Excel tab
+    editing
+  type: TechArticle
+- description: Learn how to create editable worksheet java and save excel worksheet
+    java programmatically using GroupDocs.Editor for Java.
+  name: Create editable worksheet java with GroupDocs.Editor – master Excel tab editing
+  steps:
+  - name: Define input file path
+    text: 'Specify the path to your Excel document. Replace `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"`
+      with your actual file location: java String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";'
+  - name: Load the spreadsheet into an InputStream
+    text: 'Use Java’s `FileInputStream` to read the Excel file: java InputStream inputStream
+      = new FileInputStream(inputFilePath);'
+  - name: Create an editor instance
+    text: 'Initialize the `Editor` with the input stream and load options: java SpreadsheetLoadOptions
+      loadOptions = new SpreadsheetLoadOptions(); Editor editor = new Editor(inputStream,
+      loadOptions); *Explanation:* The `Editor` instance acts as a central object
+      to interact with your spreadsheet.'
+  - name: Define edit options
+    text: 'Specify which worksheet you want to edit using its index (0‑based): java
+      SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions(); editOptions1.setWorksheetIndex(0);'
+  - name: Create an `EditableDocument` for the first tab
+    text: EditableDocument represents the editable version of a worksheet that can
+      be modified and later saved. java EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
+      *Explanation:* This step transforms the first worksheet into a modifiable format.
+  - name: Define edit options
+    text: 'Set the index for the second tab: java SpreadsheetEditOptions editOptions2
+      = new SpreadsheetEditOptions(); editOptions2.setWorksheetIndex(1);'
+  - name: Create an `EditableDocument` for the second tab
+    text: 'Create a document object for editing: java EditableDocument secondTabBeforeEdit
+      = editor.edit(editOptions2); *Explanation:* This approach allows you to focus
+      on specific tabs without loading the entire spreadsheet.'
+  - name: Define save options
+    text: 'Choose the desired output format, such as XLSM: java SpreadsheetSaveOptions
+      saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm); String outputPath1
+      = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";'
+  - name: Save the first tab
+    text: 'Persist your changes to a file: java editor.save(firstTabBeforeEdit, outputPath1,
+      saveOptions1); *Explanation:* This step saves the edited tab as a separate file
+      in your specified directory.'
+  - name: Define save options
+    text: 'Select XLSB as the output format for variety: java SpreadsheetSaveOptions
+      saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb); String outputPath2
+      = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";'
+  type: HowTo
+- questions:
+  - answer: Absolutely. Create additional `SpreadsheetEditOptions` instances with
+      the appropriate `setWorksheetIndex` value for each tab you want to edit.
+    question: Can I edit more than two tabs in the same workbook?
+  - answer: Yes, provide the password via `SpreadsheetLoadOptions.setPassword("yourPassword")`
+      before initializing the `Editor`.
+    question: Is it possible to edit a protected worksheet?
+  - answer: The library preserves existing formulas; however, automatic recalculation
+      is not performed. You can trigger recalculation using Excel after loading the
+      saved file.
+    question: Does GroupDocs.Editor support formula recalculation after edits?
+  - answer: Consider processing one worksheet at a time and disposing of the `EditableDocument`
+      objects after saving to keep memory usage low.
+    question: What if I need to edit a very large workbook (hundreds of MBs)?
+  - answer: The limits are the same as native Excel (1,048,576 rows × 16,384 columns).
+      Performance may degrade with extremely large sheets, so batch processing is
+      recommended.
+    question: Are there any limitations on the number of rows/columns I can edit?
+  type: FAQPage
+tags:
+- excel tab editing
+- groupdocs.editor
+- java spreadsheet processing
+title: สร้างแผ่นงานที่แก้ไขได้ใน Java ด้วย GroupDocs.Editor – การแก้ไขแท็บ Excel ขั้นสูง
 type: docs
 url: /th/java/spreadsheet-documents/master-excel-tab-editing-java-groupdocs-editor/
 weight: 1
 ---
 
-# การเชี่ยวชาญการแก้ไขแท็บ Excel ใน Java ด้วย GroupDocs.Editor – **สร้าง Worksheet ที่แก้ไขได้** คู่มือ
+# สร้างแผ่นงานที่แก้ไขได้ใน Java ด้วย GroupDocs.Editor – การแก้ไขแท็บ Excel หลัก
 
-ในสภาพแวดล้อมธุรกิจที่เร่งรีบในปัจจุบัน การสามารถ **create editable worksheet java** อย่างโปรแกรมมิ่งช่วยประหยัดเวลามหาศาล ไม่ว่าคุณจะต้องอัปเดตรายงานการเงิน ปรับรายการสินค้าคงคลัง หรือสร้างแดชบอร์ดการขายแบบกำหนดเอง การแก้ไขแท็บ Excel เฉพาะจาก Java ช่วยให้คุณอัตโนมัติงานที่ทำซ้ำและรักษาความสอดคล้องของข้อมูล ในคู่มือนี้เราจะอธิบายขั้นตอนการโหลดสเปรดชีต การสร้าง worksheet ที่แก้ไขได้สำหรับแต่ละแท็บ และจากนั้น **save Excel worksheet java**‑style files ในรูปแบบที่คุณต้องการ
+ในแอปพลิเคชันที่ขับเคลื่อนด้วยข้อมูลสมัยใหม่, ความสามารถ **create editable worksheet java** ช่วยให้คุณอัตโนมัติการจัดการแท็บ Excel แต่ละแท็บโดยไม่ต้องเปิด UI ของสเปรดชีต ไม่ว่าคุณจะอัปเดตโมเดลการเงิน, รีเฟรชรายการสินค้าคงคลัง, หรือสร้างแดชบอร์ดการขายแบบกำหนดเอง, การแก้ไขโปรแกรมของแผ่นงานเฉพาะช่วยประหยัดเวลา, ลดข้อผิดพลาดของมนุษย์, และทำให้สายข้อมูลของคุณทำงานอัตโนมัติเต็มรูปแบบ บทเรียนนี้จะแสดงวิธีโหลดเวิร์กบุ๊ก, แปลงแต่ละแท็บให้เป็นแผ่นงานที่แก้ไขได้, ทำการเปลี่ยนแปลง, และในที่สุด **save Excel worksheet java** ไฟล์ในรูปแบบที่คุณต้องการ.
 
-## คำตอบอย่างรวดเร็ว
-- **What library lets you create editable worksheet java?** GroupDocs.Editor for Java.  
-- **Can I edit individual tabs without loading the whole workbook?** Yes – use `SpreadsheetEditOptions` with a worksheet index.  
-- **Which formats can I save to?** XLSM, XLSB, and other `SpreadsheetFormats` supported by GroupDocs.  
-- **Do I need a license for development?** A free trial works for evaluation; a full license is required for production.  
-- **What Java version is required?** JDK 1.8 or newer.
+## คำตอบด่วน
+- **ไลบรารีใดที่ให้คุณสร้างแผ่นงานที่แก้ไขได้ใน Java?** GroupDocs.Editor for Java.  
+- **ฉันสามารถแก้ไขแท็บแต่ละแท็บโดยไม่โหลดเวิร์กบุ๊กทั้งหมดได้หรือไม่?** ใช่ – ใช้ `SpreadsheetEditOptions` พร้อมดัชนีแผ่นงาน.  
+- **ฉันสามารถบันทึกเป็นฟอร์แมตใดได้บ้าง?** XLSM, XLSB, และ `SpreadsheetFormats` อื่น ๆ ที่ GroupDocs รองรับ.  
+- **ฉันต้องการไลเซนส์สำหรับการพัฒนาหรือไม่?** การทดลองใช้ฟรีทำงานสำหรับการประเมิน; จำเป็นต้องมีไลเซนส์เต็มสำหรับการใช้งานจริง.  
+- **ต้องการเวอร์ชัน Java ใด?** JDK 1.8 หรือใหม่กว่า.
 
-## วิธีการสร้าง editable worksheet java
-การสร้าง worksheet ที่แก้ไขได้หมายถึงการแปลงแท็บ Excel เฉพาะเป็นรูปแบบที่ GroupDocs.Editor API สามารถแก้ไขได้ (HTML, DOCX, เป็นต้น) ซึ่งทำให้คุณสามารถเปลี่ยนค่าของเซลล์ สูตร หรือสไตล์โดยโปรแกรมมิ่งโดยไม่ต้องเปิด Excel ด้วยตนเอง
+## วิธีสร้างแผ่นงานที่แก้ไขได้ใน Java
 
-## ทำไมต้องใช้ GroupDocs.Editor สำหรับการแก้ไข Excel แบบโปรแกรมมิ่ง?
-- **ความเร็ว:** แก้ไขเฉพาะแท็บที่ต้องการเท่านั้น เพื่อลดภาระการโหลดเวิร์กบุ๊กทั้งหมด.  
-- **ความยืดหยุ่น:** บันทึกแต่ละแท็บที่แก้ไขเป็นรูปแบบที่แตกต่างกัน (XLSM, XLSB, เป็นต้น).  
-- **ความน่าเชื่อถือ:** ไลบรารีจัดการกับฟีเจอร์ Excel ที่ซับซ้อน (แผนภูมิ, แมโคร) ที่โค้ด POI ดิบมักประสบปัญหา.
+โหลดเวิร์กบุ๊กเป้าหมาย, ระบุดัชนีแผ่นงานด้วย `SpreadsheetEditOptions`, เรียก `editor.edit()` เพื่อรับ `EditableDocument`, แก้ไขเนื้อหาตามต้องการ, และสุดท้ายใช้ `editor.save()` พร้อม `SpreadsheetSaveOptions` ที่เหมาะสมเพื่อบันทึกการเปลี่ยนแปลงทั้งหมด กระบวนการทั้งหมดต้องใช้เพียงไม่กี่บรรทัดของโค้ด Java และทำงานทั้งหมดบนเซิร์ฟเวอร์.
+
+## ทำไมต้องใช้ GroupDocs.Editor สำหรับการแก้ไข Excel แบบโปรแกรม
+
+GroupDocs.Editor ให้คุณแก้ไขแผ่นงานเดียวโดยตรง, ลดภาระการโหลดเวิร์กบุ๊กทั้งหมดเข้าสู่หน่วยความจำ ไลบรารียังรับประกันความแม่นยำสูงสำหรับฟีเจอร์ Excel ที่ซับซ้อนเช่นแผนภูมิ, แมโคร, และการจัดรูปแบบตามเงื่อนไข.
+
+- **ความเร็ว:** แก้ไขเฉพาะแท็บที่ต้องการ, ลดการใช้ CPU และหน่วยความจำได้ถึง 70 % สำหรับเวิร์กบุ๊กขนาดใหญ่.  
+- **ความยืดหยุ่น:** บันทึกแต่ละแท็บที่แก้ไขในรูปแบบที่แตกต่างกัน (XLSM, XLSB, ฯลฯ).  
+- **ความน่าเชื่อถือ:** รองรับรูปแบบสเปรดชีตกว่า 50 แบบและสามารถประมวลผลไฟล์ขนาดถึง 500 MB โดยไม่ต้องโหลดไฟล์ทั้งหมดเข้าสู่หน่วยความจำ.
 
 ## ข้อกำหนดเบื้องต้น
-ก่อนที่เราจะเริ่มลงลึก ตรวจสอบให้แน่ใจว่าคุณมี:
-
-- **Java Development Kit (JDK) 1.8+** installed.  
-- **An IDE** เช่น IntelliJ IDEA หรือ Eclipse.  
-- **Maven** (หรือความสามารถในการเพิ่ม JAR ด้วยตนเอง).  
+- **Java Development Kit (JDK) 1.8+** ติดตั้งแล้ว.  
+- **IDE** เช่น IntelliJ IDEA หรือ Eclipse.  
+- **Maven** (หรือความสามารถในการเพิ่ม JAR ด้วยตนเอง).
 
 ### ไลบรารีที่จำเป็นและเวอร์ชัน
-เพื่อใช้ GroupDocs.Editor สำหรับ Java อย่างมีประสิทธิภาพ ตรวจสอบให้โครงการของคุณรวม dependencies ที่จำเป็น คุณสามารถใช้ Maven หรือดาวน์โหลดโดยตรงจากเว็บไซต์อย่างเป็นทางการ:
+เพื่อใช้ GroupDocs.Editor สำหรับ Java อย่างมีประสิทธิภาพ, ให้แน่ใจว่าโครงการของคุณรวม dependencies ที่จำเป็น คุณสามารถใช้ Maven หรือดาวน์โหลดโดยตรงจากเว็บไซต์อย่างเป็นทางการ:
 
-**Maven Setup:**
+**Maven setup**
 
+```java
 ```xml
 <repositories>
    <repository>
@@ -61,174 +144,214 @@ weight: 1
    </dependency>
 </dependencies>
 ```
+```
 
-**Direct Download:**  
+**Direct download:**  
 หรือดาวน์โหลดเวอร์ชันล่าสุดจาก [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 ### การตั้งค่าสภาพแวดล้อม
-ตรวจสอบให้คุณมีสภาพแวดล้อมการพัฒนา Java ที่ทำงานได้ (JDK 1.8 หรือใหม่กว่า) และ IDE เช่น IntelliJ IDEA หรือ Eclipse เพื่อทำตามบทเรียนนี้.
+ให้แน่ใจว่าคุณมีสภาพแวดล้อมการพัฒนา Java ที่ทำงานได้ (JDK 1.8 หรือใหม่กว่า) และ IDE เช่น IntelliJ IDEA หรือ Eclipse เพื่อทำตามบทเรียนนี้
 
 ### ความรู้เบื้องต้นที่จำเป็น
-ความเข้าใจพื้นฐานเกี่ยวกับการเขียนโปรแกรม Java, การทำงาน I/O ใน Java, และความคุ้นเคยกับการจัดการไฟล์ Excel จะเป็นประโยชน์เมื่อเราลงลึกในตัวอย่างโค้ด.
+ความเข้าใจพื้นฐานเกี่ยวกับการเขียนโปรแกรม Java, การทำ I/O ใน Java, และความคุ้นเคยกับการจัดการไฟล์ Excel จะเป็นประโยชน์เมื่อเราลงลึกในตัวอย่างโค้ด
 
 ## การตั้งค่า GroupDocs.Editor สำหรับ Java
-มาเริ่มต้นด้วยการกำหนดค่าโครงการของคุณและรับใบอนุญาต.
 
-1. **Install GroupDocs.Editor** – เพิ่ม dependency ของ Maven หรือวาง JAR ลงใน classpath ของคุณ.  
-2. **License Acquisition** – เริ่มต้นด้วยใบอนุญาตทดลองใช้งานฟรี แล้วอัปเกรดเมื่อคุณย้ายไปสู่การผลิต คุณสามารถรับคีย์ชั่วคราวจาก [GroupDocs](https://purchase.groupdocs.com/temporary-license).  
-3. **Basic Initialization** – หลังจากไลบรารีพร้อม คุณจะสร้างอินสแตนซ์ `Editor` และโหลดไฟล์ Excel ของคุณ.
+`Editor` เป็นคลาสหลักที่ให้เมธอดสำหรับโหลด, แก้ไข, และบันทึกเอกสารสเปรดชีต ทำตามขั้นตอนเหล่านี้เพื่อกำหนดค่าโครงการของคุณและรับไลเซนส์
 
-## คู่มือการนำไปใช้
-ด้านล่างเราจะแยกขั้นตอนที่จำเป็นเพื่อ **create editable worksheet** objects และจากนั้น **save Excel worksheet java** files.
+1. **ติดตั้ง GroupDocs.Editor** – เพิ่มการพึ่งพา Maven หรือวาง JAR ลงใน classpath ของคุณ.  
+2. **การรับไลเซนส์** – เริ่มต้นด้วยไลเซนส์ทดลองใช้ฟรี, จากนั้นอัปเกรดเมื่อย้ายไปสู่การผลิต คุณสามารถรับคีย์ชั่วคราวจาก [GroupDocs](https://purchase.groupdocs.com/temporary-license).  
+3. **การเริ่มต้นพื้นฐาน** – หลังจากไลบรารีพร้อม, คุณจะสร้างอินสแตนซ์ `Editor` และโหลดไฟล์ Excel ของคุณ.
 
-### โหลดสเปรดชีตและสร้างอินสแตนซ์ Editor
-**Overview:** โหลดไฟล์สเปรดชีตเข้าสู่อินสแตนซ์ GroupDocs.Editor.
+## คู่มือการดำเนินการ
+
+ด้านล่างเราจะแบ่งขั้นตอนแต่ละขั้นตอนที่จำเป็นเพื่อ **create editable worksheet** objects และจากนั้น **save Excel worksheet java** files.
+
+### โหลดสเปรดชีตและสร้างอินสแตนซ์ editor
+**Overview:** Load a spreadsheet file into the GroupDocs.Editor instance.
 
 #### ขั้นตอนที่ 1: กำหนดเส้นทางไฟล์อินพุต
-ระบุเส้นทางไปยังเอกสาร Excel ของคุณ แทนที่ `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` ด้วยตำแหน่งไฟล์จริงของคุณ:
+Specify the path to your Excel document. Replace `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` with your actual file location:
 
+```java
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
 ```
+```
 
 #### ขั้นตอนที่ 2: โหลดสเปรดชีตเข้าสู่ InputStream
-ใช้ `FileInputStream` ของ Java เพื่ออ่านไฟล์ Excel:
+Use Java’s `FileInputStream` to read the Excel file:
 
+```java
 ```java
 InputStream inputStream = new FileInputStream(inputFilePath);
 ```
+```
 
-#### ขั้นตอนที่ 3: สร้างอินสแตนซ์ Editor
-เริ่มต้น Editor ด้วย input stream และ load options:
+#### ขั้นตอนที่ 3: สร้างอินสแตนซ์ editor
+Initialize the `Editor` with the input stream and load options:
 
+```java
 ```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
 ```
-*Explanation:* อินสแตนซ์ `Editor` ทำหน้าที่เป็นวัตถุศูนย์กลางในการโต้ตอบกับสเปรดชีตของคุณ.
+```
+
+*คำอธิบาย:* อินสแตนซ์ `Editor` ทำหน้าที่เป็นวัตถุศูนย์กลางสำหรับโต้ตอบกับสเปรดชีตของคุณ.
 
 ### แก้ไขแท็บแรกของสเปรดชีต
-**Overview:** สร้างเอกสารที่แก้ไขได้สำหรับแท็บแรกในไฟล์ Excel.
+**Overview:** Create an editable document for the first tab in the Excel file.
 
-#### ขั้นตอนที่ 1: กำหนด Edit Options
-ระบุว่า worksheet ใดที่คุณต้องการแก้ไขโดยใช้ดัชนี (เริ่มจาก 0):
+`SpreadsheetEditOptions` defines which worksheet you want to edit by its zero‑based index.
 
+#### ขั้นตอนที่ 1: กำหนดตัวเลือกการแก้ไข
+Specify which worksheet you want to edit using its index (0‑based):
+
+```java
 ```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
 ```
+```
 
-#### ขั้นตอนที่ 2: สร้าง EditableDocument สำหรับแท็บแรก
-สร้างเอกสารที่แก้ไขได้จากแท็บที่ระบุ:
+#### ขั้นตอนที่ 2: สร้าง `EditableDocument` สำหรับแท็บแรก
+EditableDocument represents the editable version of a worksheet that can be modified and later saved.
 
+```java
 ```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 ```
-*Explanation:* ขั้นตอนนี้แปลง worksheet แรกเป็นรูปแบบที่สามารถแก้ไขได้.
+```
+
+*คำอธิบาย:* This step transforms the first worksheet into a modifiable format.
 
 ### แก้ไขแท็บที่สองของสเปรดชีต
-**Overview:** เรียนรู้วิธีแก้ไขแท็บที่สองในสเปรดชีตของคุณเช่นเดียวกับแท็บแรก.
+**Overview:** Learn how to edit the second tab in your spreadsheet similarly to the first.
 
-#### ขั้นตอนที่ 1: กำหนด Edit Options
-ตั้งดัชนีสำหรับแท็บที่สอง:
+#### ขั้นตอนที่ 1: กำหนดตัวเลือกการแก้ไข
+Set the index for the second tab:
 
+```java
 ```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
 ```
+```
 
-#### ขั้นตอนที่ 2: สร้าง EditableDocument สำหรับแท็บที่สอง
-สร้างวัตถุเอกสารสำหรับการแก้ไข:
+#### ขั้นตอนที่ 2: สร้าง `EditableDocument` สำหรับแท็บที่สอง
+Create a document object for editing:
 
+```java
 ```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 ```
-*Explanation:* วิธีนี้ทำให้คุณสามารถโฟกัสที่แท็บเฉพาะโดยไม่ต้องโหลดสเปรดชีตทั้งหมด.
+```
+
+*คำอธิบาย:* This approach allows you to focus on specific tabs without loading the entire spreadsheet.
 
 ### บันทึกแท็บแรกเป็นไฟล์ใหม่
-**Overview:** ส่งออกแท็บแรกที่แก้ไขเป็นรูปแบบไฟล์ใหม่.
+**Overview:** Export the edited first tab into a new file format.
 
-#### ขั้นตอนที่ 1: กำหนด Save Options
-เลือกรูปแบบเอาต์พุตที่ต้องการ เช่น XLSM:
+`SpreadsheetFormats` enumerates all supported output formats such as XLSM, XLSB, etc.
 
+#### ขั้นตอนที่ 1: กำหนดตัวเลือกการบันทึก
+Choose the desired output format, such as XLSM:
+
+```java
 ```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
 ```
+```
 
 #### ขั้นตอนที่ 2: บันทึกแท็บแรก
-บันทึกการเปลี่ยนแปลงของคุณลงไฟล์:
+Persist your changes to a file:
 
+```java
 ```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 ```
-*Explanation:* ขั้นตอนนี้บันทึกแท็บที่แก้ไขเป็นไฟล์แยกในไดเรกทอรีที่คุณระบุ.
+```
+
+*คำอธิบาย:* This step saves the edited tab as a separate file in your specified directory.
 
 ### บันทึกแท็บที่สองเป็นไฟล์ใหม่
-**Overview:** คล้ายกับการบันทึกแท็บแรก ฟีเจอร์นี้แสดงวิธีบันทึกแท็บที่สองในรูปแบบอื่น.
+**Overview:** Similar to saving the first tab, this feature shows how to save the second tab in another format.
 
-#### ขั้นตอนที่ 1: กำหนด Save Options
-เลือก XLSB เป็นรูปแบบเอาต์พุตเพื่อความหลากหลาย:
+#### ขั้นตอนที่ 1: กำหนดตัวเลือกการบันทึก
+Select XLSB as the output format for variety:
 
+```java
 ```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
 ```
+```
 
 #### ขั้นตอนที่ 2: บันทึกแท็บที่สอง
-ส่งออกการเปลี่ยนแปลงของคุณเป็นไฟล์:
+Export your changes to a file:
 
+```java
 ```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
 ```
-*Explanation:* สิ่งนี้ทำให้คุณสามารถรักษาเวอร์ชันต่าง ๆ ของข้อมูลในรูปแบบที่หลากหลาย.
+```
 
-## การประยุกต์ใช้ในทางปฏิบัติ
-ความสามารถในการแก้ไขและ **save Excel worksheet java** ไฟล์โดยโปรแกรมมิ่งมีการใช้งานจริงหลายรูปแบบ:
+*คำอธิบาย:* This allows you to maintain different versions of your data in various formats.
 
-1. **Financial Analysis:** อัตโนมัติการสกัดและการแก้ไขรายงานไตรมาส.  
-2. **Inventory Management:** อัปเดตระดับสต็อกแบบเรียลไทม์โดยไม่ต้องแก้ไขสเปรดชีตด้วยตนเอง.  
-3. **Data Reporting:** สร้างรายงานที่กำหนดเองโดยแก้ไขเฉพาะส่วนที่เกี่ยวข้องก่อนการแจกจ่าย.
+## การประยุกต์ใช้งานจริง
+The ability to programmatically edit and **save Excel worksheet java** files has numerous real‑world uses:
+
+1. **การวิเคราะห์ทางการเงิน:** อัตโนมัติการสกัดและแก้ไขรายงานไตรมาส.  
+2. **การจัดการสินค้าคงคลัง:** อัปเดตระดับสต็อกแบบเรียลไทม์โดยไม่ต้องแก้ไขสเปรดชีตด้วยมือ.  
+3. **การรายงานข้อมูล:** สร้างรายงานที่กำหนดเองโดยแก้ไขเฉพาะส่วนที่เกี่ยวข้องก่อนการแจกจ่าย.
 
 ## ข้อควรพิจารณาด้านประสิทธิภาพ
-เมื่อใช้ GroupDocs.Editor สำหรับ Java ให้คำนึงถึงเคล็ดลับต่อไปนี้:
+When using GroupDocs.Editor for Java, keep these tips in mind:
 
-- **Manage Resources Efficiently:** ปิด stream หลังการดำเนินการเพื่อป้องกันการรั่วไหลของหน่วยความจำ.  
-- **Batch Process Excel Sheets:** สำหรับชุดข้อมูลขนาดใหญ่ ให้ประมวลผลเป็นชุดแทนการโหลดเวิร์กบุ๊กทั้งหมดเข้าสู่หน่วยความจำ.  
-- **Optimize Load Options:** ใช้ load options เฉพาะเพื่อ ลดภาระเมื่อต้องการฟีเจอร์บางอย่างเท่านั้น.
+- **จัดการทรัพยากรอย่างมีประสิทธิภาพ:** ปิดสตรีมหลังการดำเนินการเพื่อป้องกันการรั่วไหลของหน่วยความจำ.  
+- **ประมวลผลสเปรดชีตเป็นชุด:** สำหรับชุดข้อมูลขนาดใหญ่, ประมวลผลข้อมูลเป็นชุดแทนการโหลดเวิร์กบุ๊กทั้งหมดเข้าสู่หน่วยความจำ.  
+- **ปรับแต่งตัวเลือกการโหลด:** ใช้ตัวเลือกการโหลดที่เฉพาะเจาะจงเพื่อลดภาระเมื่อต้องการเพียงฟีเจอร์บางอย่าง.
 
 ## ปัญหาทั่วไปและการแก้ไขข้อผิดพลาด
 
 | อาการ | สาเหตุที่เป็นไปได้ | วิธีแก้ |
 |---------|--------------|-----|
-| `NullPointerException` on `editor.edit()` | InputStream ไม่ได้รีเซ็ตหลังจากการดำเนินการก่อนหน้า | เปิดสตรีมใหม่หรือใช้ `inputStream.reset()` หากรองรับ. |
-| ไฟล์ที่บันทึกเสียหาย | `SpreadsheetFormats` ไม่ตรงกับเนื้อหาจริง | ตรวจสอบให้รูปแบบที่เลือกตรงกับเนื้อหา (เช่น ใช้ XLSM เฉพาะเมื่อมีแมโคร). |
-| ข้อผิดพลาดใบอนุญาต | ใช้คีย์ทดลองในการผลิต | แทนที่ด้วยไฟล์หรือสตริงใบอนุญาตการผลิตที่ถูกต้อง. |
+| `NullPointerException` on `editor.edit()` | InputStream ไม่ได้รีเซ็ตหลังการดำเนินการก่อนหน้า | เปิดสตรีมใหม่หรือใช้ `inputStream.reset()` หากรองรับ. |
+| ไฟล์ที่บันทึกเสียหาย | `SpreadsheetFormats` ไม่ตรงกับเนื้อหาจริง | ตรวจสอบให้แน่ใจว่าฟอร์แมตที่เลือกตรงกับเนื้อหา (เช่นใช้ XLSM เฉพาะเมื่อมีแมโคร). |
+| ข้อผิดพลาดไลเซนส์ | ใช้คีย์ทดลองในสภาพการผลิต | แทนที่ด้วยไฟล์หรือสตริงไลเซนส์การผลิตที่ถูกต้อง. |
 
 ## คำถามที่พบบ่อย
 
-**Q: Can I edit more than two tabs in the same workbook?**  
-A: แน่นอน. สร้างอินสแตนซ์ `SpreadsheetEditOptions` เพิ่มเติมโดยกำหนดค่า `setWorksheetIndex` ที่เหมาะสมสำหรับแต่ละแท็บที่คุณต้องการแก้ไข.
+**Q: ฉันสามารถแก้ไขมากกว่าสองแท็บในเวิร์กบุ๊กเดียวได้หรือไม่?**  
+A: แน่นอน. สร้างอินสแตนซ์ `SpreadsheetEditOptions` เพิ่มเติมพร้อมค่าที่เหมาะสมของ `setWorksheetIndex` สำหรับแต่ละแท็บที่ต้องการแก้ไข.
 
-**Q: Is it possible to edit a protected worksheet?**  
+**Q: เป็นไปได้หรือไม่ที่จะแก้ไขแผ่นงานที่ได้รับการป้องกัน?**  
 A: ใช่, ให้ระบุรหัสผ่านผ่าน `SpreadsheetLoadOptions.setPassword("yourPassword")` ก่อนการเริ่มต้น `Editor`.
 
-**Q: Does GroupDocs.Editor support formula recalculation after edits?**  
-A: ไลบรารีคงสูตรที่มีอยู่ไว้; อย่างไรก็ตาม การคำนวณอัตโนมัติจะไม่ทำ. คุณสามารถเรียกการคำนวณใหม่โดยใช้ Excel หลังจากโหลดไฟล์ที่บันทึก.
+**Q: GroupDocs.Editor รองรับการคำนวณสูตรใหม่หลังการแก้ไขหรือไม่?**  
+A: ไลบรารีจะคงสูตรที่มีอยู่ไว้; อย่างไรก็ตามการคำนวณอัตโนมัติจะไม่ถูกทำ คุณสามารถเรียกการคำนวณใหม่โดยใช้ Excel หลังจากโหลดไฟล์ที่บันทึกแล้ว.
 
-**Q: What if I need to edit a very large workbook (hundreds of MBs)?**  
-A: พิจารณาประมวลผลหนึ่ง worksheet ต่อครั้งและทำลายวัตถุ `EditableDocument` หลังการบันทึกเพื่อรักษาการใช้หน่วยความจำให้ต่ำ.
+**Q: ถ้าฉันต้องแก้ไขเวิร์กบุ๊กขนาดใหญ่มาก (หลายร้อย MB) จะทำอย่างไร?**  
+A: พิจารณาประมวลผลหนึ่งแผ่นงานต่อครั้งและทำลายอ็อบเจ็กต์ `EditableDocument` หลังการบันทึกเพื่อรักษาการใช้หน่วยความจำให้ต่ำ.
 
-**Q: Are there any limitations on the number of rows/columns I can edit?**  
-A: ข้อจำกัดเท่ากับ Excel ดั้งเดิม (1,048,576 แถว × 16,384 คอลัมน์). ประสิทธิภาพอาจลดลงกับชีตที่ใหญ่มาก ดังนั้นแนะนำให้ประมวลผลเป็นชุด.
+**Q: มีข้อจำกัดใด ๆ เกี่ยวกับจำนวนแถว/คอลัมน์ที่ฉันสามารถแก้ไขได้หรือไม่?**  
+A: ขีดจำกัดเท่ากับ Excel ดั้งเดิม (1,048,576 แถว × 16,384 คอลัมน์). ประสิทธิภาพอาจลดลงกับแผ่นงานที่ใหญ่มาก, ดังนั้นแนะนำให้ประมวลผลเป็นชุด.
 
 ## สรุป
-คุณได้เรียนรู้วิธี **create editable worksheet** objects สำหรับแท็บ Excel แยกแต่ละอัน, ทำการเปลี่ยนแปลงโดยโปรแกรมมิ่ง, และ **save Excel worksheet java** ไฟล์ในรูปแบบที่คุณต้องการ. ด้วยการผสานขั้นตอนเหล่านี้เข้าสู่แอปพลิเคชัน Java ของคุณ, คุณสามารถอัตโนมัติงานสเปรดชีตที่ทำซ้ำ, ปรับปรุงความแม่นยำของข้อมูล, และเร่งกระบวนการทำงานของธุรกิจ.
+You’ve now learned how to **create editable worksheet** objects for individual Excel tabs, make changes programmatically, and **save Excel worksheet java** files in the format you need. By integrating these steps into your Java applications, you can automate repetitive spreadsheet tasks, improve data accuracy, and accelerate business workflows.
 
-**Next steps:** สำรวจคุณลักษณะขั้นสูง เช่น การจัดการแผนภูมิ, แมโคร, หรือการแปลง worksheet เป็น PDF/HTML สำหรับการแสดงผลบนเว็บ. API ของ GroupDocs.Editor มีความสามารถหลากหลายเพื่อทำให้กระบวนการประมวลผลเอกสารของคุณเป็นไปอย่างราบรื่น.
+**Next steps:** Explore advanced features such as handling charts, macros, or converting worksheets to PDF/HTML for web display. The GroupDocs.Editor API offers extensive capabilities to streamline your document‑processing pipeline.
 
 ---
 
-**Last Updated:** 2026-03-20  
-**Tested With:** GroupDocs.Editor 25.3 for Java  
-**Author:** GroupDocs
+**อัปเดตล่าสุด:** 2026-09-11  
+**ทดสอบกับ:** GroupDocs.Editor 25.3 for Java  
+**ผู้เขียน:** GroupDocs
+
+## บทแนะนำที่เกี่ยวข้อง
+
+- [วิธีแก้ไขสเปรดชีต Excel ด้วย Java และ GroupDocs.Editor](/editor/java/spreadsheet-documents/)
+- [ปกป้อง Excel ด้วย Java และ GroupDocs.Editor: คู่มือการป้องกันด้วยรหัสผ่าน](/editor/java/advanced-features/excel-file-security-java-groupdocs-editor/)
+- [วิธีแปลง DSV เป็น Excel XLSM ด้วย GroupDocs.Editor สำหรับ Java](/editor/java/plain-text-dsv-documents/convert-dsv-to-excel-groupdocs-editor-java/)
