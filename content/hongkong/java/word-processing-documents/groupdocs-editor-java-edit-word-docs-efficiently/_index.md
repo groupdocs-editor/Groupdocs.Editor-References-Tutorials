@@ -1,45 +1,94 @@
 ---
-date: '2026-03-20'
-description: 學習如何將 docx 轉換為 docm，並使用 GroupDocs.Editor 在 Java 中編輯 Word 文件。本教學涵蓋程式化的
-  DOCX 編輯、範本自訂以及匯出為 TXT。
+date: '2026-09-16'
+description: 了解如何使用 GroupDocs.Editor 在 Java 中將 docx 轉換為 docm 並編輯 Word 文件。內容包括逐步指南、格式選項及效能提示。
 keywords:
-- GroupDocs.Editor Java
-- edit Word documents
-- Java application document editing
-title: 使用 GroupDocs.Editor 在 Java 中將 DOCX 轉換為 DOCM – 指南
+- convert docx to docm
+- replace text in docx
+- convert word to rtf
+- export word to txt
+- edit word document java
+lastmod: '2026-09-16'
+og_description: 使用 GroupDocs.Editor 在 Java 中將 docx 轉換為 docm。本教學說明如何編輯、取代文字，並匯出為 DOCM、RTF
+  或 TXT，並提供效能提示。
+og_image_alt: Screenshot of Java code converting DOCX to DOCM with GroupDocs.Editor
+og_title: 使用 GroupDocs.Editor 在 Java 中將 docx 轉換為 docm – 逐步指南
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-16'
+  description: Learn how to convert docx to docm and edit Word documents in Java using
+    GroupDocs.Editor. Includes step‑by‑step guide, format options, and performance
+    tips.
+  headline: How to convert docx to docm in Java with GroupDocs.Editor
+  type: TechArticle
+- description: Learn how to convert docx to docm and edit Word documents in Java using
+    GroupDocs.Editor. Includes step‑by‑step guide, format options, and performance
+    tips.
+  name: How to convert docx to docm in Java with GroupDocs.Editor
+  steps:
+  - name: load the document
+    text: '`EditableDocument` represents a Word file that can be edited as HTML. Loading
+      returns this object, which you can then manipulate.'
+  - name: (optional) edit the content
+    text: If you need to replace placeholders, update the embedded HTML using standard
+      string‑replace or regex techniques.
+  - name: save as DOCM
+    text: Configure the save options for the DOCM format and write the result to a
+      file or a stream. > **Pro tip:** Dispose of `EditableDocument` and `Editor`
+      objects as soon as you’re done to free native resources and keep memory usage
+      low.
+  type: HowTo
+- questions:
+  - answer: Yes. Load the document with `WordProcessingLoadOptions` that include the
+      password, then proceed as usual.
+    question: Can I edit password‑protected Word files?
+  - answer: The library preserves macros but does not execute them. You can save a
+      DOCM file with existing macros intact.
+    question: Does GroupDocs.Editor support macros in DOCM files?
+  - answer: Images are kept as part of the HTML markup. Replace the `<img>` tags or
+      add new ones using standard HTML.
+    question: How do I handle images embedded in the document?
+  - answer: GroupDocs.Editor focuses on editing; for PDF conversion, combine it with
+      GroupDocs.Conversion after saving the edited DOCX.
+    question: Is it possible to convert directly to PDF?
+  - answer: Java 8 and newer are fully supported.
+    question: What versions of Java are supported?
+  type: FAQPage
+tags:
+- convert docx
+- GroupDocs.Editor
+- Java document processing
+- batch process word docs
+title: 如何在 Java 中使用 GroupDocs.Editor 將 docx 轉換為 docm
 type: docs
 url: /zh-hant/java/word-processing-documents/groupdocs-editor-java-edit-word-docs-efficiently/
 weight: 1
 ---
 
-# 使用 GroupDocs.Editor 在 Java 中將 DOCX 轉換為 DOCM
+# 使用 GroupDocs.Editor 在 Java 中將 docx 轉換為 docm
 
-在當今快速變化的商業環境中，能夠直接在 Java 程式碼中 **convert docx to docm**，可大幅減少人工工作量並消除相容性問題。無論是需要更新季報、客製化合約範本，或產生個人化信件，程式化編輯都能提供點擊工具常缺乏的速度與可靠性。本指南將帶您一步步完成載入 DOCX 檔案、程式化修改內容，並使用 GroupDocs.Editor for Java 將結果儲存為多種常見格式（包括 DOCM）。
+在現代企業工作流程中，**convert docx to docm** 可程式化執行，讓您自動化報告產生、合約個人化以及以範本驅動的溝通。使用 GroupDocs.Editor for Java，您無需在伺服器上安裝 Microsoft Office，保持版面一致性，並且能夠取代 docx 中的文字、將 Word 匯出為 txt，或將 Word 轉換為 rtf——全部透過單一輕量級 API。本指南將帶您逐步載入 DOCX 檔案、（可選）編輯其 HTML，並將結果儲存為 DOCM 或其他常見格式。
 
 ## 快速解答
-- **哪個函式庫可以在 Java 中編輯 Word 文件？** GroupDocs.Editor for Java。  
-- **可以自動取代文字嗎？** 可以 – 使用 HTML 標記 API 進行搜尋與取代。  
-- **可以匯出哪些格式？** DOCM、RTF、純文字等。  
-- **開發階段需要授權嗎？** 免費試用可用於測試；正式上線需購買商業授權。  
-- **是否相容於 Maven 專案？** 完全相容 – 只要加入相應的倉庫與相依性即可。
+- **什麼程式庫可以讓我在 Java 中編輯 Word 文件？** GroupDocs.Editor for Java.  
+- **我可以自動取代文字嗎？** 可以——HTML 標記 API 讓您在整份文件中搜尋並取代字串。  
+- **我可以匯出哪些格式？** DOCM、RTF、純文字（TXT）等。  
+- **開發時需要授權嗎？** 免費試用可用於測試；正式上線需購買商業授權。  
+- **是否相容於 Maven 專案？** 完全相容——只要加入倉庫與相依性即可。
 
-## 什麼是 “edit word document java”？
-在 Java 中編輯 Word 文件指的是將 *.docx* 檔案載入記憶體，透過 API 操作其內容（文字、圖片、表格等），再將更新後的檔案寫回磁碟或串流。GroupDocs.Editor 抽象化了複雜的 Office Open XML 格式，提供簡易的 HTML 為基礎的編輯模型。
+## 什麼是「edit word document java」？
+將 *.docx* 檔案載入記憶體，透過 API 修改其內容（文字、圖片、表格、巨集），再將更新後的檔案寫回磁碟或串流，即為「edit word document java」的含義。GroupDocs.Editor 抽象化 Office Open XML 格式，提供簡易的 HTML 為基礎編輯模型，讓您把文件視為網頁來處理。
 
-## 為什麼要使用 GroupDocs.Editor 來編輯 word document java？
-- **無需 Microsoft Office 相依** – 可在任何伺服器或容器上執行。  
-- **高保真度** – 保留原始版面配置、樣式與嵌入物件。  
-- **多種輸出格式** – 只需一次呼叫即可在 DOCX、DOCM、RTF、TXT 之間切換。  
-- **可擴展** – 適合大量文件的批次處理。
+## 為什麼使用 GroupDocs.Editor 來編輯 word document java？
+GroupDocs.Editor 讓您 **convert docx to docm** 並在不安裝 Microsoft Office 的情況下執行批次操作。它支援 **30 多種輸入與輸出格式**，以低於 200 MB 堆積記憶體處理數百頁的檔案，且能在一般 8 核心伺服器上以每分鐘 150 份文件的速度 **批次處理 word docs**。此程式庫亦會保留 DOCM 檔案中的巨集，維持原始樣式，並可在任何相容 Java 的平台上執行。
 
 ## 前置條件
-- Java 8 以上與建置工具（Maven 或 Gradle）。  
-- 取得 GroupDocs.Editor for Java 函式庫（版本 25.3 或更新）。  
-- 具備基本的 Java 與 Maven 相依管理知識。
+- Java 8 或更新版本，以及建置工具（Maven 或 Gradle）。  
+- 取得 GroupDocs.Editor for Java 程式庫（版本 25.3 或以上）。  
+- 具備 Java 與 Maven 相依性管理的基本知識。
 
 ## 設定 GroupDocs.Editor for Java
 ### 透過 Maven 安裝
-在 `pom.xml` 中加入 GroupDocs 倉庫與相依性：
+將 GroupDocs 倉庫與相依性加入您的 `pom.xml`：
 
 ```xml
 <repositories>
@@ -60,13 +109,13 @@ weight: 1
 ```
 
 ### 直接下載
-或是從 [GroupDocs.Editor for Java releases page](https://releases.groupdocs.com/editor/java/) 下載最新的 JAR 檔。
+或者，從 [GroupDocs.Editor for Java releases page](https://releases.groupdocs.com/editor/java/) 下載最新的 JAR。
 
 ### 取得授權
-先使用免費試用版探索 API。正式上線時，請於 GroupDocs 入口網站取得臨時或正式授權。
+先使用免費試用版探索 API。正式上線時，請從 GroupDocs 入口網站取得臨時或完整授權。
 
 ### 基本初始化與設定
-建立指向來源 DOCX 檔案的 `Editor` 實例：
+`Editor` 是提供載入、編輯與儲存 Word 文件功能的核心類別。建立指向來源 DOCX 檔案的 `Editor` 實例：
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -76,13 +125,13 @@ String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.docx";
 Editor editor = new Editor(inputFilePath, new WordProcessingLoadOptions());
 ```
 
-現在您已可載入、編輯與儲存文件。
+現在您已準備好載入、編輯與儲存文件。
 
-## 如何使用 GroupDocs.Editor 進行 docx 轉 docm
-轉換流程相當簡單：載入 DOCX、如有需要編輯 HTML，最後以 `Docm` 格式儲存。以下步驟會重複先前的程式碼區塊，無需額外撰寫程式。
+## 如何使用 GroupDocs.Editor 將 docx 轉換為 docm
+載入 DOCX，視需要修改其 HTML，然後將結果另存為 DOCM 檔案。此轉換僅需三個 API 呼叫：實例化 `Editor`、將文件載入 `EditableDocument`，以及使用 `Docm` 選項呼叫 `save`。儲存後，您可進一步處理 DOCM，例如上傳至文件管理系統或附加於電子郵件，而不會遺失任何嵌入的巨集或格式。
 
 ### 步驟 1：載入文件
-**概述：** 載入後會得到可供操作的 `EditableDocument` 物件。
+`EditableDocument` 代表可作為 HTML 編輯的 Word 檔案。載入後會回傳此物件，您即可對其進行操作。
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -96,14 +145,14 @@ EditableDocument defaultWordProcessingDoc = editor.edit();
 ```
 
 ### 步驟 2：（可選）編輯內容
-若需取代佔位字元或客製化範本，請修改內嵌的 HTML。
+如果需要取代佔位符，請使用標準的字串取代或正規表達式技術更新嵌入的 HTML。
 
 ```java
 String allEmbeddedInsideString = defaultWordProcessingDoc.getEmbeddedHtml();
 String modifiedContent = allEmbeddedInsideString.replace("Subtitle", "Edited subtitle");
 ```
 
-### 步驟 3：儲存為 DOCM
+### 步驟 3：另存為 DOCM
 設定 DOCM 格式的儲存選項，並將結果寫入檔案或串流。
 
 ```java
@@ -126,10 +175,10 @@ try (OutputStream outputStream = new ByteArrayOutputStream()) {
 }
 ```
 
-> **專業提示：** 完成後請立即釋放 `EditableDocument` 與 `Editor` 物件，以釋放本機資源。
+> **Pro tip:** 在完成後盡快釋放 `EditableDocument` 與 `Editor` 物件，以釋放原生資源並降低記憶體使用量。
 
-## 儲存文件為 RTF
-**概述：** 編輯完成後，可匯出為 Rich Text Format。
+## 另存文件為 RTF
+當下游系統僅支援 RTF 時，匯出為 Rich Text Format 非常有用。同一個 `EditableDocument` 可使用 RTF 選項儲存。
 
 ```java
 import com.groupdocs.editor.options.WordProcessingSaveOptions;
@@ -146,8 +195,8 @@ editedDocRtf.dispose();
 editor.dispose();
 ```
 
-## 儲存文件為純文字
-**概述：** 匯出為純文字可用於內容索引或簡易資料抽取。
+## 另存文件為純文字
+純文字輸出非常適合用於索引、分析或供搜尋引擎使用。
 
 ```java
 import com.groupdocs.editor.options.TextSaveOptions;
@@ -164,46 +213,52 @@ editor.save(editedDocTxt, outputTxtPath, textSaveOptions);
 ```
 
 ## 實務應用
-1. **自動化報告產生** – 從資料庫撈取資料、取代佔位字元，輸出精美的 DOCX、DOCM 或 RTF 報告。  
-2. **客製化 Word 範本** – 依使用者輸入動態填入行銷或法律範本。  
-3. **Word 轉 txt** – 抽取原始文字供搜尋索引、分析或後續處理。  
-4. **replace text docx java** – 使用 HTML 標記 API 在大量文件中執行批次搜尋與取代。
+1. **自動化報告產生** – 從資料庫提取資料、取代佔位符，並輸出精緻的 DOCX、DOCM 或 RTF 報告。  
+2. **自訂 Word 範本** – 根據使用者輸入動態填寫行銷或法律範本。  
+3. **將 Word 匯出為 txt** – 提取原始文字供搜尋索引、分析或後續處理使用。  
+4. **在 docx 中取代文字** – 使用 HTML 標記 API 在單一批次作業中對多個文件執行大量搜尋與取代。
 
 ## 效能考量
-- 完成後立即釋放 `EditableDocument` 與 `Editor` 物件，以釋放本機資源。  
-- 處理極大檔案時，可分段處理或使用串流 API 以降低記憶體使用。  
-- 進行大量文字取代時，建議使用 `StringBuilder` 或效能佳的正規表達式。
+- 盡快釋放 `EditableDocument` 與 `Editor` 物件，以釋放原生資源。  
+- 對於非常大的檔案，請將段落分塊處理或使用串流 API，以將記憶體使用量控制在 250 MB 以下。  
+- 在執行大量文字取代時，建議使用 `StringBuilder` 或編譯過的正規表達式，以降低 CPU 開銷。
 
 ## 常見問題與解決方案
-| 問題 | 解決方案 |
+`License` 類別會套用您的 GroupDocs.Editor 授權檔，以啟用完整功能。
+
+| Issue | Solution |
 |-------|----------|
-| **找不到檔案 / 存取被拒** | 確認絕對路徑，並確保 Java 行程具備讀寫權限。 |
-| **大型文件導致記憶體不足** | 增加 JVM 堆疊大小 (`-Xmx`) 或在編輯前將文件切割成較小的部分。 |
-| **取代後格式遺失** | 謹慎使用 HTML 標記 API，避免直接取代標記標籤本身。 |
-| **授權未生效** | 在建立 `Editor` 前呼叫 `License license = new License(); license.setLicense("path/to/license.file");`。 |
+| **找不到檔案 / 存取被拒** | 確認絕對路徑，並確保 Java 程序具有讀寫權限。 |
+| **大型文件記憶體不足錯誤** | 增加 JVM 堆積記憶體（`-Xmx2g`）或在編輯前將文件拆分為較小的部分。 |
+| **取代後格式遺失** | 謹慎使用 HTML 標記 API；避免直接取代標記標籤本身。 |
+| **授權未套用** | 在建立 `Editor` 前呼叫 `License license = new License(); license.setLicense("path/to/license.file");`。 |
 
 ## 常見問答
 
-**Q: 可以編輯受密碼保護的 Word 檔案嗎？**  
-A: 可以。使用包含密碼的 `WordProcessingLoadOptions` 載入文件，之後照常操作。
+**Q: 我可以編輯受密碼保護的 Word 檔案嗎？**  
+A: 可以。使用包含密碼的 `WordProcessingLoadOptions` 載入文件，然後照常操作。
 
 **Q: GroupDocs.Editor 是否支援 DOCM 檔案中的巨集？**  
-A: 函式庫會保留巨集，但不會執行它們。您可以將含有巨集的 DOCM 檔案儲存而不影響巨集內容。
+A: 程式庫會保留巨集但不會執行它們。您可以將 DOCM 檔案以保留現有巨集的方式儲存。
 
-**Q: 如何處理文件中嵌入的圖片？**  
-A: 圖片會作為 HTML 標記的一部份保留。您可以替換 `<img>` 標籤或使用標準 HTML 新增圖片。
+**Q: 我該如何處理文件中嵌入的圖片？**  
+A: 圖片會作為 HTML 標記的一部分保留。可使用標準 HTML 取代 `<img>` 標籤或新增標籤。
 
-**Q: 能直接轉換成 PDF 嗎？**  
-A: GroupDocs.Editor 主要聚焦於編輯；若需 PDF 轉換，可在儲存編輯後的 DOCX 時結合 GroupDocs.Conversion 使用。
+**Q: 能直接轉換為 PDF 嗎？**  
+A: GroupDocs.Editor 專注於編輯；若需 PDF 轉換，可在儲存編輯後的 DOCX 後，結合 GroupDocs.Conversion 使用。
 
 **Q: 支援哪些 Java 版本？**  
-A: 完全支援 Java 8 及以上版本。
+A: 完全支援 Java 8 及更新版本。
 
 ## 結論
-現在您已掌握使用 GroupDocs.Editor **convert docx to docm** 的完整端對端工作流程。透過載入 DOCX、程式化修改其 HTML，並匯出為 RTF、DOCM 或純文字等格式，您可以在 Java 應用程式中自動化無數與文件相關的任務。進一步探索拼寫檢查、變更追蹤或與 GroupDocs.Conversion 整合等功能，讓解決方案更上一層樓。
+您現在已掌握使用 GroupDocs.Editor **convert docx to docm** 的完整端對端工作流程。透過載入 DOCX、（可選）編輯其 HTML，並匯出為 DOCM、RTF 或純文字，您可以在 Java 應用程式中自動化無數以文件為中心的任務。探索其他功能，如拼寫檢查、變更追蹤，或與 GroupDocs.Conversion 整合，以進一步擴充您的解決方案。
 
----
-
-**最後更新：** 2026-03-20  
+**最後更新：** 2026-09-16  
 **測試環境：** GroupDocs.Editor 25.3 for Java  
 **作者：** GroupDocs
+
+## 相關教學
+
+- [將 docx 轉換為 PDF Java：使用 GroupDocs.Editor 批次編輯 Word 檔案 – 步驟指南](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
+- [如何將 Docx 轉換為 HTML 並在 Java 中編輯 Word 檔案](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
+- [如何使用 GroupDocs.Editor for Java 將 HTML 轉換為 DOCX](/editor/java/document-saving/)

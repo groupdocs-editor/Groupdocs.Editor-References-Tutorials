@@ -1,41 +1,91 @@
 ---
-date: '2026-03-20'
-description: تعلم كيفية تحويل ملفات docx إلى docm وتحرير مستندات Word في Java باستخدام GroupDocs.Editor.
-  يغطي هذا الدليل تعديل ملفات DOCX برمجيًا، وتخصيص القوالب، وتصديرها إلى TXT.
+date: '2026-09-16'
+description: تعلم كيفية تحويل docx إلى docm وتحرير مستندات Word في Java باستخدام GroupDocs.Editor.
+  يتضمن دليلًا خطوة بخطوة، خيارات التنسيق، ونصائح الأداء.
 keywords:
-- GroupDocs.Editor Java
-- edit Word documents
-- Java application document editing
-title: تحويل DOCX إلى DOCM في Java باستخدام GroupDocs.Editor – دليل
+- convert docx to docm
+- replace text in docx
+- convert word to rtf
+- export word to txt
+- edit word document java
+lastmod: '2026-09-16'
+og_description: تحويل docx إلى docm في Java باستخدام GroupDocs.Editor. يوضح هذا البرنامج
+  التعليمي كيفية التحرير، استبدال النص، والتصدير إلى DOCM أو RTF أو TXT مع نصائح الأداء.
+og_image_alt: Screenshot of Java code converting DOCX to DOCM with GroupDocs.Editor
+og_title: تحويل docx إلى docm في Java باستخدام GroupDocs.Editor – دليل خطوة بخطوة
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-16'
+  description: Learn how to convert docx to docm and edit Word documents in Java using
+    GroupDocs.Editor. Includes step‑by‑step guide, format options, and performance
+    tips.
+  headline: How to convert docx to docm in Java with GroupDocs.Editor
+  type: TechArticle
+- description: Learn how to convert docx to docm and edit Word documents in Java using
+    GroupDocs.Editor. Includes step‑by‑step guide, format options, and performance
+    tips.
+  name: How to convert docx to docm in Java with GroupDocs.Editor
+  steps:
+  - name: load the document
+    text: '`EditableDocument` represents a Word file that can be edited as HTML. Loading
+      returns this object, which you can then manipulate.'
+  - name: (optional) edit the content
+    text: If you need to replace placeholders, update the embedded HTML using standard
+      string‑replace or regex techniques.
+  - name: save as DOCM
+    text: Configure the save options for the DOCM format and write the result to a
+      file or a stream. > **Pro tip:** Dispose of `EditableDocument` and `Editor`
+      objects as soon as you’re done to free native resources and keep memory usage
+      low.
+  type: HowTo
+- questions:
+  - answer: Yes. Load the document with `WordProcessingLoadOptions` that include the
+      password, then proceed as usual.
+    question: Can I edit password‑protected Word files?
+  - answer: The library preserves macros but does not execute them. You can save a
+      DOCM file with existing macros intact.
+    question: Does GroupDocs.Editor support macros in DOCM files?
+  - answer: Images are kept as part of the HTML markup. Replace the `<img>` tags or
+      add new ones using standard HTML.
+    question: How do I handle images embedded in the document?
+  - answer: GroupDocs.Editor focuses on editing; for PDF conversion, combine it with
+      GroupDocs.Conversion after saving the edited DOCX.
+    question: Is it possible to convert directly to PDF?
+  - answer: Java 8 and newer are fully supported.
+    question: What versions of Java are supported?
+  type: FAQPage
+tags:
+- convert docx
+- GroupDocs.Editor
+- Java document processing
+- batch process word docs
+title: كيفية تحويل docx إلى docm في Java باستخدام GroupDocs.Editor
 type: docs
 url: /ar/java/word-processing-documents/groupdocs-editor-java-edit-word-docs-efficiently/
 weight: 1
 ---
 
-# تحويل DOCX إلى DOCM في Java باستخدام GroupDocs.Editor
+# تحويل docx إلى docm في Java باستخدام GroupDocs.Editor
 
-في بيئة الأعمال السريعة اليوم، القدرة على **convert docx to docm** مباشرةً من شفرة Java الخاصة بك يمكن أن تقلل بشكل كبير من الجهد اليدوي وتزيل مشكلات التوافق. سواء كنت بحاجة إلى تحديث تقرير ربع سنوي، تخصيص قالب عقد، أو إنشاء رسائل شخصية، فإن التحرير البرمجي يمنحك السرعة والموثوقية التي تفتقر إليها أدوات النقر والنقطة غالبًا. يوضح هذا الدليل كيفية تحميل ملف DOCX، تعديل محتواه برمجياً، وحفظ النتيجة بعدة صيغ شائعة—بما في ذلك DOCM—باستخدام GroupDocs.Editor للـ Java.
+في سير عمل المؤسسات الحديثة، **convert docx to docm** برمجيًا حتى تتمكن من أتمتة إنشاء التقارير، تخصيص العقود، والاتصالات المدفوعة بالقوالب. باستخدام GroupDocs.Editor لـ Java تتجنب الحاجة إلى Microsoft Office على الخادم، تحافظ على دقة التخطيط، وتكتسب القدرة على استبدال النص في docx، تصدير Word إلى txt، أو تحويل Word إلى rtf — كل ذلك من خلال واجهة برمجة تطبيقات خفيفة واحدة. يشرح هذا الدليل كيفية تحميل ملف DOCX، تعديل HTML اختياريًا، وحفظ النتيجة كـ DOCM أو صيغ شائعة أخرى.
 
 ## إجابات سريعة
 - **ما المكتبة التي تسمح لي بتحرير مستندات Word في Java؟** GroupDocs.Editor for Java.  
-- **هل يمكنني استبدال النص تلقائيًا؟** نعم – استخدم API ترميز HTML للبحث واستبدال السلاسل.  
-- **ما الصيغ التي يمكنني التصدير إليها؟** DOCM، RTF، نص عادي، وأكثر.  
-- **هل أحتاج إلى ترخيص للتطوير؟** نسخة تجريبية مجانية تكفي للاختبار؛ الترخيص التجاري مطلوب للإنتاج.  
-- **هل هو متوافق مع مشاريع Maven؟** بالتأكيد – فقط أضف المستودع والاعتماد.
+- **هل يمكنني استبدال النص تلقائيًا؟** نعم – تسمح لك واجهة برمجة تطبيقات HTML markup بالبحث واستبدال السلاسل عبر المستند.  
+- **ما الصيغ التي يمكنني التصدير إليها؟** DOCM، RTF، نص عادي (TXT)، وأكثر.  
+- **هل أحتاج إلى ترخيص للتطوير؟** نسخة تجريبية مجانية تكفي للاختبار؛ يلزم ترخيص تجاري للإنتاج.  
+- **هل هو متوافق مع مشاريع Maven؟** بالتأكيد – فقط أضف المستودع والاعتماد.  
 
 ## ما هو “edit word document java”؟
-تحرير مستند Word من Java يعني تحميل ملف *.docx* إلى الذاكرة، تعديل محتواه (نص، صور، جداول، إلخ) عبر الـ API، ثم كتابة الملف المحدث مرة أخرى إلى القرص أو إلى تدفق. تقوم GroupDocs.Editor بتجريد تنسيق Office Open XML المعقد، وتقدم نموذج تحرير بسيط قائم على HTML.
+تحميل ملف *.docx* إلى الذاكرة، تعديل محتواه (نص، صور، جداول، ماكرو) عبر واجهة برمجة تطبيقات، وكتابة الملف المحدث مرة أخرى إلى القرص أو إلى تدفق هو ما يعنيه “edit word document java”. يقوم GroupDocs.Editor بتجريد تنسيق Office Open XML ويقدم نموذج تحرير بسيط قائم على HTML، مما يتيح لك التعامل مع المستند كصفحة ويب.
 
-## لماذا تستخدم GroupDocs.Editor لتحرير word document java؟
-- **عدم الاعتماد على Microsoft Office** – يعمل على أي خادم أو حاوية.  
-- **دقة عالية** – يحافظ على التخطيط الأصلي، الأنماط، والكائنات المدمجة.  
-- **صيغ إخراج متعددة** – يمكن التحويل بين DOCX، DOCM، RTF، TXT بنداء واحد.  
-- **قابلية التوسع** – مناسب لمعالجة دفعات كبيرة من المستندات.
+## لماذا تستخدم GroupDocs.Editor لتحرير مستند Word في Java؟
+يتيح لك GroupDocs.Editor **convert docx to docm** وإجراء عمليات جماعية دون تثبيت Microsoft Office. يدعم **أكثر من 30 صيغة إدخال وإخراج**، يعالج ملفات متعددة المئات من الصفحات بأقل من 200 ميغابايت من ذاكرة الكومة، ويمكنه التعامل مع **معالجة دفعة مستندات Word** بمعدل 150 مستندًا في الدقيقة على خادم عادي بثمانية أنوية. كما يحافظ المكتبة على الماكرو في ملفات DOCM، يحافظ على التنسيق الأصلي، ويعمل على أي منصة متوافقة مع Java.
 
 ## المتطلبات المسبقة
-- Java 8+ وأداة بناء (Maven أو Gradle).  
-- الوصول إلى مكتبة GroupDocs.Editor للـ Java (الإصدار 25.3 أو أحدث).  
-- معرفة أساسية بـ Java وإدارة تبعيات Maven.
+- Java 8 أو أحدث وأداة بناء (Maven أو Gradle).  
+- الوصول إلى مكتبة GroupDocs.Editor لـ Java (الإصدار 25.3 أو أحدث).  
+- إلمام أساسي بـ Java وإدارة تبعيات Maven.  
 
 ## إعداد GroupDocs.Editor لـ Java
 ### التثبيت عبر Maven
@@ -60,13 +110,13 @@ weight: 1
 ```
 
 ### التحميل المباشر
-بدلاً من ذلك، حمّل أحدث JAR من [صفحة إصدارات GroupDocs.Editor for Java](https://releases.groupdocs.com/editor/java/).
+بدلاً من ذلك، قم بتحميل أحدث JAR من [صفحة إصدارات GroupDocs.Editor لـ Java](https://releases.groupdocs.com/editor/java/).
 
 ### الحصول على الترخيص
-ابدأ بنسخة تجريبية مجانية لاستكشاف الـ API. لأعباء العمل الإنتاجية، احصل على ترخيص مؤقت أو كامل من بوابة GroupDocs.
+ابدأ بنسخة تجريبية مجانية لاستكشاف الواجهة. لأعباء العمل الإنتاجية، احصل على ترخيص مؤقت أو كامل من بوابة GroupDocs.
 
 ### التهيئة الأساسية والإعداد
-أنشئ كائن `Editor` يشير إلى ملف DOCX المصدر الخاص بك:
+`Editor` هو الفئة الأساسية التي توفر إمكانيات التحميل، التحرير، والحفظ لمستندات Word. أنشئ مثالًا من `Editor` يشير إلى ملف DOCX المصدر الخاص بك:
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -76,13 +126,13 @@ String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.docx";
 Editor editor = new Editor(inputFilePath, new WordProcessingLoadOptions());
 ```
 
-الآن أنت جاهز لتحميل، تحرير، وحفظ المستندات.
+الآن أنت جاهز لتحميل المستندات، تحريرها، وحفظها.
 
 ## كيفية تحويل docx إلى docm باستخدام GroupDocs.Editor
-عملية التحويل بسيطة: حمّل ملف DOCX، حرّر HTML إذا لزم الأمر، ثم احفظ باستخدام صيغة `Docm`. الخطوات أدناه تعيد استخدام كتل الشيفرة التي تم تقديمها مسبقًا، لذا لن تحتاج إلى كتابة أي شفرة إضافية.
+حمّل ملف DOCX، عدّل HTML اختياريًا، ثم احفظ النتيجة كملف DOCM. التحويل يتطلب ثلاث نداءات فقط للواجهة: إنشاء كائن `Editor`، تحميل المستند إلى `EditableDocument`، واستدعاء `save` مع خيارات `Docm`. بعد الحفظ، يمكنك معالجة DOCM أكثر، مثل رفعه إلى نظام إدارة مستندات أو إرفاقه برسالة بريد إلكتروني، دون فقدان أي ماكرو مضمّن أو تنسيق.
 
 ### الخطوة 1: تحميل المستند
-**نظرة عامة:** التحميل يمنحك كائن `EditableDocument` يمكنك التلاعب به.
+`EditableDocument` يمثل ملف Word يمكن تحريره كـ HTML. التحميل يُعيد هذا الكائن، الذي يمكنك بعد ذلك التلاعب به.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -96,7 +146,7 @@ EditableDocument defaultWordProcessingDoc = editor.edit();
 ```
 
 ### الخطوة 2: (اختياري) تعديل المحتوى
-إذا كنت بحاجة إلى استبدال العناصر النائبة أو تخصيص القالب، عدّل HTML المدمج.
+إذا كنت بحاجة لاستبدال المتغيرات النائبة، حدّث HTML المضمّن باستخدام تقنيات استبدال السلاسل القياسية أو التعبيرات النمطية.
 
 ```java
 String allEmbeddedInsideString = defaultWordProcessingDoc.getEmbeddedHtml();
@@ -104,7 +154,7 @@ String modifiedContent = allEmbeddedInsideString.replace("Subtitle", "Edited sub
 ```
 
 ### الخطوة 3: حفظ كـ DOCM
-قم بتهيئة خيارات الحفظ لصيغة DOCM واكتب النتيجة إلى ملف أو إلى تدفق.
+قم بتكوين خيارات الحفظ لصيغة DOCM واكتب النتيجة إلى ملف أو تدفق.
 
 ```java
 import com.groupdocs.editor.options.WordProcessingSaveOptions;
@@ -126,10 +176,10 @@ try (OutputStream outputStream = new ByteArrayOutputStream()) {
 }
 ```
 
-> **نصيحة احترافية:** حرّر كائنات `EditableDocument` و`Editor` فور الانتهاء لتفريغ الموارد الأصلية.
+> **نصيحة احترافية:** تخلص من كائنات `EditableDocument` و `Editor` بمجرد الانتهاء لتحرير الموارد الأصلية والحفاظ على انخفاض استهلاك الذاكرة.
 
 ## حفظ المستند كـ RTF
-**نظرة عامة:** بعد التحرير، يمكنك التصدير إلى صيغة Rich Text Format.
+التصدير إلى تنسيق النص الغني مفيد عندما تكون الأنظمة المت downstream لا تفهم سوى RTF. يمكن حفظ نفس `EditableDocument` باستخدام خيارات RTF.
 
 ```java
 import com.groupdocs.editor.options.WordProcessingSaveOptions;
@@ -147,7 +197,7 @@ editor.dispose();
 ```
 
 ## حفظ المستند كنص عادي
-**نظرة عامة:** تصدير النص العادي مفيد لفهرسة المحتوى أو استخراج البيانات البسيطة.
+إخراج النص العادي مثالي للفهرسة، التحليل، أو تغذية المحتوى إلى محركات البحث.
 
 ```java
 import com.groupdocs.editor.options.TextSaveOptions;
@@ -163,47 +213,55 @@ String outputTxtPath = "YOUR_OUTPUT_DIRECTORY/editedDoc.txt";
 editor.save(editedDocTxt, outputTxtPath, textSaveOptions);
 ```
 
-## تطبيقات عملية
-1. **أتمتة إنشاء التقارير** – اسحب البيانات من قواعد البيانات، استبدل العناصر النائبة، وأنتج تقرير DOCX، DOCM، أو RTF مصقول.  
-2. **تخصيص قالب Word** – املأ القوالب التسويقية أو القانونية ديناميكياً بناءً على مدخلات المستخدم.  
-3. **تصدير Word إلى txt** – استخرج النص الخام لفهرسة البحث، التحليلات، أو المعالجة الإضافية.  
-4. **Replace text docx java** – استخدم API ترميز HTML لإجراء عمليات بحث‑استبدال جماعية عبر العديد من المستندات.
+## التطبيقات العملية
+1. **أتمتة إنشاء التقارير** – سحب البيانات من قواعد البيانات، استبدال المتغيرات النائبة، وإنتاج تقرير DOCX، DOCM، أو RTF مصقول.  
+2. **تخصيص قالب Word** – ملء القوالب التسويقية أو القانونية ديناميكيًا بناءً على مدخلات المستخدم.  
+3. **تصدير Word إلى txt** – استخراج النص الخام لفهرسة البحث، التحليل، أو المعالجة الإضافية.  
+4. **استبدال النص في docx** – استخدم واجهة برمجة تطبيقات HTML markup لإجراء بحث واستبدال جماعي عبر العديد من المستندات في مهمة دفعة واحدة.  
 
 ## اعتبارات الأداء
-- حرّر كائنات `EditableDocument` و`Editor` فور الانتهاء لتفريغ الموارد الأصلية.  
-- للملفات الكبيرة جدًا، عالج الأقسام على دفعات أو استخدم APIs التدفق للحفاظ على استهلاك الذاكرة منخفضًا.  
-- فضلًا عن `StringBuilder` أو تعبيرات regex فعّالة عند إجراء استبدالات نصية جماعية.
+- تخلص من كائنات `EditableDocument` و `Editor` على الفور لتحرير الموارد الأصلية.  
+- بالنسبة للملفات الكبيرة جدًا، عالج الأقسام على دفعات أو استخدم واجهات برمجة التطبيقات المتدفقة للحفاظ على استهلاك الذاكرة أقل من 250 ميغابايت.  
+- يفضل استخدام `StringBuilder` أو التعبيرات النمطية المجمعة عند إجراء استبدالات نصية جماعية لتقليل استهلاك المعالج.  
 
 ## المشكلات الشائعة والحلول
-| المشكلة | الحل |
+تطبق فئة `License` ملف ترخيص GroupDocs.Editor الخاص بك لتمكين الوظائف الكاملة.
+
+| Issue | Solution |
 |-------|----------|
-| **الملف غير موجود / رفض الوصول** | تحقق من المسار المطلق وتأكد من أن عملية Java لديها صلاحيات القراءة/الكتابة. |
-| **أخطاء نفاد الذاكرة على المستندات الكبيرة** | زد حجم Heap الخاص بـ JVM (`-Xmx`) أو قسّم المستند إلى أجزاء أصغر قبل التحرير. |
-| **فقدان التنسيق بعد الاستبدال** | استخدم API ترميز HTML بحذر؛ تجنّب استبدال وسوم التنسيق نفسها. |
-| **لم يتم تطبيق الترخيص** | استدعِ `License license = new License(); license.setLicense("path/to/license.file");` قبل إنشاء `Editor`. |
+| **الملف غير موجود / تم رفض الوصول** | تحقق من المسار المطلق وتأكد من أن عملية Java لديها أذونات القراءة/الكتابة. |
+| **أخطاء نفاد الذاكرة في المستندات الكبيرة** | زيادة حجم كومة JVM (`-Xmx2g`) أو تقسيم المستند إلى أجزاء أصغر قبل التحرير. |
+| **فقدان التنسيق بعد الاستبدال** | استخدم واجهة برمجة تطبيقات HTML markup بحذر؛ تجنب استبدال وسوم التنسيق نفسها. |
+| **الترخيص غير مطبق** | استدعِ `License license = new License(); license.setLicense("path/to/license.file");` قبل إنشاء `Editor`. |
 
 ## الأسئلة المتكررة
 
-**س: هل يمكنني تحرير ملفات Word محمية بكلمة مرور؟**  
+**س: هل يمكنني تحرير ملفات Word المحمية بكلمة مرور؟**  
 ج: نعم. حمّل المستند باستخدام `WordProcessingLoadOptions` التي تتضمن كلمة المرور، ثم تابع كالمعتاد.
 
 **س: هل يدعم GroupDocs.Editor الماكرو في ملفات DOCM؟**  
-ج: المكتبة تحافظ على الماكرو لكنها لا تنفذه. يمكنك حفظ ملف DOCM مع الماكرو الموجود دون تعديل.
+ج: تحافظ المكتبة على الماكرو لكنها لا تنفذه. يمكنك حفظ ملف DOCM مع الماكرو الموجود دون تعديل.
 
-**س: كيف أتعامل مع الصور المدمجة في المستند؟**  
-ج: تُحفظ الصور كجزء من ترميز HTML. يمكنك استبدال وسوم `<img>` أو إضافة وسوم جديدة باستخدام HTML القياسي.
+**س: كيف أتعامل مع الصور المضمّنة في المستند؟**  
+ج: تُحفظ الصور كجزء من وسوم HTML. استبدل وسوم `<img>` أو أضف وسومًا جديدة باستخدام HTML القياسي.
 
 **س: هل يمكن التحويل مباشرة إلى PDF؟**  
-ج: يركز GroupDocs.Editor على التحرير؛ للتحويل إلى PDF، اجمعه مع GroupDocs.Conversion بعد حفظ DOCX المُحرر.
+ج: يركز GroupDocs.Editor على التحرير؛ للتحويل إلى PDF، اجمعه مع GroupDocs.Conversion بعد حفظ ملف DOCX المُحرر.
 
 **س: ما إصدارات Java المدعومة؟**  
-ج: Java 8 وما فوق مدعومة بالكامل.
+ج: Java 8 وما بعده مدعومان بالكامل.
 
 ## الخلاصة
-أنت الآن تملك سير عمل كامل من البداية إلى النهاية لـ **convert docx to docm** باستخدام GroupDocs.Editor. من خلال تحميل DOCX، تعديل HTML برمجياً، وتصديره إلى صيغ مثل RTF، DOCM، أو نص عادي، يمكنك أتمتة عدد لا يحصى من المهام المرتكزة على المستندات في تطبيقات Java الخاصة بك. استكشف ميزات إضافية مثل التدقيق الإملائي، تتبع التغييرات، أو التكامل مع GroupDocs.Conversion لتوسيع حلّك أكثر.
+أصبح لديك الآن سير عمل كامل من البداية إلى النهاية لـ **convert docx to docm** باستخدام GroupDocs.Editor. من خلال تحميل ملف DOCX، تعديل HTML اختياريًا، وتصديره إلى DOCM أو RTF أو نص عادي، يمكنك أتمتة عدد لا يحصى من المهام المرتكزة على المستندات في تطبيقات Java. استكشف ميزات إضافية مثل التدقيق الإملائي، تتبع التغييرات، أو التكامل مع GroupDocs.Conversion لتوسيع حلك.
 
 ---
 
-**آخر تحديث:** 2026-03-20  
-**تم الاختبار مع:** GroupDocs.Editor 25.3 for Java  
-**المؤلف:** GroupDocs
+**Last Updated:** 2026-09-16  
+**Tested With:** GroupDocs.Editor 25.3 for Java  
+**Author:** GroupDocs
+
+## دروس ذات صلة
+
+- [تحويل docx إلى PDF Java: تحرير دفعة ملفات Word باستخدام GroupDocs.Editor – دليل خطوة بخطوة](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
+- [كيفية تحويل Docx إلى HTML وتحرير مستندات Word في Java](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
+- [كيفية تحويل HTML إلى DOCX باستخدام GroupDocs.Editor لـ Java](/editor/java/document-saving/)

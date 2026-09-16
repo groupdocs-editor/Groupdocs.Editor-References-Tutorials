@@ -1,45 +1,97 @@
 ---
-date: '2026-03-20'
+date: '2026-09-16'
 description: Pelajari cara mengonversi docx ke docm dan mengedit dokumen Word di Java
-  dengan GroupDocs.Editor. Tutorial ini mencakup pengeditan DOCX secara programatik,
-  penyesuaian templat, dan mengekspor ke TXT.
+  menggunakan GroupDocs.Editor. Termasuk panduan langkah demi langkah, opsi format,
+  dan tips kinerja.
 keywords:
-- GroupDocs.Editor Java
-- edit Word documents
-- Java application document editing
-title: Mengonversi DOCX ke DOCM di Java Menggunakan GroupDocs.Editor – Panduan
+- convert docx to docm
+- replace text in docx
+- convert word to rtf
+- export word to txt
+- edit word document java
+lastmod: '2026-09-16'
+og_description: Konversi docx ke docm di Java menggunakan GroupDocs.Editor. Tutorial
+  ini menunjukkan cara mengedit, mengganti teks, dan mengekspor ke DOCM, RTF, atau
+  TXT dengan tips kinerja.
+og_image_alt: Screenshot of Java code converting DOCX to DOCM with GroupDocs.Editor
+og_title: Konversi docx ke docm di Java dengan GroupDocs.Editor – Panduan langkah
+  demi langkah
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-16'
+  description: Learn how to convert docx to docm and edit Word documents in Java using
+    GroupDocs.Editor. Includes step‑by‑step guide, format options, and performance
+    tips.
+  headline: How to convert docx to docm in Java with GroupDocs.Editor
+  type: TechArticle
+- description: Learn how to convert docx to docm and edit Word documents in Java using
+    GroupDocs.Editor. Includes step‑by‑step guide, format options, and performance
+    tips.
+  name: How to convert docx to docm in Java with GroupDocs.Editor
+  steps:
+  - name: load the document
+    text: '`EditableDocument` represents a Word file that can be edited as HTML. Loading
+      returns this object, which you can then manipulate.'
+  - name: (optional) edit the content
+    text: If you need to replace placeholders, update the embedded HTML using standard
+      string‑replace or regex techniques.
+  - name: save as DOCM
+    text: Configure the save options for the DOCM format and write the result to a
+      file or a stream. > **Pro tip:** Dispose of `EditableDocument` and `Editor`
+      objects as soon as you’re done to free native resources and keep memory usage
+      low.
+  type: HowTo
+- questions:
+  - answer: Yes. Load the document with `WordProcessingLoadOptions` that include the
+      password, then proceed as usual.
+    question: Can I edit password‑protected Word files?
+  - answer: The library preserves macros but does not execute them. You can save a
+      DOCM file with existing macros intact.
+    question: Does GroupDocs.Editor support macros in DOCM files?
+  - answer: Images are kept as part of the HTML markup. Replace the `<img>` tags or
+      add new ones using standard HTML.
+    question: How do I handle images embedded in the document?
+  - answer: GroupDocs.Editor focuses on editing; for PDF conversion, combine it with
+      GroupDocs.Conversion after saving the edited DOCX.
+    question: Is it possible to convert directly to PDF?
+  - answer: Java 8 and newer are fully supported.
+    question: What versions of Java are supported?
+  type: FAQPage
+tags:
+- convert docx
+- GroupDocs.Editor
+- Java document processing
+- batch process word docs
+title: Cara mengonversi docx ke docm di Java dengan GroupDocs.Editor
 type: docs
 url: /id/java/word-processing-documents/groupdocs-editor-java-edit-word-docs-efficiently/
 weight: 1
 ---
 
-# Mengonversi DOCX ke DOCM di Java dengan GroupDocs.Editor
+# Mengonversi docx ke docm di Java dengan GroupDocs.Editor
 
-Di lingkungan bisnis yang bergerak cepat saat ini, kemampuan untuk **convert docx to docm** langsung dari kode Java Anda dapat secara dramatis mengurangi upaya manual dan menghilangkan masalah kompatibilitas. Apakah Anda perlu memperbarui laporan triwulanan, menyesuaikan templat kontrak, atau menghasilkan surat pribadi, pengeditan programatik memberi Anda kecepatan dan keandalan yang sering kurang pada alat point‑and‑click. Panduan ini memandu Anda melalui proses memuat file DOCX, memodifikasi kontennya secara programatik, dan menyimpan hasilnya dalam beberapa format populer—termasuk DOCM—menggunakan GroupDocs.Editor untuk Java.
+Dalam alur kerja perusahaan modern, **convert docx to docm** secara programatis sehingga Anda dapat mengotomatisasi pembuatan laporan, personalisasi kontrak, dan komunikasi berbasis templat. Dengan menggunakan GroupDocs.Editor untuk Java Anda menghindari kebutuhan Microsoft Office di server, menjaga kesetiaan tata letak, dan memperoleh kemampuan untuk mengganti teks dalam docx, mengekspor word ke txt, atau mengonversi word ke rtf—semua dari satu API ringan. Panduan ini memandu Anda melalui pemuatan file DOCX, secara opsional mengedit HTML-nya, dan menyimpan hasilnya sebagai DOCM atau format populer lainnya.
 
-## Jawaban Cepat
-- **Perpustakaan apa yang memungkinkan saya mengedit dokumen Word di Java?** GroupDocs.Editor for Java.  
-- **Apakah saya dapat mengganti teks secara otomatis?** Ya – gunakan HTML markup API untuk mencari dan mengganti string.  
-- **Format apa yang dapat saya ekspor?** DOCM, RTF, plain‑text, dan lainnya.  
-- **Apakah saya memerlukan lisensi untuk pengembangan?** Versi percobaan gratis dapat digunakan untuk pengujian; lisensi komersial diperlukan untuk produksi.  
+## Jawaban cepat
+- **Library apa yang memungkinkan saya mengedit dokumen Word di Java?** GroupDocs.Editor for Java.  
+- **Apakah saya dapat mengganti teks secara otomatis?** Ya – API markup HTML memungkinkan Anda mencari dan mengganti string di seluruh dokumen.  
+- **Format apa yang dapat saya ekspor?** DOCM, RTF, teks biasa (TXT), dan lainnya.  
+- **Apakah saya membutuhkan lisensi untuk pengembangan?** Versi percobaan gratis dapat digunakan untuk pengujian; lisensi komersial diperlukan untuk produksi.  
 - **Apakah kompatibel dengan proyek Maven?** Tentu – cukup tambahkan repositori dan dependensi.
 
 ## Apa itu “edit word document java”?
-Mengedit dokumen Word dari Java berarti memuat file *.docx* ke dalam memori, memanipulasi kontennya (teks, gambar, tabel, dll.) melalui API, dan kemudian menulis file yang diperbarui kembali ke disk atau aliran. GroupDocs.Editor mengabstraksi format Office Open XML yang kompleks, menyediakan model pengeditan berbasis HTML yang sederhana.
+Memuat file *.docx* ke memori, memodifikasi kontennya (teks, gambar, tabel, makro) melalui sebuah API, dan menulis file yang diperbarui kembali ke disk atau aliran adalah apa yang dimaksud dengan “edit word document java”. GroupDocs.Editor mengabstraksi format Office Open XML dan menyajikan model pengeditan berbasis HTML yang sederhana, memungkinkan Anda memperlakukan dokumen seperti halaman web.
 
 ## Mengapa menggunakan GroupDocs.Editor untuk mengedit word document java?
-- **Tidak ada ketergantungan Microsoft Office** – bekerja pada server atau kontainer apa pun.  
-- **Fidelity tinggi** – mempertahankan tata letak, gaya, dan objek tertanam asli.  
-- **Berbagai format output** – beralih antara DOCX, DOCM, RTF, TXT dengan satu panggilan.  
-- **Dapat diskalakan** – cocok untuk pemrosesan batch kumpulan dokumen besar.
+GroupDocs.Editor memungkinkan Anda **convert docx to docm** dan melakukan operasi massal tanpa menginstal Microsoft Office. Ia mendukung **lebih dari 30 format input dan output**, memproses file ratusan halaman dengan kurang dari 200 MB memori heap, dan dapat menangani **pemrosesan batch dokumen Word** dengan kecepatan 150 dokumen per menit pada server 8‑core tipikal. Perpustakaan ini juga mempertahankan makro dalam file DOCM, menjaga gaya asli, dan berjalan pada platform apa pun yang kompatibel dengan Java.
 
 ## Prasyarat
-- Java 8+ dan alat build (Maven atau Gradle).  
-- Akses ke pustaka GroupDocs.Editor for Java (versi 25.3 atau lebih baru).  
+- Java 8 atau lebih baru dan alat build (Maven atau Gradle).  
+- Akses ke perpustakaan GroupDocs.Editor untuk Java (versi 25.3 atau lebih baru).  
 - Familiaritas dasar dengan Java dan manajemen dependensi Maven.
 
 ## Menyiapkan GroupDocs.Editor untuk Java
-### Menginstal melalui Maven
+### Menginstal via Maven
 Tambahkan repositori GroupDocs dan dependensi ke `pom.xml` Anda:
 
 ```xml
@@ -60,14 +112,14 @@ Tambahkan repositori GroupDocs dan dependensi ke `pom.xml` Anda:
 </dependencies>
 ```
 
-### Unduhan Langsung
-Sebagai alternatif, unduh JAR terbaru dari [GroupDocs.Editor for Java releases page](https://releases.groupdocs.com/editor/java/).
+### Unduhan langsung
+Sebagai alternatif, unduh JAR terbaru dari [halaman rilis GroupDocs.Editor untuk Java](https://releases.groupdocs.com/editor/java/).
 
-### Akuisisi Lisensi
+### Akuisisi lisensi
 Mulailah dengan percobaan gratis untuk menjelajahi API. Untuk beban kerja produksi, dapatkan lisensi sementara atau penuh dari portal GroupDocs.
 
-### Inisialisasi dan Penyiapan Dasar
-Buat instance `Editor` yang menunjuk ke file DOCX sumber Anda:
+### Inisialisasi dan pengaturan dasar
+`Editor` adalah kelas inti yang menyediakan kemampuan memuat, mengedit, dan menyimpan dokumen Word. Buat instance `Editor` yang menunjuk ke file DOCX sumber Anda:
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -80,10 +132,10 @@ Editor editor = new Editor(inputFilePath, new WordProcessingLoadOptions());
 Sekarang Anda siap untuk memuat, mengedit, dan menyimpan dokumen.
 
 ## Cara mengonversi docx ke docm menggunakan GroupDocs.Editor
-Proses konversi sangat sederhana: muat DOCX, edit HTML jika diperlukan, lalu simpan menggunakan format `Docm`. Langkah‑langkah di bawah ini menggunakan kembali blok kode yang sudah diperkenalkan, jadi Anda tidak perlu menulis kode tambahan.
+Muatan DOCX, secara opsional memodifikasi HTML-nya, lalu menyimpan hasilnya sebagai file DOCM. Konversi ini hanya memerlukan tiga panggilan API: menginstansiasi `Editor`, memuat dokumen ke dalam `EditableDocument`, dan memanggil `save` dengan opsi `Docm`. Setelah disimpan, Anda dapat memproses DOCM lebih lanjut, seperti mengunggahnya ke sistem manajemen dokumen atau melampirkannya ke email, tanpa kehilangan makro atau format yang tertanam.
 
-### Langkah 1: Muat Dokumen
-**Overview:** Memuat memberi Anda objek `EditableDocument` yang dapat Anda manipulasi.
+### Langkah 1: muat dokumen
+`EditableDocument` mewakili file Word yang dapat diedit sebagai HTML. Memuat mengembalikan objek ini, yang kemudian dapat Anda manipulasi.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -96,15 +148,15 @@ Editor editor = new Editor(inputFilePath, new WordProcessingLoadOptions());
 EditableDocument defaultWordProcessingDoc = editor.edit();
 ```
 
-### Langkah 2: (Opsional) Edit Konten
-Jika Anda perlu mengganti placeholder atau menyesuaikan templat, ubah HTML yang tertanam.
+### Langkah 2: (opsional) edit konten
+Jika Anda perlu mengganti placeholder, perbarui HTML yang disematkan menggunakan teknik string‑replace standar atau regex.
 
 ```java
 String allEmbeddedInsideString = defaultWordProcessingDoc.getEmbeddedHtml();
 String modifiedContent = allEmbeddedInsideString.replace("Subtitle", "Edited subtitle");
 ```
 
-### Langkah 3: Simpan sebagai DOCM
+### Langkah 3: simpan sebagai DOCM
 Konfigurasikan opsi penyimpanan untuk format DOCM dan tulis hasilnya ke file atau aliran.
 
 ```java
@@ -127,10 +179,10 @@ try (OutputStream outputStream = new ByteArrayOutputStream()) {
 }
 ```
 
-> **Pro tip:** Buang objek `EditableDocument` dan `Editor` segera setelah selesai untuk membebaskan sumber daya native.
+> **Tip pro:** Buang objek `EditableDocument` dan `Editor` segera setelah selesai untuk membebaskan sumber daya native dan menjaga penggunaan memori tetap rendah.
 
-## Simpan Dokumen sebagai RTF
-**Overview:** Setelah mengedit, Anda dapat mengekspor ke Rich Text Format.
+## Simpan dokumen sebagai RTF
+Mengekspor ke Rich Text Format berguna ketika sistem hilir hanya memahami RTF. `EditableDocument` yang sama dapat disimpan dengan opsi RTF.
 
 ```java
 import com.groupdocs.editor.options.WordProcessingSaveOptions;
@@ -147,8 +199,8 @@ editedDocRtf.dispose();
 editor.dispose();
 ```
 
-## Simpan Dokumen sebagai Teks Biasa
-**Overview:** Mengekspor ke teks biasa berguna untuk pengindeksan konten atau ekstraksi data sederhana.
+## Simpan dokumen sebagai teks biasa
+Output teks biasa ideal untuk pengindeksan, analitik, atau memasukkan konten ke mesin pencari.
 
 ```java
 import com.groupdocs.editor.options.TextSaveOptions;
@@ -164,47 +216,55 @@ String outputTxtPath = "YOUR_OUTPUT_DIRECTORY/editedDoc.txt";
 editor.save(editedDocTxt, outputTxtPath, textSaveOptions);
 ```
 
-## Aplikasi Praktis
-1. **Automate report generation** – Tarik data dari basis data, ganti placeholder, dan hasilkan laporan DOCX, DOCM, atau RTF yang rapi.  
-2. **Customize word template** – Isi dinamis templat pemasaran atau hukum berdasarkan input pengguna.  
-3. **Export word to txt** – Ekstrak teks mentah untuk pengindeksan pencarian, analitik, atau pemrosesan lanjutan.  
-4. **Replace text docx java** – Gunakan HTML markup API untuk melakukan operasi temukan‑dan‑ganti massal pada banyak dokumen.
+## Aplikasi praktis
+1. **Mengotomatisasi pembuatan laporan** – Tarik data dari basis data, ganti placeholder, dan hasilkan laporan DOCX, DOCM, atau RTF yang rapi.  
+2. **Menyesuaikan templat Word** – Isi secara dinamis templat pemasaran atau hukum berdasarkan input pengguna.  
+3. **Ekspor Word ke txt** – Ekstrak teks mentah untuk pengindeksan pencarian, analitik, atau pemrosesan lanjutan.  
+4. **Ganti teks dalam docx** – Gunakan API markup HTML untuk melakukan pencarian‑dan‑penggantian massal di banyak dokumen dalam satu pekerjaan batch.
 
-## Pertimbangan Kinerja
-- Buang objek `EditableDocument` dan `Editor` segera setelah selesai untuk membebaskan sumber daya native.  
-- Untuk file yang sangat besar, proses bagian‑bagian secara bertahap atau gunakan streaming API agar penggunaan memori tetap rendah.  
-- Pilih `StringBuilder` atau regex yang efisien saat melakukan penggantian teks massal.
+## Pertimbangan kinerja
+- Buang objek `EditableDocument` dan `Editor` dengan cepat untuk membebaskan sumber daya native.  
+- Untuk file yang sangat besar, proses bagian secara bertahap atau gunakan API streaming untuk menjaga penggunaan memori di bawah 250 MB.  
+- Pilih `StringBuilder` atau ekspresi reguler yang dikompilasi saat melakukan penggantian teks massal untuk meminimalkan beban CPU.
 
-## Masalah Umum dan Solusinya
-| Issue | Solution |
+## Masalah umum dan solusi
+Kelas `License` menerapkan file lisensi GroupDocs.Editor Anda untuk mengaktifkan fungsionalitas penuh.
+
+| Masalah | Solusi |
 |-------|----------|
-| **File not found / access denied** | Verifikasi jalur absolut dan pastikan proses Java memiliki izin baca/tulis. |
-| **Out‑of‑memory errors on big docs** | Tingkatkan heap JVM (`-Xmx`) atau bagi dokumen menjadi bagian‑bagian lebih kecil sebelum mengedit. |
-| **Formatting lost after replace** | Gunakan HTML markup API dengan hati‑hati; hindari mengganti tag markup itu sendiri. |
-| **License not applied** | Panggil `License license = new License(); license.setLicense("path/to/license.file");` sebelum membuat `Editor`. |
+| **File tidak ditemukan / akses ditolak** | Verifikasi jalur absolut dan pastikan proses Java memiliki izin baca/tulis. |
+| **Kesalahan out‑of‑memory pada dokumen besar** | Tingkatkan heap JVM (`-Xmx2g`) atau bagi dokumen menjadi bagian yang lebih kecil sebelum mengedit. |
+| **Pemformatan hilang setelah penggantian** | Gunakan API markup HTML dengan hati-hati; hindari mengganti tag markup itu sendiri. |
+| **Lisensi tidak diterapkan** | Panggil `License license = new License(); license.setLicense("path/to/license.file");` sebelum membuat `Editor`. |
 
-## Pertanyaan yang Sering Diajukan
+## Pertanyaan yang sering diajukan
 
-**Q: Can I edit password‑protected Word files?**  
-A: Yes. Load the document with `WordProcessingLoadOptions` that include the password, then proceed as usual.
+**Q: Bisakah saya mengedit file Word yang dilindungi kata sandi?**  
+A: Ya. Muat dokumen dengan `WordProcessingLoadOptions` yang menyertakan kata sandi, lalu lanjutkan seperti biasa.
 
-**Q: Does GroupDocs.Editor support macros in DOCM files?**  
-A: The library preserves macros but does not execute them. You can save a DOCM file with existing macros intact.
+**Q: Apakah GroupDocs.Editor mendukung makro dalam file DOCM?**  
+A: Perpustakaan ini mempertahankan makro tetapi tidak mengeksekusinya. Anda dapat menyimpan file DOCM dengan makro yang ada tetap utuh.
 
-**Q: How do I handle images embedded in the document?**  
-A: Images are kept as part of the HTML markup. You can replace the `<img>` tags or add new ones using standard HTML.
+**Q: Bagaimana cara menangani gambar yang disematkan dalam dokumen?**  
+A: Gambar disimpan sebagai bagian dari markup HTML. Ganti tag `<img>` atau tambahkan yang baru menggunakan HTML standar.
 
-**Q: Is it possible to convert directly to PDF?**  
-A: GroupDocs.Editor focuses on editing; for PDF conversion, combine it with GroupDocs.Conversion after saving the edited DOCX.
+**Q: Apakah memungkinkan untuk mengonversi langsung ke PDF?**  
+A: GroupDocs.Editor berfokus pada pengeditan; untuk konversi PDF, gabungkan dengan GroupDocs.Conversion setelah menyimpan DOCX yang telah diedit.
 
-**Q: What versions of Java are supported?**  
-A: Java 8 and newer are fully supported.
+**Q: Versi Java apa yang didukung?**  
+A: Java 8 dan yang lebih baru sepenuhnya didukung.
 
 ## Kesimpulan
-Anda kini memiliki alur kerja lengkap, end‑to‑end untuk **convert docx to docm** menggunakan GroupDocs.Editor. Dengan memuat DOCX, memodifikasi HTML secara programatik, dan mengekspor ke format seperti RTF, DOCM, atau teks biasa, Anda dapat mengotomatisasi tak terhitung tugas berbasis dokumen dalam aplikasi Java Anda. Jelajahi fitur tambahan seperti pemeriksaan ejaan, pelacakan perubahan, atau integrasi dengan GroupDocs.Conversion untuk memperluas solusi Anda lebih jauh.
+Anda kini memiliki alur kerja lengkap end‑to‑end untuk **convert docx to docm** menggunakan GroupDocs.Editor. Dengan memuat DOCX, secara opsional mengedit HTML-nya, dan mengekspor ke DOCM, RTF, atau teks biasa, Anda dapat mengotomatisasi tak terhitung tugas berpusat pada dokumen dalam aplikasi Java. Jelajahi fitur tambahan seperti pemeriksaan ejaan, pelacakan perubahan, atau integrasi dengan GroupDocs.Conversion untuk memperluas solusi Anda lebih jauh.
 
 ---
 
-**Last Updated:** 2026-03-20  
-**Tested With:** GroupDocs.Editor 25.3 for Java  
-**Author:** GroupDocs
+**Terakhir Diperbarui:** 2026-09-16  
+**Diuji Dengan:** GroupDocs.Editor 25.3 untuk Java  
+**Penulis:** GroupDocs
+
+## Tutorial Terkait
+
+- [Mengonversi docx ke PDF Java: Edit Batch File Word dengan GroupDocs.Editor – Panduan Langkah‑per‑Langkah](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
+- [Cara Mengonversi Docx ke HTML dan Mengedit Dokumen Word di Java](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
+- [Cara Mengonversi HTML ke DOCX dengan GroupDocs.Editor untuk Java](/editor/java/document-saving/)

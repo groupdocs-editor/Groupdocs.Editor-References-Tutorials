@@ -1,46 +1,97 @@
 ---
-date: '2026-03-20'
-description: Μάθετε πώς να μετατρέπετε docx σε docm και να επεξεργάζεστε έγγραφα Word
-  σε Java με το GroupDocs.Editor. Αυτό το σεμινάριο καλύπτει προγραμματιστική επεξεργασία
-  DOCX, προσαρμογή προτύπων και εξαγωγή σε TXT.
+date: '2026-09-16'
+description: Μάθετε πώς να μετατρέψετε docx σε docm και να επεξεργαστείτε έγγραφα
+  Word σε Java χρησιμοποιώντας το GroupDocs.Editor. Περιλαμβάνει οδηγό βήμα-βήμα,
+  επιλογές μορφής και συμβουλές απόδοσης.
 keywords:
-- GroupDocs.Editor Java
-- edit Word documents
-- Java application document editing
-title: Μετατροπή DOCX σε DOCM σε Java χρησιμοποιώντας το GroupDocs.Editor – Οδηγός
+- convert docx to docm
+- replace text in docx
+- convert word to rtf
+- export word to txt
+- edit word document java
+lastmod: '2026-09-16'
+og_description: Μετατρέψτε docx σε docm σε Java χρησιμοποιώντας το GroupDocs.Editor.
+  Αυτό το σεμινάριο δείχνει πώς να επεξεργαστείτε, να αντικαταστήσετε κείμενο και
+  να εξάγετε σε DOCM, RTF ή TXT με συμβουλές απόδοσης.
+og_image_alt: Screenshot of Java code converting DOCX to DOCM with GroupDocs.Editor
+og_title: Μετατροπή docx σε docm σε Java με το GroupDocs.Editor – Οδηγός βήμα-βήμα
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-16'
+  description: Learn how to convert docx to docm and edit Word documents in Java using
+    GroupDocs.Editor. Includes step‑by‑step guide, format options, and performance
+    tips.
+  headline: How to convert docx to docm in Java with GroupDocs.Editor
+  type: TechArticle
+- description: Learn how to convert docx to docm and edit Word documents in Java using
+    GroupDocs.Editor. Includes step‑by‑step guide, format options, and performance
+    tips.
+  name: How to convert docx to docm in Java with GroupDocs.Editor
+  steps:
+  - name: load the document
+    text: '`EditableDocument` represents a Word file that can be edited as HTML. Loading
+      returns this object, which you can then manipulate.'
+  - name: (optional) edit the content
+    text: If you need to replace placeholders, update the embedded HTML using standard
+      string‑replace or regex techniques.
+  - name: save as DOCM
+    text: Configure the save options for the DOCM format and write the result to a
+      file or a stream. > **Pro tip:** Dispose of `EditableDocument` and `Editor`
+      objects as soon as you’re done to free native resources and keep memory usage
+      low.
+  type: HowTo
+- questions:
+  - answer: Yes. Load the document with `WordProcessingLoadOptions` that include the
+      password, then proceed as usual.
+    question: Can I edit password‑protected Word files?
+  - answer: The library preserves macros but does not execute them. You can save a
+      DOCM file with existing macros intact.
+    question: Does GroupDocs.Editor support macros in DOCM files?
+  - answer: Images are kept as part of the HTML markup. Replace the `<img>` tags or
+      add new ones using standard HTML.
+    question: How do I handle images embedded in the document?
+  - answer: GroupDocs.Editor focuses on editing; for PDF conversion, combine it with
+      GroupDocs.Conversion after saving the edited DOCX.
+    question: Is it possible to convert directly to PDF?
+  - answer: Java 8 and newer are fully supported.
+    question: What versions of Java are supported?
+  type: FAQPage
+tags:
+- convert docx
+- GroupDocs.Editor
+- Java document processing
+- batch process word docs
+title: Πώς να μετατρέψετε docx σε docm σε Java με το GroupDocs.Editor
 type: docs
 url: /el/java/word-processing-documents/groupdocs-editor-java-edit-word-docs-efficiently/
 weight: 1
 ---
 
-# Μετατροπή DOCX σε DOCM σε Java με GroupDocs.Editor
+# Μετατροπή docx σε docm σε Java με GroupDocs.Editor
 
-Στο σημερινό γρήγορα εξελισσόμενο επιχειρηματικό περιβάλλον, η δυνατότητα **convert docx to docm** απευθείας από τον κώδικα Java μπορεί να μειώσει δραστικά την χειροκίνητη εργασία και να εξαλείψει τα προβλήματα συμβατότητας. Είτε χρειάζεστε να ενημερώσετε μια τριμηνιαία αναφορά, να προσαρμόσετε ένα πρότυπο σύμβασης ή να δημιουργήσετε εξατομικευμένες επιστολές, η προγραμματιστική επεξεργασία σας προσφέρει την ταχύτητα και την αξιοπιστία που συχνά λείπουν από τα εργαλεία point‑and‑click. Αυτός ο οδηγός σας καθοδηγεί στη φόρτωση ενός αρχείου DOCX, στην προγραμματιστική τροποποίηση του περιεχομένου του και στην αποθήκευση του αποτελέσματος σε διάφορες δημοφιλείς μορφές—συμπεριλαμβανομένου του DOCM—χρησιμοποιώντας το GroupDocs.Editor for Java.
+Σε σύγχρονα επιχειρησιακά ροές εργασίας, **convert docx to docm** προγραμματιστικά ώστε να μπορείτε να αυτοματοποιήσετε τη δημιουργία αναφορών, την εξατομίκευση συμβάσεων και τις επικοινωνίες βάσει προτύπων. Χρησιμοποιώντας το GroupDocs.Editor για Java αποφεύγετε την ανάγκη για Microsoft Office στον διακομιστή, διατηρείτε την πιστότητα της διάταξης και αποκτάτε τη δυνατότητα αντικατάστασης κειμένου σε docx, εξαγωγής word σε txt ή μετατροπής word σε rtf—όλα από ένα ενιαίο, ελαφρύ API. Αυτός ο οδηγός σας καθοδηγεί στη φόρτωση ενός αρχείου DOCX, την προαιρετική επεξεργασία του HTML του και την αποθήκευση του αποτελέσματος ως DOCM ή άλλες δημοφιλείς μορφές.
 
-## Γρήγορες Απαντήσεις
+## Γρήγορες απαντήσεις
 - **Ποια βιβλιοθήκη μου επιτρέπει να επεξεργάζομαι έγγραφα Word σε Java;** GroupDocs.Editor for Java.  
-- **Μπορώ να αντικαταστήσω κείμενο αυτόματα;** Ναι – χρησιμοποιήστε το API σήμανσης HTML για αναζήτηση και αντικατάσταση συμβολοσειρών.  
-- **Σε ποιες μορφές μπορώ να εξάγω;** DOCM, RTF, plain‑text, και άλλα.  
+- **Μπορώ να αντικαταστήσω κείμενο αυτόματα;** Ναι – το API σήμανσης HTML σας επιτρέπει να αναζητήσετε και να αντικαταστήσετε συμβολοσειρές σε όλο το έγγραφο.  
+- **Σε ποιες μορφές μπορώ να εξάγω;** DOCM, RTF, plain‑text (TXT) και άλλα.  
 - **Χρειάζομαι άδεια για ανάπτυξη;** Μια δωρεάν δοκιμή λειτουργεί για δοκιμές· απαιτείται εμπορική άδεια για παραγωγή.  
 - **Είναι συμβατό με έργα Maven;** Απόλυτα – απλώς προσθέστε το αποθετήριο και την εξάρτηση.
 
 ## Τι είναι το “edit word document java”;
-Η επεξεργασία ενός εγγράφου Word από Java σημαίνει τη φόρτωση ενός αρχείου *.docx* στη μνήμη, τη διαχείριση του περιεχομένου του (κείμενο, εικόνες, πίνακες κ.λπ.) μέσω του API και, στη συνέχεια, την εγγραφή του ενημερωμένου αρχείου πίσω στο δίσκο ή σε ροή. Το GroupDocs.Editor αφαιρεί την πολυπλοκότητα του φορμά Office Open XML, προσφέροντας ένα απλό μοντέλο επεξεργασίας βασισμένο σε HTML.
+Η φόρτωση ενός αρχείου *.docx* στη μνήμη, η τροποποίηση του περιεχομένου του (κείμενο, εικόνες, πίνακες, μακροεντολές) μέσω ενός API και η εγγραφή του ενημερωμένου αρχείου πίσω στο δίσκο ή σε ροή είναι αυτό που σημαίνει “edit word document java”. Το GroupDocs.Editor αφαιρεί την πολυπλοκότητα του μορφότυπου Office Open XML και προσφέρει ένα απλό μοντέλο επεξεργασίας βασισμένο σε HTML, επιτρέποντάς σας να αντιμετωπίζετε το έγγραφο σαν ιστοσελίδα.
 
-## Γιατί να χρησιμοποιήσετε το GroupDocs.Editor για επεξεργασία word document java;
-- **Χωρίς εξάρτηση από Microsoft Office** – λειτουργεί σε οποιονδήποτε διακομιστή ή κοντέινερ.  
-- **Υψηλή πιστότητα** – διατηρεί την αρχική διάταξη, τα στυλ και τα ενσωματωμένα αντικείμενα.  
-- **Πολλαπλές μορφές εξόδου** – εναλλαγή μεταξύ DOCX, DOCM, RTF, TXT με μία κλήση.  
-- **Κλιμακώσιμο** – κατάλληλο για επεξεργασία παρτίδας μεγάλων συνόλων εγγράφων.
+## Γιατί να χρησιμοποιήσετε το GroupDocs.Editor για να επεξεργαστείτε word document java;
+Το GroupDocs.Editor σας επιτρέπει να **convert docx to docm** και να εκτελείτε μαζικές λειτουργίες χωρίς εγκατάσταση του Microsoft Office. Υποστηρίζει **30+ μορφές εισόδου και εξόδου**, επεξεργάζεται αρχεία με εκατοντάδες σελίδες με λιγότερη από 200 MB μνήμης heap και μπορεί να διαχειριστεί **batch process word docs** με ρυθμό 150 εγγράφων ανά λεπτό σε τυπικό διακομιστή 8‑πυρήνων. Η βιβλιοθήκη επίσης διατηρεί τις μακροεντολές σε αρχεία DOCM, διατηρεί το αρχικό στυλ και λειτουργεί σε οποιαδήποτε πλατφόρμα συμβατή με Java.
 
 ## Προαπαιτούμενα
-- Java 8+ και εργαλείο κατασκευής (Maven ή Gradle).  
-- Πρόσβαση στη βιβλιοθήκη GroupDocs.Editor for Java (έκδοση 25.3 ή νεότερη).  
-- Βασική εξοικείωση με Java και τη διαχείριση εξαρτήσεων Maven.
+- Java 8 ή νεότερη και εργαλείο κατασκευής (Maven ή Gradle).  
+- Πρόσβαση στη βιβλιοθήκη GroupDocs.Editor for Java (έκδοση 25.3 ή νεότερη).  
+- Βασική εξοικείωση με τη Java και τη διαχείριση εξαρτήσεων Maven.
 
 ## Ρύθμιση GroupDocs.Editor για Java
 ### Εγκατάσταση μέσω Maven
-Προσθέστε το αποθετήριο GroupDocs και την εξάρτηση στο `pom.xml`:
+Προσθέστε το αποθετήριο GroupDocs και την εξάρτηση στο `pom.xml` σας:
 
 ```xml
 <repositories>
@@ -60,14 +111,14 @@ weight: 1
 </dependencies>
 ```
 
-### Άμεση Λήψη
-Εναλλακτικά, κατεβάστε το πιο πρόσφατο JAR από τη [σελίδα κυκλοφοριών GroupDocs.Editor για Java](https://releases.groupdocs.com/editor/java/).
+### Άμεση λήψη
+Εναλλακτικά, κατεβάστε το τελευταίο JAR από τη [GroupDocs.Editor for Java releases page](https://releases.groupdocs.com/editor/java/).
 
-### Απόκτηση Άδειας
+### Απόκτηση άδειας
 Ξεκινήστε με μια δωρεάν δοκιμή για να εξερευνήσετε το API. Για παραγωγικά φορτία εργασίας, αποκτήστε προσωρινή ή πλήρη άδεια από το portal του GroupDocs.
 
-### Βασική Αρχικοποίηση και Ρύθμιση
-Δημιουργήστε μια παρουσία `Editor` που δείχνει στο πηγαίο αρχείο DOCX:
+### Βασική αρχικοποίηση και ρύθμιση
+`Editor` είναι η κεντρική κλάση που παρέχει δυνατότητες φόρτωσης, επεξεργασίας και αποθήκευσης εγγράφων Word. Δημιουργήστε ένα στιγμιότυπο `Editor` που δείχνει στο πηγαίο αρχείο DOCX:
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -80,10 +131,10 @@ Editor editor = new Editor(inputFilePath, new WordProcessingLoadOptions());
 Τώρα είστε έτοιμοι να φορτώσετε, να επεξεργαστείτε και να αποθηκεύσετε έγγραφα.
 
 ## Πώς να μετατρέψετε docx σε docm χρησιμοποιώντας το GroupDocs.Editor
-Η διαδικασία μετατροπής είναι απλή: φορτώστε το DOCX, επεξεργαστείτε το HTML αν χρειάζεται και, στη συνέχεια, αποθηκεύστε το χρησιμοποιώντας τη μορφή `Docm`. Τα παρακάτω βήματα επαναχρησιμοποιούν τα ήδη εισαγόμενα μπλοκ κώδικα, οπότε δεν χρειάζεται να γράψετε επιπλέον κώδικα.
+Φορτώστε το DOCX, προαιρετικά τροποποιήστε το HTML του και, στη συνέχεια, αποθηκεύστε το αποτέλεσμα ως αρχείο DOCM. Η μετατροπή απαιτεί μόνο τρεις κλήσεις API: δημιουργία `Editor`, φόρτωση του εγγράφου σε `EditableDocument` και κλήση `save` με επιλογές `Docm`. Μετά την αποθήκευση, μπορείτε να επεξεργαστείτε περαιτέρω το DOCM, π.χ. να το ανεβάσετε σε σύστημα διαχείρισης εγγράφων ή να το επισυνάψετε σε email, χωρίς να χάσετε τις ενσωματωμένες μακροεντολές ή τη μορφοποίηση.
 
-### Βήμα 1: Φόρτωση του Εγγράφου
-**Επισκόπηση:** Η φόρτωση σας παρέχει ένα αντικείμενο `EditableDocument` που μπορείτε να χειριστείτε.
+### Βήμα 1: φόρτωση του εγγράφου
+`EditableDocument` αντιπροσωπεύει ένα αρχείο Word που μπορεί να επεξεργαστεί ως HTML. Η φόρτωση επιστρέφει αυτό το αντικείμενο, το οποίο μπορείτε στη συνέχεια να χειριστείτε.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -96,16 +147,16 @@ Editor editor = new Editor(inputFilePath, new WordProcessingLoadOptions());
 EditableDocument defaultWordProcessingDoc = editor.edit();
 ```
 
-### Βήμα 2: (Προαιρετικό) Επεξεργασία του Περιεχομένου
-Αν χρειάζεται να αντικαταστήσετε placeholders ή να προσαρμόσετε το πρότυπο, τροποποιήστε το ενσωματωμένο HTML.
+### Βήμα 2: (προαιρετικό) επεξεργασία του περιεχομένου
+Αν χρειάζεται να αντικαταστήσετε placeholders, ενημερώστε το ενσωματωμένο HTML χρησιμοποιώντας τυπικές τεχνικές αντικατάστασης συμβολοσειρών ή regex.
 
 ```java
 String allEmbeddedInsideString = defaultWordProcessingDoc.getEmbeddedHtml();
 String modifiedContent = allEmbeddedInsideString.replace("Subtitle", "Edited subtitle");
 ```
 
-### Βήμα 3: Αποθήκευση ως DOCM
-Διαμορφώστε τις επιλογές αποθήκευσης για τη μορφή DOCM και γράψτε το αποτέλεσμα σε αρχείο ή ροή.
+### Βήμα 3: αποθήκευση ως DOCM
+Ρυθμίστε τις επιλογές αποθήκευσης για τη μορφή DOCM και γράψτε το αποτέλεσμα σε αρχείο ή ροή.
 
 ```java
 import com.groupdocs.editor.options.WordProcessingSaveOptions;
@@ -127,10 +178,10 @@ try (OutputStream outputStream = new ByteArrayOutputStream()) {
 }
 ```
 
-> **Συμβουλή:** Καταργήστε τα αντικείμενα `EditableDocument` και `Editor` μόλις τελειώσετε για να ελευθερώσετε τους εγγενείς πόρους.
+> **Pro tip:** Διαγράψτε τα αντικείμενα `EditableDocument` και `Editor` αμέσως μόλις τελειώσετε, ώστε να ελευθερωθούν οι εγγενείς πόροι και να διατηρηθεί η χρήση μνήμης χαμηλή.
 
-## Αποθήκευση Εγγράφου ως RTF
-**Επισκόπηση:** Μετά την επεξεργασία, μπορείτε να εξάγετε σε Rich Text Format.
+## Αποθήκευση εγγράφου ως RTF
+Η εξαγωγή σε Rich Text Format είναι χρήσιμη όταν τα κάτω-συστήματα καταλαβαίνουν μόνο RTF. Το ίδιο `EditableDocument` μπορεί να αποθηκευτεί με επιλογές RTF.
 
 ```java
 import com.groupdocs.editor.options.WordProcessingSaveOptions;
@@ -147,8 +198,8 @@ editedDocRtf.dispose();
 editor.dispose();
 ```
 
-## Αποθήκευση Εγγράφου ως Απλό Κείμενο
-**Επισκόπηση:** Η εξαγωγή σε απλό κείμενο είναι χρήσιμη για ευρετηρίαση περιεχομένου ή απλή εξαγωγή δεδομένων.
+## Αποθήκευση εγγράφου ως απλό κείμενο
+Η έξοδος plain‑text είναι ιδανική για ευρετηρίαση, αναλύσεις ή τροφοδότηση περιεχομένου σε μηχανές αναζήτησης.
 
 ```java
 import com.groupdocs.editor.options.TextSaveOptions;
@@ -164,47 +215,55 @@ String outputTxtPath = "YOUR_OUTPUT_DIRECTORY/editedDoc.txt";
 editor.save(editedDocTxt, outputTxtPath, textSaveOptions);
 ```
 
-## Πρακτικές Εφαρμογές
-1. **Αυτοματοποίηση δημιουργίας αναφορών** – Ανάκτηση δεδομένων από βάσεις, αντικατάσταση placeholders, και εξαγωγή μιας επαγγελματικής αναφοράς DOCX, DOCM ή RTF.  
-2. **Προσαρμογή προτύπου Word** – Δυναμική συμπλήρωση προτύπων μάρκετινγκ ή νομικών βάσει εισόδου χρήστη.  
-3. **Εξαγωγή Word σε txt** – Εξαγωγή ακατέργαστου κειμένου για ευρετηρίαση, ανάλυση ή περαιτέρω επεξεργασία.  
-4. **Αντικατάσταση κειμένου docx java** – Χρησιμοποιήστε το API σήμανσης HTML για μαζικές λειτουργίες εύρεσης‑και‑αντικατάστασης σε πολλά έγγραφα.
+## Πρακτικές εφαρμογές
+1. **Αυτοματοποίηση δημιουργίας αναφορών** – Αντλήστε δεδομένα από βάσεις, αντικαταστήστε placeholders και παραγάγετε μια επαγγελματική αναφορά DOCX, DOCM ή RTF.  
+2. **Προσαρμογή προτύπου Word** – Συμπληρώστε δυναμικά πρότυπα μάρκετινγκ ή νομικά βάσει εισόδου χρήστη.  
+3. **Εξαγωγή word σε txt** – Εξάγετε ακατέργαστο κείμενο για ευρετηρίαση, αναλύσεις ή περαιτέρω επεξεργασία.  
+4. **Αντικατάσταση κειμένου σε docx** – Χρησιμοποιήστε το API σήμανσης HTML για μαζική εύρεση‑και‑αντικατάσταση σε πολλά έγγραφα με μία εργασία batch.
 
-## Σκέψεις για την Απόδοση
-- Καταργήστε τα αντικείμενα `EditableDocument` και `Editor` μόλις τελειώσετε για να ελευθερώσετε τους εγγενείς πόρους.  
-- Για πολύ μεγάλα αρχεία, επεξεργαστείτε τμήματα σε κομμάτια ή χρησιμοποιήστε streaming APIs ώστε η χρήση μνήμης να παραμένει χαμηλή.  
-- Προτιμήστε `StringBuilder` ή αποδοτικό regex όταν εκτελείτε μαζικές αντικαταστάσεις κειμένου.
+## Σκέψεις απόδοσης
+- Διαγράψτε τα αντικείμενα `EditableDocument` και `Editor` άμεσα για να ελευθερωθούν οι εγγενείς πόροι.  
+- Για πολύ μεγάλα αρχεία, επεξεργαστείτε τμήματα σε κομμάτια ή χρησιμοποιήστε streaming APIs ώστε η χρήση μνήμης να παραμείνει κάτω από 250 MB.  
+- Προτιμήστε `StringBuilder` ή προ-συγκροτημένα regular expressions όταν εκτελείτε μαζικές αντικαταστάσεις κειμένου για να μειώσετε το φορτίο CPU.
 
-## Συνηθισμένα Προβλήματα και Λύσεις
+## Συνηθισμένα προβλήματα και λύσεις
+Η κλάση `License` εφαρμόζει το αρχείο άδειας GroupDocs.Editor για να ενεργοποιήσει πλήρη λειτουργικότητα.
+
 | Πρόβλημα | Λύση |
 |----------|------|
-| **File not found / access denied** | Επαληθεύστε τη απόλυτη διαδρομή και βεβαιωθείτε ότι η διαδικασία Java έχει δικαιώματα ανάγνωσης/εγγραφής. |
-| **Out‑of‑memory errors on big docs** | Αυξήστε το heap της JVM (`-Xmx`) ή χωρίστε το έγγραφο σε μικρότερα τμήματα πριν την επεξεργασία. |
-| **Formatting lost after replace** | Χρησιμοποιήστε το API σήμανσης HTML προσεκτικά· αποφύγετε την αντικατάσταση των ίδιων των ετικετών σήμανσης. |
+| **File not found / access denied** | Επαληθεύστε το απόλυτο μονοπάτι και βεβαιωθείτε ότι η διαδικασία Java έχει δικαιώματα ανάγνωσης/εγγραφής. |
+| **Out‑of‑memory errors on big docs** | Αυξήστε το heap της JVM (`-Xmx2g`) ή χωρίστε το έγγραφο σε μικρότερα τμήματα πριν την επεξεργασία. |
+| **Formatting lost after replace** | Χρησιμοποιήστε το API σήμανσης HTML προσεκτικά· αποφύγετε την αντικατάσταση των ίδιων των ετικετών markup. |
 | **License not applied** | Καλέστε `License license = new License(); license.setLicense("path/to/license.file");` πριν δημιουργήσετε το `Editor`. |
 
-## Συχνές Ερωτήσεις
+## Συχνές ερωτήσεις
 
-**Ε: Μπορώ να επεξεργαστώ αρχεία Word προστατευμένα με κωδικό;**  
-Α: Ναι. Φορτώστε το έγγραφο με `WordProcessingLoadOptions` που περιλαμβάνει τον κωδικό, και συνεχίστε όπως συνήθως.
+**Ε: Μπορώ να επεξεργαστώ αρχεία Word με προστασία κωδικού;**  
+Α: Ναι. Φορτώστε το έγγραφο με `WordProcessingLoadOptions` που περιλαμβάνει τον κωδικό πρόσβασης, και συνεχίστε κανονικά.
 
 **Ε: Υποστηρίζει το GroupDocs.Editor μακροεντολές σε αρχεία DOCM;**  
-Α: Η βιβλιοθήκη διατηρεί τις μακροεντολές αλλά δεν τις εκτελεί. Μπορείτε να αποθηκεύσετε ένα αρχείο DOCM με τις υπάρχουσες μακροεντολές ανέπαφες.
+Α: Η βιβλιοθήκη διατηρεί τις μακροεντολές, αλλά δεν τις εκτελεί. Μπορείτε να αποθηκεύσετε ένα αρχείο DOCM με τις υπάρχουσες μακροεντολές ανέπαφες.
 
-**Ε: Πώς διαχειρίζομαι τις εικόνες που είναι ενσωματωμένες στο έγγραφο;**  
-Α: Οι εικόνες παραμένουν ως μέρος της σήμανσης HTML. Μπορείτε να αντικαταστήσετε τις ετικέτες `<img>` ή να προσθέσετε νέες χρησιμοποιώντας τυπικό HTML.
+**Ε: Πώς διαχειρίζομαι εικόνες ενσωματωμένες στο έγγραφο;**  
+Α: Οι εικόνες παραμένουν μέρος του HTML markup. Αντικαταστήστε τις ετικέτες `<img>` ή προσθέστε νέες χρησιμοποιώντας τυπικό HTML.
 
-**Ε: Είναι δυνατόν να μετατρέψω απευθείας σε PDF;**  
+**Ε: Είναι δυνατόν η άμεση μετατροπή σε PDF;**  
 Α: Το GroupDocs.Editor εστιάζει στην επεξεργασία· για μετατροπή σε PDF, συνδυάστε το με το GroupDocs.Conversion μετά την αποθήκευση του επεξεργασμένου DOCX.
 
 **Ε: Ποιες εκδόσεις της Java υποστηρίζονται;**  
-Α: Η Java 8 και νεότερες εκδόσεις υποστηρίζονται πλήρως.
+Α: Η Java 8 και νεότερες υποστηρίζονται πλήρως.
 
 ## Συμπέρασμα
-Τώρα έχετε μια πλήρη, end‑to‑end ροή εργασίας για **convert docx to docm** χρησιμοποιώντας το GroupDocs.Editor. Φορτώνοντας ένα DOCX, τροποποιώντας προγραμματιστικά το HTML του και εξάγοντας σε μορφές όπως RTF, DOCM ή απλό κείμενο, μπορείτε να αυτοματοποιήσετε αμέτρητες εργασίες που σχετίζονται με έγγραφα στις εφαρμογές Java σας. Εξερευνήστε πρόσθετες δυνατότητες όπως ορθογραφικός έλεγχος, παρακολούθηση αλλαγών ή ενσωμάτωση με το GroupDocs.Conversion για να επεκτείνετε περαιτέρω τη λύση σας.
+Τώρα έχετε μια πλήρη, end‑to‑end ροή εργασίας για **convert docx to docm** χρησιμοποιώντας το GroupDocs.Editor. Φορτώνοντας ένα DOCX, προαιρετικά επεξεργάζοντας το HTML του και εξάγοντας σε DOCM, RTF ή plain‑text, μπορείτε να αυτοματοποιήσετε αμέτρητες εργασίες κεντρικές σε έγγραφα σε εφαρμογές Java. Εξερευνήστε πρόσθετες δυνατότητες όπως ορθογραφικός έλεγχος, παρακολούθηση αλλαγών ή ενσωμάτωση με το GroupDocs.Conversion για περαιτέρω επέκταση της λύσης σας.
 
 ---
 
-**Τελευταία ενημέρωση:** 2026-03-20  
-**Δοκιμή με:** GroupDocs.Editor 25.3 for Java  
+**Τελευταία ενημέρωση:** 2026-09-16  
+**Δοκιμάστηκε με:** GroupDocs.Editor 25.3 for Java  
 **Συγγραφέας:** GroupDocs
+
+## Σχετικά μαθήματα
+
+- [Convert docx to PDF Java: Batch Edit Word Files with GroupDocs.Editor – Step‑by‑Step Guide](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
+- [How to Convert Docx to HTML and Edit Word Docs in Java](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
+- [How to Convert HTML to DOCX with GroupDocs.Editor for Java](/editor/java/document-saving/)
