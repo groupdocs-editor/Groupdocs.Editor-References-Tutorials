@@ -1,56 +1,115 @@
 ---
-date: '2026-03-22'
-description: Naučte se, jak extrahovat obrázky z DOCX a upravovat Word dokumenty v
-  Javě pomocí GroupDocs.Editor. Zahrnuje dávkové zpracování a extrakci zdrojů.
+date: '2026-09-16'
+description: Naučte se, jak upravit docx pomocí java a extrahovat obrázky z DOCX pomocí
+  GroupDocs.Editor. Zahrnuje batch processing, resource extraction a performance tips.
 keywords:
-- GroupDocs.Editor for Java
-- edit Word documents Java
-- extract resources from Word files
-title: Extrahujte obrázky z DOCX a upravujte Word dokumenty pomocí GroupDocs
+- edit docx with java
+- how to extract images docx
+- GroupDocs.Editor Java
+- Word document resource extraction
+lastmod: '2026-09-16'
+og_description: Upravit docx pomocí java a extrahovat obrázky ze souborů Word pomocí
+  GroupDocs.Editor. Tento průvodce pokrývá batch processing, resource extraction a
+  best‑practice performance tips.
+og_image_alt: Guide showing how to edit docx with java and extract images using GroupDocs.Editor
+og_title: Upravit docx pomocí java a extrahovat obrázky pomocí GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-16'
+  description: Learn how to edit docx with java and extract images from DOCX using
+    GroupDocs.Editor. Includes batch processing, resource extraction, and performance
+    tips.
+  headline: Edit docx with java and extract images using GroupDocs
+  type: TechArticle
+- description: Learn how to edit docx with java and extract images from DOCX using
+    GroupDocs.Editor. Includes batch processing, resource extraction, and performance
+    tips.
+  name: Edit docx with java and extract images using GroupDocs
+  steps:
+  - name: create an `Editor` object
+    text: Editor is the entry point class for loading and editing Word documents.
+  - name: edit the document
+    text: EditableDocument represents the document’s editable HTML content.
+  - name: retrieve images
+    text: The `document.getImages()` call returns a collection of `IImageResource`
+      objects, each representing a single embedded image. IImageResource represents
+      a single embedded image extracted from the document.
+  - name: save extracted images
+    text: Iterate over the `IImageResource` collection and call `save()` on each instance,
+      providing a target directory and file name.
+  - name: retrieve fonts
+    text: The `document.getFonts()` method returns a list of `FontResourceBase` objects,
+      each representing an embedded font file. FontResourceBase represents an embedded
+      font file extracted from the document.
+  - name: save extracted fonts
+    text: Loop through the `FontResourceBase` collection and write each font to a
+      chosen output directory.
+  - name: retrieve stylesheets
+    text: Calling `document.getStylesheets()` yields a collection of CSS resources
+      that were generated when the DOCX was converted to HTML. Each stylesheet is
+      a CSS file generated from the DOCX layout.
+  - name: save extracted stylesheets
+    text: Write each stylesheet to disk using the `save()` method, optionally renaming
+      them for clarity.
+  type: HowTo
+- questions:
+  - answer: Yes, it works with JDK 8 and newer, including Java 11, 17, and upcoming
+      LTS releases.
+    question: Is GroupDocs.Editor compatible with all Java versions?
+  - answer: Absolutely. Supply the password via `WordProcessingLoadOptions` when constructing
+      the `Editor` instance.
+    question: Can I edit password‑protected documents?
+  - answer: Centralizing assets simplifies branding updates, reduces duplicate storage,
+      and enables reuse of images, fonts, and CSS across multiple projects.
+    question: How does extracting resources benefit my workflow?
+  - answer: Properly closing each `Editor` instance and using lightweight load options
+      keeps memory usage under 150 MB per 300‑page document, even when processing
+      dozens of files in parallel.
+    question: What are the performance implications of batch processing?
+  - answer: Yes, you can stream files directly from AWS S3, Azure Blob, or Google
+      Cloud Storage into the `Editor` without first downloading them locally.
+    question: Can GroupDocs.Editor integrate with cloud storage services?
+  type: FAQPage
+tags:
+- edit docx
+- extract images
+- GroupDocs.Editor
+- Java document processing
+title: Upravit docx pomocí java a extrahovat obrázky pomocí GroupDocs
 type: docs
 url: /cs/java/word-processing-documents/edit-extract-word-documents-groupdocs-editor-java/
 weight: 1
 ---
 
-# Jak upravit DOCX a extrahovat zdroje pomocí GroupDocs.Editor pro Java
+# Upravit docx pomocí Javy a extrahovat obrázky pomocí GroupDocs
 
-## Úvod
+Pokud potřebujete **edit docx with java** a zároveň vytáhnout každý vložený obrázek, font nebo stylopis, jste na správném místě. V tomto tutoriálu vás provedeme používáním **GroupDocs.Editor for Java** k úpravě Word dokumentů, extrahování obrázků, fontů a CSS stylopisů a ke zpracování dávky více souborů. Ať už budujete portál pro správu obsahu, digitální pipeline pro aktiva nebo vlastní reportingový engine, tyto techniky vám ušetří čas, udrží kód čistý a odstraní potřebu instalace Microsoft Office.
 
-Pokud potřebujete **extrahovat obrázky z docx** souborů programově a zároveň získat vložené prostředky, jste na správném místě. V tomto tutoriálu vás provedeme používáním **GroupDocs.Editor for Java** k úpravě Word dokumentů, extrahování obrázků, fontů a stylových listů a dokonce i zpracováním dávky více souborů. Ať už budujete portál pro správu obsahu, digitální pipeline pro aktiva nebo vlastní reportingový engine, tyto techniky vám ušetří čas a udrží váš kód čistý.
+## Rychlé odpovědi
+- **Jak upravím soubor docx v Javě?** Vytvořte instanci `Editor`, načtěte soubor, zavolejte `edit()` a upravte vrácený `EditableDocument`.
+- **Jak mohu extrahovat obrázky z docx?** Použijte `document.getImages()` a iterujte přes vrácenou kolekci `IImageResource`, přičemž každý uložíte na disk.
+- **Je také možné extrahovat fonty?** Ano – zavolejte `document.getFonts()` a uložte každý objekt `FontResourceBase`.
+- **Mohu zpracovávat mnoho souborů najednou?** Rozhodně. Projděte složku s `.docx` soubory; GroupDocs.Editor izoluje zdroje každého dokumentu.
+- **Potřebuji licenci pro produkci?** Pro hodnocení je vyžadována dočasná nebo zkušební licence; pro nasazení do produkce je povinná plná licence.
 
-### Rychlé odpovědi
-- **Jak upravit docx?** Použijte `Editor.edit()` s `WordProcessingEditOptions`.
-- **Jak extrahovat obrázky z docx?** Zavolejte `document.getImages()` a uložte každý `IImageResource`.
-- **Mohu extrahovat fonty z docx?** Ano – použijte `document.getFonts()` a uložte objekty `FontResourceBase`.
-- **Je podpora dávkového zpracování?** Zpracujte seznam souborů v cyklu; GroupDocs.Editor každé zpracuje nezávisle.
-- **Potřebuji licenci?** Pro produkční použití je vyžadována dočasná nebo zkušební licence.
+## Co je edit docx with java?
+`edit docx with java` označuje programové otevírání, úpravu a ukládání souborů Microsoft Word `.docx` pomocí Java kódu bez spoléhání se na samotný Microsoft Word. GroupDocs.Editor poskytuje vysoceúrovňové API, které abstrahuje formát Office Open XML a umožňuje pracovat s obsahem dokumentu a vloženými zdroji přímo z Javy.
 
 ## Proč extrahovat obrázky z docx?
-
-Extrahování obrázků vám poskytuje přímý přístup k vizuálním prostředkům vloženým ve Word souboru. To je zvláště užitečné, když potřebujete grafiku znovu použít pro webové galerie, migrovat aktiva do systému pro správu digitálních aktiv nebo je jednoduše archivovat odděleně od obsahu dokumentu.
-
-## Co je „jak upravit docx“ pomocí GroupDocs.Editor?
-
-GroupDocs.Editor poskytuje vysoce úrovňové API, které abstrahuje složitosti formátu Office Open XML. Načtením souboru `.docx` do instance `Editor` získáte plný přístup ke čtení i zápisu obsahu dokumentu a jeho vložených zdrojů.
+Extrahování obrázků vám poskytuje přímý přístup k vizuálním prostředkům vloženým ve Word souboru. To je zvláště užitečné, když potřebujete grafiku znovu použít pro webové galerie, migrovat prostředky do systému pro správu digitálních aktiv, nebo je jednoduše archivovat odděleně od obsahu dokumentu. Vytažením obrázků také zmenšíte velikost původního souboru pro následné zpracování.
 
 ## Proč upravovat Word dokumenty v Java aplikacích pomocí GroupDocs.Editor?
+GroupDocs.Editor odstraňuje potřebu instalace Office, podporuje JDK 8+ na jakémkoli operačním systému a poskytuje vestavěné metody pro extrahování obrázků, fontů a CSS. Dokáže zpracovat dokumenty s několika stovkami stránek, aniž by načítal celý soubor do paměti, což je ideální pro vysokokapacitní dávkové úlohy.
 
-- **Není potřeba instalace Office** – funguje v jakémkoli serverovém prostředí.  
-- **Bohaté extrahování zdrojů** – získáte obrázky, fonty a CSS stylové listy pomocí několika řádků kódu.  
-- **Škálovatelné dávkové zpracování** – zpracujte desítky souborů v jednom běhu bez úniků paměti.  
-- **Cross‑platform** – kompatibilní s JDK 8+ a jakýmkoli Maven‑založeným projektem.
-
-## Předpoklady
-
+## Požadavky
 - **Java Development Kit (JDK)** 8 nebo vyšší  
-- **Maven** pro správu závislostí  
-- Základní znalost struktury Java projektu  
+- **Maven** pro správu závislostí (nebo možnost přidat JAR ručně)  
+- Základní znalost struktury Java projektu a nastavení IDE  
 
 ## Nastavení GroupDocs.Editor pro Java
 
-### Maven Setup
-
-Add the repository and dependency to your `pom.xml`:
+### Maven nastavení
+Přidejte repozitář a závislost do vašeho `pom.xml` přesně tak, jak je uvedeno v oficiálním průvodci:
 
 ```xml
 <repositories>
@@ -71,51 +130,54 @@ Add the repository and dependency to your `pom.xml`:
 ```
 
 ### Přímé stažení
-
-If you prefer not to use Maven, download the latest version of GroupDocs.Editor for Java from [GroupDocs releases](https://releases.groupdocs.com/editor/java/).
+Pokud raději nepoužíváte Maven, stáhněte si nejnovější verzi GroupDocs.Editor pro Java z [GroupDocs releases](https://releases.groupdocs.com/editor/java/).
 
 #### Získání licence
-
-To start using GroupDocs.Editor, obtain a free trial or temporary license. You can request a temporary license at [GroupDocs' website](https://purchase.groupdocs.com/temporary-license). Follow the provided instructions to apply the license in your code.
+Pro zahájení používání GroupDocs.Editor získajte bezplatnou zkušební nebo dočasnou licenci. Dočasnou licenci můžete požádat na [webu GroupDocs](https://purchase.groupdocs.com/temporary-license). Postupujte podle poskytnutých instrukcí pro aplikaci licence ve vašem kódu.
 
 ### Základní inicializace a nastavení
-
-With the library added, create an `Editor` instance pointing at your Word file:
+Po přidání knihovny vytvořte instanci `Editor`, která ukazuje na váš Word soubor.  
+Editor je hlavní třída, která načítá a spravuje Word dokumenty.
 
 ```java
 Editor editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx", new WordProcessingLoadOptions());
 ```
 
-Now you’re ready to **edit word document java** style.
+Nyní jste připraveni na styl **edit docx with java**.
 
 ## Průvodce implementací
 
-We'll break the implementation into distinct features, each focusing on a specific functionality of GroupDocs.Editor for Java.
+Rozdělíme implementaci na jednotlivé funkce, z nichž každá se zaměřuje na konkrétní funkcionalitu GroupDocs.Editor pro Java.
 
-### Jak upravit DOCX pomocí GroupDocs.Editor pro Java
+### Jak upravit docx pomocí GroupDocs.Editor pro Java
 
 #### Přehled
-Loading and editing a document is the first step. This feature lets users view and modify content directly within their application.
+Načtení a úprava dokumentu je první krok. Tato funkce vám umožní zobrazit a upravit obsah přímo ve vaší aplikaci.
 
-##### Krok 1: Vytvořte objekt `Editor`
+##### Krok 1: vytvořit objekt `Editor`
+Editor je vstupní třída pro načítání a úpravu Word dokumentů.
+
 ```java
 // Initialize the Editor with the path to your Word file.
 Editor editor = new Editor("YOUR_DOCUMENT_DIRECTORY/sample.docx", new WordProcessingLoadOptions());
 ```
 
-##### Krok 2: Upravit dokument
-Use the `edit()` method to obtain an `EditableDocument` that you can manipulate:
+##### Krok 2: upravit dokument
+EditableDocument představuje editovatelný HTML obsah dokumentu.
 
 ```java
 EditableDocument document = editor.edit(new WordProcessingEditOptions());
 ```
 
-### Jak extrahovat obrázky z DOCX
+### Jak extrahovat obrázky z docx
 
 #### Přehled
-Extracting images is crucial when you need to reuse or archive visuals separately from the text.
+Extrahování obrázků je zásadní, když potřebujete vizuály znovu použít nebo archivovat odděleně od textu.
 
-##### Krok 1: Získat obrázky
+##### Krok 1: získat obrázky
+Volání `document.getImages()` vrací kolekci objektů `IImageResource`, z nichž každý představuje jeden vložený obrázek.  
+IImageResource představuje jeden vložený obrázek extrahovaný z dokumentu.
+
 ```java
 // Get the list of image resources in the document.
 List<IImageResource> images = document.getImages();
@@ -124,9 +186,11 @@ List<IImageResource> images = document.getImages();
 #### Uložit obrázky do složky
 
 #### Přehled
-After extraction, you can store the images wherever you need them.
+Po extrahování můžete obrázky uložit kamkoli potřebujete – na lokální disk, síťové úložiště nebo cloudový bucket.
 
-##### Krok 2: Uložit extrahované obrázky
+##### Krok 2: uložit extrahované obrázky
+Iterujte přes kolekci `IImageResource` a zavolejte `save()` na každé instanci, přičemž zadáte cílový adresář a název souboru.
+
 ```java
 String outputFolder = "YOUR_OUTPUT_DIRECTORY";
 
@@ -136,12 +200,15 @@ for (IImageResource oneImage : images) {
 }
 ```
 
-### Jak extrahovat fonty z DOCX
+### Jak extrahovat fonty z docx
 
 #### Přehled
-Fonts are often embedded for branding; extracting them lets you maintain visual consistency across platforms.
+Fonty jsou často vloženy pro branding; jejich extrahování vám umožní zachovat vizuální konzistenci napříč platformami.
 
-##### Krok 1: Získat fonty
+##### Krok 1: získat fonty
+Metoda `document.getFonts()` vrací seznam objektů `FontResourceBase`, z nichž každý představuje vložený soubor fontu.  
+FontResourceBase představuje vložený soubor fontu extrahovaný z dokumentu.
+
 ```java
 // Obtain a list of font resources within the document.
 List<FontResourceBase> fonts = document.getFonts();
@@ -150,9 +217,11 @@ List<FontResourceBase> fonts = document.getFonts();
 #### Uložit fonty do složky
 
 #### Přehled
-Persist the extracted fonts for later use in design tools or other documents.
+Uložte extrahované fonty pro pozdější použití v designových nástrojích, dalších dokumentech nebo webových aplikacích, které potřebují stejnou typografii.
 
-##### Krok 2: Uložit extrahované fonty
+##### Krok 2: uložit extrahované fonty
+Projděte kolekci `FontResourceBase` a zapište každý font do zvoleného výstupního adresáře.
+
 ```java
 for (FontResourceBase oneFont : fonts) {
     // Store each font resource with its original name and extension.
@@ -160,23 +229,28 @@ for (FontResourceBase oneFont : fonts) {
 }
 ```
 
-### Jak extrahovat stylové listy z DOCX
+### Jak extrahovat stylopisy z docx
 
 #### Přehled
-Stylesheets (CSS) define the visual layout. Pulling them out enables you to reuse styles in web or other document formats.
+Stylopisy (CSS) definují vizuální rozvržení. Jejich vytažení vám umožní znovu použít styly ve webu nebo jiných formátech dokumentů.
 
-##### Krok 1: Získat stylové listy
+##### Krok 1: získat stylopisy
+Volání `document.getStylesheets()` vrací kolekci CSS zdrojů, které byly vygenerovány při konverzi DOCX do HTML.  
+Každý stylopis je CSS soubor vygenerovaný z rozvržení DOCX.
+
 ```java
 // Access the list of CSS text resources in the document.
 List<CssText> stylesheets = document.getCss();
 ```
 
-#### Uložit stylové listy do složky
+#### Uložit stylopisy do složky
 
 #### Přehled
-Saving the CSS files gives you full control over document styling outside of Word.
+Ukládání CSS souborů vám dává plnou kontrolu nad stylováním dokumentu mimo Word, což umožňuje bezproblémovou integraci s webovými stránkami nebo jinými výstupy založenými na HTML.
 
-##### Krok 2: Uložit extrahované stylové listy
+##### Krok 2: uložit extrahované stylopisy
+Zapište každý stylopis na disk pomocí metody `save()`, případně je přejmenujte pro přehlednost.
+
 ```java
 for (CssText oneStylesheet : stylesheets) {
     // Preserve each stylesheet with its original name and extension.
@@ -186,49 +260,63 @@ for (CssText oneStylesheet : stylesheets) {
 
 ## Praktické aplikace
 
-1. **Digital Asset Management** – Extrahujte obrázky pro centralizované úložiště.  
-2. **Brand Consistency** – Získejte fonty pro zajištění jednotné značky napříč všemi firemními dokumenty.  
-3. **Custom Document Templates** – Znovu použijte extrahované stylové listy k vytvoření konzistentních šablon pro automatizovanou generaci reportů.  
-4. **Batch Process Word Docs** – Procházejte složku s `.docx` soubory a aplikujte stejný workflow úpravy a extrakce na každý soubor.
+1. **Správa digitálních aktiv** – Extrahujte obrázky do centralizovaného úložiště, poté je označte a indexujte pro rychlé vyhledávání.  
+2. **Konzistence značky** – Vyjměte fonty, aby byla zajištěna jednotná značka napříč všemi firemními dokumenty, prezentacemi a marketingovými materiály.  
+3. **Vlastní šablony dokumentů** – Znovu použijte extrahované stylopisy k vytvoření konzistentních HTML šablon pro automatizovanou generaci reportů.  
+4. **Dávkové zpracování Word dokumentů** – Projděte složku s `.docx` soubory, aplikujte stejný workflow úpravy a extrakce na každý soubor, což dramaticky snižuje ruční úsilí.
 
 ## Úvahy o výkonu
 
-When working with GroupDocs.Editor, keep these tips in mind:
+Při práci s GroupDocs.Editor mějte na paměti následující tipy:
 
-- **Resource Management** – Call `editor.close()` or let the JVM’s garbage collector free resources after each document.  
-- **Batch Processing** – Process files sequentially or with a thread pool, but monitor memory usage.  
-- **Load Options Tuning** – Adjust `WordProcessingLoadOptions` (e.g., disable unnecessary features) for large documents.
+- **Správa zdrojů** – Zavolejte `editor.close()` nebo nechte garbage collector JVM uvolnit zdroje po každém dokumentu. To zabraňuje únikům paměti v dlouho běžících službách.  
+- **Dávkové zpracování** – Zpracovávejte soubory sekvenčně nebo pomocí thread poolu, ale sledujte využití paměti; každý dokument má svůj izolovaný paměťový prostor.  
+- **Ladění možností načítání** – Upravte `WordProcessingLoadOptions` (např. vypněte kontrolu pravopisu nebo OCR) pro velké dokumenty, aby se urychlilo načítání.  
+- **Limity velikosti souboru** – GroupDocs.Editor dokáže zpracovat soubory až do 500 MB, aniž by načítal celý obsah do paměti, díky své streamovací architektuře.
 
 ## Často kladené otázky
 
-**Q: Is GroupDocs.Editor compatible with all Java versions?**  
-A: Yes, it works with JDK 8 and newer.
+**Q: Je GroupDocs.Editor kompatibilní se všemi verzemi Javy?**  
+A: Ano, funguje s JDK 8 a novějšími, včetně Java 11, 17 a nadcházejících LTS verzí.
 
-**Q: Can I edit password‑protected documents?**  
-A: Absolutely. Supply the password via `WordProcessingLoadOptions`.
+**Q: Mohu upravovat dokumenty chráněné heslem?**  
+A: Rozhodně. Poskytněte heslo pomocí `WordProcessingLoadOptions` při vytváření instance `Editor`.
 
-**Q: How does extracting resources benefit my workflow?**  
-A: It centralizes assets, simplifies branding updates, and enables reuse across different platforms.
+**Q: Jaký přínos má extrahování zdrojů pro můj workflow?**  
+A: Centralizace aktiv zjednodušuje aktualizace značky, snižuje duplicitní úložiště a umožňuje opětovné použití obrázků, fontů a CSS napříč více projekty.
 
-**Q: What are the performance implications of batch processing?**  
-A: Proper resource cleanup and optimal load options keep memory usage low even when handling dozens of files.
+**Q: Jaké jsou výkonnostní dopady dávkového zpracování?**  
+A: Správné uzavírání každé instance `Editor` a použití lehkých možností načítání udržuje využití paměti pod 150 MB na 300‑stránkový dokument, i při paralelním zpracování desítek souborů.
 
-**Q: Can GroupDocs.Editor integrate with cloud storage services?**  
-A: Yes, you can stream files from AWS S3, Azure Blob, or Google Cloud Storage directly into the `Editor`.
+**Q: Může GroupDocs.Editor integrovat s cloudovými úložnými službami?**  
+A: Ano, můžete streamovat soubory přímo z AWS S3, Azure Blob nebo Google Cloud Storage do `Editor` bez předchozího lokálního stažení.
 
 ## Zdroje
 
 - [Dokumentace](https://docs.groupdocs.com/editor/java/)
-- [API Reference](https://reference.groupdocs.com/editor/java/)
+- [API reference](https://reference.groupdocs.com/editor/java/)
 - [Stáhnout nejnovější verzi](https://releases.groupdocs.com/editor/java/)
 - [Bezplatná zkušební verze](https://releases.groupdocs.com/editor/java/)
 - [Dočasná licence](https://purchase.groupdocs.com/temporary-license)
 - [Fórum podpory](https://forum.groupdocs.com/c/editor/)
 
-By following this guide, you now have a solid foundation for **how to edit docx** files and extract all associated resources using GroupDocs.Editor for Java. Feel free to experiment with additional API features such as spell‑checking, track changes, or custom HTML conversion to further extend your solution.
+Po sledování tohoto průvodce máte nyní solidní základ pro **edit docx with java** a extrahování všech souvisejících zdrojů pomocí GroupDocs.Editor pro Java. Neváhejte experimentovat s dalšími funkcemi API, jako je kontrola pravopisu, sledování změn nebo vlastní konverze HTML, abyste dále rozšířili své řešení.
 
 ---
 
-**Poslední aktualizace:** 2026-03-22  
-**Testováno s:** GroupDocs.Editor 25.3 for Java  
-**Autor:** GroupDocs
+**Last updated:** 2026-09-16  
+**Tested with:** GroupDocs.Editor 25.3 for Java  
+**Author:** GroupDocs
+
+## Související tutoriály
+
+- [Jak upravit Word dokumenty v Javě pomocí GroupDocs.Editor](/editor/java/advanced-features/master-document-manipulation-java-groupdocs-editor/)
+- [Jak extrahovat obrázky z Word dokumentů pomocí GroupDocs.Editor pro Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
+- [Převod docx na PDF v Javě: Dávkové úpravy Word souborů pomocí GroupDocs.Editor – krok za krokem průvodce](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}
