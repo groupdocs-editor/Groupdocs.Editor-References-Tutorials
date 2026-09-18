@@ -146,7 +146,6 @@ Para usar GroupDocs.Editor para Java de manera eficaz, asegúrese de que su proy
    </dependency>
 </dependencies>
 ```
-```
 
 **Descarga directa:**  
 Alternativamente, descargue la última versión desde [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
@@ -176,28 +175,22 @@ A continuación desglosamos cada paso necesario para crear objetos **create edit
 Especifique la ruta a su documento Excel. Reemplace `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` con la ubicación real de su archivo:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### Paso 2: Cargar la hoja de cálculo en un InputStream
 Utilice `FileInputStream` de Java para leer el archivo Excel:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### Paso 3: Crear una instancia del editor
 Inicialice el `Editor` con el flujo de entrada y las opciones de carga:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *Explicación:* La instancia `Editor` actúa como un objeto central para interactuar con su hoja de cálculo.
@@ -209,19 +202,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 Especifique qué hoja desea editar usando su índice (basado en 0):
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### Paso 2: Crear un `EditableDocument` para la primera pestaña
 EditableDocument representa la versión editable de una hoja que puede modificarse y guardarse posteriormente.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *Explicación:* Este paso transforma la primera hoja en un formato modificable.
@@ -233,19 +222,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 Establezca el índice para la segunda pestaña:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### Paso 2: Crear un `EditableDocument` para la segunda pestaña
 Cree un objeto de documento para editar:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *Explicación:* Este enfoque le permite centrarse en pestañas específicas sin cargar toda la hoja de cálculo.
@@ -259,19 +244,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 Elija el formato de salida deseado, como XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### Paso 2: Guardar la primera pestaña
 Persistir sus cambios en un archivo:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *Explicación:* Este paso guarda la pestaña editada como un archivo separado en el directorio especificado.
@@ -283,19 +264,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 Seleccione XLSB como formato de salida para variedad:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### Paso 2: Guardar la segunda pestaña
 Exporte sus cambios a un archivo:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *Explicación:* Esto le permite mantener diferentes versiones de sus datos en varios formatos.

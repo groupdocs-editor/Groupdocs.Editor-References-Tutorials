@@ -145,7 +145,6 @@ Pro efektivní použití GroupDocs.Editor pro Java zajistěte, aby váš projekt
    </dependency>
 </dependencies>
 ```
-```
 
 **Přímé stažení:**  
 Alternativně stáhněte nejnovější verzi z [Vydání GroupDocs.Editor pro Java](https://releases.groupdocs.com/editor/java/).
@@ -175,28 +174,22 @@ Níže rozkládáme každý krok potřebný k **create editable worksheet** obje
 Zadejte cestu k vašemu Excel dokumentu. Nahraďte `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` skutečnou polohou souboru:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### Krok 2: Načtěte tabulku do InputStream
 Použijte `FileInputStream` k načtení Excel souboru:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### Krok 3: Vytvořte instanci editoru
 Inicializujte `Editor` s vstupním proudem a možnostmi načtení:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *Vysvětlení:* Instance `Editor` funguje jako centrální objekt pro interakci s vaší tabulkou.
@@ -210,19 +203,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 Zadejte, který list chcete upravit pomocí jeho indexu (0‑based):
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### Krok 2: Vytvořte `EditableDocument` pro první list
 `EditableDocument` představuje editovatelnou verzi listu, kterou lze měnit a později uložit.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *Vysvětlení:* Tento krok převádí první list na modifikovatelný formát.
@@ -234,19 +223,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 Nastavte index pro druhý list:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### Krok 2: Vytvořte `EditableDocument` pro druhý list
 Vytvořte objekt dokumentu pro úpravy:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *Vysvětlení:* Tento přístup vám umožní zaměřit se na konkrétní listy bez načítání celého sešitu.
@@ -260,19 +245,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 Zvolte požadovaný výstupní formát, např. XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### Krok 2: Uložte první list
 Uložte změny do souboru:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *Vysvětlení:* Tento krok uloží upravený list jako samostatný soubor ve zvoleném adresáři.
@@ -284,19 +265,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 Vyberte XLSB jako výstupní formát pro rozmanitost:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### Krok 2: Uložte druhý list
 Exportujte změny do souboru:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *Vysvětlení:* Toto vám umožní udržovat různé verze dat v různých formátech.

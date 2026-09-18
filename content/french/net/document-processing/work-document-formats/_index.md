@@ -119,18 +119,15 @@ Chargez la collection des formats pris en charge et affichez le nom et l’exten
 using System;
 using GroupDocs.Editor.Options;
 ```
-```
 
 ### Répertorier les formats de traitement de texte
 `Formats.WordProcessingFormats` est une énumération qui décrit chaque type de fichier de traitement de texte reconnu par l’éditeur. La propriété `All` renvoie une collection de ces objets de format.
 
 ```csharp
-```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Explication :**  
@@ -141,12 +138,10 @@ foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormat
 `Formats.PresentationFormats` fonctionne de la même manière pour les fichiers de présentations, exposant chaque type de présentation pris en charge via la collection `All`.
 
 ```csharp
-```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Explication :**  
@@ -160,10 +155,8 @@ Parfois, vous ne disposez que du nom d’un fichier et devez en déduire le `Doc
 `Formats.SpreadsheetFormats.FromExtension` convertit une chaîne d’extension de fichier en la valeur d’énumération du format de feuille de calcul correspondant.
 
 ```csharp
-```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
-```
 ```
 
 **Explication :**  
@@ -174,10 +167,8 @@ Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 De même, `Formats.TextualFormats.FromExtension` résout les extensions de fichiers textuels comme HTML ou TXT.
 
 ```csharp
-```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
-```
 ```
 
 **Explication :**  
@@ -191,12 +182,10 @@ Une fois le format connu, le chargement et la modification d’un document suive
 `Editor` est la classe principale qui encapsule toutes les opérations d’édition pour un fichier donné.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
     // Further steps will be covered here.
 }
-```
 ```
 
 **Explication :**  
@@ -207,13 +196,11 @@ using (Editor editor = new Editor("path/to/your/document.docx"))
 `EditableDocument.GetContent()` renvoie le texte brut du document (ou le HTML pour les éditeurs web), que vous pouvez afficher ou manipuler.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     string content = editableDocument.GetContent();
     Console.WriteLine(content);
 }
-```
 ```
 
 **Explication :**  
@@ -225,14 +212,12 @@ using (EditableDocument editableDocument = editor.Edit())
 `SaveOptions` indique à l’éditeur comment et dans quel format écrire le document modifié dans le stockage.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
-```
 ```
 
 **Explication :**  
@@ -248,7 +233,6 @@ GroupDocs.Editor abstrait la gestion de Word, Spreadsheet et Presentation derri�
 `SpreadsheetSaveOptions` définit comment une feuille de calcul est écrite, incluant le format et les paramètres de compression optionnels.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -260,7 +244,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
-```
 ```
 
 **Explication :**  
@@ -275,7 +258,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 `PresentationSaveOptions` contrôle le format de sortie des présentations, vous permettant de conserver ou de changer le type de fichier original.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -287,7 +269,6 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
-```
 ```
 
 **Explication :**  

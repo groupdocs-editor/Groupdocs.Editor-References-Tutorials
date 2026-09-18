@@ -141,7 +141,6 @@ GroupDocs.Editor for Java를 효과적으로 사용하려면 프로젝트에 필
    </dependency>
 </dependencies>
 ```
-```
 
 **직접 다운로드:**  
 또는 최신 버전을 [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/)에서 다운로드하십시오.
@@ -169,28 +168,22 @@ Java 프로그래밍, Java의 I/O 작업, Excel 파일 처리에 대한 기본�
 Excel 문서의 경로를 지정합니다. `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"`를 실제 파일 위치로 바꾸세요:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### 단계 2: 스프레드시트를 InputStream으로 로드
 Java의 `FileInputStream`을 사용하여 Excel 파일을 읽습니다:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### 단계 3: 에디터 인스턴스 생성
 `Editor`를 입력 스트림과 로드 옵션으로 초기화합니다:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *설명:* `Editor` 인스턴스는 스프레드시트와 상호 작용하는 중앙 객체 역할을 합니다.
@@ -204,19 +197,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 인덱스(0 기반)를 사용하여 편집할 워크시트를 지정합니다:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### 단계 2: 첫 번째 탭에 대한 `EditableDocument` 생성
 EditableDocument는 수정 가능하고 나중에 저장할 수 있는 워크시트의 편집 가능한 버전을 나타냅니다.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *설명:* 이 단계는 첫 번째 워크시트를 수정 가능한 형식으로 변환합니다.
@@ -228,19 +217,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 두 번째 탭의 인덱스를 설정합니다:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### 단계 2: 두 번째 탭에 대한 `EditableDocument` 생성
 편집을 위한 문서 객체를 생성합니다:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *설명:* 이 접근 방식은 전체 스프레드시트를 로드하지 않고 특정 탭에 집중할 수 있게 합니다.
@@ -254,19 +239,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 예를 들어 XLSM과 같은 원하는 출력 형식을 선택합니다:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### 단계 2: 첫 번째 탭 저장
 변경 사항을 파일에 영구 저장합니다:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *설명:* 이 단계는 편집된 탭을 지정된 디렉터리의 별도 파일로 저장합니다.
@@ -278,19 +259,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 다양성을 위해 XLSB를 출력 형식으로 선택합니다:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### 단계 2: 두 번째 탭 저장
 변경 사항을 파일로 내보냅니다:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *설명:* 이를 통해 다양한 형식으로 데이터의 다른 버전을 유지할 수 있습니다.

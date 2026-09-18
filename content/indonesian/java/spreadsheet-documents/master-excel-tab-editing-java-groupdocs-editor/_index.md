@@ -144,7 +144,6 @@ Untuk menggunakan GroupDocs.Editor untuk Java secara efektif, pastikan proyek An
    </dependency>
 </dependencies>
 ```
-```
 
 **Unduhan langsung:**  
 Alternatifnya, unduh versi terbaru dari [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
@@ -174,28 +173,22 @@ Di bawah ini kami menjabarkan setiap langkah yang diperlukan untuk membuat objek
 Tentukan jalur ke dokumen Excel Anda. Ganti `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` dengan lokasi file aktual Anda:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### Langkah 2: Muat spreadsheet ke dalam InputStream
 Gunakan `FileInputStream` Java untuk membaca file Excel:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### Langkah 3: Buat instance editor
 Inisialisasi `Editor` dengan input stream dan opsi pemuatan:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *Penjelasan:* Instance `Editor` berfungsi sebagai objek pusat untuk berinteraksi dengan spreadsheet Anda.
@@ -209,19 +202,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 Tentukan worksheet mana yang ingin Anda edit menggunakan indeksnya (berbasis nol):
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### Langkah 2: Buat `EditableDocument` untuk tab pertama
 `EditableDocument` mewakili versi yang dapat diedit dari sebuah worksheet yang dapat dimodifikasi dan kemudian disimpan.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *Penjelasan:* Langkah ini mengubah worksheet pertama menjadi format yang dapat dimodifikasi.
@@ -233,19 +222,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 Set indeks untuk tab kedua:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### Langkah 2: Buat `EditableDocument` untuk tab kedua
 Buat objek dokumen untuk penyuntingan:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *Penjelasan:* Pendekatan ini memungkinkan Anda fokus pada tab tertentu tanpa memuat seluruh spreadsheet.
@@ -259,19 +244,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 Pilih format output yang diinginkan, misalnya XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### Langkah 2: Simpan tab pertama
 Simpan perubahan Anda ke sebuah file:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *Penjelasan:* Langkah ini menyimpan tab yang diedit sebagai file terpisah di direktori yang Anda tentukan.
@@ -283,19 +264,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 Pilih XLSB sebagai format output untuk variasi:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### Langkah 2: Simpan tab kedua
 Ekspor perubahan Anda ke sebuah file:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *Penjelasan:* Ini memungkinkan Anda mempertahankan versi data yang berbeda dalam berbagai format.

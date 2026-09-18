@@ -97,7 +97,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 เมื่อสภาพแวดล้อมพร้อมแล้ว, เราจะดำดิ่งสู่ขั้นตอนที่เป็นรูปธรรมสำหรับ **replace text in document**.
 
@@ -115,7 +114,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### ขั้นตอนที่ 2: แก้ไขเอกสาร
 เนื่องจาก GroupDocs.Editor ทำงานกับสแนปช็อต HTML, คุณสามารถถือเอกสารเป็นข้อความธรรมดาสำหรับการแทนที่ง่าย.
@@ -127,7 +125,6 @@ EditableDocument defaultWordProcessingDoc = editor.Edit();
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### ขั้นตอนที่ 3: บันทึกเอกสาร
@@ -142,7 +139,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### บันทึกเป็น DOCM
 DOCM คือรูปแบบ Word ที่รองรับมาโคร; ใช้ `SaveAsDocm` เมื่อคุณต้องการเก็บความสามารถของมาโคร.  
@@ -155,7 +151,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### บันทึกเป็นข้อความธรรมดา
@@ -171,7 +166,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### ขั้นตอนที่ 4: ทำความสะอาด
 ควรทำการ dispose `EditableDocument` และ `Editor` ทุกครั้งเพื่อปล่อยไฟล์แฮนด์เดิลและทรัพยากรที่ไม่จัดการได้.
@@ -183,7 +177,6 @@ editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## ปัญหาทั่วไปและวิธีแก้

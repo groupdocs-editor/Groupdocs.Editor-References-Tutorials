@@ -97,7 +97,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 环境准备就绪后，让我们深入了解 **在文档中替换文本** 的具体步骤。
 
@@ -115,7 +114,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### 步骤 2：修改文档
 由于 GroupDocs.Editor 使用 HTML 快照，您可以将文档视为纯文本进行简单替换。
@@ -127,7 +125,6 @@ EditableDocument defaultWordProcessingDoc = editor.Edit();
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### 步骤 3：保存文档
@@ -142,7 +139,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### 保存为 DOCM
 DOCM 是支持宏的 Word 格式；当需要保留宏功能时使用 `SaveAsDocm`。  
@@ -155,7 +151,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### 保存为纯文本
@@ -171,7 +166,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### 步骤 4：清理
 务必释放 `EditableDocument` 和 `Editor` 实例，以关闭文件句柄并释放非托管资源。
@@ -183,7 +177,6 @@ editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## 常见问题及解决方案

@@ -144,7 +144,6 @@ GroupDocs.Editor ให้คุณแก้ไขแผ่นงานเดี
    </dependency>
 </dependencies>
 ```
-```
 
 **Direct download:**  
 หรือดาวน์โหลดเวอร์ชันล่าสุดจาก [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
@@ -174,28 +173,22 @@ GroupDocs.Editor ให้คุณแก้ไขแผ่นงานเดี
 Specify the path to your Excel document. Replace `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` with your actual file location:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### ขั้นตอนที่ 2: โหลดสเปรดชีตเข้าสู่ InputStream
 Use Java’s `FileInputStream` to read the Excel file:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### ขั้นตอนที่ 3: สร้างอินสแตนซ์ editor
 Initialize the `Editor` with the input stream and load options:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *คำอธิบาย:* อินสแตนซ์ `Editor` ทำหน้าที่เป็นวัตถุศูนย์กลางสำหรับโต้ตอบกับสเปรดชีตของคุณ.
@@ -209,19 +202,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 Specify which worksheet you want to edit using its index (0‑based):
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### ขั้นตอนที่ 2: สร้าง `EditableDocument` สำหรับแท็บแรก
 EditableDocument represents the editable version of a worksheet that can be modified and later saved.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *คำอธิบาย:* This step transforms the first worksheet into a modifiable format.
@@ -233,19 +222,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 Set the index for the second tab:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### ขั้นตอนที่ 2: สร้าง `EditableDocument` สำหรับแท็บที่สอง
 Create a document object for editing:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *คำอธิบาย:* This approach allows you to focus on specific tabs without loading the entire spreadsheet.
@@ -259,19 +244,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 Choose the desired output format, such as XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### ขั้นตอนที่ 2: บันทึกแท็บแรก
 Persist your changes to a file:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *คำอธิบาย:* This step saves the edited tab as a separate file in your specified directory.
@@ -283,19 +264,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 Select XLSB as the output format for variety:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### ขั้นตอนที่ 2: บันทึกแท็บที่สอง
 Export your changes to a file:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *คำอธิบาย:* This allows you to maintain different versions of your data in various formats.

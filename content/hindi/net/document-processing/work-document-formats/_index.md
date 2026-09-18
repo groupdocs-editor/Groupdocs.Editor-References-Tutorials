@@ -119,18 +119,15 @@ GroupDocs.Editor **30+ इनपुट और आउटपुट फ़ॉर्
 using System;
 using GroupDocs.Editor.Options;
 ```
-```
 
 ### Word Processing फ़ॉर्मेट्स की सूची बनाना
 `Formats.WordProcessingFormats` एक एन्यूमरेशन है जो एडिटर द्वारा पहचाने गए प्रत्येक Word‑processing फ़ाइल प्रकार का वर्णन करता है। `All` प्रॉपर्टी इन फ़ॉर्मेट ऑब्जेक्ट्स का संग्रह लौटाती है।
 
 ```csharp
-```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Explanation:**  
@@ -141,12 +138,10 @@ foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormat
 `Formats.PresentationFormats` स्लाइड‑डेक फ़ाइलों के लिए भी समान रूप से काम करता है, `All` संग्रह के माध्यम से प्रत्येक समर्थित प्रेजेंटेशन टाइप को उजागर करता है।
 
 ```csharp
-```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Explanation:**  
@@ -160,10 +155,8 @@ foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.Al
 `Formats.SpreadsheetFormats.FromExtension` फ़ाइल एक्सटेंशन स्ट्रिंग को मिलते‑जुलते स्प्रेडशीट फ़ॉर्मेट एन्‍यूम वैल्यू में बदलता है।
 
 ```csharp
-```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
-```
 ```
 
 **Explanation:**  
@@ -174,10 +167,8 @@ Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 इसी प्रकार, `Formats.TextualFormats.FromExtension` HTML या TXT जैसे टेक्स्टुअल फ़ाइल एक्सटेंशन को हल करता है।
 
 ```csharp
-```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
-```
 ```
 
 **Explanation:**  
@@ -191,12 +182,10 @@ Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
 `Editor` वह कोर क्लास है जो किसी फ़ाइल के सभी संपादन ऑपरेशन्स को समेटे रहता है।
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
     // Further steps will be covered here.
 }
-```
 ```
 
 **Explanation:**  
@@ -207,13 +196,11 @@ using (Editor editor = new Editor("path/to/your/document.docx"))
 `EditableDocument.GetContent()` दस्तावेज़ का कच्चा टेक्स्ट (या वेब‑आधारित एडिटर्स के लिए HTML) लौटाता है, जिसे आप प्रदर्शित या संशोधित कर सकते हैं।
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     string content = editableDocument.GetContent();
     Console.WriteLine(content);
 }
-```
 ```
 
 **Explanation:**  
@@ -225,14 +212,12 @@ using (EditableDocument editableDocument = editor.Edit())
 `SaveOptions` एडिटर को बताता है कि संपादित दस्तावेज़ को किस प्रकार और किस फ़ॉर्मेट में स्टोरेज में वापस लिखना है।
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
-```
 ```
 
 **Explanation:**  
@@ -248,7 +233,6 @@ GroupDocs.Editor Word, Spreadsheet, और Presentation हैंडलिंग
 `SpreadsheetSaveOptions` यह निर्धारित करता है कि स्प्रेडशीट कैसे लिखी जाती है, जिसमें फ़ॉर्मेट और वैकल्पिक कंप्रेशन सेटिंग्स शामिल हैं।
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -260,7 +244,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
-```
 ```
 
 **Explanation:**  
@@ -275,7 +258,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 `PresentationSaveOptions` स्लाइड डेक के आउटपुट फ़ॉर्मेट को नियंत्रित करता है, जिससे आप मूल फ़ाइल प्रकार को बनाए रख सकते हैं या बदल सकते हैं।
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -287,7 +269,6 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
-```
 ```
 
 **Explanation:**  

@@ -145,7 +145,6 @@ weight: 1
    </dependency>
 </dependencies>
 ```
-```
 
 **تحميل مباشر:**  
 بدلاً من ذلك، قم بتحميل أحدث نسخة من [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
@@ -175,28 +174,22 @@ weight: 1
 حدد مسار مستند Excel الخاص بك. استبدل `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` بموقع الملف الفعلي:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### الخطوة 2: تحميل جدول البيانات إلى InputStream
 استخدم `FileInputStream` في Java لقراءة ملف Excel:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### الخطوة 3: إنشاء مثيل المحرر
 تهيئة `Editor` باستخدام تدفق الإدخال وخيارات التحميل:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *شرح:* مثيل `Editor` يعمل ككائن مركزي للتفاعل مع جدول البيانات الخاص بك.
@@ -208,19 +201,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 حدد أي ورقة عمل تريد تحريرها باستخدام فهرسها (بدءًا من الصفر):
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### الخطوة 2: إنشاء `EditableDocument` للعلامة الأولى
 `EditableDocument` يمثل النسخة القابلة للتحرير من ورقة العمل التي يمكن تعديلها وحفظها لاحقًا.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *شرح:* هذه الخطوة تحول ورقة العمل الأولى إلى صيغة قابلة للتعديل.
@@ -232,19 +221,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 حدد الفهرس للعلامة الثانية:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### الخطوة 2: إنشاء `EditableDocument` للعلامة الثانية
 إنشاء كائن مستند للتحرير:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *شرح:* يتيح لك هذا النهج التركيز على علامات تبويب محددة دون تحميل جدول البيانات بالكامل.
@@ -258,19 +243,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 اختر صيغة الإخراج المطلوبة، مثل XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### الخطوة 2: حفظ العلامة الأولى
 احفظ تغييراتك في ملف:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *شرح:* هذه الخطوة تحفظ العلامة المعدلة كملف منفصل في الدليل المحدد.
@@ -282,19 +263,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 اختر XLSB كصيغة إخراج للتنوع:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### الخطوة 2: حفظ العلامة الثانية
 تصدير تغييراتك إلى ملف:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *شرح:* يتيح لك ذلك الحفاظ على إصدارات مختلفة من بياناتك بصيغ متعددة.

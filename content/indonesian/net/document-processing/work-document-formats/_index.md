@@ -121,18 +121,15 @@ Muat koleksi format yang didukung dan cetak nama serta ekstensi masing‑masing.
 using System;
 using GroupDocs.Editor.Options;
 ```
-```
 
 ### Menampilkan Format Pengolahan Kata
 `Formats.WordProcessingFormats` adalah enumerasi yang menggambarkan setiap tipe file pengolahan kata yang dikenali oleh editor. Properti `All` mengembalikan koleksi objek format ini.
 
 ```csharp
-```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Penjelasan:**  
@@ -143,12 +140,10 @@ foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormat
 `Formats.PresentationFormats` bekerja dengan cara yang sama untuk file slide, menampilkan setiap tipe presentasi yang didukung melalui koleksi `All`.
 
 ```csharp
-```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Penjelasan:**  
@@ -162,10 +157,8 @@ Terkadang Anda hanya memiliki nama file dan perlu menebak `DocumentFormat` yang 
 `Formats.SpreadsheetFormats.FromExtension` mengubah string ekstensi file menjadi nilai enum format spreadsheet yang cocok.
 
 ```csharp
-```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
-```
 ```
 
 **Penjelasan:**  
@@ -176,10 +169,8 @@ Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 Demikian pula, `Formats.TextualFormats.FromExtension` menyelesaikan ekstensi file teks seperti HTML atau TXT.
 
 ```csharp
-```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
-```
 ```
 
 **Penjelasan:**  
@@ -193,12 +184,10 @@ Setelah Anda mengetahui formatnya, memuat dan mengedit dokumen mengikuti pola ko
 `Editor` adalah kelas inti yang membungkus semua operasi pengeditan untuk file tertentu.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
     // Further steps will be covered here.
 }
-```
 ```
 
 **Penjelasan:**  
@@ -209,13 +198,11 @@ using (Editor editor = new Editor("path/to/your/document.docx"))
 `EditableDocument.GetContent()` mengembalikan teks mentah dokumen (atau HTML untuk editor berbasis web), yang dapat Anda tampilkan atau manipulasi.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     string content = editableDocument.GetContent();
     Console.WriteLine(content);
 }
-```
 ```
 
 **Penjelasan:**  
@@ -227,14 +214,12 @@ using (EditableDocument editableDocument = editor.Edit())
 `SaveOptions` memberi tahu editor cara dan dalam format apa menulis kembali dokumen yang telah diedit ke penyimpanan.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
-```
 ```
 
 **Penjelasan:**  
@@ -250,7 +235,6 @@ GroupDocs.Editor menyatukan penanganan Word, Spreadsheet, dan Presentation di ba
 `SpreadsheetSaveOptions` menentukan cara spreadsheet ditulis, termasuk format dan pengaturan kompresi opsional.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -262,7 +246,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
-```
 ```
 
 **Penjelasan:**  
@@ -277,7 +260,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 `PresentationSaveOptions` mengontrol format output untuk deck slide, memungkinkan Anda mempertahankan atau mengubah tipe file asli.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -289,7 +271,6 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
-```
 ```
 
 **Penjelasan:**  

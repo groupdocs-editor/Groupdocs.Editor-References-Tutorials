@@ -98,7 +98,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 Jetzt, da die Umgebung bereit ist, tauchen wir in die konkreten Schritte für **Text im Dokument ersetzen** ein.
 
@@ -116,7 +115,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### Schritt 2: Dokument ändern
 Da GroupDocs.Editor mit einem HTML‑Snapshot arbeitet, können Sie das Dokument für einfache Ersetzungen wie Klartext behandeln.
@@ -128,7 +126,6 @@ Die Methode `EditableDocument.GetHtml()` extrahiert das HTML; nach der Änderung
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### Schritt 3: Dokument speichern
@@ -143,7 +140,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### Als DOCM speichern
 DOCM ist das makrofähige Word‑Format; verwenden Sie `SaveAsDocm`, wenn Sie Makrofunktionen beibehalten müssen.  
@@ -156,7 +152,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### Als Klartext speichern
@@ -172,7 +167,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### Schritt 4: Aufräumen
 Entsorgen Sie stets die Instanzen von `EditableDocument` und `Editor`, um Dateihandles und nicht verwaltete Ressourcen freizugeben.
@@ -184,7 +178,6 @@ Das `Dispose`‑Muster stellt sicher, dass temporäre Dateien gelöscht und Spei
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## Häufige Probleme und Lösungen

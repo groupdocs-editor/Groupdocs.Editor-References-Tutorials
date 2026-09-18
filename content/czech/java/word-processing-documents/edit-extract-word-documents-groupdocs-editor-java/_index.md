@@ -314,9 +314,3 @@ Po sledování tohoto průvodce máte nyní solidní základ pro **edit docx wit
 - [Jak extrahovat obrázky z Word dokumentů pomocí GroupDocs.Editor pro Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
 - [Převod docx na PDF v Javě: Dávkové úpravy Word souborů pomocí GroupDocs.Editor – krok za krokem průvodce](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

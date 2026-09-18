@@ -314,9 +314,3 @@ Seguindo este guia, você agora tem uma base sólida para **editar docx com java
 - [Como extrair imagens de documentos Word usando GroupDocs.Editor para Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
 - [Converter docx para PDF Java: edição em lote de arquivos Word com GroupDocs.Editor – Guia passo a passo](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

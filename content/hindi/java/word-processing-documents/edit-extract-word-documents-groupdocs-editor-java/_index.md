@@ -309,9 +309,3 @@ A: हाँ, आप फ़ाइलों को सीधे AWS S3, Azure Blo
 - [GroupDocs.Editor for Java का उपयोग करके Word दस्तावेज़ों से चित्र कैसे निकालें](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
 - [docx को PDF Java में कन्वर्ट करें: GroupDocs.Editor के साथ बैच एडिट Word फ़ाइलें – स्टेप‑बाय‑स्टेप गाइड](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

@@ -141,7 +141,6 @@ GroupDocs.Editor 允许直接编辑单个工作表，避免将整个工作簿加
    </dependency>
 </dependencies>
 ```
-```
 
 **Direct download:**  
 Alternatively, download the latest version from [GroupDocs.Editor for Java 发行版](https://releases.groupdocs.com/editor/java/).
@@ -171,28 +170,22 @@ Alternatively, download the latest version from [GroupDocs.Editor for Java 发�
 指定 Excel 文档的路径。将 `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` 替换为实际文件位置：
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### 步骤 2：将电子表格加载到 InputStream
 使用 Java 的 `FileInputStream` 读取 Excel 文件：
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### 步骤 3：创建编辑器实例
 使用输入流和加载选项初始化 `Editor`：
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *说明：* `Editor` 实例是与电子表格交互的中心对象。
@@ -206,19 +199,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 使用索引 (0‑based) 指定要编辑的工作表：
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### 步骤 2：为第一个选项卡创建 `EditableDocument`
 `EditableDocument` 表示可修改的工作表版本，可在稍后保存：
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *说明：* 此步骤将第一个工作表转换为可编辑格式。
@@ -230,19 +219,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 为第二个选项卡设置索引：
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### 步骤 2：为第二个选项卡创建 `EditableDocument`
 创建用于编辑的文档对象：
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *说明：* 该方法使您能够专注于特定选项卡，而无需加载整个电子表格。
@@ -256,19 +241,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 选择所需的输出格式，例如 XLSM：
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### 步骤 2：保存第一个选项卡
 将更改持久化到文件：
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *说明：* 此步骤将在指定目录中将编辑后的选项卡另存为单独文件。
@@ -280,19 +261,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 选择 XLSB 作为输出格式，以示多样化：
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### 步骤 2：保存第二个选项卡
 将更改导出为文件：
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *说明：* 这使您能够以不同格式维护数据的多个版本。

@@ -117,18 +117,15 @@ GroupDocs.Editor **支援超過 30 種輸入與輸出格式**，且可處理高�
 using System;
 using GroupDocs.Editor.Options;
 ```
-```
 
 ### 列出文字處理格式
 `Formats.WordProcessingFormats` 是一個列舉，描述編輯器所識別的每種文字處理檔案類型。`All` 屬性會回傳這些格式物件的集合。
 
 ```csharp
-```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **說明：**  
@@ -139,12 +136,10 @@ foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormat
 `Formats.PresentationFormats` 以相同方式處理投影片檔案，透過 `All` 集合揭示每種支援的簡報類型。
 
 ```csharp
-```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **說明：**  
@@ -158,10 +153,8 @@ foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.Al
 `Formats.SpreadsheetFormats.FromExtension` 會將檔案副檔名字串轉換為相對應的試算表格式列舉值。
 
 ```csharp
-```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
-```
 ```
 
 **說明：**  
@@ -172,10 +165,8 @@ Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 同樣地，`Formats.TextualFormats.FromExtension` 解析文字檔案的副檔名，例如 HTML 或 TXT。
 
 ```csharp
-```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
-```
 ```
 
 **說明：**  
@@ -189,12 +180,10 @@ Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
 `Editor` 是封裝特定檔案所有編輯操作的核心類別。
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
     // Further steps will be covered here.
 }
-```
 ```
 
 **說明：**  
@@ -205,13 +194,11 @@ using (Editor editor = new Editor("path/to/your/document.docx"))
 `EditableDocument.GetContent()` 會回傳文件的原始文字（或對於基於網頁的編輯器則為 HTML），您可以顯示或操作它。
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     string content = editableDocument.GetContent();
     Console.WriteLine(content);
 }
-```
 ```
 
 **說明：**  
@@ -223,14 +210,12 @@ using (EditableDocument editableDocument = editor.Edit())
 `SaveOptions` 告訴編輯器如何以及以何種格式將編輯後的文件寫回儲存。
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
-```
 ```
 
 **說明：**  
@@ -246,7 +231,6 @@ GroupDocs.Editor 把 Word、試算表與簡報的處理抽象為相同的 API �
 `SpreadsheetSaveOptions` 定義試算表的寫入方式，包括格式與可選的壓縮設定。
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -258,7 +242,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
-```
 ```
 
 **說明：**  
@@ -273,7 +256,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 `PresentationSaveOptions` 控制投影片的輸出格式，讓您可以保留或變更原始檔案類型。
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -285,7 +267,6 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
-```
 ```
 
 **說明：**  

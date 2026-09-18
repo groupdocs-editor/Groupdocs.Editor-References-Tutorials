@@ -117,7 +117,6 @@ Adicione o repositório e a dependência ao seu `pom.xml`:
     </dependency>
 </dependencies>
 ```
-```
 
 ### Download Direto
 Alternativamente, faça o download do pacote JAR mais recente em [here](https://releases.groupdocs.com/editor/java/).
@@ -147,7 +146,6 @@ try {
     System.out.println("Error initializing Editor: " + ex.getMessage());
 }
 ```
-```
 
 ### Etapa 2: Configurar Opções de Edição
 `EditableDocument` representa a versão totalmente editável em memória do arquivo fonte. Ela fornece acesso a parágrafos, tabelas e recursos de rastreamento de revisões.
@@ -156,7 +154,6 @@ try {
 ```java
 WordProcessingEditOptions editOptions = new WordProcessingEditOptions();
 EditableDocument editableDocument = editor.edit(editOptions);
-```
 ```
 
 Neste ponto, `editableDocument` contém uma representação totalmente editável do arquivo original, pronta para quaisquer modificações que você precise aplicar.
@@ -176,7 +173,6 @@ import com.groupdocs.editor.formats.WordProcessingFormats;
 String savePath = "YOUR_OUTPUT_DIRECTORY/EditedOutput.docx";
 WordProcessingSaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
 ```
-```
 
 ### Etapa 4: Salvar o Documento Editado
 Chamar `save` grava as alterações de volta ao disco e libera recursos. Lembre‑se de fechar tanto `EditableDocument` quanto `Editor` para evitar vazamentos de memória durante execuções em lote grandes.
@@ -189,7 +185,6 @@ try {
 } catch (Exception ex) {
     System.out.println("Error saving document: " + ex.getMessage());
 }
-```
 ```
 
 > **Dica profissional:** Feche as instâncias de `EditableDocument` e `Editor` após salvar para liberar memória, especialmente ao processar arquivos grandes.

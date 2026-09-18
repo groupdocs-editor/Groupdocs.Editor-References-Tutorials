@@ -314,9 +314,3 @@ for (CssText oneStylesheet : stylesheets) {
 - [كيفية استخراج الصور من مستندات Word باستخدام GroupDocs.Editor لـ Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
 - [تحويل docx إلى PDF Java: تحرير دفعة من ملفات Word باستخدام GroupDocs.Editor – دليل خطوة بخطوة](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

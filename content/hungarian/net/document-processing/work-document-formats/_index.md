@@ -121,18 +121,15 @@ Töltsük be a támogatott formátumok gyűjteményét, és írjuk ki minden for
 using System;
 using GroupDocs.Editor.Options;
 ```
-```
 
 ### Word feldolgozási formátumok listázása
 A `Formats.WordProcessingFormats` egy felsorolás, amely leírja az összes Word‑feldolgozási fájltípust, amelyet az editor felismer. Az `All` tulajdonság egy gyűjteményt ad vissza ezekből a formátumobjektumokból.
 
 ```csharp
-```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Explanation:**  
@@ -143,12 +140,10 @@ foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormat
 A `Formats.PresentationFormats` ugyanúgy működik a diavetítési fájlok esetén, a `All` gyűjteményen keresztül teszi elérhetővé minden támogatott prezentációtípust.
 
 ```csharp
-```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Explanation:**  
@@ -162,10 +157,8 @@ Néha csak egy fájlnév áll rendelkezésre, és meg kell határozni a megfelel
 A `Formats.SpreadsheetFormats.FromExtension` egy fájl kiterjesztés karakterláncot alakít át a megfelelő táblázatkezelő formátum enum értékre.
 
 ```csharp
-```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
-```
 ```
 
 **Explanation:**  
@@ -176,10 +169,8 @@ Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 Hasonlóképpen, a `Formats.TextualFormats.FromExtension` feloldja a szöveges fájl kiterjesztéseket, például a HTML vagy TXT formátumokat.
 
 ```csharp
-```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
-```
 ```
 
 **Explanation:**  
@@ -193,12 +184,10 @@ Miután ismeri a formátumot, a dokumentum betöltése és szerkesztése egy kon
 Az `Editor` az a központi osztály, amely egy adott fájl összes szerkesztési műveletét magába foglalja.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
     // Further steps will be covered here.
 }
-```
 ```
 
 **Explanation:**  
@@ -209,13 +198,11 @@ using (Editor editor = new Editor("path/to/your/document.docx"))
 A `EditableDocument.GetContent()` visszaadja a dokumentum nyers szövegét (vagy HTML‑t web‑alapú szerkesztők esetén), amelyet megjeleníthet vagy manipulálhat.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     string content = editableDocument.GetContent();
     Console.WriteLine(content);
 }
-```
 ```
 
 **Explanation:**  
@@ -227,14 +214,12 @@ using (EditableDocument editableDocument = editor.Edit())
 A `SaveOptions` megmondja az editornak, hogyan és milyen formátumban írja vissza a szerkesztett dokumentumot a tárolóba.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
-```
 ```
 
 **Explanation:**  
@@ -250,7 +235,6 @@ A GroupDocs.Editor a Word, Spreadsheet és Presentation kezelését ugyanazon AP
 A `SpreadsheetSaveOptions` meghatározza, hogyan íródik egy táblázat, beleértve a formátumot és az opcionális tömörítési beállításokat.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -262,7 +246,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
-```
 ```
 
 **Explanation:**  
@@ -277,7 +260,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 A `PresentationSaveOptions` szabályozza a diavetítések kimeneti formátumát, lehetővé téve az eredeti fájltípus megőrzését vagy módosítását.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -289,7 +271,6 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
-```
 ```
 
 **Explanation:**  

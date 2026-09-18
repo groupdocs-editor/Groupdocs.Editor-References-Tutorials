@@ -145,7 +145,6 @@ GroupDocs.Editor for Java'ı etkili bir şekilde kullanmak için projenizin gere
    </dependency>
 </dependencies>
 ```
-```
 
 **Doğrudan indirme:**  
 Alternatif olarak, en son sürümü [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) adresinden indirebilirsiniz.
@@ -175,28 +174,22 @@ Aşağıda **create editable worksheet** nesnelerini oluşturmak ve ardından **
 Excel belgenizin yolunu belirtin. `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` ifadesini gerçek dosya konumunuzla değiştirin:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### Adım 2: Elektronik tabloyu bir InputStream'e yükleyin
 Excel dosyasını okumak için Java’nın `FileInputStream`'ini kullanın:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### Adım 3: Bir editör örneği oluşturun
 `Editor`'ı giriş akışı ve yükleme seçenekleriyle başlatın:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *Açıklama:* `Editor` örneği, elektronik tablonuzla etkileşim kurmak için merkezi bir nesnedir.
@@ -208,19 +201,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 İndeksi (0‑tabanlı) kullanarak hangi çalışma sayfasını düzenlemek istediğinizi belirtin:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### Adım 2: İlk sekme için bir `EditableDocument` oluşturun
 `EditableDocument`, daha sonra kaydedilebilen ve değiştirilebilen bir çalışma sayfasının düzenlenebilir sürümünü temsil eder.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *Açıklama:* Bu adım ilk çalışma sayfasını değiştirilebilir bir formata dönüştürür.
@@ -232,19 +221,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 İkinci sekme için indeksi ayarlayın:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### Adım 2: İkinci sekme için bir `EditableDocument` oluşturun
 Düzenleme için bir belge nesnesi oluşturun:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *Açıklama:* Bu yaklaşım, tüm elektronik tabloyu yüklemeden belirli sekmelere odaklanmanıza olanak tanır.
@@ -258,19 +243,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 İstediğiniz çıktı formatını seçin, örneğin XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### Adım 2: İlk sekmeyi kaydedin
 Değişikliklerinizi bir dosyaya kalıcı hale getirin:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *Açıklama:* Bu adım düzenlenen sekmeyi belirttiğiniz dizinde ayrı bir dosya olarak kaydeder.
@@ -282,19 +263,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 Çeşitlilik için XLSB'yi çıktı formatı olarak seçin:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### Adım 2: İkinci sekmeyi kaydedin
 Değişikliklerinizi bir dosyaya dışa aktarın:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *Açıklama:* Bu, verilerinizi farklı formatlarda çeşitli sürümler halinde tutmanıza olanak tanır.

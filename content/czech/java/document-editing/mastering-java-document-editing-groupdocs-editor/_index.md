@@ -116,7 +116,6 @@ Přidejte repozitář a závislost do svého `pom.xml`:
     </dependency>
 </dependencies>
 ```
-```
 
 ### Přímé stažení
 Alternativně si stáhněte nejnovější JAR balíček [zde](https://releases.groupdocs.com/editor/java/).
@@ -146,7 +145,6 @@ try {
     System.out.println("Error initializing Editor: " + ex.getMessage());
 }
 ```
-```
 
 ### Krok 2: Konfigurace možností úprav
 `EditableDocument` představuje plně editovatelnou verzi zdrojového souboru v paměti. Poskytuje přístup k odstavcům, tabulkám a funkcím sledování revizí.
@@ -155,7 +153,6 @@ try {
 ```java
 WordProcessingEditOptions editOptions = new WordProcessingEditOptions();
 EditableDocument editableDocument = editor.edit(editOptions);
-```
 ```
 
 V tomto okamžiku `editableDocument` obsahuje plně editovatelnou reprezentaci původního souboru, připravenou na jakékoli úpravy, které potřebujete aplikovat.
@@ -175,7 +172,6 @@ import com.groupdocs.editor.formats.WordProcessingFormats;
 String savePath = "YOUR_OUTPUT_DIRECTORY/EditedOutput.docx";
 WordProcessingSaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
 ```
-```
 
 ### Krok 4: Uložení upraveného dokumentu
 Volání `save` zapíše změny zpět na disk a uvolní prostředky. Nezapomeňte zavřít jak `EditableDocument`, tak `Editor`, aby nedocházelo k únikům paměti během velkých dávkových běhů.
@@ -188,7 +184,6 @@ try {
 } catch (Exception ex) {
     System.out.println("Error saving document: " + ex.getMessage());
 }
-```
 ```
 
 > **Pro tip:** Po uložení zavřete instance `EditableDocument` a `Editor`, aby se uvolnila paměť, zejména při zpracování velkých souborů.

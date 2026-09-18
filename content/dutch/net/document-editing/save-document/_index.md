@@ -98,7 +98,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 Nu de omgeving klaar is, duiken we in de concrete stappen voor **tekst in document vervangen**.
 
@@ -116,7 +115,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### Stap 2: Document wijzigen
 Omdat GroupDocs.Editor werkt met een HTML‑snapshot, kun je het document behandelen als platte tekst voor eenvoudige vervangingen.
@@ -128,7 +126,6 @@ De methode `EditableDocument.GetHtml()` haalt de HTML op; na het wijzigen van de
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### Stap 3: Document opslaan
@@ -143,7 +140,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### Opslaan als DOCM
 DOCM is het macro‑ingeschakelde Word‑formaat; gebruik `SaveAsDocm` wanneer je macro‑functionaliteit wilt behouden.  
@@ -156,7 +152,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### Opslaan als platte tekst
@@ -172,7 +167,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### Stap 4: Opruimen
 Dispose altijd de `EditableDocument`‑ en `Editor`‑instanties om bestands‑handles en unmanaged resources vrij te geven.
@@ -184,7 +178,6 @@ Het `Dispose`‑patroon zorgt ervoor dat tijdelijke bestanden worden verwijderd 
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## Veelvoorkomende problemen en oplossingen

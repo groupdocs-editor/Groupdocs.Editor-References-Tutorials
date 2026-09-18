@@ -97,7 +97,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 環境已就緒，讓我們深入 **replace text in document** 的具體步驟。
 
@@ -115,7 +114,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### 步驟 2：修改文件
 由於 GroupDocs.Editor 使用 HTML 快照，您可以將文件視為純文字以進行簡單的取代。
@@ -127,7 +125,6 @@ EditableDocument defaultWordProcessingDoc = editor.Edit();
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### 步驟 3：儲存文件
@@ -142,7 +139,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### 儲存為 DOCM
 DOCM 為支援巨集的 Word 格式；當您需要保留巨集功能時，請使用 `SaveAsDocm`。  
@@ -155,7 +151,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### 儲存為純文字
@@ -171,7 +166,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### 步驟 4：清理
 務必釋放 `EditableDocument` 與 `Editor` 實例，以釋放檔案句柄與非受控資源。
@@ -183,7 +177,6 @@ editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## 常見問題與解決方案

@@ -119,18 +119,15 @@ GroupDocs.Editor **поддерживает более 30 форматов вв�
 using System;
 using GroupDocs.Editor.Options;
 ```
-```
 
 ### Перечисление форматов обработки текста
 `Formats.WordProcessingFormats` — перечисление, описывающее каждый тип файлов обработки текста, распознаваемый редактором. Свойство `All` возвращает коллекцию этих объектов форматов.
 
 ```csharp
-```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Объяснение:**  
@@ -141,12 +138,10 @@ foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormat
 `Formats.PresentationFormats` работает аналогично для файлов презентаций, предоставляя каждый поддерживаемый тип через коллекцию `All`.
 
 ```csharp
-```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Объяснение:**  
@@ -160,10 +155,8 @@ foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.Al
 `Formats.SpreadsheetFormats.FromExtension` преобразует строку расширения файла в соответствующее значение перечисления формата таблицы.
 
 ```csharp
-```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
-```
 ```
 
 **Объяснение:**  
@@ -174,10 +167,8 @@ Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 Аналогично, `Formats.TextualFormats.FromExtension` определяет текстовые расширения, такие как HTML или TXT.
 
 ```csharp
-```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
-```
 ```
 
 **Объяснение:**  
@@ -191,12 +182,10 @@ Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
 `Editor` — основной класс, инкапсулирующий все операции редактирования для данного файла.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
     // Further steps will be covered here.
 }
-```
 ```
 
 **Объяснение:**  
@@ -207,13 +196,11 @@ using (Editor editor = new Editor("path/to/your/document.docx"))
 `EditableDocument.GetContent()` возвращает необработанный текст документа (или HTML для веб‑редакторов), который можно отобразить или изменить.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     string content = editableDocument.GetContent();
     Console.WriteLine(content);
 }
-```
 ```
 
 **Объяснение:**  
@@ -225,14 +212,12 @@ using (EditableDocument editableDocument = editor.Edit())
 `SaveOptions` указывает редактору, как и в каком формате записать отредактированный документ обратно в хранилище.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
-```
 ```
 
 **Объяснение:**  
@@ -248,7 +233,6 @@ GroupDocs.Editor абстрагирует работу с Word, Spreadsheet и P
 `SpreadsheetSaveOptions` определяет, как записывается таблица, включая формат и необязательные параметры сжатия.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -260,7 +244,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
-```
 ```
 
 **Объяснение:**  
@@ -275,7 +258,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 `PresentationSaveOptions` управляет форматом вывода для наборов слайдов, позволяя сохранять оригинальный тип файла или менять его.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -287,7 +269,6 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
-```
 ```
 
 **Объяснение:**  

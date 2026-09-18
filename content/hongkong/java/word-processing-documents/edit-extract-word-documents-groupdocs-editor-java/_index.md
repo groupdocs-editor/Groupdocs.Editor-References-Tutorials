@@ -305,9 +305,3 @@ A: 可以，您可直接從 AWS S3、Azure Blob 或 Google Cloud Storage 串流�
 - [如何使用 GroupDocs.Editor for Java 從 Word 文件提取圖片](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
 - [將 docx 轉換為 PDF（Java）：使用 GroupDocs.Editor 批次編輯 Word 檔案 – 步驟指南](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

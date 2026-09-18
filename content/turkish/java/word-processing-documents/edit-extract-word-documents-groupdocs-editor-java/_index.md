@@ -309,9 +309,3 @@ Bu rehberi izleyerek, artık **edit docx with java** için sağlam bir temele ve
 - [GroupDocs.Editor for Java Kullanarak Word Belgelerinden Resimleri Nasıl Çıkarılır](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
 - [docx'i PDF'ye Java ile Dönüştür: GroupDocs.Editor ile Toplu Word Dosyası Düzenleme – Adım Adım Kılavuz](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

@@ -143,7 +143,6 @@ GroupDocs.Editor 讓您直接編輯單一工作表，避免將整個活頁簿載
    </dependency>
 </dependencies>
 ```
-```
 
 **直接下載：**  
 或者，從 [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) 下載最新版本。
@@ -173,28 +172,22 @@ GroupDocs.Editor 讓您直接編輯單一工作表，避免將整個活頁簿載
 指定您的 Excel 文件路徑。將 `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` 替換為實際檔案位置：
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### 步驟 2：將試算表載入 InputStream
 使用 Java 的 `FileInputStream` 讀取 Excel 檔案：
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### 步驟 3：建立 editor 實例
 使用輸入串流與載入選項初始化 `Editor`：
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *說明：* `Editor` 實例作為與試算表互動的核心物件。
@@ -206,19 +199,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 使用索引（從 0 開始）指定要編輯的工作表：
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### 步驟 2：為第一個標籤建立 `EditableDocument`
 EditableDocument 代表工作表的可編輯版本，可進行修改並稍後儲存。
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *說明：* 此步驟將第一個工作表轉換為可修改的格式。
@@ -230,19 +219,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 設定第二個標籤的索引：
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### 步驟 2：為第二個標籤建立 `EditableDocument`
 建立用於編輯的文件物件：
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *說明：* 此方法讓您能專注於特定標籤，而無需載入整個試算表。
@@ -256,19 +241,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 選擇所需的輸出格式，例如 XLSM：
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### 步驟 2：儲存第一個標籤
 將變更持久化為檔案：
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *說明：* 此步驟將已編輯的標籤以獨立檔案儲存至您指定的目錄。
@@ -280,19 +261,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 選擇 XLSB 作為輸出格式以示多樣性：
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### 步驟 2：儲存第二個標籤
 將變更匯出為檔案：
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *說明：* 這讓您能以不同格式保留資料的多個版本。

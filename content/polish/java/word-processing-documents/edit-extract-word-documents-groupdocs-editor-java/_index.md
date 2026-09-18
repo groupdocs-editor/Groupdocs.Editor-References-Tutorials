@@ -315,9 +315,3 @@ Postępując zgodnie z tym przewodnikiem, masz teraz solidne podstawy do **edyto
 - [How to Extract Pictures from Word Documents Using GroupDocs.Editor for Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
 - [Convert docx to PDF Java: Batch Edit Word Files with GroupDocs.Editor – Step‑by‑Step Guide](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

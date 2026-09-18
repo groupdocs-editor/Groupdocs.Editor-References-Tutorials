@@ -145,7 +145,6 @@ GroupDocs.Editor cho phép bạn chỉnh sửa trực tiếp một worksheet duy
    </dependency>
 </dependencies>
 ```
-```
 
 **Tải trực tiếp:**  
 Alternatively, download the latest version from [GroupDocs.Editor cho Java - bản phát hành](https://releases.groupdocs.com/editor/java/).
@@ -175,28 +174,22 @@ Dưới đây chúng tôi sẽ phân tích từng bước cần thiết để **
 Xác định đường dẫn tới tài liệu Excel của bạn. Thay thế `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` bằng vị trí tệp thực tế của bạn:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### Bước 2: Tải bảng tính vào InputStream
 Sử dụng `FileInputStream` của Java để đọc tệp Excel:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### Bước 3: Tạo thể hiện editor
 Khởi tạo `Editor` với luồng đầu vào và các tùy chọn tải:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *Giải thích:* Thể hiện `Editor` hoạt động như một đối tượng trung tâm để tương tác với bảng tính của bạn.
@@ -210,19 +203,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 Chỉ định worksheet bạn muốn chỉnh sửa bằng chỉ số của nó (bắt đầu từ 0):
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### Bước 2: Tạo `EditableDocument` cho tab đầu tiên
 `EditableDocument` đại diện cho phiên bản có thể chỉnh sửa của một worksheet, có thể được sửa đổi và sau đó lưu lại.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *Giải thích:* Bước này chuyển đổi worksheet đầu tiên thành định dạng có thể sửa đổi.
@@ -234,19 +223,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 Đặt chỉ số cho tab thứ hai:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### Bước 2: Tạo `EditableDocument` cho tab thứ hai
 Tạo một đối tượng tài liệu để chỉnh sửa:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *Giải thích:* Cách tiếp cận này cho phép bạn tập trung vào các tab cụ thể mà không cần tải toàn bộ bảng tính.
@@ -260,19 +245,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 Chọn định dạng đầu ra mong muốn, ví dụ XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### Bước 2: Lưu tab đầu tiên
 Lưu các thay đổi của bạn vào tệp:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *Giải thích:* Bước này lưu tab đã chỉnh sửa như một tệp riêng trong thư mục bạn chỉ định.
@@ -284,19 +265,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 Chọn XLSB làm định dạng đầu ra để đa dạng:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### Bước 2: Lưu tab thứ hai
 Xuất các thay đổi của bạn ra tệp:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *Giải thích:* Điều này cho phép bạn duy trì các phiên bản dữ liệu khác nhau ở các định dạng đa dạng.

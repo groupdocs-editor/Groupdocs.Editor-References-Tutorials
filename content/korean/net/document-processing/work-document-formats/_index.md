@@ -120,18 +120,15 @@ GroupDocs.Editor는 **30개 이상의 입력 및 출력 형식**을 지원하며
 using System;
 using GroupDocs.Editor.Options;
 ```
-```
 
 ### 워드 프로세싱 형식 나열
 `Formats.WordProcessingFormats`는 편집기가 인식하는 모든 워드 프로세싱 파일 유형을 설명하는 열거형입니다. `All` 속성은 이러한 형식 객체들의 컬렉션을 반환합니다.
 
 ```csharp
-```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **설명:**  
@@ -142,12 +139,10 @@ foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormat
 `Formats.PresentationFormats`는 슬라이드 파일에 대해 동일하게 작동하며, `All` 컬렉션을 통해 지원되는 각 프레젠테이션 유형을 노출합니다.
 
 ```csharp
-```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **설명:**  
@@ -161,10 +156,8 @@ foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.Al
 `Formats.SpreadsheetFormats.FromExtension`은 파일 확장자 문자열을 해당 스프레드시트 형식 열거값으로 변환합니다.
 
 ```csharp
-```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
-```
 ```
 
 **설명:**  
@@ -175,10 +168,8 @@ Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 마찬가지로, `Formats.TextualFormats.FromExtension`은 HTML이나 TXT와 같은 텍스트 파일 확장자를 해결합니다.
 
 ```csharp
-```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
-```
 ```
 
 **설명:**  
@@ -192,12 +183,10 @@ Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
 `Editor`는 주어진 파일에 대한 모든 편집 작업을 캡슐화하는 핵심 클래스입니다.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
     // Further steps will be covered here.
 }
-```
 ```
 
 **설명:**  
@@ -208,13 +197,11 @@ using (Editor editor = new Editor("path/to/your/document.docx"))
 `EditableDocument.GetContent()`는 문서의 원시 텍스트(또는 웹 기반 편집기의 경우 HTML)를 반환하며, 이를 표시하거나 조작할 수 있습니다.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     string content = editableDocument.GetContent();
     Console.WriteLine(content);
 }
-```
 ```
 
 **설명:**  
@@ -226,14 +213,12 @@ using (EditableDocument editableDocument = editor.Edit())
 `SaveOptions`는 편집된 문서를 저장소에 어떤 형식으로 쓸지 편집기에 알려줍니다.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
-```
 ```
 
 **설명:**  
@@ -249,7 +234,6 @@ GroupDocs.Editor는 Word, Spreadsheet, Presentation 처리를 동일한 API 인�
 `SpreadsheetSaveOptions`는 형식 및 선택적 압축 설정을 포함하여 스프레드시트를 쓰는 방식을 정의합니다.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -261,7 +245,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
-```
 ```
 
 **설명:**  
@@ -276,7 +259,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 `PresentationSaveOptions`는 슬라이드 덱의 출력 형식을 제어하며, 원본 파일 유형을 유지하거나 변경할 수 있게 합니다.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -288,7 +270,6 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
-```
 ```
 
 **설명:**  

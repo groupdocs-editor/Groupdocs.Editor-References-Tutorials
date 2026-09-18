@@ -98,7 +98,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 Most, hogy a környezet készen áll, merüljünk el a konkrét lépésekben a **replace text in document**-hez.
 
@@ -116,7 +115,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### 2. lépés: Dokumentum módosítása
 Mivel a GroupDocs.Editor egy HTML pillanatképet használ, a dokumentumot egyszerű szövegként kezelheti egyszerű helyettesítésekhez.
@@ -128,7 +126,6 @@ Mivel a GroupDocs.Editor egy HTML pillanatképet használ, a dokumentumot egysze
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### 3. lépés: Dokumentum mentése
@@ -143,7 +140,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### Mentés DOCM-ként
 A DOCM a makró‑támogatott Word formátum; használja a `SaveAsDocm`-et, ha meg kell tartania a makrók képességét.  
@@ -156,7 +152,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### Mentés egyszerű szövegként
@@ -172,7 +167,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### 4. lépés: Tisztítás
 Mindig szabadítsa fel az `EditableDocument` és `Editor` példányokat a fájlkezelők és a nem kezelt erőforrások felszabadításához.
@@ -184,7 +178,6 @@ A `Dispose` minta biztosítja, hogy az ideiglenes fájlok törlődnek és a mem�
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## Gyakori problémák és megoldások

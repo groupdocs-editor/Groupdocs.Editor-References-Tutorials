@@ -148,7 +148,6 @@ A GroupDocs.Editor Java-hoz való hatékony használatához győződj meg róla,
    </dependency>
 </dependencies>
 ```
-```
 
 **Közvetlen letöltés:**  
 Alternatívaként töltsd le a legújabb verziót a [GroupDocs.Editor Java kiadások](https://releases.groupdocs.com/editor/java/) oldalról.
@@ -178,28 +177,22 @@ Az alábbiakban részletezzük a **create editable worksheet** objektumok létre
 Add meg az Excel dokumentumod útvonalát. Cseréld le a `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"`-t a tényleges fájl helyére:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### 2. lépés: Táblázat betöltése InputStream-be
 Használd a Java `FileInputStream`-jét az Excel fájl olvasásához:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### 3. lépés: Editor példány létrehozása
 Inicializáld az `Editor`-t a bemeneti streammel és a betöltési beállításokkal:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *Magyarázat:* Az `Editor` példány központi objektumként szolgál a táblázattal való interakcióhoz.
@@ -211,19 +204,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 Add meg, melyik munkalapot szeretnéd szerkeszteni az indexe (0‑alapú) alapján:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### 2. lépés: `EditableDocument` létrehozása az első laphoz
 EditableDocument a munkalap szerkeszthető változatát képviseli, amely módosítható és később menthető.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *Magyarázat:* Ez a lépés az első munkalapot módosítható formátummá alakítja.
@@ -235,19 +224,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 Állítsd be a második lap indexét:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### 2. lépés: `EditableDocument` létrehozása a második laphoz
 Hozz létre egy dokumentum objektumot a szerkesztéshez:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *Magyarázat:* Ez a megközelítés lehetővé teszi, hogy konkrét lapokra koncentrálj a teljes táblázat betöltése nélkül.
@@ -259,19 +244,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 Válaszd ki a kívánt kimeneti formátumot, például XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### 2. lépés: Az első lap mentése
 Mentsd el a változtatásokat egy fájlba:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *Magyarázat:* Ez a lépés a szerkesztett lapot külön fájlként menti a megadott könyvtárba.
@@ -283,19 +264,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 Válaszd az XLSB-t kimeneti formátumként a változatosság kedvéért:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### 2. lépés: A második lap mentése
 Exportáld a változtatásokat egy fájlba:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *Magyarázat:* Ez lehetővé teszi, hogy adatod különböző verzióit különböző formátumokban tartsd.

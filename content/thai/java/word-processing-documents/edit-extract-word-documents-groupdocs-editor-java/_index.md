@@ -307,9 +307,3 @@ A: ใช่, คุณสามารถสตรีมไฟล์โดยต
 - [วิธีดึงรูปภาพจากเอกสาร Word โดยใช้ GroupDocs.Editor for Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
 - [แปลง docx เป็น PDF Java: แก้ไขไฟล์ Word แบบแบตช์ด้วย GroupDocs.Editor – คู่มือขั้นตอน](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

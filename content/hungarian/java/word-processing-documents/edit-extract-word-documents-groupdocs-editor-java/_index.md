@@ -309,9 +309,3 @@ Ezzel az útmutatóval most már szilárd alapot rendelkezel a **edit docx with 
 - [Képek kinyerése Word dokumentumokból a GroupDocs.Editor for Java használatával](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
 - [docx PDF‑re konvertálása Java-ban: Word fájlok kötegelt szerkesztése a GroupDocs.Editor‑rel – Lépésről‑lépésre útmutató](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

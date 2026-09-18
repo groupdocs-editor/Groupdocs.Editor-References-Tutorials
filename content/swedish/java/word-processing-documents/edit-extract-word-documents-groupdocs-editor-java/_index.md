@@ -312,9 +312,3 @@ Genom att följa den här guiden har du nu en solid grund för **edit docx with 
 - [Hur man extraherar bilder från Word‑dokument med GroupDocs.Editor för Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
 - [Konvertera docx till PDF Java: Batch‑redigera Word‑filer med GroupDocs.Editor – Steg‑för‑steg‑guide](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

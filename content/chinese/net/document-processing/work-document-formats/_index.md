@@ -123,18 +123,15 @@ GroupDocs.Editor **支持 30 多种输入和输出格式**，并且能够在不�
 using System;
 using GroupDocs.Editor.Options;
 ```
-```
 
 ### 列出文字处理格式
 `Formats.WordProcessingFormats` 是一个枚举，描述编辑器识别的每种文字处理文件类型。`All` 属性返回这些格式对象的集合。
 
 ```csharp
-```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **说明：**  
@@ -145,12 +142,10 @@ foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormat
 `Formats.PresentationFormats` 对幻灯片文件的处理方式相同，通过 `All` 集合公开每种支持的演示文稿类型。
 
 ```csharp
-```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **说明：**  
@@ -165,10 +160,8 @@ foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.Al
 `Formats.SpreadsheetFormats.FromExtension` 将文件扩展名字符串转换为相应的电子表格格式枚举值。
 
 ```csharp
-```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
-```
 ```
 
 **说明：**  
@@ -179,10 +172,8 @@ Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 同样，`Formats.TextualFormats.FromExtension` 解析文本文件扩展名，如 HTML 或 TXT。
 
 ```csharp
-```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
-```
 ```
 
 **说明：**  
@@ -197,12 +188,10 @@ Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
 `Editor` 是封装给定文件所有编辑操作的核心类。
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
     // Further steps will be covered here.
 }
-```
 ```
 
 **说明：**  
@@ -213,13 +202,11 @@ using (Editor editor = new Editor("path/to/your/document.docx"))
 `EditableDocument.GetContent()` 返回文档的原始文本（或针对基于 Web 的编辑器的 HTML），您可以对其进行显示或操作。
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     string content = editableDocument.GetContent();
     Console.WriteLine(content);
 }
-```
 ```
 
 **说明：**  
@@ -231,14 +218,12 @@ using (EditableDocument editableDocument = editor.Edit())
 `SaveOptions` 指定编辑器如何以及以何种格式将编辑后的文档写回存储。
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
-```
 ```
 
 **说明：**  
@@ -255,7 +240,6 @@ GroupDocs.Editor 将 Word、电子表格和演示文稿的处理抽象为相同�
 `SpreadsheetSaveOptions` 定义电子表格的写入方式，包括格式和可选的压缩设置。
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -267,7 +251,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
-```
 ```
 
 **说明：**  
@@ -282,7 +265,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 `PresentationSaveOptions` 控制幻灯片文件的输出格式，允许您保持或更改原始文件类型。
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -294,7 +276,6 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
-```
 ```
 
 **说明：**  

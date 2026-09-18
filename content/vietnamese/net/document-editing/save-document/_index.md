@@ -97,7 +97,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 Bây giờ môi trường đã sẵn sàng, hãy đi sâu vào các bước cụ thể để **thay thế văn bản trong tài liệu**.
 
@@ -115,7 +114,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### Bước 2: Sửa tài liệu
 Vì GroupDocs.Editor làm việc với một ảnh chụp HTML, bạn có thể xem tài liệu như văn bản thuần để thực hiện các thay thế đơn giản.
@@ -127,7 +125,6 @@ Phương thức `EditableDocument.GetHtml()` trích xuất HTML; sau khi thay đ
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### Bước 3: Lưu tài liệu
@@ -142,7 +139,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### Lưu dưới dạng DOCM
 DOCM là định dạng Word hỗ trợ macro; sử dụng `SaveAsDocm` khi bạn cần giữ khả năng macro.  
@@ -155,7 +151,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### Lưu dưới dạng Văn bản thuần
@@ -171,7 +166,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### Bước 4: Dọn dẹp
 Luôn giải phóng các thể hiện `EditableDocument` và `Editor` để giải phóng các handle tệp và tài nguyên không quản lý.
@@ -183,7 +177,6 @@ Mẫu `Dispose` đảm bảo các tệp tạm thời được xóa và bộ nh�
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## Các vấn đề thường gặp và giải pháp

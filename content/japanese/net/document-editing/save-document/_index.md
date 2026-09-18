@@ -97,7 +97,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 環境の準備ができたので、**replace text in document** の具体的な手順に進みましょう。
 
@@ -115,7 +114,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### 手順 2: ドキュメントの変更
 GroupDocs.Editor は HTML スナップショットで動作するため、シンプルな置換ではドキュメントをプレーンテキストとして扱えます。
@@ -127,7 +125,6 @@ GroupDocs.Editor は HTML スナップショットで動作するため、シン
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### 手順 3: ドキュメントの保存
@@ -142,7 +139,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### DOCM として保存
 DOCM はマクロ対応の Word フォーマットです。マクロ機能を保持する必要がある場合は `SaveAsDocm` を使用します。  
@@ -155,7 +151,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### プレーンテキストとして保存
@@ -171,7 +166,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### 手順 4: クリーンアップ
 `EditableDocument` と `Editor` のインスタンスは常に破棄して、ファイルハンドルやアンマネージドリソースを解放してください。
@@ -183,7 +177,6 @@ editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## よくある問題と解決策

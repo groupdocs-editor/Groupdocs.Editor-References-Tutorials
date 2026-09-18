@@ -98,7 +98,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 Nyní, když je prostředí připravené, pojďme se ponořit do konkrétních kroků pro **replace text in document**.
 
@@ -116,7 +115,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### Krok 2: Upravit dokument
 Protože GroupDocs.Editor pracuje s HTML snímkem, můžete dokument považovat za prostý text pro jednoduché nahrazení.
@@ -128,7 +126,6 @@ Metoda `EditableDocument.GetHtml()` extrahuje HTML; po změně řetězce vytvoř
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### Krok 3: Uložit dokument
@@ -143,7 +140,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### Uložit jako DOCM
 DOCM je formát Word s podporou maker; použijte `SaveAsDocm`, pokud potřebujete zachovat makra.  
@@ -156,7 +152,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### Uložit jako prostý text
@@ -172,7 +167,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### Krok 4: Vyčištění
 Vždy uvolněte instance `EditableDocument` a `Editor`, aby se uvolnily souborové handly a neřízené prostředky.
@@ -184,7 +178,6 @@ Vzor `Dispose` zajišťuje, že dočasné soubory jsou smazány a paměť uvoln�
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## Časté problémy a řešení

@@ -311,9 +311,3 @@ A: はい、AWS S3、Azure Blob、Google Cloud Storage からファイルを直�
 - [Java用GroupDocs.EditorでWord文書から画像を抽出する方法](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
 - [docxをPDFに変換（Java）：GroupDocs.EditorでWordファイルをバッチ編集 – ステップバイステップガイド](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

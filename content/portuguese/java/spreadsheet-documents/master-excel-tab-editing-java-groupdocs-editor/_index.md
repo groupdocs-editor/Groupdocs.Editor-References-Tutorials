@@ -145,7 +145,6 @@ Para usar o GroupDocs.Editor para Java de forma eficaz, certifique‑se de que s
    </dependency>
 </dependencies>
 ```
-```
 
 **Download direto:**  
 Alternativamente, baixe a versão mais recente em [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
@@ -175,28 +174,22 @@ A seguir detalhamos cada passo necessário para criar objetos **create editable 
 Especifique o caminho para o seu documento Excel. Substitua `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` pelo caminho real do seu arquivo:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### Etapa 2: Carregar a planilha em um InputStream
 Use `FileInputStream` do Java para ler o arquivo Excel:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### Etapa 3: Criar uma instância do editor
 Inicialize o `Editor` com o fluxo de entrada e as opções de carregamento:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *Explicação:* A instância `Editor` atua como um objeto central para interagir com sua planilha.
@@ -208,19 +201,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 Especifique qual aba você deseja editar usando seu índice (baseado em zero):
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### Etapa 2: Criar um `EditableDocument` para a primeira aba
 `EditableDocument` representa a versão editável de uma aba que pode ser modificada e salva posteriormente.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *Explicação:* Esta etapa transforma a primeira aba em um formato modificável.
@@ -232,19 +221,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 Defina o índice para a segunda aba:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### Etapa 2: Criar um `EditableDocument` para a segunda aba
 Crie um objeto de documento para edição:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *Explicação:* Esta abordagem permite focar em abas específicas sem carregar a planilha inteira.
@@ -258,19 +243,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 Escolha o formato de saída desejado, como XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### Etapa 2: Salvar a primeira aba
 Persista suas alterações em um arquivo:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *Explicação:* Esta etapa salva a aba editada como um arquivo separado no diretório especificado.
@@ -282,19 +263,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 Selecione XLSB como formato de saída para variedade:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### Etapa 2: Salvar a segunda aba
 Exporte suas alterações para um arquivo:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *Explicação:* Isso permite manter diferentes versões dos seus dados em vários formatos.

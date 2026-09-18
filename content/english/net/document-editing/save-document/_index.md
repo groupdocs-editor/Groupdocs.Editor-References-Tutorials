@@ -96,7 +96,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 Now that the environment is ready, let’s dive into the concrete steps for **replace text in document**.
 
@@ -114,7 +113,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### Step 2: Modify the Document
 Because GroupDocs.Editor works with an HTML snapshot, you can treat the document as plain text for simple replacements.
@@ -126,7 +124,6 @@ The `EditableDocument.GetHtml()` method extracts the HTML; after changing the st
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### Step 3: Save the Document
@@ -141,7 +138,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### Save as DOCM
 DOCM is the macro‑enabled Word format; use `SaveAsDocm` when you need to keep macro capabilities.  
@@ -154,7 +150,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### Save as Plain Text
@@ -170,7 +165,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### Step 4: Cleanup
 Always dispose of the `EditableDocument` and `Editor` instances to release file handles and unmanaged resources.
@@ -182,7 +176,6 @@ The `Dispose` pattern ensures that temporary files are deleted and memory is rec
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## Common Issues and Solutions

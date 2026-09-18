@@ -120,18 +120,15 @@ GroupDocs.Editor は **30 以上の入力および出力形式** をサポート
 using System;
 using GroupDocs.Editor.Options;
 ```
-```
 
 ### Word Processing 形式の一覧表示
 `Formats.WordProcessingFormats` は、エディタが認識するすべての Word 処理ファイルタイプを表す列挙型です。`All` プロパティはこれらの形式オブジェクトのコレクションを返します。
 
 ```csharp
-```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **説明:**  
@@ -142,12 +139,10 @@ foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormat
 `Formats.PresentationFormats` はスライドデックファイルに対して同様に機能し、`All` コレクションを通じてサポートされる各プレゼンテーションタイプを公開します。
 
 ```csharp
-```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **説明:**  
@@ -161,10 +156,8 @@ foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.Al
 `Formats.SpreadsheetFormats.FromExtension` は、ファイル拡張子文字列を対応するスプレッドシート形式の列挙値に変換します。
 
 ```csharp
-```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
-```
 ```
 
 **説明:**  
@@ -175,10 +168,8 @@ Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 同様に、`Formats.TextualFormats.FromExtension` は HTML や TXT などのテキストファイル拡張子を解決します。
 
 ```csharp
-```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
-```
 ```
 
 **説明:**  
@@ -192,12 +183,10 @@ Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
 `Editor` は、特定のファイルに対するすべての編集操作をカプセル化するコアクラスです。
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
     // Further steps will be covered here.
 }
-```
 ```
 
 **説明:**  
@@ -208,13 +197,11 @@ using (Editor editor = new Editor("path/to/your/document.docx"))
 `EditableDocument.GetContent()` は、ドキュメントの生テキスト（Web ベースエディタの場合は HTML）を返し、表示または操作できます。
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     string content = editableDocument.GetContent();
     Console.WriteLine(content);
 }
-```
 ```
 
 **説明:**  
@@ -226,14 +213,12 @@ using (EditableDocument editableDocument = editor.Edit())
 `SaveOptions` は、編集されたドキュメントをどのように、どの形式でストレージに書き戻すかをエディタに指示します。
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
-```
 ```
 
 **説明:**  
@@ -249,7 +234,6 @@ GroupDocs.Editor は、Word、Spreadsheet、Presentation の取り扱いを同�
 `SpreadsheetSaveOptions` は、スプレッドシートの書き込み方法（形式やオプションの圧縮設定など）を定義します。
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -261,7 +245,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
-```
 ```
 
 **説明:**  
@@ -276,7 +259,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 `PresentationSaveOptions` はスライドデックの出力形式を制御し、元のファイルタイプを保持したり変更したりできます。
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -288,7 +270,6 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
-```
 ```
 
 **説明:**  

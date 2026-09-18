@@ -97,7 +97,6 @@ weight: 1
     </dependency>
 </dependencies>
 ```
-```
 
 > **Pro tip:** Διατηρήστε τον αριθμό έκδοσης συγχρονισμένο με την τελευταία κυκλοφορία στην επίσημη ιστοσελίδα.
 
@@ -121,7 +120,6 @@ import com.groupdocs.editor.EditableDocument;
 String filePath = "path/to/your/input.dsv";
 Editor editor = new Editor(filePath);
 ```
-```
 
 Τώρα είστε έτοιμοι να φορτώσετε, να επεξεργαστείτε και να αποθηκεύσετε το έγγραφο.
 
@@ -137,7 +135,6 @@ Editor editor = new Editor(filePath);
 ```java
 EditableDocument afterEdit = editor.edit();
 ```
-```
 
 ### Βήμα 2: Ρύθμιση Επιλογών Αποθήκευσης για XLSM
 
@@ -151,7 +148,6 @@ import com.groupdocs.editor.formats.SpreadsheetFormats;
 String outputCellsPath = "YOUR_OUTPUT_DIRECTORY/edited.xlsm";
 SpreadsheetSaveOptions cellsSaveOptions = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 ```
-```
 
 ### Βήμα 3: Αποθήκευση του Εγγράφου ως Φύλλο Excel
 
@@ -160,7 +156,6 @@ SpreadsheetSaveOptions cellsSaveOptions = new SpreadsheetSaveOptions(Spreadsheet
 ``` 
 ```java
 document.save(afterEdit, outputCellsPath, cellsSaveOptions);
-```
 ```
 
 #### Συμβουλές Επίλυσης Προβλημάτων

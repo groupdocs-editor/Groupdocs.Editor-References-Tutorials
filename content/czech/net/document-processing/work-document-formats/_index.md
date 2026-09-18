@@ -119,18 +119,15 @@ Načtěte kolekci podporovaných formátů a vytiskněte název a příponu kaž
 using System;
 using GroupDocs.Editor.Options;
 ```
-```
 
 ### Výpis formátů Word Processing
 `Formats.WordProcessingFormats` je výčtový typ, který popisuje každý typ souboru Word‑processing rozpoznaný editorem. Vlastnost `All` vrací kolekci těchto objektů formátů.
 
 ```csharp
-```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Vysvětlení:**  
@@ -141,12 +138,10 @@ foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormat
 `Formats.PresentationFormats` funguje stejným způsobem pro soubory prezentací, a odhaluje každý podporovaný typ prezentace prostřednictvím kolekce `All`.
 
 ```csharp
-```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Vysvětlení:**  
@@ -160,10 +155,8 @@ Někdy máte jen název souboru a potřebujete odvodit odpovídající `Document
 `Formats.SpreadsheetFormats.FromExtension` převádí řetězec přípony souboru na odpovídající hodnotu výčtu formátu tabulky.
 
 ```csharp
-```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
-```
 ```
 
 **Vysvětlení:**  
@@ -174,10 +167,8 @@ Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 Podobně `Formats.TextualFormats.FromExtension` rozpozná textové přípony souborů, jako jsou HTML nebo TXT.
 
 ```csharp
-```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
-```
 ```
 
 **Vysvětlení:**  
@@ -191,12 +182,10 @@ Jakmile znáte formát, načítání a úprava dokumentu následuje jednotný vz
 `Editor` je hlavní třída, která zapouzdřuje všechny operace úpravy pro daný soubor.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
     // Further steps will be covered here.
 }
-```
 ```
 
 **Vysvětlení:**  
@@ -207,13 +196,11 @@ using (Editor editor = new Editor("path/to/your/document.docx"))
 `EditableDocument.GetContent()` vrací surový text dokumentu (nebo HTML pro webové editory), který můžete zobrazit nebo manipulovat.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     string content = editableDocument.GetContent();
     Console.WriteLine(content);
 }
-```
 ```
 
 **Vysvětlení:**  
@@ -225,14 +212,12 @@ using (EditableDocument editableDocument = editor.Edit())
 `SaveOptions` určuje editoru, jak a v jakém formátu má upravený dokument zapsat zpět do úložiště.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
-```
 ```
 
 **Vysvětlení:**  
@@ -248,7 +233,6 @@ GroupDocs.Editor abstrahuje práci s Word, Spreadsheet a Presentation za stejný
 `SpreadsheetSaveOptions` definuje, jak je tabulka zapisována, včetně formátu a volitelných nastavení komprese.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -260,7 +244,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
-```
 ```
 
 **Vysvětlení:**  
@@ -275,7 +258,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 `PresentationSaveOptions` řídí výstupní formát pro sady snímků, což vám umožní zachovat nebo změnit původní typ souboru.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -287,7 +269,6 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
-```
 ```
 
 **Vysvětlení:**  

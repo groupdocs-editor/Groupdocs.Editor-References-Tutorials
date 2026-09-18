@@ -98,7 +98,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 Maintenant que l’environnement est prêt, passons aux étapes concrètes pour **remplacer le texte dans le document**.
 
@@ -116,7 +115,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### Étape 2 : Modifier le document
 Comme GroupDocs.Editor travaille avec un instantané HTML, vous pouvez traiter le document comme du texte brut pour des remplacements simples.
@@ -128,7 +126,6 @@ La méthode `EditableDocument.GetHtml()` extrait le HTML ; après modification
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### Étape 3 : Enregistrer le document
@@ -143,7 +140,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### Enregistrer en DOCM
 DOCM est le format Word avec macros ; utilisez `SaveAsDocm` lorsque vous devez conserver les capacités de macro.  
@@ -156,7 +152,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### Enregistrer en texte brut
@@ -172,7 +167,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### Étape 4 : Nettoyage
 Disposez toujours des instances `EditableDocument` et `Editor` afin de libérer les poignées de fichiers et les ressources non gérées.
@@ -184,7 +178,6 @@ Le pattern `Dispose` garantit que les fichiers temporaires sont supprimés et qu
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## Problèmes courants et solutions

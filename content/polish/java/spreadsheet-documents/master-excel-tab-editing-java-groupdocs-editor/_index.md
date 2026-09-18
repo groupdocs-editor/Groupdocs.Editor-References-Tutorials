@@ -145,7 +145,6 @@ Aby skutecznie korzystać z GroupDocs.Editor dla Javy, upewnij się, że projekt
    </dependency>
 </dependencies>
 ```
-```
 
 **Pobranie bezpośrednie:**  
 Alternatywnie, pobierz najnowszą wersję z [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
@@ -175,28 +174,22 @@ Poniżej przedstawiamy każdy krok potrzebny do **create editable worksheet** ob
 Określ ścieżkę do dokumentu Excel. Zastąp `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` rzeczywistą lokalizacją pliku:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### Krok 2: Załaduj arkusz do InputStream
 Użyj `FileInputStream` Javy, aby odczytać plik Excel:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### Krok 3: Utwórz instancję edytora
 Zainicjalizuj `Editor` przy użyciu strumienia wejściowego i opcji ładowania:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *Wyjaśnienie:* Instancja `Editor` działa jako centralny obiekt do interakcji z Twoim arkuszem.
@@ -208,19 +201,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 Określ, który arkusz chcesz edytować, używając jego indeksu (liczba od 0):
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### Krok 2: Utwórz `EditableDocument` dla pierwszej zakładki
 `EditableDocument` reprezentuje edytowalną wersję arkusza, którą można modyfikować i później zapisać.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *Wyjaśnienie:* Ten krok przekształca pierwszy arkusz w format możliwy do modyfikacji.
@@ -232,19 +221,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 Ustaw indeks dla drugiej zakładki:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### Krok 2: Utwórz `EditableDocument` dla drugiej zakładki
 Utwórz obiekt dokumentu do edycji:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *Wyjaśnienie:* To podejście pozwala skupić się na konkretnych zakładkach bez ładowania całego arkusza.
@@ -256,19 +241,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 Wybierz żądany format wyjściowy, np. XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### Krok 2: Zapisz pierwszą zakładkę
 Zachowaj zmiany w pliku:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *Wyjaśnienie:* Ten krok zapisuje edytowaną zakładkę jako osobny plik w określonym katalogu.
@@ -280,19 +261,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 Wybierz XLSB jako format wyjściowy dla różnorodności:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### Krok 2: Zapisz drugą zakładkę
 Wyeksportuj zmiany do pliku:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *Wyjaśnienie:* To pozwala utrzymać różne wersje danych w różnych formatach.

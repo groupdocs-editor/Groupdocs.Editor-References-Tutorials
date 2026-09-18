@@ -146,7 +146,6 @@ To use GroupDocs.Editor for Java effectively, ensure your project includes the n
    </dependency>
 </dependencies>
 ```
-```
 
 **Direct download:**  
 Alternatively, download the latest version from [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
@@ -176,28 +175,22 @@ Below we break down each step needed to **create editable worksheet** objects an
 Specify the path to your Excel document. Replace `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` with your actual file location:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### Step 2: Load the spreadsheet into an InputStream
 Use Java’s `FileInputStream` to read the Excel file:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### Step 3: Create an editor instance
 Initialize the `Editor` with the input stream and load options:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *Explanation:* The `Editor` instance acts as a central object to interact with your spreadsheet.
@@ -211,19 +204,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 Specify which worksheet you want to edit using its index (0‑based):
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### Step 2: Create an `EditableDocument` for the first tab
 EditableDocument represents the editable version of a worksheet that can be modified and later saved.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *Explanation:* This step transforms the first worksheet into a modifiable format.
@@ -235,19 +224,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 Set the index for the second tab:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### Step 2: Create an `EditableDocument` for the second tab
 Create a document object for editing:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *Explanation:* This approach allows you to focus on specific tabs without loading the entire spreadsheet.
@@ -261,19 +246,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 Choose the desired output format, such as XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### Step 2: Save the first tab
 Persist your changes to a file:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *Explanation:* This step saves the edited tab as a separate file in your specified directory.
@@ -285,19 +266,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 Select XLSB as the output format for variety:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### Step 2: Save the second tab
 Export your changes to a file:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *Explanation:* This allows you to maintain different versions of your data in various formats.

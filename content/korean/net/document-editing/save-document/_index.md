@@ -97,7 +97,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 환경이 준비되었으니, **문서에서 텍스트 교체**를 위한 구체적인 단계로 들어갑니다.
 
@@ -115,7 +114,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### 2단계: 문서 수정
 GroupDocs.Editor는 HTML 스냅샷으로 작업하므로, 간단한 교체를 위해 문서를 일반 텍스트처럼 다룰 수 있습니다.
@@ -127,7 +125,6 @@ GroupDocs.Editor는 HTML 스냅샷으로 작업하므로, 간단한 교체를 �
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### 3단계: 문서 저장
@@ -142,7 +139,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### DOCM으로 저장
 DOCM은 매크로가 포함된 Word 포맷이며, 매크로 기능을 유지해야 할 경우 `SaveAsDocm`을 사용합니다.  
@@ -155,7 +151,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### 일반 텍스트로 저장
@@ -171,7 +166,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### 4단계: 정리
 `EditableDocument`와 `Editor` 인스턴스를 항상 Dispose하여 파일 핸들과 비관리 리소스를 해제합니다.
@@ -183,7 +177,6 @@ editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## 일반적인 문제 및 해결책

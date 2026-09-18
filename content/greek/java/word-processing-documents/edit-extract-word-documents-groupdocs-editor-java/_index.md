@@ -315,9 +315,3 @@ A: Ναι, μπορείτε να μεταφέρετε αρχεία απευθε�
 - [Πώς να εξάγετε εικόνες από έγγραφα Word χρησιμοποιώντας το GroupDocs.Editor για Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
 - [Μετατροπή docx σε PDF Java: Παρτίδα επεξεργασία αρχείων Word με το GroupDocs.Editor – Οδηγός βήμα‑βήμα](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

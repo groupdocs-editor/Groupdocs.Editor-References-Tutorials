@@ -118,7 +118,6 @@ GroupDocs.Editor **30 से अधिक दस्तावेज़ फ़ॉ�
     </dependency>
 </dependencies>
 ```
-```
 
 ### प्रत्यक्ष डाउनलोड
 वैकल्पिक रूप से, नवीनतम JAR पैकेज [यहाँ](https://releases.groupdocs.com/editor/java/) से डाउनलोड करें।
@@ -148,7 +147,6 @@ try {
     System.out.println("Error initializing Editor: " + ex.getMessage());
 }
 ```
-```
 
 ### चरण 2: संपादन विकल्प कॉन्फ़िगर करें
 `EditableDocument` स्रोत फ़ाइल का इन‑मेमोरी, पूरी तरह से संपादन योग्य संस्करण दर्शाता है। यह आपको पैराग्राफ, टेबल, और संशोधन ट्रैकिंग सुविधाओं तक पहुँच प्रदान करता है।
@@ -157,7 +155,6 @@ try {
 ```java
 WordProcessingEditOptions editOptions = new WordProcessingEditOptions();
 EditableDocument editableDocument = editor.edit(editOptions);
-```
 ```
 
 इस बिंदु पर, `editableDocument` मूल फ़ाइल का पूरी तरह से संपादन योग्य प्रतिनिधित्व रखता है, जिससे आप आवश्यक किसी भी संशोधन को लागू कर सकते हैं।
@@ -177,7 +174,6 @@ import com.groupdocs.editor.formats.WordProcessingFormats;
 String savePath = "YOUR_OUTPUT_DIRECTORY/EditedOutput.docx";
 WordProcessingSaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
 ```
-```
 
 ### चरण 4: संपादित दस्तावेज़ सहेजें
 `save` को कॉल करने से बदलाव डिस्क पर लिखे जाते हैं और संसाधन रिलीज़ हो जाते हैं। बड़े बैच रन के दौरान मेमोरी लीक से बचने के लिए `EditableDocument` और `Editor` दोनों को बंद करना याद रखें।
@@ -190,7 +186,6 @@ try {
 } catch (Exception ex) {
     System.out.println("Error saving document: " + ex.getMessage());
 }
-```
 ```
 
 > **Pro tip:** सहेजने के बाद `EditableDocument` और `Editor` इंस्टेंस को बंद करें ताकि मेमोरी मुक्त हो सके, विशेषकर बड़े फ़ाइलों को प्रोसेस करते समय।

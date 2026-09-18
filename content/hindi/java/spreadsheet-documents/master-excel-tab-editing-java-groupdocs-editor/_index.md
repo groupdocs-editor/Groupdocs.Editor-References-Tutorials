@@ -145,7 +145,6 @@ GroupDocs.Editor for Java को प्रभावी रूप से उप�
    </dependency>
 </dependencies>
 ```
-```
 
 **सीधे डाउनलोड:**  
 वैकल्पिक रूप से, नवीनतम संस्करण को [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) से डाउनलोड करें।
@@ -175,28 +174,22 @@ Java प्रोग्रामिंग, Java में I/O ऑपरेशन
 अपने Excel दस्तावेज़ का पथ निर्दिष्ट करें। `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` को अपने वास्तविक फ़ाइल स्थान से बदलें:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### चरण 2: स्प्रेडशीट को InputStream में लोड करें
 Excel फ़ाइल पढ़ने के लिए Java के `FileInputStream` का उपयोग करें:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### चरण 3: एक एडिटर इंस्टेंस बनाएं
 `Editor` को इनपुट स्ट्रीम और लोड विकल्पों के साथ इनिशियलाइज़ करें:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *व्याख्या:* `Editor` इंस्टेंस आपके स्प्रेडशीट के साथ इंटरैक्ट करने के लिए एक केंद्रीय ऑब्जेक्ट के रूप में कार्य करता है।
@@ -210,19 +203,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 उसका इंडेक्स (0‑आधारित) उपयोग करके वह worksheet निर्दिष्ट करें जिसे आप संपादित करना चाहते हैं:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### चरण 2: पहले टैब के लिए `EditableDocument` बनाएं
 EditableDocument एक worksheet के संपादन योग्य संस्करण को दर्शाता है जिसे बदला जा सकता है और बाद में सहेजा जा सकता है।
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *व्याख्या:* यह चरण पहले worksheet को एक संशोधित योग्य फ़ॉर्मेट में बदलता है।
@@ -234,19 +223,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 दूसरे टैब के लिए इंडेक्स सेट करें:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### चरण 2: दूसरे टैब के लिए `EditableDocument` बनाएं
 संपादन के लिए एक दस्तावेज़ ऑब्जेक्ट बनाएं:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *व्याख्या:* यह तरीका आपको पूरे स्प्रेडशीट को लोड किए बिना विशिष्ट टैब्स पर ध्यान केंद्रित करने की अनुमति देता है।
@@ -260,19 +245,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 वांछित आउटपुट फ़ॉर्मेट चुनें, जैसे XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### चरण 2: पहले टैब को सहेजें
 अपने परिवर्तन को फ़ाइल में सहेजें:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *व्याख्या:* यह चरण संपादित टैब को आपके निर्दिष्ट डायरेक्टरी में एक अलग फ़ाइल के रूप में सहेजता है।
@@ -284,19 +265,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 विविधता के लिए आउटपुट फ़ॉर्मेट के रूप में XLSB चुनें:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### चरण 2: दूसरे टैब को सहेजें
 अपने परिवर्तन को फ़ाइल में निर्यात करें:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *व्याख्या:* यह आपको विभिन्न फ़ॉर्मेट्स में अपने डेटा के अलग-अलग संस्करण बनाए रखने की अनुमति देता है।

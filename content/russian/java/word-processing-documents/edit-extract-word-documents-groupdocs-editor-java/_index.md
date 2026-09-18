@@ -315,9 +315,3 @@ A: Да, вы можете потоково передавать файлы на
 - [Как извлечь изображения из Word‑документов с помощью GroupDocs.Editor для Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
 - [Конвертировать docx в PDF Java: пакетное редактирование Word‑файлов с GroupDocs.Editor – пошаговое руководство](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

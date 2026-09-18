@@ -143,7 +143,6 @@ För att använda GroupDocs.Editor för Java effektivt, säkerställ att ditt pr
    </dependency>
 </dependencies>
 ```
-```
 
 **Direkt nedladdning:**  
 Alternativt kan du ladda ner den senaste versionen från [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
@@ -173,28 +172,22 @@ Nedan bryter vi ner varje steg som behövs för att **create editable worksheet*
 Ange sökvägen till ditt Excel‑dokument. Ersätt `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` med din faktiska filplats:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### Steg 2: Ladda kalkylbladet i ett InputStream
 Använd Java:s `FileInputStream` för att läsa Excel‑filen:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### Steg 3: Skapa en editor‑instans
 Initiera `Editor` med input‑strömmen och laddningsalternativ:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *Förklaring:* `Editor`‑instansen fungerar som ett centralt objekt för att interagera med ditt kalkylblad.
@@ -208,19 +201,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 Ange vilken kalkylblad du vill redigera med dess index (0‑baserat):
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### Steg 2: Skapa ett `EditableDocument` för den första fliken
 `EditableDocument` representerar den redigerbara versionen av ett kalkylblad som kan modifieras och senare sparas.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *Förklaring:* Detta steg omvandlar den första kalkylbladet till ett modifierbart format.
@@ -232,19 +221,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 Ställ in index för den andra fliken:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### Steg 2: Skapa ett `EditableDocument` för den andra fliken
 Skapa ett dokumentobjekt för redigering:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *Förklaring:* Detta tillvägagångssätt låter dig fokusera på specifika flikar utan att ladda hela kalkylbladet.
@@ -258,19 +243,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 Välj önskat utdataformat, till exempel XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### Steg 2: Spara den första fliken
 Skriv dina ändringar till en fil:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *Förklaring:* Detta steg sparar den redigerade fliken som en separat fil i den angivna katalogen.
@@ -282,19 +263,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 Välj XLSB som utdataformat för variation:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### Steg 2: Spara den andra fliken
 Exportera dina ändringar till en fil:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *Förklaring:* Detta låter dig behålla olika versioner av dina data i olika format.

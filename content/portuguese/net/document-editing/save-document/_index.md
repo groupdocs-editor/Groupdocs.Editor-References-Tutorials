@@ -98,7 +98,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 Agora que o ambiente está pronto, vamos mergulhar nos passos concretos para **replace text in document**.
 
@@ -116,7 +115,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### Passo 2: Modificar o Documento
 Como o GroupDocs.Editor trabalha com um instantâneo HTML, você pode tratar o documento como texto simples para substituições simples.
@@ -128,7 +126,6 @@ O método `EditableDocument.GetHtml()` extrai o HTML; após alterar a string, vo
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### Passo 3: Salvar o Documento
@@ -143,7 +140,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### Salvar como DOCM
 DOCM é o formato Word com macros habilitadas; use `SaveAsDocm` quando precisar manter as capacidades de macro.  
@@ -156,7 +152,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### Salvar como Texto Simples
@@ -172,7 +167,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### Passo 4: Limpeza
 Sempre descarte as instâncias de `EditableDocument` e `Editor` para liberar handles de arquivos e recursos não gerenciados.
@@ -184,7 +178,6 @@ O padrão `Dispose` garante que arquivos temporários sejam excluídos e a memó
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## Problemas Comuns e Soluções

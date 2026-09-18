@@ -119,18 +119,15 @@ weight: 13
 using System;
 using GroupDocs.Editor.Options;
 ```
-```
 
 ### Καταγραφή Μορφών Επεξεργασίας Κειμένου
 `Formats.WordProcessingFormats` είναι μια απαρίθμηση που περιγράφει κάθε τύπο αρχείου Word‑processing που αναγνωρίζεται από τον επεξεργαστή. Η ιδιότητα `All` επιστρέφει μια συλλογή από αυτά τα αντικείμενα μορφής.
 
 ```csharp
-```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Εξήγηση:**  
@@ -141,12 +138,10 @@ foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormat
 `Formats.PresentationFormats` λειτουργεί με τον ίδιο τρόπο για αρχεία διαφανειών, εκθέτοντας κάθε υποστηριζόμενο τύπο παρουσίασης μέσω της συλλογής `All`.
 
 ```csharp
-```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Εξήγηση:**  
@@ -160,10 +155,8 @@ foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.Al
 `Formats.SpreadsheetFormats.FromExtension` μετατρέπει μια συμβολοσειρά επέκτασης αρχείου στην αντίστοιχη τιμή του enum μορφής υπολογιστικού φύλλου.
 
 ```csharp
-```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
-```
 ```
 
 **Εξήγηση:**  
@@ -174,10 +167,8 @@ Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 Ανάλογα, το `Formats.TextualFormats.FromExtension` επιλύει κειμενικές επεκτάσεις αρχείων όπως HTML ή TXT.
 
 ```csharp
-```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
-```
 ```
 
 **Εξήγηση:**  
@@ -191,12 +182,10 @@ Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
 `Editor` είναι η κεντρική κλάση που περιλαμβάνει όλες τις λειτουργίες επεξεργασίας για ένα δεδομένο αρχείο.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
     // Further steps will be covered here.
 }
-```
 ```
 
 **Εξήγηση:**  
@@ -207,13 +196,11 @@ using (Editor editor = new Editor("path/to/your/document.docx"))
 `EditableDocument.GetContent()` επιστρέφει το ακατέργαστο κείμενο του εγγράφου (ή HTML για επεξεργαστές web), το οποίο μπορείτε να εμφανίσετε ή να το χειριστείτε.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     string content = editableDocument.GetContent();
     Console.WriteLine(content);
 }
-```
 ```
 
 **Εξήγηση:**  
@@ -225,14 +212,12 @@ using (EditableDocument editableDocument = editor.Edit())
 `SaveOptions` καθορίζει στον επεξεργαστή πώς και σε ποια μορφή θα γράψει το επεξεργασμένο έγγραφο πίσω στην αποθήκευση.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
-```
 ```
 
 **Εξήγηση:**  
@@ -248,7 +233,6 @@ using (EditableDocument editableDocument = editor.Edit())
 `SpreadsheetSaveOptions` ορίζει πώς γράφεται ένα υπολογιστικό φύλλο, συμπεριλαμβανομένης της μορφής και των προαιρετικών ρυθμίσεων συμπίεσης.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -260,7 +244,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
-```
 ```
 
 **Εξήγηση:**  
@@ -275,7 +258,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 `PresentationSaveOptions` ελέγχει τη μορφή εξόδου για τις διαφάνειες, επιτρέποντάς σας να διατηρήσετε ή να αλλάξετε τον αρχικό τύπο αρχείου.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -287,7 +269,6 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
-```
 ```
 
 **Εξήγηση:**  

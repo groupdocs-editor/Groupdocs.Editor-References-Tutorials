@@ -98,7 +98,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 अब जब वातावरण तैयार है, चलिए **दस्तावेज़ में टेक्स्ट बदलें** के ठोस चरणों में उतरते हैं।
 
@@ -116,7 +115,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### चरण 2: दस्तावेज़ संशोधित करें
 चूंकि GroupDocs.Editor HTML स्नैपशॉट के साथ काम करता है, आप सरल प्रतिस्थापनों के लिए दस्तावेज़ को प्लेन टेक्स्ट की तरह ट्रीट कर सकते हैं।
@@ -128,7 +126,6 @@ EditableDocument defaultWordProcessingDoc = editor.Edit();
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### चरण 3: दस्तावेज़ सहेजें
@@ -143,7 +140,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### DOCM के रूप में सहेजें
 DOCM मैक्रो‑सक्षम Word फ़ॉर्मैट है; यदि आपको मैक्रो क्षमताएँ रखनी हैं तो `SaveAsDocm` उपयोग करें।  
@@ -156,7 +152,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### प्लेन टेक्स्ट के रूप में सहेजें
@@ -172,7 +167,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### चरण 4: सफ़ाई
 फ़ाइल हैंडल्स और अनमैनेज्ड रिसोर्सेज़ को रिलीज़ करने के लिए हमेशा `EditableDocument` और `Editor` इंस्टेंसेज़ को डिस्पोज़ करें।
@@ -184,7 +178,6 @@ editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## सामान्य समस्याएँ और समाधान

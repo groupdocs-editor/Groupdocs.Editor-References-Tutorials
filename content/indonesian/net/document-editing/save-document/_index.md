@@ -98,7 +98,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 Sekarang lingkungan siap, mari kita selami langkah‑langkah konkret untuk **ganti teks dalam dokumen**.
 
@@ -116,7 +115,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### Langkah 2: Modifikasi Dokumen
 Karena GroupDocs.Editor bekerja dengan snapshot HTML, Anda dapat memperlakukan dokumen sebagai teks biasa untuk penggantian sederhana.
@@ -128,7 +126,6 @@ Metode `EditableDocument.GetHtml()` mengekstrak HTML; setelah mengubah string An
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### Langkah 3: Simpan Dokumen
@@ -143,7 +140,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### Simpan sebagai DOCM
 DOCM adalah format Word yang mendukung macro; gunakan `SaveAsDocm` ketika Anda perlu mempertahankan kemampuan macro.  
@@ -156,7 +152,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### Simpan sebagai Teks Biasa
@@ -172,7 +167,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### Langkah 4: Pembersihan
 Selalu dispose instance `EditableDocument` dan `Editor` untuk melepaskan handle file dan sumber daya yang tidak dikelola.
@@ -184,7 +178,6 @@ Pola `Dispose` memastikan file sementara dihapus dan memori dibebaskan.
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## Masalah Umum dan Solusinya

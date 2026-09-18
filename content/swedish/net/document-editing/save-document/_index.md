@@ -97,7 +97,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 Nu när miljön är klar, låt oss gå in på de konkreta stegen för **replace text in document**.
 
@@ -115,7 +114,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### Steg 2: Modifiera dokumentet
 Eftersom GroupDocs.Editor arbetar med en HTML‑snapshot kan du behandla dokumentet som vanlig text för enkla ersättningar.
@@ -127,7 +125,6 @@ Eftersom GroupDocs.Editor arbetar med en HTML‑snapshot kan du behandla dokumen
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### Steg 3: Spara dokumentet
@@ -142,7 +139,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### Spara som DOCM
 DOCM är Word‑formatet med makron; använd `SaveAsDocm` när du behöver behålla makrofunktioner.  
@@ -155,7 +151,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### Spara som vanlig text
@@ -171,7 +166,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### Steg 4: Rengöring
 Disposera alltid `EditableDocument`‑ och `Editor`‑instanserna för att frigöra filhandtag och ohanterade resurser.
@@ -183,7 +177,6 @@ Disposera alltid `EditableDocument`‑ och `Editor`‑instanserna för att frig�
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## Vanliga problem och lösningar

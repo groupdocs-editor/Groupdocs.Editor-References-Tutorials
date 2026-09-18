@@ -119,18 +119,15 @@ Load the supported formats collection and print each format’s name and file ex
 using System;
 using GroupDocs.Editor.Options;
 ```
-```
 
 ### Liệt kê các định dạng Word Processing
 `Formats.WordProcessingFormats` là một enumeration mô tả mọi loại tệp Word‑processing mà trình chỉnh sửa nhận dạng. Thuộc tính `All` trả về một collection các đối tượng định dạng này.
 
 ```csharp
-```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Giải thích:**  
@@ -141,12 +138,10 @@ foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormat
 `Formats.PresentationFormats` hoạt động tương tự cho các tệp slide‑deck, hiển thị mỗi loại presentation được hỗ trợ thông qua collection `All`.
 
 ```csharp
-```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **Giải thích:**  
@@ -160,10 +155,8 @@ foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.Al
 `Formats.SpreadsheetFormats.FromExtension` chuyển một chuỗi phần mở rộng tệp thành giá trị enum định dạng spreadsheet tương ứng.
 
 ```csharp
-```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
-```
 ```
 
 **Giải thích:**  
@@ -174,10 +167,8 @@ Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 Tương tự, `Formats.TextualFormats.FromExtension` giải quyết các phần mở rộng tệp văn bản như HTML hoặc TXT.
 
 ```csharp
-```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
-```
 ```
 
 **Giải thích:**  
@@ -191,12 +182,10 @@ Khi đã biết định dạng, việc tải và chỉnh sửa tài liệu tuân
 `Editor` là lớp cốt lõi bao gồm tất cả các thao tác chỉnh sửa cho một tệp nhất định.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
     // Further steps will be covered here.
 }
-```
 ```
 
 **Giải thích:**  
@@ -207,13 +196,11 @@ using (Editor editor = new Editor("path/to/your/document.docx"))
 `EditableDocument.GetContent()` trả về văn bản thô của tài liệu (hoặc HTML cho các trình chỉnh sửa dựa trên web), bạn có thể hiển thị hoặc thao tác.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     string content = editableDocument.GetContent();
     Console.WriteLine(content);
 }
-```
 ```
 
 **Giải thích:**  
@@ -225,14 +212,12 @@ using (EditableDocument editableDocument = editor.Edit())
 `SaveOptions` cho trình chỉnh sửa biết cách và định dạng nào để ghi tài liệu đã chỉnh sửa trở lại bộ nhớ lưu trữ.
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
-```
 ```
 
 **Giải thích:**  
@@ -248,7 +233,6 @@ GroupDocs.Editor trừu tượng hoá việc xử lý Word, Spreadsheet và Pres
 `SpreadsheetSaveOptions` xác định cách một spreadsheet được ghi, bao gồm định dạng và các cài đặt nén tùy chọn.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -260,7 +244,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
-```
 ```
 
 **Giải thích:**  
@@ -275,7 +258,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 `PresentationSaveOptions` kiểm soát định dạng đầu ra cho các slide deck, cho phép bạn giữ nguyên hoặc thay đổi loại tệp gốc.
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -287,7 +269,6 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
-```
 ```
 
 **Giải thích:**  

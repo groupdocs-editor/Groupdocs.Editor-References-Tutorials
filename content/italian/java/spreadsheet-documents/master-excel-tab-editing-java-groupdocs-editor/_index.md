@@ -146,7 +146,6 @@ Per utilizzare efficacemente GroupDocs.Editor per Java, assicurati che il tuo pr
    </dependency>
 </dependencies>
 ```
-```
 
 **Download diretto:**  
 In alternativa, scarica l'ultima versione da [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
@@ -176,28 +175,22 @@ Di seguito scomponiamo ogni passaggio necessario per creare oggetti **editable w
 Specifica il percorso del tuo documento Excel. Sostituisci `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` con la posizione reale del file:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### Passo 2: Carica il foglio di calcolo in un InputStream
 Usa `FileInputStream` di Java per leggere il file Excel:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### Passo 3: Crea un'istanza editor
 Inizializza `Editor` con lo stream di input e le opzioni di caricamento:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *Spiegazione:* L'istanza `Editor` funge da oggetto centrale per interagire con il tuo foglio di calcolo.
@@ -211,19 +204,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 Specifica quale foglio vuoi modificare usando il suo indice (a base zero):
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### Passo 2: Crea un `EditableDocument` per la prima scheda
 `EditableDocument` rappresenta la versione modificabile di un foglio che può essere modificata e successivamente salvata.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *Spiegazione:* Questo passaggio trasforma il primo foglio in un formato modificabile.
@@ -235,19 +224,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 Imposta l'indice per la seconda scheda:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### Passo 2: Crea un `EditableDocument` per la seconda scheda
 Crea un oggetto documento per la modifica:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *Spiegazione:* Questo approccio ti consente di concentrarti su schede specifiche senza caricare l'intero foglio di calcolo.
@@ -261,19 +246,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 Scegli il formato di output desiderato, ad esempio XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### Passo 2: Salva la prima scheda
 Persiste le tue modifiche in un file:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *Spiegazione:* Questo passaggio salva la scheda modificata come file separato nella directory specificata.
@@ -285,19 +266,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 Seleziona XLSB come formato di output per varietà:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### Passo 2: Salva la seconda scheda
 Esporta le tue modifiche in un file:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *Spiegazione:* Questo ti consente di mantenere diverse versioni dei tuoi dati in vari formati.

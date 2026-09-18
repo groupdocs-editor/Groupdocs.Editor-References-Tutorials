@@ -97,7 +97,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 الآن بعد أن أصبحت البيئة جاهزة، دعنا نتعمق في الخطوات العملية لـ **replace text in document**.
 
@@ -115,7 +114,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### الخطوة 2: تعديل المستند
 نظرًا لأن GroupDocs.Editor يعمل مع لقطة HTML، يمكنك التعامل مع المستند كنص عادي لإجراء استبدالات بسيطة.
@@ -127,7 +125,6 @@ EditableDocument defaultWordProcessingDoc = editor.Edit();
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### الخطوة 3: حفظ المستند
@@ -142,7 +139,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### حفظ كـ DOCM
 DOCM هو صيغة Word المدعومة بالماكرو؛ استخدم `SaveAsDocm` عندما تحتاج إلى الحفاظ على قدرات الماكرو.  
@@ -155,7 +151,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### حفظ كنص عادي
@@ -171,7 +166,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### الخطوة 4: التنظيف
 دائمًا قم بتحرير كائنات `EditableDocument` و`Editor` لتحرير مقبض الملفات والموارد غير المدارة.
@@ -183,7 +177,6 @@ editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## المشكلات الشائعة والحلول

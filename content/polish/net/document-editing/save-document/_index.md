@@ -98,7 +98,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 Teraz, gdy środowisko jest gotowe, przejdźmy do konkretnych kroków dla **replace text in document**.
 
@@ -116,7 +115,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### Krok 2: Zmodyfikuj dokument
 Ponieważ GroupDocs.Editor pracuje na migawce HTML, możesz traktować dokument jako zwykły tekst przy prostych zamianach.
@@ -128,7 +126,6 @@ Metoda `EditableDocument.GetHtml()` wyodrębnia HTML; po zmianie łańcucha twor
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### Krok 3: Zapisz dokument
@@ -143,7 +140,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### Zapisz jako DOCM
 DOCM to format Word z obsługą makr; użyj `SaveAsDocm`, gdy potrzebujesz zachować możliwości makr.  
@@ -156,7 +152,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### Zapisz jako zwykły tekst
@@ -172,7 +167,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### Krok 4: Sprzątanie
 Zawsze zwalniaj instancje `EditableDocument` i `Editor`, aby zwolnić uchwyty plików i zasoby niezarządzane.
@@ -184,7 +178,6 @@ Wzorzec `Dispose` zapewnia usunięcie plików tymczasowych i odzyskanie pamięci
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## Typowe problemy i rozwiązania

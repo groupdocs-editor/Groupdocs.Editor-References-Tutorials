@@ -98,7 +98,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 Ortam hazır olduğuna göre, **replace text in document** için somut adımlara dalalım.
 
@@ -116,7 +115,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### Adım 2: Belgeyi Değiştir
 GroupDocs.Editor bir HTML anlık görüntüsüyle çalıştığı için, basit değişiklikler için belgeyi düz metin gibi ele alabilirsiniz.
@@ -128,7 +126,6 @@ GroupDocs.Editor bir HTML anlık görüntüsüyle çalıştığı için, basit d
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### Adım 3: Belgeyi Kaydet
@@ -143,7 +140,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### DOCM Olarak Kaydet
 DOCM, makro‑etkin Word formatıdır; makro yeteneklerini korumanız gerektiğinde `SaveAsDocm` kullanın.  
@@ -156,7 +152,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### Düz Metin Olarak Kaydet
@@ -172,7 +167,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### Adım 4: Temizleme
 `EditableDocument` ve `Editor` örneklerini her zaman serbest bırakın, dosya tutamaçlarını ve yönetilmeyen kaynakları serbest bırakmak için.
@@ -184,7 +178,6 @@ editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## Yaygın Sorunlar ve Çözümler

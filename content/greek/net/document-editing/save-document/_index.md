@@ -98,7 +98,6 @@ using System.IO;
 using GroupDocs.Editor.Formats;
 using GroupDocs.Editor.Options;
 ```
-```
 
 Τώρα που το περιβάλλον είναι έτοιμο, ας προχωρήσουμε στα συγκεκριμένα βήματα για **replace text in document**.
 
@@ -116,7 +115,6 @@ string inputFilePath = "Your Sample Document";
 Editor editor = new Editor(inputFilePath, delegate { return new Options.WordProcessingLoadOptions(); });
 EditableDocument defaultWordProcessingDoc = editor.Edit();
 ```
-```
 
 ### Βήμα 2: Τροποποίηση του Εγγράφου
 Επειδή το GroupDocs.Editor λειτουργεί με ένα στιγμιότυπο HTML, μπορείτε να αντιμετωπίσετε το έγγραφο ως απλό κείμενο για απλές αντικαταστάσεις.
@@ -128,7 +126,6 @@ EditableDocument defaultWordProcessingDoc = editor.Edit();
 string allEmbeddedInsideString = defaultWordProcessingDoc.GetEmbeddedHtml();
 string allEmbeddedInsideStringEdited = allEmbeddedInsideString.Replace("Subtitle", "Edited subtitle");
 EditableDocument editedDoc = EditableDocument.FromMarkup(allEmbeddedInsideStringEdited, null);
-```
 ```
 
 ### Βήμα 3: Αποθήκευση του Εγγράφου
@@ -143,7 +140,6 @@ string outputRtfPath = Path.Combine(Constants.GetOutputDirectoryPath(inputFilePa
 WordProcessingSaveOptions rtfSaveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Rtf);
 editor.Save(editedDoc, outputRtfPath, rtfSaveOptions);
 ```
-```
 
 #### Αποθήκευση ως DOCM
 Το DOCM είναι η μορφή Word με δυνατότητα μακροεντολών· χρησιμοποιήστε `SaveAsDocm` όταν χρειάζεται να διατηρήσετε τις δυνατότητες μακροεντολών.  
@@ -156,7 +152,6 @@ using (FileStream outputStream = File.Create(outputDocmPath))
 {
     editor.Save(editedDoc, outputStream, docmSaveOptions);
 }
-```
 ```
 
 #### Αποθήκευση ως Απλό Κείμενο
@@ -172,7 +167,6 @@ TextSaveOptions textSaveOptions = new TextSaveOptions
 };
 editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 ```
-```
 
 ### Βήμα 4: Καθαρισμός
 Πάντα απελευθερώστε τις παρουσίες του `EditableDocument` και του `Editor` για να απελευθερώσετε τους χειριστές αρχείων και τους μη διαχειριζόμενους πόρους.
@@ -184,7 +178,6 @@ editor.Save(editedDoc, outputTxtPath, textSaveOptions);
 editedDoc.Dispose();
 defaultWordProcessingDoc.Dispose();
 editor.Dispose();
-```
 ```
 
 ## Συνηθισμένα Προβλήματα και Λύσεις

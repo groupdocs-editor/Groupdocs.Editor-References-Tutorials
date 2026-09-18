@@ -121,18 +121,15 @@ GroupDocs.Editor **รองรับรูปแบบการนำเข้�
 using System;
 using GroupDocs.Editor.Options;
 ```
-```
 
 ### การแสดงรายการรูปแบบการประมวลผลคำ
 `Formats.WordProcessingFormats` เป็น enumeration ที่อธิบายทุกประเภทไฟล์การประมวลผลคำที่เอดิเตอร์รับรู้ property `All` จะคืนคอลเลกชันของอ็อบเจกต์รูปแบบเหล่านี้
 
 ```csharp
-```csharp
 foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **คำอธิบาย:**  
@@ -143,12 +140,10 @@ foreach (Formats.WordProcessingFormats oneFormat in Formats.WordProcessingFormat
 `Formats.PresentationFormats` ทำงานเช่นเดียวกันสำหรับไฟล์สไลด์เด็ค โดยเปิดเผยแต่ละประเภทการนำเสนอที่รองรับผ่านคอลเลกชัน `All`
 
 ```csharp
-```csharp
 foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.All)
 {
     Console.WriteLine("Name is {0}, extension is {1}", oneFormat.Name, oneFormat.Extension);
 }
-```
 ```
 
 **คำอธิบาย:**  
@@ -162,10 +157,8 @@ foreach (Formats.PresentationFormats oneFormat in Formats.PresentationFormats.Al
 `Formats.SpreadsheetFormats.FromExtension` แปลงสตริงส่วนต่อขยายไฟล์เป็นค่า enum ของรูปแบบสเปรดชีตที่ตรงกัน
 
 ```csharp
-```csharp
 Formats.SpreadsheetFormats expectedXlsm = Formats.SpreadsheetFormats.FromExtension(".xlsm");
 Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
-```
 ```
 
 **คำอธิบาย:**  
@@ -176,10 +169,8 @@ Console.WriteLine("Parsed Spreadsheet format is {0}", expectedXlsm.Name);
 ในทำนองเดียวกัน `Formats.TextualFormats.FromExtension` จะระบุส่วนต่อขยายไฟล์ข้อความเช่น HTML หรือ TXT
 
 ```csharp
-```csharp
 Formats.TextualFormats expectedHtml = Formats.TextualFormats.FromExtension("html");
 Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
-```
 ```
 
 **คำอธิบาย:**  
@@ -193,12 +184,10 @@ Console.WriteLine("Parsed Textual format is {0}", expectedHtml.Name);
 `Editor` เป็นคลาสหลักที่ห่อหุ้มการดำเนินการแก้ไขทั้งหมดสำหรับไฟล์ที่ระบุ
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/document.docx"))
 {
     // Further steps will be covered here.
 }
-```
 ```
 
 **คำอธิบาย:**  
@@ -209,13 +198,11 @@ using (Editor editor = new Editor("path/to/your/document.docx"))
 `EditableDocument.GetContent()` คืนข้อความดิบของเอกสาร (หรือ HTML สำหรับเอดิเตอร์บนเว็บ) ซึ่งคุณสามารถแสดงหรือจัดการต่อได้
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     string content = editableDocument.GetContent();
     Console.WriteLine(content);
 }
-```
 ```
 
 **คำอธิบาย:**  
@@ -227,14 +214,12 @@ using (EditableDocument editableDocument = editor.Edit())
 `SaveOptions` บอกเอดิเตอร์ว่าจะเขียนเอกสารที่แก้ไขกลับไปยังที่เก็บอย่างไรและในรูปแบบใด
 
 ```csharp
-```csharp
 using (EditableDocument editableDocument = editor.Edit())
 {
     // Modify content here
     SaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
     editor.Save(editableDocument, "path/to/save/document.docx", saveOptions);
 }
-```
 ```
 
 **คำอธิบาย:**  
@@ -250,7 +235,6 @@ GroupDocs.Editor ทำให้การจัดการ Word, Spreadsheet, �
 `SpreadsheetSaveOptions` กำหนดวิธีการเขียนสเปรดชีต รวมถึงรูปแบบและการตั้งค่าการบีบอัดแบบเลือกได้
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -262,7 +246,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
         editor.Save(editableDocument, "path/to/save/spreadsheet.xlsx", saveOptions);
     }
 }
-```
 ```
 
 **คำอธิบาย:**  
@@ -277,7 +260,6 @@ using (Editor editor = new Editor("path/to/your/spreadsheet.xlsx"))
 `PresentationSaveOptions` ควบคุมรูปแบบเอาต์พุตสำหรับสไลด์เด็ค ให้คุณคงหรือเปลี่ยนประเภทไฟล์ต้นฉบับได้
 
 ```csharp
-```csharp
 using (Editor editor = new Editor("path/to/your/presentation.pptx"))
 {
     using (EditableDocument editableDocument = editor.Edit())
@@ -289,7 +271,6 @@ using (Editor editor = new Editor("path/to/your/presentation.pptx"))
         editor.Save(editableDocument, "path/to/save/presentation.pptx", saveOptions);
     }
 }
-```
 ```
 
 **คำอธิบาย:**  

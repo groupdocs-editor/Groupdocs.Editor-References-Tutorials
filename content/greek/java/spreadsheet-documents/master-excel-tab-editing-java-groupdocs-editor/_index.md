@@ -147,7 +147,6 @@ weight: 1
    </dependency>
 </dependencies>
 ```
-```
 
 **Άμεση λήψη:**  
 Εναλλακτικά, κατεβάστε την πιο πρόσφατη έκδοση από [Κυκλοφορίες GroupDocs.Editor για Java](https://releases.groupdocs.com/editor/java/).
@@ -177,28 +176,22 @@ weight: 1
 Καθορίστε τη διαδρομή προς το έγγραφο Excel. Αντικαταστήστε `"YOUR_DOCUMENT_DIRECTORY/sample.xlsx"` με την πραγματική τοποθεσία του αρχείου σας:
 
 ```java
-```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.xlsx";
-```
 ```
 
 #### Βήμα 2: Φόρτωση του λογιστικού φύλλου σε InputStream
 Χρησιμοποιήστε το `FileInputStream` της Java για να διαβάσετε το αρχείο Excel:
 
 ```java
-```java
 InputStream inputStream = new FileInputStream(inputFilePath);
-```
 ```
 
 #### Βήμα 3: Δημιουργία στιγμιοτύπου επεξεργαστή
 Αρχικοποιήστε το `Editor` με το input stream και τις επιλογές φόρτωσης:
 
 ```java
-```java
 SpreadsheetLoadOptions loadOptions = new SpreadsheetLoadOptions();
 Editor editor = new Editor(inputStream, loadOptions);
-```
 ```
 
 *Επεξήγηση:* Το στιγμιότυπο `Editor` λειτουργεί ως κεντρικό αντικείμενο για αλληλεπίδραση με το λογιστικό φύλλο σας.
@@ -212,19 +205,15 @@ Editor editor = new Editor(inputStream, loadOptions);
 Καθορίστε ποιο φύλλο θέλετε να επεξεργαστείτε χρησιμοποιώντας τον δείκτη (μηδενική βάση):
 
 ```java
-```java
 SpreadsheetEditOptions editOptions1 = new SpreadsheetEditOptions();
 editOptions1.setWorksheetIndex(0);
-```
 ```
 
 #### Βήμα 2: Δημιουργία `EditableDocument` για την πρώτη καρτέλα
 Το `EditableDocument` αντιπροσωπεύει την επεξεργάσιμη έκδοση ενός φύλλου που μπορεί να τροποποιηθεί και αργότερα να αποθηκευτεί.
 
 ```java
-```java
 EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
-```
 ```
 
 *Επεξήγηση:* Αυτό το βήμα μετατρέπει το πρώτο φύλλο σε μορφή που μπορεί να τροποποιηθεί.
@@ -236,19 +225,15 @@ EditableDocument firstTabBeforeEdit = editor.edit(editOptions1);
 Ορίστε τον δείκτη για τη δεύτερη καρτέλα:
 
 ```java
-```java
 SpreadsheetEditOptions editOptions2 = new SpreadsheetEditOptions();
 editOptions2.setWorksheetIndex(1);
-```
 ```
 
 #### Βήμα 2: Δημιουργία `EditableDocument` για τη δεύτερη καρτέλα
 Δημιουργήστε ένα αντικείμενο εγγράφου για επεξεργασία:
 
 ```java
-```java
 EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
-```
 ```
 
 *Επεξήγηση:* Αυτή η προσέγγιση σας επιτρέπει να εστιάσετε σε συγκεκριμένες καρτέλες χωρίς να φορτώσετε ολόκληρο το λογιστικό φύλλο.
@@ -262,19 +247,15 @@ EditableDocument secondTabBeforeEdit = editor.edit(editOptions2);
 Επιλέξτε τη μορφή εξόδου, π.χ. XLSM:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions1 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsm);
 String outputPath1 = "YOUR_OUTPUT_DIRECTORY/sample_tab1.xlsm";
-```
 ```
 
 #### Βήμα 2: Αποθήκευση της πρώτης καρτέλας
 Διατηρήστε τις αλλαγές σε αρχείο:
 
 ```java
-```java
 editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
-```
 ```
 
 *Επεξήγηση:* Αυτό το βήμα αποθηκεύει την επεξεργασμένη καρτέλα ως ξεχωριστό αρχείο στον καθορισμένο φάκελο.
@@ -286,19 +267,15 @@ editor.save(firstTabBeforeEdit, outputPath1, saveOptions1);
 Επιλέξτε XLSB ως μορφή εξόδου για ποικιλία:
 
 ```java
-```java
 SpreadsheetSaveOptions saveOptions2 = new SpreadsheetSaveOptions(SpreadsheetFormats.Xlsb);
 String outputPath2 = "YOUR_OUTPUT_DIRECTORY/sample_tab2.xlsb";
-```
 ```
 
 #### Βήμα 2: Αποθήκευση της δεύτερης καρτέλας
 Εξάγετε τις αλλαγές σε αρχείο:
 
 ```java
-```java
 editor.save(secondTabBeforeEdit, outputPath2, saveOptions2);
-```
 ```
 
 *Επεξήγηση:* Αυτό σας επιτρέπει να διατηρήσετε διαφορετικές εκδόσεις των δεδομένων σας σε διάφορες μορφές.

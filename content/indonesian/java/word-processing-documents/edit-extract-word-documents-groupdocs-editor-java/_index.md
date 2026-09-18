@@ -315,9 +315,3 @@ Dengan mengikuti panduan ini, Anda kini memiliki fondasi yang kuat untuk **edit 
 - [Cara Mengekstrak Gambar dari Dokumen Word Menggunakan GroupDocs.Editor untuk Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
 - [Konversi docx ke PDF Java: Edit Batch File Word dengan GroupDocs.Editor – Panduan Langkah‑per‑Langkah](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}
