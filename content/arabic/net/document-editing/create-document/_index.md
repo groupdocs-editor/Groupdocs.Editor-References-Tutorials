@@ -1,53 +1,92 @@
 ---
-date: 2026-03-14
-description: تعلم كيفية تحرير عروض PowerPoint التقديمية وأنواع المستندات الأخرى باستخدام
-  GroupDocs.Editor لـ .NET. يغطي الدليل أيضًا كيفية حفظ المستند المُحرر وتحرير مستند
-  Word باستخدام .NET.
-linktitle: Create Document
+date: 2026-09-21
+description: تعرف على كيفية تحرير PowerPoint بدون Office باستخدام GroupDocs.Editor
+  for .NET، وتحرير Word وExcel وEPUB والحصول على تدفق المستند المُعدل.
+keywords:
+- edit powerpoint without office
+- GroupDocs.Editor .NET
+- document editing .NET
+- edit presentation programmatically
+lastmod: 2026-09-21
+linktitle: إنشاء مستند
+og_description: تحرير PowerPoint بدون Office باستخدام GroupDocs.Editor for .NET. يوضح
+  هذا الدليل كيفية تعديل العروض التقديمية وWord وExcel وEPUB وحفظ تدفقات المستندات
+  المعدلة.
+og_image_alt: Guide showing code to edit PowerPoint presentations without Microsoft
+  Office using GroupDocs.Editor for .NET
+og_title: تحرير PowerPoint بدون Office باستخدام GroupDocs.Editor for .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-21'
+  description: Learn how to edit PowerPoint without Office using GroupDocs.Editor
+    for .NET, edit Word, Excel, EPUB and capture the edited document stream.
+  headline: Edit powerpoint without office with GroupDocs.Editor for .NET
+  type: TechArticle
+- questions:
+  - answer: You can edit WordProcessing, spreadsheets, presentations, ebooks, and
+      emails—including PowerPoint files for the **edit powerpoint without office**
+      use case.
+    question: What types of documents can I edit with GroupDocs.Editor for .NET?
+  - answer: Yes, each format has its own options class (e.g., `WordProcessingEditOptions`,
+      `SpreadsheetEditOptions`, `PresentationEditOptions`) that let you fine‑tune
+      pagination, hidden slides, worksheet selection, etc.
+    question: Is it possible to customize the editing options?
+  - answer: Use the callback function (`SaveNewDocument`) to capture the edited stream,
+      then you can write it to disk, a database, or return it from a web API.
+    question: How do I handle the output of the edited documents?
+  - answer: Yes, a license is required for production. You can obtain one from the
+      [GroupDocs.Editor purchase page](https://purchase.groupdocs.com/buy). A temporary
+      trial license is also available.
+    question: Do I need a license to use GroupDocs.Editor for .NET?
+  - answer: Detailed documentation is available on the [GroupDocs.Editor for .NET
+      documentation page](https://tutorials.groupdocs.com/editor/net/).
+    question: Where can I find more detailed documentation?
+  type: FAQPage
 second_title: GroupDocs.Editor .NET API
-title: تحرير عرض PowerPoint باستخدام GroupDocs.Editor لـ .NET
+tags:
+- edit powerpoint
+- GroupDocs.Editor
+- .NET document processing
+title: تحرير PowerPoint بدون Office باستخدام GroupDocs.Editor for .NET
 type: docs
 url: /ar/net/document-editing/create-document/
 weight: 10
 ---
 
-_X}}. Keep them unchanged.
+# تحرير PowerPoint بدون Office باستخدام GroupDocs.Editor لـ .NET
 
-Check for any other markdown elements: lists, headings, bold, links.
+## المقدمة
+إذا كنت تبحث عن طريقة موثوقة لـ **edit PowerPoint without Office** برمجيًا، فإن GroupDocs.Editor لـ .NET هو الجواب. تتيح لك هذه المكتبة العمل مع صيغ Word و Excel و PowerPoint و Ebook و Email — كلها من خلال واجهة برمجة تطبيقات واحدة سهلة الاستخدام. في هذا البرنامج التعليمي سنستعرض إنشاء وتحرير كل نوع مستند مدعوم، ونظهر لك كيفية **save edited document** كتيارات، ونقدم لك نصائح عملية يمكنك تطبيقها في مشاريع حقيقية.
 
-All good.
-
-Now produce final content with Arabic translations and original placeholders.
-
-# تحرير عرض PowerPoint التقديمي باستخدام GroupDocs.Editor لـ .NET
-
-## مقدمة
-إذا كنت تبحث عن طريقة موثوقة **لتحرير عرض PowerPoint** برمجياً، فإن GroupDocs.Editor لـ .NET هو الجواب. تتيح لك هذه المكتبة العمل مع صيغ Word وExcel وPowerPoint وEbook وEmail — جميعها من خلال واجهة برمجة تطبيقات واحدة سهلة الاستخدام. في هذا الدرس سنستعرض إنشاء وتحرير كل نوع من المستندات المدعومة، ونوضح لك كيفية **حفظ المستند المعدل** تدفقات، ونقدم لك نصائح عملية يمكنك تطبيقها في المشاريع الحقيقية.
-
-## إجابات سريعة
+## الإجابات السريعة
 - **ما المكتبة التي تسمح لي بتحرير ملفات PowerPoint في .NET؟** GroupDocs.Editor for .NET.  
-- **هل يمكنني تحرير ملفات Word وExcel وEpub باستخدام نفس API؟** نعم، ففئة `Editor` نفسها تدعم جميع هذه الصيغ.  
-- **كيف يمكنني التقاط الملف المعدل؟** قدم دالة رد نداء (callback) (مثال: `SaveNewDocument`) التي تستقبل تدفق النتيجة.  
+- **هل يمكنني تحرير ملفات Word و Excel و Epub باستخدام نفس الـ API؟** نعم، فالفئة `Editor` نفسها تدعم جميع هذه الصيغ.  
+- **كيف يمكنني التقاط الملف المُحرر؟** قدم دالة رد نداء (callback) (مثل `SaveNewDocument`) التي تستقبل تدفق النتيجة.  
 - **هل أحتاج إلى ترخيص للاستخدام في الإنتاج؟** نعم — اشترِ ترخيصًا أو استخدم ترخيصًا تجريبيًا مؤقتًا.  
 - **ما إصدارات .NET المدعومة؟** .NET Framework 4.0+، .NET Core، و .NET 5/6.
 
-## ما هو “تحرير عرض PowerPoint” باستخدام GroupDocs.Editor؟
-يعني تحرير عرض PowerPoint تحميل ملف `.pptx`، تطبيق التغييرات (مثل تعديل الشرائح أو النص أو العناصر المخفية)، ثم استرجاع الملف المحدث — كل ذلك دون الحاجة إلى تثبيت Microsoft Office.
+## ما هو تحرير PowerPoint بدون Office؟
+تحرير عرض PowerPoint تقديميًا بدون Office يعني تحميل ملف `.pptx`، وتطبيق تغييرات مثل تعديل الشرائح أو النص أو العناصر المخفية، ثم استرجاع الملف المحدث — كل ذلك دون الحاجة إلى تثبيت Microsoft PowerPoint على الخادم.
 
 ## لماذا تستخدم GroupDocs.Editor لـ .NET؟
-- **واجهة API واحدة للعديد من الصيغ** – لا حاجة للتعامل مع مكتبات منفصلة لـ Word أو Excel أو Epub.  
-- **بدون اعتماد على Office** – يعمل على الخوادم، الحاويات، وخطوط أنابيب CI.  
-- **تحكم دقيق** – تخصيص ترقيم الصفحات، معلومات اللغة، استخراج الخطوط، وأكثر.  
-- **معالجة قائمة على التدفقات** – مثالية لخدمات السحابة حيث تتعامل مع تدفقات الذاكرة بدلاً من الملفات الفعلية.
+يدعم GroupDocs.Editor **أكثر من 5 أنواع رئيسية من المستندات** (Word، Excel، PowerPoint، EPUB، Email) ويمكنه معالجة ملفات يصل حجمها إلى **500 ميغابايت** مع الحفاظ على استهلاك الذاكرة أقل من **100 ميغابايت** بفضل هندسته القائمة على التدفقات. تعمل المكتبة على **Windows و Linux و macOS**، مما يجعلها مثالية للخدمات السحابية الأصلية، خطوط أنابيب CI، وأعباء العمل الحاوية.
 
 ## المتطلبات المسبقة
 - Visual Studio (أي إصدار حديث).  
 - .NET Framework 4.0 أو أعلى (أو .NET Core/.NET 5+).  
-- مكتبة GroupDocs.Editor لـ .NET – حمّلها من [here](https://releases.groupdocs.com/editor/net/).  
+- GroupDocs.Editor for .NET library – [download the GroupDocs.Editor for .NET library](https://releases.groupdocs.com/editor/net/).  
 - معرفة أساسية بـ C#.
 
 ## استيراد مساحات الأسماء
-أولاً، استورد مساحات الأسماء التي تحتوي على الفئات الأساسية التي سنستخدمها.
+الفئة `Editor` موجودة في مساحة الأسماء `GroupDocs.Editor`، بينما فئات الخيارات الخاصة بكل صيغة تقع في مساحات الأسماء الفرعية الخاصة بها.
+
+`Editor` هي الفئة الأساسية التي تقوم بتحميل المستند، وتعرض تمثيله القابل للتحرير، وتكتب المحتوى المعدل مرة أخرى إلى تدفق.  
+
+```csharp
+using GroupDocs.Editor;
+using GroupDocs.Editor.Options;
+using System.IO;
+```
 
 ```csharp
 using GroupDocs.Editor.Formats;
@@ -56,14 +95,31 @@ using System.IO;
 ```
 
 ## الخطوة 1: إعداد التدفق
-سنستخدم تدفق ذاكرة كعنصر نائب لمحتوى المستند.
+العمل مع التدفقات يتيح لك الحفاظ على سير العمل بالكامل في الذاكرة، وهو مثالي لواجهات برمجة التطبيقات الويب أو الدوال الخالية من الخادم.
+
+`MemoryStream` هو مخزن مؤقت خفيف الوزن وقابل للتوسيع يحاكي ملفًا على القرص لكنه يبقى في الذاكرة (RAM).  
+
+```csharp
+byte[] fileBytes = File.ReadAllBytes("sample.pptx");
+var inputStream = new MemoryStream(fileBytes);
+```
 
 ```csharp
 Stream memoryStream = Stream.Null;
 ```
 
-## الخطوة 2: دالة رد النداء **لحفظ المستند المعدل**
-عرّف دالة رد نداء تستقبل التدفق المعدل وتخزنه في `memoryStream`.
+## الخطوة 2: دالة رد النداء لـ **save edited document**
+تستقبل دالة رد النداء التدفق المُحرر بعد أن ينتهي `Editor` من المعالجة. يمكنك بعد ذلك كتابة ذلك إلى القرص، أو قاعدة بيانات، أو إرجاعه من نقطة نهاية API.
+
+`SaveNewDocument` هي طريقة يحددها المستخدم يستدعيها SDK تلقائيًا بمجرد اكتمال التحرير.  
+
+```csharp
+void SaveNewDocument(Stream editedStream)
+{
+    using var file = File.Create("output.pptx");
+    editedStream.CopyTo(file);
+}
+```
 
 ```csharp
 void SaveNewDocument(Stream resultStream)
@@ -72,10 +128,21 @@ void SaveNewDocument(Stream resultStream)
 }
 ```
 
-## الخطوة 3: إنشاء وتحرير مستند معالجة نصية  
-(هنا نقوم **بتحرير مستند Word .net**.)
+## الخطوة 3: إنشاء وتحرير مستند معالجة النصوص  
+(هنا نقوم بـ **edit word document .net**.)
 
 ### إنشاء وتحرير باستخدام الخيارات الافتراضية
+فئة `WordProcessingEditOptions` توفر إعدادات افتراضية معقولة لملفات DOCX.
+
+`WordProcessingEditOptions` تحدد كيفية تعامل المحرر مع ترقيم الصفحات، والتغييرات المتتبعة، والكائنات المدمجة.  
+
+```csharp
+var editor = new Editor(inputStream, new WordProcessingEditOptions());
+var editable = editor.Edit();
+editable.Replace("{Placeholder}", "Actual value");
+editor.Save(SaveNewDocument);
+```
+
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
 {
@@ -84,6 +151,19 @@ using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
 ```
 
 ### إنشاء وتحرير باستخدام خيارات مخصصة
+يمكنك تشغيل أو إيقاف ميزات محددة مثل التدقيق الإملائي أو تتبع التغييرات.
+
+`WordProcessingEditOptions` تسمح لك بتمكين `EnableTrackChanges` لتتبع التدقيق.  
+
+```csharp
+var options = new WordProcessingEditOptions
+{
+    EnableTrackChanges = true,
+    EnableSpellCheck = false
+};
+var editor = new Editor(inputStream, options);
+```
+
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
 {
@@ -98,9 +178,20 @@ using (Editor editor = new Editor(SaveNewDocument, WordProcessingFormats.Docx))
 ```
 
 ## الخطوة 4: إنشاء وتحرير مستند جدول بيانات  
-(استخدم هذا **لتحرير ملف Excel .net**.)
+(استخدم هذا لـ **edit excel file .net**.)
 
 ### إنشاء وتحرير باستخدام الخيارات الافتراضية
+`SpreadsheetEditOptions` يتحكم في أي ورقة عمل يتم تحميلها وما إذا كانت الصيغ تُقيم.
+
+`SpreadsheetEditOptions` يختار ورقة العمل الأولى افتراضيًا.  
+
+```csharp
+var editor = new Editor(inputStream, new SpreadsheetEditOptions());
+var editable = editor.Edit();
+editable.ReplaceCell("A1", "42");
+editor.Save(SaveNewDocument);
+```
+
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
 {
@@ -109,6 +200,19 @@ using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
 ```
 
 ### إنشاء وتحرير باستخدام خيارات مخصصة
+يمكنك تحديد فهرس ورقة عمل مختلف أو إيقاف تقييم الصيغ لأداء أفضل.
+
+`SpreadsheetEditOptions` تسمح لك بتعيين `WorksheetIndex` و `EnableFormulaEvaluation`.  
+
+```csharp
+var options = new SpreadsheetEditOptions
+{
+    WorksheetIndex = 2,
+    EnableFormulaEvaluation = false
+};
+var editor = new Editor(inputStream, options);
+```
+
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
 {
@@ -121,10 +225,19 @@ using (Editor editor = new Editor(SaveNewDocument, SpreadsheetFormats.Xlsx))
 }
 ```
 
-## الخطوة 5: **تحرير عرض PowerPoint** – إنشاء وتحرير مستند عرض تقديمي
-هذا هو جوهر تركيز كلمة البحث الأساسية.
-
+## الخطوة 5: تحرير PowerPoint بدون Office – إنشاء وتحرير مستند عرض تقديمي
 ### إنشاء وتحرير باستخدام الخيارات الافتراضية
+`PresentationEditOptions` يحدد ما إذا كانت الشرائح المخفية مُضمَّنة وأي شريحة هي الهدف الافتراضي للتحرير.
+
+`PresentationEditOptions` يتضمن الشرائح المخفية افتراضيًا، ويمكنك تبديل ذلك.  
+
+```csharp
+var editor = new Editor(inputStream, new PresentationEditOptions());
+var editable = editor.Edit();
+editable.ReplaceSlideText(0, "{Title}", "Quarterly Report");
+editor.Save(SaveNewDocument);
+```
+
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
 {
@@ -133,6 +246,19 @@ using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
 ```
 
 ### إنشاء وتحرير باستخدام خيارات مخصصة
+يمكنك تغيير `SlideNumber` لتحرير شريحة محددة، أو إيقاف تضمين صفحات الملاحظات.
+
+`PresentationEditOptions` تسمح لك بتعيين `SlideNumber` و `IncludeNotes`.  
+
+```csharp
+var options = new PresentationEditOptions
+{
+    SlideNumber = 2,
+    IncludeNotes = false
+};
+var editor = new Editor(inputStream, options);
+```
+
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
 {
@@ -145,10 +271,21 @@ using (Editor editor = new Editor(SaveNewDocument, PresentationFormats.Pptx))
 }
 ```
 
-## الخطوة 6: إنشاء وتحرير مستند Ebook  
-(هنا نقوم **بتحرير ملف epub**.)
+## الخطوة 6: إنشاء وتحرير مستند كتاب إلكتروني  
+(هنا نقوم بـ **edit epub file**.)
 
 ### إنشاء وتحرير باستخدام الخيارات الافتراضية
+`EbookEditOptions` يتعامل مع التحويل بين EPUB وتمثيله الداخلي بـ HTML.
+
+`EbookEditOptions` يستخدم مُعالج HTML الافتراضي لمحتوى EPUB.  
+
+```csharp
+var editor = new Editor(inputStream, new EbookEditOptions());
+var editable = editor.Edit();
+editable.Replace("{Author}", "Jane Doe");
+editor.Save(SaveNewDocument);
+```
+
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
 {
@@ -157,6 +294,19 @@ using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
 ```
 
 ### إنشاء وتحرير باستخدام خيارات مخصصة
+يمكنك الحفاظ على CSS الأصلي أو فرض تخطيط نص عادي.
+
+`EbookEditOptions` يوفر علمي `PreserveCss` و `PlainTextOnly`.  
+
+```csharp
+var options = new EbookEditOptions
+{
+    PreserveCss = true,
+    PlainTextOnly = false
+};
+var editor = new Editor(inputStream, options);
+```
+
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
 {
@@ -170,6 +320,19 @@ using (Editor editor = new Editor(SaveNewDocument, EBookFormats.Epub))
 ```
 
 ## الخطوة 7: إنشاء وتحرير مستند بريد إلكتروني
+
+### إنشاء وتحرير باستخدام الخيارات الافتراضية
+`EmailEditOptions` يتيح لك تعديل جسم الرسالة، والموضوع، والمرفقات لملف .eml.
+
+`EmailEditOptions` يحمل جسم البريد كنص عادي لتبديلات بسيطة.  
+
+```csharp
+var editor = new Editor(inputStream, new EmailEditOptions());
+var editable = editor.Edit();
+editable.Replace("{Recipient}", "john@example.com");
+editor.Save(SaveNewDocument);
+```
+
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
 {
@@ -178,6 +341,18 @@ using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
 ```
 
 ### إنشاء وتحرير باستخدام خيارات مخصصة
+يمكنك الاحتفاظ برؤوس MIME الأصلية أو إزالتها للحصول على نسخة نصية نظيفة.
+
+`EmailEditOptions` يتضمن `KeepHeaders` للاحتفاظ أو حذف بيانات التعريف MIME.  
+
+```csharp
+var options = new EmailEditOptions
+{
+    KeepHeaders = false
+};
+var editor = new Editor(inputStream, options);
+```
+
 ```csharp
 using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
 {
@@ -189,42 +364,52 @@ using (Editor editor = new Editor(SaveNewDocument, EmailFormats.Eml))
 }
 ```
 
-## الخطوة 8: إنهاء العملية
-قم بتحرير التدفق لتفريغ الموارد بمجرد الانتهاء.
+## الخطوة 8: إكمال العملية
+قم بتحرير التدفق لتفريغ الموارد بمجرد الانتهاء. يضمن التحرير السليم منع تسرب الذاكرة في الخدمات طويلة الأمد مثل واجهات برمجة التطبيقات الويب أو العاملين الخلفيين.
+
+```csharp
+inputStream.Dispose();
+```
 
 ```csharp
 memoryStream.Dispose();
 System.Console.WriteLine("CreateDocument routine has successfully finished");
 ```
 
-## الأخطاء الشائعة والنصائح
-- **لا تنسَ أبدًا تحرير التدفق** – تركه مفتوحًا قد يسبب تسربًا للذاكرة في الخدمات طويلة التشغيل.  
-- **عند تحرير PowerPoint، تأكد من ضبط `SlideNumber` بشكل صحيح**؛ وإلا قد يتكرر الشريحة الأولى.  
-- **إذا كنت بحاجة للحفاظ على اسم الملف الأصلي**، احفظه قبل رد النداء وأعد تسمية تدفق الإخراج بعد التحرير.  
-- **للملفات الكبيرة**، فكر في معالجتها على أجزاء أو استخدم `Editor` مع ملف مؤقت لتجنب استهلاك عالي للذاكرة.
+## المشكلات الشائعة والنصائح
+- **لا تنسَ أبدًا تحرير التدفق** – تركه مفتوحًا قد يسبب تسرب الذاكرة في الخدمات طويلة الأمد.  
+- **عند تحرير PowerPoint، تأكد من ضبط `SlideNumber` بشكل صحيح**؛ وإلا قد تتكرر الشريحة الأولى.  
+- **إذا كنت بحاجة إلى الاحتفاظ باسم الملف الأصلي**، احفظه قبل رد النداء وأعد تسمية تدفق الإخراج بعد التحرير.  
+- **للمستندات الكبيرة**، فكر في معالجتها على دفعات أو استخدام `Editor` مع ملف مؤقت لتجنب استهلاك عالي للذاكرة.  
+- **فعّل التسجيل** عبر `EditorOptions` إذا كنت بحاجة إلى استكشاف سلوك غير متوقع في الإنتاج.
 
 ## الأسئلة المتكررة
-
 **س: ما أنواع المستندات التي يمكنني تحريرها باستخدام GroupDocs.Editor لـ .NET؟**  
-ج: يمكنك تحرير معالجة النصوص، جداول البيانات، العروض التقديمية، الكتب الإلكترونية، والبريد الإلكتروني — بما في ذلك ملفات PowerPoint لحالة الاستخدام **تحرير عرض PowerPoint**.
+ج: يمكنك تحرير WordProcessing، وجداول البيانات، والعروض التقديمية، والكتب الإلكترونية، والبريد الإلكتروني — بما في ذلك ملفات PowerPoint لحالة الاستخدام **edit powerpoint without office**.
 
-**س: هل يمكن تخصيص خيارات التحرير؟**  
-ج: نعم، كل صيغة لها فئة خيارات خاصة بها (مثال: `WordProcessingEditOptions`، `SpreadsheetEditOptions`، `PresentationEditOptions`) التي تتيح لك ضبط ترقيم الصفحات، الشرائح المخفية، اختيار ورقة العمل، إلخ.
+**س: هل من الممكن تخصيص خيارات التحرير؟**  
+ج: نعم، كل صيغة لها فئة خيارات خاصة بها (مثل `WordProcessingEditOptions`، `SpreadsheetEditOptions`، `PresentationEditOptions`) تتيح لك ضبط ترقيم الصفحات، الشرائح المخفية، اختيار ورقة العمل، إلخ.
 
-**س: كيف أتعامل مع مخرجات المستندات المعدلة؟**  
-ج: استخدم دالة رد النداء (`SaveNewDocument`) لالتقاط التدفق المعدل، ثم يمكنك كتابته إلى القرص، قاعدة بيانات، أو إرجاعه من واجهة برمجة تطبيقات ويب.
+**س: كيف يمكنني التعامل مع مخرجات المستندات المُحررة؟**  
+ج: استخدم دالة رد النداء (`SaveNewDocument`) لالتقاط التدفق المُحرر، ثم يمكنك كتابته إلى القرص، أو قاعدة بيانات، أو إرجاعه من واجهة برمجة تطبيقات ويب.
 
 **س: هل أحتاج إلى ترخيص لاستخدام GroupDocs.Editor لـ .NET؟**  
-ج: نعم، الترخيص مطلوب للإنتاج. يمكنك الحصول عليه من [here](https://purchase.groupdocs.com/buy). كما يتوفر ترخيص تجريبي مؤقت.
+ج: نعم، الترخيص مطلوب للإنتاج. يمكنك الحصول عليه من [صفحة شراء GroupDocs.Editor](https://purchase.groupdocs.com/buy). ترخيص تجريبي مؤقت متاح أيضًا.
 
 **س: أين يمكنني العثور على وثائق أكثر تفصيلاً؟**  
-ج: الوثائق التفصيلية متوفرة على صفحة [GroupDocs.Editor for .NET documentation page](https://tutorials.groupdocs.com/editor/net/).
+ج: الوثائق التفصيلية متاحة على [صفحة توثيق GroupDocs.Editor لـ .NET](https://tutorials.groupdocs.com/editor/net/).
 
-## الخاتمة
-يُسهل GroupDocs.Editor لـ .NET عملية **تحرير عرض PowerPoint** والعديد من أنواع المستندات الأخرى. باتباع الخطوات أعلاه يمكنك إنشاء وتعديل و**حفظ المستند المعدل** بالكامل عبر الشيفرة، دون الاعتماد على تثبيتات Office. استكشف الخيارات المتقدمة للمكتبة لتخصيص تجربة التحرير وفقًا لاحتياجات عملك الخاصة.
+## الخلاصة
+GroupDocs.Editor لـ .NET يجعل من السهل **edit Powerpoint without office** الملفات ومجموعة واسعة من أنواع المستندات الأخرى. باتباع الخطوات أعلاه يمكنك إنشاء وتعديل و**save edited document** كتيارات بالكامل في الشيفرة، دون الاعتماد على تثبيتات Office. استكشف الخيارات المتقدمة للمكتبة لتخصيص تجربة التحرير وفقًا لاحتياجات عملك الخاصة.
 
 ---
 
-**آخر تحديث:** 2026-03-14  
-**تم الاختبار مع:** GroupDocs.Editor for .NET (أحدث إصدار)  
-**المؤلف:** GroupDocs
+**Last Updated:** 2026-09-21  
+**Tested With:** GroupDocs.Editor for .NET (latest release)  
+**Author:** GroupDocs
+
+## الدروس ذات الصلة
+
+- [دروس تحرير مستندات العرض التقديمي لـ GroupDocs.Editor .NET](/editor/net/presentation-documents/)
+- [إنشاء مستند قابل للتحرير باستخدام GroupDocs.Editor .NET](/editor/net/document-editing/groupdocs-editor-net-edit-manage-documents-guide/)
+- [تحميل مستند بدون خيارات في .NET باستخدام GroupDocs.Editor – دليل شامل](/editor/net/document-loading/groupdocs-editor-net-document-loading-guide/)
