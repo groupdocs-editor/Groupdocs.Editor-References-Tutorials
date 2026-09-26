@@ -1,31 +1,35 @@
 ---
-date: '2026-07-26'
-description: GroupDocs.Editor kullanarak java ile excel raporu oluşturmayı ve word
-  belgelerini düzenlemeyi öğrenin. Excel raporları oluşturun, Word şablonlarını özelleştirin,
-  gömülü fontları çıkarın ve performansı artırın.
+date: '2026-09-26'
+description: GroupDocs.Editor ile Java'da Excel nasıl oluşturulacağını öğrenin, Word
+  şablonlarını düzenleyin, gömülü yazı tiplerini çıkarın ve büyük belgeler için performansı
+  optimize edin.
+images:
+- /java/document-editing/java-groupdocs-editor-master-document-editing/og-image.png
 keywords:
+- how to generate excel
+- how to disable pagination
+- edit word document java
 - generate excel report java
 - customize word template java
 - extract embedded fonts word
-lastmod: '2026-07-26'
-og_description: GroupDocs.Editor kullanarak java ile excel raporu oluşturun. Word
-  şablonlarını düzenlemeyi, gömülü fontları çıkarmayı ve Java uygulamalarında performansı
-  optimize etmeyi öğrenin.
-og_image_alt: Guide to generating Excel reports and editing Word documents in Java
-  with GroupDocs.Editor
-og_title: GroupDocs.Editor ile Java'da Excel Raporu Oluşturun – Word ve Excel'i Düzenleyin
+lastmod: '2026-09-26'
+og_description: GroupDocs.Editor ile Java'da Excel nasıl oluşturulur. Bu kılavuz,
+  Excel şablonlarını doldurmayı, Word sözleşmelerini özelleştirmeyi, yazı tiplerini
+  çıkarmayı ve Java uygulamalarında büyük dosyalar için performansı optimize etmeyi
+  gösterir.
+og_image_alt: 'Guide: how to generate excel in Java using GroupDocs.Editor and edit
+  Word documents'
+og_title: GroupDocs.Editor ile Java'da Excel nasıl oluşturulur
 schemas:
 - author: GroupDocs
-  dateModified: '2026-07-26'
-  description: Learn how to generate excel report java and edit word documents using
-    GroupDocs.Editor. Create Excel reports, customize Word templates, extract embedded
-    fonts, and boost performance.
-  headline: Generate Excel Report Java and Edit Word Files in Java with GroupDocs.Editor
+  dateModified: '2026-09-26'
+  description: Learn how to generate excel in Java with GroupDocs.Editor, edit Word
+    templates, extract embedded fonts, and boost performance.
+  headline: How to generate excel in Java and edit Word files with GroupDocs.Editor
   type: TechArticle
-- description: Learn how to generate excel report java and edit word documents using
-    GroupDocs.Editor. Create Excel reports, customize Word templates, extract embedded
-    fonts, and boost performance.
-  name: Generate Excel Report Java and Edit Word Files in Java with GroupDocs.Editor
+- description: Learn how to generate excel in Java with GroupDocs.Editor, edit Word
+    templates, extract embedded fonts, and boost performance.
+  name: How to generate excel in Java and edit Word files with GroupDocs.Editor
   steps:
   - name: '**Dispose objects promptly** – call `dispose()` on `EditableDocument` and
       `Editor` as soon as you’re done.'
@@ -62,46 +66,45 @@ schemas:
     question: Do I need a license for production use?
   type: FAQPage
 tags:
-- generate excel report
+- how to generate excel
 - GroupDocs.Editor
 - Java document editing
 - Word template automation
 - Excel report automation
-title: Java ile Excel Raporu Oluşturun ve Java'da Word Dosyalarını GroupDocs.Editor
-  ile Düzenleyin
+title: GroupDocs.Editor ile Java'da Excel nasıl oluşturulur
 type: docs
 url: /tr/java/document-editing/java-groupdocs-editor-master-document-editing/
 weight: 1
 ---
 
-# Java'da Excel Raporu Oluşturma ve Word Dosyalarını Düzenleme - GroupDocs.Editor ile
+# Java'da GroupDocs.Editor ile Excel oluşturma
+
+Bu kapsamlı rehberde **Java'da excel oluşturma** ve GroupDocs.Editor kullanarak Word belgelerini programlı olarak düzenlemeyi öğreneceksiniz. İster bir Excel şablonunu doldurmanız, bir Word sözleşmesini özelleştirmeniz ya da mükemmel render için gömülü yazı tiplerini çıkarmanız gerekse, her adımı birlikte inceleyecek, her ayarın neden önemli olduğunu açıklayacak ve büyük dosyalar için performans dostu desenleri göstereceğiz.
 
 ## Giriş
-Modern Java uygulamalarının temel taşlarından biri belge oluşturma ve değiştirme otomasyonudur. Anlık olarak Excel raporları üretmek, kullanıcıya özel Word şablonları özelleştirmek ve görsel bütünlüğü korumak için gömülü yazı tiplerini çıkarmak, manuel işi ortadan kaldırır, hataları azaltır ve değer üretme süresini hızlandırır. GroupDocs.Editor for Java, **50+** giriş ve çıkış formatını destekleyen tek bir yüksek performanslı API sunar ve tüm dosyayı belleğe yüklemeden çok sayfalı çalışma kitaplarını işleyebilir. Bu öğreticide bu yetenekleri nasıl açığa çıkaracağınızı adım adım göstereceğiz.
+Belge oluşturma ve düzenlemeyi otomatikleştirmek, modern Java uygulamalarının temel taşlarından biridir. Anlık Excel raporları oluşturarak, kullanıcı başına Word şablonlarını özelleştirerek ve görsel bütünlüğü korumak için yazı tiplerini çıkararak manuel işleri ortadan kaldırabilir, hataları azaltabilir ve değer üretme süresini hızlandırabilirsiniz. GroupDocs.Editor for Java, **50+** giriş ve çıkış formatını destekleyen tek bir yüksek performanslı API sunar ve tüm dosyayı belleğe yüklemeden çok sayfalı çalışma kitaplarını işleyebilir. Bu öğretici, bu yetenekleri nasıl açığa çıkaracağınızı tam olarak gösterir.
 
-## Hızlı Yanıtlar
-- **Java'da excel raporu oluşturmayı sağlayan kütüphane nedir?** GroupDocs.Editor for Java.  
+## Hızlı cevaplar
+- **Java'da excel oluşturmayı sağlayan kütüphane nedir?** GroupDocs.Editor for Java.  
 - **Bir Excel çalışma sayfasını tüm çalışma kitabını yüklemeden düzenleyebilir miyim?** Evet—`SpreadsheetEditOptions.setWorksheetIndex()` kullanın.  
 - **Bir Word belgesinden tüm gömülü yazı tiplerini nasıl çıkarırım?** `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)` ayarlayın.  
-- **Büyük dosyalarla çalışırken Java performans optimizasyonu için en iyi uygulama nedir?** `EditableDocument` ve `Editor` nesnelerini hızlıca serbest bırakın, yükleme seçeneklerini yeniden kullanın ve Word dosyaları için sayfalama özelliğini devre dışı bırakın.  
+- **Büyük dosyalarla çalışırken Java performans optimizasyonu için en iyi uygulama nedir?** `EditableDocument` ve `Editor` nesnelerini hızlıca dispose edin, yükleme seçeneklerini yeniden kullanın ve Word dosyaları için sayfalama özelliğini devre dışı bırakın.  
 - **Üretim kullanımında lisans gerekli mi?** Tam bir GroupDocs.Editor lisansı tüm özelliklerin kilidini açar ve değerlendirme sınırlamalarını kaldırır.
 
 ## generate excel report java nedir?
-**Generate excel report java**, bir Java uygulamasından programlı olarak Excel çalışma kitapları oluşturma veya güncelleme sürecini ifade eder. GroupDocs.Editor ile bir şablonu yükleyebilir, yer tutucuları değiştirebilir ve sonucu kaydedebilirsiniz—Microsoft Office yüklü olmasına gerek yoktur. .xlsx ve .xls formatlarını destekler, formülleri, stil ve veri doğrulamasını korur ve bellek kullanımını azaltmak için belirli çalışma sayfalarına odaklanmanıza olanak tanır.
+**Generate excel report java**, bir Java uygulamasından programlı olarak Excel çalışma kitapları oluşturma veya güncelleme sürecidir. GroupDocs.Editor ile bir şablonu yükleyebilir, yer tutucuları değiştirebilir ve sonucu kaydedebilirsiniz—Microsoft Office yüklü olmadan. .xlsx ve .xls formatlarını destekler, formülleri, stillemeyi ve veri doğrulamayı korur ve bellek kullanımını azaltmak için belirli çalışma sayfalarını hedefleyebilir.
 
-## Neden Java'da Excel ve Word dosyalarını düzenleyelim?
-Java üzerinden doğrudan belge düzenlemek, uçtan uca iş akışları oluşturmanızı sağlar: faturalar üretmek, sözleşmeleri güncellemek veya dinamik panolar oluşturmak gibi işlemleri manuel müdahale olmadan gerçekleştirebilirsiniz. GroupDocs.Editor **generate excel report java** yapabilir, yazı tiplerini çıkarabilir ve **disable pagination word** özelliğiyle bellek kullanımını düşük tutarak standart sunucu donanımında dakikada binlerce isteği karşılayabilir.
+## Java'da Excel ve Word dosyalarını neden düzenleyelim?
+Belgeleri doğrudan Java'dan düzenlemek, uçtan uca iş akışları oluşturmanıza olanak tanır: faturalar oluşturmak, sözleşmeleri güncellemek veya dinamik panolar yaratmak manuel müdahale olmadan. GroupDocs.Editor **generate excel report java** yapabilir, yazı tiplerini çıkarabilir ve **disable pagination word** ile bellek kullanımını düşük tutabilir, böylece standart sunucu donanımında dakikada binlerce isteği karşılayabilirsiniz.
 
 ## Önkoşullar
-Başlamadan önce şunların kurulu olduğundan emin olun:
-
 - **GroupDocs.Editor for Java** (sürüm 25.3 ve üzeri).  
 - **Java Development Kit (JDK)** 8 ve üzeri.  
 - IntelliJ IDEA veya Eclipse gibi bir IDE.  
 - Java sözdizimi ve Maven/Gradle yapı araçları hakkında temel bilgi.
 
 ## GroupDocs.Editor for Java Kurulumu
-Projenize GroupDocs.Editor entegrasyonu için aşağıdaki adımları izleyin:
+Projenize GroupDocs.Editor'ı entegre etmek için aşağıdaki adımları izleyin:
 
 **Maven**  
 `pom.xml` dosyanıza aşağıdakileri ekleyin:
@@ -123,21 +126,25 @@ Projenize GroupDocs.Editor entegrasyonu için aşağıdaki adımları izleyin:
 </dependencies>
 ```  
 
-**Doğrudan İndirme**  
-Alternatif olarak kütüphaneyi [GroupDocs.Editor for Java sürümleri](https://releases.groupdocs.com/editor/java/) adresinden indirin.
+**Doğrudan indirme**  
+Alternatif olarak, kütüphaneyi [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) adresinden indirin.
 
-### Lisans Edinme
-- **Ücretsiz Deneme** – taahhüt olmadan özellikleri keşfetmeye başlayın.  
-- **Geçici Lisans** – gerekirse değerlendirme süresini uzatın.  
-- **Tam Lisans** – üretim kullanımı için tüm yeteneklerin kilidini açmak ve destek almak amacıyla önerilir.
+### Lisans edinimi
+- **Ücretsiz deneme** – taahhüt olmadan özellikleri keşfetmeye başlayın.  
+- **Geçici lisans** – gerekirse değerlendirme süresini uzatın.  
+- **Tam lisans** – üretim kullanımı için tüm yeteneklerin kilidini açmak ve destek almak amacıyla önerilir.
 
 ## Java'da bir Word belgesini nasıl düzenlerim?
-DOCX dosyanızı yükleyin, özel seçenekleri uygulayın ve birkaç satır kodla değişiklikleri kaydedin. `EditableDocument` sınıfı bellek içi Word modelini temsil ederken, `Editor` sınıfı yükleme ve kaydetme işlemlerini yönetir. Metin, resim, tablo ve stilleri değiştirebilir, ardından belgeyi DOCX, PDF veya HTML formatlarında dışa aktarabilirsiniz.
+DOCX dosyanızı yükleyin, özel seçenekleri uygulayın ve değişiklikleri kaydedin—bunun hepsi birkaç satır kodla. `EditableDocument` sınıfı bellek içindeki Word modelini temsil ederken, `Editor` sınıfı yükleme ve kaydetmeyi yönetir. Metin, resim, tablo ve stilleri değiştirebilir ve ardından belgeyi DOCX, PDF veya HTML formatlarına dışa aktarabilirsiniz.
 
-### Varsayılan Seçeneklerle Word İşleme Belgesini Yükle ve Düzenle
-`WordProcessingLoadOptions`, bir Word belgesinin nasıl yükleneceğini belirler; biçimlendirme ve meta verilerin korunması gibi ayarları içerir.
+**Doğrudan cevap:** Bir `Editor` örneği oluşturun, DOCX'i `WordProcessingLoadOptions` ile yükleyin, dönen `EditableDocument`'i (ör. yer tutucuları değiştirin) düzenleyin ve ardından istediğiniz çıktı formatıyla `save()` metodunu çağırın. Bu üç adımlı akış, hem basit hem karmaşık Word düzenlemelerini düşük bellek kullanımıyla yönetir.
 
-**Doğrudan yanıt:** `Editor` örneği oluşturup `WordProcessingLoadOptions` ile `load()` çağırın, dönen `EditableDocument` üzerinde düzenleme yapın ve değişiklikleri kalıcı hâle getirmek için `save()` metodunu çalıştırın. Bu yaklaşım sadece üç metod çağrısı gerektirir ve çoğu basit senaryo için yeterlidir.
+`EditableDocument` sınıfı, okuyup yazabileceğiniz bir Word dosyasının bellek içi temsilidir. `Editor` sınıfı belgelerin yüklenmesi, düzenlenmesi ve kaydedilmesi yaşam döngüsünü yönetir.
+
+### Varsayılan seçeneklerle Word işleme belgesini yükle ve düzenle
+`WordProcessingLoadOptions`, bir Word belgesinin nasıl yükleneceğini belirler; örneğin biçimlendirme ve meta verileri korur.
+
+**Doğrudan cevap:** `new Editor()` kullanın ve `load("template.docx", new WordProcessingLoadOptions())` çağrısıyla bir `EditableDocument` elde edin, içeriğini değiştirin ve sonunda `save("output.docx", SaveFormat.Docx)` metodunu çağırın. Bu varsayılan seçenek yaklaşımı, çoğu basit düzenleme senaryosu için çalışır.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -153,10 +160,12 @@ defaultWordProcessingDoc.dispose();
 editor1.dispose();
 ```  
 
-### Özel Seçeneklerle Word İşleme Belgesini Düzenle
-`WordProcessingEditOptions`, sayfalama ve yazı tipi çıkarma gibi düzenleme davranışlarını özelleştirmenize olanak tanır.
+### Özel seçeneklerle Word işleme belgesini düzenle
+`WordProcessingEditOptions`, sayfalama ve yazı tipi çıkarma gibi düzenleme davranışını özelleştirmenizi sağlar.
 
-**Doğrudan yanıt:** Performansı artırmak ve yazı tiplerini çıkarmak için `WordProcessingEditOptions` yapılandırın—sayfalama özelliğini devre dışı bırakın, dil meta verilerini etkinleştirin ve yazı tipi çıkarmayı `ExtractAllEmbedded` olarak ayarlayın. Ardından aynı şekilde yükleyin, düzenleyin ve kaydedin; özel seçenekler otomatik olarak uygulanır.
+**Doğrudan cevap:** `WordProcessingEditOptions` nesnesini başlatın, sayfalama kapatmak için `setEnablePagination(false)` ayarlayın, dil meta verisini etkinleştirmek için `setEnableLanguageInfo(true)` kullanın ve tüm gömülü yazı tiplerini çekmek için `FontExtractionOptions.ExtractAllEmbedded` seçin. Bu seçenek nesnesini kaydetmeden önce `Editor.edit()` metoduna geçirin.
+
+`WordProcessingEditOptions` sınıfı, örneğin büyük belge işleme hızını artırmak için sayfalama devre dışı bırakma veya doğru render için yazı tiplerini çıkarma gibi düzenleme sürecini ince ayar yapmanıza olanak tanır.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -179,8 +188,10 @@ editableDoc.dispose();
 editor1.dispose();
 ```  
 
-### Başka Bir Yapılandırmayla Word İşleme Belgesini Düzenle
-**Doğrudan yanıt:** `WordProcessingEditOptions` yapıcı kısayolunu kullanarak tek bir satırda dil bilgisi ve yazı tipi çıkarma ayarlarını etkinleştirebilir, kodunuzu basitleştirirken tam kontrolü elinizde tutabilirsiniz.
+### Başka bir yapılandırma ile Word işleme belgesini düzenle
+**Doğrudan cevap:** `WordProcessingEditOptions`'ı tek satırda oluşturabilirsiniz—`new WordProcessingEditOptions(true, FontExtractionOptions.ExtractAllEmbedded)`—dil bilgisini etkinleştirmek ve tüm yazı tiplerini çıkarmak için, ardından normal yükle‑düzenle‑kaydet akışına devam edin.
+
+`WordProcessingEditOptions` kısayol yapıcı, sayfalama, dil ve yazı tipi çıkarma üzerinde tam kontrol sağlarken tekrarı azaltır.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -200,13 +211,17 @@ editableDoc.dispose();
 editor1.dispose();
 ```  
 
-## Java'da Excel raporu nasıl oluşturulur?
-GroupDocs.Editor, belirli bir çalışma sayfasını hedeflemenize, yer tutucuları değiştirmenize ve sonucu kaydetmenize olanak tanır; bu da **generate excel report java** senaryoları için idealdir; büyük bir çalışma kitabının sadece bir sekmesini değiştirmek yeterli olur. Formüller, grafikler ve hücre biçimlendirmesi korunur; hem .xlsx hem .xls dosyalarını destekler, mevcut raporlama hatlarıyla sorunsuz entegrasyon sağlar.
+## Java'da bir Excel raporu nasıl oluşturulur?
+GroupDocs.Editor, belirli bir çalışma sayfasını hedeflemenize, yer tutucuları değiştirmenize ve sonucu kaydetmenize olanak tanır; bu, büyük bir çalışma kitabının yalnızca bir sekmesini değiştirmeniz gereken **how to generate excel** senaryoları için idealdir. Ayrıca formülleri, grafikleri ve hücre biçimlendirmesini korur ve .xlsx ve .xls dosyalarını destekleyerek mevcut raporlama hatlarıyla sorunsuz entegrasyon sağlar.
 
-### Elektronik Tablo Belgesini Yükle ve Düzenle (İlk Sekme)
-`SpreadsheetEditOptions`, Excel düzenleme ayarlarını kontrol eder; hangi çalışma sayfasının yükleneceği gibi.
+**Doğrudan cevap:** İstenen sayfaya odaklanmak için `SpreadsheetEditOptions.setWorksheetIndex(0)` (veya herhangi bir sıfır‑tabanlı indeks) ayarlayın, çalışma kitabını `new Editor().load("report.xlsx", new SpreadsheetLoadOptions())` ile yükleyin, `EditableDocument` API'siyle yer tutucuları değiştirin ve sonunda `save("report‑filled.xlsx", SaveFormat.Xlsx)` çağırın. Bu, hedef sayfayı izole eder ve bellek tüketimini %60’a kadar azaltır.
 
-**Doğrudan yanıt:** İlk çalışma sayfasını düzenlemek için `SpreadsheetEditOptions.setWorksheetIndex(0)` ayarlayın, ardından yükleyin, hücreleri değiştirin ve kaydedin. Bu, diğer sekmeleri yüklemeyi önleyerek tipik çok sayfalı raporların bellek tüketimini %60’a kadar azaltır.
+`SpreadsheetEditOptions` sınıfı, hangi çalışma sayfasının yükleneceğini ve düzenleneceğini kontrol eder; böylece çalışma kitabının geri kalanını dokunmadan tek bir sekme üzerinde çalışabilirsiniz.
+
+### Elektronik tablo belgesini yükle ve düzenle (ilk sekme)
+`SpreadsheetEditOptions`, hangi çalışma sayfasının yükleneceği gibi Excel düzenleme ayarlarını kontrol eder.
+
+**Doğrudan cevap:** İlk çalışma sayfasını düzenlemek için `options.setWorksheetIndex(0)` çağırın, ardından yükleyin, hücreleri değiştirin ve kaydedin. Bu yaklaşım diğer sekmeleri yüklemeyi önler ve büyük çalışma kitapları için işleme hızını artırır.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -227,8 +242,8 @@ editableDoc.dispose();
 editor2.dispose();
 ```  
 
-### Elektronik Tablo Belgesini Yükle ve Düzenle (İkinci Sekme)
-**Doğrudan yanıt:** Çalışma sayfası indeksini `1` olarak değiştirin ve ikinci sekmeyi düzenleyin. Aynı düzen‑kaydet akışı geçerlidir; kodu farklı rapor bölümleri için yeniden kullanabilirsiniz.
+### Elektronik tablo belgesini yükle ve düzenle (ikinci sekme)
+**Doğrudan cevap:** Çalışma sayfası indeksini `1` olarak değiştirerek ikinci sekmeyi düzenleyin. Aynı düzenle‑kaydet akışı geçerlidir ve raporun farklı bölümleri için aynı kodu yeniden kullanmanıza olanak tanır.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -249,53 +264,53 @@ editableDoc.dispose();
 editor2.dispose();
 ```  
 
-## Pratik Uygulamalar
-- **Otomatik Rapor Oluşturma** – veritabanlarından gelen verilerle Excel şablonlarını doldurarak aylık performans panoları için **generate excel report java** oluşturun.  
-- **Şablon Özelleştirme** – kullanıcı girdisine göre Word sözleşmelerini veya faturaları anında değiştirerek **customize word template java** yeteneklerini elde edin.  
-- **Veri Konsolidasyonu** – tüm çalışma kitabını yüklemeden birden çok elektronik tablo verisini birleştirerek **performance optimization Java** iyileştirin.  
-- **CRM Entegrasyonu** – CRM sisteminde depolanan müşteri belgelerini otomatik olarak güncelleyerek verilerin platformlar arasında tutarlı kalmasını sağlayın.
+## Pratik uygulamalar
+- **Otomatik rapor oluşturma** – veritabanlarından gelen verilerle Excel şablonlarını doldurarak aylık performans panoları için **generate excel report java** oluşturun.  
+- **Şablon özelleştirme** – kullanıcı girdisine göre Word sözleşmelerini veya faturaları anında değiştirerek **customize word template java** yeteneklerini elde edin.  
+- **Veri birleştirme** – tüm çalışma kitabını yüklemeden birden fazla elektronik tabloyu birleştirerek **performance optimisation Java** iyileştirmesi yapın.  
+- **CRM entegrasyonu** – bir CRM sisteminde saklanan müşteri belgelerini otomatik olarak güncelleyerek verilerin platformlar arasında tutarlı kalmasını sağlayın.
 
-## Performans Hususları
-Java uygulamanızın büyük belgelerle çalışırken yanıt verebilir kalmasını sağlamak için:
+## Performans dikkate alımları
+Büyük belgelerle çalışırken Java uygulamanızın yanıt verebilir kalmasını sağlamak için:
 
-1. **Nesneleri hızlıca serbest bırakın** – işiniz bittiğinde `EditableDocument` ve `Editor` üzerinde `dispose()` çağırın.  
-2. **Yükleme seçeneklerini yeniden kullanın** – tek bir `WordProcessingLoadOptions` veya `SpreadsheetLoadOptions` oluşturup birden çok editöre geçirin.  
-3. **Belirli çalışma sayfalarını hedefleyin** – yalnızca gerekli sekmeyi düzenlemek bellek kullanımını azaltır (yukarıdaki **how to edit excel** örneklerine bakın).  
-4. **Gereksiz sayfalama yapmayın** – sayfalama özelliğini devre dışı bırakmak (`setEnablePagination(false)`) büyük Word dosyalarının işlenmesini hızlandırır (**disable pagination word**).  
+1. **Nesneleri hızlıca dispose edin** – işiniz bittiğinde `EditableDocument` ve `Editor` üzerinde `dispose()` çağırın.  
+2. **Yükleme seçeneklerini yeniden kullanın** – tek bir `WordProcessingLoadOptions` veya `SpreadsheetLoadOptions` nesnesi oluşturup birden fazla editöre geçirin.  
+3. **Belirli çalışma sayfalarını hedefleyin** – sadece ihtiyaç duyulan sekmeyi düzenlemek bellek ayak izini azaltır (yukarıdaki **how to edit excel** örneklerine bakın).  
+4. **Gereksiz sayfalama yapmayın** – sayfalama devre dışı bırakma (`setEnablePagination(false)`) büyük Word dosyaları için işleme hızını artırır (**disable pagination word**).
 
-Ölçülen iddia: Bu teknikleri kullanarak GroupDocs.Editor, tipik bir 8 çekirdekli sunucuda 300 sayfalık bir Word belgesini 4 saniyenin altında ve 200 sayfalık bir Excel çalışma kitabını 6 saniyenin altında işler.
+**Nicel iddia:** Bu teknikleri kullanarak, GroupDocs.Editor tipik bir 8 çekirdekli sunucuda 300 sayfalık bir Word belgesini 4 saniyenin altında ve 200 sayfalık bir Excel çalışma kitabını 6 saniyenin altında işler.
 
-## Yaygın Sorunlar ve Çözümler
+## Yaygın sorunlar ve çözümler
 | Sorun | Çözüm |
 |-------|----------|
-| **Büyük dosyalarda OutOfMemoryError** | **disable pagination word** özelliğini devre dışı bıraktığınızdan ve yalnızca gerekli çalışma sayfalarını düzenlediğinizden emin olun. |
+| **Büyük dosyalarda OutOfMemoryError** | **disable pagination word** özelliğini etkinleştirdiğinizden ve yalnızca gerekli çalışma sayfalarını düzenlediğinizden emin olun. |
 | **Düzenlemeden sonra yazı tipleri görünmüyor** | Tüm gömülü yazı tiplerini çekmek için `FontExtractionOptions.ExtractAllEmbedded` kullanın. |
-| **Lisans istisnası** | Geçerli bir GroupDocs.Editor lisans dosyasının uygulamanın sınıf yoluna yerleştirildiğini doğrulayın. |
+| **Lisans istisnası** | Geçerli bir GroupDocs.Editor lisans dosyasının uygulamanın classpath'ine yerleştirildiğini doğrulayın. |
 | **Yanlış çalışma sayfası düzenlendi** | `setWorksheetIndex()`'e verilen indeksi iki kez kontrol edin; indeksler 0'dan başlar. |
 
-## Sıkça Sorulan Sorular
+## Sıkça sorulan sorular
 
-**Q: GroupDocs.Editor tüm Word formatlarıyla uyumlu mu?**  
-A: Evet, DOCX, DOCM, DOC, RTF, HTML ve 30'dan fazla diğer formatı destekler.
+**S: GroupDocs.Editor tüm Word formatlarıyla uyumlu mu?**  
+C: Evet, DOCX, DOCM, DOC, RTF, HTML ve 30'dan fazla diğer formatı destekler.
 
-**Q: Tüm çalışma kitabını belleğe yüklemeden bir Excel dosyasını düzenleyebilir miyim?**  
-A: Kesinlikle. `SpreadsheetEditOptions.setWorksheetIndex()` ayarlayarak yalnızca seçili sekmeyi düzenlersiniz; bu **how to edit excel** görevleri için idealdir.
+**S: Bir Excel dosyasını tüm çalışma kitabını belleğe yüklemeden düzenleyebilir miyim?**  
+C: Kesinlikle. `SpreadsheetEditOptions.setWorksheetIndex()` ayarlayarak yalnızca seçili sekmeyi düzenlersiniz; bu, **how to edit excel** görevleri için idealdir.
 
-**Q: Bir Word belgesinden tüm gömülü yazı tiplerini nasıl çıkarırım?**  
-A: Özel seçenek örneğinde gösterildiği gibi `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)` kullanın.
+**S: Bir Word belgesinden tüm gömülü yazı tiplerini nasıl çıkarırım?**  
+C: Özel seçenek örneğinde gösterildiği gibi `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)` kullanın.
 
-**Q: Büyük belgelerle çalışırken Java performans optimizasyonu için en iyi uygulamalar nelerdir?**  
-A: `EditableDocument` ve `Editor` nesnelerini hızlıca serbest bırakın, belirli çalışma sayfalarını hedefleyin, yükleme seçeneklerini yeniden kullanın ve gerekmediğinde **disable pagination word** özelliğini devre dışı bırakın.
+**S: Büyük belgelerle çalışırken Java performans optimizasyonu için en iyi uygulamalar nelerdir?**  
+C: `EditableDocument` ve `Editor` nesnelerini hızlıca dispose edin, belirli çalışma sayfalarını hedefleyin, yükleme seçeneklerini yeniden kullanın ve gerekmediğinde **disable pagination word** özelliğini devre dışı bırakın.
 
-**Q: Üretim kullanımı için lisansa ihtiyacım var mı?**  
-A: Evet, tam bir GroupDocs.Editor lisansı tüm özelliklerin kilidini açar, değerlendirme sınırlamalarını kaldırır ve resmi destek sağlar.
+**S: Üretim kullanımı için lisansa ihtiyacım var mı?**  
+C: Evet, tam bir GroupDocs.Editor lisansı tüm özelliklerin kilidini açar, değerlendirme sınırlamalarını kaldırır ve resmi destek sağlar.
 
-**Son Güncelleme:** 2026-07-26  
-**Test Edilen Versiyon:** GroupDocs.Editor 25.3 for Java  
-**Yazar:** GroupDocs
+**Son güncelleme:** 2026-09-26  
+**Test edilen sürüm:** GroupDocs.Editor 25.3 for Java  
+**Yazar:** GroupDocs  
 
-## İlgili Eğitimler
+## İlgili öğreticiler
 
-- [Java ile Düzenlenebilir Çalışma Sayfası Oluşturma – Excel Sekme Düzenleme Uzmanı](/editor/java/spreadsheet-documents/master-excel-tab-editing-java-groupdocs-editor/)
-- [Java'da Word Belgesi Düzenleme: Yükle, Düzenle ve CSS Çıkar](/editor/java/word-processing-documents/groupdocs-editor-java-word-doc-edit-extract-css/)
-- [Java'da Word Belgesi Düzenleme – Gelişmiş GroupDocs.Editor Özellikleri](/editor/java/advanced-features/)
+- [GroupDocs.Editor ile Java'da düzenlenebilir çalışma sayfası oluşturma – ana Excel sekme düzenleme](/editor/java/spreadsheet-documents/master-excel-tab-editing-java-groupdocs-editor/)
+- [GroupDocs.Editor ile Java'da Word belgesi düzenleme: yükleme, düzenleme ve CSS çıkarma](/editor/java/word-processing-documents/groupdocs-editor-java-word-doc-edit-extract-css/)
+- [Java'da Word belgesi düzenleme – gelişmiş GroupDocs.Editor özellikleri](/editor/java/advanced-features/)

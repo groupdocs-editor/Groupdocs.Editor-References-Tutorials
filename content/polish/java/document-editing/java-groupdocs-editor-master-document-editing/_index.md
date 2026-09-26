@@ -1,31 +1,34 @@
 ---
-date: '2026-07-26'
-description: Dowiedz się, jak generować raporty Excel w Javie i edytować dokumenty
-  Word przy użyciu GroupDocs.Editor. Twórz raporty Excel, dostosowuj szablony Word,
-  wyodrębniaj osadzone czcionki i zwiększaj wydajność.
+date: '2026-09-26'
+description: Dowiedz się, jak generować Excel w Javie przy użyciu GroupDocs.Editor,
+  edytować szablony Word, wyodrębniać wbudowane czcionki i optymalizować wydajność
+  przy dużych dokumentach.
+images:
+- /java/document-editing/java-groupdocs-editor-master-document-editing/og-image.png
 keywords:
+- how to generate excel
+- how to disable pagination
+- edit word document java
 - generate excel report java
 - customize word template java
 - extract embedded fonts word
-lastmod: '2026-07-26'
-og_description: Generuj raporty Excel w Javie przy użyciu GroupDocs.Editor. Dowiedz
-  się, jak edytować szablony Word, wyodrębniać osadzone czcionki i optymalizować wydajność
-  w aplikacjach Java.
-og_image_alt: Guide to generating Excel reports and editing Word documents in Java
-  with GroupDocs.Editor
-og_title: Generowanie raportu Excel w Javie z GroupDocs.Editor – Edycja Word i Excel
+lastmod: '2026-09-26'
+og_description: Jak generować Excel w Javie przy użyciu GroupDocs.Editor. Ten przewodnik
+  pokazuje, jak wypełniać szablony Excel, dostosowywać kontrakty Word, wyodrębniać
+  czcionki i optymalizować wydajność przy dużych plikach w aplikacjach Java.
+og_image_alt: 'Guide: how to generate excel in Java using GroupDocs.Editor and edit
+  Word documents'
+og_title: Jak generować Excel w Javie przy użyciu GroupDocs.Editor
 schemas:
 - author: GroupDocs
-  dateModified: '2026-07-26'
-  description: Learn how to generate excel report java and edit word documents using
-    GroupDocs.Editor. Create Excel reports, customize Word templates, extract embedded
-    fonts, and boost performance.
-  headline: Generate Excel Report Java and Edit Word Files in Java with GroupDocs.Editor
+  dateModified: '2026-09-26'
+  description: Learn how to generate excel in Java with GroupDocs.Editor, edit Word
+    templates, extract embedded fonts, and boost performance.
+  headline: How to generate excel in Java and edit Word files with GroupDocs.Editor
   type: TechArticle
-- description: Learn how to generate excel report java and edit word documents using
-    GroupDocs.Editor. Create Excel reports, customize Word templates, extract embedded
-    fonts, and boost performance.
-  name: Generate Excel Report Java and Edit Word Files in Java with GroupDocs.Editor
+- description: Learn how to generate excel in Java with GroupDocs.Editor, edit Word
+    templates, extract embedded fonts, and boost performance.
+  name: How to generate excel in Java and edit Word files with GroupDocs.Editor
   steps:
   - name: '**Dispose objects promptly** – call `dispose()` on `EditableDocument` and
       `Editor` as soon as you’re done.'
@@ -62,34 +65,37 @@ schemas:
     question: Do I need a license for production use?
   type: FAQPage
 tags:
-- generate excel report
+- how to generate excel
 - GroupDocs.Editor
 - Java document editing
 - Word template automation
 - Excel report automation
-title: Generowanie raportu Excel w Javie i edycja plików Word w Javie z GroupDocs.Editor
+title: Jak generować Excel w Javie przy użyciu GroupDocs.Editor
 type: docs
 url: /pl/java/document-editing/java-groupdocs-editor-master-document-editing/
 weight: 1
 ---
 
-# Generowanie raportu Excel w Javie i edycja plików Word w Javie przy użyciu GroupDocs.Editor
+# Jak generować Excel w Javie z GroupDocs.Editor
+
+W tym obszernej przewodniku dowiesz się **jak generować Excel w Javie** i edytować dokumenty Word programowo przy użyciu GroupDocs.Editor. Niezależnie od tego, czy musisz wypełnić szablon Excel, dostosować kontrakt Word, czy wyodrębnić osadzone czcionki dla idealnego renderowania, przeprowadzimy Cię przez każdy krok, wyjaśnimy, dlaczego każde ustawienie ma znaczenie, i pokażemy przyjazne wydajnościowo wzorce dla dużych plików.
 
 ## Wprowadzenie
-W tym kompleksowym przewodniku dowiesz się **jak generować raport Excel w Javie** i programowo edytować dokumenty Word przy użyciu GroupDocs.Editor. Niezależnie od tego, czy musisz wypełnić szablon Excel, dostosować kontrakt w Wordzie, czy wyodrębnić osadzone czcionki dla idealnego renderowania, przeprowadzimy Cię przez każdy krok, wyjaśnimy, dlaczego każde ustawienie ma znaczenie, i pokażemy przyjazne wydajnościowo wzorce dla dużych plików.
+
+Automatyzacja tworzenia i modyfikacji dokumentów jest kamieniem węgielnym nowoczesnych aplikacji Java. Generując raporty Excel w locie, dostosowując szablony Word per użytkownik oraz wyodrębniając czcionki w celu zachowania wierności wizualnej, możesz wyeliminować ręczną pracę, zmniejszyć liczbę błędów i przyspieszyć czas uzyskania wartości. GroupDocs.Editor for Java zapewnia jedyne, wysokowydajne API, które obsługuje **50+** formatów wejściowych i wyjściowych oraz może przetwarzać wielostronicowe skoroszyty bez ładowania całego pliku do pamięci. Ten samouczek pokazuje dokładnie, jak odblokować te możliwości.
 
 ## Szybkie odpowiedzi
-- **Jaką bibliotekę umożliwia generowanie raportu Excel w Javie?** GroupDocs.Editor for Java.  
-- **Czy mogę edytować pojedynczy arkusz Excel bez ładowania całego skoroszytu?** Yes—use `SpreadsheetEditOptions.setWorksheetIndex()`.  
-- **Jak wyodrębnić wszystkie osadzone czcionki z dokumentu Word?** Set `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)`.  
-- **Jaka jest najlepsza praktyka optymalizacji wydajności w Javie przy obsłudze dużych plików?** Dispose of `EditableDocument` i `Editor` objects promptly, reuse load options, and disable pagination for Word files.  
-- **Czy wymagana jest licencja do użytku produkcyjnego?** A full GroupDocs.Editor license unlocks all features and removes evaluation limits.
+- **Jaka biblioteka umożliwia generowanie Excel w Javie?** GroupDocs.Editor for Java.  
+- **Czy mogę edytować pojedynczy arkusz Excel bez ładowania całego skoroszytu?** Tak — użyj `SpreadsheetEditOptions.setWorksheetIndex()`.  
+- **Jak wyodrębnić wszystkie osadzone czcionki z dokumentu Word?** Ustaw `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)`.  
+- **Jaka jest najlepsza praktyka optymalizacji wydajności w Javie przy obsłudze dużych plików?** Szybko zwalniaj obiekty `EditableDocument` i `Editor`, ponownie używaj opcji ładowania i wyłącz paginację dla plików Word.  
+- **Czy wymagana jest licencja do użytku produkcyjnego?** Pełna licencja GroupDocs.Editor odblokowuje wszystkie funkcje i usuwa ograniczenia wersji próbnej.
 
 ## Co to jest generowanie raportu Excel w Javie?
-**Generowanie raportu Excel w Javie** odnosi się do procesu programowego tworzenia lub aktualizacji skoroszytów Excel z aplikacji Java. Dzięki GroupDocs.Editor możesz załadować szablon, zamienić znaczniki i zapisać wynik — wszystko bez zainstalowanego Microsoft Office. Obsługuje formaty .xlsx i .xls, pozwala zachować formuły, stylizację i walidację danych oraz może celować w konkretne arkusze, aby zminimalizować zużycie pamięci.
+**Generate excel report java** to proces programowego tworzenia lub aktualizacji skoroszytów Excel z aplikacji Java. Dzięki GroupDocs.Editor możesz załadować szablon, zamienić znaczniki i zapisać wynik — wszystko bez zainstalowanego Microsoft Office. Obsługuje formaty .xlsx i .xls, zachowuje formuły, stylizację i walidację danych oraz może celować w konkretne arkusze, aby zminimalizować zużycie pamięci.
 
 ## Dlaczego edytować pliki Excel i Word w Javie?
-Edycja dokumentów bezpośrednio z Javy pozwala budować kompleksowe przepływy pracy: generować faktury, aktualizować kontrakty lub tworzyć dynamiczne pulpity bez ręcznej interwencji. GroupDocs.Editor może **generować raport Excel w Javie**, wyodrębniać czcionki i **wyłączać paginację w Wordzie**, aby utrzymać niskie zużycie pamięci, umożliwiając obsługę tysięcy żądań na minutę na standardowym sprzęcie serwerowym.
+Edycja dokumentów bezpośrednio z Javy pozwala budować kompleksowe przepływy pracy: generować faktury, aktualizować kontrakty lub tworzyć dynamiczne pulpity bez ręcznej interwencji. GroupDocs.Editor może **generować raport Excel w Javie**, wyodrębniać czcionki i **wyłączać paginację w Word**, aby utrzymać niskie zużycie pamięci, umożliwiając obsługę tysięcy żądań na minutę na standardowym sprzęcie serwerowym.
 
 ## Wymagania wstępne
 - **GroupDocs.Editor for Java** (wersja 25.3 lub nowsza).  
@@ -98,10 +104,10 @@ Edycja dokumentów bezpośrednio z Javy pozwala budować kompleksowe przepływy 
 - Podstawowa znajomość składni Javy oraz narzędzi budowania Maven/Gradle.
 
 ## Konfiguracja GroupDocs.Editor dla Javy
-Aby zintegrować GroupDocs.Editor w swoim projekcie, postępuj zgodnie z poniższymi krokami:
+Aby zintegrować GroupDocs.Editor w swoim projekcie, wykonaj następujące kroki:
 
 **Maven**  
-Add the following to your `pom.xml` file:
+Dodaj poniższy fragment do pliku `pom.xml`:
 ```xml
 <repositories>
    <repository>
@@ -120,22 +126,26 @@ Add the following to your `pom.xml` file:
 </dependencies>
 ```  
 
-**Bezpośrednie pobranie**  
-Alternatywnie, pobierz bibliotekę z [Wydania GroupDocs.Editor dla Javy](https://releases.groupdocs.com/editor/java/).
+**Direct download**  
+Alternatywnie, pobierz bibliotekę z [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 ### Uzyskanie licencji
-- **Free Trial** – rozpocznij eksplorację funkcji bez zobowiązań.  
-- **Temporary License** – wydłuż czas oceny w razie potrzeby.  
-- **Full License** – zalecana do użytku produkcyjnego, aby odblokować wszystkie możliwości i otrzymać wsparcie.
+- **Bezpłatna wersja próbna** – rozpocznij eksplorację funkcji bez zobowiązań.  
+- **Licencja tymczasowa** – wydłuż czas oceny w razie potrzeby.  
+- **Pełna licencja** – zalecana do użytku produkcyjnego, aby odblokować wszystkie możliwości i otrzymać wsparcie.
 
 ## Jak edytować dokument Word w Javie?
-Załaduj swój plik DOCX, zastosuj niestandardowe opcje i zapisz zmiany — wszystko w kilku linijkach kodu. Klasa `EditableDocument` reprezentuje model Word w pamięci, natomiast klasa `Editor` zarządza ładowaniem i zapisywaniem. Możesz modyfikować tekst, obrazy, tabele i style, a następnie wyeksportować dokument do formatów DOCX, PDF lub HTML.
 
-### Ładowanie i edycja dokumentu Word z domyślnymi opcjami
+Załaduj plik DOCX, zastosuj niestandardowe opcje i zapisz zmiany — wszystko w kilku linijkach kodu. Klasa `EditableDocument` reprezentuje model Word w pamięci, natomiast klasa `Editor` zarządza ładowaniem i zapisywaniem. Możesz modyfikować tekst, obrazy, tabele i style, a następnie wyeksportować dokument do formatów DOCX, PDF lub HTML.
+
+**Direct answer:** Utwórz instancję `Editor`, załaduj DOCX przy użyciu `WordProcessingLoadOptions`, edytuj zwrócony `EditableDocument` (np. zamień znaczniki), a następnie wywołaj `save()` z żądanym formatem wyjściowym. Ten trzyetapowy przepływ obsługuje zarówno proste, jak i złożone edycje Word przy niskim zużyciu pamięci.
+
+Klasa `EditableDocument` jest reprezentacją w pamięci pliku Word, którą możesz odczytywać lub zapisywać. Klasa `Editor` zarządza cyklem życia ładowania, edycji i zapisu dokumentów.
+
+### Ładuj i edytuj dokument Word z domyślnymi opcjami
 `WordProcessingLoadOptions` określa, jak dokument Word ma być ładowany, np. zachowując formatowanie i metadane.
 
-**Bezpośrednia odpowiedź:**  
-Załaduj DOCX z ustawieniami domyślnymi, tworząc instancję `Editor`, wywołując `load()` z `WordProcessingLoadOptions`, edytując zwrócony `EditableDocument`, a na końcu wywołując `save()`, aby zachować zmiany. To podejście wymaga tylko trzech wywołań metod i działa w większości prostych scenariuszy.
+**Direct answer:** Użyj `new Editor()` i wywołaj `load("template.docx", new WordProcessingLoadOptions())`, aby uzyskać `EditableDocument`, zmodyfikuj jego zawartość i na koniec wywołaj `save("output.docx", SaveFormat.Docx)`. To podejście z domyślnymi opcjami działa w większości prostych scenariuszy edycji.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -151,11 +161,10 @@ defaultWordProcessingDoc.dispose();
 editor1.dispose();
 ```  
 
-### Edycja dokumentu Word z niestandardowymi opcjami
-`WordProcessingEditOptions` pozwala dostosować zachowanie edycji, w tym paginację i wyodrębnianie czcionek.
+### Edytuj dokument Word z niestandardowymi opcjami
+`WordProcessingEditOptions` umożliwia dostosowanie zachowania edycji, w tym paginację i wyodrębnianie czcionek.
 
-**Bezpośrednia odpowiedź:**  
-Aby poprawić wydajność i wyodrębnić czcionki, skonfiguruj `WordProcessingEditOptions` — wyłącz paginację, włącz metadane językowe i ustaw wyodrębnianie czcionek na `ExtractAllEmbedded`. Następnie załaduj, edytuj i zapisz jak wcześniej; niestandardowe opcje zostaną zastosowane automatycznie.
+**Direct answer:** Zainicjuj `WordProcessingEditOptions`, ustaw `setEnablePagination(false)`, aby wyłączyć paginację, włącz metadane językowe przy pomocy `setEnableLanguageInfo(true)` oraz wybierz `FontExtractionOptions.ExtractAllEmbedded`, aby pobrać wszystkie osadzone czcionki. Przekaż ten obiekt opcji do `Editor.edit()` przed zapisem.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -178,9 +187,8 @@ editableDoc.dispose();
 editor1.dispose();
 ```  
 
-### Edycja dokumentu Word z inną konfiguracją
-**Bezpośrednia odpowiedź:**  
-Możesz również użyć skrótu konstruktora `WordProcessingEditOptions`, aby w jednej linii włączyć informacje o języku i wyodrębnianie czcionek, upraszczając kod przy zachowaniu pełnej kontroli.
+### Edytuj dokument Word z inną konfiguracją
+**Direct answer:** Możesz skonstruować `WordProcessingEditOptions` w jednej linii — `new WordProcessingEditOptions(true, FontExtractionOptions.ExtractAllEmbedded)` — aby włączyć informacje językowe i wyodrębnić wszystkie czcionki, a następnie kontynuować standardowy przepływ ładowanie‑edycja‑zapis.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -201,13 +209,17 @@ editor1.dispose();
 ```  
 
 ## Jak wygenerować raport Excel w Javie?
-GroupDocs.Editor pozwala celować w konkretny arkusz, zamieniać znaczniki i zapisywać wynik, co czyni go idealnym dla scenariuszy **generowania raportu Excel w Javie**, w których potrzebujesz zmodyfikować tylko jedną kartę dużego skoroszytu. Zachowuje także formuły, wykresy i formatowanie komórek oraz obsługuje zarówno pliki .xlsx, jak i .xls, umożliwiając płynną integrację z istniejącymi potokami raportowania.
 
-### Ładowanie i edycja dokumentu arkusza (pierwsza karta)
-`SpreadsheetEditOptions` kontroluje ustawienia edycji Excel, takie jak który arkusz załadować.
+GroupDocs.Editor pozwala celować w konkretny arkusz, zamieniać znaczniki i zapisywać wynik, co czyni go idealnym w scenariuszach **jak generować Excel**, gdzie potrzebna jest modyfikacja tylko jednej zakładki dużego skoroszytu. Zachowuje formuły, wykresy i formatowanie komórek oraz obsługuje zarówno pliki .xlsx, jak i .xls, umożliwiając płynną integrację z istniejącymi pipeline'ami raportowymi.
 
-**Bezpośrednia odpowiedź:**  
-Ustaw `SpreadsheetEditOptions.setWorksheetIndex(0)`, aby edytować pierwszy arkusz, następnie załaduj, zmodyfikuj komórki i zapisz. To unika ładowania innych kart, zmniejszając zużycie pamięci nawet o 60 % w typowych raportach wielokartowych.
+**Direct answer:** Ustaw `SpreadsheetEditOptions.setWorksheetIndex(0)` (lub dowolny indeks zerowy) aby skupić się na żądanej karcie, załaduj skoroszyt przy pomocy `new Editor().load("report.xlsx", new SpreadsheetLoadOptions())`, zamień znaczniki poprzez API `EditableDocument`, a na koniec wywołaj `save("report‑filled.xlsx", SaveFormat.Xlsx)`. To izoluje docelową kartę, redukując zużycie pamięci nawet o 60 %.
+
+Klasa `SpreadsheetEditOptions` kontroluje, który arkusz jest ładowany i edytowany, pozwalając pracować na jednej zakładce, pozostawiając resztę skoroszytu nietkniętą.
+
+### Ładuj i edytuj dokument arkusza kalkulacyjnego (pierwsza karta)
+`SpreadsheetEditOptions` steruje ustawieniami edycji Excel, takimi jak wybór arkusza do załadowania.
+
+**Direct answer:** Wywołaj `options.setWorksheetIndex(0)`, aby edytować pierwszy arkusz, następnie załaduj, zmodyfikuj komórki i zapisz. To podejście unika ładowania innych kart i przyspiesza przetwarzanie dużych skoroszytów.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -228,9 +240,8 @@ editableDoc.dispose();
 editor2.dispose();
 ```  
 
-### Ładowanie i edycja dokumentu arkusza (druga karta)
-**Bezpośrednia odpowiedź:**  
-Zmień indeks arkusza na `1`, aby edytować drugą kartę. Ten sam przepływ edycji‑zapisu ma zastosowanie, pozwalając ponownie używać tego samego kodu dla różnych sekcji raportu.
+### Ładuj i edytuj dokument arkusza kalkulacyjnego (druga karta)
+**Direct answer:** Zmień indeks arkusza na `1`, aby edytować drugą kartę. Ten sam przepływ edytuj‑zapis ma zastosowanie, umożliwiając ponowne użycie tego samego kodu dla różnych sekcji raportu.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -253,53 +264,51 @@ editor2.dispose();
 
 ## Praktyczne zastosowania
 - **Automatyczne generowanie raportów** – wypełnij szablony Excel danymi z baz danych, aby **generować raport Excel w Javie** dla miesięcznych pulpitów wydajności.  
-- **Dostosowywanie szablonów** – modyfikuj kontrakty lub faktury w Wordzie w locie na podstawie danych użytkownika, osiągając możliwości **dostosowywania szablonu Word w Javie**.  
-- **Konsolidacja danych** – łącz dane z wielu arkuszy bez ładowania całego skoroszytu, poprawiając **optymalizację wydajności w Javie**.  
-- **Integracja z CRM** – automatycznie aktualizuj dokumenty klientów przechowywane w systemie CRM, utrzymując spójność danych na różnych platformach.
+- **Dostosowywanie szablonów** – modyfikuj kontrakty lub faktury Word w locie na podstawie danych użytkownika, uzyskując możliwości **dostosowywania szablonu Word w Javie**.  
+- **Konsolidacja danych** – scal dane z wielu arkuszy bez ładowania całego skoroszytu, poprawiając **optymalizację wydajności w Javie**.  
+- **Integracja z CRM** – automatycznie aktualizuj dokumenty klientów przechowywane w systemie CRM, utrzymując spójność danych na wszystkich platformach.
 
 ## Rozważania dotyczące wydajności
-Aby utrzymać responsywność aplikacji Java przy pracy z dużymi dokumentami:
+Aby Twoja aplikacja Java pozostawała responsywna przy pracy z dużymi dokumentami:
 
-1. **Szybko zwalniaj obiekty** – wywołaj `dispose()` na `EditableDocument` i `Editor`, gdy tylko skończysz.  
-2. **Ponownie używaj opcji ładowania** – utwórz jedną instancję `WordProcessingLoadOptions` lub `SpreadsheetLoadOptions` i przekaż ją do wielu edytorów.  
+1. **Szybko zwalniaj obiekty** – wywołaj `dispose()` na `EditableDocument` i `Editor`, gdy skończysz.  
+2. **Ponownie używaj opcji ładowania** – utwórz pojedynczy `WordProcessingLoadOptions` lub `SpreadsheetLoadOptions` i przekaż go wielu edytorom.  
 3. **Celuj w konkretne arkusze** – edycja tylko potrzebnej karty zmniejsza zużycie pamięci (zobacz przykłady **jak edytować Excel** powyżej).  
-4. **Unikaj niepotrzebnej paginacji** – wyłączenie paginacji (`setEnablePagination(false)`) przyspiesza przetwarzanie dużych plików Word (**wyłącz paginację w Wordzie**).  
+4. **Unikaj niepotrzebnej paginacji** – wyłączenie paginacji (`setEnablePagination(false)`) przyspiesza przetwarzanie dużych plików Word (**wyłącz paginację w Word**).  
 
-Uzasadnione twierdzenie: Stosując te techniki, GroupDocs.Editor przetwarza 300‑stronicowy dokument Word w mniej niż 4 sekundy oraz skoroszyt Excel z 200 arkuszami w mniej niż 6 sekund na typowym serwerze 8‑rdzeniowym.
+**Quantified claim:** Stosując te techniki, GroupDocs.Editor przetwarza 300‑stronicowy dokument Word w mniej niż 4 sekundy oraz 200‑arkuszowy skoroszyt Excel w mniej niż 6 sekund na typowym serwerze 8‑rdzeniowym.
 
 ## Częste problemy i rozwiązania
 | Problem | Rozwiązanie |
-|---------|-------------|
-| **OutOfMemoryError przy dużych plikach** | Upewnij się, że **wyłączasz paginację w Wordzie** i edytujesz tylko wymagane arkusze. |
-| **Czcionki nie pojawiają się po edycji** | Użyj `FontExtractionOptions.ExtractAllEmbedded`, aby pobrać wszystkie osadzone czcionki. |
-| **Wyjątek licencyjny** | Sprawdź, czy prawidłowy plik licencji GroupDocs.Editor znajduje się w classpath aplikacji. |
-| **Edytowano niewłaściwy arkusz** | Sprawdź ponownie indeks przekazywany do `setWorksheetIndex()`; indeksy zaczynają się od 0. |
+|-------|----------|
+| **OutOfMemoryError on large files** | Upewnij się, że **wyłącz paginację w Word** i edytujesz tylko wymagane arkusze. |
+| **Fonts not appearing after edit** | Użyj `FontExtractionOptions.ExtractAllEmbedded`, aby pobrać wszystkie osadzone czcionki. |
+| **License exception** | Zweryfikuj, czy prawidłowy plik licencji GroupDocs.Editor znajduje się w classpath aplikacji. |
+| **Incorrect worksheet edited** | Sprawdź dwukrotnie indeks przekazywany do `setWorksheetIndex()`; indeksy zaczynają się od 0. |
 
 ## Najczęściej zadawane pytania
 
 **Q: Czy GroupDocs.Editor jest kompatybilny ze wszystkimi formatami Word?**  
-A: Tak, obsługuje DOCX, DOCM, DOC, RTF, HTML i ponad 30 innych formatów.
+A: Tak, obsługuje DOCX, DOCM, DOC, RTF, HTML oraz ponad 30 innych formatów.
 
 **Q: Czy mogę edytować plik Excel bez ładowania całego skoroszytu do pamięci?**  
 A: Absolutnie. Ustawiając `SpreadsheetEditOptions.setWorksheetIndex()` edytujesz tylko wybraną kartę, co jest idealne dla zadań **jak edytować Excel**.
 
 **Q: Jak wyodrębnić wszystkie osadzone czcionki z dokumentu Word?**  
-A: Użyj `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)` jak pokazano w przykładzie niestandardowych opcji.
+A: Użyj `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)` jak pokazano w przykładzie z niestandardowymi opcjami.
 
 **Q: Jakie są najlepsze praktyki optymalizacji wydajności w Javie przy obsłudze dużych dokumentów?**  
-A: Szybko zwalniaj obiekty `EditableDocument` i `Editor`, celuj w konkretne arkusze, ponownie używaj opcji ładowania oraz **wyłącz paginację w Wordzie**, gdy nie jest potrzebna.
+A: Szybko zwalniaj obiekty `EditableDocument` i `Editor`, celuj w konkretne arkusze, ponownie używaj opcji ładowania oraz **wyłącz paginację w Word**, gdy nie jest potrzebna.
 
-**Q: Czy potrzebna jest licencja do użytku produkcyjnego?**  
+**Q: Czy potrzebuję licencji do użytku produkcyjnego?**  
 A: Tak, pełna licencja GroupDocs.Editor odblokowuje wszystkie funkcje, usuwa ograniczenia wersji próbnej i zapewnia oficjalne wsparcie.
 
----
-
-**Ostatnia aktualizacja:** 2026-07-26  
-**Testowano z:** GroupDocs.Editor 25.3 for Java  
-**Autor:** GroupDocs
+**Ostatnia aktualizacja:** 2026-09-26  
+**Testowano z:** GroupDocs.Editor 25.3 dla Javy  
+**Autor:** GroupDocs  
 
 ## Powiązane samouczki
 
-- [Utwórz edytowalny arkusz w Javie z GroupDocs.Editor – Mistrzowska edycja kart Excel](/editor/java/spreadsheet-documents/master-excel-tab-editing-java-groupdocs-editor/)
+- [Utwórz edytowalny arkusz w Javie z GroupDocs.Editor – zaawansowana edycja zakładek Excel](/editor/java/spreadsheet-documents/master-excel-tab-editing-java-groupdocs-editor/)
 - [Edytuj dokument Word w Javie: ładowanie, edycja i wyodrębnianie CSS z GroupDocs.Editor](/editor/java/word-processing-documents/groupdocs-editor-java-word-doc-edit-extract-css/)
-- [Edytuj dokument Word w Javie – Zaawansowane funkcje GroupDocs.Editor](/editor/java/advanced-features/)
+- [Edytuj dokument Word w Javie – zaawansowane funkcje GroupDocs.Editor](/editor/java/advanced-features/)
