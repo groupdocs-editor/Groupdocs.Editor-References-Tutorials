@@ -1,33 +1,35 @@
 ---
-date: '2026-07-26'
-description: Ismerje meg, hogyan generálhat Excel jelentést Java-ban, és szerkeszthet
-  Word dokumentumokat a GroupDocs.Editor használatával. Készítsen Excel jelentéseket,
-  testreszabja a Word sablonokat, kinyerje a beágyazott betűtípusokat, és növelje
-  a teljesítményt.
+date: '2026-09-26'
+description: Ismerje meg, hogyan generálhat Excel-t Java-ban a GroupDocs.Editor segítségével,
+  szerkesztheti a Word sablonokat, kinyerheti a beágyazott betűtípusokat, és optimalizálhatja
+  a teljesítményt nagy dokumentumok esetén.
+images:
+- /java/document-editing/java-groupdocs-editor-master-document-editing/og-image.png
 keywords:
+- how to generate excel
+- how to disable pagination
+- edit word document java
 - generate excel report java
 - customize word template java
 - extract embedded fonts word
-lastmod: '2026-07-26'
-og_description: Excel jelentés generálása Java-ban a GroupDocs.Editor segítségével.
-  Ismerje meg, hogyan szerkeszthet Word sablonokat, nyerheti ki a beágyazott betűtípusokat,
-  és optimalizálhatja a teljesítményt Java alkalmazásokban.
-og_image_alt: Guide to generating Excel reports and editing Word documents in Java
-  with GroupDocs.Editor
-og_title: Excel jelentés generálása Java-ban a GroupDocs.Editor-rel – Word és Excel
-  szerkesztése
+lastmod: '2026-09-26'
+og_description: Hogyan generáljunk Excel-t Java-ban a GroupDocs.Editor segítségével.
+  Ez az útmutató megmutatja, hogyan tölthet fel Excel sablonokat, testreszabhatja
+  a Word szerződéseket, kinyerheti a betűtípusokat, és optimalizálhatja a teljesítményt
+  nagy fájlok esetén Java alkalmazásokban.
+og_image_alt: 'Guide: how to generate excel in Java using GroupDocs.Editor and edit
+  Word documents'
+og_title: Hogyan generáljunk Excel-t Java-ban a GroupDocs.Editor segítségével
 schemas:
 - author: GroupDocs
-  dateModified: '2026-07-26'
-  description: Learn how to generate excel report java and edit word documents using
-    GroupDocs.Editor. Create Excel reports, customize Word templates, extract embedded
-    fonts, and boost performance.
-  headline: Generate Excel Report Java and Edit Word Files in Java with GroupDocs.Editor
+  dateModified: '2026-09-26'
+  description: Learn how to generate excel in Java with GroupDocs.Editor, edit Word
+    templates, extract embedded fonts, and boost performance.
+  headline: How to generate excel in Java and edit Word files with GroupDocs.Editor
   type: TechArticle
-- description: Learn how to generate excel report java and edit word documents using
-    GroupDocs.Editor. Create Excel reports, customize Word templates, extract embedded
-    fonts, and boost performance.
-  name: Generate Excel Report Java and Edit Word Files in Java with GroupDocs.Editor
+- description: Learn how to generate excel in Java with GroupDocs.Editor, edit Word
+    templates, extract embedded fonts, and boost performance.
+  name: How to generate excel in Java and edit Word files with GroupDocs.Editor
   steps:
   - name: '**Dispose objects promptly** – call `dispose()` on `EditableDocument` and
       `Editor` as soon as you’re done.'
@@ -64,47 +66,50 @@ schemas:
     question: Do I need a license for production use?
   type: FAQPage
 tags:
-- generate excel report
+- how to generate excel
 - GroupDocs.Editor
 - Java document editing
 - Word template automation
 - Excel report automation
-title: Excel jelentés generálása Java-ban és Word fájlok szerkesztése Java-ban a GroupDocs.Editor
-  segítségével
+title: Hogyan generáljunk Excel-t Java-ban a GroupDocs.Editor segítségével
 type: docs
 url: /hu/java/document-editing/java-groupdocs-editor-master-document-editing/
 weight: 1
 ---
 
-# Excel jelentés generálása Java-ban és Word fájlok szerkesztése Java-ban a GroupDocs.Editor segítségével
+# Hogyan generáljunk Excel-t Java-ban a GroupDocs.Editor használatával
+
+Ebben az átfogó útmutatóban megtanulja, **hogyan generáljon Excel-t Java-ban**, és hogyan szerkessze programozottan a Word dokumentumokat a GroupDocs.Editor segítségével. Akár egy Excel sablont kell kitölteni, egy Word szerződést testre szabni, vagy beágyazott betűtípusokat kinyerni a tökéletes megjelenítés érdekében, minden lépést végigvezetünk, elmagyarázzuk, miért fontos minden beállítás, és megmutatjuk a nagy fájlokhoz teljesítmény‑barát mintákat.
 
 ## Bevezetés
-A dokumentumok létrehozásának és módosításának automatizálása a modern Java‑alkalmazások egyik alappillére. Az Excel jelentések valós időben történő generálásával, a Word sablonok felhasználónkénti testreszabásával és a betűtípusok kinyerésével a vizuális hűség megőrzése érdekében kiküszöbölheted a kézi munkát, csökkentheted a hibákat és felgyorsíthatod az értékteremtést. A GroupDocs.Editor for Java egyetlen, nagy teljesítményű API‑t biztosít, amely **50+** bemeneti és kimeneti formátumot támogat, és több száz oldalas munkafüzeteket képes feldolgozni anélkül, hogy az egész fájlt a memóriába töltené. Ez az útmutató pontosan bemutatja, hogyan használhatod ki ezeket a lehetőségeket.
+A dokumentumok létrehozásának és módosításának automatizálása a modern Java‑alkalmazások egyik alappillére. Az Excel jelentések dinamikus generálásával, a Word sablonok felhasználónkénti testreszabásával és a betűtípusok kinyerésével a vizuális hűség megőrzése érdekében kiküszöbölheti a kézi munkát, csökkentheti a hibákat, és felgyorsíthatja az értékteremtést. A GroupDocs.Editor for Java egyetlen, nagy‑teljesítményű API‑t biztosít, amely **50+** bemeneti és kimeneti formátumot támogat, és több száz oldalas munkafüzeteket képes feldolgozni anélkül, hogy a teljes fájlt a memóriába töltené. Ez a bemutató pontosan megmutatja, hogyan használhatja ki ezeket a képességeket.
 
 ## Gyors válaszok
-- **Melyik könyvtár teszi lehetővé az excel jelentés generálását Java-ban?** GroupDocs.Editor for Java.  
-- **Szerkeszthetek egyetlen Excel munkalapot anélkül, hogy betölteném az egész munkafüzetet?** Igen — használd a `SpreadsheetEditOptions.setWorksheetIndex()`‑t.  
-- **Hogyan tudom kinyerni az összes beágyazott betűtípust egy Word dokumentumból?** Állítsd be a `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)`‑t.  
-- **Mi a legjobb gyakorlat a Java teljesítményoptimalizáláshoz nagy fájlok kezelésekor?** Az `EditableDocument` és `Editor` objektumok azonnali eldobása, a betöltési opciók újrahasználata, valamint a Word fájlok esetén a lapozás letiltása.  
-- **Szükséges licenc a termelési használathoz?** Egy teljes GroupDocs.Editor licenc feloldja az összes funkciót és eltávolítja a kiértékelési korlátokat.
+- **Melyik könyvtár teszi lehetővé az Excel generálását Java-ban?** GroupDocs.Editor for Java.  
+- **Szerkeszthetek egyetlen Excel munkalapot anélkül, hogy betölteném az egész munkafüzetet?** Igen – használja a `SpreadsheetEditOptions.setWorksheetIndex()` metódust.  
+- **Hogyan nyerhetem ki az összes beágyazott betűtípust egy Word dokumentumból?** Állítsa be a `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)` opciót.  
+- **Mi a legjobb gyakorlat a nagy fájlok kezelésekor a Java teljesítményoptimalizálásához?** Az `EditableDocument` és `Editor` objektumok gyors eldobása, a betöltési opciók újrahasználata, valamint a Word fájlok esetén a lapozás letiltása.  
+- **Szükséges licenc a termeléshez?** Egy teljes GroupDocs.Editor licenc feloldja az összes funkciót és eltávolítja a kiértékelési korlátokat.
 
-## Mi az excel jelentés generálása Java-ban?
-**Generate excel report java** a Java‑alkalmazásból programozott módon Excel munkafüzetek létrehozását vagy frissítését jelenti. A GroupDocs.Editor segítségével betölthetsz egy sablont, helyettesíthetsz helyőrzőket, és elmentheted az eredményt — mindezt Microsoft Office telepítése nélkül. Támogatja a .xlsx és .xls formátumokat, megőrzi a képleteket, a stílusokat és az adatellenőrzéseket, és lehetővé teszi konkrét munkalapok célzását a memóriahasználat minimalizálása érdekében.
+## Mi az a generate excel report java?
+**Generate excel report java** a Java‑alkalmazásból programozott módon Excel munkafüzetek létrehozását vagy frissítését jelenti. A GroupDocs.Editor segítségével betölthet egy sablont, helyettesítheti a helyőrzőket, és elmentheti az eredményt – Microsoft Office telepítése nélkül. Támogatja a .xlsx és .xls formátumokat, megőrzi a képleteket, a formázást és az adatellenőrzéseket, valamint célzottan egy adott munkalapra is fókuszálhat a memóriahasználat csökkentése érdekében.
 
 ## Miért szerkesszünk Excel és Word fájlokat Java-ban?
-A dokumentumok közvetlen Java‑szerkesztése lehetővé teszi vég‑től‑vég‑ig folyamatok felépítését: számlák generálása, szerződések frissítése vagy dinamikus műszerfalak létrehozása manuális beavatkozás nélkül. A GroupDocs.Editor képes **generate excel report java**, betűtípusok kinyerésére, valamint **disable pagination word** funkcióra, így alacsony memóriahasználattal képes percenként több ezer kérést kiszolgálni szabványos szerverkörnyezetben.
+A dokumentumok közvetlen Java‑szerkesztése lehetővé teszi vég‑től‑végig munkafolyamatok kiépítését: számlák generálása, szerződések frissítése vagy dinamikus irányítópultok létrehozása manuális beavatkozás nélkül. A GroupDocs.Editor **generate excel report java**, betűtípusok kinyerése és **disable pagination word** funkciói alacsony memóriahasználatot biztosítanak, így akár több ezer kérést is kiszolgálhat egy átlagos szerveren.
 
 ## Előfeltételek
-- **GroupDocs.Editor for Java** (25.3 verzió vagy újabb).  
-- **Java Development Kit (JDK)** 8 vagy újabb.  
-- IDE, például IntelliJ IDEA vagy Eclipse.  
-- Alapvető ismeretek a Java szintaxisról és a Maven/Gradle építőeszközökről.
+Mielőtt elkezdenénk, győződjön meg róla, hogy rendelkezik:
 
-## A GroupDocs.Editor beállítása Java-hoz
-A GroupDocs.Editor integrálásához a projektedbe kövesd az alábbi lépéseket:
+- **GroupDocs.Editor for Java** (25.3 vagy újabb verzió).  
+- **Java Development Kit (JDK)** 8 vagy újabb.  
+- Egy IDE, például IntelliJ IDEA vagy Eclipse.  
+- Alapvető Java‑szintaxis és Maven/Gradle ismeretek.
+
+## A GroupDocs.Editor for Java beállítása
+A GroupDocs.Editor integrálásához a projektjébe kövesse az alábbi lépéseket:
 
 **Maven**  
-Add the following to your `pom.xml` file:
+Adja hozzá a következőt a `pom.xml` fájlhoz:
 ```xml
 <repositories>
    <repository>
@@ -124,20 +129,25 @@ Add the following to your `pom.xml` file:
 ```  
 
 **Közvetlen letöltés**  
-Alternatively, download the library from [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+Alternatívaként töltse le a könyvtárat a [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) oldalról.
 
 ### Licenc beszerzése
-- **Free Trial** – start exploring the features without a commitment.  
-- **Temporary License** – extend evaluation time if needed.  
-- **Full License** – recommended for production use to unlock all capabilities and receive support.
+- **Ingyenes próba** – kezdje el felfedezni a funkciókat kötelezettség nélkül.  
+- **Ideiglenes licenc** – ha szükséges, meghosszabbíthatja a kiértékelési időt.  
+- **Teljes licenc** – ajánlott termelési környezetben a teljes funkcionalitás feloldásához és a támogatás igénybevételéhez.
 
-## Hogyan szerkeszthetek Word dokumentumot Java-ban?
-Töltsd be a DOCX fájlt, alkalmazd az egyéni beállításokat, és mentsd el a módosításokat — mindössze néhány kódsorban. Az `EditableDocument` osztály a memóriában lévő Word modellt képviseli, míg az `Editor` osztály kezeli a betöltést és a mentést. Szöveget, képeket, táblázatokat és stílusokat módosíthatsz, majd exportálhatod a dokumentumot DOCX, PDF vagy HTML formátumba.
+## Hogyan szerkesszek Word dokumentumot Java-ban?
+
+Töltsön be egy DOCX fájlt, alkalmazzon egyedi beállításokat, és mentse el a módosításokat – mindössze néhány sor kóddal. Az `EditableDocument` osztály a memóriában lévő Word modellt képviseli, míg az `Editor` osztály kezeli a betöltést és a mentést. Szöveget, képeket, táblázatokat és stílusokat módosíthat, majd exportálhatja a dokumentumot DOCX, PDF vagy HTML formátumba.
+
+**Közvetlen válasz:** Hozzon létre egy `Editor` példányt, töltse be a DOCX‑et `WordProcessingLoadOptions`‑szel, szerkessze a visszakapott `EditableDocument`‑ot (pl. helyőrzők cseréje), majd hívja meg a `save()`‑t a kívánt kimeneti formátummal. Ez a háromlépéses folyamat egyszerű és összetett Word‑szerkesztéseket egyaránt kezel, miközben alacsony memóriahasználatot biztosít.
+
+Az `EditableDocument` osztály a Word fájl memóriabeli reprezentációja, amelyből olvashat vagy amibe írhat. Az `Editor` osztály kezeli a dokumentum betöltésének, szerkesztésének és mentésének életciklusát.
 
 ### Word feldolgozó dokumentum betöltése és szerkesztése alapértelmezett beállításokkal
-`WordProcessingLoadOptions` specifies how a Word document should be loaded, such as preserving formatting and metadata.
+A `WordProcessingLoadOptions` meghatározza, hogyan töltődjön be egy Word dokumentum, például a formázás és a metaadatok megőrzésével.
 
-**Direct answer:** Load a DOCX with default settings by creating an `Editor` instance, calling `load()` with `WordProcessingLoadOptions`, editing the returned `EditableDocument`, and finally invoking `save()` to persist changes. This approach requires only three method calls and works for most simple scenarios.
+**Közvetlen válasz:** Használja a `new Editor()`‑t, és hívja meg a `load("template.docx", new WordProcessingLoadOptions())`‑t egy `EditableDocument` megszerzéséhez, módosítsa a tartalmat, majd végül hívja meg a `save("output.docx", SaveFormat.Docx)`‑t. Ez az alapértelmezett opciók megközelítés a legtöbb egyszerű szerkesztési forgatókönyvhöz megfelelő.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -153,10 +163,12 @@ defaultWordProcessingDoc.dispose();
 editor1.dispose();
 ```  
 
-### Word feldolgozó dokumentum szerkesztése egyéni beállításokkal
-`WordProcessingEditOptions` allows customizing editing behavior, including pagination and font extraction.
+### Word feldolgozó dokumentum szerkesztése egyedi beállításokkal
+A `WordProcessingEditOptions` lehetővé teszi a szerkesztési viselkedés testreszabását, beleértve a lapozást és a betűtípus‑kinyerést.
 
-**Direct answer:** To improve performance and extract fonts, configure `WordProcessingEditOptions`—disable pagination, enable language metadata, and set font extraction to `ExtractAllEmbedded`. Then load, edit, and save as before; the custom options are applied automatically.
+**Közvetlen válasz:** Inicializálja a `WordProcessingEditOptions`‑t, állítsa be a `setEnablePagination(false)`‑t a lapozás kikapcsolásához, engedélyezze a nyelvi metaadatokat a `setEnableLanguageInfo(true)`‑val, és válassza a `FontExtractionOptions.ExtractAllEmbedded`‑et az összes beágyazott betűtípus kinyeréséhez. Adja át ezt az opcióobjektumot az `Editor.edit()`‑nek a mentés előtt.
+
+A `WordProcessingEditOptions` osztály finomhangolja a szerkesztési folyamatot, például a lapozás letiltásával felgyorsíthatja a nagy dokumentumok kezelését, vagy betűtípusok kinyerésével pontos megjelenítést biztosíthat.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -180,7 +192,9 @@ editor1.dispose();
 ```  
 
 ### Word feldolgozó dokumentum szerkesztése egy másik konfigurációval
-**Direct answer:** You can also use the constructor shortcut of `WordProcessingEditOptions` to enable language information and font extraction in a single line, simplifying your code while retaining full control.
+**Közvetlen válasz:** Létrehozhat egy `WordProcessingEditOptions`‑t egyetlen sorban – `new WordProcessingEditOptions(true, FontExtractionOptions.ExtractAllEmbedded)` – a nyelvi információk engedélyezéséhez és az összes betűtípus kinyeréséhez, majd a szokásos betöltés‑szerkesztés‑mentés folyamatot követheti.
+
+A `WordProcessingEditOptions` rövid konstruktor csökkenti a boilerplate‑kódot, miközben teljes kontrollt biztosít a lapozás, a nyelv és a betűtípus‑kinyerés felett.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -201,12 +215,17 @@ editor1.dispose();
 ```  
 
 ## Hogyan generáljak Excel jelentést Java-ban?
-A GroupDocs.Editor lehetővé teszi egy konkrét munkalap célzását, helyőrzők cseréjét és az eredmény mentését, így ideális **generate excel report java** esetekben, amikor csak egy nagy munkafüzet egy lapját kell módosítani. Megőrzi a képleteket, diagramokat és a cellaformázást, és támogatja mind a .xlsx, mind a .xls fájlokat, így zökkenőmentes integrációt biztosít a meglévő jelentéscsővezetékekkel.
 
-### Táblázat dokumentum betöltése és szerkesztése (első lap)
-`SpreadsheetEditOptions` controls Excel editing settings such as which worksheet to load.
+A GroupDocs.Editor lehetővé teszi egy adott munkalap célzását, helyőrzők cseréjét, és az eredmény mentését, így ideális **how to generate excel** helyzetekben, amikor csak egy nagy munkafüzet egy tabját kell módosítani. Megőrzi a képleteket, diagramokat és a cellaformázást, és támogatja mind a .xlsx, mind a .xls fájlokat, így zökkenőmentes integrációt biztosít a meglévő jelentés‑csővezetékekkel.
 
-**Direct answer:** Set `SpreadsheetEditOptions.setWorksheetIndex(0)` to edit the first worksheet, then load, modify cells, and save. This avoids loading other tabs, reducing memory consumption by up to 60 % for typical multi‑sheet reports.
+**Közvetlen válasz:** Állítsa be a `SpreadsheetEditOptions.setWorksheetIndex(0)`‑t (vagy bármelyik nullától induló indexet) a kívánt lap fókuszálásához, töltse be a munkafüzetet a `new Editor().load("report.xlsx", new SpreadsheetLoadOptions())`‑val, cserélje ki a helyőrzőket az `EditableDocument` API‑val, majd hívja meg a `save("report‑filled.xlsx", SaveFormat.Xlsx)`‑t. Ez a megközelítés a célzott lapot izolálja, és akár 60 % memóriahasználatcsökkenést eredményez.
+
+A `SpreadsheetEditOptions` osztály szabályozza, mely munkalap kerül betöltésre és szerkesztésre, lehetővé téve egyetlen tab munkálását a többi érintetlenül hagyásával.
+
+### Munkafüzet betöltése és szerkesztése (első tab)
+A `SpreadsheetEditOptions` szabályozza az Excel szerkesztési beállításait, például melyik munkalapot töltsük be.
+
+**Közvetlen válasz:** Hívja meg az `options.setWorksheetIndex(0)`‑t az első munkalap szerkesztéséhez, majd töltse be, módosítsa a cellákat, és mentse el. Ez a megközelítés elkerüli a többi tab betöltését, és felgyorsítja a nagy munkafüzetek feldolgozását.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -227,8 +246,8 @@ editableDoc.dispose();
 editor2.dispose();
 ```  
 
-### Táblázat dokumentum betöltése és szerkesztése (második lap)
-**Direct answer:** Change the worksheet index to `1` to edit the second tab. The same edit‑save flow applies, letting you reuse the same code for different sections of a report.
+### Munkafüzet betöltése és szerkesztése (második tab)
+**Közvetlen válasz:** Állítsa a munkalap indexet `1`‑re a második tab szerkesztéséhez. Ugyanaz a szerkesztés‑mentés folyamat alkalmazható, így ugyanazt a kódot újrahasználhatja a jelentés különböző részein.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -250,54 +269,54 @@ editor2.dispose();
 ```  
 
 ## Gyakorlati alkalmazások
-- **Automatizált jelentéskészítés** – töltsön ki Excel sablonokat adatbázisokból származó adatokkal a havi teljesítmény dashboardokhoz **generate excel report java**.  
-- **Sablon testreszabás** – módosítsa a Word szerződéseket vagy számlákat valós időben a felhasználói bemenet alapján, elérve a **customize word template java** képességeket.  
-- **Adatkonzolidáció** – egyesítse a több táblázat adatait anélkül, hogy betöltené az egész munkafüzetet, javítva a **performance optimization Java**-t.  
-- **CRM integráció** – automatikusan frissítse a CRM rendszerben tárolt ügyfél dokumentumokat, biztosítva az adatok konzisztenciáját a platformok között.
+- **Automatizált jelentésgenerálás** – töltsön ki Excel sablonokat adatbázis‑adatokkal a **generate excel report java** havi teljesítmény‑irányítópultokhoz.  
+- **Sablon testreszabás** – módosítson Word szerződéseket vagy számlákat valós időben a felhasználói bemenet alapján, elérve a **customize word template java** képességeket.  
+- **Adatok konszolidálása** – egyesítse a több táblázatból származó adatokat anélkül, hogy az egész munkafüzetet betöltené, javítva a **performance optimisation Java** hatékonyságát.  
+- **CRM integráció** – automatikusan frissítse az ügyfél‑dokumentumokat egy CRM rendszerben, biztosítva az adatok konzisztenciáját a platformok között.
 
-## Teljesítményfontosságú szempontok
-A Java‑alkalmazásod válaszkészségének megőrzése nagy dokumentumok kezelésekor:
+## Teljesítmény‑szempontok
+A Java‑alkalmazás válaszkészségének megőrzése nagy dokumentumok kezelésekor:
 
-1. **Dispose objects promptly** – call `dispose()` on `EditableDocument` and `Editor` as soon as you’re done.  
-2. **Reuse load options** – instantiate a single `WordProcessingLoadOptions` or `SpreadsheetLoadOptions` and pass it to multiple editors.  
-3. **Target specific worksheets** – editing only the needed tab reduces memory footprint (see the **how to edit excel** examples above).  
-4. **Avoid unnecessary pagination** – disabling pagination (`setEnablePagination(false)`) speeds up processing for large Word files (**disable pagination word**).  
+1. **Objektumok gyors eldobása** – hívja meg a `dispose()`‑t az `EditableDocument` és `Editor` példányokon, amint befejeződött a munka.  
+2. **Betöltési opciók újrahasználata** – hozza létre egyszer egy `WordProcessingLoadOptions` vagy `SpreadsheetLoadOptions` objektumot, és adja át több editor‑nek.  
+3. **Célzott munkalapok** – csak a szükséges tab szerkesztése csökkenti a memória‑lábnyomot (lásd a **how to edit excel** példákat fent).  
+4. **Felesleges lapozás elkerülése** – a lapozás letiltása (`setEnablePagination(false)`) felgyorsítja a nagy Word fájlok feldolgozását (**disable pagination word**).  
 
-Mértékelt állítás: E technikák alkalmazásával a GroupDocs.Editor egy 300 oldalas Word dokumentumot kevesebb mint 4 másodperc alatt, egy 200 lapos Excel munkafüzetet pedig kevesebb mint 6 másodperc alatt dolgoz fel egy tipikus 8‑magos szerveren.
+**Mérhető állítás:** E technikákkal a GroupDocs.Editor egy 300 oldalas Word dokumentumot kevesebb mint 4 másodperc alatt, egy 200‑tabos Excel munkafüzetet pedig kevesebb mint 6 másodperc alatt dolgoz fel egy tipikus 8‑magos szerveren.
 
 ## Gyakori problémák és megoldások
 | Probléma | Megoldás |
-|----------|----------|
-| **OutOfMemoryError on large files** | Ensure you **disable pagination word** and edit only required worksheets. |
-| **Fonts not appearing after edit** | Use `FontExtractionOptions.ExtractAllEmbedded` to pull all embedded fonts. |
-| **License exception** | Verify that a valid GroupDocs.Editor license file is placed in the application’s classpath. |
-| **Incorrect worksheet edited** | Double‑check the index passed to `setWorksheetIndex()`; indexes start at 0. |
+|-------|----------|
+| **OutOfMemoryError nagy fájlok esetén** | Győződjön meg róla, hogy **disable pagination word** be van kapcsolva, és csak a szükséges munkalapokat szerkeszti. |
+| **A betűtípusok nem jelennek meg a szerkesztés után** | Használja a `FontExtractionOptions.ExtractAllEmbedded`‑t az összes beágyazott betűtípus kinyeréséhez. |
+| **Licenc‑kivétel** | Ellenőrizze, hogy egy érvényes GroupDocs.Editor licencfájl a classpath‑ban van‑e. |
+| **Rossz munkalap lett szerkesztve** | Ellenőrizze a `setWorksheetIndex()`‑nek átadott indexet; az indexelés 0‑tól indul. |
 
 ## Gyakran feltett kérdések
 
-**Q: Is GroupDocs.Editor compatible with all Word formats?**  
-A: Yes, it supports DOCX, DOCM, DOC, RTF, HTML, and over 30 other formats.
+**K: A GroupDocs.Editor kompatibilis minden Word formátummal?**  
+V: Igen, támogatja a DOCX, DOCM, DOC, RTF, HTML és több mint 30 egyéb formátumot.
 
-**Q: Can I edit an Excel file without loading the entire workbook into memory?**  
-A: Absolutely. By setting `SpreadsheetEditOptions.setWorksheetIndex()` you edit only the selected tab, which is ideal for **how to edit excel** tasks.
+**K: Szerkeszthetek Excel fájlt anélkül, hogy az egész munkafüzetet a memóriába tölteném?**  
+V: Teljesen. A `SpreadsheetEditOptions.setWorksheetIndex()` beállításával csak a kiválasztott tabot szerkeszti, ami ideális **how to edit excel** feladatokhoz.
 
-**Q: How do I extract all embedded fonts from a Word document?**  
-A: Use `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)` as shown in the custom options example.
+**K: Hogyan nyerhetem ki az összes beágyazott betűtípust egy Word dokumentumból?**  
+V: Használja a `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)`‑t, ahogy a testreszabott opciós példában látható.
 
-**Q: What are the best practices for performance optimization Java when handling large documents?**  
-A: Dispose of `EditableDocument` and `Editor` objects promptly, target specific worksheets, reuse load options, and **disable pagination word** when not needed.
+**K: Mik a legjobb gyakorlatok a Java teljesítményoptimalizálásához nagy dokumentumok kezelésekor?**  
+V: Az `EditableDocument` és `Editor` objektumok gyors eldobása, célzott munkalapok használata, betöltési opciók újrahasználata, és a **disable pagination word** letiltása, ha nincs rá szükség.
 
-**Q: Do I need a license for production use?**  
-A: Yes, a full GroupDocs.Editor license unlocks all features, removes evaluation limits, and provides official support.
+**K: Szükséges licenc a termelési környezetben?**  
+V: Igen, egy teljes GroupDocs.Editor licenc feloldja az összes funkciót, eltávolítja a kiértékelési korlátokat, és hivatalos támogatást biztosít.
 
 ---
 
-**Utolsó frissítés:** 2026-07-26  
-**Tesztelve ezzel:** GroupDocs.Editor 25.3 for Java  
-**Szerző:** GroupDocs
+**Utolsó frissítés:** 2026-09-26  
+**Tesztelve:** GroupDocs.Editor 25.3 for Java  
+**Szerző:** GroupDocs  
 
 ## Kapcsolódó oktatóanyagok
 
-- [Szerkeszthető munkalap létrehozása Java-val a GroupDocs.Editor segítségével – Excel lap szerkesztés mestersége](/editor/java/spreadsheet-documents/master-excel-tab-editing-java-groupdocs-editor/)
-- [Word dokumentum szerkesztése Java-ban: betöltés, szerkesztés és CSS kinyerése a GroupDocs.Editor-rel](/editor/java/word-processing-documents/groupdocs-editor-java-word-doc-edit-extract-css/)
-- [Word dokumentum szerkesztése Java-ban – Haladó GroupDocs.Editor funkciók](/editor/java/advanced-features/)
+- [Create editable worksheet Java with GroupDocs.Editor – master Excel tab editing](/editor/java/spreadsheet-documents/master-excel-tab-editing-java-groupdocs-editor/)
+- [Edit Word document Java: load, edit & extract CSS with GroupDocs.Editor](/editor/java/word-processing-documents/groupdocs-editor-java-word-doc-edit-extract-css/)
+- [Edit Word document Java – advanced GroupDocs.Editor features](/editor/java/advanced-features/)

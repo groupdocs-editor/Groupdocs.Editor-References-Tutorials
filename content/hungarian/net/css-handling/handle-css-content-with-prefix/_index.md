@@ -1,39 +1,80 @@
 ---
-date: 2026-03-06
-description: Tanulja meg, hogyan kezelje a CSS tartalmat előtaggal, és hogyan vonja
-  ki a CSS tartalmat a GroupDocs.Editor for .NET használatával ebben a részletes lépésről‑lépésre
+date: 2026-09-26
+description: Ismerje meg, hogyan kezelje a CSS előtagot és hogyan nyerje ki a CSS
+  tartalmat a GroupDocs.Editor for .NET segítségével ebben a részletes lépésről‑lépésre
   útmutatóban.
-linktitle: Handle CSS Content with Prefix
+keywords:
+- handle css prefix
+- extract css content
+- edit document css
+- prepend url to css
+lastmod: 2026-09-26
+linktitle: CSS tartalom kezelése előtaggal
+og_description: Fedezze fel, hogyan kezelje a CSS előtagot és hogyan nyerje ki a CSS
+  tartalmat a GroupDocs.Editor for .NET segítségével. Kövesse a lépésről‑lépésre útmutatót,
+  amely bemutatja, hogyan lehet URL-eket előállítani a CSS erőforrásokhoz, és hogyan
+  lehet lekérni a stíluslapokat.
+og_image_alt: Developer guide showing css prefix handling with GroupDocs.Editor for
+  .NET
+og_title: Hogyan kezeljük a CSS előtagot a GroupDocs.Editor for .NET-ben
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-26'
+  description: Learn how to handle css prefix and extract css content using GroupDocs.Editor
+    for .NET in this detailed step‑by‑step tutorial.
+  headline: How to handle css prefix in GroupDocs.Editor for .NET
+  type: TechArticle
+- questions:
+  - answer: Yes, GroupDocs.Editor for .NET supports PDF, Word, Excel, PowerPoint,
+      and many other formats.
+    question: Can I use GroupDocs.Editor for .NET with other document formats?
+  - answer: Absolutely! You can start your free trial on the [GroupDocs free trial
+      page](https://releases.groupdocs.com/).
+    question: Is there a free trial available for GroupDocs.Editor for .NET?
+  - answer: You can obtain a temporary license from the [temporary license page](https://purchase.groupdocs.com/temporary-license/).
+    question: How do I get a temporary license for GroupDocs.Editor for .NET?
+  - answer: Detailed documentation is available on the [GroupDocs.Editor for .NET
+      documentation site](https://tutorials.groupdocs.com/editor/net/).
+    question: Where can I find detailed documentation for GroupDocs.Editor for .NET?
+  - answer: You can get support through the [GroupDocs.Editor support forum](https://forum.groupdocs.com/c/editor/20).
+    question: What support options are available for GroupDocs.Editor for .NET?
+  type: FAQPage
 second_title: GroupDocs.Editor .NET API
-title: CSS tartalom kezelése előtaggal
+tags:
+- css handling
+- GroupDocs.Editor
+- .NET document processing
+- css prefix
+- api tutorial
+title: Hogyan kezeljük a CSS előtagot a GroupDocs.Editor for .NET-ben
 type: docs
 url: /hu/net/css-handling/handle-css-content-with-prefix/
 weight: 11
 ---
 
-# CSS tartalom kezelése előtaggal
+# Hogyan kezeljük a CSS előtagot a GroupDocs.Editor for .NET-ben
 
-Ebben az útmutatóban megtudja, **hogyan kezelje a css előtagot**, amikor egy dokumentumon belül stíluslapokkal dolgozik a GroupDocs.Editor for .NET használatával. Akár egy URL-t kell előtagként hozzáadnia képekhez, betűtípusokhoz vagy bármely külső erőforráshoz, az alábbi lépések pontosan megmutatják, hogyan **kezelje a css előtagot**, és hogyan **nyerje ki a css tartalmat** további feldolgozáshoz.
+Ebben az oktatóanyagban megtanulja, **hogyan kezelje a CSS előtagot**, amikor a dokumentumon belüli stíluslapokkal dolgozik a GroupDocs.Editor for .NET használatával. Akár URL-t kell előtagként hozzáadnia képekhez, betűtípusokhoz vagy bármely külső erőforráshoz, az alábbi lépések pontosan megmutatják, hogyan **kezelje a CSS előtagot**, és azt is, hogyan **vonja ki a CSS tartalmat** további feldolgozáshoz. A útmutató végére képes lesz átírni az erőforrás-útvonalakat, lekérni a nyers CSS karakterláncokat, és magabiztosan integrálni őket a webes munkafolyamatba.
 
 ## Gyors válaszok
-- **Mit jelent a „handle css prefix” kifejezés?** Egy egyedi URL előtag hozzáadása a CSS-ben hivatkozott külső erőforrásokhoz.  
+- **Mi jelent a „handle css prefix” kifejezés?** Egy egyedi URL előtag hozzáadása a CSS-ben hivatkozott külső erőforrásokhoz.  
 - **Melyik API metódus adja vissza a CSS stílusokat?** `EditableDocument.GetCssContent(...)`.  
-- **Szükségem van licencre?** Próbaverzió licenc elérhető; a gyártási környezethez kereskedelmi licenc szükséges.  
+- **Szükségem van licencre?** Próbaverzió licenc elérhető; kereskedelmi licenc szükséges a termeléshez.  
 - **Mely .NET verziók támogatottak?** .NET Framework 4.5+ és .NET Core/5/6.  
-- **Módosíthatom-e az előtagot futásidőben?** Igen – egyszerűen adjon át egy másik karakterláncot a `GetCssContent`-nek.  
+- **Módosíthatom az előtagot futásidőben?** Igen – egyszerűen adjon át egy másik karakterláncot a `GetCssContent`-nek.
 
-## Mi az a **handle css prefix**?
-A CSS erőforrásokra előtag alkalmazása átírja a képek, betűtípusok vagy egyéb eszközök útvonalait, hogy azok egy általunk irányított helyre mutassanak (pl. CDN vagy biztonságos szerver). Ez különösen hasznos, amikor egy dokumentumot exportálunk, és minden külső hivatkozásnak elérhetőnek kell lennie egy webalkalmazásból.
+## Mi a CSS előtag kezelése?
+A kifejezés arra utal, hogy a CSS-fájlban található képek, betűtípusok vagy bármely külső eszköz URL-jeit átírjuk, hogy egy általunk irányított helyre mutassanak, például egy CDN-re vagy egy biztonságos szerverre. Egy konzisztens alap URL előtag hozzáadásával biztosítható, hogy minden erőforrás helyesen töltődjön be, amikor a dokumentumot böngészőben vagy web‑alapú megjelenítőben renderelik.
 
-## Miért használja a GroupDocs.Editor-t a **extract css content**-hez?
-A GroupDocs.Editor képes beolvasni a WordProcessing dokumentumokba beágyazott eredeti CSS-t, megadja a nyers stíluslap karakterláncokat, és lehetővé teszi azok manipulálását a megjelenítés vagy mentés előtt. Ez megszünteti a kézi elemzés szükségességét, és garantálja, hogy a kinyert CSS megegyezik a dokumentum belső ábrázolásával.
+## Miért használja a GroupDocs.Editor-t a CSS tartalom kinyeréséhez?
+A GroupDocs.Editor képes beolvasni a WordProcessing dokumentumokba ágyazott eredeti CSS-t, visszaadni a nyers stíluslap karakterláncokat, és lehetővé teszi azok manipulálását a renderelés vagy mentés előtt. Ez megszünteti a kézi elemzést, garantálja a dokumentum belső ábrázolásának pontosságát, és támogat **30+ fájlformátumot**, miközben **500 MB**-ig terjedő fájlokat dolgoz fel anélkül, hogy az egész fájlt a memóriába töltené.
 
 ## Előfeltételek
-Mielőtt elkezdenénk, győződjön meg róla, hogy az alábbi előfeltételek teljesülnek:
+Mielőtt elkezdenénk, győződjön meg róla, hogy az alábbi előfeltételek rendelkezésre állnak:
 - Visual Studio: Szüksége lesz egy működő Visual Studio telepítésre.  
 - .NET Framework: Győződjön meg róla, hogy a .NET Framework telepítve van.  
-- GroupDocs.Editor for .NET: Letöltheti [itt](https://releases.groupdocs.com/editor/net/).  
-- Minta dokumentum: Készüljön egy szerkesztésre kész minta dokumentummal.  
+- GroupDocs.Editor for .NET: Letöltheti a [GroupDocs.Editor for .NET letöltési oldalról](https://releases.groupdocs.com/editor/net/).  
+- Minta dokumentum: Készüljön egy minta dokumentummal a szerkesztéshez.
 
 ## Névterek importálása
 Először importáljuk a szükséges névtereket, hogy a kódunk zökkenőmentesen fusson. Ez a lépés hozzáférést biztosít a GroupDocs.Editor alapvető osztályaihoz.
@@ -45,6 +86,7 @@ using GroupDocs.Editor.Options;
 ```
 
 ## 1. lépés: Az Editor inicializálása
+`Editor` osztály a belépési pont a dokumentumokkal való munkához a GroupDocs.Editor-ben. Kezeli a betöltési, szerkesztési és mentési műveleteket.  
 Az első lépés egy `Editor` példány létrehozása a minta dokumentummal. Ez beállítja a szerkesztési környezetet.
 
 ```csharp
@@ -53,7 +95,8 @@ using (Editor editor = new Editor("Your Sample Document", delegate { return new 
 ```
 
 ## 2. lépés: A dokumentum szerkesztése
-Ezután lekérjük az `EditableDocument` objektumot. Ez az objektum a fájl szerkeszthető változatát képviseli, és lehetővé teszi a belső részeivel való munkát.
+`EditableDocument` objektum a fájl szerkeszthető változatát képviseli, és hozzáférést biztosít a belső részeihez, például a CSS-hez, képekhez és HTML-hez.  
+Ezután lekérünk egy `EditableDocument` objektumot. Ez az objektum lehetővé teszi, hogy a dokumentum belső CSS-ével dolgozzunk.
 
 ```csharp
     using (EditableDocument document = editor.Edit(new WordProcessingEditOptions()))
@@ -61,15 +104,16 @@ Ezután lekérjük az `EditableDocument` objektumot. Ez az objektum a fájl szer
 ```
 
 ## 3. lépés: Külső előtagok beállítása
-Határozza meg a képek és betűtípusok URL előtagjait. Ezek az előtagok minden a CSS-ben található kép- és betűtípus hivatkozáshoz hozzáadódnak.
+Határozza meg a képek és betűtípusok URL előtagjait. Ezek az előtagok minden a CSS-ben található kép- és betűtípus hivatkozáshoz hozzá lesznek adva.
 
 ```csharp
         string externalImagesPrefix = "http://www.mywebsite.com/images/id=";
         string externalFontsPrefix = "http://www.mywebsite.com/fonts/id=";
 ```
 
-## 4. lépés: **Extract CSS content** előtagokkal
-Hívja meg a `GetCssContent` metódust, átadva a most definiált előtagokat. A metódus egy CSS stíluslap karakterláncok listáját adja vissza, amelyek már tartalmazzák a prefixel ellátott URL-eket.
+## 4. lépés: CSS tartalom kinyerése az előtagokkal
+`GetCssContent` egy CSS stíluslap karakterláncok gyűjteményét adja vissza, amelyek már tartalmazzák a megadott előtag URL-eket.  
+Hívja meg a `GetCssContent`-et, átadva a most definiált előtagokat. A metódus egy CSS stíluslap karakterláncok listáját adja vissza, amelyek már tartalmazzák az előtag URL-eket.
 
 ```csharp
         List<string> stylesheets = document.GetCssContent(externalImagesPrefix, externalFontsPrefix);
@@ -89,42 +133,46 @@ Hívja meg a `GetCssContent` metódust, átadva a most definiált előtagokat. A
 ```
 
 ## Gyakori problémák és megoldások
-- **Nem tér vissza stíluslap** – Győződjön meg róla, hogy a forrásdokumentum ténylegesen tartalmaz CSS-t (pl. egy Word dokumentum stílusos táblákkal vagy beágyazott HTML-lel).  
+- **Nem tér vissza stíluslap** – Győződjön meg róla, hogy a forrásdokumentum valóban tartalmaz CSS-t (pl. egy Word-dokumentum stílusos táblázatokkal vagy beágyazott HTML-lel).  
 - **Helytelen URL-ek** – Ellenőrizze, hogy az előtag karakterláncok a megfelelő elválasztóval (`/` vagy `=`) végződnek-e a szerver útvonalához.  
-- **Teljesítményproblémák** – Nagyon nagy dokumentumok esetén fontolja meg a stíluslapok kötegelt feldolgozását a magas memóriahasználat elkerülése érdekében.  
-
-## Következtetés
-A CSS tartalom előtaggal való kezelése a GroupDocs.Editor for .NET használatával egyszerű és hatékony. A lépések követésével **kezelheti a css előtagot**, kinyerheti a nyers CSS-t a **extract css content** segítségével, és zökkenőmentesen integrálhatja a külső erőforrásokat a webes munkafolyamatba. Fedezze fel a GroupDocs.Editor további funkcióit, például a HTML konverziót, képek kinyerését és dokumentumok egyesítését, hogy még nagyobb értéket nyerjen az API-ból.
+- **Teljesítményproblémák** – Nagyon nagy dokumentumok esetén fontolja meg a stíluslapok kötegelt feldolgozását a magas memóriahasználat elkerülése érdekében.
 
 ## Gyakran ismételt kérdések
-### Használhatom a GroupDocs.Editor for .NET-et más dokumentumformátumokkal?
-Igen, a GroupDocs.Editor for .NET számos dokumentumformátumot támogat, többek között PDF, Word, Excel és egyebek.
 
-### Elérhető ingyenes próbaverzió a GroupDocs.Editor for .NET-hez?
-Természetesen! Ingyenes próbaverzióját elindíthatja [itt](https://releases.groupdocs.com/).
+**Q: Használhatom a GroupDocs.Editor for .NET-et más dokumentumformátumokkal?**  
+A: Igen, a GroupDocs.Editor for .NET támogatja a PDF, Word, Excel, PowerPoint és számos egyéb formátumot.
 
-### Hogyan szerezhetek ideiglenes licencet a GroupDocs.Editor for .NET-hez?
-Ideiglenes licencet szerezhet [itt](https://purchase.groupdocs.com/temporary-license/).
+**Q: Elérhető ingyenes próba a GroupDocs.Editor for .NET-hez?**  
+A: Természetesen! Elindíthatja ingyenes próbáját a [GroupDocs ingyenes próbaoldalon](https://releases.groupdocs.com/).
 
-### Hol találhat részletes dokumentációt a GroupDocs.Editor for .NET-hez?
-Részletes dokumentáció elérhető [itt](https://tutorials.groupdocs.com/editor/net/).
+**Q: Hogyan szerezhetek ideiglenes licencet a GroupDocs.Editor for .NET-hez?**  
+A: Ideiglenes licencet a [temporary license page](https://purchase.groupdocs.com/temporary-license/) oldalról szerezhet.
 
-### Milyen támogatási lehetőségek állnak rendelkezésre a GroupDocs.Editor for .NET-hez?
-Támogatást kaphat [itt](https://forum.groupdocs.com/c/editor/20).
+**Q: Hol találhatok részletes dokumentációt a GroupDocs.Editor for .NET-hez?**  
+A: Részletes dokumentáció a [GroupDocs.Editor for .NET dokumentációs oldalon](https://tutorials.groupdocs.com/editor/net/) érhető el.
+
+**Q: Milyen támogatási lehetőségek állnak rendelkezésre a GroupDocs.Editor for .NET-hez?**  
+A: Támogatást kaphat a [GroupDocs.Editor támogatási fórumon](https://forum.groupdocs.com/c/editor/20).
 
 ## További gyakran ismételt kérdések
 
-**Q: Megváltoztathatom az előtagot a CSS kinyerése után?**  
+**Q: Módosíthatom az előtagot a CSS kinyerése után?**  
 A: Igen. Hívja meg újra a `GetCssContent`-et egy másik előtag karakterlánccal; a metódus mindig a futásidőben átadott értékeket használja.
 
 **Q: Működik ez jelszóval védett dokumentumok esetén?**  
-A: Igen. Adja meg a jelszót a `WordProcessingLoadOptions`-ban az `Editor` példány létrehozásakor.
+A: Igen. Adja meg a jelszót a `WordProcessingLoadOptions`-ben az `Editor` példány létrehozásakor.
 
-**Q: Lehetséges a módosított CSS-t visszaírni a dokumentumba?**  
-A: A GroupDocs.Editor jelenleg csak olvasási hozzáférést biztosít a CSS-hez. A változtatások megőrzéséhez a eredeti stíluslapot kell cserélni a dokumentum alapszintű XML API-jainak használatával.
+**Q: Lehetséges a módosított CSS-t vissza menteni a dokumentumba?**  
+A: A GroupDocs.Editor jelenleg csak olvasási hozzáférést biztosít a CSS-hez. A változtatások megőrzéséhez a dokumentum eredeti stíluslapját kell helyettesíteni a dokumentum alapszintű XML API-jain keresztül.
 
 ---
 
-**Utoljára frissítve:** 2026-03-06  
-**Tesztelve a következővel:** GroupDocs.Editor 23.12 for .NET  
+**Utolsó frissítés:** 2026-09-26  
+**Tesztelve:** GroupDocs.Editor 23.12 for .NET  
 **Szerző:** GroupDocs
+
+## Kapcsolódó oktatóanyagok
+
+- [Külső CSS kinyerése Word dokumentumokból a GroupDocs.Editor .NET használatával: Átfogó útmutató](/editor/net/html-web-documents/extract-external-css-word-docs-groupdocs-editor-dotnet/)
+- [HTML kinyerése és előtagolása Word dokumentumokból a GroupDocs.Editor .NET használatával](/editor/net/html-web-documents/groupdocs-editor-dotnet-extract-prefix-html-word-docs/)
+- [Hogyan nyerjünk ki és módosítsunk HTML tartalmat Word dokumentumokban a GroupDocs.Editor .NET használatával](/editor/net/html-web-documents/extract-modify-html-content-word-docs-groupdocs-editor-net/)

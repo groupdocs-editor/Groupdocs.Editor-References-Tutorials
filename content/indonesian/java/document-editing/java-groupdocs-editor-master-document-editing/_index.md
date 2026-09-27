@@ -1,31 +1,34 @@
 ---
-date: '2026-07-26'
-description: Pelajari cara membuat laporan Excel Java dan mengedit dokumen Word menggunakan
-  GroupDocs.Editor. Buat laporan Excel, sesuaikan templat Word, ekstrak font yang
-  disematkan, dan tingkatkan kinerja.
+date: '2026-09-26'
+description: Pelajari cara menghasilkan Excel di Java dengan GroupDocs.Editor, mengedit
+  templat Word, mengekstrak font yang disematkan, dan mengoptimalkan kinerja untuk
+  dokumen besar.
+images:
+- /java/document-editing/java-groupdocs-editor-master-document-editing/og-image.png
 keywords:
+- how to generate excel
+- how to disable pagination
+- edit word document java
 - generate excel report java
 - customize word template java
 - extract embedded fonts word
-lastmod: '2026-07-26'
-og_description: Buat laporan Excel Java menggunakan GroupDocs.Editor. Pelajari cara
-  mengedit templat Word, mengekstrak font yang disematkan, dan mengoptimalkan kinerja
-  dalam aplikasi Java.
-og_image_alt: Guide to generating Excel reports and editing Word documents in Java
-  with GroupDocs.Editor
-og_title: Buat Laporan Excel Java dengan GroupDocs.Editor – Edit Word & Excel
+lastmod: '2026-09-26'
+og_description: Cara menghasilkan Excel di Java dengan GroupDocs.Editor. Panduan ini
+  menunjukkan cara mengisi templat Excel, menyesuaikan kontrak Word, mengekstrak font,
+  dan mengoptimalkan kinerja untuk file besar dalam aplikasi Java.
+og_image_alt: 'Guide: how to generate excel in Java using GroupDocs.Editor and edit
+  Word documents'
+og_title: Cara menghasilkan Excel di Java dengan GroupDocs.Editor
 schemas:
 - author: GroupDocs
-  dateModified: '2026-07-26'
-  description: Learn how to generate excel report java and edit word documents using
-    GroupDocs.Editor. Create Excel reports, customize Word templates, extract embedded
-    fonts, and boost performance.
-  headline: Generate Excel Report Java and Edit Word Files in Java with GroupDocs.Editor
+  dateModified: '2026-09-26'
+  description: Learn how to generate excel in Java with GroupDocs.Editor, edit Word
+    templates, extract embedded fonts, and boost performance.
+  headline: How to generate excel in Java and edit Word files with GroupDocs.Editor
   type: TechArticle
-- description: Learn how to generate excel report java and edit word documents using
-    GroupDocs.Editor. Create Excel reports, customize Word templates, extract embedded
-    fonts, and boost performance.
-  name: Generate Excel Report Java and Edit Word Files in Java with GroupDocs.Editor
+- description: Learn how to generate excel in Java with GroupDocs.Editor, edit Word
+    templates, extract embedded fonts, and boost performance.
+  name: How to generate excel in Java and edit Word files with GroupDocs.Editor
   steps:
   - name: '**Dispose objects promptly** – call `dispose()` on `EditableDocument` and
       `Editor` as soon as you’re done.'
@@ -62,44 +65,42 @@ schemas:
     question: Do I need a license for production use?
   type: FAQPage
 tags:
-- generate excel report
+- how to generate excel
 - GroupDocs.Editor
 - Java document editing
 - Word template automation
 - Excel report automation
-title: Buat Laporan Excel Java dan Edit File Word di Java dengan GroupDocs.Editor
+title: Cara menghasilkan Excel di Java dengan GroupDocs.Editor
 type: docs
 url: /id/java/document-editing/java-groupdocs-editor-master-document-editing/
 weight: 1
 ---
 
-# Buat Laporan Excel Java dan Edit File Word di Java dengan GroupDocs.Editor
+# Cara menghasilkan excel di Java dengan GroupDocs.Editor
 
-Dalam panduan komprehensif ini Anda akan belajar **how to generate excel report java** dan mengedit dokumen Word secara programatis menggunakan GroupDocs.Editor. Baik Anda perlu mengisi templat Excel, menyesuaikan kontrak Word, atau mengekstrak font yang disematkan untuk rendering yang sempurna, kami akan membimbing Anda melalui setiap langkah, menjelaskan mengapa setiap pengaturan penting, dan menunjukkan pola yang ramah kinerja untuk file besar.
+Dalam panduan komprehensif ini Anda akan belajar **cara menghasilkan excel di Java** dan mengedit dokumen Word secara programatis menggunakan GroupDocs.Editor. Baik Anda perlu mengisi templat Excel, menyesuaikan kontrak Word, atau mengekstrak font yang disematkan untuk rendering yang sempurna, kami akan membimbing Anda melalui setiap langkah, menjelaskan mengapa setiap pengaturan penting, dan menunjukkan pola yang ramah kinerja untuk file besar.
 
 ## Pendahuluan
-Mengotomatiskan pembuatan dan modifikasi dokumen adalah fondasi aplikasi Java modern. Dengan menghasilkan laporan Excel secara dinamis, menyesuaikan templat Word per pengguna, dan mengekstrak font untuk mempertahankan kesetiaan visual, Anda dapat menghilangkan pekerjaan manual, mengurangi kesalahan, dan mempercepat waktu‑ke‑nilai. GroupDocs.Editor untuk Java menyediakan satu API berperforma tinggi yang mendukung **50+** format input dan output serta dapat memproses workbook ratusan halaman tanpa memuat seluruh file ke memori. Tutorial ini menunjukkan secara tepat cara memanfaatkan kemampuan tersebut.
+Mengotomatiskan pembuatan dan modifikasi dokumen merupakan fondasi aplikasi Java modern. Dengan menghasilkan laporan Excel secara dinamis, menyesuaikan templat Word per pengguna, dan mengekstrak font untuk mempertahankan kesetiaan visual, Anda dapat menghilangkan pekerjaan manual, mengurangi kesalahan, dan mempercepat waktu‑ke‑nilai. GroupDocs.Editor untuk Java menyediakan satu API berperforma tinggi yang mendukung **50+** format input dan output serta dapat memproses buku kerja ratusan halaman tanpa memuat seluruh file ke memori. Tutorial ini menunjukkan secara tepat cara memanfaatkan kemampuan tersebut.
 
-## Jawaban Cepat
-- **Perpustakaan apa yang memungkinkan generate excel report java?** GroupDocs.Editor untuk Java.  
-- **Bisakah saya mengedit satu lembar kerja Excel tanpa memuat seluruh workbook?** Ya—gunakan `SpreadsheetEditOptions.setWorksheetIndex()`.  
+## Jawaban cepat
+- **Perpustakaan apa yang memungkinkan cara menghasilkan excel di Java?** GroupDocs.Editor untuk Java.  
+- **Apakah saya dapat mengedit satu lembar kerja Excel tanpa memuat seluruh buku kerja?** Ya—gunakan `SpreadsheetEditOptions.setWorksheetIndex()`.  
 - **Bagaimana cara mengekstrak semua font yang disematkan dari dokumen Word?** Setel `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)`.  
-- **Apa praktik terbaik untuk optimalisasi kinerja Java saat menangani file besar?** Buang objek `EditableDocument` dan `Editor` segera setelah selesai, gunakan kembali opsi pemuatan, dan nonaktifkan pagination untuk file Word.  
+- **Apa praktik terbaik untuk optimasi kinerja Java saat menangani file besar?** Buang objek `EditableDocument` dan `Editor` segera, gunakan kembali opsi pemuatan, dan nonaktifkan pagination untuk file Word.  
 - **Apakah lisensi diperlukan untuk penggunaan produksi?** Lisensi penuh GroupDocs.Editor membuka semua fitur dan menghapus batas evaluasi.
 
 ## Apa itu generate excel report java?
-**Generate excel report java** mengacu pada proses membuat atau memperbarui workbook Excel secara programatis dari aplikasi Java. Dengan GroupDocs.Editor Anda dapat memuat templat, mengganti placeholder, dan menyimpan hasil—semua tanpa Microsoft Office terpasang. Ia mendukung format .xlsx dan .xls, memungkinkan Anda mempertahankan formula, gaya, dan validasi data, serta dapat menargetkan lembar kerja tertentu untuk meminimalkan penggunaan memori.
+**Generate excel report java** adalah proses membuat atau memperbarui buku kerja Excel secara programatis dari aplikasi Java. Dengan GroupDocs.Editor Anda dapat memuat templat, mengganti placeholder, dan menyimpan hasilnya—semua tanpa Microsoft Office terpasang. Ia mendukung format .xlsx dan .xls, mempertahankan rumus, gaya, dan validasi data, serta dapat menargetkan lembar kerja tertentu untuk meminimalkan penggunaan memori.
 
 ## Mengapa mengedit file Excel dan Word di Java?
-Mengedit dokumen langsung dari Java memungkinkan Anda membangun alur kerja end‑to‑end: menghasilkan faktur, memperbarui kontrak, atau membuat dasbor dinamis tanpa intervensi manual. GroupDocs.Editor dapat **generate excel report java**, mengekstrak font, dan **disable pagination word** untuk menjaga penggunaan memori tetap rendah, sehingga Anda dapat melayani ribuan permintaan per menit pada perangkat keras server standar.
+Mengedit dokumen langsung dari Java memungkinkan Anda membangun alur kerja end‑to‑end: menghasilkan faktur, memperbarui kontrak, atau membuat dasbor dinamis tanpa intervensi manual. GroupDocs.Editor dapat **generate excel report java**, mengekstrak font, dan **disable pagination word** untuk menjaga penggunaan memori tetap rendah, memungkinkan Anda melayani ribuan permintaan per menit pada perangkat keras server standar.
 
 ## Prasyarat
-Sebelum memulai, pastikan Anda memiliki:
-
 - **GroupDocs.Editor untuk Java** (versi 25.3 atau lebih baru).  
 - **Java Development Kit (JDK)** 8 atau lebih tinggi.  
 - IDE seperti IntelliJ IDEA atau Eclipse.  
-- Familiaritas dasar dengan sintaks Java serta alat build Maven/Gradle.
+- Pemahaman dasar tentang sintaks Java dan alat build Maven/Gradle.
 
 ## Menyiapkan GroupDocs.Editor untuk Java
 Untuk mengintegrasikan GroupDocs.Editor ke dalam proyek Anda, ikuti langkah‑langkah berikut:
@@ -124,22 +125,26 @@ Tambahkan berikut ke file `pom.xml` Anda:
 </dependencies>
 ```  
 
-**Direct Download**  
-Sebagai alternatif, unduh perpustakaan dari [rilis GroupDocs.Editor untuk Java](https://releases.groupdocs.com/editor/java/).
+**Unduhan langsung**  
+Sebagai alternatif, unduh pustaka dari [GroupDocs.Editor untuk rilis Java](https://releases.groupdocs.com/editor/java/).
 
-### Akuisisi Lisensi
-- **Free Trial** – mulai menjelajahi fitur tanpa komitmen.  
-- **Temporary License** – perpanjang masa evaluasi bila diperlukan.  
-- **Full License** – disarankan untuk penggunaan produksi guna membuka semua kemampuan dan menerima dukungan.
+### Akuisisi lisensi
+- **Free trial** – mulai menjelajahi fitur tanpa komitmen.  
+- **Temporary license** – perpanjang waktu evaluasi jika diperlukan.  
+- **Full license** – direkomendasikan untuk penggunaan produksi guna membuka semua kemampuan dan menerima dukungan.
 
 ## Bagaimana cara mengedit dokumen Word di Java?
-Muat file DOCX Anda, terapkan opsi khusus, dan simpan perubahan—semua dalam beberapa baris kode. Kelas `EditableDocument` mewakili model Word dalam memori, sementara kelas `Editor` mengatur proses pemuatan dan penyimpanan. Anda dapat memodifikasi teks, gambar, tabel, dan gaya, lalu mengekspor dokumen ke format DOCX, PDF, atau HTML.
 
-### Muat dan Edit Dokumen Pengolahan Kata dengan Opsi Default
-`WordProcessingLoadOptions` menentukan cara dokumen Word dimuat, seperti mempertahankan format dan metadata.
+Muat file DOCX Anda, terapkan opsi khusus, dan simpan perubahan—semua dalam beberapa baris kode. Kelas `EditableDocument` mewakili model Word dalam memori, sementara kelas `Editor` mengatur proses memuat dan menyimpan. Anda dapat memodifikasi teks, gambar, tabel, dan gaya, lalu mengekspor dokumen ke format DOCX, PDF, atau HTML.
 
-**Jawaban langsung:** Muat DOCX dengan pengaturan default dengan membuat instance `Editor`, memanggil `load()` dengan `WordProcessingLoadOptions`, mengedit `EditableDocument` yang dikembalikan, dan akhirnya memanggil `save()` untuk menyimpan perubahan. Pendekatan ini hanya memerlukan tiga pemanggilan metode dan bekerja untuk sebagian besar skenario sederhana.
+**Jawaban langsung:** Buat instance `Editor`, muat DOCX dengan `WordProcessingLoadOptions`, edit `EditableDocument` yang dikembalikan (misalnya, ganti placeholder), kemudian panggil `save()` dengan format output yang diinginkan. Alur tiga langkah ini menangani edit Word sederhana maupun kompleks sambil menjaga penggunaan memori tetap rendah.
 
+Kelas `EditableDocument` adalah representasi dalam memori dari file Word yang dapat Anda baca atau tulis. Kelas `Editor` mengelola siklus hidup memuat, mengedit, dan menyimpan dokumen.
+
+### Muat dan edit dokumen pemrosesan Word dengan opsi default
+`WordProcessingLoadOptions` menentukan cara memuat dokumen Word, seperti mempertahankan format dan metadata.
+
+**Jawaban langsung:** Gunakan `new Editor()` dan panggil `load("template.docx", new WordProcessingLoadOptions())` untuk memperoleh `EditableDocument`, ubah kontennya, dan akhirnya panggil `save("output.docx", SaveFormat.Docx)`. Pendekatan opsi default ini bekerja untuk kebanyakan skenario edit sederhana.
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.EditableDocument;
@@ -154,11 +159,12 @@ defaultWordProcessingDoc.dispose();
 editor1.dispose();
 ```  
 
-### Edit Dokumen Pengolahan Kata dengan Opsi Kustom
+### Edit dokumen pemrosesan Word dengan opsi khusus
 `WordProcessingEditOptions` memungkinkan penyesuaian perilaku pengeditan, termasuk pagination dan ekstraksi font.
 
-**Jawaban langsung:** Untuk meningkatkan kinerja dan mengekstrak font, konfigurasikan `WordProcessingEditOptions`—nonaktifkan pagination, aktifkan metadata bahasa, dan setel ekstraksi font ke `ExtractAllEmbedded`. Kemudian muat, edit, dan simpan seperti sebelumnya; opsi kustom akan diterapkan secara otomatis.
+**Jawaban langsung:** Inisialisasi `WordProcessingEditOptions`, setel `setEnablePagination(false)` untuk mematikan pagination, aktifkan metadata bahasa dengan `setEnableLanguageInfo(true)`, dan pilih `FontExtractionOptions.ExtractAllEmbedded` untuk mengambil semua font yang disematkan. Kirimkan objek opsi ini ke `Editor.edit()` sebelum menyimpan.
 
+Kelas `WordProcessingEditOptions` memungkinkan Anda menyesuaikan proses pengeditan, misalnya dengan menonaktifkan pagination untuk mempercepat penanganan dokumen besar atau mengekstrak font untuk rendering yang akurat.
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.EditableDocument;
@@ -180,9 +186,10 @@ editableDoc.dispose();
 editor1.dispose();
 ```  
 
-### Edit Dokumen Pengolahan Kata dengan Konfigurasi Lain
-**Jawaban langsung:** Anda juga dapat menggunakan shortcut konstruktor `WordProcessingEditOptions` untuk mengaktifkan informasi bahasa dan ekstraksi font dalam satu baris, menyederhanakan kode sambil tetap mempertahankan kontrol penuh.
+### Edit dokumen pemrosesan Word dengan konfigurasi lain
+**Jawaban langsung:** Anda dapat membuat `WordProcessingEditOptions` dalam satu baris—`new WordProcessingEditOptions(true, FontExtractionOptions.ExtractAllEmbedded)`—untuk mengaktifkan informasi bahasa dan mengekstrak semua font, kemudian lanjutkan alur load‑edit‑save biasa.
 
+Konstruktor singkat `WordProcessingEditOptions` mengurangi boilerplate sambil tetap memberi Anda kontrol penuh atas pagination, bahasa, dan ekstraksi font.
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.EditableDocument;
@@ -202,13 +209,17 @@ editor1.dispose();
 ```  
 
 ## Bagaimana cara menghasilkan laporan Excel di Java?
-GroupDocs.Editor memungkinkan Anda menargetkan lembar kerja tertentu, mengganti placeholder, dan menyimpan hasil, menjadikannya ideal untuk skenario **generate excel report java** di mana Anda hanya perlu memodifikasi satu tab dari workbook besar. Ia juga mempertahankan formula, diagram, dan format sel, serta mendukung file .xlsx dan .xls, memungkinkan integrasi mulus dengan pipeline pelaporan yang ada.
 
-### Muat dan Edit Dokumen Spreadsheet (Tab Pertama)
+GroupDocs.Editor memungkinkan Anda menargetkan lembar kerja tertentu, mengganti placeholder, dan menyimpan hasilnya, menjadikannya ideal untuk skenario **how to generate excel** di mana Anda hanya perlu memodifikasi satu tab dari buku kerja besar. Ia juga mempertahankan rumus, diagram, dan format sel, serta mendukung file .xlsx dan .xls, memungkinkan integrasi mulus dengan pipeline pelaporan yang ada.
+
+**Jawaban langsung:** Setel `SpreadsheetEditOptions.setWorksheetIndex(0)` (atau indeks berbasis nol lainnya) untuk fokus pada lembar yang diinginkan, muat buku kerja dengan `new Editor().load("report.xlsx", new SpreadsheetLoadOptions())`, ganti placeholder melalui API `EditableDocument`, dan akhirnya panggil `save("report‑filled.xlsx", SaveFormat.Xlsx)`. Ini mengisolasi lembar target, mengurangi konsumsi memori hingga 60 %.
+
+Kelas `SpreadsheetEditOptions` mengontrol lembar kerja mana yang dimuat dan diedit, memungkinkan Anda bekerja dengan satu tab sementara sisanya tetap tidak tersentuh.
+
+### Muat dan edit dokumen spreadsheet (tab pertama)
 `SpreadsheetEditOptions` mengontrol pengaturan pengeditan Excel seperti lembar kerja mana yang akan dimuat.
 
-**Jawaban langsung:** Setel `SpreadsheetEditOptions.setWorksheetIndex(0)` untuk mengedit lembar kerja pertama, lalu muat, ubah sel, dan simpan. Ini menghindari pemuatan tab lain, mengurangi konsumsi memori hingga 60 % untuk laporan multi‑sheet tipikal.
-
+**Jawaban langsung:** Panggil `options.setWorksheetIndex(0)` untuk mengedit lembar kerja pertama, kemudian muat, ubah sel, dan simpan. Pendekatan ini menghindari pemuatan tab lain dan mempercepat pemrosesan buku kerja besar.
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.EditableDocument;
@@ -228,9 +239,8 @@ editableDoc.dispose();
 editor2.dispose();
 ```  
 
-### Muat dan Edit Dokumen Spreadsheet (Tab Kedua)
+### Muat dan edit dokumen spreadsheet (tab kedua)
 **Jawaban langsung:** Ubah indeks lembar kerja menjadi `1` untuk mengedit tab kedua. Alur edit‑save yang sama berlaku, memungkinkan Anda menggunakan kembali kode yang sama untuk bagian laporan yang berbeda.
-
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.EditableDocument;
@@ -250,55 +260,53 @@ editableDoc.dispose();
 editor2.dispose();
 ```  
 
-## Aplikasi Praktis
-- **Generasi Laporan Otomatis** – isi templat Excel dengan data dari basis data untuk **generate excel report java** pada dasbor kinerja bulanan.  
-- **Kustomisasi Templat** – ubah kontrak atau faktur Word secara dinamis berdasarkan input pengguna, mencapai kemampuan **customize word template java**.  
-- **Konsolidasi Data** – gabungkan data dari beberapa spreadsheet tanpa memuat seluruh workbook, meningkatkan **performance optimization Java**.  
-- **Integrasi CRM** – secara otomatis perbarui dokumen pelanggan yang disimpan dalam sistem CRM, menjaga konsistensi data di seluruh platform.
+## Aplikasi praktis
+- **Pembuatan laporan otomatis** – isi templat Excel dengan data dari basis data untuk **generate excel report java** bagi dasbor kinerja bulanan.  
+- **Kustomisasi templat** – modifikasi kontrak atau faktur Word secara dinamis berdasarkan input pengguna, mencapai kemampuan **customize word template java**.  
+- **Konsolidasi data** – gabungkan data dari beberapa spreadsheet tanpa memuat seluruh buku kerja, meningkatkan **performance optimisation Java**.  
+- **Integrasi CRM** – secara otomatis memperbarui dokumen pelanggan yang disimpan dalam sistem CRM, menjaga konsistensi data di seluruh platform.
 
-## Pertimbangan Kinerja
-Agar aplikasi Java Anda tetap responsif saat bekerja dengan dokumen besar:
+## Pertimbangan kinerja
+Untuk menjaga aplikasi Java Anda tetap responsif saat bekerja dengan dokumen besar:
 
-1. **Buang objek segera** – panggil `dispose()` pada `EditableDocument` dan `Editor` begitu selesai.  
+1. **Buang objek segera** – panggil `dispose()` pada `EditableDocument` dan `Editor` segera setelah selesai.  
 2. **Gunakan kembali opsi pemuatan** – buat satu instance `WordProcessingLoadOptions` atau `SpreadsheetLoadOptions` dan berikan ke beberapa editor.  
 3. **Target lembar kerja spesifik** – mengedit hanya tab yang diperlukan mengurangi jejak memori (lihat contoh **how to edit excel** di atas).  
-4. **Hindari pagination yang tidak perlu** – menonaktifkan pagination (`setEnablePagination(false)`) mempercepat pemrosesan untuk file Word besar (**disable pagination word**).  
+4. **Hindari pagination yang tidak diperlukan** – menonaktifkan pagination (`setEnablePagination(false)`) mempercepat pemrosesan file Word besar (**disable pagination word**).  
 
-Klaim terkuantifikasi: Dengan teknik ini, GroupDocs.Editor memproses dokumen Word 300‑halaman dalam kurang dari 4 detik dan workbook Excel 200‑lembar dalam kurang dari 6 detik pada server 8‑core standar.
+**Klaim terkuantifikasi:** Dengan teknik ini, GroupDocs.Editor memproses dokumen Word 300‑halaman dalam kurang dari 4 detik dan buku kerja Excel 200‑lembar dalam kurang dari 6 detik pada server 8‑core tipikal.
 
-## Masalah Umum dan Solusinya
+## Masalah umum dan solusi
 | Masalah | Solusi |
 |-------|----------|
-| **OutOfMemoryError pada file besar** | Pastikan Anda **disable pagination word** dan edit hanya lembar kerja yang diperlukan. |
-| **Font tidak muncul setelah edit** | Gunakan `FontExtractionOptions.ExtractAllEmbedded` untuk menarik semua font yang disematkan. |
-| **Pengecualian lisensi** | Verifikasi bahwa file lisensi GroupDocs.Editor yang valid ditempatkan di classpath aplikasi. |
-| **Lembar kerja yang salah diedit** | Periksa kembali indeks yang diberikan ke `setWorksheetIndex()`; indeks dimulai dari 0. |
+| **OutOfMemoryError on large files** | Pastikan Anda **disable pagination word** dan edit hanya lembar kerja yang diperlukan. |
+| **Fonts not appearing after edit** | Gunakan `FontExtractionOptions.ExtractAllEmbedded` untuk mengambil semua font yang disematkan. |
+| **License exception** | Verifikasi bahwa file lisensi GroupDocs.Editor yang valid ditempatkan di classpath aplikasi. |
+| **Incorrect worksheet edited** | Periksa kembali indeks yang diberikan ke `setWorksheetIndex()`; indeks dimulai dari 0. |
 
-## Pertanyaan yang Sering Diajukan
+## Pertanyaan yang sering diajukan
 
-**T: Apakah GroupDocs.Editor kompatibel dengan semua format Word?**  
-J: Ya, ia mendukung DOCX, DOCM, DOC, RTF, HTML, dan lebih dari 30 format lainnya.
+**Q: Apakah GroupDocs.Editor kompatibel dengan semua format Word?**  
+A: Ya, ia mendukung DOCX, DOCM, DOC, RTF, HTML, dan lebih dari 30 format lainnya.
 
-**T: Bisakah saya mengedit file Excel tanpa memuat seluruh workbook ke memori?**  
-J: Tentu saja. Dengan menyetel `SpreadsheetEditOptions.setWorksheetIndex()` Anda hanya mengedit tab yang dipilih, yang ideal untuk tugas **how to edit excel**.
+**Q: Apakah saya dapat mengedit file Excel tanpa memuat seluruh buku kerja ke memori?**  
+A: Tentu saja. Dengan mengatur `SpreadsheetEditOptions.setWorksheetIndex()` Anda mengedit hanya tab yang dipilih, yang ideal untuk tugas **how to edit excel**.
 
-**T: Bagaimana cara mengekstrak semua font yang disematkan dari dokumen Word?**  
-J: Gunakan `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)` seperti yang ditunjukkan pada contoh opsi kustom.
+**Q: Bagaimana cara mengekstrak semua font yang disematkan dari dokumen Word?**  
+A: Gunakan `WordProcessingEditOptions.setFontExtraction(FontExtractionOptions.ExtractAllEmbedded)` seperti yang ditunjukkan dalam contoh opsi khusus.
 
-**T: Apa praktik terbaik untuk optimalisasi kinerja Java saat menangani dokumen besar?**  
-J: Buang objek `EditableDocument` dan `Editor` segera, targetkan lembar kerja spesifik, gunakan kembali opsi pemuatan, dan **disable pagination word** bila tidak diperlukan.
+**Q: Apa praktik terbaik untuk optimasi kinerja Java saat menangani dokumen besar?**  
+A: Buang objek `EditableDocument` dan `Editor` segera, targetkan lembar kerja spesifik, gunakan kembali opsi pemuatan, dan **disable pagination word** ketika tidak diperlukan.
 
-**T: Apakah saya memerlukan lisensi untuk penggunaan produksi?**  
-J: Ya, lisensi penuh GroupDocs.Editor membuka semua fitur, menghapus batas evaluasi, dan menyediakan dukungan resmi.
+**Q: Apakah saya memerlukan lisensi untuk penggunaan produksi?**  
+A: Ya, lisensi penuh GroupDocs.Editor membuka semua fitur, menghapus batas evaluasi, dan menyediakan dukungan resmi.
 
----
+**Terakhir diperbarui:** 2026-09-26  
+**Diuji dengan:** GroupDocs.Editor 25.3 untuk Java  
+**Penulis:** GroupDocs  
 
-**Terakhir Diperbarui:** 2026-07-26  
-**Diuji Dengan:** GroupDocs.Editor 25.3 untuk Java  
-**Penulis:** GroupDocs
+## Tutorial terkait
 
-## Tutorial Terkait
-
-- [Buat Worksheet yang Dapat Diedit Java dengan GroupDocs.Editor – Menguasai Pengeditan Tab Excel](/editor/java/spreadsheet-documents/master-excel-tab-editing-java-groupdocs-editor/)
-- [Edit Dokumen Word Java: Muat, Edit & Ekstrak CSS dengan GroupDocs.Editor](/editor/java/word-processing-documents/groupdocs-editor-java-word-doc-edit-extract-css/)
-- [Edit Dokumen Word Java – Fitur Lanjutan GroupDocs.Editor](/editor/java/advanced-features/)
+- [Buat lembar kerja yang dapat diedit Java dengan GroupDocs.Editor – menguasai pengeditan tab Excel](/editor/java/spreadsheet-documents/master-excel-tab-editing-java-groupdocs-editor/)
+- [Edit dokumen Word Java: muat, edit & ekstrak CSS dengan GroupDocs.Editor](/editor/java/word-processing-documents/groupdocs-editor-java-word-doc-edit-extract-css/)
+- [Edit dokumen Word Java – fitur lanjutan GroupDocs.Editor](/editor/java/advanced-features/)

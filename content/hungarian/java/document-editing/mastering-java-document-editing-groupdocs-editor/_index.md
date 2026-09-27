@@ -1,29 +1,32 @@
 ---
-date: '2026-07-26'
-description: Ismerje meg, hogyan batch edit Word dokumentumokat Java-ban a GroupDocs.Editor
-  használatával, amely a vezető együttműködő dokumentumszerkesztő könyvtár az automatizált
+date: '2026-09-26'
+description: Hogyan lehet tömegesen szerkeszteni Word dokumentumokat Java-ban a GroupDocs.Editor
+  segítségével, a vezető együttműködő dokumentumszerkesztő könyvtár az automatizált
   feldolgozáshoz.
+images:
+- /java/document-editing/mastering-java-document-editing-groupdocs-editor/og-image.png
 keywords:
-- collaborative document editing
+- how to batch edit
 - edit docx java
-- batch update word docs
-lastmod: '2026-07-26'
-og_description: A GroupDocs.Editor-rel végzett együttműködő dokumentumszerkesztés
-  lehetővé teszi a Word fájlok batch edit hatékony módon Java-ban. Ismerje meg a beállítást,
-  a kódot és a legjobb gyakorlatokat.
-og_image_alt: Guide to batch edit Word documents using GroupDocs.Editor in Java
-og_title: Együttműködő dokumentumszerkesztés – batch edit Word Docs Java-ban
+- convert word pdf java
+- java document editing library
+lastmod: '2026-09-26'
+og_description: Hogyan lehet tömegesen szerkeszteni Word dokumentumokat Java-ban a
+  GroupDocs.Editor segítségével. Ismerje meg a lépésről‑lépésre beállítást, kódrészleteket,
+  teljesítmény‑tippeket és a valós példákat az automatizált dokumentumfeldolgozáshoz.
+og_image_alt: 'Developer guide: batch edit Word docs in Java using GroupDocs.Editor'
+og_title: Hogyan lehet tömegesen szerkeszteni Word dokumentumokat Java-ban a GroupDocs.Editor
+  segítségével
 schemas:
 - author: GroupDocs
-  dateModified: '2026-07-26'
-  description: Learn how to batch edit Word documents in Java using GroupDocs.Editor,
-    the leading collaborative document editing library for automated processing.
-  headline: 'Collaborative Document Editing: Batch Edit Word Documents in Java with
-    GroupDocs.Editor'
+  dateModified: '2026-09-26'
+  description: How to batch edit Word documents in Java with GroupDocs.Editor, the
+    leading collaborative document editing library for automated processing.
+  headline: How to batch edit Word docs in Java with GroupDocs.Editor
   type: TechArticle
-- description: Learn how to batch edit Word documents in Java using GroupDocs.Editor,
-    the leading collaborative document editing library for automated processing.
-  name: 'Collaborative Document Editing: Batch Edit Word Documents in Java with GroupDocs.Editor'
+- description: How to batch edit Word documents in Java with GroupDocs.Editor, the
+    leading collaborative document editing library for automated processing.
+  name: How to batch edit Word docs in Java with GroupDocs.Editor
   steps:
   - name: Initialize the Editor
     text: '`Editor` is the core class that orchestrates loading, editing, and saving
@@ -63,34 +66,34 @@ tags:
 - collaborative document editing
 - GroupDocs.Editor
 - Java document processing
-title: 'Együttműködő dokumentumszerkesztés: batch edit Word dokumentumok Java-ban
-  a GroupDocs.Editor segítségével'
+title: Hogyan lehet tömegesen szerkeszteni Word dokumentumokat Java-ban a GroupDocs.Editor
+  segítségével
 type: docs
 url: /hu/java/document-editing/mastering-java-document-editing-groupdocs-editor/
 weight: 1
 ---
 
-# Együttműködő dokumentumszerkesztés: Word dokumentumok kötegelt szerkesztése Java-val a GroupDocs.Editor segítségével
+# Hogyan végezzünk kötegelt szerkesztést Word dokumentumokon Java-val a GroupDocs.Editor segítségével
+
+A modern fejlesztési folyamatokban a **collaborative document editing** elengedhetetlen képesség—legyen szó számlák generálásáról, szerződések frissítéséről vagy a tudásbázis szinkronban tartásáról. A **How to batch edit** Word dokumentumok Java-ban a GroupDocs.Editor használatával lehetővé teszi, hogy programozottan alkalmazzunk revíziókat, egyesítsük a tartalmat, és elmentsük az eredményeket a Microsoft Word megnyitása nélkül. Ez az útmutató végigvezet a teljes munkafolyamaton, a projekt beállításától a több tucat fájl feldolgozásáig, így percek alatt automatizálhatod a szövegszerkesztést.
 
 ## Gyors válaszok
-- **Mi a jelentése az együttműködő dokumentumszerkesztésnek?** Lehetővé teszi, hogy több felhasználó vagy automatizált folyamat programozottan módosítsa a dokumentumot, a változtatásokat manuális beavatkozás nélkül egyesítve.  
-- **Melyik könyvtárat használjam a docx Java szerkesztéséhez?** A GroupDocs.Editor for Java a legteljesebb funkciókészletet biztosítja.  
-- **Szükségem van licencre a kipróbáláshoz?** Igen – a GroupDocs ingyenes próbalicencet kínál értékeléshez.  
-- **Automatizálhatom a Word feldolgozást ezzel a könyvtárral?** Természetesen; betöltheti, módosíthatja és mentheti a dokumentumokat automatizált munkafolyamatokban.  
+- **Mit jelent a collaborative document editing?** Lehetővé teszi, hogy több felhasználó vagy automatizált folyamat programozottan módosítsa a dokumentumot, a változtatásokat manuális erőfeszítés nélkül egyesítve.  
+- **Melyik könyvtárat kell használnom a docx Java szerkesztéséhez?** A GroupDocs.Editor for Java a legteljesebb funkciókészletet biztosítja.  
+- **Szükségem van licencre a kipróbáláshoz?** Igen— a GroupDocs ingyenes próbaverzió licencet kínál értékeléshez.  
+- **Automatizálhatom a szövegszerkesztést ezzel a könyvtárral?** Természetesen; betöltheted, módosíthatod és mentheted a dokumentumokat automatizált munkafolyamatokban.  
 - **Milyen Java verzió szükséges?** JDK 8 vagy újabb.
 
-## Mi az együttműködő dokumentumszerkesztés Java-ban?
+## Mi a collaborative document editing Java-ban?
+A collaborative document editing Java-ban azt jelenti, hogy betöltünk egy Word fájlt, programozott változtatásokat alkalmazunk, revíziókat követünk, és elmentjük a frissített verziót—mindezt asztali Office telepítés nélkül. A GroupDocs.Editor egy tiszta Java API-t biztosít, amely kezeli a DOCX, ODT és egyéb formátumokat, lehetővé téve a kötegelt frissítéseket és a valós idejű együttműködést a szolgáltatások között.
 
-Töltsön be és mentse el a Word fájlt, miközben programozott módosításokat, verziókövetést és tartalomösszevonást alkalmaz—ez az együttműködő dokumentumszerkesztés Java-ban. A GroupDocs.Editor segítségével szerkeszthet DOCX, ODT és más formátumokat a Microsoft Word nélkül, lehetővé téve a kötegelt frissítéseket és a valós idejű együttműködést a szolgáltatások között.
-
-## Miért válasszon Java dokumentumszerkesztő könyvtárat az együttműködő dokumentumszerkesztéshez?
-
-A GroupDocs.Editor **teljes körű szerkesztést** biztosít több mint 30 dokumentumformátumhoz, nagy fájlokat streamel, hogy alacsony memóriahasználatot tartson, és natív Java API-t kínál, amely közvetlenül integrálható a Spring, Hibernate vagy bármely egyedi szolgáltatásba. A benchmarkok azt mutatják, hogy egy 200 oldalas DOCX-et kevesebb, mint 2 másodperc alatt képes feldolgozni egy szabványos 8‑magos szerveren, így ideális a Word dokumentumok nagyméretű kötegelt frissítéséhez.
+## Miért válassz Java dokumentumszerkesztő könyvtárat a collaborative document editing-hez?
+A GroupDocs.Editor **több mint 30 dokumentumformátumot** dolgoz fel, és akár **500 MB** méretű fájlokat is képes kezelni, miközben a tartalmat streameli a memóriahasználat alacsonyan tartása érdekében. A benchmarkok azt mutatják, hogy egy 200 oldalas DOCX-et 2 másodpercnél gyorsabban dolgoz fel egy 8‑magos szerveren, így ideális a Word dokumentumok kötegelt frissítéséhez nagy léptékben.
 
 ## Előfeltételek
 - **Java Development Kit (JDK)** 8 vagy újabb.  
 - **Maven** (vagy Gradle) a függőségkezeléshez.  
-- Alapvető ismeretek a Java kivételkezelésről és I/O streamekről.
+- Alapvető ismeretek a Java kivételkezelésről és az I/O streamekről.
 
 ## A GroupDocs.Editor beállítása Java-hoz
 Két egyszerű módja van a könyvtár projektbe való beillesztésének.
@@ -117,17 +120,22 @@ Adja hozzá a tárolót és a függőséget a `pom.xml`-hez:
 ```
 
 ### Közvetlen letöltés
-Alternatívaként töltse le a legújabb JAR csomagot innen: [ide](https://releases.groupdocs.com/editor/java/).
+Alternatívaként töltse le a legújabb JAR csomagot a **GroupDocs release page**-ről:
+
+[GroupDocs release page](https://releases.groupdocs.com/editor/java/)
 
 #### Licenc beszerzése
-- **Ingyenes próbalicenc** – ideális értékeléshez és koncepció bizonyításához.  
-- **Gyártási licenc** – szükséges kereskedelmi bevetésekhez.
+- **Free trial license** – ideális értékeléshez és proof‑of‑concept-hez. Szerezze be a **GroupDocs free trial page**-ról:
 
-## Hogyan töltsünk be Word dokumentumot Java-val a GroupDocs.Editor segítségével
+[Free trial license – GroupDocs release page](https://releases.groupdocs.com/editor/java/)
 
-Töltsön be egy DOCX-et egy szerkeszthető modellbe egyetlen hívással, majd készen áll a módosításokra. Az `Editor` osztály beolvassa a fájl streamet, elemezze a dokumentum struktúráját, és létrehozza az `EditableDocument` objektumot, amely elérhetővé teszi a bekezdéseket, táblázatokat, képeket és a verzióadatokat. Ez a memóriában lévő reprezentáció lehetővé teszi a tartalom programozott módosítását, formázás alkalmazását és a változások nyomon követését a mentés előtt.
+- **Production license** – szükséges a kereskedelmi telepítésekhez.
 
-### 1. lépés: Az Editor inicializálása
+## Hogyan töltsünk be Word dokumentumot Java-ban a GroupDocs.Editor segítségével
+
+Töltsd be a DOCX-et egy szerkeszthető modellbe egyetlen hívással, majd készen állsz a módosításokra. Az `Editor` osztály beolvassa a fájl streamet, elemzi a dokumentum szerkezetét, és létrehozza az `EditableDocument` objektumot, amely elérhetővé teszi a bekezdéseket, táblázatokat, képeket és a revízió adatokat. Ez a memóriában lévő reprezentáció lehetővé teszi, hogy programozottan módosítsd a tartalmat, formázást alkalmazz, és a változtatásokat nyomon kövesd a mentés előtt.
+
+### 1. lépés: az editor inicializálása
 `Editor` a központi osztály, amely a betöltési, szerkesztési és mentési műveleteket irányítja. Elrejti a fájlrendszer kezelését és a formátumkonverziót.
 
 ```java
@@ -144,22 +152,22 @@ try {
 }
 ```
 
-### 2. lépés: Szerkesztési beállítások konfigurálása
-`EditableDocument` a forrásfájl memóriában lévő, teljesen szerkeszthető változatát képviseli. Hozzáférést biztosít a bekezdésekhez, táblázatokhoz és a verziókövetési funkciókhoz.
+### 2. lépés: szerkesztési beállítások konfigurálása
+`EditableDocument` a betöltött Word fájl memóriában lévő reprezentációja, amely teljes hozzáférést biztosít a bekezdésekhez, táblázatokhoz és a revíziókövetési funkciókhoz. Létrehozás után bejárhatod és módosíthatod bármely elemet, mielőtt a változtatásokat mentenéd.
 
 ```java
 WordProcessingEditOptions editOptions = new WordProcessingEditOptions();
 EditableDocument editableDocument = editor.edit(editOptions);
 ```
 
-Ebben a pontban a `editableDocument` a eredeti fájl teljesen szerkeszthető reprezentációját tartalmazza, készen állva minden szükséges módosításra.
+Ekkor az `editableDocument` egy teljesen szerkeszthető reprezentációt tartalmaz az eredeti fájlról, készen állva minden szükséges módosításra.
 
-## Hogyan végezzünk kötegelt Word dokumentum szerkesztést a GroupDocs.Editor segítségével
+## Hogyan végezzünk kötegelt szerkesztést Word dokumentumokon a GroupDocs.Editor segítségével
 
-Iteráljon a fájlútvonalak gyűjteményén, alkalmazza ugyanazt a szerkesztési logikát, és mentse el minden eredményt – tökéletes a Word dokumentumok kötegelt frissítéséhez vagy nagymennyiségű számla docx generálásához. Minden fájlt betöltve egy `EditableDocument`-be, alkalmazva a transzformációs kódot, és a megfelelő opciókkal meghívva a `save` metódust, tucatnyi vagy akár száz dokumentumot is feldolgozhat egyetlen futtatás során, miközben hatékonyan kezeli a memóriát.
+Iterálj egy fájlútvonalak gyűjteményén, alkalmazd ugyanazt a szerkesztési logikát, és mentsd el minden eredményt—tökéletes a Word dokumentumok kötegelt frissítéséhez vagy nagymennyiségű számla docx generálásához. Az egyes fájlok betöltésével egy `EditableDocument`-be, a transzformációs kód alkalmazásával, és a `save` metódus megfelelő opciókkal való meghívásával több tucat vagy akár száz dokumentumot is feldolgozhatsz egyetlen futtatás során, miközben hatékonyan kezeled a memóriát.
 
-### 3. lépés: A mentési útvonal és opciók meghatározása
-Adja meg a kimeneti mappát, válassza ki a kívánt formátumot (DOCX, PDF, stb.), és állítson be minden utófeldolgozási opciót, például a verziók elfogadását.
+### 3. lépés: a mentési útvonal és opciók meghatározása
+Add meg a kimeneti mappát, válaszd ki a kívánt formátumot (DOCX, PDF, stb.), és állíts be minden utófeldolgozási opciót, például a revíziók elfogadását.
 
 ```java
 import com.groupdocs.editor.options.WordProcessingSaveOptions;
@@ -169,8 +177,8 @@ String savePath = "YOUR_OUTPUT_DIRECTORY/EditedOutput.docx";
 WordProcessingSaveOptions saveOptions = new WordProcessingSaveOptions(WordProcessingFormats.Docx);
 ```
 
-### 4. lépés: A szerkesztett dokumentum mentése
-A `save` meghívása visszaírja a változtatásokat a lemezre és felszabadítja az erőforrásokat. Ne felejtse el bezárni a `EditableDocument` és az `Editor` példányokat a memória szivárgások elkerülése érdekében nagy kötegelt futtatások során.
+### 4. lépés: a szerkesztett dokumentum mentése
+A `save` hívás visszaírja a változtatásokat a lemezre és felszabadítja az erőforrásokat. Ne felejtsd el bezárni mind az `EditableDocument`, mind az `Editor` példányt a memória szivárgások elkerülése érdekében nagy kötegelt futtatások során.
 
 ```java
 try {
@@ -181,62 +189,67 @@ try {
 }
 ```
 
-> **Pro tipp:** Zárja be a `EditableDocument` és `Editor` példányokat a mentés után a memória felszabadítása érdekében, különösen nagy fájlok feldolgozásakor.
+> **Pro tip:** A `EditableDocument` és `Editor` példányokat a mentés után zárd be a memória felszabadítása érdekében, különösen nagy fájlok feldolgozásakor.
 
 ## Gyakorlati alkalmazások
-A GroupDocs.Editor számos valós helyzetben kiemelkedik:
+A GroupDocs.Editor számos valós helyzetben ragyog:
 
-1. **Automatizált dokumentumfeldolgozás** – generáljon havi jelentéseket, számlákat vagy szerződéseket automatikusan.  
-2. **Tartalomkezelő rendszerek (CMS)** – lehetővé teszi a végfelhasználók számára, hogy közvetlenül a webes felületről szerkesszék a Word tartalmat.  
-3. **Együttműködő szerkesztő eszközök** – kombinálja valós idejű szinkronizációs szolgáltatásokkal, hogy több felhasználós szerkesztőket építsen, amelyek programozottan **szórevíziókat adnak hozzá**.
+1. **Automated document processing** – havi jelentések, számlák vagy szerződések automatikus generálása.  
+2. **Content management systems (CMS)** – lehetővé teszi a végfelhasználók számára, hogy a Word tartalmat közvetlenül a webes felületről szerkesszék.  
+3. **Collaborative editing tools** – kombináld valós idejű szinkronizációs szolgáltatásokkal, hogy több felhasználós szerkesztőket építs, amelyek programozottan **add revisions Word** is.
 
 ## Teljesítmény szempontok
-Nagy méretű dokumentumok esetén tartsa szem előtt ezeket a legjobb gyakorlatokat:
+Amikor nagy méretű dokumentumokkal dolgozol, tartsd szem előtt a következő legjobb gyakorlatokat:
 
-- **Erőforrások felszabadítása** – mindig hívja meg a `close()` metódust a `EditableDocument` és az `Editor` esetén.  
-- **Memóriahasználat profilozása** – használjon Java profilozó eszközöket a szűk keresztmetszetek felderítéséhez.  
-- **Kötegelt műveletek** – csoportosítsa a több szerkesztést egyetlen mentési műveletbe az I/O terhelés csökkentése érdekében.
+- **Dispose resources** – mindig hívd a `close()` metódust az `EditableDocument` és `Editor` esetén.  
+- **Profile memory usage** – használj Java profilozó eszközöket a szűk keresztmetszetek felderítéséhez.  
+- **Batch operations** – csoportosíts több szerkesztést egyetlen mentési műveletbe az I/O terhelés csökkentése érdekében.
 
-A GroupDocs.Editor streameli a tartalmat, és akár **500 MB**-os fájlokat is képes kezelni anélkül, hogy a teljes dokumentumot memóriába töltené, ezáltal biztosítva a zökkenőmentes teljesítményt vállalati méretű munkaterhelések esetén.
+A GroupDocs.Editor streameli a tartalmat, és akár **500 MB** méretű fájlokat is képes kezelni a teljes dokumentum memóriába töltése nélkül, biztosítva a zökkenőmentes teljesítményt vállalati szintű munkaterhelésekhez.
 
 ## Gyakori problémák és megoldások
+
 | Probléma | Megoldás |
 |----------|----------|
-| **OutOfMemoryError nagy fájlok esetén** | Növelje a JVM heap méretét (`-Xmx2g`) és győződjön meg róla, hogy gyorsan bezárja az erőforrásokat. |
-| **Nem támogatott formátum hiba** | Ellenőrizze, hogy a fájl támogatott Word formátum (DOCX, DOC, ODT). |
-| **Licenc nincs alkalmazva** | Győződjön meg róla, hogy a licencfájl útvonala helyes, és hívja meg a `License license = new License(); license.setLicense("path/to/license.file");` kódot az API használata előtt. |
+| **OutOfMemoryError on large files** | Növeld a JVM heap méretét (`-Xmx2g`) és győződj meg róla, hogy időben bezárod az erőforrásokat. |
+| **Unsupported format error** | Ellenőrizd, hogy a fájl támogatott Word formátum (DOCX, DOC, ODT). |
+| **License not applied** | Győződj meg róla, hogy a licencfájl útvonala helyes, és hívd meg a `License license = new License(); license.setLicense("path/to/license.file");` kódot az API használata előtt. |
 
-## Gyakran Ismételt Kérdések
+## Gyakran feltett kérdések
 
-**K: Használhatom a GroupDocs.Editor-t régebbi Java verziókkal?**  
-A: Igen, de a JDK 8 vagy újabb ajánlott a legjobb teljesítmény és a teljes funkciók támogatása érdekében.
+**Q: Használhatom a GroupDocs.Editor-t régebbi Java verziókkal?**  
+A: Igen, de a JDK 8 vagy újabb ajánlott a legjobb teljesítmény és a teljes funkciókészlet érdekében.
 
-**K: Mik a rendszerkövetelmények a GroupDocs.Editor használatához?**  
-A: Kompatibilis JVM, elegendő RAM (a dokumentum méretétől függ), valamint olvasási/írási jogosultságok a fájlrendszerhez.
+**Q: Mik a rendszerkövetelmények a GroupDocs.Editor használatához?**  
+A: Egy kompatibilis JVM, elegendő RAM (a dokumentum méretétől függ), valamint olvasási/írási jogosultságok a fájlrendszerhez.
 
-**K: Hogyan kezeli a GroupDocs.Editor a nagy dokumentumokat?**  
+**Q: Hogyan kezeli a GroupDocs.Editor a nagy dokumentumokat?**  
 A: Streameli a tartalmat és ahol lehetséges, felszabadítja a memóriát, de nagyon nagy fájlok esetén megfelelő heap méretet kell biztosítani.
 
-**K: Integrálhatom a GroupDocs.Editor-t más Java könyvtárakkal?**  
-A: Természetesen. Zökkenőmentesen működik a Spring, Hibernate, Apache POI és más népszerű keretrendszerekkel.
+**Q: Integrálhatom a GroupDocs.Editor-t más Java könyvtárakkal?**  
+A: Teljesen. Zökkenőmentesen működik a Spring, Hibernate, Apache POI és más népszerű keretrendszerekkel.
 
-**K: Van közösség vagy támogatási fórum a GroupDocs.Editor felhasználók számára?**  
-A: Igen, a [GroupDocs Support Forum](https://forum.groupdocs.com/c/editor/) oldalon kérhet segítséget és beszélgethet más fejlesztőkkel.
+**Q: Van közösség vagy támogatási fórum a GroupDocs.Editor felhasználók számára?**  
+A: Igen, a [GroupDocs Support Forum](https://forum.groupdocs.com/c/editor/) oldalon kérhetsz segítséget és beszélgethetsz más fejlesztőkkel.
 
 ## További források
-- **Dokumentáció**: Részletes útmutatók és API referencia itt: [GroupDocs Documentation](https://docs.groupdocs.com/editor/java/)  
-- **API referencia**: Tudjon meg többet a könyvtárról itt: [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/)  
-- **Letöltés**: Szerezze be a legújabb binárisokat innen: [ide](https://releases.groupdocs.com/editor/java/).  
-- **Ingyenes próba**: Tesztelje a teljes funkciókészletet egy [ingyenes próbalicenc](https://releases.groupdocs.com/editor/java/) segítségével.
+- **Documentation**: Részletes útmutatók és API referencia a [GroupDocs Documentation](https://docs.groupdocs.com/editor/java/) oldalon  
+- **API reference**: További információk a könyvtárról a [GroupDocs API Reference](https://reference.groupdocs.com/editor/java/) oldalon  
+- **Download**: Szerezd be a legújabb binárisokat a **GroupDocs release page**-ról:
+
+[GroupDocs release page](https://releases.groupdocs.com/editor/java/)  
+- **Free trial**: Teszteld a teljes funkciókészletet egy **free trial license** segítségével:
+
+[Free trial license – GroupDocs release page](https://releases.groupdocs.com/editor/java/)
 
 ---
 
-**Utolsó frissítés:** 2026-07-26  
-**Tesztelve a következővel:** GroupDocs.Editor 25.3 for Java  
+**Utolsó frissítés:** 2026-09-26  
+**Tesztelve ezzel:** GroupDocs.Editor 25.3 for Java  
 **Szerző:** GroupDocs  
 
 ## Kapcsolódó oktatóanyagok
 
-- [Word dokumentum szerkesztése Java – Haladó GroupDocs.Editor funkciók](/editor/java/advanced-features/)
-- [Word dokumentum betöltése Java-val a GroupDocs.Editor segítségével – Teljes útmutató](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
-- [Hogyan konvertáljunk Word-et HTML-re és szerkesszünk Word dokumentumokat Java-val a GroupDocs.Editor segítségével](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)
+- [Word dokumentum szerkesztése Java-ban – Haladó GroupDocs.Editor funkciók](/editor/java/advanced-features/)
+- [Word dokumentum betöltése Java-ban a GroupDocs.Editor-rel – Teljes útmutató](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
+- [Hogyan konvertáljunk Word-ot HTML-re és szerkesszünk Word dokumentumokat Java-ban a GroupDocs.Editor-rel](/editor/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/)

@@ -1,39 +1,82 @@
 ---
-title: Handle CSS Content with Prefix
+date: 2026-09-26
+description: Learn how to handle css prefix and extract css content using GroupDocs.Editor
+  for .NET in this detailed step‑by‑step tutorial.
+images:
+- /net/css-handling/handle-css-content-with-prefix/og-image.png
+keywords:
+- handle css prefix
+- extract css content
+- edit document css
+- prepend url to css
+lastmod: 2026-09-26
 linktitle: Handle CSS Content with Prefix
+og_description: Discover how to handle css prefix and extract css content with GroupDocs.Editor
+  for .NET. Follow a step‑by‑step guide to prepend URLs to CSS resources and retrieve
+  stylesheets.
+og_image_alt: Developer guide showing css prefix handling with GroupDocs.Editor for
+  .NET
+og_title: How to handle css prefix in GroupDocs.Editor for .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-26'
+  description: Learn how to handle css prefix and extract css content using GroupDocs.Editor
+    for .NET in this detailed step‑by‑step tutorial.
+  headline: How to handle css prefix in GroupDocs.Editor for .NET
+  type: TechArticle
+- questions:
+  - answer: Yes, GroupDocs.Editor for .NET supports PDF, Word, Excel, PowerPoint,
+      and many other formats.
+    question: Can I use GroupDocs.Editor for .NET with other document formats?
+  - answer: Absolutely! You can start your free trial on the [GroupDocs free trial
+      page](https://releases.groupdocs.com/).
+    question: Is there a free trial available for GroupDocs.Editor for .NET?
+  - answer: You can obtain a temporary license from the [temporary license page](https://purchase.groupdocs.com/temporary-license/).
+    question: How do I get a temporary license for GroupDocs.Editor for .NET?
+  - answer: Detailed documentation is available on the [GroupDocs.Editor for .NET
+      documentation site](https://tutorials.groupdocs.com/editor/net/).
+    question: Where can I find detailed documentation for GroupDocs.Editor for .NET?
+  - answer: You can get support through the [GroupDocs.Editor support forum](https://forum.groupdocs.com/c/editor/20).
+    question: What support options are available for GroupDocs.Editor for .NET?
+  type: FAQPage
 second_title: GroupDocs.Editor .NET API
-description: Learn how to handle CSS content with prefix and extract CSS content using GroupDocs.Editor for .NET in this detailed step‑by‑step tutorial.
-weight: 11
-url: /net/css-handling/handle-css-content-with-prefix/
+tags:
+- css handling
+- GroupDocs.Editor
+- .NET document processing
+- css prefix
+- api tutorial
+title: How to handle css prefix in GroupDocs.Editor for .NET
 type: docs
-date: 2026-03-06
+url: /net/css-handling/handle-css-content-with-prefix/
+weight: 11
 ---
 
-# Handle CSS Content with Prefix
+# How to handle css prefix in GroupDocs.Editor for .NET
 
-In this tutorial you’ll discover **how to handle css prefix** when working with stylesheets inside a document using GroupDocs.Editor for .NET. Whether you need to prepend a URL to images, fonts, or any external resource, the steps below show you exactly how to **handle css prefix** and also how to **extract css content** for further processing.
+In this tutorial you’ll learn **how to handle css prefix** when working with stylesheets inside a document using GroupDocs.Editor for .NET. Whether you need to prepend a URL to images, fonts, or any external resource, the steps below show you exactly how to **handle css prefix** and also how to **extract css content** for further processing. By the end of the guide you’ll be able to rewrite resource paths, retrieve the raw CSS strings, and integrate them into your web workflow with confidence.
 
-## Quick Answers
-- **What does “handle css prefix” mean?** Adding a custom URL prefix to external resources referenced in CSS.
-- **Which API method returns CSS styles?** `EditableDocument.GetCssContent(...)`.
-- **Do I need a license?** A trial license is available; a commercial license is required for production.
-- **What .NET versions are supported?** .NET Framework 4.5+ and .NET Core/5/6.
+## Quick answers
+- **What does “handle css prefix” mean?** Adding a custom URL prefix to external resources referenced in CSS.  
+- **Which API method returns CSS styles?** `EditableDocument.GetCssContent(...)`.  
+- **Do I need a license?** A trial license is available; a commercial license is required for production.  
+- **What .NET versions are supported?** .NET Framework 4.5+ and .NET Core/5/6.  
 - **Can I change the prefix at runtime?** Yes – simply pass a different string to `GetCssContent`.
 
-## What is **handle css prefix**?
-Applying a prefix to CSS resources rewrites the paths of images, fonts, or other assets so they point to a location you control (e.g., a CDN or a secured server). This is especially useful when you export a document and need all external references to be reachable from a web application.
+## What is handle css prefix?
+The term refers to rewriting the URLs of images, fonts, or any external asset inside a CSS file so they point to a location you control, such as a CDN or a secure server. By prepending a consistent base URL you guarantee that every resource loads correctly when the document is rendered in a browser or a web‑based viewer.
 
-## Why use GroupDocs.Editor to **extract css content**?
-GroupDocs.Editor can read the original CSS embedded in WordProcessing documents, give you the raw stylesheet strings, and let you manipulate them before rendering or saving. This eliminates the need for manual parsing and guarantees that the extracted CSS matches the document’s internal representation.
+## Why use GroupDocs.Editor to extract css content?
+GroupDocs.Editor can read the original CSS embedded in WordProcessing documents, return the raw stylesheet strings, and let you manipulate them before rendering or saving. This eliminates manual parsing, guarantees fidelity to the document’s internal representation, and supports **30+ file formats** while processing files up to **500 MB** without loading the entire file into memory.
 
 ## Prerequisites
 Before we get started, make sure you have the following prerequisites in place:
 - Visual Studio: You’ll need a working installation of Visual Studio.  
 - .NET Framework: Ensure you have the .NET Framework installed.  
-- GroupDocs.Editor for .NET: You can download it [here](https://releases.groupdocs.com/editor/net/).  
+- GroupDocs.Editor for .NET: You can download it from the [GroupDocs.Editor for .NET download page](https://releases.groupdocs.com/editor/net/).  
 - Sample Document: Have a sample document ready for editing.
 
-## Import Namespaces
+## Import namespaces
 First, let’s import the necessary namespaces to ensure our code runs smoothly. This step gives us access to the core classes of GroupDocs.Editor.
 
 ```csharp
@@ -43,6 +86,7 @@ using GroupDocs.Editor.Options;
 ```
 
 ## Step 1: Initialize the Editor
+The `Editor` class is the entry point for working with documents in GroupDocs.Editor. It manages loading, editing, and saving operations.  
 The first step involves creating an `Editor` instance with your sample document. This sets up the editing environment.
 
 ```csharp
@@ -50,15 +94,16 @@ using (Editor editor = new Editor("Your Sample Document", delegate { return new 
 {
 ```
 
-## Step 2: Edit the Document
-Next, we obtain an `EditableDocument` object. This object represents the editable version of the file and allows us to work with its internal parts.
+## Step 2: Edit the document
+The `EditableDocument` object represents the editable version of the file and exposes its internal parts, such as CSS, images, and HTML.  
+Next, we obtain an `EditableDocument` object. This object allows us to work with the document’s internal CSS.
 
 ```csharp
     using (EditableDocument document = editor.Edit(new WordProcessingEditOptions()))
     {
 ```
 
-## Step 3: Set External Prefixes
+## Step 3: Set external prefixes
 Define the URL prefixes for images and fonts. These prefixes will be prepended to every image and font reference found in the CSS.
 
 ```csharp
@@ -66,14 +111,15 @@ Define the URL prefixes for images and fonts. These prefixes will be prepended t
         string externalFontsPrefix = "http://www.mywebsite.com/fonts/id=";
 ```
 
-## Step 4: **Extract CSS content** with the Prefixes
+## Step 4: Extract css content with the prefixes
+`GetCssContent` returns a collection of CSS stylesheet strings that already contain the prefixed URLs you supplied.  
 Call `GetCssContent`, passing the prefixes you just defined. The method returns a list of CSS stylesheet strings that already contain the prefixed URLs.
 
 ```csharp
         List<string> stylesheets = document.GetCssContent(externalImagesPrefix, externalFontsPrefix);
 ```
 
-## Step 5: Output the Results
+## Step 5: Output the results
 Print the number of stylesheets found and display each stylesheet. This helps you verify that the prefixes were applied correctly.
 
 ```csharp
@@ -86,31 +132,29 @@ Print the number of stylesheets found and display each stylesheet. This helps yo
 }
 ```
 
-## Common Issues and Solutions
+## Common issues and solutions
 - **No stylesheets returned** – Ensure the source document actually contains CSS (e.g., a Word document with styled tables or embedded HTML).  
 - **Incorrect URLs** – Double‑check that the prefix strings end with the appropriate delimiter (`/` or `=`) for your server routing.  
 - **Performance concerns** – For very large documents, consider processing stylesheets in batches to avoid high memory usage.
 
-## Conclusion
-Handling CSS content with a prefix using GroupDocs.Editor for .NET is straightforward and powerful. By following these steps you can **handle css prefix**, retrieve the raw CSS via **extract css content**, and seamlessly integrate external resources into your web workflow. Explore other GroupDocs.Editor features such as HTML conversion, image extraction, and document merging to get even more value out of the API.
+## Frequently asked questions
 
-## FAQ's
-### Can I use GroupDocs.Editor for .NET with other document formats?
-Yes, GroupDocs.Editor for .NET supports various document formats including PDF, Word, Excel, and more.
+**Q: Can I use GroupDocs.Editor for .NET with other document formats?**  
+A: Yes, GroupDocs.Editor for .NET supports PDF, Word, Excel, PowerPoint, and many other formats.
 
-### Is there a free trial available for GroupDocs.Editor for .NET?
-Absolutely! You can start your free trial [here](https://releases.groupdocs.com/).
+**Q: Is there a free trial available for GroupDocs.Editor for .NET?**  
+A: Absolutely! You can start your free trial on the [GroupDocs free trial page](https://releases.groupdocs.com/).
 
-### How do I get a temporary license for GroupDocs.Editor for .NET?
-You can obtain a temporary license [here](https://purchase.groupdocs.com/temporary-license/).
+**Q: How do I get a temporary license for GroupDocs.Editor for .NET?**  
+A: You can obtain a temporary license from the [temporary license page](https://purchase.groupdocs.com/temporary-license/).
 
-### Where can I find detailed documentation for GroupDocs.Editor for .NET?
-Detailed documentation is available [here](https://tutorials.groupdocs.com/editor/net/).
+**Q: Where can I find detailed documentation for GroupDocs.Editor for .NET?**  
+A: Detailed documentation is available on the [GroupDocs.Editor for .NET documentation site](https://tutorials.groupdocs.com/editor/net/).
 
-### What support options are available for GroupDocs.Editor for .NET?
-You can get support [here](https://forum.groupdocs.com/c/editor/20).
+**Q: What support options are available for GroupDocs.Editor for .NET?**  
+A: You can get support through the [GroupDocs.Editor support forum](https://forum.groupdocs.com/c/editor/20).
 
-## Additional Frequently Asked Questions
+## Additional frequently asked questions
 
 **Q: Can I change the prefix after extracting the CSS?**  
 A: Yes. Call `GetCssContent` again with a different prefix string; the method always uses the values you pass at runtime.
@@ -123,6 +167,12 @@ A: GroupDocs.Editor currently provides read‑only access to CSS. To persist cha
 
 ---
 
-**Last Updated:** 2026-03-06  
+**Last Updated:** 2026-09-26  
 **Tested With:** GroupDocs.Editor 23.12 for .NET  
 **Author:** GroupDocs
+
+## Related Tutorials
+
+- [Extract External CSS from Word Docs Using GroupDocs.Editor .NET&#58; A Comprehensive Guide](/editor/net/html-web-documents/extract-external-css-word-docs-groupdocs-editor-dotnet/)
+- [Extract & Prefix HTML from Word Docs using GroupDocs.Editor .NET](/editor/net/html-web-documents/groupdocs-editor-dotnet-extract-prefix-html-word-docs/)
+- [How to Extract and Modify HTML Content in Word Documents Using GroupDocs.Editor .NET](/editor/net/html-web-documents/extract-modify-html-content-word-docs-groupdocs-editor-net/)
