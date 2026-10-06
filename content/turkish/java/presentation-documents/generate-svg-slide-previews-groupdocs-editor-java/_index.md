@@ -1,13 +1,47 @@
 ---
-date: '2026-04-02'
-description: GroupDocs.Editor for Java kullanarak PowerPoint dosyalarından SVG oluşturmayı,
-  PPTX'i SVG'ye dönüştürmeyi ve hızlı belge önizlemeleri için SVG görüntülerini Java'da
-  kaydetmeyi öğrenin.
+date: '2026-10-06'
+description: GroupDocs.Editor for Java kullanarak PowerPoint dosyalarından SVG oluşturmayı
+  öğrenin, PPTX'i SVG'ye dönüştürün ve hızlı belge ön izlemeleri için SVG görüntülerini
+  kaydedin.
 keywords:
 - create svg from powerpoint
 - convert pptx to svg
 - save svg images java
-title: Java için GroupDocs.Editor kullanarak PowerPoint'ten SVG oluşturun
+lastmod: '2026-10-06'
+og_description: GroupDocs.Editor for Java ile PowerPoint dosyalarından SVG oluşturun.
+  PPTX'i SVG'ye dönüştürün ve ölçeklenebilir slayt ön izlemelerini hızlıca kaydedin.
+og_image_alt: Guide to generate SVG slide previews from PowerPoint using GroupDocs.Editor
+  Java library
+og_title: GroupDocs.Editor for Java kullanarak PowerPoint'ten SVG oluşturun
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-06'
+  description: Learn how to create SVG from PowerPoint files using GroupDocs.Editor
+    for Java, convert PPTX to SVG and save SVG images Java for fast document previews.
+  headline: Create SVG from PowerPoint using GroupDocs.Editor for Java
+  type: TechArticle
+- questions:
+  - answer: Pass the password to the `Editor` constructor overload that accepts a
+      `LoadOptions` object.
+    question: What is the best way to handle password‑protected PPTX files?
+  - answer: Yes—adjust the loop range (`for (int i = start; i < end; i++)`) to target
+      specific slide indices.
+    question: Can I convert only a subset of slides?
+  - answer: Absolutely; you can generate PNG, JPEG, or PDF previews using similar
+      API calls.
+    question: Does GroupDocs.Editor support other output formats besides SVG?
+  - answer: No hard limit, but very large decks may require more memory; consider
+      batch processing to stay within resource constraints.
+    question: Is there a limit to the number of slides I can convert?
+  - answer: The library sanitises SVG content automatically, but you can further validate
+      using an SVG linter if required.
+    question: How do I ensure the generated SVGs are web‑safe?
+  type: FAQPage
+tags:
+- create svg
+- GroupDocs.Editor
+- Java presentation processing
+title: GroupDocs.Editor for Java kullanarak PowerPoint'ten SVG oluşturun
 type: docs
 url: /tr/java/presentation-documents/generate-svg-slide-previews-groupdocs-editor-java/
 weight: 1
@@ -15,33 +49,30 @@ weight: 1
 
 # GroupDocs.Editor for Java kullanarak PowerPoint'ten SVG oluşturma
 
-PowerPoint slaytlarının görsel ön izlemelerini oluşturmak, belge yönetim sistemleri, e‑öğrenme platformları ve iş birliği araçları için yaygın bir ihtiyaçtır. **Bu öğreticide PowerPoint'ten SVG oluşturmayı** sadece birkaç satır Java kodu ile öğreneceksiniz. Sonunda bir PPTX dosyasını yükleyebilecek, slayt sayısını okuyabilecek ve **her slayt için Java'da SVG görüntüleri kaydedebileceksiniz** — tarayıcılarda anında yüklenen net, ölçeklenebilir grafikler elde edeceksiniz.
+PowerPoint slaytlarının görsel ön izlemelerini oluşturmak, belge yönetim sistemleri, e‑öğrenme platformları ve iş birliği araçları için yaygın bir ihtiyaçtır. Bu öğreticide, sadece birkaç satır Java kodu ile **PowerPoint'ten SVG oluşturma** dosyalarını öğreneceksiniz. Sonunda bir PPTX dosyasını yükleyebilecek, slayt sayısını okuyabilecek ve her slayt için **Java'da SVG görüntülerini kaydedebileceksiniz** — tarayıcılarda anında yüklenen net, ölçeklenebilir grafikler elde edeceksiniz.
 
-## Hızlı Yanıtlar
-- **“PowerPoint'ten SVG oluştur” ne anlama geliyor?** PPTX dosyasındaki her slaytı Ölçeklenebilir Vektör Grafik (SVG) dosyasına dönüştürür.  
-- **Hangi kütüphane dönüşümü gerçekleştirir?** GroupDocs.Editor for Java, SVG çıktısı için özel bir `generatePreview` yöntemi sunar.  
-- **Üretim için lisansa ihtiyacım var mı?** Evet—test için deneme sürümünü kullanın, ardından ticari dağıtımlar için tam lisans uygulayın.  
-- **Büyük sunumlar verimli bir şekilde işlenebilir mi?** Kesinlikle—slaytları toplu olarak işleyin ve her topluluktan sonra `Editor` örneğini serbest bırakın.  
-- **Hangi Java sürümü gereklidir?** JDK 8+ herhangi bir sürüm çalışır; sadece en son GroupDocs.Editor JAR'ını referans gösterin.
+## Hızlı cevaplar
+- **“PowerPoint'ten SVG oluşturma” ne anlama geliyor?** Bir PPTX dosyasındaki her slaytı, ölçeklendirme seviyesinden bağımsız olarak düzeni koruyan bir Scalable Vector Graphic (SVG) dosyasına dönüştürür.  
+- **Dönüşümü hangi kütüphane gerçekleştiriyor?** GroupDocs.Editor for Java, SVG'yi doğrudan üreten özel bir `generatePreview` yöntemi sunar.  
+- **Üretim için lisansa ihtiyacım var mı?** Evet—test için bir deneme sürümü kullanın, ardından ticari dağıtımlar için tam lisans uygulayın.  
+- **Büyük sunumlar verimli bir şekilde işlenebilir mi?** Kesinlikle—slaytları toplu olarak işleyin ve her topluluktan sonra `Editor` örneğini serbest bırakarak bellek kullanımını düşük tutun.  
+- **Hangi Java sürümü gereklidir?** Herhangi bir JDK 8+ çalışır; sadece en son GroupDocs.Editor JAR'ını referans gösterin.  
 
-## “PowerPoint'ten SVG oluştur” nedir?
-PowerPoint'ten SVG oluşturmak, bir PPTX'in her slaytını SVG dosyasına dönüştürmek anlamına gelir. SVG bir vektör formatıdır, bu yüzden grafikler herhangi bir yakınlaştırma seviyesinde net kalır, hızlı yüklenir ve küçük resimler veya çevrimiçi görüntüleyiciler için idealdir.
+## “PowerPoint'ten SVG oluşturma” nedir?
+PowerPoint'ten SVG oluşturma, bir PPTX'in her slaytını bir SVG dosyasına dönüştürmek anlamına gelir. SVG bir vektör formatıdır, bu yüzden grafikler herhangi bir yakınlaştırma seviyesinde net kalır, hızlı yüklenir ve küçük dosya boyutlarıyla web dağıtımı için ideal olan küçük resimler veya çevrimiçi görüntüleyiciler için uygundur.
 
 ## PPTX'i SVG'ye dönüştürmek için GroupDocs.Editor for Java neden kullanılmalı?
-- **Hepsi bir arada çözüm** – Harici araç yok; kütüphane yükleme, renderleme ve kaydetmeyi yönetir.  
-- **Piksel‑tam doğruluk** – Yazı tipleri, şekiller ve düzenler tam olarak yeniden üretilir.  
-- **Yüksek performans** – Tam sunum arayüzünü açmadan anında ön izlemeler oluşturur.  
-- **Çapraz platform** – Windows, Linux ve macOS'ta aynı şekilde çalışır.
+Sunumunuzu yükleyin ve `generatePreview` metodunu çağırın—kütüphane renderleme, font gömme ve SVG temizleme işlemlerini tek bir adımda halleder. Bu yaklaşım harici dönüştürücülere ihtiyaç duymayı ortadan kaldırır, geliştirme süresini azaltır ve platformlar arasında piksel‑tam doğruluk sağlar. Ayrıca toplu işleme desteği sunar, büyük sunumlar için aşırı bellek tüketimi olmadan ön izlemeler oluşturmanıza izin verir. `generatePreview` metodu, her slayt için bir SVG dosyası içeren bir koleksiyon döndürür ve tüm renderlemeyi dahili olarak yönetir.
 
 ## Önkoşullar
 - **GroupDocs.Editor** kütüphanesi ≥ 25.3.  
 - Java Development Kit (JDK 8 veya daha yeni).  
 - Bir IDE (IntelliJ IDEA, Eclipse vb.) ve bağımlılık yönetimi için Maven (isteğe bağlı ancak önerilir).
 
-## GroupDocs.Editor for Java Kurulumu
+## GroupDocs.Editor for Java'ı kurma
 
 ### Maven Kullanarak
-`pom.xml` dosyanıza depo ve bağımlılığı ekleyin:
+Depoyu ve bağımlılığı `pom.xml` dosyanıza ekleyin:
 
 ```xml
 <repositories>
@@ -61,16 +92,16 @@ PowerPoint'ten SVG oluşturmak, bir PPTX'in her slaytını SVG dosyasına dönü
 </dependencies>
 ```
 
-### Doğrudan İndirme
+### Doğrudan indirme
 Manuel kurulumu tercih ediyorsanız, resmi indirme sayfasından en son JAR'ı edinin: [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-#### Lisans Edinme
-- **Ücretsiz Deneme:** Tüm özellikleri ücretsiz olarak test edin.  
-- **Geçici Lisans:** Sınırlı bir süre için tam işlevsellik.  
-- **Tam Satın Alma:** Sınırsız üretim kullanımı.
+#### Lisans edinme
+- **Ücretsiz deneme:** Tüm özellikleri ücretsiz test edin.  
+- **Geçici lisans:** Sınırlı bir süre için tam işlevsellik.  
+- **Tam satın alma:** Sınırsız üretim kullanımı.
 
-### Temel Başlatma ve Kurulum
-Aşağıda, bir sunum dosyasıyla `Editor` nesnesi oluşturmayı gösteren minimal bir örnek bulunmaktadır. Bu kod parçacığı, daha sonra SVG ön izlemeleri oluştururken kullanılacaktır.
+### Temel başlatma ve kurulum
+`Editor` sınıfı tüm belge işlemleri için giriş noktasıdır. Dosyayı yükler, render kaynaklarını hazırlar ve ön izleme oluşturma yöntemlerini sunar.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -86,20 +117,20 @@ public class InitGroupDocs {
 }
 ```
 
-## Uygulama Kılavuzu
+## Uygulama rehberi
 
-**PPTX'i SVG'ye dönüştürmek** ve **her slayt için Java'da SVG görüntüleri kaydetmek** için gerekli adımları adım adım inceleyeceğiz.
+Her slayt için **PPTX'i SVG'ye dönüştürmek** ve **Java'da SVG görüntülerini kaydetmek** için gereken her adımı adım adım inceleyeceğiz.
 
-### Sunum Dosyasını Yükle
-**Genel Bakış:** PowerPoint dosyasını yükleyerek sayfalarına ve meta verilerine erişebiliriz.
+### Sunum dosyasını yükle
+**Genel Bakış:** PowerPoint dosyasını yükleyin, böylece sayfalarına ve meta verilerine erişebiliriz.
 
-#### Adım 1: Gerekli Sınıfları İçe Aktar
+#### Adım 1: gerekli sınıfları içe aktar
 ```java
 import com.groupdocs.editor.Editor;
 ```
 
-#### Adım 2: Dosya Yolu ile Editor'ı Başlat
-Sunum dosyanızın yolunu vererek bir `Editor` örneği oluşturun:
+#### Adım 2: editörü dosya yolu ile başlat
+Create an `Editor` instance, passing the path of your presentation file:
 
 ```java
 String inputPath = "YOUR_DOCUMENT_DIRECTORY/FormatingExample.pptx";
@@ -107,17 +138,19 @@ Editor editor = new Editor(inputPath);
 editor.dispose();
 ```
 
-### Belge Bilgilerini Al
-**Genel Bakış:** Kaç SVG dosyası oluşturmanız gerektiğini bilmek için meta verileri (örneğin slayt sayısı) çıkarın.
+### Belge bilgilerini al
+`IDocumentInfo`, yüklü bir belge hakkında sayfa sayısı ve format gibi temel meta verileri sağlar.
 
-#### Adım 1: Meta Veri Sınıflarını İçe Aktar
+**Genel Bakış:** Kaç SVG dosyası üretmemiz gerektiğini bilmek için meta verileri (örneğin slayt sayısı) çıkarın.
+
+#### Adım 1: meta veri sınıflarını içe aktar
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.metadata.IDocumentInfo;
 ```
 
-#### Adım 2: Belge Bilgilerini Al
-Belgeyi `Editor` içine yükleyin ve bilgileri alın:
+#### Adım 2: belge bilgilerini al
+Load the document into `Editor` and retrieve information:
 
 ```java
 String inputPath = "YOUR_DOCUMENT_DIRECTORY/FormatingExample.pptx";
@@ -126,33 +159,35 @@ IDocumentInfo infoUncasted = editor.getDocumentInfo(null);
 editor.dispose();
 ```
 
-### Belge Bilgilerini Sunum Tipine Dönüştür
-**Genel Bakış:** Genel `IDocumentInfo` nesnesini `PresentationDocumentInfo`'a dönüştürerek slayt‑özel yöntemlerle çalışabiliriz.
+### Belge bilgilerini sunum tipine dönüştür
+`PresentationDocumentInfo`, `IDocumentInfo`'u slayt sayısı ve slayt boyutları gibi PowerPoint'e özgü özelliklerle genişletir.
 
-#### Adım 1: Dönüştürme Sınıflarını İçe Aktar
+**Genel Bakış:** Genel `IDocumentInfo`'u `PresentationDocumentInfo`'a dönüştürün, böylece slayt‑özel yöntemlerle çalışabilirsiniz.
+
+#### Adım 1: dönüştürme sınıflarını içe aktar
 ```java
 import com.groupdocs.editor.metadata.IDocumentInfo;
 import com.groupdocs.editor.metadata.PresentationDocumentInfo;
 ```
 
-#### Adım 2: Dönüştürmeyi Gerçekleştir
+#### Adım 2: dönüşümü gerçekleştir
 ```java
 // Assume infoUncasted is obtained as shown previously
 IDocumentInfo infoUncasted = null; // Placeholder
 PresentationDocumentInfo infoSlides = (PresentationDocumentInfo) infoUncasted;
 ```
 
-### Slayt Ön İzlemelerini SVG Görüntüleri Olarak Oluştur
-**Genel Bakış:** Bu, **PowerPoint'ten SVG oluştur** sürecinin çekirdeğidir. Her slaytı döngüye alacağız, bir SVG ön izleme oluşturacağız ve diske kaydedeceğiz.
+### Slayt ön izlemelerini SVG görüntüleri olarak oluştur
+**Genel Bakış:** Bu, **PowerPoint'ten SVG oluşturma** sürecinin çekirdeğidir. Her slaytı döngüye alacağız, bir SVG ön izleme oluşturacağız ve diske kaydedeceğiz.
 
-#### Adım 1: Gerekli Sınıfları İçe Aktar
+#### Adım 1: gerekli sınıfları içe aktar
 ```java
 import com.groupdocs.editor.metadata.PresentationDocumentInfo;
 import com.groupdocs.editor.htmlcss.resources.images.vector.SvgImage;
 import java.io.File;
 ```
 
-#### Adım 2: SVG Ön İzlemelerini Oluştur ve Kaydet
+#### Adım 2: SVG ön izlemelerini oluştur ve kaydet
 ```java
 // Assume infoSlides is obtained as shown previously
 PresentationDocumentInfo infoSlides = null; // Placeholder for actual retrieval logic
@@ -166,39 +201,39 @@ for (int i = 0; i < slidesCount; i++) {
 }
 ```
 
-## Pratik Uygulamalar
-1. **Belge Yönetim Sistemleri:** Büyük slayt kütüphanelerinde hızlı gezinme için SVG küçük resimler gösterin.  
-2. **İş Birliği Araçları:** İnceleyenlerin tam PPTX'i indirmeden slayt içeriğini görmesini sağlayın.  
-3. **Eğitim Platformları:** Kurs sayfalarında slayt özetlerini sunarken bant genişliği kullanımını düşük tutun.
+## Pratik uygulamalar
+1. **Belge yönetim sistemleri:** Büyük slayt kütüphanelerinde hızlı gezinme için SVG küçük resimler göster.  
+2. **İş birliği araçları:** İnceleyenlerin tam PPTX'i indirmeden slayt içeriğini görmesini sağlar.  
+3. **Eğitim platformları:** Bant genişliği kullanımını düşük tutarak ders sayfalarında slayt özetlerini sunar.
 
-## Performans Düşünceleri
-- **Erken serbest bırak:** İşlemeyi bitirir bitirmez `editor.dispose()` çağırarak yerel kaynakları serbest bırakın.  
-- **Toplu işleme:** Yüzlerce slaytı olan sunumlar için SVG'leri daha küçük gruplar halinde oluşturun, böylece bellek kullanımı öngörülebilir olur.  
+## Performans hususları
+- **Erken serbest bırak:** Kütüphanenin kullandığı yerel kaynakları serbest bırakmak ve bellek sızıntılarını önlemek için `editor.dispose()` çağırın.  
+- **Toplu işleme:** Yüzlerce slaytı olan sunumlar için bellek kullanımını öngörülebilir tutmak amacıyla SVG'leri daha küçük gruplar halinde oluşturun.  
 - **Güncel kalın:** Performans iyileştirmeleri ve hata düzeltmeleri için düzenli olarak en yeni GroupDocs.Editor sürümüne yükseltin.
 
-## Yaygın Sorunlar ve Çözümler
+## Yaygın sorunlar ve çözümler
 | Sorun | Neden | Çözüm |
 |-------|-------|-----|
-| **OutOfMemoryError** | Tüm büyük sunumların tek seferde işlenmesi | Slaytları toplu olarak işleyin; gerekirse her topluluktan sonra `System.gc()` çağırın. |
-| **Missing fonts in SVG** | Yazı tipi PPTX'e gömülmemiş veya sunucuda yüklü değil | Gerekli yazı tiplerini sunucuya kurun veya kaynak PPTX'e gömün. |
-| **Incorrect file path** | Göreli yollar hatalı kullanıldı | Mutlak yollar kullanın veya IDE'nizin çalışma dizinini yapılandırın. |
+| **OutOfMemoryError** | Tüm büyük sunumların bir kerede işlenmesi | Slaytları toplu olarak işleyin; gerekirse her topluluktan sonra `System.gc()` çağırın. |
+| **Missing fonts in SVG** | Font PPTX'e gömülmemiş veya sunucuda yüklü değil | Gerekli fontları sunucuya kurun veya kaynak PPTX'e gömün. |
+| **Incorrect file path** | Göreli yollar yanlış kullanıldı | Mutlak yollar kullanın veya IDE'nizin çalışma dizinini yapılandırın. |
 
 ## Sıkça Sorulan Sorular
 
-**S:** Şifre korumalı PPTX dosyalarını yönetmenin en iyi yolu nedir?  
-C: Şifreyi, bir `LoadOptions` nesnesi kabul eden `Editor` yapıcı aşırı yüklemesine geçirin.
+**Q: Şifre korumalı PPTX dosyalarını yönetmenin en iyi yolu nedir?**  
+A: Şifreyi, `LoadOptions` nesnesini kabul eden `Editor` yapıcı aşırı yüklemesine geçirin.
 
-**S:** Yalnızca belirli bir slayt alt kümesini dönüştürebilir miyim?  
-C: Evet—belirli slayt indekslerini hedeflemek için döngü aralığını (`for (int i = start; i < end; i++)`) ayarlayın.
+**Q: Yalnızca bir alt küme slaytı dönüştürebilir miyim?**  
+A: Evet—belirli slayt indekslerini hedeflemek için döngü aralığını (`for (int i = start; i < end; i++)`) ayarlayın.
 
-**S:** GroupDocs.Editor SVG dışındaki diğer çıktı formatlarını destekliyor mu?  
-C: Kesinlikle; benzer API çağrılarını kullanarak PNG, JPEG veya PDF ön izlemeleri oluşturabilirsiniz.
+**Q: GroupDocs.Editor, SVG dışındaki diğer çıktı formatlarını destekliyor mu?**  
+A: Kesinlikle; benzer API çağrılarını kullanarak PNG, JPEG veya PDF ön izlemeleri oluşturabilirsiniz.
 
-**S:** Dönüştürebileceğim slayt sayısında bir limit var mı?  
-C: Katı bir limit yok, ancak çok büyük sunumlar daha fazla bellek gerektirebilir; toplu işleme düşünün.
+**Q: Dönüştürebileceğim slayt sayısı için bir sınırlama var mı?**  
+A: Katı bir sınırlama yok, ancak çok büyük sunumlar daha fazla bellek gerektirebilir; kaynak kısıtlamaları içinde kalmak için toplu işleme düşünün.
 
-**S:** Oluşturulan SVG'lerin web‑güvenli olduğundan nasıl emin olurum?  
-C: Kütüphane SVG içeriğini otomatik olarak temizler, ancak isterseniz bir SVG linter ile ek doğrulama yapabilirsiniz.
+**Q: Oluşturulan SVG'lerin web güvenliğini nasıl sağlarsınız?**  
+A: Kütüphane SVG içeriğini otomatik olarak temizler, ancak gerekirse bir SVG linter'ı kullanarak daha fazla doğrulama yapabilirsiniz.
 
 ## Kaynaklar
 - [Dokümantasyon](https://docs.groupdocs.com/editor/java/)
@@ -207,8 +242,12 @@ C: Kütüphane SVG içeriğini otomatik olarak temizler, ancak isterseniz bir SV
 
 ---
 
-**Son Güncelleme:** 2026-04-02  
+**Son Güncelleme:** 2026-10-06  
 **Test Edilen:** GroupDocs.Editor 25.3 for Java  
-**Yazar:** GroupDocs  
+**Yazar:** GroupDocs
 
----
+## İlgili Eğitimler
+
+- [GroupDocs.Editor ile Java'da Belge Yükleme](/editor/java/document-loading/)
+- [GroupDocs Editor Java Word Belge Düzenleme Eğitimi](/editor/java/document-editing/groupdocs-editor-java-word-document-editing-tutorial/)
+- [GroupDocs.Editor kullanarak Java'da Belgelerden Meta Veri Çıkarma](/editor/java/advanced-features/groupdocs-editor-java-document-extraction-guide/)
