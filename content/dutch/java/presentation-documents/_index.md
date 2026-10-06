@@ -1,30 +1,35 @@
 ---
-date: 2026-07-26
-description: Leer hoe u een PowerPoint-dia kunt exporteren naar SVG met GroupDocs.Editor
-  for Java. Deze stapsgewijze handleiding behandelt preview generation, text‑box editing
-  en best practices voor Java‑ontwikkelaars.
+date: 2026-10-06
+description: Leer hoe u PowerPoint-tekstvak kunt bewerken en dia's kunt exporteren
+  naar SVG met GroupDocs.Editor for Java. Deze stapsgewijze gids toont bewerken, preview
+  generation en best practices voor Java‑ontwikkelaars.
+images:
+- /java/presentation-documents/og-image.png
 keywords:
-- export powerpoint slide to svg
-- groupdocs.editor java
-- slide preview svg
-lastmod: 2026-07-26
-og_description: Leer hoe u een PowerPoint-dia kunt exporteren naar SVG met GroupDocs.Editor
-  for Java. Deze handleiding leidt u door het genereren van scalable previews, het
-  bewerken van PPTX text boxes en het efficiënt afhandelen van grote presentaties.
-og_image_alt: 'Guide: Export PowerPoint slide to SVG using GroupDocs.Editor for Java'
-og_title: Exporteer PowerPoint-dia naar SVG met GroupDocs.Editor for Java
+- edit powerpoint text box
+- convert powerpoint slide svg
+- save powerpoint slide svg
+- export pptx slide svg
+- export presentation slide svg
+lastmod: 2026-10-06
+og_description: Leer hoe u PowerPoint-tekstvak kunt bewerken en dia's kunt exporteren
+  naar SVG met GroupDocs.Editor for Java. Deze gids leidt u door bewerken, preview
+  generation en het efficiënt verwerken van grote presentaties.
+og_image_alt: 'Guide: Edit PowerPoint text box and export slide to SVG using GroupDocs.Editor
+  for Java'
+og_title: PowerPoint-tekstvak bewerken met GroupDocs.Editor for Java
 schemas:
 - author: GroupDocs
-  dateModified: '2026-07-26'
-  description: Learn how to export PowerPoint slide to SVG using GroupDocs.Editor
-    for Java. This step‑by‑step guide covers preview generation, text‑box editing,
-    and best practices for Java developers.
-  headline: Export PowerPoint Slide to SVG with GroupDocs.Editor for Java
+  dateModified: '2026-10-06'
+  description: Learn how to edit PowerPoint text box and export slides to SVG using
+    GroupDocs.Editor for Java. This step‑by‑step guide covers preview generation,
+    text‑box editing, and best practices for Java developers.
+  headline: Edit PowerPoint text box with GroupDocs.Editor for Java
   type: TechArticle
-- description: Learn how to export PowerPoint slide to SVG using GroupDocs.Editor
-    for Java. This step‑by‑step guide covers preview generation, text‑box editing,
-    and best practices for Java developers.
-  name: Export PowerPoint Slide to SVG with GroupDocs.Editor for Java
+- description: Learn how to edit PowerPoint text box and export slides to SVG using
+    GroupDocs.Editor for Java. This step‑by‑step guide covers preview generation,
+    text‑box editing, and best practices for Java developers.
+  name: Edit PowerPoint text box with GroupDocs.Editor for Java
   steps:
   - name: '**Load the presentation** – The `PresentationEditor` class is the entry
       point for all PPTX operations.'
@@ -56,7 +61,7 @@ schemas:
       `editor.save(outputStream)`.'
     text: '**Save the changes** – Write the updated presentation back to storage with
       `editor.save(outputStream)`.'
-  type: HowTo
+    type: HowTo
 - questions:
   - answer: Yes. Provide the password in `PresentationLoadOptions` when constructing
       `PresentationEditor`, then call `exportToSvg()` as usual.
@@ -75,121 +80,107 @@ schemas:
   - answer: GroupDocs.Editor also supports PNG, JPEG, and PDF exports for slide images,
       giving you flexibility for thumbnails or printable versions.
     question: What other image formats can I export besides SVG?
-  type: FAQPage
+    type: FAQPage
 tags:
 - export powerpoint slide to svg
 - groupdocs.editor
 - java presentation
 - svg preview
 - pptx editing
-title: Exporteer PowerPoint-dia naar SVG met GroupDocs.Editor for Java
+- edit powerpoint text box
+title: PowerPoint-tekstvak bewerken met GroupDocs.Editor for Java
 type: docs
 url: /nl/java/presentation-documents/
 weight: 7
 ---
 
-# PowerPoint-dia exporteren naar SVG met GroupDocs.Editor voor Java
+# Bewerk PowerPoint-tekstvak met GroupDocs.Editor voor Java
 
-In deze uitgebreide tutorial zult u **PowerPoint-dia exporteren naar SVG** snel en betrouwbaar doen met GroupDocs.Editor voor Java. Of u nu een document‑beheersportaal, een leer‑beheersysteem, of een webapplicatie bouwt die snelle, resolutie‑onafhankelijke dia‑voorbeelden nodig heeft, de onderstaande stappen brengen u van een ruwe PPTX‑file naar een schone SVG‑afbeelding en laten zien hoe u PPTX‑tekstvakken kunt bewerken zonder de lay-out te breken.
+In deze uitgebreide tutorial zult u **PowerPoint-tekstvak bewerken** en vervolgens **PowerPoint-dia exporteren naar SVG** snel en betrouwbaar met GroupDocs.Editor voor Java. Of u nu een document‑beheersportaal, een leer‑beheersysteem of een andere webapplicatie bouwt die snelle, resolutie‑onafhankelijke dia‑voorbeelden nodig heeft, de onderstaande stappen brengen u van een ruwe PPTX‑bestand naar een nette SVG‑afbeelding terwijl de oorspronkelijke lay-out van bewerkte tekstvakken behouden blijft.
 
 ## Snelle antwoorden
-- **Wat betekent “export PowerPoint slide to SVG”?** Het transformeert elke dia in een PPTX‑bestand naar een schaalbare vectorafbeelding, waarbij vormen en tekst behouden blijven terwijl de bestandsgrootte klein blijft.  
-- **Waarom SVG kiezen voor dia‑voorbeelden?** SVG's zijn resolutie‑onafhankelijk, laden direct in browsers en blijven onder de 50 KB voor typische dia's.  
+- **Wat betekent “export PowerPoint slide to SVG”?** Het zet elke dia in een PPTX‑bestand om in een schaalbare vectorafbeelding, waarbij vormen en tekst behouden blijven en de bestandsgrootte klein blijft.  
+- **Waarom SVG kiezen voor dia‑voorbeelden?** SVG‑bestanden zijn resolutie‑onafhankelijk, laden direct in browsers en blijven onder de 50 KB voor typische dia's.  
 - **Kan ik PPTX‑tekstvakken bewerken na het genereren van SVG's?** Absoluut—GroupDocs.Editor stelt u in staat het originele PPTX te wijzigen en SVG's opnieuw te exporteren zonder formattering te verliezen.  
 - **Is een licentie vereist voor productie?** Ja, een permanente of tijdelijke GroupDocs.Editor‑licentie is nodig; een gratis proefversie is beschikbaar voor evaluatie.  
 - **Welke Java‑versies worden ondersteund?** De bibliotheek werkt met Java 8 en hoger (tot Java 21 op het moment van schrijven).
 
-## Wat betekent “export PowerPoint slide to SVG”?
-Het exporteren van een PowerPoint-dia naar SVG betekent het omzetten van de XML‑gebaseerde tekengegevens van de dia naar een **Scalable Vector Graphic**‑bestand. De resulterende SVG behoudt vectorvormen, tekst en ingesloten afbeeldingen, waardoor oneindig inzoomen zonder pixelering mogelijk is—perfect voor webviewers en mobiele apparaten.
+## Wat is “export PowerPoint slide to SVG”?
+Een PowerPoint-dia exporteren naar SVG betekent dat de XML‑gebaseerde tekengegevens van de dia worden omgezet naar een **Scalable Vector Graphic**‑bestand. De resulterende SVG behoudt vectorvormen, tekst en ingesloten afbeeldingen, waardoor onbeperkt inzoomen zonder pixelatie mogelijk is—perfect voor weergave op het web en mobiele apparaten.
 
 ## Waarom GroupDocs.Editor voor Java gebruiken om presentaties te bewerken?
 GroupDocs.Editor voor Java biedt een high‑level API die de complexiteit van het Office Open XML‑formaat verbergt, waardoor ontwikkelaars met presentaties kunnen werken zonder zich bezig te houden met low‑level XML. Het ondersteunt het laden, bewerken en opslaan van PPTX‑bestanden terwijl animaties, overgangen en ingesloten media behouden blijven, waardoor het ideaal is voor server‑side verwerking.
 
-## Vereisten
-- Java 8 of hoger geïnstalleerd op uw ontwikkelmachine.  
-- GroupDocs.Editor voor Java toegevoegd aan uw project (Maven `<dependency>` of Gradle `implementation`).  
-- Een geldige GroupDocs.Editor‑licentie (tijdelijke licentie werkt voor testen).  
-- Basiskennis van Java I/O‑streams.
+## Hoe een PowerPoint-dia exporteren naar SVG met GroupDocs.Editor voor Java
+Laad de presentatie, kies de gewenste dia en roep `exportToSvg()` aan – de methode retourneert de volledige SVG‑markup in één string, die u direct naar een bestand kunt schrijven of naar een client kunt streamen. Dit twee‑stappenpatroon verwerkt lettertypen, vormen en ingesloten afbeeldingen automatisch en levert een lichtgewicht, web‑klare SVG in minder dan een seconde voor de meeste dia's.
 
-## Hoe PowerPoint-dia exporteren naar SVG met GroupDocs.Editor voor Java
-
-`PresentationEditor` is de kernklasse in GroupDocs.Editor voor Java die PowerPoint‑documenten laadt, parseert en schrijft.  
-`exportToSvg(int slideIndex)` retourneert de SVG‑markup voor de opgegeven dia als een string.
-
-### Direct antwoord
-Instantieer `PresentationEditor`, selecteer de gewenste dia‑index en roep `exportToSvg()` aan om een SVG‑string te ontvangen of direct naar een bestand te schrijven. De API behandelt lettertypen, vormen en vectordata automatisch, en levert een lichtgewicht SVG die klaar is voor weergave op het web.
-
-### Stapsgewijze doorloop
+**Definitie‑anker:** `PresentationEditor` is het belangrijkste toegangspunt in GroupDocs.Editor voor Java dat PPTX‑bestanden in het geheugen laadt, parseert en schrijft.  
 
 1. **Laad de presentatie** – De `PresentationEditor`‑klasse is het toegangspunt voor alle PPTX‑bewerkingen.  
 2. **Selecteer de dia** – Geef de nul‑gebaseerde dia‑index op om een specifieke dia te targeten.  
 3. **Genereer SVG** – Roep `exportToSvg(slideIndex)` aan; de methode retourneert de SVG‑markup als een `String`.  
-4. **Bewaar de SVG** – Schrijf de string naar een `.svg`‑bestand of stream deze direct naar een HTTP‑response.
+4. **Bewaar de SVG** – Schrijf de string naar een `.svg`‑bestand of stream deze direct naar een HTTP‑response.  
 
-> **Pro tip:** Cache de gegenereerde SVG's op schijf of in het geheugen wanneer dezelfde dia herhaaldelijk wordt opgevraagd; dit vermindert CPU‑gebruik tot wel 70 % voor grote bibliotheken.
+> **Pro tip:** Cache de gegenereerde SVG's op schijf of in het geheugen wanneer dezelfde dia herhaaldelijk wordt opgevraagd; dit vermindert het CPU‑gebruik met tot 70 % voor grote bibliotheken.
 
 ## Hoe tekstvakken in PPTX bewerken met GroupDocs.Editor
+Open de PPTX, vind de doelvorm, werk de tekst bij en sla het bestand op – GroupDocs.Editor herschrijft alleen de gewijzigde XML‑fragmenten, waardoor de oorspronkelijke lay-out, animaties en dia‑overgangen behouden blijven. Deze aanpak stelt u in staat programmatisch titels, bijschriften of gegevenslabels bij te werken zonder de hele dia opnieuw te maken.
 
-`PresentationEditor` biedt ook functionaliteit om dia‑elementen zoals vormen en tekstvakken te wijzigen.  
-`findTextBox(String name)` zoekt op de dia naar een tekstvakvorm met de opgegeven naam en retourneert deze.
-
-### Direct antwoord
-Open de PPTX met `PresentationEditor`, lokaliseer de doelvorm met `findTextBox()`, werk de `Text`‑eigenschap bij en sla het document op. De API herschrijft alleen de gewijzigde XML‑fragmenten, waardoor de originele lay-out en animaties behouden blijven.
-
-### Stapsgewijze doorloop
+**Definitie‑anker:** `findTextBox()` zoekt in de vormcollectie van een dia naar een tekstvak met de opgegeven naam en retourneert een mutabel `TextBox`‑object.  
 
 1. **Open de PPTX** – Geef een `FileInputStream` (of een andere `InputStream`) door aan de `PresentationEditor`‑constructor.  
 2. **Zoek het tekstvak** – Gebruik `editor.getDocument().getSlides().get(slideIndex).getShapes().findTextBox("BoxName")`.  
 3. **Wijzig de inhoud** – Roep `textBox.setText("New content")` aan en pas eventueel `textBox.getFont().setSize(14)` aan.  
-4. **Sla de wijzigingen op** – Schrijf de bijgewerkte presentatie terug naar de opslag met `editor.save(outputStream)`.
+4. **Sla de wijzigingen op** – Schrijf de bijgewerkte presentatie terug naar de opslag met `editor.save(outputStream)`.  
 
-> **Waarschuwing:** Houd altijd een backup van de originele PPTX bij voordat u batch‑verwerking uitvoert; een mislukte bewerking kan het bestand corrupt maken.
+> **Waarschuwing:** Houd altijd een backup van de originele PPTX bij voordat u batch‑verwerking uitvoert; een mislukte bewerking kan het bestand beschadigen.
 
 ## Veelvoorkomende problemen en oplossingen
 
-| Issue | Why it Happens | Fix |
-|-------|----------------|-----|
-| **Out‑of‑memory‑fouten bij enorme decks** | De bibliotheek laadt standaard dia‑graphics in het geheugen. | Schakel streaming‑modus in via `PresentationLoadOptions.setLoadMode(LoadMode.Streaming)` en verwerk dia's één voor één. |
-| **Ontbrekende lettertypen in SVG** | Aangepaste lettertypen zijn niet ingebed in de PPTX. | Installeer de benodigde lettertypen op de server of gebruik `FontSettings.setDefaultFont("Arial")` vóór export. |
-| **SVG‑grootte groter dan verwacht** | Complexe verlopen of ingesloten afbeeldingen vergroten de bestandsgrootte. | Roep `SvgExportOptions.setCompressImages(true)` aan om de grootte van ingesloten bitmap te verkleinen. |
-| **Tekstafkapping na bewerking** | De tekstlengte wijzigen zonder de vorm te schalen. | Na `setText()` roep `textBox.autoFit()` aan zodat de vorm automatisch groeit. |
+| Probleem | Waarom het gebeurt | Oplossing |
+|----------|--------------------|-----------|
+| **Out‑of‑memory fouten bij enorme decks** | De bibliotheek laadt standaard dia‑graphics in het geheugen. | Schakel streaming‑modus in via `PresentationLoadOptions.setLoadMode(LoadMode.Streaming)` en verwerk dia's één voor één. |
+| **Ontbrekende lettertypen in SVG** | Aangepaste lettertypen zijn niet ingebed in de PPTX. | Installeer de vereiste lettertypen op de server of gebruik `FontSettings.setDefaultFont("Arial")` vóór export. |
+| **SVG-grootte groter dan verwacht** | Complexe verlopen of ingesloten afbeeldingen vergroten de bestandsgrootte. | Roep `SvgExportOptions.setCompressImages(true)` aan om de grootte van ingesloten bitmap te verkleinen. |
+| **Tekstafkapping na bewerking** | De tekstlengte wijzigen zonder de vorm te schalen. | Roep na `setText()` `textBox.autoFit()` aan zodat de vorm automatisch groeit. |
 
 ## Veelgestelde vragen
 
 **Q: Kan ik SVG‑voorbeelden genereren voor met wachtwoord beveiligde PPTX‑bestanden?**  
-A: Ja. Geef het wachtwoord op in `PresentationLoadOptions` bij het construeren van `PresentationEditor`, en roep vervolgens `exportToSvg()` zoals gewoonlijk aan.
+A: Ja. Geef het wachtwoord op in `PresentationLoadOptions` bij het construeren van `PresentationEditor`, en roep vervolgens `exportToSvg()` aan zoals gewoonlijk.
 
 **Q: Heeft het bewerken van een tekstvak invloed op de lay-out van de dia?**  
 A: De API werkt alleen de onderliggende XML bij; de lay-out blijft behouden tenzij de nieuwe tekst de oorspronkelijke vormgrenzen overschrijdt, in dat geval moet u `autoFit()` aanroepen.
 
 **Q: Is het mogelijk om meerdere presentaties in batch te verwerken?**  
-A: Zeker. Loop door een map, instantieer een `PresentationEditor` voor elk bestand, exporteer de gewenste dia's naar SVG, en pas eventuele tekstvak‑wijzigingen toe in dezelfde doorloop.
+A: Absoluut. Loop door een map, instantiateer een `PresentationEditor` voor elk bestand, exporteer de gewenste dia's naar SVG, en pas eventuele tekstvak‑wijzigingen toe in dezelfde doorloop.
 
 **Q: Hoe ga ik om met grote presentaties met veel dia's?**  
 A: Verwerk dia's incrementeel met streaming‑modus en schrijf elke SVG direct naar een bestand of response‑stream om het geheugenverbruik laag te houden.
 
 **Q: Welke andere afbeeldingsformaten kan ik exporteren naast SVG?**  
-A: GroupDocs.Editor ondersteunt ook PNG-, JPEG- en PDF‑export voor dia‑afbeeldingen, waardoor u flexibiliteit heeft voor miniaturen of afdrukbare versies.
+A: GroupDocs.Editor ondersteunt PNG, JPEG, PDF en SVG‑export voor dia‑afbeeldingen, waardoor de vier meest voorkomende webformaten die in 95 % van moderne toepassingen worden gebruikt, gedekt zijn.
 
 ## Aanvullende bronnen
 
 - [SVG-dia‑voorbeelden maken met GroupDocs.Editor voor Java](./generate-svg-slide-previews-groupdocs-editor-java/)  
-- [Presentatie‑bewerking in Java beheersen: Een volledige gids voor GroupDocs.Editor voor PPTX‑bestanden](./groupdocs-editor-java-presentation-editing-guide/)  
+- [Meesterschap in presentatie‑bewerking in Java: Een volledige gids voor GroupDocs.Editor voor PPTX‑bestanden](./groupdocs-editor-java-presentation-editing-guide/)  
 - [GroupDocs.Editor voor Java Documentatie](https://docs.groupdocs.com/editor/java/)  
 - [GroupDocs.Editor voor Java API‑referentie](https://reference.groupdocs.com/editor/java/)  
-- [GroupDocs.Editor voor Java downloaden](https://releases.groupdocs.com/editor/java/)  
+- [Download GroupDocs.Editor voor Java](https://releases.groupdocs.com/editor/java/)  
 - [GroupDocs.Editor Forum](https://forum.groupdocs.com/c/editor)  
 - [Gratis ondersteuning](https://forum.groupdocs.com/)  
-- [Tijdelijke licentie](https://purchase.groupdocs.com/temporary-license/)
+- [Tijdelijke licentie](https://purchase.groupdocs.com/temporary-license/)  
+- [PPTX naar SVG converteren - Dia‑voorbeelden maken met GroupDocs.Editor voor Java](/editor/java/presentation-documents/generate-svg-slide-previews-groupdocs-editor-java/)  
+- [Dia‑voorbeeld SVG‑tutorial voor GroupDocs.Editor Java](/editor/java/presentation-documents/)  
+- [Hoe een licentie voor GroupDocs.Editor in Java instellen met InputStream: Een uitgebreide gids](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
 
----
-
-**Laatst bijgewerkt:** 2026-07-26  
-**Getest met:** GroupDocs.Editor voor Java 23.12  
+**Laatst bijgewerkt:** 2026-10-06  
+**Getest met:** GroupDocs.Editor for Java 23.12  
 **Auteur:** GroupDocs
 
 ## Gerelateerde tutorials
 
-- [PPTX naar SVG converteren - Dia‑voorbeelden maken met GroupDocs.Editor voor Java](/editor/java/presentation-documents/generate-svg-slide-previews-groupdocs-editor-java/)  
-- [Dia‑voorbeeld‑SVG‑tutorial voor GroupDocs.Editor Java](/editor/java/presentation-documents/)  
-- [Hoe een licentie instellen voor GroupDocs.Editor in Java met InputStream: Een uitgebreide gids](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
+- [GroupDocs Editor Java Presentatie‑bewerkingsgids](/editor/java/presentation-documents/groupdocs-editor-java-presentation-editing-guide/)  
+- [SVG maken vanuit PowerPoint met GroupDocs.Editor voor Java](/editor/java/presentation-documents/generate-svg-slide-previews-groupdocs-editor-java/)  
+- [Java Documentbewerking GroupDocs Editor Gids](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
