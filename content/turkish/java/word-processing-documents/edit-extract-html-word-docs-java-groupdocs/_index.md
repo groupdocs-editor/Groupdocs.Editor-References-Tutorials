@@ -1,21 +1,27 @@
 ---
-date: '2026-05-17'
-description: Java'da docx'i HTML'ye dönüştürmeyi ve Word belgelerini GroupDocs.Editor
-  kullanarak düzenlemeyi öğrenin. Java ile HTML içeriğini hızlıca çıkarın.
+date: '2026-10-11'
+description: GroupDocs.Editor kullanarak docx'i html java'ya dönüştürmeyi ve Word
+  belgelerini düzenlemeyi öğrenin. Java ile HTML içeriğini hızlıca çıkarın.
 keywords:
-- how to convert docx to html
-- edit word document java
-- extract html content java
+- docx to html java
+- edit word java
+- convert word html java
+lastmod: '2026-10-11'
+og_description: docx to html java dönüşümü GroupDocs.Editor ile basittir. Java'da
+  Word belgelerinden HTML yüklemeyi, düzenlemeyi ve çıkarmayı, lisanslama ipuçları
+  ve performans en iyi uygulamalarıyla öğrenin.
+og_image_alt: Screenshot showing Java code converting a DOCX file to HTML using GroupDocs.Editor
+og_title: docx to html java – GroupDocs Editor ile Word belgelerini düzenleyin
 schemas:
 - author: GroupDocs
-  dateModified: '2026-05-17'
-  description: Learn how to convert docx to HTML in Java and edit Word documents using
+  dateModified: '2026-10-11'
+  description: Learn how to convert docx to html java and edit Word documents using
     GroupDocs.Editor. Extract HTML content quickly with Java.
-  headline: How to Convert Docx to HTML and Edit Word Docs in Java
+  headline: How to convert docx to html java and edit Word docs
   type: TechArticle
-- description: Learn how to convert docx to HTML in Java and edit Word documents using
+- description: Learn how to convert docx to html java and edit Word documents using
     GroupDocs.Editor. Extract HTML content quickly with Java.
-  name: How to Convert Docx to HTML and Edit Word Docs in Java
+  name: How to convert docx to html java and edit Word docs
   steps:
   - name: Open a File Stream
     text: First, open a stream that points to the source `.docx`. This keeps the file
@@ -55,53 +61,45 @@ schemas:
       to close streams are the most frequent issues.
     question: What are common integration pitfalls?
   type: FAQPage
-title: Java'da Docx'i HTML'ye Dönüştürme ve Word Belgelerini Düzenleme
+tags:
+- docx to html java
+- edit word java
+- convert word html java
+- groupdocs editor
+- java document processing
+title: docx'i html java'ya dönüştürme ve Word belgelerini düzenleme
 type: docs
 url: /tr/java/word-processing-documents/edit-extract-html-word-docs-java-groupdocs/
 weight: 1
 ---
 
-# Docx'i HTML'ye Dönüştürme ve Java'da Word Belgelerini Düzenleme
+# docx'i html java'ya dönüştürme ve Word belgelerini düzenleme
 
-Programlı olarak Word dosyalarını düzenleyebilmenin yanı sıra **docx'i HTML'ye dönüştürmeniz** gerekiyorsa, doğru yere geldiniz. Bu öğreticide, GroupDocs.Editor for Java kullanarak bir `.docx` dosyasını yükleme, değişiklik yapma ve HTML temsilini çıkarma sürecini adım adım inceleyeceğiz. Sonunda, **edit word document java** senaryoları ve **java extract html content** teknikleriyle rahat olacaksınız ve bu yaklaşımın sunucu tarafı işleme için neden en güvenilir yöntem olduğunu anlayacaksınız.
+Programlı olarak Word dosyalarını düzenleyebilmenin yanı sıra **convert docx to html java** yapmanız gerekiyorsa, doğru yere geldiniz. Bu öğreticide, bir `.docx` dosyasını yüklemeyi, isteğe bağlı değişiklikler yapmayı ve GroupDocs.Editor for Java kullanarak HTML temsilini çıkarmayı adım adım göstereceğiz. Sonunda, **edit word java** senaryoları ve **java extract html content** teknikleriyle rahat olacaksınız ve bu yaklaşımın sunucu‑tarafı işleme için neden en güvenilir olduğunu anlayacaksınız.
 
-## Hızlı Yanıtlar
-- **GroupDocs.Editor ile docx'i HTML'ye dönüştürebilir miyim?** Evet – `edit` yöntemi, `getContent()`'i temiz HTML döndüren bir `EditableDocument` döndürür.  
-- **Üretim için lisansa ihtiyacım var mı?** Geçerli bir GroupDocs.Editor lisansı, ticari dağıtımlar için zorunludur; değerlendirme için ücretsiz deneme mevcuttur.  
+## Hızlı cevaplar
+- **GroupDocs.Editor ile docx'i html java'ya dönüştürebilir miyim?** Evet – `edit` yöntemi, `getContent()`'i tek bir çağrıda temiz HTML döndüren bir `EditableDocument` döndürür.  
+- **Üretim için bir lisansa ihtiyacım var mı?** Geçerli bir GroupDocs.Editor lisansı, ticari dağıtımlar için zorunludur; değerlendirme için ücretsiz deneme mevcuttur.  
 - **Hangi Java sürümü destekleniyor?** Java 8 ve üzeri; kütüphane JDK 11, 17 ve daha yeni sürümlerde sorunsuz çalışır.  
 - **Şifre korumalı dosyaları düzenleyebilir miyim?** Kesinlikle – şifreyi `WordProcessingLoadOptions` aracılığıyla sağlayın.  
-- **Maksimum belge boyutu nedir?** API, birkaç yüz megabaytlık dosyaları işleyebilir; çok büyük dosyalar için mantıksal bölümlerde işlemeyi düşünün.
+- **Maksimum belge boyutu nedir?** API, birkaç yüz megabayt büyüklüğündeki dosyaları işleyebilir; çok büyük dosyalar için mantıksal bölümlerde işlemeyi düşünün.
 
 ## “convert docx to html” nedir?
-Bir Word belgesini HTML'ye dönüştürmek, zengin metin düzeni, stiller ve gömülü nesneleri standart web işaretlemesine çevirmek anlamına gelir. Bu, belge içeriğini tarayıcılarda görüntülemenizi, web uygulamalarına yerleştirmenizi veya HTML tabanlı araçlarla daha fazla işlemenizi sağlar.
+Java'da bir DOCX dosyasını HTML'ye dönüştürmek, belgenin içeriğini, stillerini ve gömülü nesnelerini çıkararak tarayıcıların render edebileceği standart HTML işaretlemesi olarak temsil etmek anlamına gelir. GroupDocs.Editor kütüphanesi, DOCX'i yükleyen, isteğe bağlı olarak düzenleyen ve Microsoft Office gerektirmeden temiz HTML döndüren tek adımlı bir API sunar.
 
-## edit word document java için GroupDocs.Editor neden kullanılmalı?
-GroupDocs.Editor, düşük seviyeli Office Open XML ayrıntılarını gizleyerek ve basit bir Java API'si sunarak Word dosyalarıyla çalışmayı kolaylaştırır. Geliştiricilerin Microsoft Office olmadan belgeleri yüklemesini, değiştirmesini ve render etmesini sağlar; güvenilir performans ve web uygulamaları için uygun yüksek kaliteli HTML çıktısı sunar.
-
-- Akışlardan doğrudan `.docx` veya `.doc` dosyalarını yükleyin.  
-- Belgeyi **editable word document java** formatında düzenleyin (içeride manipüle edebileceğiniz bir DOM).  
-- Microsoft Office yüklü olmadan temiz, standartlara uygun HTML çıkarın.  
-- Tipik bir sunucuda 500 sayfaya kadar belgeyi 5 saniyenin altında işleyin, streaming mimarisi sayesinde (nicel iddia).
+## edit word java için GroupDocs.Editor neden kullanılmalı?
+GroupDocs.Editor, düşük seviyeli Office Open XML ayrıntılarını soyutlayarak Word dosyalarını basit bir Java API'si ile yüklemenize, değiştirmenize ve render etmenize olanak tanır. **50+ giriş ve çıkış formatını** destekler, tipik sunucu donanımında 500 sayfalık belgeleri 5 saniyenin altında işler ve dış bağımlılık olmadan standartlara uygun HTML üretir.
 
 ## Önkoşullar
 
-Koda geçmeden önce aşağıdakilere sahip olduğunuzdan emin olun:
+- **Java Development Kit** – sürüm 8 veya üzeri.  
+- **Maven** (veya manuel JAR ekleme) bağımlılık yönetimi için.  
+- IntelliJ IDEA veya Eclipse gibi bir IDE.  
+- Java I/O ve Maven proje yapısına temel aşinalık.
 
-### Gerekli Kütüphaneler ve Bağımlılıklar
-- **GroupDocs.Editor** – Maven Central üzerinden veya doğrudan indirme ile kullanılabilir.
+## GroupDocs.Editor for Java kurulumu
 
-### Ortam Kurulum Gereksinimleri
-- JDK 8 veya daha yeni bir sürüm yüklü.  
-- IntelliJ IDEA veya Eclipse gibi bir IDE.
-
-### Bilgi Önkoşulları
-- Java I/O konusunda aşinalık.  
-- Maven proje yapısının temel anlayışı.
-
-## GroupDocs.Editor for Java Kurulumu
-
-### Maven Kurulumu
-
+### Maven kurulumu
 Add the repository and dependency to your `pom.xml` exactly as shown:
 
 ```xml
@@ -122,16 +120,15 @@ Add the repository and dependency to your `pom.xml` exactly as shown:
 </dependencies>
 ```
 
-### Doğrudan İndirme
+### Doğrudan indirme
+Maven kullanmak istemiyorsanız, en son JAR'ı [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) adresinden alın.
 
-Maven kullanmak istemiyorsanız, en son JAR dosyasını [GroupDocs.Editor for Java sürümleri](https://releases.groupdocs.com/editor/java/) adresinden alın.
-
-### Lisans Edinme Adımları
-- **Free Trial** – lisans olmadan temel özellikleri keşfedin.  
-- **Temporary License** – uzun süreli test için zaman sınırlı bir anahtar edinin.  
+### Lisans edinme adımları
+- **Free trial** – lisans olmadan temel özellikleri keşfedin.  
+- **Temporary license** – uzun süreli test için zaman sınırlı bir anahtar edinin.  
 - **Purchase** – üretim iş yükleri için tam lisans edinin.
 
-Kütüphane sınıf yolunuzda olduğunda bir `Editor` örneği oluşturabilirsiniz:
+Kütüphane sınıf yolunuzda olduğunda bir `Editor` örneği oluşturabilirsiniz. **Editor, Word belgelerini yüklemek ve düzenlemek için ana giriş noktasıdır.**
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -143,14 +140,14 @@ class SetupGroupDocs {
 }
 ```
 
-## Uygulama Kılavuzu
+## Uygulama kılavuzu
 
-Aşağıda, uygulamayı iki pratik bölüme ayırıyoruz: **yükleme ve düzenleme** bir Word dosyası ve ondan **HTML çıkarma**.
+Aşağıda, uygulamayı iki pratik bölüme ayırıyoruz: Word dosyasını **yükleme ve düzenleme**, ve ondan **HTML çıkarma**.
 
-### Word Belgelerini Yükleme ve Düzenleme (editable word document java)
+### Word belgelerini yükleme ve düzenleme (editable word document java)
 
-#### Adım 1: Dosya Akışı Açma
-İlk olarak, kaynak `.docx` dosyasına işaret eden bir akış açın. Bu, dosya işlemini esnek tutar (veritabanı veya bulut depolamadan `InputStream` de kullanabilirsiniz).
+#### Adım 1: bir dosya akışı açın
+İlk olarak, kaynak `.docx` dosyasına işaret eden bir akış açacaksınız. Bu, dosya işlemini esnek tutar—veritabanı veya bulut depolamadan bir `InputStream` de kullanabilirsiniz.
 
 ```java
 import java.io.FileInputStream;
@@ -159,8 +156,8 @@ import java.io.InputStream;
 InputStream fs = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/sample.docx");
 ```
 
-#### Adım 2: WordProcessingLoadOptions ile Belgeyi Yükleme
-`WordProcessingLoadOptions` sınıfı, şifre yönetimi veya yerel ayar gibi ek seçenekler belirtmenizi sağlar.
+#### Adım 2: belgeyi WordProcessingLoadOptions ile yükleyin
+`WordProcessingLoadOptions` sınıfı, şifre işleme veya yerel ayar gibi ek seçenekler belirtmenizi sağlar.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -169,8 +166,8 @@ import com.groupdocs.editor.options.WordProcessingLoadOptions;
 Editor editor = new Editor(fs, new WordProcessingLoadOptions());
 ```
 
-#### Adım 3: Düzenlenebilir Formata Dönüştürme
-`edit` çağrısı, programatik olarak manipüle edebileceğiniz veya daha sonra HTML olarak render edebileceğiniz bir `EditableDocument` döndürür.
+#### Adım 3: düzenlenebilir bir formata dönüştürün
+`edit` çağrısı, programmatically manipüle edebileceğiniz veya daha sonra HTML olarak render edebileceğiniz bir `EditableDocument` döndürür. **EditableDocument, yüklü Word dosyasını düzenlenebilir bir durumda temsil eder, değişikliklere ve HTML çıkarımına izin verir.** Bu noktada bir **editable word document java** nesnesine sahipsiniz. İçeriğini değiştirebilir, tablolar ekleyebilir veya API'yi kullanarak stiller uygulayabilirsiniz (bu hızlı kılavuzun kapsamı dışındadır).
 
 ```java
 import com.groupdocs.editor.EditableDocument;
@@ -179,23 +176,22 @@ import com.groupdocs.editor.options.WordProcessingEditOptions;
 EditableDocument document = editor.edit(new WordProcessingEditOptions());
 ```
 
-Bu noktada bir **editable word document java** nesneniz var. İçeriğini değiştirebilir, tablo ekleyebilir veya API'yi kullanarak stiller uygulayabilirsiniz (bu hızlı kılavuzun kapsamı dışında).
+### Belgeden HTML içeriği çıkarma (java extract html content)
 
-### Belgeden HTML İçeriği Çıkarma (java extract html content)
-
-#### Adım 1: Dosya Akışı Açma (anlam netliği için tekrar)
+#### Adım 1: bir dosya akışı açın (anlamı netleştirmek için tekrar)
 Ayrı bir çıkarma akışını göstermek için aynı yaklaşımı tekrar kullanıyoruz.
 
 ```java
 InputStream fs = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/sample.docx");
 ```
 
-#### Adım 2: Belgeyi Yükleme
+#### Adım 2: belgeyi yükleyin
+
 ```java
 Editor editor = new Editor(fs, new WordProcessingLoadOptions());
 ```
 
-#### Adım 3: HTML İçeriğini Çıkarma
+#### Adım 3: HTML içeriğini çıkarın
 `EditableDocument`'in `getContent()` yöntemi, Word dosyasının tam HTML temsilini döndürür.
 
 ```java
@@ -203,7 +199,7 @@ EditableDocument document = editor.edit(new WordProcessingEditOptions());
 String htmlContent = document.getContent();
 ```
 
-#### Adım 4: HTML İçeriğini Görüntüleme
+#### Adım 4: HTML içeriğini gösterin
 Demo amaçlı ilk 200 karakteri yazdırıyoruz, ancak gerçek bir uygulamada bu HTML'i bir web görünümüne akıtabilir veya bir dosyaya kaydedebilirsiniz.
 
 ```java
@@ -211,77 +207,79 @@ System.out.println("HTML content of the input document (first 200 chars): " +
     htmlContent.substring(0, Math.min(200, htmlContent.length())));
 ```
 
-## Pratik Uygulamalar
+## Pratik uygulamalar
 
-**convert docx to html** ve belgeleri düzenlemenin nasıl yapılığını anlamak birçok olasılık açar:
+**convert docx to html java** ve belgeleri düzenlemenin nasıl yapılacağını anlamak birçok olasılık sunar:
 
-1. **Document Management Systems** – toplu güncellemeleri otomatikleştirin ve web‑hazır ön izlemeler oluşturun.  
-2. **Web Content Creation** – iç raporları manuel kopyala‑yapıştırmadan HTML makalelere dönüştürün.  
-3. **Data Extraction** – analiz için Word dosyalarından belirli bölümleri (ör. tablolar) çekin.  
-4. **Enterprise Integration** – düzenlenmiş belgeleri CRM/ERP iş akışlarına besleyin.
+1. **Document management systems** – toplu güncellemeleri otomatikleştirir ve web‑hazır ön izlemeler oluşturur.  
+2. **Web content creation** – iç raporları manuel kopyala‑yapıştırmadan HTML makalelere dönüştürür.  
+3. **Data extraction** – analiz için Word dosyalarından belirli bölümleri (ör. tablolar) çeker.  
+4. **Enterprise integration** – düzenlenmiş belgeleri CRM/ERP iş akışlarına besler.
 
-## Performans Düşünceleri
+## Performans hususları
 
-- **Stream Management**: Her zaman `InputStream` nesnelerini `finally` bloğunda kapatın veya try‑with‑resources kullanın.  
-- **Memory Footprint**: Çok büyük `.docx` dosyaları için, tüm içeriği bir kerede yüklemek yerine belgeyi mantıksal bölümlerde işleyin.  
+- **Stream management**: `InputStream` nesnelerini her zaman bir `finally` bloğunda kapatın veya try‑with‑resources kullanın.  
+- **Memory footprint**: Çok büyük `.docx` dosyaları için, tüm içeriği bir kerede yüklemek yerine belgeyi mantıksal bölümlerde işleyin.  
 - **Profiling**: Yüksek hacimli toplu işlemlerde darboğazları tespit etmek için Java profil araçlarını (ör. VisualVM) kullanın.
 
 ## Sonuç
 
-Artık **how to convert docx to html**, Word dosyalarını düzenleme ve GroupDocs.Editor for Java kullanarak HTML çıkarma konusunda eksiksiz, uçtan uca bir çözümünüz var. Bu yetenekler, içerik portallarından otomatik raporlama hatlarına kadar sağlam belge‑merkezli uygulamalar oluşturmanızı sağlar.
+Artık **how to convert docx to html java** için eksiksiz, uçtan uca bir çözüme, Word dosyalarını düzenlemeye ve GroupDocs.Editor for Java kullanarak HTML çıkarmaya sahipsiniz. Bu yetenekler, içerik portallarından otomatik raporlama hatlarına kadar sağlam belge‑odaklı uygulamalar oluşturmanızı sağlar.
 
-**Sonraki Adımlar**
+**Sonraki adımlar**
 - PDF veya düz metin gibi diğer çıktı formatlarıyla deney yapın.  
-- `EditableDocument` API'lerine daha derinlemesine girerek başlıkları, görselleri veya tabloları programatik olarak değiştirin.  
+- `EditableDocument` API'lerine daha derinlemesine girerek başlıkları, resimleri veya tabloları programmatically değiştirin.  
 - Özel stil veya filigran gibi gelişmiş senaryolar için resmi API belgelerini inceleyin.
 
-## SSS Bölümü
+## SSS bölümü
 
-**Q: GroupDocs.Editor'ı Java'da kullanmak için sistem gereksinimleri nelerdir?**  
-A: JDK (8 ve üzeri), Maven (veya manuel JAR ekleme) ve uyumlu bir IDE gerekir. Kütüphane Windows, Linux ve macOS'ta çalışır.
+**S: GroupDocs.Editor'ı Java'da kullanmak için sistem gereksinimleri nelerdir?**  
+C: JDK (8 ve üzeri), Maven (veya manuel JAR ekleme) ve uyumlu bir IDE gerekir. Kütüphane Windows, Linux ve macOS'ta çalışır.
 
-**Q: Şifre korumalı Word dosyalarını düzenleyebilir miyim?**  
-A: Evet – `Editor` oluştururken şifreyi `WordProcessingLoadOptions` içinde sağlayın.
+**S: Şifre korumalı Word belgelerini düzenleyebilir miyim?**  
+C: Evet – `Editor` oluştururken şifreyi `WordProcessingLoadOptions` içinde sağlayın.
 
-**Q: GroupDocs.Editor büyük belgeleri nasıl yönetir?**  
-A: Kütüphane içeriği akış olarak işler ve birkaç yüz megabaytlık dosyaları verimli bir şekilde işleyebilir; çok büyük dosyalar için işleme mantıksal bölümlere ayrılmalıdır.
+**S: GroupDocs.Editor büyük belgeleri nasıl işler?**  
+C: Kütüphane içeriği akıtarak birkaç yüz megabayta kadar dosyaları verimli bir şekilde işleyebilir; çok büyük dosyalar için işleme mantıksal bölümlere ayrılmalıdır.
 
-**Q: Belgenin yalnızca belirli bölümlerini HTML olarak çıkarmak mümkün mü?**  
-A: `getContent()` çağrısından sonra, ortaya çıkan HTML'i Jsoup gibi bir kütüphane ile ayrıştırıp istediğiniz öğeleri izole edebilirsiniz.
+**S: Bir belgenin yalnızca belirli bölümlerini HTML olarak çıkarmak mümkün mü?**  
+C: `getContent()` çağrısından sonra, Jsoup gibi bir kütüphane ile oluşan HTML'i ayrıştırıp istenen öğeleri izole edebilirsiniz.
 
-**Q: Yaygın entegrasyon tuzakları nelerdir?**  
-A: Maven depo yapılandırmasının eksik olması, sürüm uyumsuzlukları ve akışların kapatılmayı unutması en sık karşılaşılan sorunlardır.
+**S: Yaygın entegrasyon tuzakları nelerdir?**  
+C: Maven depo yapılandırmasının eksik olması, sürüm uyumsuzlukları ve akışları kapatmayı unutmak en sık karşılaşılan sorunlardır.
 
-## Sık Sorulan Sorular
+## Sıkça sorulan sorular
 
-**Q: GroupDocs.Editor, Linux sunucularında Docx'i HTML'ye dönüştürmeyi destekliyor mu?**  
-A: Evet, kütüphane platform bağımsızdır ve desteklenen bir JDK ile çalışan herhangi bir işletim sisteminde çalışır.
+**S: GroupDocs.Editor, Linux sunucularda Docx'i HTML'ye dönüştürmeyi destekliyor mu?**  
+C: Evet, kütüphane platform bağımsızdır ve desteklenen bir JDK'ya sahip herhangi bir işletim sisteminde çalışır.
 
-**Q: Oluşturulan HTML'i (ör. özel CSS sınıfları eklemek) nasıl özelleştirebilirim?**  
-A: `WordProcessingEditOptions` kullanarak özel bir `HtmlSavingOptions` nesnesi belirtebilir ve burada CSS ekleyebilir veya etiket işleme biçimini değiştirebilirsiniz.
+**S: Oluşturulan HTML'i nasıl özelleştirebilirim (ör. özel CSS sınıfları eklemek)?**  
+C: CSS eklemek veya etiket işleme değiştirmek için özel bir `HtmlSavingOptions` nesnesi belirlemek amacıyla `WordProcessingEditOptions` kullanın.
 
-**Q: Birden fazla belgeyi toplu olarak işlemek mümkün mü?**  
-A: Kesinlikle – yükleme, düzenleme ve çıkarma mantığını, dosya yolu veya akış koleksiyonunu döngü içinde yineleyerek paketleyebilirsiniz.
+**S: Birden fazla belgeyi toplu işlemek için bir yol var mı?**  
+C: Kesinlikle – yükleme, düzenleme ve çıkarma mantığını, dosya yolları veya akış koleksiyonları üzerinde dönen bir döngü içinde sarın.
 
-**Q: SaaS ürünü için hangi lisans modelini seçmeliyim?**  
-A: GroupDocs, sınırsız dağıtım içeren abonelik tabanlı lisans sunar; hacim indirimli bir plan için satış ekibiyle iletişime geçin.
+**S: SaaS ürünü için hangi lisans modelini seçmeliyim?**  
+C: GroupDocs, sınırsız dağıtım içeren abonelik‑tabanlı lisans sunar; hacim indirimli bir plan için satış ekibiyle iletişime geçin.
 
-**Q: Daha fazla kod örneği nerede bulunabilir?**  
-A: Resmi dokümantasyon ve GitHub deposu, gelişmiş senaryolar için ek snippet'ler içerir.
+**S: Daha fazla kod örneği nerede bulabilirim?**  
+C: Resmi dokümantasyon ve GitHub deposu, gelişmiş senaryolar için ek kod parçacıkları içerir.
 
-**Son Güncelleme:** 2026-05-17  
-**Test Edilen:** GroupDocs.Editor 25.3 for Java  
+---
+
+**Son Güncelleme:** 2026-10-11  
+**Test Edilen Versiyon:** GroupDocs.Editor 25.3 for Java  
 **Yazar:** GroupDocs  
 
 **Kaynaklar**  
-- [Dokümantasyon](https://docs.groupdocs.com/editor/java/)  
-- [API Referansı](https://reference.groupdocs.com/editor/java/)  
-- [İndirme](https://releases.groupdocs.com/editor/java/)  
-- [Ücretsiz Deneme](https://releases.groupdocs.com/editor/java/)  
-- [Geçici Lisans](https://purchase.groupdocs.com/temporary-license)  
-- [Destek Forumu](https://forum.groupdocs.com/c/editor/)
+- [Documentation](https://docs.groupdocs.com/editor/java/)  
+- [API Reference](https://reference.groupdocs.com/editor/java/)  
+- [Download](https://releases.groupdocs.com/editor/java/)  
+- [Free Trial](https://releases.groupdocs.com/editor/java/)  
+- [Temporary License](https://purchase.groupdocs.com/temporary-license)  
+- [Support Forum](https://forum.groupdocs.com/c/editor/)  
 
-## İlgili Öğreticiler
+## İlgili öğreticiler
 
-- [Word Belgelerinden Kaynakları Çıkarma – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)  
-- [GroupDocs.Editor Kullanarak Java'da HTML'yi DOCX'e Dönüştürme: Tam Kılavuz](/editor/java/document-saving/convert-html-docx-groupdocs-java-guide/)
+- [Word Belgelerinden Kaynakları Çıkarma – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
+- [GroupDocs.Editor Kullanarak Java'da HTML'i DOCX'e Dönüştürme: Tam Kılavuz](/editor/java/document-saving/convert-html-docx-groupdocs-java-guide/)
