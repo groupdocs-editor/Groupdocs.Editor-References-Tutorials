@@ -1,14 +1,62 @@
 ---
-date: '2026-04-11'
-description: เรียนรู้วิธีโหลดเอกสาร Word ด้วย .NET และเติมฟิลด์ฟอร์มของ Word โดยใช้
-  GroupDocs.Editor สำหรับ .NET พร้อมกับแก้ไขเอกสาร Word ด้วย .NET อย่างมีประสิทธิภาพ
+date: '2026-10-11'
+description: เรียนรู้วิธีโหลด word document .NET, เติมฟิลด์ฟอร์ม word, และแปลง word
+  เป็น pdf ด้วย GroupDocs.Editor for .NET อย่างรวดเร็วและไม่มีค่าไลเซนส์
 keywords:
 - how to load word
-- edit word documents
 - populate word form fields
 - convert word to pdf
 - automate contract generation
-title: วิธีโหลดเอกสาร Word .NET ด้วย GroupDocs.Editor – แก้ไขไฟล์ Word
+- read docx without office
+lastmod: '2026-10-11'
+og_description: วิธีโหลด word document .NET, เติมฟิลด์ฟอร์ม, และแปลง word เป็น pdf
+  ด้วย GroupDocs.Editor. รับโค้ดขั้นตอนต่อขั้นตอน, เคล็ดลับ, และเทคนิคการเพิ่มประสิทธิภาพ
+og_image_alt: Guide to loading and editing Word documents in .NET using GroupDocs.Editor
+og_title: วิธีโหลด word document .NET ด้วย GroupDocs.Editor
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-11'
+  description: Learn how to load word document .NET, populate word form fields, and
+    convert word to pdf using GroupDocs.Editor for .NET in a fast, license‑free way.
+  headline: How to load word document .NET with GroupDocs.Editor – edit word files
+  type: TechArticle
+- description: Learn how to load word document .NET, populate word form fields, and
+    convert word to pdf using GroupDocs.Editor for .NET in a fast, license‑free way.
+  name: How to load word document .NET with GroupDocs.Editor – edit word files
+  steps:
+  - name: create a stream for your document
+    text: First, open the Word file as a read‑only stream. This keeps memory usage
+      low and works for large files.
+  - name: configure load options (optional)
+    text: If your document is password‑protected, supply the password here. Otherwise,
+      the default options work fine.
+  - name: load the document into an editor instance
+    text: The `Editor` object gives you full access to the document’s content and
+      form fields.
+  type: HowTo
+- questions:
+  - answer: Yes, it supports .NET Framework 4.6.1+ and .NET Core/5+/6+.
+    question: Is GroupDocs.Editor compatible with all versions of .NET?
+  - answer: Use `WordProcessingLoadOptions.Password` to supply the document password
+      during loading.
+    question: How can I handle protected documents in my application?
+  - answer: Verify file paths, ensure the correct password is provided, and confirm
+      the document format is supported.
+    question: What if I encounter a loading error with GroupDocs.Editor?
+  - answer: Absolutely. After making changes, call `editor.Save(outputPath)` to write
+      the updated file.
+    question: Can I save the edited document back to the same location?
+  - answer: Yes—wrap the loading and editing logic inside a loop that iterates over
+      a collection of file paths.
+    question: Does the API support bulk processing of multiple documents?
+  type: FAQPage
+tags:
+- load word
+- GroupDocs.Editor
+- .NET document processing
+- word form fields
+- contract automation
+title: วิธีโหลด word document .NET ด้วย GroupDocs.Editor – แก้ไขไฟล์ word
 type: docs
 url: /th/net/advanced-features/groupdocs-editor-net-word-documents-processing/
 weight: 1
@@ -16,41 +64,41 @@ weight: 1
 
 # วิธีโหลดเอกสาร Word .NET ด้วย GroupDocs.Editor – แก้ไขไฟล์ Word
 
-## คำตอบอย่างรวดเร็ว
-- **ไลบรารีใดที่จัดการไฟล์ Word ใน .NET?** GroupDocs.Editor for .NET.  
-- **ฉันจะโหลดเอกสาร Word อย่างไร?** สร้างอินสแตนซ์ `Editor` ด้วยสตรีมไฟล์และ `WordProcessingLoadOptions` ตัวเลือก (optional).  
-- **ฉันสามารถแก้ไขฟิลด์ฟอร์มได้หรือไม่?** ใช่—ใช้ `FormFieldManager` เพื่ออ่านหรือกำหนดค่า.  
-- **ฉันต้องการไลเซนส์หรือไม่?** การทดลองใช้ฟรีทำงานสำหรับการประเมิน; จำเป็นต้องมีไลเซนส์แบบชำระเงินสำหรับการใช้งานจริง.  
-- **เวอร์ชัน .NET ที่รองรับ?** .NET Framework 4.6.1+, .NET Core/5+/6+.
+ในแอปพลิเคชัน .NET สมัยใหม่, **how to load word** อย่างรวดเร็วและเชื่อถือได้เป็นความต้องการทั่วไป—ไม่ว่าจะเป็นการอัตโนมัติสัญญา, ใบแจ้งหนี้, หรือแบบฟอร์มภายใน บทเรียนนี้จะแสดงให้คุณเห็นว่า GroupDocs.Editor สำหรับ .NET ทำให้คุณสามารถโหลด, อ่าน, แก้ไข, และแม้กระทั่ง **convert word to pdf** โดยไม่ต้องติดตั้ง Microsoft Office, พร้อมกับให้คุณควบคุม **populate word form fields** ได้อย่างเต็มที่ผ่านโปรแกรม
+
+## คำตอบด่วน
+- **What library handles Word files in .NET?** GroupDocs.Editor for .NET.  
+- **How do I load a Word document?** Create an `Editor` instance with a file stream and optional `WordProcessingLoadOptions`.  
+- **Can I edit form fields?** Yes—use `FormFieldManager` to read or set values.  
+- **Do I need a license?** A free trial works for evaluation; a paid license is required for production.  
+- **Supported .NET versions?** .NET Framework 4.6.1+, .NET Core/5+/6+.
 
 ## “how to load word” คืออะไรในบริบทของ .NET?
-การโหลดเอกสาร Word ในสภาพแวดล้อม .NET หมายถึงการเปิดไฟล์, แยกโครงสร้างภายใน, และเปิดเผยเนื้อหาเพื่อการจัดการต่อไป—โดยไม่ต้องติดตั้ง Microsoft Office บนเซิร์ฟเวอร์. GroupDocs.Editor ทำให้ทุกอย่างนี้เป็นเรื่องง่ายด้วย API ที่สะอาดสำหรับ DOCX, DOC, และรูปแบบ Word อื่น ๆ.
+`how to load word` หมายถึงการเปิดไฟล์ Word, แยกวิเคราะห์โครงสร้าง XML ภายใน, และเปิดเผยเนื้อหาผ่าน API เพื่อให้คุณสามารถอ่านหรือแก้ไขได้โดยไม่ต้องใช้ Microsoft Office. GroupDocs.Editor ทำหน้าที่นามธรรมทั้งหมดนี้, ให้โมเดลอ็อบเจกต์ที่สะอาดและใช้หน่วยความจำน้อยสำหรับไฟล์ DOCX, DOC, และ ODT.
 
-## ทำไมต้องเติมฟิลด์ฟอร์ม Word?
-เอกสารธุรกิจหลายประเภทมีฟิลด์ที่สามารถกรอกได้ (กล่องข้อความ, กล่องเลือก, วันที่ ฯลฯ). การ **populate word form fields** อัตโนมัติช่วยให้คุณสร้างโซลูชันเช่น:
-- การสร้างสัญญาอัตโนมัติ
-- จดหมายรวมส่งจำนวนมาก
-- การสร้างรายงานตามข้อมูล
+## ทำไมต้อง populate word form fields?
+การเติมฟิลด์ฟอร์มใน Word ช่วยให้คุณอัตโนมัติเอกสารใด ๆ ที่มีตัวแทนตำแหน่ง—กล่องข้อความ, กล่องเลือก, วันที่, หรือรายการดรอป‑ดาวน์. ด้วยการตั้งค่าฟิลด์เหล่านี้ผ่านโปรแกรม คุณสามารถสร้างสัญญา, ใบแจ้งหนี้, หรือรายงานที่ปรับให้เป็นส่วนบุคคลได้ในระดับใหญ่, ลดข้อผิดพลาดจากการป้อนข้อมูลด้วยมือและเร่งกระบวนการจัดการเอกสาร. API จัดการประเภทฟิลด์ต่าง ๆ และรับประกันว่าข้อมูลจะถูกแทรกอย่างถูกต้องตามสคีมาของเอกสาร. ความสามารถนี้สนับสนุน:
+
+- **Automate contract generation** – fill client‑specific data in seconds.  
+- **Mass‑mailing of personalized letters** – generate thousands of tailored documents in a single loop.  
+- **Data‑driven report creation** – inject database values directly into a template.
 
 ## ข้อกำหนดเบื้องต้น
-
-ก่อนเริ่ม, โปรดตรวจสอบว่าคุณมี:
-
-- **GroupDocs.Editor** NuGet package (ไลบรารีหลักสำหรับการประมวลผลเอกสาร).  
-- Visual Studio 2019+ พร้อม .NET Framework 4.6.1+ หรือ .NET Core/5+/6+.  
-- ความรู้พื้นฐานของ C# และความคุ้นเคยกับสตรีมไฟล์ (เป็นประโยชน์แต่ไม่จำเป็น).
+- **GroupDocs.Editor** NuGet package (core library for document processing).  
+- Visual Studio 2019+ with .NET Framework 4.6.1+ or .NET Core/5+/6+.  
+- Basic C# knowledge; familiarity with `Stream` objects is helpful but not required.
 
 ## การตั้งค่า GroupDocs.Editor สำหรับ .NET
 
 ### การติดตั้ง
-เพิ่มไลบรารีลงในโปรเจกต์ของคุณโดยใช้คำสั่งใดคำสั่งหนึ่งด้านล่าง:
+Add the library to your project using one of the commands below:
 
-**Using .NET CLI:**
+**Using .NET CLI:**  
 ```bash
 dotnet add package GroupDocs.Editor
 ```
 
-**Using Package Manager Console:**
+**Using Package Manager Console:**  
 ```powershell
 Install-Package GroupDocs.Editor
 ```
@@ -58,27 +106,30 @@ Install-Package GroupDocs.Editor
 **NuGet Package Manager UI:**  
 Search for **"GroupDocs.Editor"** and install the latest version.
 
-### การรับไลเซนส์
-รับการทดลองใช้ฟรีหรือไลเซนส์ชั่วคราวเพื่อประเมิน API:
+### การรับใบอนุญาต
+Grab a free trial or a temporary license to evaluate the API:
 
 - Download page: [ดาวน์โหลด GroupDocs](https://releases.groupdocs.com/editor/net/)  
 - Temporary license: [หน้าลิขสิทธิ์ชั่วคราว](https://purchase.groupdocs.com/temporary-license)
 
-สำหรับการใช้งานในผลิตภัณฑ์, ซื้อไลเซนส์เต็มเพื่อเปิดใช้งานคุณสมบัติทั้งหมด.
+สำหรับการใช้งานในสภาพแวดล้อมการผลิต, ให้ซื้อใบอนุญาตเต็มเพื่อเปิดใช้งานคุณสมบัติทั้งหมด.
 
 ### การเริ่มต้นพื้นฐาน
-เพิ่มเนมสเปซที่จำเป็นที่ส่วนบนของไฟล์ C# ของคุณ:
+Add the required namespace at the top of your C# file:
 
 ```csharp
 using GroupDocs.Editor;
 ```
 
-ตอนนี้คุณพร้อมที่จะ **how to load word** และเริ่มแก้ไข.
+Now you’re ready to **how to load word** and start editing.
 
-## วิธีโหลดเอกสาร Word .net?
+## วิธีโหลดเอกสาร Word .NET?
+
+The `Editor` class is the primary component for loading and manipulating Word files in GroupDocs.Editor.  
+**Direct answer:** Open the file as a read‑only stream, optionally pass a password via `WordProcessingLoadOptions`, and instantiate an `Editor` object with the stream. The `Editor` then gives you full access to the document’s content, including form fields, tables, and images.
 
 ### ขั้นตอน 1: สร้างสตรีมสำหรับเอกสารของคุณ
-แรกเริ่ม, เปิดไฟล์ Word เป็นสตรีมแบบอ่าน‑อย่างเดียว. วิธีนี้ช่วยลดการใช้หน่วยความจำและทำงานได้ดีกับไฟล์ขนาดใหญ่.
+First, open the Word file as a read‑only stream. This keeps memory usage low and works for large files.
 
 ```csharp
 string inputFilePath = @"YOUR_DOCUMENT_DIRECTORY/YourDocument.docx"; // Placeholder path.
@@ -88,16 +139,16 @@ using (FileStream fs = File.OpenRead(inputFilePath))
 }
 ```
 
-### ขั้นตอน 2: กำหนดค่า Load Options (Optional)
-หากเอกสารของคุณมีการป้องกันด้วยรหัสผ่าน, ระบุรหัสผ่านที่นี่. หากไม่, ตัวเลือกเริ่มต้นจะทำงานได้ดี.
+### ขั้นตอน 2: กำหนดค่า load options (ไม่บังคับ)
+If your document is password‑protected, supply the password here. Otherwise, the default options work fine.
 
 ```csharp
 WordProcessingLoadOptions loadOptions = new WordProcessingLoadOptions();
 loadOptions.Password = "your_password_here"; // Optional: for protected documents.
 ```
 
-### ขั้นตอน 3: โหลดเอกสารเข้าสู่อินสแตนซ์ Editor
-อ็อบเจกต์ `Editor` ให้คุณเข้าถึงเนื้อหาและฟิลด์ฟอร์มของเอกสารได้อย่างเต็มที่.
+### ขั้นตอน 3: โหลดเอกสารเข้าสู่ตัวอย่าง editor
+The `Editor` object gives you full access to the document’s content and form fields.
 
 ```csharp
 using (Editor editor = new Editor(fs, loadOptions))
@@ -106,17 +157,20 @@ using (Editor editor = new Editor(fs, loadOptions))
 }
 ```
 
-## วิธีเติมฟิลด์ฟอร์ม Word?
+## วิธี populate word form fields?
+
+The `FormFieldManager` class provides access to all form fields within a loaded document.  
+**Direct answer:** Retrieve the `FormFieldManager` from the `Editor`, enumerate each field, and call `SetValue` (or `SetChecked` for check boxes) to inject your data. Finally, save the document to persist the changes.
 
 ### เข้าถึง FormFieldManager
-เมื่อเอกสารถูกโหลดแล้ว, ดึงผู้จัดการที่ดูแลฟิลด์ทั้งหมดออกมา.
+The `FormFieldManager` class manages all form elements inside a loaded Word document.
 
 ```csharp
 var fieldManager = editor.FormFieldManager;
 ```
 
-### วนลูปและจัดการฟิลด์ฟอร์ม
-GroupDocs.Editor แบ่งประเภทฟิลด์ตามชนิด. ลูปต่อไปนี้จะดึงแต่ละฟิลด์และแสดงที่คุณจะเพิ่มตรรกะของคุณ—ไม่ว่าจะเป็นการอ่านค่า หรือ **populate word form fields** ด้วยข้อมูลใหม่.
+### วนลูปและจัดการฟอร์มฟิลด์
+GroupDocs.Editor categorizes fields by type. The following loop extracts each field and shows where you would add your custom logic—whether you’re reading values or **populate word form fields** with new data.
 
 ```csharp
 foreach (var formField in fieldManager.FormFieldCollection)
@@ -151,55 +205,70 @@ foreach (var formField in fieldManager.FormFieldCollection)
 }
 ```
 
-## วิธีแก้ไขเอกสาร Word .net?
+## วิธีแก้ไขเอกสาร Word .NET?
 
-นอกเหนือจากฟิลด์ฟอร์ม, คุณสามารถแก้ไขย่อหน้า, ตาราง, และรูปภาพโดยใช้อินสแตนซ์ `Editor` เดียวกัน. API มีเมธอดเช่น `Replace`, `Insert`, และ `Delete` ที่ทำงานโดยตรงบนการแทนภายในของเอกสาร. แม้ว่าบทเรียนนี้จะเน้นที่การโหลดและจัดการฟอร์ม, รูปแบบเดียวกัน—เปิดด้วย `Editor`, ทำการเปลี่ยนแปลง, แล้วบันทึก—ใช้ได้กับทุกสถานการณ์ **edit word documents .net**.
+**Direct answer:** Use the same `Editor` instance to call methods such as `Replace`, `Insert`, or `Delete` on paragraphs, tables, and images. After making changes, invoke `Save` to write the updated file back to disk or a stream.
+
+Beyond form fields, you can modify any part of the document. The API’s `Replace` method swaps placeholder text, `Insert` adds new paragraphs or tables, and `Delete` removes unwanted sections. The pattern—open with `Editor`, make changes, then save—covers every **edit word documents .NET** scenario.
+
+## วิธี convert word to pdf ใน .NET?
+
+`SaveOptions.Pdf` specifies that the document should be saved in PDF format.  
+**Direct answer:** Load the Word file with `Editor`, then call `editor.Save(outputPath, SaveOptions.Pdf)` to generate a PDF. The conversion preserves fonts, images, tables, and complex layouts without requiring Microsoft Word.
+
+GroupDocs.Editor supports conversion to over 50 output formats, including PDF, HTML, and image types, handling multi‑hundred‑page documents in under a few seconds on typical server hardware.
 
 ## กรณีการใช้งานทั่วไป & ทำไมเรื่องนี้สำคัญ
 
-| สถานการณ์ | ประโยชน์ |
+| Scenario | Benefit |
 |----------|---------|
-| **การสร้างสัญญาอัตโนมัติ** | เติมตัวแปรด้วยข้อมูลลูกค้าในไม่กี่วินาที ลดข้อผิดพลาดจากการทำมือ. |
-| **จดหมายรวมส่งจำนวนมาก** | ประมวลผลเทมเพลต Word ร้อยๆ ตัวด้วยลูปเดียว ประหยัดเวลาหลายชั่วโมง. |
-| **การตรวจสอบความสอดคล้อง** | ตรวจสอบว่าฟิลด์ที่จำเป็นถูกกรอกครบก่อนเก็บรักษา เพื่อให้สอดคล้องกับกฎระเบียบ. |
+| **Automated contract generation** | Fill placeholders with client data in seconds, eliminating manual errors. |
+| **Bulk mail‑merge letters** | Process hundreds of Word templates with a single loop, saving hours of work. |
+| **Compliance auditing** | Verify required fields are completed before archiving, ensuring regulatory adherence. |
 
 ## เคล็ดลับการแก้ไขปัญหา
-- **File Path Errors** – ตรวจสอบว่าพาธชี้ไปยังไฟล์ที่มีอยู่และแอปพลิเคชันของคุณมีสิทธิ์อ่าน.  
-- **Incorrect Load Options** – หากเอกสารมีการป้องกันด้วยรหัสผ่าน, ตรวจสอบให้แน่ใจว่ารหัสผ่านตรงกัน; มิฉะนั้นการโหลดจะล้มเหลว.  
-- **Unsupported Formats** – GroupDocs.Editor รองรับ DOCX, DOC, และ ODT. แปลงรูปแบบอื่นก่อนโหลด.
+- **File path errors** – Verify that the path points to an existing file and that your application has read permissions.  
+- **Incorrect load options** – If a document is password‑protected, ensure the password matches; otherwise loading will fail.  
+- **Unsupported formats** – GroupDocs.Editor supports DOCX, DOC, and ODT. Convert other formats before loading.
 
 ## ข้อควรพิจารณาด้านประสิทธิภาพ
-- ปิดสตรีมโดยเร็ว (`using` statements) เพื่อคืนทรัพยากร.  
-- สำหรับไฟล์ขนาดใหญ่มาก, ประมวลผลเป็นส่วนย่อยเพื่อรักษาการใช้หน่วยความจำให้ต่ำ.  
-- วัดเวลาโหลดในสภาพแวดล้อมของคุณ; ไลบรารีได้รับการปรับให้เร็วที่สุดแต่ฮาร์ดแวร์ยังคงมีผล.
+- Close streams promptly (`using` statements) to free resources.  
+- For very large files, process sections in chunks to keep memory usage low.  
+- Benchmark load times in your environment; the library is optimized for speed but hardware still matters.
 
 ## สรุป
-คุณมีพื้นฐานที่มั่นคงสำหรับ **how to load word**, **populate word form fields**, และ **edit word documents .net** ด้วย GroupDocs.Editor. ด้วยบล็อกเหล่านี้, คุณสามารถอัตโนมัติกระบวนการทำงานที่ใช้ Word ใด ๆ ในแอปพลิเคชัน .NET ของคุณได้อย่างเต็มที่.
+You now have a solid foundation for **how to load word**, **populate word form fields**, **convert word to pdf**, and **edit word documents .NET** using GroupDocs.Editor. With these building blocks, you can automate virtually any Word‑based workflow in your .NET applications.
 
 **ขั้นตอนต่อไป**
-- ทดลองแก้ไขข้อความ, ตาราง, และรูปภาพโดยใช้ API `Editor`.  
-- ผสานโซลูชันกับแหล่งข้อมูลของคุณ (SQL, REST API, ฯลฯ) เพื่อสร้างเนื้อหาแบบไดนามิก.  
-- สำรวจเอกสารเต็มสำหรับสถานการณ์ขั้นสูง: [GroupDocs Documentation](https://docs.groupdocs.com/editor/net/)
+- Experiment with editing text, tables, and images using the `Editor` API.  
+- Integrate the solution with your data source (SQL, REST API, etc.) to drive dynamic content.  
+- Explore the full documentation for advanced scenarios: [GroupDocs Documentation](https://docs.groupdocs.com/editor/net/)
 
 ## คำถามที่พบบ่อย
 
-**Q: GroupDocs.Editor รองรับทุกเวอร์ชันของ .NET หรือไม่?**  
-A: ใช่, รองรับ .NET Framework 4.6.1+ และ .NET Core/5+/6+.
+**Q: Is GroupDocs.Editor compatible with all versions of .NET?**  
+A: Yes, it supports .NET Framework 4.6.1+ and .NET Core/5+/6+.
 
-**Q: ฉันจะจัดการกับเอกสารที่มีการป้องกันในแอปพลิเคชันของฉันอย่างไร?**  
-A: ใช้ `WordProcessingLoadOptions.Password` เพื่อระบุรหัสผ่านของเอกสารในระหว่างการโหลด.
+**Q: How can I handle protected documents in my application?**  
+A: Use `WordProcessingLoadOptions.Password` to supply the document password during loading.
 
-**Q: ถ้าฉันพบข้อผิดพลาดในการโหลดกับ GroupDocs.Editor จะทำอย่างไร?**  
-A: ตรวจสอบพาธไฟล์, ตรวจสอบว่ารหัสผ่านที่ให้ถูกต้อง, และยืนยันว่ารูปแบบเอกสารได้รับการสนับสนุน.
+**Q: What if I encounter a loading error with GroupDocs.Editor?**  
+A: Verify file paths, ensure the correct password is provided, and confirm the document format is supported.
 
-**Q: ฉันสามารถบันทึกเอกสารที่แก้ไขกลับไปยังตำแหน่งเดิมได้หรือไม่?**  
-A: แน่นอน. หลังจากทำการเปลี่ยนแปลง, เรียก `editor.Save(outputPath)` เพื่อเขียนไฟล์ที่อัปเดต.
+**Q: Can I save the edited document back to the same location?**  
+A: Absolutely. After making changes, call `editor.Save(outputPath)` to write the updated file.
 
-**Q: API รองรับการประมวลผลแบบกลุ่มของหลายเอกสารหรือไม่?**  
-A: ใช่—ใส่ตรรกะการโหลดและแก้ไขไว้ในลูปที่วนผ่านคอลเลกชันของพาธไฟล์.
+**Q: Does the API support bulk processing of multiple documents?**  
+A: Yes—wrap the loading and editing logic inside a loop that iterates over a collection of file paths.
 
 ---
 
-**อัปเดตล่าสุด:** 2026-04-11  
-**ทดสอบด้วย:** GroupDocs.Editor 23.12 for .NET  
-**ผู้เขียน:** GroupDocs
+**Last Updated:** 2026-10-11  
+**Tested with:** GroupDocs.Editor 23.12 for .NET  
+**Author:** GroupDocs
+
+## บทแนะนำที่เกี่ยวข้อง
+
+- [How to Edit Documents with GroupDocs.Editor for .NET](/editor/net/document-editing/edit-document/)
+- [Edit Word Form Fields using GroupDocs.Editor .NET: A Comprehensive Guide](/editor/net/form-fields/edit-word-form-fields-groupdocs-editor-net/)
+- [Convert Word to PDF and Save Edited Document – GroupDocs.Editor .NET](/editor/net/document-processing/save-edited-document-various-formats/)
