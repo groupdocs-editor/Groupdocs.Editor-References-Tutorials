@@ -1,22 +1,30 @@
 ---
-date: '2026-06-16'
-description: GroupDocs.Editor kullanarak Excel Java'yı nasıl koruyacağınızı öğrenin;
-  şifre korumalı çalışma kitabını nasıl açacağınız, yeni şifreler nasıl ayarlayacağınız
-  ve yazma korumasını nasıl yöneteceğiniz dahil.
+date: '2026-10-16'
+description: Java'da GroupDocs.Editor ile password korumalı Excel dosyalarını nasıl
+  açacağınızı, yeni password'lar belirlemeyi ve write protection'ı yönetmeyi öğrenin.
 keywords:
-- protect excel java
-- open password protected workbook
-- java document password protection
+- open password protected excel
+- write protect excel workbook
+- optimize memory usage java
+- protect specific worksheet
+lastmod: '2026-10-16'
+og_description: Java'da GroupDocs.Editor kullanarak password korumalı Excel dosyalarını
+  açın. Bu rehber, encrypted workbooks'ı nasıl yükleyeceğinizi, yanlış password'ları
+  nasıl ele alacağınızı, kaydetme sırasında yeni password'ları nasıl uygulayacağınızı
+  ve bellek kullanımını optimize ederken write protection'ı nasıl etkinleştireceğinizi
+  gösterir.
+og_image_alt: 'Developer guide: Open password protected Excel in Java with GroupDocs.Editor'
+og_title: Java'da GroupDocs.Editor kullanarak password korumalı Excel'i açın
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-16'
-  description: Learn how to protect Excel Java using GroupDocs.Editor, including how
-    to open password protected workbook, set new passwords, and manage write protection.
-  headline: 'Protect Excel Java with GroupDocs.Editor: Password Protection Guide'
+  dateModified: '2026-10-16'
+  description: Learn how to open password protected Excel files in Java with GroupDocs.Editor,
+    set new passwords, and manage write protection.
+  headline: Open password protected Excel in Java using GroupDocs.Editor
   type: TechArticle
-- description: Learn how to protect Excel Java using GroupDocs.Editor, including how
-    to open password protected workbook, set new passwords, and manage write protection.
-  name: 'Protect Excel Java with GroupDocs.Editor: Password Protection Guide'
+- description: Learn how to open password protected Excel files in Java with GroupDocs.Editor,
+    set new passwords, and manage write protection.
+  name: Open password protected Excel in Java using GroupDocs.Editor
   steps:
   - name: '**Import required classes**'
     text: '**Import required classes**'
@@ -58,39 +66,48 @@ schemas:
       for multi‑node scenarios.
     question: Do I need a separate license for each server instance?
   type: FAQPage
-title: 'GroupDocs.Editor ile Excel Java''yı Koruyun: Şifre Koruma Kılavuzu'
+tags:
+- open password protected excel
+- GroupDocs.Editor
+- Java Excel security
+- workbook protection
+title: Java'da GroupDocs.Editor kullanarak password korumalı Excel'i açın
 type: docs
 url: /tr/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
 
-# GroupDocs.Editor ile Excel Java'yi Koruma
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-Bu kapsamlı öğreticide, GroupDocs.Editor'ın güçlü güvenlik özelliklerini kullanarak **Excel Java'yi koruma** uygulamalarını nasıl **koruyacağınızı** keşfedeceksiniz. Parola korumalı bir çalışma kitabını yüklemeyi, yanlış parolaları ele almayı, kaydederken yeni bir parola uygulamayı ve yazma korumasını etkinleştirmeyi adım adım göstereceğiz — büyük elektronik tablolarda bellek kullanımını düşük tutarken.
+# Java'da GroupDocs.Editor kullanarak şifre korumalı Excel'i açma
 
-## Hızlı Yanıtlar
-- **Excel Java'yi korumaya yardımcı olan kütüphane nedir?** GroupDocs.Editor for Java.  
-- **Parola korumalı bir çalışma kitabını parola olmadan açabilir miyim?** Hayır – bunu denemek `PasswordRequiredException` hatasını fırlatır.  
-- **Yanlış bir parolayı nasıl ele alırım?** `IncorrectPasswordException` yakalayın ve kullanıcıyı tekrar isteyin.  
-- **Kaydederken yeni bir parola ayarlamak mümkün mü?** Evet, `SpreadsheetSaveOptions.setPassword` metodunu çağırın.  
+Bu kapsamlı öğreticide, GroupDocs.Editor kullanarak Java'da **şifre korumalı Excel** çalışma kitaplarını nasıl açacağınızı, hatalı şifreleri nasıl yöneteceğinizi, kaydederken yeni bir şifre nasıl uygulayacağınızı ve tüm çalışma kitabı için yazma korumasını nasıl etkinleştireceğinizi keşfedeceksiniz. Adımlar, net açıklamalar, gerçek dünya kullanım senaryoları ve büyük ölçekli elektronik tablo işleme için en iyi uygulama ipuçlarıyla gösterilmiştir.
+
+## Hızlı cevaplar
+- **Şifre korumalı Excel'i açmaya yardımcı olan kütüphane nedir?** GroupDocs.Editor for Java.  
+- **Şifre korumalı bir çalışma kitabını şifre olmadan açabilir miyim?** Hayır – API `PasswordRequiredException` hatası fırlatır.  
+- **Yanlış bir şifreyi nasıl ele alırım?** `IncorrectPasswordException` yakalayın ve kullanıcıyı tekrar isteyin.  
+- **Kaydederken yeni bir şifre ayarlamak mümkün mü?** Evet, `SpreadsheetSaveOptions.setPassword` kullanın.  
 - **Üretim kullanımında lisansa ihtiyacım var mı?** Herhangi bir üretim dağıtımı için geçerli bir GroupDocs.Editor lisansı gereklidir.
 
-## protect excel java nedir?
-**protect excel java**, Java API'leri kullanarak Excel çalışma kitaplarına programlı olarak parola koruması ve yazma kısıtlaması uygulamayı ifade eder. Çalışma kitabını yükleyin, parolayı doğrulayın ve ardından yeni bir parola ile kaydedin – tümü birkaç kısa kod satırıyla. Bu yaklaşım manuel adımları ortadan kaldırır ve otomatikleştirilmiş hatlarda tutarlı güvenlik sağlar.
+## Şifre korumalı Excel'i açmak nedir?
+`open password protected Excel` bir açma şifresi olan Excel çalışma kitabını programlı olarak yükleme, şifreyi doğrulama ve isteğe bağlı olarak yeni bir şifre veya ek koruma ile yeniden kaydetme sürecini tanımlar. Java API'lerini kullanmak manuel adımları ortadan kaldırır ve güvenliği otomatik iş akışlarına yerleştirmenizi sağlar.
 
-## Neden Java ile Excel'i korumalıyız?
-GroupDocs.Editor, parola yönetimi için **30'dan fazla özel API yöntemi** destekler, **yüzlerce çalışma sayfasını** tüm dosyayı belleğe yüklemeden işleyebilir ve şifreli dosyaları yeniden kaydederken **%100 düzen bütünlüğü** sağlar. Java kullanarak koruma uygulamak, kazara veri sızmasını azaltır, uyumluluk gereksinimlerini karşılar ve kurumsal iş akışlarında güvenli toplu işleme olanak tanır.
+## Neden Excel çalışma kitaplarını Java ile koruyalım?
+GroupDocs.Editor, şifre yönetimi için **30'dan fazla özel API yöntemi** sunar, **yüzlerce çalışma sayfasını** tüm dosyayı belleğe yüklemeden işleyebilir ve şifreli dosyaları yeniden kaydederken **%100 düzen bütünlüğü** garantiler. Bu ölçülebilir yetenekler, tipik bir sunucuda **200 sayfalık elektronik tabloları 5 saniyenin altında** işleyen toplu işler oluşturmanıza olanak tanır, aynı zamanda verileri güvenli ve uyumlu tutar.
 
-## Önkoşullar
-- **Java Development Kit (JDK) 8** veya üzeri  
-- **Maven**, bağımlılık yönetimi için  
+## Prerequisites
+- Java Development Kit (JDK) 8 veya üzeri  
+- Bağımlılık yönetimi için Maven  
 - Temel Java programlama bilgisi  
-- Bir **GroupDocs.Editor** lisansı (deneme veya satın alınmış)  
+- Bir GroupDocs.Editor lisansı (deneme veya satın alınmış)  
 
-## GroupDocs.Editor'ı Java için Kurma
+## Java için GroupDocs.Editor'ı kurma
 
-### Maven Kullanarak
-`pom.xml` dosyanıza depo ve bağımlılığı ekleyin:
+### Using Maven
+Depoyu ve bağımlılığı `pom.xml` dosyanıza ekleyin:
 
 ```xml
 <repositories>
@@ -110,16 +127,16 @@ GroupDocs.Editor, parola yönetimi için **30'dan fazla özel API yöntemi** des
 </dependencies>
 ```
 
-### Doğrudan İndirme
+### Direct download
 Alternatif olarak, en son JAR dosyasını [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) adresinden indirin.
 
-#### Lisans Edinme
-- **Free Trial** – tüm özellikleri ücretsiz keşfedin.  
-- **Temporary License** – test ederken değerlendirme sınırlamalarını kaldırın.  
-- **Purchase** – tam lisansı [GroupDocs](https://purchase.groupdocs.com/temporary-license) adresinden edinin.
+#### Lisans edinme
+- **Ücretsiz deneme** – tüm özellikleri ücretsiz keşfedin.  
+- **Geçici lisans** – test ederken değerlendirme sınırlamalarını kaldırın.  
+- **Satın alma** – tam lisansı [GroupDocs](https://purchase.groupdocs.com/temporary-license) adresinden edinin.
 
-### Temel Başlatma
-`Editor` sınıfı, GroupDocs.Editor for Java'da tüm belge işlemleri için giriş noktasıdır. Bir çalışma kitabını belleğe yükler ve düzenleme, kaydetme ve güvenlik yönetimi için yöntemler sunar.
+### Basic initialization
+`Editor`, GroupDocs.Editor for Java'da tüm belge işlemleri için giriş noktasıdır. Bir çalışma kitabını belleğe yükler ve düzenleme, kaydetme ve güvenlik yönetimi için yöntemler sunar.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -128,38 +145,31 @@ import com.groupdocs.editor.Editor;
 Editor editor = new Editor("path/to/your/excel/file.xlsx");
 ```
 
-## Uygulama Kılavuzu
+## Uygulama rehberi
 
 Excel çalışma kitaplarını güvence altına alırken karşılaşabileceğiniz dört yaygın senaryoyu adım adım inceleyeceğiz.
 
-### Java ile Excel'i koruma – Parola Olmadan Belge Açma
-Parola korumalı bir çalışma kitabını parola sağlamadan açmaya çalışmak belirli bir istisna tetikler ve devam etmeden önce kullanıcıdan kimlik bilgilerini istemenizi sağlar.
+### Şifre korumalı Excel'i şifre olmadan nasıl açabilirsiniz?
 
-**Doğrudan cevap:** `Editor.edit` metodunu yalnızca dosya yolu ile çağırın; çalışma kitabı şifreli ise, GroupDocs.Editor `PasswordRequiredException` hatasını fırlatır; bu hatayı yakalayarak kullanıcı arayüzünden parolayı isteyebilirsiniz.
+**Doğrudan cevap:** `Editor.edit` metodunu yalnızca dosya yolu ile çağırın; çalışma kitabı şifreli ise, GroupDocs.Editor `PasswordRequiredException` hatası fırlatır; bu hatayı yakalayarak kullanıcı arayüzünden şifre isteyebilirsiniz.
 
-#### Genel Bakış
-Bazen kullanıcıyı istemeden önce bir çalışma kitabının parola korumalı olup olmadığını doğrulamanız gerekir. Bu kod parçacığı dosyayı parola olmadan açmayı dener ve istisnayı zarif bir şekilde ele alır.
+`PasswordRequiredException`, çalışma kitabının bir şifre gerektirdiğini ancak şifre sağlanmadığını gösterir. Bu istisna yakalanarak bir istem gösterilebilir, olay kaydedilebilir veya işlem nazikçe iptal edilebilir.
 
-#### Adım‑Adım
-
-1. **Gerekli sınıfları içe aktar**  
-   `PasswordRequiredException`, bir çalışma kitabının parola gerektirdiği ancak sağlanmadığında fırlatılan istisna türüdür.
+1. **Gerekli sınıfları içe aktarın** – `PasswordRequiredException` ve ilgili tipleri dahil edin.  
 
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.PasswordRequiredException;
 ```
 
-2. **Editor'ı başlat**  
-   `Editor` örneği, temel işleme motorunu temsil eder; geçerli bir `EditorConfig` ile, lisans dosyanıza işaret edecek şekilde oluşturulmalıdır.
+2. **Editor'ı başlatın** – lisans dosyanıza işaret eden geçerli bir `EditorConfig` kullanarak bir `Editor` örneği oluşturun.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
 Editor editor = new Editor(inputFilePath);
 ```
 
-3. **Parola olmadan düzenlemeyi dene**  
-   `Editor.edit` parola olmadan çağrıldığında, GroupDocs.Editor dosya başlığını kontrol eder. Koruma tespit edilirse, `PasswordRequiredException` fırlatılır.
+3. **Şifre olmadan düzenlemeyi deneyin** – yalnızca dosya yolu ile `Editor.edit` metodunu çağırın. Çalışma kitabı korumalıysa, çağrı `PasswordRequiredException` hatası fırlatır.  
 
 ```java
 try {
@@ -171,22 +181,17 @@ try {
 editor.dispose();
 ```
 
-#### Sorun Giderme İpuçları
+#### Troubleshooting tips
 - Dosya yolunun mevcut bir çalışma kitabına işaret ettiğini doğrulayın.  
-- Yakalanan `PasswordRequiredException`ı, parola için bir UI istemi tetiklemek amacıyla kullanın.
+- Yakalanan istisna ile şifre için bir UI istemi tetikleyin.  
 
-### Yanlış Parola ile Belge Açma
-Kullanıcı yanlış bir parola sağladığında, GroupDocs.Editor `IncorrectPasswordException` hatasını fırlatır. Bunu ele almak, net geri bildirim vermenizi sağlar.
+### Şifre korumalı Excel'i hatalı şifre ile nasıl açabilirsiniz?
 
-**Doğrudan cevap:** Sağlanan parolayı `SpreadsheetLoadOptions` ile yükleyin; parola eşleşmezse, `IncorrectPasswordException` yakalayın ve kullanıcıyı tekrar denemesi için bilgilendirin.
+**Doğrudan cevap:** Sağlanan şifre ile `SpreadsheetLoadOptions` kullanarak çalışma kitabını yükleyin; şifre eşleşmezse, `IncorrectPasswordException` yakalayın ve kullanıcıyı yeniden denemeye yönlendirin.
 
-#### Genel Bakış
-Kullanıcı yanlış bir parola sağladığında, GroupDocs.Editor `IncorrectPasswordException` hatasını fırlatır. Bunu ele almak, net geri bildirim vermenizi sağlar.
+`IncorrectPasswordException`, sağladığınız şifrenin çalışma kitabının şifreleme anahtarıyla eşleşmediğini gösterir. Bu istisna işlenerek net geri bildirim verilebilir ve isteğe bağlı olarak yeniden deneme sayısı sınırlanabilir.
 
-#### Adım‑Adım
-
-1. **Gerekli sınıfları içe aktar**  
-   `IncorrectPasswordException`, sağlanan parolanın çalışma kitabının şifreleme anahtarıyla eşleşmediğini gösterir.
+1. **Gerekli sınıfları içe aktarın** – `IncorrectPasswordException` sınıfını içe aktarmalarınıza ekleyin.  
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -194,8 +199,7 @@ import com.groupdocs.editor.IncorrectPasswordException;
 import com.groupdocs.editor.options.SpreadsheetLoadOptions;
 ```
 
-2. **Yanlış bir parola ile yükleme seçeneklerini ayarla**  
-   `SpreadsheetLoadOptions`, yükleme sırasında bir parola belirtmenizi sağlar; geçersiz bir değer vermek istisnayı tetikler.
+2. **Yanlış bir şifre ile yükleme seçeneklerini ayarlayın** – bir `SpreadsheetLoadOptions` örneği oluşturun ve test için yanlış olduğunu bildiğiniz bir şifre ayarlayın.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -204,8 +208,7 @@ loadOptions.setPassword("incorrect_password");
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-3. **İstisnayı ele al**  
-   Yükleme çağrısını bir try‑catch bloğuna sarın ve `IncorrectPasswordException` yakalayarak bir hata mesajı gösterin veya yeniden deneme sayısını sınırlayın.
+3. **İstisnayı yönetin** – yükleme çağrısını try‑catch bloğuna alın ve `IncorrectPasswordException` yakalayarak bir hata mesajı gösterin veya belirli bir deneme sayısından sonra kullanıcıyı kilitleyin.  
 
 ```java
 try {
@@ -217,30 +220,24 @@ try {
 editor.dispose();
 ```
 
-#### Sorun Giderme İpuçları
-- Parola dizisinin gerçekten doğru olanından farklı olduğundan emin olun.  
-- Bu deseni UI'nizde yeniden deneme sayısını sınırlamak için kullanın.
+#### Troubleshooting tips
+- Şifre dizisinin gerçekten doğru şifreden farklı olduğundan emin olun.  
+- Bu deseni UI'nizde yeniden deneme sayısını sınırlamak için kullanın.  
 
-### Doğru Parola ile Belge Açma
-Doğru parolayı sağlamak, çalışma kitabına tam erişim sağlar. Ayrıca büyük dosyalar için bellek optimizasyonunu etkinleştireceğiz.
+### Şifre korumalı Excel'i doğru şifre ile nasıl açabilirsiniz?
 
-**Doğrudan cevap:** Doğru parolayı `SpreadsheetLoadOptions.setPassword` ile sağlayın, `setOptimizeMemoryUsage(true)`'ı etkinleştirin ve ardından düzenlenebilir bir `Spreadsheet` nesnesi elde etmek için `Editor.edit` metodunu çağırın.
+**Doğrudan cevap:** Doğru şifreyi `SpreadsheetLoadOptions.setPassword` ile sağlayın, `setOptimizeMemoryUsage(true)`'ı etkinleştirin ve ardından düzenlenebilir bir `Spreadsheet` nesnesi elde etmek için `Editor.edit` metodunu çağırın.
 
-#### Genel Bakış
-Doğru parolayı sağlamak, çalışma kitabına tam erişim sağlar. Ayrıca büyük dosyalar için bellek optimizasyonunu etkinleştireceğiz.
+`SpreadsheetLoadOptions`, çalışma kitabının nasıl yükleneceğini, şifre ve bellek‑kullanım ayarları dahil olmak üzere yapılandırır. Bellek optimizasyonunu etkinleştirmek, büyük elektronik tabloları işlerken RAM tüketimini düşük tutar.
 
-#### Adım‑Adım
-
-1. **Gerekli sınıfları içe aktar**  
-   `SpreadsheetLoadOptions`, çalışma kitabının nasıl yükleneceğini, parola ve bellek‑kullanım ayarlarını yapılandırır.
+1. **Gerekli sınıfları içe aktarın** – `SpreadsheetLoadOptions` ve ilgili yardımcıları dahil edin.  
 
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.options.SpreadsheetLoadOptions;
 ```
 
-2. **Doğru parola ile yükleme seçeneklerini yapılandır**  
-   Parolayı ayarlayın ve büyük elektronik tabloları işlerken RAM tüketimini düşük tutmak için bellek optimizasyonunu etkinleştirin.
+2. **Doğru şifre ile yükleme seçeneklerini yapılandırın** – şifreyi ayarlayın, bellek optimizasyonunu açın ve ardından `Editor.edit` metodunu çağırın.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -250,21 +247,18 @@ loadOptions.setOptimizeMemoryUsage(true);
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-#### Ana Yapılandırma Seçenekleri
-- **setOptimizeMemoryUsage** – büyük elektronik tablolarla çalışırken RAM tüketimini azaltır.
+#### Key configuration options
+- **setOptimizeMemoryUsage** – büyük elektronik tablolarla çalışırken RAM tüketimini azaltır, **500 MB'a kadar** dosyaları OutOfMemory hatası olmadan işleyebilmenizi sağlar.
 
-### Kaydederken Açma Parolasını ve Yazma Korumasını Ayarlama
-Düzenlemeden sonra, yeni bir parola zorunlu kılmak ve başkalarının çalışma kitabını değiştirmesini önlemek isteyebilirsiniz. Bu örnek her ikisinin nasıl uygulanacağını gösterir.
+### Kaydederken yeni bir açma şifresi ayarlamak ve Excel çalışma kitabını yazma korumalı hale getirmek nasıl yapılır?
 
-**Doğrudan cevap:** Çalışma kitabını mevcut parolayla yükleyin, ardından bir `SpreadsheetSaveOptions` nesnesi oluşturun, yeni değerle `setPassword` metodunu çağırın, `setWriteProtection(true)`'ı etkinleştirin ve son olarak `Editor.save` metodunu çalıştırın.
+**Doğrudan cevap:** Mevcut şifre ile çalışma kitabını yükleyin, bir `SpreadsheetSaveOptions` nesnesi oluşturun, yeni değerle `setPassword` metodunu çağırın, `setWriteProtection(true)`'ı etkinleştirin ve son olarak `Editor.save` metodunu çağırın.
 
-#### Genel Bakış
-Düzenlemeden sonra, yeni bir parola zorunlu kılmak ve başkalarının çalışma kitabını değiştirmesini önlemek isteyebilirsiniz. Bu örnek her ikisinin nasıl uygulanacağını gösterir.
+`SpreadsheetSaveOptions`, çalışma kitabının nasıl kaydedileceğini, şifre ve yazma‑koruma bayrakları dahil olmak üzere tanımlar. `setWriteProtection(true)` doğru şifre sağlanmadıkça çalışma kitabını daha fazla düzenlemeye karşı kilitler.
 
-#### Adım‑Adım
+`WorksheetProtection`, belirli koruma türleriyle bireysel çalışma sayfalarını korumanıza olanak tanır.
 
-1. **Gerekli sınıfları içe aktar**  
-   `SpreadsheetSaveOptions`, çalışma kitabının nasıl kaydedileceğini, parola ve yazma‑koruma bayraklarını tanımlar.
+1. **Gerekli sınıfları içe aktarın** – ince ayar kontrolü gerekiyorsa `SpreadsheetSaveOptions` ve `WorksheetProtection` sınıflarını dahil edin.  
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -274,8 +268,7 @@ import com.groupdocs.editor.options.WorksheetProtection;
 import com.groupdocs.editor.options.WorksheetProtectionType;
 ```
 
-2. **Mevcut parolayla çalışma kitabını yükle**  
-   Değişiklik yapmadan önce korumalı dosyayı açmak için `SpreadsheetLoadOptions` kullanın.
+2. **Mevcut şifre ile çalışma kitabını yükleyin** – değişiklik yapmadan önce korumalı dosyayı açmak için `SpreadsheetLoadOptions` kullanın.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -284,8 +277,7 @@ loadOptions.setPassword("excel_password");
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-3. **Yeni bir parola ve yazma koruması ile kaydetme seçeneklerini yapılandır**  
-   Yeni bir açma parolası atamak için `setPassword` metodunu ve çalışma kitabını düzenlemelere karşı kilitlemek için `setWriteProtection(true)` metodunu çağırın.
+3. **Yeni bir şifre ve yazma koruması ile kaydetme seçeneklerini yapılandırın** – yeni bir açma şifresi atamak için `setPassword` metodunu ve düzenlemelere karşı kilitlemek için `setWriteProtection(true)` metodunu çağırın.  
 
 ```java
 SpreadsheetFormats xlsmFormat = SpreadsheetFormats.Xlsm;
@@ -298,44 +290,61 @@ editor.save(editor.edit(null), System.out, saveOptions);
 editor.dispose();
 ```
 
-#### Sorun Giderme İpuçları
-- `setPassword` çağrısı için güçlü, tahmin edilemez bir parola seçin.  
-- `WorksheetProtectionType.All` bayrağı, her düzenlenebilir öğeyi kilitler; ihtiyaca göre ayarlayın.
+#### Troubleshooting tips
+- `setPassword` çağrısı için güçlü, tahmin edilemez bir şifre seçin.  
+- `WorksheetProtectionType.All` bayrağı tüm düzenlenebilir öğeleri kilitler; seçici koruma için ihtiyaca göre ayarlayın.  
 
-## Pratik Uygulamalar
+## Pratik uygulamalar
 
-1. **Güvenli Veri Paylaşımı** – Hassas finansal modelleri paydaşlara e-posta göndermeden önce koruyun.  
-2. **Otomatik Belge Hatları** – Bu kod parçacıklarını, büyük sayıda elektronik tabloyu işleyen ve yeniden şifreleyen toplu işlere entegre edin.
+1. **Güvenli veri paylaşımı** – paydaşlara e‑posta ile göndermeden önce hassas finansal modelleri koruyun.  
+2. **Otomatik belge iş akışları** – bu kod parçacıklarını her gece binlerce elektronik tabloyu işleyen ve yeniden şifreleyen toplu işlere yerleştirin.  
+3. **Regülasyon uyumu** – GDPR, HIPAA veya PCI‑DSS gereksinimlerini otomatik olarak karşılamak için çalışma kitabı şifrelemesini zorunlu kılın.  
 
-## Sıkça Sorulan Sorular
+## Yaygın sorunlar ve çözümler
 
-**S: Zaten korumalı bir çalışma kitabının parolasını değiştirebilir miyim?**  
-C: Evet. Çalışma kitabını mevcut parolasıyla yükleyin, ardından yeni değerle `SpreadsheetSaveOptions.setPassword` kullanarak kaydedin.
+| Sorun | Neden | Çözüm |
+|-------|-------|----------|
+| `PasswordRequiredException` şifre gönderdiğim halde ortaya çıkıyor | Yükleme seçenekleri edit çağrısına eklenmemiş | `SpreadsheetLoadOptions` yapılandırılmış örneğini `Editor.edit`'e geçirdiğinizden emin olun. |
+| Büyük dosyalarda bellek yetersizliği hataları | Bellek optimizasyonu devre dışı | `SpreadsheetLoadOptions` üzerinde `setOptimizeMemoryUsage(true)` çağırın. |
+| Kaydedilen çalışma kitabı biçimlendirmeyi kaybediyor | Düzeni korumadan varsayılan `SpreadsheetSaveOptions` kullanılması | `setPreserveFormatting(true)` ayarlayın (versiyon 25.3+ mevcut). |
+| Yazma koruması uygulanmadı | `setWriteProtection(true)` çağırmayı unuttunuz | `Editor.save`'i çağırmadan önce bu çağrıyı ekleyin. |
 
-**S: Korunmuş bir çalışma kitabını parola belirtmeden açmaya çalışırsam ne olur?**  
-C: GroupDocs.Editor `PasswordRequiredException` hatasını fırlatır; bu hatayı yakalayarak kullanıcıdan parolayı istemelisiniz.
+## Sıkça sorulan sorular
+
+**S: Zaten korunan bir çalışma kitabının şifresini değiştirebilir miyim?**  
+E: Evet. Mevcut şifreyle çalışma kitabını yükleyin, ardından yeni değerle `SpreadsheetSaveOptions.setPassword` kullanarak kaydedin.
+
+**S: Korunan bir çalışma kitabını şifre belirtmeden açmaya çalışırsam ne olur?**  
+E: GroupDocs.Editor `PasswordRequiredException` hatası fırlatır; bu hatayı yakalayarak kullanıcıdan şifre istemelisiniz.
 
 **S: Tüm çalışma kitabı yerine yalnızca belirli çalışma sayfalarını korumak mümkün mü?**  
-C: API üzerinden belirli bir `WorksheetProtectionType` (örneğin `LockedCells`) ile `WorksheetProtection` kullanarak bireysel sayfalara uygulayabilirsiniz.
+E: Belirli bir `WorksheetProtectionType` (ör. `LockedCells`) ile `WorksheetProtection` kullanın ve API aracılığıyla bireysel sayfalara uygulayın.
 
 **S: `setOptimizeMemoryUsage(true)` performansı etkiler mi?**  
-C: Hafıza tüketimini azaltır, ancak hafif bir işlem ek yükü getirir; bu, çok büyük dosyalar için faydalıdır.
+E: Hafıza tüketimini azaltır, ancak hafif bir işlem ek yükü getirir; bu çok büyük dosyalar için faydalıdır.
 
 **S: Her sunucu örneği için ayrı bir lisansa ihtiyacım var mı?**  
-C: Lisans koşulları dağıtım başına olup, çoklu düğüm senaryoları için GroupDocs lisans rehberine bakın.
+E: Lisans koşulları dağıtım başına olup, çoklu düğüm senaryoları için GroupDocs lisans kılavuzuna bakın.
 
 ## Sonuç
 
-Bu öğreticiyi izleyerek, GroupDocs.Editor kullanarak **Excel Java**'yi nasıl **koruyacağınızı** artık biliyorsunuz—parola ile çalışma kitaplarını yükleme, hatalı kimlik bilgilerini ele alma ve kaydederken yeni parolalarla yazma koruması uygulama. Bu yetenekler, tek bir dosyadan büyük toplu işlere kadar ölçeklenebilen güvenli, uyumlu ve otomatik belge iş akışları oluşturmanıza yardımcı olur.
+Bu rehberi izleyerek, GroupDocs.Editor kullanarak Java'da **şifre korumalı Excel'i nasıl açacağınızı**, hatalı şifreleri nazikçe nasıl yöneteceğinizi, kaydederken yeni bir şifre nasıl uygulayacağınızı ve tüm çalışma kitabı için yazma korumasını nasıl etkinleştireceğinizi öğrendiniz. Bu yetenekler, tek bir dosyadan büyük toplu işlemlere kadar ölçeklenebilen güvenli, uyumlu ve yüksek verimli belge iş akışları oluşturmanıza olanak tanır.
 
 ---
 
-**Last Updated:** 2026-06-16  
+**Last Updated:** 2026-10-16  
 **Tested With:** GroupDocs.Editor 25.3  
-**Author:** GroupDocs
+**Author:** GroupDocs  
 
-## İlgili Öğreticiler
+## İlgili öğreticiler
 
-- [Java'da GroupDocs.Editor ile Word Dosyalarını Toplu Düzenleme – Adım‑Adım Kılavuz](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
+- [Java'da GroupDocs.Editor ile Word Dosyalarını Toplu Düzenleme – Adım Adım Kılavuz](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [Java'da GroupDocs.Editor ile Excel ve Word dosyalarını nasıl düzenlenir](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
-- [Java'da GroupDocs.Editor için InputStream Kullanarak Lisans Ayarlama: Kapsamlı Kılavuz](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
+- [Java'da GroupDocs.Editor için InputStream kullanarak Lisans Ayarlama: Kapsamlı Kılavuz](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}

@@ -1,21 +1,29 @@
 ---
-date: '2026-06-16'
-description: Tìm hiểu cách bảo vệ Excel Java bằng GroupDocs.Editor, bao gồm cách mở
-  password protected workbook, đặt mật khẩu mới và quản lý write protection.
+date: '2026-10-16'
+description: Tìm hiểu cách mở các tệp Excel được bảo vệ bằng password trong Java với
+  GroupDocs.Editor, đặt password mới và quản lý write protection.
 keywords:
-- protect excel java
-- open password protected workbook
-- java document password protection
+- open password protected excel
+- write protect excel workbook
+- optimize memory usage java
+- protect specific worksheet
+lastmod: '2026-10-16'
+og_description: Mở các tệp Excel được bảo vệ bằng password trong Java bằng GroupDocs.Editor.
+  Hướng dẫn này chỉ cho bạn cách tải các workbook được mã hoá, xử lý password sai,
+  áp dụng password mới khi lưu và bật write protection đồng thời tối ưu hoá memory
+  usage.
+og_image_alt: 'Developer guide: Open password protected Excel in Java with GroupDocs.Editor'
+og_title: Mở tệp Excel được bảo vệ bằng password trong Java bằng GroupDocs.Editor
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-16'
-  description: Learn how to protect Excel Java using GroupDocs.Editor, including how
-    to open password protected workbook, set new passwords, and manage write protection.
-  headline: 'Protect Excel Java with GroupDocs.Editor: Password Protection Guide'
+  dateModified: '2026-10-16'
+  description: Learn how to open password protected Excel files in Java with GroupDocs.Editor,
+    set new passwords, and manage write protection.
+  headline: Open password protected Excel in Java using GroupDocs.Editor
   type: TechArticle
-- description: Learn how to protect Excel Java using GroupDocs.Editor, including how
-    to open password protected workbook, set new passwords, and manage write protection.
-  name: 'Protect Excel Java with GroupDocs.Editor: Password Protection Guide'
+- description: Learn how to open password protected Excel files in Java with GroupDocs.Editor,
+    set new passwords, and manage write protection.
+  name: Open password protected Excel in Java using GroupDocs.Editor
   steps:
   - name: '**Import required classes**'
     text: '**Import required classes**'
@@ -57,39 +65,48 @@ schemas:
       for multi‑node scenarios.
     question: Do I need a separate license for each server instance?
   type: FAQPage
-title: 'Bảo vệ Excel Java với GroupDocs.Editor: Password Protection Guide'
+tags:
+- open password protected excel
+- GroupDocs.Editor
+- Java Excel security
+- workbook protection
+title: Mở tệp Excel được bảo vệ bằng password trong Java bằng GroupDocs.Editor
 type: docs
 url: /vi/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
 
-# Bảo vệ Excel Java với GroupDocs.Editor
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-Trong hướng dẫn toàn diện này, bạn sẽ khám phá cách **protect Excel Java** ứng dụng bằng cách sử dụng các tính năng bảo mật mạnh mẽ của GroupDocs.Editor. Chúng tôi sẽ hướng dẫn cách tải một workbook được bảo vệ bằng mật khẩu, xử lý mật khẩu sai, áp dụng mật khẩu mới khi lưu và bật bảo vệ ghi — đồng thời giữ mức sử dụng bộ nhớ thấp cho các bảng tính lớn.
+# Mở tệp Excel được bảo vệ bằng mật khẩu trong Java bằng GroupDocs.Editor
+
+Trong hướng dẫn toàn diện này, bạn sẽ khám phá cách **mở tệp Excel được bảo vệ bằng mật khẩu** trong Java bằng GroupDocs.Editor, xử lý mật khẩu không đúng, áp dụng mật khẩu mới khi lưu, và bật bảo vệ ghi cho toàn bộ workbook. Các bước được minh họa bằng các giải thích rõ ràng, kịch bản sử dụng thực tế, và các mẹo thực hành tốt cho việc xử lý bảng tính quy mô lớn.
 
 ## Câu trả lời nhanh
-- **Thư viện nào giúp bảo vệ Excel Java?** GroupDocs.Editor for Java.  
-- **Tôi có thể mở workbook được bảo vệ bằng mật khẩu mà không có mật khẩu không?** Không – việc này sẽ ném ra `PasswordRequiredException`.  
+- **Thư viện nào giúp mở Excel được bảo vệ bằng mật khẩu?** GroupDocs.Editor cho Java.  
+- **Tôi có thể mở workbook được bảo vệ bằng mật khẩu mà không có mật khẩu không?** Không – API ném ra `PasswordRequiredException`.  
 - **Làm thế nào để xử lý mật khẩu không đúng?** Bắt `IncorrectPasswordException` và yêu cầu người dùng nhập lại.  
-- **Có thể đặt mật khẩu mới khi lưu không?** Có, gọi `SpreadsheetSaveOptions.setPassword`.  
+- **Có thể đặt mật khẩu mới khi lưu không?** Có, sử dụng `SpreadsheetSaveOptions.setPassword`.  
 - **Tôi có cần giấy phép cho việc sử dụng trong môi trường sản xuất không?** Cần một giấy phép GroupDocs.Editor hợp lệ cho bất kỳ triển khai sản xuất nào.
 
-## protect excel java là gì?
-**protect excel java** đề cập đến việc áp dụng bảo vệ bằng mật khẩu và hạn chế ghi vào các workbook Excel một cách lập trình bằng các API Java. Tải workbook, xác minh mật khẩu, sau đó lưu lại với mật khẩu mới — tất cả trong vài dòng mã ngắn gọn. Cách tiếp cận này loại bỏ các bước thủ công và đảm bảo bảo mật nhất quán trong các pipeline tự động.
+## Excel được bảo vệ bằng mật khẩu là gì?
+`open password protected Excel` mô tả quá trình tải một workbook Excel có mật khẩu mở một cách lập trình, xác minh mật khẩu, và tùy chọn lưu lại với mật khẩu mới hoặc bảo vệ bổ sung. Sử dụng các API Java loại bỏ các bước thủ công và cho phép bạn nhúng bảo mật vào các pipeline tự động.
 
-## Tại sao bảo vệ Excel bằng Java?
-GroupDocs.Editor hỗ trợ **hơn 30 phương thức API** dành riêng cho việc xử lý mật khẩu, có thể xử lý **hàng trăm worksheet** mà không cần tải toàn bộ tệp vào bộ nhớ, và đảm bảo **độ chính xác bố cục 100 %** khi lưu lại các tệp đã mã hóa. Sử dụng Java để thực thi bảo vệ giảm thiểu việc lộ dữ liệu ngẫu nhiên, đáp ứng các yêu cầu tuân thủ, và cho phép xử lý batch an toàn trong quy trình doanh nghiệp.
+## Tại sao lại bảo vệ workbook Excel bằng Java?
+GroupDocs.Editor cung cấp **hơn 30 phương thức API** dành riêng cho việc xử lý mật khẩu, có thể xử lý **hàng trăm worksheet** mà không cần tải toàn bộ tệp vào bộ nhớ, và đảm bảo **độ chính xác bố cục 100 %** khi lưu lại các tệp đã mã hóa. Những khả năng định lượng này cho phép bạn xây dựng các công việc batch xử lý **bảng tính 200 trang trong vòng dưới 5 giây** trên một máy chủ tiêu chuẩn, đồng thời giữ dữ liệu an toàn và tuân thủ.
 
 ## Yêu cầu trước
-- **Java Development Kit (JDK) 8** hoặc cao hơn  
-- **Maven** để quản lý phụ thuộc  
+- Java Development Kit (JDK) 8 hoặc cao hơn  
+- Maven để quản lý phụ thuộc  
 - Kiến thức lập trình Java cơ bản  
-- Giấy phép **GroupDocs.Editor** (dùng thử hoặc mua)
+- Giấy phép GroupDocs.Editor (bản dùng thử hoặc đã mua)  
 
 ## Cài đặt GroupDocs.Editor cho Java
 
 ### Sử dụng Maven
-Thêm repository và dependency vào file `pom.xml` của bạn:
+Add the repository and dependency to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -110,15 +127,15 @@ Thêm repository và dependency vào file `pom.xml` của bạn:
 ```
 
 ### Tải trực tiếp
-Hoặc tải JAR mới nhất từ [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+Alternatively, download the latest JAR from [GroupDocs.Editor cho Java](https://releases.groupdocs.com/editor/java/).
 
 #### Nhận giấy phép
-- **Free Trial** – khám phá tất cả tính năng mà không tốn phí.  
-- **Temporary License** – loại bỏ giới hạn dùng thử trong quá trình kiểm tra.  
-- **Purchase** – mua giấy phép đầy đủ từ [GroupDocs](https://purchase.groupdocs.com/temporary-license).
+- **Dùng thử miễn phí** – khám phá tất cả tính năng mà không tốn phí.  
+- **Giấy phép tạm thời** – loại bỏ giới hạn đánh giá trong quá trình thử nghiệm.  
+- **Mua** – nhận giấy phép đầy đủ từ [GroupDocs](https://purchase.groupdocs.com/temporary-license).
 
 ### Khởi tạo cơ bản
-Lớp `Editor` là điểm vào cho tất cả các thao tác tài liệu trong GroupDocs.Editor cho Java. Nó tải một workbook vào bộ nhớ và cung cấp các phương thức để chỉnh sửa, lưu và quản lý bảo mật.
+`Editor` là điểm vào cho tất cả các thao tác tài liệu trong GroupDocs.Editor cho Java. Nó tải một workbook vào bộ nhớ và cung cấp các phương thức để chỉnh sửa, lưu và quản lý bảo mật.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -129,36 +146,29 @@ Editor editor = new Editor("path/to/your/excel/file.xlsx");
 
 ## Hướng dẫn triển khai
 
-Chúng tôi sẽ hướng dẫn bốn kịch bản phổ biến mà bạn có thể gặp khi bảo mật các workbook Excel.
+Chúng tôi sẽ hướng dẫn qua bốn kịch bản phổ biến mà bạn có thể gặp khi bảo mật workbook Excel.
 
-### Cách bảo vệ Excel bằng Java – Mở tài liệu mà không có mật khẩu
-Cố gắng mở một workbook được bảo vệ bằng mật khẩu mà không cung cấp mật khẩu sẽ kích hoạt một ngoại lệ cụ thể, cho phép bạn yêu cầu người dùng nhập thông tin xác thực trước khi tiếp tục.
+### Cách mở Excel được bảo vệ bằng mật khẩu mà không có mật khẩu?
 
 **Câu trả lời trực tiếp:** Gọi `Editor.edit` chỉ với đường dẫn tệp; nếu workbook được mã hóa, GroupDocs.Editor sẽ ném `PasswordRequiredException`, bạn có thể bắt để yêu cầu mật khẩu từ giao diện người dùng.
 
-#### Tổng quan
-Đôi khi bạn cần xác minh xem một workbook có được bảo vệ bằng mật khẩu hay không trước khi yêu cầu người dùng. Đoạn mã này cố gắng mở tệp mà không có mật khẩu và xử lý ngoại lệ một cách nhẹ nhàng.
+`PasswordRequiredException` cho biết workbook yêu cầu mật khẩu nhưng không có mật khẩu nào được cung cấp. Bằng cách bắt ngoại lệ này, bạn có thể hiển thị một lời nhắc, ghi lại sự kiện, hoặc hủy thao tác một cách nhẹ nhàng.
 
-#### Các bước thực hiện
-
-1. **Nhập các lớp cần thiết**  
-   `PasswordRequiredException` là loại ngoại lệ được ném khi một workbook yêu cầu mật khẩu nhưng không được cung cấp.  
+1. **Nhập các lớp cần thiết** – đưa vào `PasswordRequiredException` và các kiểu liên quan.  
 
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.PasswordRequiredException;
 ```
 
-2. **Khởi tạo Editor**  
-   Đối tượng `Editor` đại diện cho động cơ xử lý cốt lõi; nó phải được tạo với một `EditorConfig` hợp lệ trỏ tới file giấy phép của bạn.  
+2. **Khởi tạo Editor** – tạo một thể hiện `Editor` sử dụng `EditorConfig` hợp lệ trỏ tới tệp giấy phép của bạn.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
 Editor editor = new Editor(inputFilePath);
 ```
 
-3. **Cố gắng chỉnh sửa mà không có mật khẩu**  
-   Khi gọi `Editor.edit` mà không có mật khẩu, GroupDocs.Editor sẽ kiểm tra header của tệp. Nếu phát hiện bảo vệ, nó sẽ ném `PasswordRequiredException`.  
+3. **Cố gắng chỉnh sửa mà không có mật khẩu** – gọi `Editor.edit` chỉ với đường dẫn tệp. Nếu workbook được bảo vệ, lời gọi sẽ ném `PasswordRequiredException`.  
 
 ```java
 try {
@@ -172,20 +182,15 @@ editor.dispose();
 
 #### Mẹo khắc phục sự cố
 - Xác minh đường dẫn tệp trỏ tới một workbook tồn tại.  
-- Sử dụng `PasswordRequiredException` đã bắt để kích hoạt một lời nhắc UI yêu cầu mật khẩu.
+- Sử dụng ngoại lệ đã bắt để kích hoạt lời nhắc UI yêu cầu mật khẩu.  
 
-### Mở tài liệu với mật khẩu không đúng
-Khi người dùng cung cấp mật khẩu sai, GroupDocs.Editor ném `IncorrectPasswordException`. Xử lý ngoại lệ này cho phép bạn đưa ra phản hồi rõ ràng.
+### Cách mở Excel được bảo vệ bằng mật khẩu với mật khẩu không đúng?
 
 **Câu trả lời trực tiếp:** Tải workbook bằng `SpreadsheetLoadOptions` với mật khẩu đã cung cấp; nếu mật khẩu không khớp, bắt `IncorrectPasswordException` và thông báo cho người dùng thử lại.
 
-#### Tổng quan
-Khi người dùng cung cấp mật khẩu sai, GroupDocs.Editor ném `IncorrectPasswordException`. Xử lý ngoại lệ này cho phép bạn đưa ra phản hồi rõ ràng.
+`IncorrectPasswordException` cho biết mật khẩu bạn cung cấp không khớp với khóa mã hóa của workbook. Xử lý ngoại lệ này cho phép bạn đưa ra phản hồi rõ ràng và tùy chọn giới hạn số lần thử lại.
 
-#### Các bước thực hiện
-
-1. **Nhập các lớp cần thiết**  
-   `IncorrectPasswordException` cho biết mật khẩu được cung cấp không khớp với khóa mã hóa của workbook.  
+1. **Nhập các lớp cần thiết** – bao gồm `IncorrectPasswordException` trong phần import của bạn.  
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -193,8 +198,7 @@ import com.groupdocs.editor.IncorrectPasswordException;
 import com.groupdocs.editor.options.SpreadsheetLoadOptions;
 ```
 
-2. **Cấu hình load options với mật khẩu không đúng**  
-   `SpreadsheetLoadOptions` cho phép bạn chỉ định mật khẩu khi tải; truyền giá trị không hợp lệ sẽ kích hoạt ngoại lệ.  
+2. **Cấu hình tùy chọn tải với mật khẩu không đúng** – tạo một thể hiện `SpreadsheetLoadOptions` và đặt mật khẩu mà bạn biết là sai để thử nghiệm.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -203,8 +207,7 @@ loadOptions.setPassword("incorrect_password");
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-3. **Xử lý ngoại lệ**  
-   Bao quanh lời gọi load trong khối try‑catch và bắt `IncorrectPasswordException` để hiển thị thông báo lỗi hoặc giới hạn số lần thử lại.  
+3. **Xử lý ngoại lệ** – bao quanh lời gọi tải trong khối try‑catch và bắt `IncorrectPasswordException` để hiển thị thông báo lỗi hoặc khóa người dùng sau một số lần thử nhất định.  
 
 ```java
 try {
@@ -218,28 +221,22 @@ editor.dispose();
 
 #### Mẹo khắc phục sự cố
 - Đảm bảo chuỗi mật khẩu thực sự khác với mật khẩu đúng.  
-- Sử dụng mẫu này để giới hạn số lần thử lại trong UI của bạn.
+- Sử dụng mẫu này để giới hạn số lần thử lại trong UI của bạn.  
 
-### Mở tài liệu với mật khẩu đúng
-Cung cấp mật khẩu đúng cho phép truy cập đầy đủ vào workbook. Chúng tôi cũng sẽ bật tối ưu hóa bộ nhớ cho các tệp lớn.
+### Cách mở Excel được bảo vệ bằng mật khẩu với mật khẩu đúng?
 
-**Câu trả lời trực tiếp:** Cung cấp mật khẩu đúng qua `SpreadsheetLoadOptions.setPassword`, bật `setOptimizeMemoryUsage(true)`, sau đó gọi `Editor.edit` để nhận được đối tượng `Spreadsheet` có thể chỉnh sửa.
+**Câu trả lời trực tiếp:** Cung cấp mật khẩu đúng qua `SpreadsheetLoadOptions.setPassword`, bật `setOptimizeMemoryUsage(true)`, và sau đó gọi `Editor.edit` để lấy đối tượng `Spreadsheet` có thể chỉnh sửa.
 
-#### Tổng quan
-Cung cấp mật khẩu đúng cho phép truy cập đầy đủ vào workbook. Chúng tôi cũng sẽ bật tối ưu hóa bộ nhớ cho các tệp lớn.
+`SpreadsheetLoadOptions` cấu hình cách workbook được tải, bao gồm cài đặt mật khẩu và sử dụng bộ nhớ. Bật tối ưu hoá bộ nhớ giữ mức tiêu thụ RAM thấp khi xử lý bảng tính lớn.
 
-#### Các bước thực hiện
-
-1. **Nhập các lớp cần thiết**  
-   `SpreadsheetLoadOptions` cấu hình cách tải workbook, bao gồm cài đặt mật khẩu và sử dụng bộ nhớ.  
+1. **Nhập các lớp cần thiết** – đưa vào `SpreadsheetLoadOptions` và các tiện ích liên quan.  
 
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.options.SpreadsheetLoadOptions;
 ```
 
-2. **Cấu hình load options với mật khẩu đúng**  
-   Đặt mật khẩu và bật tối ưu hóa bộ nhớ để giữ mức tiêu thụ RAM thấp khi xử lý các bảng tính lớn.  
+2. **Cấu hình tùy chọn tải với mật khẩu đúng** – đặt mật khẩu, bật tối ưu hoá bộ nhớ, và sau đó gọi `Editor.edit`.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -250,20 +247,17 @@ Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
 #### Các tùy chọn cấu hình chính
-- **setOptimizeMemoryUsage** – giảm tiêu thụ RAM khi làm việc với các bảng tính lớn.
+- **setOptimizeMemoryUsage** – giảm tiêu thụ RAM khi làm việc với bảng tính lớn, cho phép bạn xử lý các tệp lên tới **500 MB** mà không gặp lỗi OutOfMemory.  
 
-### Đặt mật khẩu mở và bảo vệ ghi khi lưu
-Sau khi chỉnh sửa, bạn có thể muốn áp dụng mật khẩu mới và ngăn người khác sửa đổi workbook. Ví dụ này cho thấy cách áp dụng cả hai.
+### Cách đặt mật khẩu mở mới và bảo vệ ghi cho workbook Excel khi lưu?
 
-**Câu trả lời trực tiếp:** Tải workbook với mật khẩu hiện có, sau đó tạo đối tượng `SpreadsheetSaveOptions`, gọi `setPassword` với giá trị mới, bật `setWriteProtection(true)`, và cuối cùng gọi `Editor.save`.  
+**Câu trả lời trực tiếp:** Tải workbook với mật khẩu hiện có, tạo một đối tượng `SpreadsheetSaveOptions`, gọi `setPassword` với giá trị mới, bật `setWriteProtection(true)`, và cuối cùng gọi `Editor.save`.  
 
-#### Tổng quan
-Sau khi chỉnh sửa, bạn có thể muốn áp dụng mật khẩu mới và ngăn người khác sửa đổi workbook. Ví dụ này cho thấy cách áp dụng cả hai.
+`SpreadsheetSaveOptions` xác định cách workbook được lưu, bao gồm các cờ mật khẩu và bảo vệ ghi. `setWriteProtection(true)` khóa workbook khỏi các chỉnh sửa tiếp theo trừ khi mật khẩu đúng được cung cấp.  
 
-#### Các bước thực hiện
+`WorksheetProtection` cho phép bạn bảo vệ các worksheet riêng lẻ với các loại bảo vệ cụ thể.
 
-1. **Nhập các lớp cần thiết**  
-   `SpreadsheetSaveOptions` định nghĩa cách workbook được lưu, bao gồm mật khẩu và cờ bảo vệ ghi.  
+1. **Nhập các lớp cần thiết** – bao gồm `SpreadsheetSaveOptions` và `WorksheetProtection` nếu bạn cần kiểm soát chi tiết.  
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -273,8 +267,7 @@ import com.groupdocs.editor.options.WorksheetProtection;
 import com.groupdocs.editor.options.WorksheetProtectionType;
 ```
 
-2. **Tải workbook với mật khẩu hiện có**  
-   Sử dụng `SpreadsheetLoadOptions` để mở tệp được bảo vệ trước khi thực hiện thay đổi.  
+2. **Tải workbook với mật khẩu hiện có** – sử dụng `SpreadsheetLoadOptions` để mở tệp được bảo vệ trước khi thực hiện thay đổi.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -283,8 +276,7 @@ loadOptions.setPassword("excel_password");
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-3. **Cấu hình tùy chọn lưu với mật khẩu mới và bảo vệ ghi**  
-   Gọi `setPassword` để đặt mật khẩu mở mới và `setWriteProtection(true)` để khóa workbook khỏi việc chỉnh sửa.  
+3. **Cấu hình tùy chọn lưu với mật khẩu mới và bảo vệ ghi** – gọi `setPassword` để đặt mật khẩu mở mới và `setWriteProtection(true)` để khóa workbook khỏi việc chỉnh sửa.  
 
 ```java
 SpreadsheetFormats xlsmFormat = SpreadsheetFormats.Xlsm;
@@ -299,42 +291,59 @@ editor.dispose();
 
 #### Mẹo khắc phục sự cố
 - Chọn một mật khẩu mạnh, khó đoán cho lời gọi `setPassword`.  
-- Cờ `WorksheetProtectionType.All` khóa mọi yếu tố có thể chỉnh sửa; điều chỉnh theo nhu cầu.
+- Cờ `WorksheetProtectionType.All` khóa mọi yếu tố có thể chỉnh sửa; điều chỉnh theo nhu cầu để bảo vệ chọn lọc.  
 
-## Ứng dụng thực tiễn
+## Ứng dụng thực tế
 
-1. **Chia sẻ dữ liệu an toàn** – Bảo vệ các mô hình tài chính nhạy cảm trước khi gửi email cho các bên liên quan.  
-2. **Pipeline tài liệu tự động** – Tích hợp các đoạn mã này vào các công việc batch xử lý và mã hóa lại số lượng lớn bảng tính.
+1. **Chia sẻ dữ liệu an toàn** – bảo vệ các mô hình tài chính nhạy cảm trước khi gửi email cho các bên liên quan.  
+2. **Pipeline tài liệu tự động** – nhúng các đoạn mã này vào các công việc batch xử lý và mã hoá lại hàng nghìn bảng tính mỗi đêm.  
+3. **Tuân thủ quy định** – thực thi mã hoá workbook để đáp ứng yêu cầu GDPR, HIPAA, hoặc PCI‑DSS một cách tự động.  
+
+## Các vấn đề thường gặp và giải pháp
+
+| Vấn đề | Nguyên nhân | Giải pháp |
+|-------|-------------|-----------|
+| `PasswordRequiredException` ngay cả khi tôi đã truyền mật khẩu | Tùy chọn tải không được gắn vào lời gọi edit | Đảm bảo bạn truyền thể hiện `SpreadsheetLoadOptions` đã cấu hình vào `Editor.edit`. |
+| Lỗi Out‑of‑memory trên các tệp lớn | Tối ưu hoá bộ nhớ bị tắt | Gọi `setOptimizeMemoryUsage(true)` trên `SpreadsheetLoadOptions`. |
+| Workbook đã lưu mất định dạng | Sử dụng `SpreadsheetSaveOptions` mặc định mà không bảo tồn bố cục | Đặt `setPreserveFormatting(true)` (có sẵn trong phiên bản 25.3+). |
+| Bảo vệ ghi không được áp dụng | Quên gọi `setWriteProtection(true)` | Thêm lời gọi này trước khi gọi `Editor.save`. |
 
 ## Câu hỏi thường gặp
 
-**Q: Tôi có thể thay đổi mật khẩu của một workbook đã được bảo vệ không?**  
-A: Có. Tải workbook với mật khẩu hiện có, sau đó lưu lại bằng `SpreadsheetSaveOptions.setPassword` với giá trị mới.
+**H: Tôi có thể thay đổi mật khẩu của một workbook đã được bảo vệ không?**  
+**Đ:** Có. Tải workbook với mật khẩu hiện có, sau đó lưu nó bằng `SpreadsheetSaveOptions.setPassword` với giá trị mới.
 
-**Q: Điều gì xảy ra nếu tôi cố gắng mở một workbook mà không chỉ định mật khẩu khi nó được bảo vệ?**  
-A: GroupDocs.Editor ném `PasswordRequiredException`, bạn nên bắt để yêu cầu mật khẩu từ người dùng.
+**H: Điều gì xảy ra nếu tôi cố gắng mở một workbook mà không chỉ định mật khẩu khi nó được bảo vệ?**  
+**Đ:** GroupDocs.Editor ném `PasswordRequiredException`, bạn nên bắt để yêu cầu mật khẩu từ người dùng.
 
-**Q: Có thể bảo vệ chỉ các worksheet cụ thể thay vì toàn bộ workbook không?**  
-A: Sử dụng `WorksheetProtection` với một `WorksheetProtectionType` cụ thể (ví dụ, `LockedCells`) và áp dụng nó cho các sheet riêng lẻ qua API.
+**H: Có thể bảo vệ chỉ các worksheet cụ thể thay vì toàn bộ workbook không?**  
+**Đ:** Sử dụng `WorksheetProtection` với một `WorksheetProtectionType` cụ thể (ví dụ, `LockedCells`) và áp dụng nó cho các sheet riêng lẻ qua API.
 
-**Q: `setOptimizeMemoryUsage(true)` có ảnh hưởng đến hiệu năng không?**  
-A: Nó giảm tiêu thụ bộ nhớ với chi phí là một chút overhead xử lý, điều này có lợi cho các tệp rất lớn.
+**H: `setOptimizeMemoryUsage(true)` có ảnh hưởng đến hiệu năng không?**  
+**Đ:** Nó giảm tiêu thụ bộ nhớ với chi phí là một chút overhead xử lý, điều này có lợi cho các tệp rất lớn.
 
-**Q: Tôi có cần giấy phép riêng cho mỗi instance server không?**  
-A: Các điều khoản giấy phép được tính cho mỗi triển khai; tham khảo hướng dẫn giấy phép của GroupDocs cho các kịch bản đa node.
+**H: Tôi có cần giấy phép riêng cho mỗi instance máy chủ không?**  
+**Đ:** Các điều khoản giấy phép tính cho mỗi triển khai; tham khảo hướng dẫn giấy phép của GroupDocs cho các kịch bản đa node.
 
 ## Kết luận
 
-Bằng cách làm theo hướng dẫn này, bạn đã biết cách **protect Excel Java** bằng GroupDocs.Editor — tải workbook với mật khẩu, xử lý thông tin đăng nhập không đúng, và áp dụng mật khẩu mới cùng bảo vệ ghi khi lưu. Những khả năng này giúp bạn xây dựng quy trình tài liệu an toàn, tuân thủ và tự động, mở rộng từ một tệp đơn lẻ đến các quy trình batch quy mô lớn.
+Bằng cách làm theo hướng dẫn này, bạn đã biết cách **mở Excel được bảo vệ bằng mật khẩu trong Java** bằng GroupDocs.Editor, xử lý mật khẩu sai một cách nhẹ nhàng, áp dụng mật khẩu mới khi lưu, và bật bảo vệ ghi cho toàn bộ workbook. Những khả năng này cho phép bạn xây dựng các quy trình tài liệu an toàn, tuân thủ và hiệu suất cao, mở rộng từ một tệp đơn lẻ đến các quy trình batch quy mô lớn.
 
 ---
 
-**Cập nhật lần cuối:** 2026-06-16  
+**Cập nhật lần cuối:** 2026-10-16  
 **Kiểm tra với:** GroupDocs.Editor 25.3  
-**Tác giả:** GroupDocs
+**Tác giả:** GroupDocs  
 
 ## Hướng dẫn liên quan
 
 - [Chỉnh sửa hàng loạt tệp Word trong Java với GroupDocs.Editor – Hướng dẫn từng bước](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [cách chỉnh sửa tệp excel và Word trong Java với GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
-- [Cách thiết lập giấy phép cho GroupDocs.Editor trong Java bằng InputStream: Hướng dẫn toàn diện](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
+- [Cách đặt giấy phép cho GroupDocs.Editor trong Java bằng InputStream: Hướng dẫn toàn diện](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}

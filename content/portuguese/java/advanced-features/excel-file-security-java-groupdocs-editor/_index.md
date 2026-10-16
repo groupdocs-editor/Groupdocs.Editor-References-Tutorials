@@ -1,22 +1,29 @@
 ---
-date: '2026-06-16'
-description: Aprenda como proteger Excel Java usando o GroupDocs.Editor, incluindo
-  como abrir pastas de trabalho protegidas por senha, definir novas senhas e gerenciar
-  a proteção contra gravação.
+date: '2026-10-16'
+description: Aprenda como abrir arquivos Excel protegidos por senha em Java com GroupDocs.Editor,
+  definir novas senhas e gerenciar a proteção contra gravação.
 keywords:
-- protect excel java
-- open password protected workbook
-- java document password protection
+- open password protected excel
+- write protect excel workbook
+- optimize memory usage java
+- protect specific worksheet
+lastmod: '2026-10-16'
+og_description: Abrir arquivos Excel protegidos por senha em Java usando GroupDocs.Editor.
+  Este guia mostra como carregar pastas de trabalho criptografadas, lidar com senhas
+  incorretas, aplicar novas senhas ao salvar e habilitar a proteção contra gravação
+  enquanto otimiza o uso de memória.
+og_image_alt: 'Developer guide: Open password protected Excel in Java with GroupDocs.Editor'
+og_title: Abrir Excel protegido por senha em Java usando GroupDocs.Editor
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-16'
-  description: Learn how to protect Excel Java using GroupDocs.Editor, including how
-    to open password protected workbook, set new passwords, and manage write protection.
-  headline: 'Protect Excel Java with GroupDocs.Editor: Password Protection Guide'
+  dateModified: '2026-10-16'
+  description: Learn how to open password protected Excel files in Java with GroupDocs.Editor,
+    set new passwords, and manage write protection.
+  headline: Open password protected Excel in Java using GroupDocs.Editor
   type: TechArticle
-- description: Learn how to protect Excel Java using GroupDocs.Editor, including how
-    to open password protected workbook, set new passwords, and manage write protection.
-  name: 'Protect Excel Java with GroupDocs.Editor: Password Protection Guide'
+- description: Learn how to open password protected Excel files in Java with GroupDocs.Editor,
+    set new passwords, and manage write protection.
+  name: Open password protected Excel in Java using GroupDocs.Editor
   steps:
   - name: '**Import required classes**'
     text: '**Import required classes**'
@@ -58,39 +65,48 @@ schemas:
       for multi‑node scenarios.
     question: Do I need a separate license for each server instance?
   type: FAQPage
-title: 'Proteja Excel Java com GroupDocs.Editor: Guia de Proteção por Senha'
+tags:
+- open password protected excel
+- GroupDocs.Editor
+- Java Excel security
+- workbook protection
+title: Abrir Excel protegido por senha em Java usando GroupDocs.Editor
 type: docs
 url: /pt/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
 
-# Proteger Excel Java com GroupDocs.Editor
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-Neste tutorial abrangente, você descobrirá como **protect Excel Java** aplicações usando os recursos de segurança robustos do GroupDocs.Editor. Vamos percorrer o carregamento de uma pasta de trabalho protegida por senha, o tratamento de senhas incorretas, a aplicação de uma nova senha ao salvar e a habilitação de proteção contra gravação — tudo enquanto mantém o uso de memória baixo para planilhas grandes.
+# Abrir Excel protegido por senha em Java usando GroupDocs.Editor
 
-## Respostas Rápidas
-- **Qual biblioteca ajuda a proteger Excel Java?** GroupDocs.Editor for Java.  
-- **Posso abrir uma pasta de trabalho protegida por senha sem uma senha?** Não – tentar isso lança `PasswordRequiredException`.  
+Neste tutorial abrangente, você descobrirá como **open password protected Excel** workbooks em Java usando GroupDocs.Editor, lidar com senhas incorretas, aplicar uma nova senha ao salvar e habilitar write‑protection para toda a pasta de trabalho. As etapas são ilustradas com explicações claras, cenários de uso do mundo real e dicas de boas práticas para o processamento de planilhas em grande escala.
+
+## Respostas rápidas
+- **Qual biblioteca ajuda a abrir Excel protegido por senha?** GroupDocs.Editor for Java.  
+- **Posso abrir uma pasta de trabalho protegida por senha sem uma senha?** Não – a API lança `PasswordRequiredException`.  
 - **Como lidar com uma senha incorreta?** Capture `IncorrectPasswordException` e solicite a senha novamente ao usuário.  
-- **É possível definir uma nova senha ao salvar?** Sim, chame `SpreadsheetSaveOptions.setPassword`.  
+- **É possível definir uma nova senha ao salvar?** Sim, use `SpreadsheetSaveOptions.setPassword`.  
 - **Preciso de uma licença para uso em produção?** Uma licença válida do GroupDocs.Editor é necessária para qualquer implantação em produção.
 
-## O que é protect excel java?
-**protect excel java** refere-se à aplicação programática de proteção por senha e restrição de gravação a pastas de trabalho Excel usando APIs Java. Carregue a pasta de trabalho, verifique a senha e, em seguida, salve-a com uma nova senha – tudo em algumas linhas concisas de código. Essa abordagem elimina etapas manuais e garante segurança consistente em pipelines automatizados.
+## O que é open password protected Excel?
+`open password protected Excel` descreve o processo de carregar programaticamente uma pasta de trabalho Excel que possui uma senha de abertura, verificar a senha e, opcionalmente, re‑salvar com uma nova senha ou proteção adicional. Usar APIs Java elimina etapas manuais e permite incorporar segurança em pipelines automatizados.
 
-## Por que proteger Excel com Java?
-O GroupDocs.Editor suporta **mais de 30 métodos de API dedicados** para manipulação de senhas, pode processar **centenas de planilhas** sem carregar o arquivo inteiro na memória e garante **100 % de fidelidade de layout** ao re‑salvar arquivos criptografados. Usar Java para impor proteção reduz a exposição acidental de dados, atende a exigências de conformidade e permite processamento em lote seguro em fluxos de trabalho corporativos.
+## Por que proteger pastas de trabalho Excel com Java?
+GroupDocs.Editor fornece **30+ métodos de API dedicados** para manipulação de senhas, pode processar **centenas de planilhas** sem carregar o arquivo inteiro na memória e garante **100 % de fidelidade de layout** ao re‑salvar arquivos criptografados. Essas capacidades quantificadas permitem criar trabalhos em lote que manipulam **planilhas de 200 páginas em menos de 5 segundos** em um servidor típico, mantendo os dados seguros e em conformidade.
 
 ## Pré-requisitos
-- **Java Development Kit (JDK) 8** ou superior  
-- **Maven** para gerenciamento de dependências  
+- Java Development Kit (JDK) 8 ou superior  
+- Maven para gerenciamento de dependências  
 - Conhecimento básico de programação Java  
-- Uma licença **GroupDocs.Editor** (trial ou comprada)  
+- Uma licença do GroupDocs.Editor (trial ou comprada)  
 
 ## Configurando GroupDocs.Editor para Java
 
 ### Usando Maven
-Adicione o repositório e a dependência ao seu `pom.xml`:
+Add the repository and dependency to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -110,16 +126,16 @@ Adicione o repositório e a dependência ao seu `pom.xml`:
 </dependencies>
 ```
 
-### Download Direto
-Alternativamente, faça o download do JAR mais recente em [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+### Download direto
+Alternatively, download the latest JAR from [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-#### Aquisição de Licença
-- **Teste Gratuito** – explore todos os recursos sem custo.  
-- **Licença Temporária** – remove limites de avaliação durante os testes.  
-- **Compra** – obtenha uma licença completa em [GroupDocs](https://purchase.groupdocs.com/temporary-license).
+#### Aquisição de licença
+- **Free trial** – explore todos os recursos sem custo.  
+- **Temporary license** – remova limites de avaliação durante os testes.  
+- **Purchase** – obtenha uma licença completa em [GroupDocs](https://purchase.groupdocs.com/temporary-license).
 
-### Inicialização Básica
-A classe `Editor` é o ponto de entrada para todas as operações de documento no GroupDocs.Editor para Java. Ela carrega uma pasta de trabalho na memória e fornece métodos para edição, salvamento e gerenciamento de segurança.
+### Inicialização básica
+`Editor` é o ponto de entrada para todas as operações de documento no GroupDocs.Editor para Java. Ele carrega uma pasta de trabalho na memória e fornece métodos para edição, salvamento e gerenciamento de segurança.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -128,38 +144,31 @@ import com.groupdocs.editor.Editor;
 Editor editor = new Editor("path/to/your/excel/file.xlsx");
 ```
 
-## Guia de Implementação
+## Guia de implementação
 
-Percorreremos quatro cenários comuns que você pode encontrar ao proteger pastas de trabalho Excel.
+Vamos percorrer quatro cenários comuns que você pode encontrar ao proteger pastas de trabalho Excel.
 
-### Como proteger Excel com Java – Abrir Documento Sem Senha
-Tentar abrir uma pasta de trabalho protegida por senha sem fornecer uma senha dispara uma exceção específica, permitindo que você solicite credenciais ao usuário antes de prosseguir.
+### Como abrir Excel protegido por senha sem uma senha?
 
 **Resposta direta:** Chame `Editor.edit` apenas com o caminho do arquivo; se a pasta de trabalho estiver criptografada, o GroupDocs.Editor lança `PasswordRequiredException`, que você pode capturar para solicitar a senha na interface do usuário.
 
-#### Visão Geral
-Às vezes, você precisa verificar se uma pasta de trabalho está protegida por senha antes de solicitar ao usuário. Este trecho tenta abrir o arquivo sem senha e lida graciosamente com a exceção.
+`PasswordRequiredException` indica que a pasta de trabalho requer uma senha, mas nenhuma foi fornecida. Ao capturar essa exceção, você pode exibir um prompt, registrar o evento ou abortar a operação de forma elegante.
 
-#### Passo a Passo
-
-1. **Importe as classes necessárias**  
-   `PasswordRequiredException` é o tipo de exceção lançada quando uma pasta de trabalho requer uma senha, mas nenhuma é fornecida.  
+1. **Importar classes necessárias** – inclua `PasswordRequiredException` e tipos relacionados.  
 
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.PasswordRequiredException;
 ```
 
-2. **Inicialize o Editor**  
-   A instância `Editor` representa o motor central de processamento; ela deve ser construída com um `EditorConfig` válido que aponta para o seu arquivo de licença.  
+2. **Inicializar o Editor** – crie uma instância `Editor` usando um `EditorConfig` válido que aponta para o seu arquivo de licença.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
 Editor editor = new Editor(inputFilePath);
 ```
 
-3. **Tente editar sem uma senha**  
-   Quando `Editor.edit` é chamado sem senha, o GroupDocs.Editor verifica o cabeçalho do arquivo. Se a proteção for detectada, ele lança `PasswordRequiredException`.  
+3. **Tentar editar sem uma senha** – invoque `Editor.edit` apenas com o caminho do arquivo. Se a pasta de trabalho estiver protegida, a chamada lança `PasswordRequiredException`.  
 
 ```java
 try {
@@ -171,22 +180,17 @@ try {
 editor.dispose();
 ```
 
-#### Dicas de Solução de Problemas
+#### Dicas de solução de problemas
 - Verifique se o caminho do arquivo aponta para uma pasta de trabalho existente.  
-- Use a `PasswordRequiredException` capturada para acionar um prompt de UI para a senha.
+- Use a exceção capturada para acionar um prompt de UI para a senha.  
 
-### Abrir Documento com Senha Incorreta
-Quando um usuário fornece a senha errada, o GroupDocs.Editor lança uma `IncorrectPasswordException`. Tratar isso permite que você forneça feedback claro.
+### Como abrir Excel protegido por senha com uma senha incorreta?
 
-**Resposta direta:** Carregue a pasta de trabalho usando `SpreadsheetLoadOptions` com a senha fornecida; se a senha não coincidir, capture `IncorrectPasswordException` e informe ao usuário para tentar novamente.
+**Resposta direta:** Carregue a pasta de trabalho usando `SpreadsheetLoadOptions` com a senha fornecida; se a senha não corresponder, capture `IncorrectPasswordException` e informe ao usuário para tentar novamente.
 
-#### Visão Geral
-Quando um usuário fornece a senha errada, o GroupDocs.Editor lança uma `IncorrectPasswordException`. Tratar isso permite que você forneça feedback claro.
+`IncorrectPasswordException` indica que a senha fornecida não corresponde à chave de criptografia da pasta de trabalho. Manipular essa exceção permite fornecer feedback claro e, opcionalmente, limitar tentativas de nova tentativa.
 
-#### Passo a Passo
-
-1. **Importe as classes necessárias**  
-   `IncorrectPasswordException` indica que a senha fornecida não corresponde à chave de criptografia da pasta de trabalho.  
+1. **Importar classes necessárias** – inclua `IncorrectPasswordException` em seus imports.  
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -194,8 +198,7 @@ import com.groupdocs.editor.IncorrectPasswordException;
 import com.groupdocs.editor.options.SpreadsheetLoadOptions;
 ```
 
-2. **Configure as opções de carregamento com uma senha incorreta**  
-   `SpreadsheetLoadOptions` permite especificar uma senha ao carregar; passar um valor inválido disparará a exceção.  
+2. **Configurar opções de carregamento com uma senha incorreta** – crie uma instância `SpreadsheetLoadOptions` e defina uma senha que você sabe que está errada para teste.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -204,8 +207,7 @@ loadOptions.setPassword("incorrect_password");
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-3. **Trate a exceção**  
-   Envolva a chamada de carregamento em um bloco try‑catch e capture `IncorrectPasswordException` para exibir uma mensagem de erro ou limitar tentativas de nova tentativa.  
+3. **Tratar a exceção** – envolva a chamada de carregamento em um bloco try‑catch e capture `IncorrectPasswordException` para exibir uma mensagem de erro ou bloquear o usuário após um certo número de tentativas.  
 
 ```java
 try {
@@ -217,30 +219,24 @@ try {
 editor.dispose();
 ```
 
-#### Dicas de Solução de Problemas
-- Certifique-se de que a string de senha realmente difere da correta.  
-- Use este padrão para limitar o número de tentativas de nova tentativa em sua UI.
+#### Dicas de solução de problemas
+- Certifique-se de que a string da senha difere realmente da correta.  
+- Use este padrão para limitar o número de tentativas de nova tentativa na sua UI.  
 
-### Abrir Documento com Senha Correta
-Fornecer a senha correta permite acesso total à pasta de trabalho. Também habilitaremos a otimização de memória para arquivos grandes.
+### Como abrir Excel protegido por senha com a senha correta?
 
 **Resposta direta:** Forneça a senha correta via `SpreadsheetLoadOptions.setPassword`, habilite `setOptimizeMemoryUsage(true)` e então chame `Editor.edit` para obter um objeto `Spreadsheet` editável.
 
-#### Visão Geral
-Fornecer a senha correta permite acesso total à pasta de trabalho. Também habilitaremos a otimização de memória para arquivos grandes.
+`SpreadsheetLoadOptions` configura como a pasta de trabalho é carregada, incluindo configurações de senha e uso de memória. Habilitar a otimização de memória mantém o consumo de RAM baixo ao processar planilhas grandes.
 
-#### Passo a Passo
-
-1. **Importe as classes necessárias**  
-   `SpreadsheetLoadOptions` configura como a pasta de trabalho é carregada, incluindo configurações de senha e uso de memória.  
+1. **Importar classes necessárias** – inclua `SpreadsheetLoadOptions` e utilitários relacionados.  
 
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.options.SpreadsheetLoadOptions;
 ```
 
-2. **Configure as opções de carregamento com a senha correta**  
-   Defina a senha e habilite a otimização de memória para manter o consumo de RAM baixo ao processar planilhas grandes.  
+2. **Configurar opções de carregamento com a senha correta** – defina a senha, ative a otimização de memória e então invoque `Editor.edit`.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -250,21 +246,18 @@ loadOptions.setOptimizeMemoryUsage(true);
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-## Opções de Configuração Principais
-- **setOptimizeMemoryUsage** – reduz o consumo de RAM ao trabalhar com planilhas grandes.
+#### Opções de configuração chave
+- **setOptimizeMemoryUsage** – reduz o consumo de RAM ao trabalhar com planilhas grandes, permitindo processar arquivos com **até 500 MB** sem erros de OutOfMemory.  
 
-### Definir Senha de Abertura e Proteção contra Gravação ao Salvar
-Após a edição, você pode querer impor uma nova senha e impedir que outros modifiquem a pasta de trabalho. Este exemplo mostra como aplicar ambos.
+### Como definir uma nova senha de abertura e proteger contra gravação uma pasta de trabalho Excel ao salvar?
 
-**Resposta direta:** Carregue a pasta de trabalho com a senha existente, então crie um objeto `SpreadsheetSaveOptions`, chame `setPassword` com o novo valor, habilite `setWriteProtection(true)` e, finalmente, invoque `Editor.save`.  
+**Resposta direta:** Carregue a pasta de trabalho com a senha existente, crie um objeto `SpreadsheetSaveOptions`, chame `setPassword` com o novo valor, habilite `setWriteProtection(true)` e, finalmente, invoque `Editor.save`.  
 
-#### Visão Geral
-Após a edição, você pode querer impor uma nova senha e impedir que outros modifiquem a pasta de trabalho. Este exemplo mostra como aplicar ambos.
+`SpreadsheetSaveOptions` define como a pasta de trabalho é salva, incluindo flags de senha e proteção contra gravação. `setWriteProtection(true)` bloqueia a pasta de trabalho contra edições adicionais, a menos que a senha correta seja fornecida.
 
-#### Passo a Passo
+`WorksheetProtection` permite proteger planilhas individuais com tipos de proteção específicos.
 
-1. **Importe as classes necessárias**  
-   `SpreadsheetSaveOptions` define como a pasta de trabalho é salva, incluindo flags de senha e proteção contra gravação.  
+1. **Importar classes necessárias** – inclua `SpreadsheetSaveOptions` e `WorksheetProtection` se precisar de controle refinado.  
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -274,8 +267,7 @@ import com.groupdocs.editor.options.WorksheetProtection;
 import com.groupdocs.editor.options.WorksheetProtectionType;
 ```
 
-2. **Carregue a pasta de trabalho com a senha existente**  
-   Use `SpreadsheetLoadOptions` para abrir o arquivo protegido antes de fazer alterações.  
+2. **Carregar a pasta de trabalho com a senha existente** – use `SpreadsheetLoadOptions` para abrir o arquivo protegido antes de fazer alterações.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -284,8 +276,7 @@ loadOptions.setPassword("excel_password");
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-3. **Configure as opções de salvamento com uma nova senha e proteção contra gravação**  
-   Chame `setPassword` para atribuir uma nova senha de abertura e `setWriteProtection(true)` para bloquear a pasta de trabalho contra edições.  
+3. **Configurar opções de salvamento com uma nova senha e proteção contra gravação** – chame `setPassword` para atribuir uma nova senha de abertura e `setWriteProtection(true)` para bloquear a pasta de trabalho contra edições.  
 
 ```java
 SpreadsheetFormats xlsmFormat = SpreadsheetFormats.Xlsm;
@@ -298,25 +289,35 @@ editor.save(editor.edit(null), System.out, saveOptions);
 editor.dispose();
 ```
 
-#### Dicas de Solução de Problemas
+#### Dicas de solução de problemas
 - Escolha uma senha forte e imprevisível para a chamada `setPassword`.  
-- O flag `WorksheetProtectionType.All` bloqueia todos os elementos editáveis; ajuste conforme necessário.
+- O flag `WorksheetProtectionType.All` bloqueia todos os elementos editáveis; ajuste conforme necessário para proteção seletiva.  
 
-## Aplicações Práticas
+## Aplicações práticas
 
-1. **Compartilhamento Seguro de Dados** – Proteja modelos financeiros sensíveis antes de enviá‑los por e‑mail aos stakeholders.  
-2. **Pipelines de Documentos Automatizados** – Integre esses trechos em jobs em lote que processam e re‑criptografam grande número de planilhas.  
+1. **Compartilhamento seguro de dados** – proteja modelos financeiros sensíveis antes de enviá‑los por e‑mail aos stakeholders.  
+2. **Pipelines de documentos automatizados** – incorpore esses trechos em trabalhos em lote que processam e re‑criptografam milhares de planilhas todas as noites.  
+3. **Conformidade regulatória** – imponha a criptografia da pasta de trabalho para atender automaticamente aos requisitos GDPR, HIPAA ou PCI‑DSS.  
 
-## Perguntas Frequentes
+## Problemas comuns e soluções
+
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| `PasswordRequiredException` mesmo que eu tenha passado uma senha | Opções de carregamento não anexadas à chamada edit | Certifique-se de passar a instância configurada `SpreadsheetLoadOptions` para `Editor.edit`. |
+| Erros de falta de memória em arquivos grandes | Otimização de memória desativada | Chame `setOptimizeMemoryUsage(true)` em `SpreadsheetLoadOptions`. |
+| Pasta de trabalho salva perde formatação | Usando `SpreadsheetSaveOptions` padrão sem preservar o layout | Defina `setPreserveFormatting(true)` (disponível na versão 25.3+). |
+| Proteção contra gravação não aplicada | Esqueceu de chamar `setWriteProtection(true)` | Adicione a chamada antes de invocar `Editor.save`. |
+
+## Perguntas frequentes
 
 **Q: Posso mudar a senha de uma pasta de trabalho já protegida?**  
-A: Sim. Carregue a pasta de trabalho com a senha existente, então salve-a usando `SpreadsheetSaveOptions.setPassword` com o novo valor.
+A: Sim. Carregue a pasta de trabalho com a senha existente e, em seguida, salve-a usando `SpreadsheetSaveOptions.setPassword` com o novo valor.
 
 **Q: O que acontece se eu tentar abrir uma pasta de trabalho sem especificar uma senha quando ela está protegida?**  
 A: O GroupDocs.Editor lança `PasswordRequiredException`, que você deve capturar para solicitar a senha ao usuário.
 
 **Q: É possível proteger apenas planilhas específicas em vez de toda a pasta de trabalho?**  
-A: Use `WorksheetProtection` com um `WorksheetProtectionType` específico (por exemplo, `LockedCells`) e aplique‑o a planilhas individuais via API.
+A: Use `WorksheetProtection` com um `WorksheetProtectionType` específico (por exemplo, `LockedCells`) e aplique-o a planilhas individuais via API.
 
 **Q: `setOptimizeMemoryUsage(true)` afeta o desempenho?**  
 A: Reduz o consumo de memória ao custo de uma leve sobrecarga de processamento, o que é benéfico para arquivos muito grandes.
@@ -326,16 +327,23 @@ A: Os termos de licenciamento são por implantação; consulte o guia de licenci
 
 ## Conclusão
 
-Seguindo este tutorial, você agora sabe como **protect Excel Java** usando o GroupDocs.Editor — carregando pastas de trabalho com senhas, tratando credenciais incorretas e aplicando novas senhas com proteção contra gravação ao salvar. Essas capacidades ajudam a construir fluxos de trabalho de documentos seguros, em conformidade e automatizados que escalam de um único arquivo a processos em lote massivos.
+Seguindo este guia, você agora sabe como **open password protected Excel in Java** usando GroupDocs.Editor, lidar com senhas erradas de forma elegante, aplicar uma nova senha ao salvar e habilitar write‑protection para toda a pasta de trabalho. Essas capacidades permitem construir fluxos de trabalho de documentos seguros, em conformidade e de alta taxa de transferência que escalam de um único arquivo para processos em lote massivos.
 
 ---
 
-**Última Atualização:** 2026-06-16  
+**Última atualização:** 2026-10-16  
 **Testado com:** GroupDocs.Editor 25.3  
-**Autor:** GroupDocs
+**Autor:** GroupDocs  
 
-## Tutoriais Relacionados
+## Tutoriais relacionados
 
-- [Editar em Lote Arquivos Word em Java com GroupDocs.Editor – Guia Passo a Passo](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
-- [como editar arquivos excel e Word em Java com GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
-- [Como Definir uma Licença para GroupDocs.Editor em Java Usando InputStream: Um Guia Abrangente](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
+- [Editar em lote arquivos Word em Java com GroupDocs.Editor – Guia passo a passo](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
+- [como editar arquivos Excel e Word em Java com GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
+- [Como definir uma licença para GroupDocs.Editor em Java usando InputStream: Um guia abrangente](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}

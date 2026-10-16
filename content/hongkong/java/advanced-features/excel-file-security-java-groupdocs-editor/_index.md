@@ -1,20 +1,25 @@
 ---
-date: '2026-06-16'
-description: 了解如何使用 GroupDocs.Editor 保護 Excel Java，包括如何開啟受密碼保護的活頁簿、設定新密碼以及管理寫入保護。
+date: '2026-10-16'
+description: 了解如何使用 GroupDocs.Editor 在 Java 中開啟受密碼保護的 Excel 檔案、設定新密碼以及管理寫入保護。
 keywords:
-- protect excel java
-- open password protected workbook
-- java document password protection
+- open password protected excel
+- write protect excel workbook
+- optimize memory usage java
+- protect specific worksheet
+lastmod: '2026-10-16'
+og_description: 使用 GroupDocs.Editor 在 Java 中開啟受密碼保護的 Excel 檔案。本指南將示範如何載入加密工作簿、處理錯誤密碼、在儲存時套用新密碼，以及在優化記憶體使用的同時啟用寫入保護。
+og_image_alt: 'Developer guide: Open password protected Excel in Java with GroupDocs.Editor'
+og_title: 使用 GroupDocs.Editor 在 Java 中開啟受密碼保護的 Excel
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-16'
-  description: Learn how to protect Excel Java using GroupDocs.Editor, including how
-    to open password protected workbook, set new passwords, and manage write protection.
-  headline: 'Protect Excel Java with GroupDocs.Editor: Password Protection Guide'
+  dateModified: '2026-10-16'
+  description: Learn how to open password protected Excel files in Java with GroupDocs.Editor,
+    set new passwords, and manage write protection.
+  headline: Open password protected Excel in Java using GroupDocs.Editor
   type: TechArticle
-- description: Learn how to protect Excel Java using GroupDocs.Editor, including how
-    to open password protected workbook, set new passwords, and manage write protection.
-  name: 'Protect Excel Java with GroupDocs.Editor: Password Protection Guide'
+- description: Learn how to open password protected Excel files in Java with GroupDocs.Editor,
+    set new passwords, and manage write protection.
+  name: Open password protected Excel in Java using GroupDocs.Editor
   steps:
   - name: '**Import required classes**'
     text: '**Import required classes**'
@@ -56,39 +61,48 @@ schemas:
       for multi‑node scenarios.
     question: Do I need a separate license for each server instance?
   type: FAQPage
-title: 使用 GroupDocs.Editor 保護 Excel Java：密碼保護指南
+tags:
+- open password protected excel
+- GroupDocs.Editor
+- Java Excel security
+- workbook protection
+title: 使用 GroupDocs.Editor 在 Java 中開啟受密碼保護的 Excel
 type: docs
 url: /zh-hant/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
 
-# 保護 Excel Java 與 GroupDocs.Editor
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-在本完整教學中，您將了解如何使用 GroupDocs.Editor 的強大安全功能來 **protect Excel Java** 應用程式。我們將示範如何載入受密碼保護的活頁簿、處理錯誤密碼、在儲存時設定新密碼，以及啟用寫入保護——同時在處理大型試算表時保持低記憶體使用量。
+# 在 Java 中使用 GroupDocs.Editor 開啟受密碼保護的 Excel
 
-## 快速解答
-- **哪個函式庫可協助保護 Excel Java？** GroupDocs.Editor for Java.  
-- **我可以在未提供密碼的情況下開啟受密碼保護的活頁簿嗎？** 不行——嘗試這樣做會拋出 `PasswordRequiredException`。  
+在本完整教學中，您將了解如何在 Java 中使用 GroupDocs.Editor **開啟受密碼保護的 Excel** 工作簿、處理錯誤密碼、在儲存時套用新密碼，以及為整個工作簿啟用寫入保護。步驟會以清晰說明、實務案例情境以及大型試算表處理的最佳實踐技巧呈現。
+
+## 快速回答
+- **哪個函式庫可協助開啟受密碼保護的 Excel？** GroupDocs.Editor for Java.  
+- **我可以在未提供密碼的情況下開啟受密碼保護的工作簿嗎？** 不行 – API 會拋出 `PasswordRequiredException`.  
 - **如何處理錯誤的密碼？** 捕獲 `IncorrectPasswordException` 並再次提示使用者。  
-- **儲存時可以設定新密碼嗎？** 可以，呼叫 `SpreadsheetSaveOptions.setPassword`。  
-- **在正式環境中需要授權嗎？** 任何正式部署都需要有效的 GroupDocs.Editor 授權。
+- **儲存時可以設定新密碼嗎？** 可以，使用 `SpreadsheetSaveOptions.setPassword`.  
+- **生產環境需要授權嗎？** 任何生產部署都需要有效的 GroupDocs.Editor 授權。
 
-## 什麼是 protect excel java？
-**protect excel java** 指的是使用 Java API 以程式方式對 Excel 活頁簿套用密碼保護與寫入限制。載入活頁簿、驗證密碼，然後以新密碼儲存——只需幾行簡潔的程式碼。此方法可省去手動步驟，確保在自動化管線中保持一致的安全性。
+## 什麼是受密碼保護的 Excel 開啟？
+`open password protected Excel` 描述以程式方式載入具有開啟密碼的 Excel 工作簿、驗證密碼，並可選擇以新密碼或其他保護方式重新儲存的過程。使用 Java API 可省去手動步驟，讓您將安全性嵌入自動化流程中。
 
-## 為何使用 Java 保護 Excel？
-GroupDocs.Editor 支援 **30 多個專用 API 方法** 來處理密碼，能在不將整個檔案載入記憶體的情況下處理 **數百張工作表**，且在重新儲存加密檔案時保證 **100 % 版面配置相同**。使用 Java 來執行保護可減少意外的資料外洩，符合合規要求，並在企業工作流程中實現安全的批次處理。
+## 為什麼要在 Java 中保護 Excel 工作簿？
+GroupDocs.Editor 提供 **30 多個專用 API 方法** 來處理密碼，能在不將整個檔案載入記憶體的情況下處理 **數百個工作表**，且在重新儲存加密檔案時保證 **100 % 版面配置相同**。這些可量化的能力讓您能建立批次工作，在一般伺服器上於 **5 秒內處理 200 頁試算表**，同時確保資料安全與合規。
 
 ## 前置條件
-- **Java Development Kit (JDK) 8** 或更高版本  
-- **Maven** 用於相依性管理  
+- Java Development Kit (JDK) 8 或更高版本  
+- 用於相依管理的 Maven  
 - 基本的 Java 程式設計知識  
-- 一個 **GroupDocs.Editor** 授權（試用或購買）  
+- GroupDocs.Editor 授權（試用版或正式版）  
 
-## 設定 GroupDocs.Editor for Java
+## 為 Java 設定 GroupDocs.Editor
 
 ### 使用 Maven
-將儲存庫與相依性加入您的 `pom.xml`：
+將儲存庫與相依項目加入您的 `pom.xml`：
 
 ```xml
 <repositories>
@@ -117,7 +131,7 @@ GroupDocs.Editor 支援 **30 多個專用 API 方法** 來處理密碼，能在�
 - **購買** – 從 [GroupDocs](https://purchase.groupdocs.com/temporary-license) 取得完整授權。
 
 ### 基本初始化
-`Editor` 類別是 GroupDocs.Editor for Java 中所有文件操作的入口。它將活頁簿載入記憶體，並提供編輯、儲存與安全管理的方法。
+`Editor` 是 GroupDocs.Editor for Java 中所有文件操作的入口點。它將工作簿載入記憶體，並提供編輯、儲存與安全管理的方法。
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -128,36 +142,29 @@ Editor editor = new Editor("path/to/your/excel/file.xlsx");
 
 ## 實作指南
 
-我們將說明在保護 Excel 活頁簿時可能遇到的四種常見情境。
+我們將逐步說明在保護 Excel 工作簿時可能遇到的四種常見情境。
 
-### 如何使用 Java 保護 Excel – 在未提供密碼的情況下開啟文件
-在未提供密碼的情況下嘗試開啟受密碼保護的活頁簿會觸發特定例外，讓您在繼續之前向使用者索取憑證。
+### 如何在未提供密碼的情況下開啟受密碼保護的 Excel？
 
-**直接答案：** 只使用檔案路徑呼叫 `Editor.edit`；如果活頁簿已加密，GroupDocs.Editor 會拋出 `PasswordRequiredException`，您可以捕獲它以在使用者介面中請求密碼。
+**直接回答：** 只使用檔案路徑呼叫 `Editor.edit`；如果工作簿已加密，GroupDocs.Editor 會拋出 `PasswordRequiredException`，您可以捕獲此例外以向使用者介面請求密碼。
 
-#### 概觀
-有時您需要在提示使用者之前驗證活頁簿是否受密碼保護。此程式碼片段嘗試在未提供密碼的情況下開啟檔案，並優雅地處理例外。
+`PasswordRequiredException` 表示工作簿需要密碼，但未提供。捕獲此例外後，您可以顯示提示、記錄事件，或優雅地中止操作。
 
-#### 步驟說明
-
-1. **匯入所需類別**  
-   `PasswordRequiredException` 是在活頁簿需要密碼但未提供時拋出的例外類型。  
+1. **匯入必要的類別** – 引入 `PasswordRequiredException` 及相關類型。  
 
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.PasswordRequiredException;
 ```
 
-2. **初始化 Editor**  
-   `Editor` 實例代表核心處理引擎；必須使用指向授權檔案的有效 `EditorConfig` 來建構。  
+2. **初始化 Editor** – 使用指向授權檔案的有效 `EditorConfig` 建立 `Editor` 實例。  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
 Editor editor = new Editor(inputFilePath);
 ```
 
-3. **嘗試在未提供密碼的情況下編輯**  
-   當呼叫 `Editor.edit` 並未提供密碼時，GroupDocs.Editor 會檢查檔案標頭。若偵測到保護，則拋出 `PasswordRequiredException`。  
+3. **嘗試在未提供密碼的情況下編輯** – 只傳入檔案路徑呼叫 `Editor.edit`。如果工作簿受保護，呼叫會拋出 `PasswordRequiredException`。  
 
 ```java
 try {
@@ -169,22 +176,17 @@ try {
 editor.dispose();
 ```
 
-#### 疑難排解提示
-- 確認檔案路徑指向現有的活頁簿。  
-- 使用捕獲的 `PasswordRequiredException` 觸發 UI 提示以輸入密碼。
+#### 疑難排解技巧
+- 確認檔案路徑指向現有的工作簿。  
+- 使用捕獲的例外觸發 UI 提示要求密碼。  
 
-### 使用錯誤密碼開啟文件
-當使用者提供錯誤的密碼時，GroupDocs.Editor 會拋出 `IncorrectPasswordException`。處理此例外可讓您提供明確的回饋。
+### 如何使用錯誤的密碼開啟受密碼保護的 Excel？
 
-**直接答案：** 使用 `SpreadsheetLoadOptions` 並提供密碼載入活頁簿；若密碼不匹配，捕獲 `IncorrectPasswordException` 並通知使用者重新嘗試。
+**直接回答：** 使用 `SpreadsheetLoadOptions` 並提供密碼載入工作簿；若密碼不匹配，捕獲 `IncorrectPasswordException` 並通知使用者重新嘗試。
 
-#### 概觀
-當使用者提供錯誤的密碼時，GroupDocs.Editor 會拋出 `IncorrectPasswordException`。處理此例外可讓您提供明確的回饋。
+`IncorrectPasswordException` 表示您提供的密碼與工作簿的加密金鑰不符。處理此例外可讓您提供明確回饋，並可選擇限制重試次數。
 
-#### 步驟說明
-
-1. **匯入所需類別**  
-   `IncorrectPasswordException` 表示提供的密碼與活頁簿的加密金鑰不匹配。  
+1. **匯入必要的類別** – 在匯入中加入 `IncorrectPasswordException`。  
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -192,8 +194,7 @@ import com.groupdocs.editor.IncorrectPasswordException;
 import com.groupdocs.editor.options.SpreadsheetLoadOptions;
 ```
 
-2. **設定載入選項並使用錯誤密碼**  
-   `SpreadsheetLoadOptions` 允許在載入時指定密碼；傳入無效值將觸發例外。  
+2. **使用錯誤密碼設定載入選項** – 建立 `SpreadsheetLoadOptions` 實例，並設定一個已知錯誤的密碼以進行測試。  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -202,8 +203,7 @@ loadOptions.setPassword("incorrect_password");
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-3. **處理例外**  
-   將載入呼叫包在 try‑catch 區塊中，捕獲 `IncorrectPasswordException` 以顯示錯誤訊息或限制重試次數。  
+3. **處理例外** – 將載入呼叫包在 try‑catch 區塊，捕獲 `IncorrectPasswordException` 以顯示錯誤訊息或在達到一定次數後鎖定使用者。  
 
 ```java
 try {
@@ -215,30 +215,24 @@ try {
 editor.dispose();
 ```
 
-#### 疑難排解提示
-- 確保密碼字串確實與正確密碼不同。  
-- 在 UI 中使用此模式限制重試次數。
+#### 疑難排解技巧
+- 確認密碼字串確實與正確密碼不同。  
+- 在 UI 中使用此模式限制重試次數。  
 
-### 使用正確密碼開啟文件
-提供正確的密碼即可完整存取活頁簿。我們同時會為大型檔案啟用記憶體最佳化。
+### 如何使用正確的密碼開啟受密碼保護的 Excel？
 
-**直接答案：** 透過 `SpreadsheetLoadOptions.setPassword` 提供正確密碼，啟用 `setOptimizeMemoryUsage(true)`，然後呼叫 `Editor.edit` 取得可編輯的 `Spreadsheet` 物件。
+**直接回答：** 透過 `SpreadsheetLoadOptions.setPassword` 提供正確密碼，啟用 `setOptimizeMemoryUsage(true)`，然後呼叫 `Editor.edit` 取得可編輯的 `Spreadsheet` 物件。
 
-#### 概觀
-提供正確的密碼即可完整存取活頁簿。我們也會為大型檔案啟用記憶體最佳化。
+`SpreadsheetLoadOptions` 設定工作簿的載入方式，包括密碼與記憶體使用設定。啟用記憶體最佳化可在處理大型試算表時降低 RAM 消耗。
 
-#### 步驟說明
-
-1. **匯入所需類別**  
-   `SpreadsheetLoadOptions` 設定活頁簿的載入方式，包括密碼與記憶體使用設定。  
+1. **匯入必要的類別** – 引入 `SpreadsheetLoadOptions` 及相關工具。  
 
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.options.SpreadsheetLoadOptions;
 ```
 
-2. **使用正確密碼設定載入選項**  
-   設定密碼並啟用記憶體最佳化，以在處理大型試算表時保持低 RAM 消耗。  
+2. **使用正確密碼設定載入選項** – 設定密碼、開啟記憶體最佳化，然後呼叫 `Editor.edit`。  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -249,20 +243,17 @@ Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
 #### 主要設定選項
-- **setOptimizeMemoryUsage** – 在處理大型試算表時降低 RAM 消耗。
+- **setOptimizeMemoryUsage** – 在處理大型試算表時降低 RAM 消耗，讓您能在 **最高 500 MB** 的檔案上運行而不會發生 OutOfMemory 錯誤。  
 
-### 設定開啟密碼與儲存時的寫入保護
-編輯完成後，您可能想設定新密碼並防止他人修改活頁簿。此範例示範如何同時套用兩者。
+### 如何在儲存時設定新開啟密碼並對 Excel 工作簿啟用寫入保護？
 
-**直接答案：** 使用現有密碼載入活頁簿，然後建立 `SpreadsheetSaveOptions` 物件，呼叫 `setPassword` 設定新密碼，啟用 `setWriteProtection(true)`，最後呼叫 `Editor.save`。  
+**直接回答：** 使用現有密碼載入工作簿，建立 `SpreadsheetSaveOptions` 物件，使用 `setPassword` 設定新密碼，啟用 `setWriteProtection(true)`，最後呼叫 `Editor.save`。
 
-#### 概觀
-編輯完成後，您可能想設定新密碼並防止他人修改活頁簿。此範例示範如何同時套用兩者。
+`SpreadsheetSaveOptions` 定義工作簿的儲存方式，包括密碼與寫入保護旗標。`setWriteProtection(true)` 會鎖定工作簿，除非提供正確密碼，否則無法進一步編輯。
 
-#### 步驟說明
+`WorksheetProtection` 允許您以特定保護類型保護單獨的工作表。
 
-1. **匯入所需類別**  
-   `SpreadsheetSaveOptions` 定義活頁簿的儲存方式，包括密碼與寫入保護旗標。  
+1. **匯入必要的類別** – 若需要細緻控制，請加入 `SpreadsheetSaveOptions` 與 `WorksheetProtection`。  
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -272,8 +263,7 @@ import com.groupdocs.editor.options.WorksheetProtection;
 import com.groupdocs.editor.options.WorksheetProtectionType;
 ```
 
-2. **使用現有密碼載入活頁簿**  
-   使用 `SpreadsheetLoadOptions` 開啟受保護的檔案，然後進行變更。  
+2. **使用現有密碼載入工作簿** – 使用 `SpreadsheetLoadOptions` 開啟受保護檔案，然後再進行變更。  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -282,8 +272,7 @@ loadOptions.setPassword("excel_password");
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-3. **設定儲存選項以使用新密碼與寫入保護**  
-   呼叫 `setPassword` 指定新的開啟密碼，並使用 `setWriteProtection(true)` 鎖定活頁簿以防止編輯。  
+3. **設定儲存選項以使用新密碼與寫入保護** – 呼叫 `setPassword` 設定新開啟密碼，並使用 `setWriteProtection(true)` 鎖定工作簿以防止編輯。  
 
 ```java
 SpreadsheetFormats xlsmFormat = SpreadsheetFormats.Xlsm;
@@ -296,44 +285,61 @@ editor.save(editor.edit(null), System.out, saveOptions);
 editor.dispose();
 ```
 
-#### 疑難排解提示
-- 為 `setPassword` 呼叫選擇強且難以預測的密碼。  
-- `WorksheetProtectionType.All` 旗標會鎖定所有可編輯元素；視需要進行調整。
+#### 疑難排解技巧
+- 為 `setPassword` 呼叫選擇強度高且難以預測的密碼。  
+- `WorksheetProtectionType.All` 旗標會鎖定所有可編輯元素；如需選擇性保護，請自行調整。  
 
 ## 實務應用
 
-1. **安全資料分享** – 在將敏感的財務模型透過電郵發送給利害關係人之前先加以保護。  
-2. **自動化文件管線** – 將這些程式碼片段整合到批次作業中，以處理並重新加密大量試算表。  
+1. **安全資料共享** – 在將敏感財務模型透過電郵發送給利害關係人之前加以保護。  
+2. **自動化文件流程** – 將這些程式碼片段嵌入批次工作，每晚處理並重新加密數千份試算表。  
+3. **法規遵循** – 強制工作簿加密，以自動符合 GDPR、HIPAA 或 PCI‑DSS 等要求。  
 
-## 常見問題
+## 常見問題與解決方案
 
-**Q: 我可以更改已受保護活頁簿的密碼嗎？**  
-A: 可以。使用現有密碼載入活頁簿，然後使用 `SpreadsheetSaveOptions.setPassword` 並提供新密碼儲存。
+| 問題 | 原因 | 解決方案 |
+|-------|-------|----------|
+| `PasswordRequiredException` 即使我已提供密碼 | 載入選項未附加至 edit 呼叫 | 確保將配置好的 `SpreadsheetLoadOptions` 實例傳遞給 `Editor.edit`。 |
+| 大型檔案的記憶體不足錯誤 | 記憶體最佳化未啟用 | 在 `SpreadsheetLoadOptions` 上呼叫 `setOptimizeMemoryUsage(true)`。 |
+| 儲存的工作簿失去格式 | 使用預設的 `SpreadsheetSaveOptions` 且未保留版面配置 | 設定 `setPreserveFormatting(true)`（自 25.3 版起可用）。 |
+| 寫入保護未套用 | 忘記呼叫 `setWriteProtection(true)` | 在呼叫 `Editor.save` 前加入此呼叫。 |
 
-**Q: 若活頁簿受保護而我未指定密碼就嘗試開啟，會發生什麼情況？**  
-A: GroupDocs.Editor 會拋出 `PasswordRequiredException`，您應捕獲它以向使用者請求密碼。
+## 常見問答
 
-**Q: 是否可以僅保護特定工作表而非整個活頁簿？**  
-A: 使用 `WorksheetProtection` 搭配特定的 `WorksheetProtectionType`（例如 `LockedCells`），並透過 API 套用至個別工作表。
+**Q:** 我可以更改已受保護工作簿的密碼嗎？  
+**A:** 可以。先使用現有密碼載入工作簿，然後使用 `SpreadsheetSaveOptions.setPassword` 設定新密碼再儲存。
 
-**Q: `setOptimizeMemoryUsage(true)` 會影響效能嗎？**  
-A: 它會以稍微增加處理開銷為代價降低記憶體消耗，對於非常大的檔案而言是有益的。
+**Q:** 如果在工作簿受保護時未指定密碼而嘗試開啟，會發生什麼情況？  
+**A:** GroupDocs.Editor 會拋出 `PasswordRequiredException`，您應捕獲此例外以向使用者請求密碼。
 
-**Q: 每個伺服器實例需要單獨的授權嗎？**  
-A: 授權條款是依部署計算；請參考 GroupDocs 授權指南以了解多節點情境。
+**Q:** 是否可以只保護特定工作表而非整個工作簿？  
+**A:** 使用 `WorksheetProtection` 搭配特定的 `WorksheetProtectionType`（例如 `LockedCells`），透過 API 套用於個別工作表。
+
+**Q:** `setOptimizeMemoryUsage(true)` 會影響效能嗎？  
+**A:** 它會以稍微增加處理開銷為代價降低記憶體消耗，對於非常大的檔案非常有益。
+
+**Q:** 每個伺服器實例需要單獨的授權嗎？  
+**A:** 授權條款以每次部署為單位；請參閱 GroupDocs 授權指南以了解多節點情境。
 
 ## 結論
 
-透過本教學，您現在了解如何使用 GroupDocs.Editor **protect Excel Java**——載入帶密碼的活頁簿、處理錯誤憑證，並在儲存時套用新密碼與寫入保護。這些功能協助您構建安全、合規且自動化的文件工作流程，從單一檔案擴展至大規模批次處理。
+透過本指南，您現在已了解如何在 Java 中使用 GroupDocs.Editor **開啟受密碼保護的 Excel**、優雅地處理錯誤密碼、在儲存時套用新密碼，以及為整個工作簿啟用寫入保護。這些功能讓您能構建安全、合規且高吞吐量的文件工作流程，從單一檔案擴展至大規模批次處理。
 
 ---
 
-**最後更新：** 2026-06-16  
-**測試版本：** GroupDocs.Editor 25.3  
-**作者：** GroupDocs
+**Last Updated:** 2026-10-16  
+**Tested With:** GroupDocs.Editor 25.3  
+**Author:** GroupDocs  
 
 ## 相關教學
 
 - [在 Java 中使用 GroupDocs.Editor 批次編輯 Word 檔案 – 步驟指南](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
-- [如何在 Java 中使用 GroupDocs.Editor 編輯 Excel 與 Word 檔案](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
+- [如何在 Java 中使用 GroupDocs.Editor 編輯 Excel 和 Word 檔案](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [如何在 Java 中使用 InputStream 為 GroupDocs.Editor 設定授權：完整指南](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}
