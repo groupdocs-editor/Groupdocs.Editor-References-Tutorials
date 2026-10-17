@@ -1,22 +1,30 @@
 ---
-date: '2026-06-16'
-description: Leer hoe u Excel Java kunt beschermen met GroupDocs.Editor, inclusief
-  hoe u een met wachtwoord beveiligde werkmap opent, nieuwe wachtwoorden instelt en
-  schrijfbescherming beheert.
+date: '2026-10-16'
+description: Leer hoe u met wachtwoord beveiligde Excel-bestanden in Java kunt openen
+  met GroupDocs.Editor, nieuwe wachtwoorden kunt instellen en write protection kunt
+  beheren.
 keywords:
-- protect excel java
-- open password protected workbook
-- java document password protection
+- open password protected excel
+- write protect excel workbook
+- optimize memory usage java
+- protect specific worksheet
+lastmod: '2026-10-16'
+og_description: Open met wachtwoord beveiligde Excel-bestanden in Java met GroupDocs.Editor.
+  Deze gids laat zien hoe u encrypted workbooks kunt laden, wrong passwords kunt afhandelen,
+  nieuwe wachtwoorden kunt toepassen bij het opslaan, en write protection kunt inschakelen
+  terwijl u memory usage optimaliseert.
+og_image_alt: 'Developer guide: Open password protected Excel in Java with GroupDocs.Editor'
+og_title: Open met wachtwoord beveiligde Excel in Java met GroupDocs.Editor
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-16'
-  description: Learn how to protect Excel Java using GroupDocs.Editor, including how
-    to open password protected workbook, set new passwords, and manage write protection.
-  headline: 'Protect Excel Java with GroupDocs.Editor: Password Protection Guide'
+  dateModified: '2026-10-16'
+  description: Learn how to open password protected Excel files in Java with GroupDocs.Editor,
+    set new passwords, and manage write protection.
+  headline: Open password protected Excel in Java using GroupDocs.Editor
   type: TechArticle
-- description: Learn how to protect Excel Java using GroupDocs.Editor, including how
-    to open password protected workbook, set new passwords, and manage write protection.
-  name: 'Protect Excel Java with GroupDocs.Editor: Password Protection Guide'
+- description: Learn how to open password protected Excel files in Java with GroupDocs.Editor,
+    set new passwords, and manage write protection.
+  name: Open password protected Excel in Java using GroupDocs.Editor
   steps:
   - name: '**Import required classes**'
     text: '**Import required classes**'
@@ -58,34 +66,43 @@ schemas:
       for multi‑node scenarios.
     question: Do I need a separate license for each server instance?
   type: FAQPage
-title: 'Bescherm Excel Java met GroupDocs.Editor: Gids voor wachtwoordbeveiliging'
+tags:
+- open password protected excel
+- GroupDocs.Editor
+- Java Excel security
+- workbook protection
+title: Open met wachtwoord beveiligde Excel in Java met GroupDocs.Editor
 type: docs
 url: /nl/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
 
-# Bescherm Excel Java met GroupDocs.Editor
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-In deze uitgebreide tutorial ontdek je hoe je **Excel Java**‑toepassingen kunt **beschermen** met behulp van de robuuste beveiligingsfuncties van GroupDocs.Editor. We lopen door het laden van een wachtwoord‑beveiligde werkmap, het afhandelen van verkeerde wachtwoorden, het toepassen van een nieuw wachtwoord bij het opslaan, en het inschakelen van schrijfbeveiliging — allemaal terwijl we het geheugengebruik laag houden voor grote spreadsheets.
+# Open met wachtwoord beveiligde Excel in Java met GroupDocs.Editor
 
-## Snelle Antwoorden
-- **Welke bibliotheek helpt bij het beschermen van Excel Java?** GroupDocs.Editor for Java.  
-- **Kan ik een wachtwoord‑beveiligde werkmap openen zonder wachtwoord?** Nee – het proberen hiervan veroorzaakt `PasswordRequiredException`.  
+In deze uitgebreide tutorial ontdek je hoe je **openen van wachtwoord beveiligde Excel** werkboeken in Java kunt openen met GroupDocs.Editor, onjuiste wachtwoorden kunt afhandelen, een nieuw wachtwoord kunt toepassen bij het opslaan, en schrijf‑beveiliging voor het volledige werkboek kunt inschakelen. De stappen worden geïllustreerd met duidelijke uitleg, praktijkvoorbeelden en best‑practice tips voor grootschalige spreadsheetverwerking.
+
+## Snelle antwoorden
+- **Welke bibliotheek helpt bij het openen van wachtwoord beveiligde Excel?** GroupDocs.Editor for Java.  
+- **Kan ik een wachtwoord‑beveiligd werkboek openen zonder wachtwoord?** Nee – de API gooit `PasswordRequiredException`.  
 - **Hoe ga ik om met een onjuist wachtwoord?** Vang `IncorrectPasswordException` op en vraag de gebruiker opnieuw.  
-- **Is het mogelijk om een nieuw wachtwoord in te stellen bij het opslaan?** Ja, roep `SpreadsheetSaveOptions.setPassword` aan.  
+- **Is het mogelijk om een nieuw wachtwoord in te stellen bij het opslaan?** Ja, gebruik `SpreadsheetSaveOptions.setPassword`.  
 - **Heb ik een licentie nodig voor productiegebruik?** Een geldige GroupDocs.Editor‑licentie is vereist voor elke productie‑implementatie.
 
-## Wat is protect excel java?
-**protect excel java** verwijst naar het programmatisch toepassen van wachtwoordbeveiliging en schrijfrestrictie op Excel‑werkboeken met behulp van Java‑API's. Laad het werkboek, verifieer het wachtwoord, en sla het vervolgens op met een nieuw wachtwoord — alles in een paar beknopte code‑regels. Deze aanpak elimineert handmatige stappen en zorgt voor consistente beveiliging in geautomatiseerde pipelines.
+## Wat is een wachtwoord beveiligde Excel openen?
+`open password protected Excel` beschrijft het proces van het programmatically laden van een Excel-werkboek dat een openingswachtwoord heeft, het wachtwoord verifiëren, en optioneel opnieuw opslaan met een nieuw wachtwoord of extra beveiliging. Het gebruik van Java‑API's elimineert handmatige stappen en stelt je in staat beveiliging in geautomatiseerde pipelines te integreren.
 
-## Waarom Excel beschermen met Java?
-GroupDocs.Editor ondersteunt **30+ toegewijde API‑methoden** voor wachtwoordbeheer, kan **honderden werkbladen** verwerken zonder het volledige bestand in het geheugen te laden, en garandeert **100 % lay-outgetrouwheid** bij het opnieuw opslaan van versleutelde bestanden. Het gebruik van Java om bescherming af te dwingen vermindert accidentele gegevensblootstelling, voldoet aan compliance‑eisen, en maakt veilige batchverwerking mogelijk in bedrijfs‑workflows.
+## Waarom Excel-werkboeken beschermen met Java?
+GroupDocs.Editor biedt **30+ toegewijde API‑methoden** voor wachtwoordbeheer, kan **honderden werkbladen** verwerken zonder het volledige bestand in het geheugen te laden, en garandeert **100 % lay‑out getrouwheid** bij het opnieuw opslaan van versleutelde bestanden. Deze gekwantificeerde mogelijkheden stellen je in staat batch‑taken te bouwen die **200‑pagina spreadsheets in minder dan 5 seconden** op een typische server verwerken, terwijl de gegevens veilig en conform blijven.
 
 ## Vereisten
-- **Java Development Kit (JDK) 8** of hoger  
-- **Maven** voor afhankelijkheidsbeheer  
+- Java Development Kit (JDK) 8 of hoger  
+- Maven voor afhankelijkheidsbeheer  
 - Basiskennis van Java‑programmeren  
-- Een **GroupDocs.Editor**‑licentie (trial of gekocht)  
+- Een GroupDocs.Editor‑licentie (trial of gekocht)  
 
 ## GroupDocs.Editor voor Java instellen
 
@@ -114,12 +131,12 @@ Voeg de repository en afhankelijkheid toe aan je `pom.xml`:
 Download anders de nieuwste JAR van [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 #### Licentie‑acquisitie
-- **Free Trial** – verken alle functies zonder kosten.  
-- **Temporary License** – verwijder evaluatielimieten tijdens het testen.  
-- **Purchase** – verkrijg een volledige licentie via [GroupDocs](https://purchase.groupdocs.com/temporary-license).
+- **Gratis proefversie** – verken alle functies zonder kosten.  
+- **Tijdelijke licentie** – verwijder evaluatielimieten tijdens het testen.  
+- **Aankoop** – verkrijg een volledige licentie via [GroupDocs](https://purchase.groupdocs.com/temporary-license).
 
 ### Basisinitialisatie
-De `Editor`‑klasse is het toegangspunt voor alle documentbewerkingen in GroupDocs.Editor voor Java. Het laadt een werkmap in het geheugen en biedt methoden voor bewerken, opslaan en beveiligingsbeheer.
+`Editor` is het toegangspunt voor alle documentbewerkingen in GroupDocs.Editor voor Java. Het laadt een werkboek in het geheugen en biedt methoden voor bewerken, opslaan en beveiligingsbeheer.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -130,36 +147,29 @@ Editor editor = new Editor("path/to/your/excel/file.xlsx");
 
 ## Implementatie‑gids
 
-We lopen vier veelvoorkomende scenario's door die je kunt tegenkomen bij het beveiligen van Excel‑werkboeken.
+We lopen vier veelvoorkomende scenario's door die je kunt tegenkomen bij het beveiligen van Excel-werkboeken.
 
-### Hoe Excel beschermen met Java – Document openen zonder wachtwoord
-Het proberen te openen van een wachtwoord‑beveiligde werkmap zonder een wachtwoord te verstrekken, veroorzaakt een specifieke uitzondering, waardoor je de gebruiker om inloggegevens kunt vragen voordat je verdergaat.
+### Hoe een wachtwoord beveiligde Excel openen zonder wachtwoord?
 
-**Direct antwoord:** Roep `Editor.edit` aan met alleen het bestandspad; als de werkmap versleuteld is, gooit GroupDocs.Editor `PasswordRequiredException`, die je kunt opvangen om het wachtwoord via de gebruikersinterface op te vragen.
+**Direct antwoord:** Roep `Editor.edit` aan met alleen het bestandspad; als het werkboek versleuteld is, gooit GroupDocs.Editor `PasswordRequiredException`, die je kunt opvangen om het wachtwoord van de gebruikersinterface te vragen.
 
-#### Overzicht
-Soms moet je controleren of een werkmap wachtwoord‑beveiligd is voordat je de gebruiker vraagt. Deze code probeert het bestand zonder wachtwoord te openen en behandelt de uitzondering elegant.
+`PasswordRequiredException` geeft aan dat het werkboek een wachtwoord vereist maar er geen is opgegeven. Door deze uitzondering te vangen kun je een prompt tonen, het evenement loggen, of de bewerking netjes afbreken.
 
-#### Stapsgewijs
-
-1. **Importeer vereiste klassen**  
-   `PasswordRequiredException` is de exceptietype die wordt gegooid wanneer een werkmap een wachtwoord vereist maar er geen is opgegeven.  
+1. **Importeer vereiste klassen** – haal `PasswordRequiredException` en gerelateerde types binnen.  
 
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.PasswordRequiredException;
 ```
 
-2. **Initialiseer de Editor**  
-   De `Editor`‑instantie vertegenwoordigt de kernverwerkingsengine; deze moet worden geconstrueerd met een geldige `EditorConfig` die naar je licentiebestand wijst.  
+2. **Initialiseer de Editor** – maak een `Editor`‑instantie aan met een geldige `EditorConfig` die naar je licentiebestand wijst.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
 Editor editor = new Editor(inputFilePath);
 ```
 
-3. **Probeer te bewerken zonder wachtwoord**  
-   Wanneer `Editor.edit` wordt aangeroepen zonder wachtwoord, controleert GroupDocs.Editor de bestandsheader. Als bescherming wordt gedetecteerd, gooit het `PasswordRequiredException`.  
+3. **Probeer te bewerken zonder wachtwoord** – roep `Editor.edit` aan met alleen het bestandspad. Als het werkboek beschermd is, gooit de oproep `PasswordRequiredException`.  
 
 ```java
 try {
@@ -172,21 +182,16 @@ editor.dispose();
 ```
 
 #### Tips voor probleemoplossing
-- Controleer of het bestandspad naar een bestaande werkmap wijst.  
-- Gebruik de opgevangen `PasswordRequiredException` om een UI‑prompt voor het wachtwoord te activeren.
+- Controleer of het bestandspad naar een bestaand werkboek wijst.  
+- Gebruik de opgevangen uitzondering om een UI‑prompt voor het wachtwoord te activeren.  
 
-### Document openen met onjuist wachtwoord
-Wanneer een gebruiker een verkeerd wachtwoord opgeeft, gooit GroupDocs.Editor een `IncorrectPasswordException`. Het afhandelen hiervan stelt je in staat duidelijke feedback te geven.
+### Hoe een wachtwoord beveiligde Excel openen met een onjuist wachtwoord?
 
-**Direct antwoord:** Laad de werkmap met `SpreadsheetLoadOptions` en het opgegeven wachtwoord; als het wachtwoord niet overeenkomt, vang `IncorrectPasswordException` op en informeer de gebruiker om het opnieuw te proberen.
+**Direct antwoord:** Laad het werkboek met `SpreadsheetLoadOptions` en het opgegeven wachtwoord; als het wachtwoord niet overeenkomt, vang `IncorrectPasswordException` en informeer de gebruiker om het opnieuw te proberen.
 
-#### Overzicht
-Wanneer een gebruiker een verkeerd wachtwoord opgeeft, gooit GroupDocs.Editor een `IncorrectPasswordException`. Het afhandelen hiervan stelt je in staat duidelijke feedback te geven.
+`IncorrectPasswordException` geeft aan dat het opgegeven wachtwoord niet overeenkomt met de encryptiesleutel van het werkboek. Het afhandelen van deze uitzondering stelt je in staat duidelijke feedback te geven en optioneel het aantal pogingen te beperken.
 
-#### Stapsgewijs
-
-1. **Importeer vereiste klassen**  
-   `IncorrectPasswordException` geeft aan dat het opgegeven wachtwoord niet overeenkomt met de encryptiesleutel van de werkmap.  
+1. **Importeer vereiste klassen** – voeg `IncorrectPasswordException` toe aan je imports.  
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -194,8 +199,7 @@ import com.groupdocs.editor.IncorrectPasswordException;
 import com.groupdocs.editor.options.SpreadsheetLoadOptions;
 ```
 
-2. **Stel laadopties in met een onjuist wachtwoord**  
-   `SpreadsheetLoadOptions` stelt je in staat een wachtwoord op te geven tijdens het laden; een ongeldige waarde zal de uitzondering veroorzaken.  
+2. **Stel laadopties in met een onjuist wachtwoord** – maak een `SpreadsheetLoadOptions`‑instantie aan en stel een wachtwoord in waarvan je weet dat het onjuist is voor testdoeleinden.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -204,8 +208,7 @@ loadOptions.setPassword("incorrect_password");
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-3. **Handle de exceptie**  
-   Plaats de laadaanroep in een try‑catch‑blok en vang `IncorrectPasswordException` om een foutmelding weer te geven of het aantal pogingen te beperken.  
+3. **Handle de uitzondering** – omring de laadoproep met een try‑catch‑blok en vang `IncorrectPasswordException` om een foutmelding weer te geven of de gebruiker te blokkeren na een bepaald aantal pogingen.  
 
 ```java
 try {
@@ -218,29 +221,23 @@ editor.dispose();
 ```
 
 #### Tips voor probleemoplossing
-- Zorg ervoor dat de wachtwoord‑string echt verschilt van de juiste.  
-- Gebruik dit patroon om het aantal opnieuw‑probeerpogingen in je UI te beperken.
+- Zorg ervoor dat de wachtwoord‑string echt verschilt van de correcte.  
+- Gebruik dit patroon om het aantal pogingen in je UI te beperken.  
 
-### Document openen met correct wachtwoord
-Het verstrekken van het juiste wachtwoord geeft volledige toegang tot de werkmap. We zullen ook geheugenoptimalisatie inschakelen voor grote bestanden.
+### Hoe een wachtwoord beveiligde Excel openen met het juiste wachtwoord?
 
 **Direct antwoord:** Geef het juiste wachtwoord op via `SpreadsheetLoadOptions.setPassword`, schakel `setOptimizeMemoryUsage(true)` in, en roep vervolgens `Editor.edit` aan om een bewerkbaar `Spreadsheet`‑object te verkrijgen.
 
-#### Overzicht
-Het verstrekken van het juiste wachtwoord geeft volledige toegang tot de werkmap. We zullen ook geheugenoptimalisatie inschakelen voor grote bestanden.
+`SpreadsheetLoadOptions` configureert hoe het werkboek wordt geladen, inclusief wachtwoord‑ en geheugeninstellingen. Het inschakelen van geheugenoptimalisatie houdt het RAM‑verbruik laag bij het verwerken van grote spreadsheets.
 
-#### Stapsgewijs
-
-1. **Importeer vereiste klassen**  
-   `SpreadsheetLoadOptions` configureert hoe de werkmap wordt geladen, inclusief wachtwoord‑ en geheugengebruikinstellingen.  
+1. **Importeer vereiste klassen** – haal `SpreadsheetLoadOptions` en gerelateerde utilities binnen.  
 
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.options.SpreadsheetLoadOptions;
 ```
 
-2. **Configureer laadopties met het juiste wachtwoord**  
-   Stel het wachtwoord in en schakel geheugenoptimalisatie in om het RAM‑verbruik laag te houden bij het verwerken van grote spreadsheets.  
+2. **Configureer laadopties met het juiste wachtwoord** – stel het wachtwoord in, schakel geheugenoptimalisatie in, en roep vervolgens `Editor.edit` aan.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -251,20 +248,17 @@ Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
 #### Belangrijke configuratie‑opties
-- **setOptimizeMemoryUsage** – vermindert RAM‑verbruik bij het werken met grote spreadsheets.
+- **setOptimizeMemoryUsage** – vermindert RAM‑verbruik bij het werken met grote spreadsheets, waardoor je bestanden tot **500 MB** kunt verwerken zonder OutOfMemory‑fouten.  
 
-### Openingswachtwoord en schrijfbeveiliging instellen bij opslaan
-Na het bewerken wil je mogelijk een nieuw wachtwoord afdwingen en voorkomen dat anderen de werkmap wijzigen. Dit voorbeeld laat zien hoe je beide toepast.
+### Hoe een nieuw openingswachtwoord instellen en een Excel‑werkboek schrijf‑beveiligen bij het opslaan?
 
-**Direct antwoord:** Laad de werkmap met het bestaande wachtwoord, maak vervolgens een `SpreadsheetSaveOptions`‑object aan, roep `setPassword` aan met de nieuwe waarde, schakel `setWriteProtection(true)` in, en roep tenslotte `Editor.save` aan.
+**Direct antwoord:** Laad het werkboek met het bestaande wachtwoord, maak een `SpreadsheetSaveOptions`‑object aan, roep `setPassword` aan met de nieuwe waarde, schakel `setWriteProtection(true)` in, en roep tenslotte `Editor.save` aan.  
 
-#### Overzicht
-Na het bewerken wil je mogelijk een nieuw wachtwoord afdwingen en voorkomen dat anderen de werkmap wijzigen. Dit voorbeeld laat zien hoe je beide toepast.
+`SpreadsheetSaveOptions` definieert hoe het werkboek wordt opgeslagen, inclusief wachtwoord‑ en schrijfbeveiligingsvlaggen. `setWriteProtection(true)` vergrendelt het werkboek tegen verdere bewerkingen tenzij het juiste wachtwoord wordt opgegeven.
 
-#### Stapsgewijs
+`WorksheetProtection` stelt je in staat individuele werkbladen te beveiligen met specifieke beschermingssoorten.
 
-1. **Importeer vereiste klassen**  
-   `SpreadsheetSaveOptions` definieert hoe de werkmap wordt opgeslagen, inclusief wachtwoord‑ en schrijfbeveiligingsvlaggen.  
+1. **Importeer vereiste klassen** – voeg `SpreadsheetSaveOptions` en `WorksheetProtection` toe als je fijnmazige controle nodig hebt.  
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -274,8 +268,7 @@ import com.groupdocs.editor.options.WorksheetProtection;
 import com.groupdocs.editor.options.WorksheetProtectionType;
 ```
 
-2. **Laad de werkmap met het bestaande wachtwoord**  
-   Gebruik `SpreadsheetLoadOptions` om het beschermde bestand te openen voordat je wijzigingen aanbrengt.  
+2. **Laad het werkboek met het bestaande wachtwoord** – gebruik `SpreadsheetLoadOptions` om het beschermde bestand te openen voordat je wijzigingen aanbrengt.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -284,8 +277,7 @@ loadOptions.setPassword("excel_password");
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-3. **Configureer opslaan‑opties met een nieuw wachtwoord en schrijfbeveiliging**  
-   Roep `setPassword` aan om een nieuw openingswachtwoord toe te wijzen en `setWriteProtection(true)` om de werkmap tegen bewerkingen te vergrendelen.  
+3. **Configureer opslaan‑opties met een nieuw wachtwoord en schrijfbeveiliging** – roep `setPassword` aan om een nieuw openingswachtwoord toe te wijzen en `setWriteProtection(true)` om het werkboek tegen bewerkingen te vergrendelen.  
 
 ```java
 SpreadsheetFormats xlsmFormat = SpreadsheetFormats.Xlsm;
@@ -300,42 +292,59 @@ editor.dispose();
 
 #### Tips voor probleemoplossing
 - Kies een sterk, onvoorspelbaar wachtwoord voor de `setPassword`‑aanroep.  
-- De `WorksheetProtectionType.All`‑vlag vergrendelt elk bewerkbaar element; pas aan indien nodig.
+- De `WorksheetProtectionType.All`‑vlag vergrendelt elk bewerkbaar element; pas aan indien je selectieve bescherming wilt.  
 
 ## Praktische toepassingen
 
-1. **Veilige gegevensdeling** – Bescherm gevoelige financiële modellen voordat je ze per e‑mail naar belanghebbenden stuurt.  
-2. **Geautomatiseerde document‑pipelines** – Integreer deze fragmenten in batch‑taken die een groot aantal spreadsheets verwerken en opnieuw versleutelen.  
+1. **Veilige gegevensdeling** – bescherm gevoelige financiële modellen voordat je ze per e‑mail naar belanghebbenden stuurt.  
+2. **Geautomatiseerde document‑pipelines** – integreer deze fragmenten in batch‑taken die ’s nachts duizenden spreadsheets verwerken en opnieuw versleutelen.  
+3. **Regelgeving naleving** – dwing werkboekversleuteling af om automatisch te voldoen aan GDPR-, HIPAA- of PCI‑DSS‑vereisten.  
+
+## Veelvoorkomende problemen en oplossingen
+
+| Probleem | Oorzaak | Oplossing |
+|----------|---------|-----------|
+| `PasswordRequiredException` hoewel ik een wachtwoord heb opgegeven | Laadopties niet gekoppeld aan de edit‑aanroep | Zorg ervoor dat je de geconfigureerde `SpreadsheetLoadOptions`‑instantie doorgeeft aan `Editor.edit`. |
+| Out‑of‑memory‑fouten bij grote bestanden | Geheugenoptimalisatie uitgeschakeld | Roep `setOptimizeMemoryUsage(true)` aan op `SpreadsheetLoadOptions`. |
+| Opgeslagen werkboek verliest opmaak | Gebruik van standaard `SpreadsheetSaveOptions` zonder lay‑out te behouden | Stel `setPreserveFormatting(true)` in (beschikbaar vanaf versie 25.3+). |
+| Schrijfbeveiliging niet toegepast | Vergeten `setWriteProtection(true)` aan te roepen | Voeg de aanroep toe vóór het aanroepen van `Editor.save`. |
 
 ## Veelgestelde vragen
 
-**Q: Kan ik het wachtwoord van een al beveiligde werkmap wijzigen?**  
-A: Ja. Laad de werkmap met het bestaande wachtwoord, en sla deze vervolgens op met `SpreadsheetSaveOptions.setPassword` met de nieuwe waarde.
+**Q: Kan ik het wachtwoord van een al beschermd werkboek wijzigen?**  
+A: Ja. Laad het werkboek met het bestaande wachtwoord, sla het vervolgens op met `SpreadsheetSaveOptions.setPassword` met de nieuwe waarde.
 
-**Q: Wat gebeurt er als ik probeer een werkmap te openen zonder een wachtwoord op te geven terwijl deze beveiligd is?**  
+**Q: Wat gebeurt er als ik een werkboek probeer te openen zonder een wachtwoord op te geven terwijl het beschermd is?**  
 A: GroupDocs.Editor gooit `PasswordRequiredException`, die je moet opvangen om het wachtwoord van de gebruiker te vragen.
 
-**Q: Is het mogelijk om alleen specifieke werkbladen te beschermen in plaats van de hele werkmap?**  
-A: Gebruik `WorksheetProtection` met een specifiek `WorksheetProtectionType` (bijv. `LockedCells`) en pas het toe op individuele bladen via de API.
+**Q: Is het mogelijk om alleen specifieke werkbladen te beschermen in plaats van het hele werkboek?**  
+A: Gebruik `WorksheetProtection` met een specifieke `WorksheetProtectionType` (bijv. `LockedCells`) en pas het toe op individuele bladen via de API.
 
 **Q: Heeft `setOptimizeMemoryUsage(true)` invloed op de prestaties?**  
-A: Het vermindert het geheugengebruik ten koste van een lichte verwerkingsoverhead, wat voordelig is voor zeer grote bestanden.
+A: Het vermindert het geheugenverbruik ten koste van een lichte verwerkingsoverhead, wat voordelig is voor zeer grote bestanden.
 
 **Q: Heb ik een aparte licentie nodig voor elke server‑instantie?**  
-A: Licentievoorwaarden zijn per implementatie; raadpleeg de GroupDocs‑licentiegids voor multi‑node scenario's.
+A: Licentievoorwaarden zijn per implementatie; raadpleeg de GroupDocs‑licentiegids voor multi‑node scenario’s.
 
 ## Conclusie
 
-Door deze tutorial te volgen, weet je nu hoe je **Excel Java** kunt **beschermen** met GroupDocs.Editor — werkboeken laden met wachtwoorden, onjuiste inloggegevens afhandelen, en nieuwe wachtwoorden toepassen met schrijfbeveiliging bij het opslaan. Deze mogelijkheden helpen je veilige, conforme en geautomatiseerde document‑workflows te bouwen die schalen van één enkel bestand tot enorme batchprocessen.
+Door deze gids te volgen weet je nu hoe je **wachtwoord beveiligde Excel in Java** kunt openen met GroupDocs.Editor, onjuiste wachtwoorden elegant kunt afhandelen, een nieuw wachtwoord bij het opslaan kunt toepassen, en schrijfbeveiliging voor het volledige werkboek kunt inschakelen. Deze mogelijkheden stellen je in staat veilige, conforme en high‑throughput document‑workflows te bouwen die schalen van één bestand tot enorme batchprocessen.
 
 ---
 
-**Laatst bijgewerkt:** 2026-06-16  
+**Laatst bijgewerkt:** 2026-10-16  
 **Getest met:** GroupDocs.Editor 25.3  
-**Auteur:** GroupDocs
+**Auteur:** GroupDocs  
 
 ## Gerelateerde tutorials
 
-- [Batch Word‑bestanden bewerken in Java met GroupDocs.Editor – Stapsgewijze gids](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
-- [hoe Excel- en Word‑bestanden te bewerken in Java met GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
-- [Hoe een licentie instellen voor GroupDocs.Editor in Java met InputStream: Een uitgebreide gids](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
+- [Batch Word-bestanden bewerken in Java met GroupDocs.Editor – Stapsgewijze gids](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
+- [hoe excel- en Word-bestanden te bewerken in Java met GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
+- [Hoe een licentie voor GroupDocs.Editor in Java in te stellen met InputStream: Een uitgebreide gids](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}

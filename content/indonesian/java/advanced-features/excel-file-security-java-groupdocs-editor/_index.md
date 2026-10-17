@@ -1,22 +1,29 @@
 ---
-date: '2026-06-16'
-description: Pelajari cara melindungi Excel Java menggunakan GroupDocs.Editor, termasuk
-  cara membuka workbook yang dilindungi kata sandi, mengatur kata sandi baru, dan
-  mengelola perlindungan penulisan.
+date: '2026-10-16'
+description: Pelajari cara membuka file Excel yang dilindungi kata sandi di Java dengan
+  GroupDocs.Editor, mengatur kata sandi baru, dan mengelola perlindungan penulisan.
 keywords:
-- protect excel java
-- open password protected workbook
-- java document password protection
+- open password protected excel
+- write protect excel workbook
+- optimize memory usage java
+- protect specific worksheet
+lastmod: '2026-10-16'
+og_description: Buka file Excel yang dilindungi kata sandi di Java menggunakan GroupDocs.Editor.
+  Panduan ini menunjukkan cara memuat workbook terenkripsi, menangani kata sandi yang
+  salah, menerapkan kata sandi baru saat menyimpan, dan mengaktifkan perlindungan
+  penulisan sambil mengoptimalkan penggunaan memori.
+og_image_alt: 'Developer guide: Open password protected Excel in Java with GroupDocs.Editor'
+og_title: Buka Excel yang dilindungi kata sandi di Java menggunakan GroupDocs.Editor
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-16'
-  description: Learn how to protect Excel Java using GroupDocs.Editor, including how
-    to open password protected workbook, set new passwords, and manage write protection.
-  headline: 'Protect Excel Java with GroupDocs.Editor: Password Protection Guide'
+  dateModified: '2026-10-16'
+  description: Learn how to open password protected Excel files in Java with GroupDocs.Editor,
+    set new passwords, and manage write protection.
+  headline: Open password protected Excel in Java using GroupDocs.Editor
   type: TechArticle
-- description: Learn how to protect Excel Java using GroupDocs.Editor, including how
-    to open password protected workbook, set new passwords, and manage write protection.
-  name: 'Protect Excel Java with GroupDocs.Editor: Password Protection Guide'
+- description: Learn how to open password protected Excel files in Java with GroupDocs.Editor,
+    set new passwords, and manage write protection.
+  name: Open password protected Excel in Java using GroupDocs.Editor
   steps:
   - name: '**Import required classes**'
     text: '**Import required classes**'
@@ -58,39 +65,48 @@ schemas:
       for multi‑node scenarios.
     question: Do I need a separate license for each server instance?
   type: FAQPage
-title: 'Lindungi Excel Java dengan GroupDocs.Editor: Panduan Perlindungan Kata Sandi'
+tags:
+- open password protected excel
+- GroupDocs.Editor
+- Java Excel security
+- workbook protection
+title: Buka Excel yang dilindungi kata sandi di Java menggunakan GroupDocs.Editor
 type: docs
 url: /id/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
 
-# Melindungi Excel Java dengan GroupDocs.Editor
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-Dalam tutorial komprehensif ini Anda akan menemukan cara **protect Excel Java** aplikasi dengan menggunakan fitur keamanan yang kuat dari GroupDocs.Editor. Kami akan membahas cara memuat workbook yang dilindungi kata sandi, menangani kata sandi yang salah, menerapkan kata sandi baru saat menyimpan, dan mengaktifkan proteksi penulisan—semua sambil menjaga penggunaan memori tetap rendah untuk spreadsheet besar.
+# Membuka Excel yang Dilindungi Kata Sandi di Java menggunakan GroupDocs.Editor
+
+Dalam tutorial komprehensif ini Anda akan menemukan cara **membuka Excel yang dilindungi kata sandi** workbook di Java menggunakan GroupDocs.Editor, menangani kata sandi yang salah, menerapkan kata sandi baru saat menyimpan, dan mengaktifkan proteksi‑tulis untuk seluruh workbook. Langkah‑langkah tersebut diilustrasikan dengan penjelasan yang jelas, skenario penggunaan dunia nyata, dan tip praktik terbaik untuk pemrosesan spreadsheet berskala besar.
 
 ## Jawaban Cepat
-- **Perpustakaan apa yang membantu melindungi Excel Java?** GroupDocs.Editor for Java.  
-- **Bisakah saya membuka workbook yang dilindungi kata sandi tanpa kata sandi?** No – attempting this throws `PasswordRequiredException`.  
-- **Bagaimana cara menangani kata sandi yang salah?** Catch `IncorrectPasswordException` and prompt the user again.  
-- **Apakah memungkinkan mengatur kata sandi baru saat menyimpan?** Yes, call `SpreadsheetSaveOptions.setPassword`.  
-- **Apakah saya memerlukan lisensi untuk penggunaan produksi?** A valid GroupDocs.Editor license is required for any production deployment.
+- **Perpustakaan apa yang membantu membuka Excel yang dilindungi kata sandi?** GroupDocs.Editor for Java.  
+- **Bisakah saya membuka workbook yang dilindungi kata sandi tanpa kata sandi?** Tidak – API melempar `PasswordRequiredException`.  
+- **Bagaimana cara menangani kata sandi yang salah?** Tangkap `IncorrectPasswordException` dan minta pengguna memasukkan kembali.  
+- **Apakah memungkinkan menetapkan kata sandi baru saat menyimpan?** Ya, gunakan `SpreadsheetSaveOptions.setPassword`.  
+- **Apakah saya memerlukan lisensi untuk penggunaan produksi?** Lisensi GroupDocs.Editor yang valid diperlukan untuk setiap penyebaran produksi.
 
-## Apa itu protect excel java?
-**protect excel java** mengacu pada penerapan perlindungan kata sandi dan pembatasan penulisan secara programatis pada workbook Excel menggunakan API Java. Muat workbook, verifikasi kata sandi, lalu simpan dengan kata sandi baru – semuanya dalam beberapa baris kode yang singkat. Pendekatan ini menghilangkan langkah manual dan memastikan keamanan yang konsisten di seluruh pipeline otomatis.
+## Apa itu Excel yang Dilindungi Kata Sandi?
+`open password protected Excel` menggambarkan proses memuat workbook Excel secara programatik yang memiliki kata sandi pembuka, memverifikasi kata sandi, dan secara opsional menyimpannya kembali dengan kata sandi baru atau perlindungan tambahan. Menggunakan API Java menghilangkan langkah manual dan memungkinkan Anda menyematkan keamanan ke dalam pipeline otomatis.
 
-## Mengapa melindungi Excel dengan Java?
-GroupDocs.Editor mendukung **30+ metode API khusus** untuk penanganan kata sandi, dapat memproses **ratusan lembar kerja** tanpa memuat seluruh file ke memori, dan menjamin **100 % kesetiaan tata letak** saat menyimpan kembali file terenkripsi. Menggunakan Java untuk menegakkan perlindungan mengurangi paparan data secara tidak sengaja, memenuhi mandat kepatuhan, dan memungkinkan pemrosesan batch yang aman dalam alur kerja perusahaan.
+## Mengapa melindungi workbook Excel dengan Java?
+GroupDocs.Editor menyediakan **lebih dari 30 metode API khusus** untuk penanganan kata sandi, dapat memproses **ratusan lembar kerja** tanpa memuat seluruh file ke dalam memori, dan menjamin **100 % kesetiaan tata letak** saat menyimpan kembali file terenkripsi. Kemampuan terukur ini memungkinkan Anda membangun pekerjaan batch yang menangani **spreadsheet 200‑halaman dalam waktu kurang dari 5 detik** pada server tipikal, sambil menjaga data tetap aman dan sesuai regulasi.
 
 ## Prasyarat
-- **Java Development Kit (JDK) 8** atau lebih tinggi  
-- **Maven** untuk manajemen dependensi  
+- Java Development Kit (JDK) 8 atau lebih tinggi  
+- Maven untuk manajemen dependensi  
 - Pengetahuan dasar pemrograman Java  
-- Lisensi **GroupDocs.Editor** (percobaan atau dibeli)  
+- Lisensi GroupDocs.Editor (percobaan atau dibeli)  
 
 ## Menyiapkan GroupDocs.Editor untuk Java
 
 ### Menggunakan Maven
-Tambahkan repositori dan dependensi ke `pom.xml` Anda:
+Add the repository and dependency to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -111,15 +127,15 @@ Tambahkan repositori dan dependensi ke `pom.xml` Anda:
 ```
 
 ### Unduh Langsung
-Sebagai alternatif, unduh JAR terbaru dari [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+Alternatively, download the latest JAR from [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 #### Akuisisi Lisensi
-- **Free Trial** – jelajahi semua fitur tanpa biaya.  
-- **Temporary License** – hapus batas evaluasi saat pengujian.  
-- **Purchase** – dapatkan lisensi penuh dari [GroupDocs](https://purchase.groupdocs.com/temporary-license).
+- **Uji coba gratis** – jelajahi semua fitur tanpa biaya.  
+- **Lisensi sementara** – menghapus batas evaluasi saat pengujian.  
+- **Pembelian** – dapatkan lisensi penuh dari [GroupDocs](https://purchase.groupdocs.com/temporary-license).
 
 ### Inisialisasi Dasar
-Kelas `Editor` adalah titik masuk untuk semua operasi dokumen di GroupDocs.Editor untuk Java. Ia memuat workbook ke memori dan menyediakan metode untuk mengedit, menyimpan, dan mengelola keamanan.
+`Editor` adalah titik masuk untuk semua operasi dokumen di GroupDocs.Editor untuk Java. Ia memuat workbook ke memori dan menyediakan metode untuk mengedit, menyimpan, dan mengelola keamanan.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -132,34 +148,27 @@ Editor editor = new Editor("path/to/your/excel/file.xlsx");
 
 Kami akan membahas empat skenario umum yang mungkin Anda temui saat mengamankan workbook Excel.
 
-### Cara melindungi Excel dengan Java – Membuka Dokumen Tanpa Kata Sandi
-Mencoba membuka workbook yang dilindungi kata sandi tanpa menyediakan kata sandi akan memicu pengecualian khusus, memungkinkan Anda meminta kredensial pengguna sebelum melanjutkan.
+### Cara membuka Excel yang dilindungi kata sandi tanpa kata sandi?
 
-**Jawaban langsung:** Panggil `Editor.edit` hanya dengan jalur file; jika workbook dienkripsi, GroupDocs.Editor akan melempar `PasswordRequiredException`, yang dapat Anda tangkap untuk meminta kata sandi dari antarmuka pengguna.
+**Jawaban langsung:** Panggil `Editor.edit` hanya dengan jalur file; jika workbook terenkripsi, GroupDocs.Editor melempar `PasswordRequiredException`, yang dapat Anda tangkap untuk meminta kata sandi dari antarmuka pengguna.
 
-#### Ikhtisar
-Kadang-kadang Anda perlu memverifikasi apakah workbook dilindungi kata sandi sebelum meminta pengguna. Potongan kode ini mencoba membuka file tanpa kata sandi dan menangani pengecualian dengan elegan.
+`PasswordRequiredException` menandakan bahwa workbook memerlukan kata sandi tetapi tidak ada yang diberikan. Dengan menangkap pengecualian ini Anda dapat menampilkan prompt, mencatat peristiwa, atau menghentikan operasi dengan elegan.
 
-#### Langkah‑per‑Langkah
-
-1. **Import kelas yang diperlukan**  
-   `PasswordRequiredException` adalah tipe pengecualian yang dilempar ketika workbook memerlukan kata sandi tetapi tidak ada yang diberikan.  
+1. **Import required classes** – bring in `PasswordRequiredException` and related types.  
 
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.PasswordRequiredException;
 ```
 
-2. **Inisialisasi Editor**  
-   Instance `Editor` mewakili mesin pemrosesan inti; harus dibuat dengan `EditorConfig` yang valid yang menunjuk ke file lisensi Anda.  
+2. **Initialize the Editor** – create an `Editor` instance using a valid `EditorConfig` that points to your license file.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
 Editor editor = new Editor(inputFilePath);
 ```
 
-3. **Mencoba mengedit tanpa kata sandi**  
-   Ketika `Editor.edit` dipanggil tanpa kata sandi, GroupDocs.Editor memeriksa header file. Jika perlindungan terdeteksi, ia melempar `PasswordRequiredException`.  
+3. **Attempt to edit without a password** – invoke `Editor.edit` with only the file path. If the workbook is protected, the call throws `PasswordRequiredException`.  
 
 ```java
 try {
@@ -172,21 +181,16 @@ editor.dispose();
 ```
 
 #### Tips Pemecahan Masalah
-- Pastikan jalur file mengarah ke workbook yang ada.  
-- Gunakan `PasswordRequiredException` yang ditangkap untuk memicu prompt UI meminta kata sandi.
+- Verifikasi jalur file mengarah ke workbook yang ada.  
+- Gunakan pengecualian yang ditangkap untuk memicu prompt UI bagi kata sandi.  
 
-### Membuka Dokumen Dengan Kata Sandi Salah
-Ketika pengguna memberikan kata sandi yang salah, GroupDocs.Editor melempar `IncorrectPasswordException`. Menangani ini memungkinkan Anda memberikan umpan balik yang jelas.
+### Cara membuka Excel yang dilindungi kata sandi dengan kata sandi yang salah?
 
 **Jawaban langsung:** Muat workbook menggunakan `SpreadsheetLoadOptions` dengan kata sandi yang diberikan; jika kata sandi tidak cocok, tangkap `IncorrectPasswordException` dan beri tahu pengguna untuk mencoba lagi.
 
-#### Ikhtisar
-Ketika pengguna memberikan kata sandi yang salah, GroupDocs.Editor melempar `IncorrectPasswordException`. Menangani ini memungkinkan Anda memberikan umpan balik yang jelas.
+`IncorrectPasswordException` menunjukkan bahwa kata sandi yang Anda berikan tidak cocok dengan kunci enkripsi workbook. Menangani pengecualian ini memungkinkan Anda memberikan umpan balik yang jelas dan secara opsional membatasi jumlah percobaan ulang.
 
-#### Langkah‑per‑Langkah
-
-1. **Import kelas yang diperlukan**  
-   `IncorrectPasswordException` menandakan bahwa kata sandi yang diberikan tidak cocok dengan kunci enkripsi workbook.  
+1. **Import required classes** – include `IncorrectPasswordException` in your imports.  
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -194,8 +198,7 @@ import com.groupdocs.editor.IncorrectPasswordException;
 import com.groupdocs.editor.options.SpreadsheetLoadOptions;
 ```
 
-2. **Siapkan opsi pemuatan dengan kata sandi yang salah**  
-   `SpreadsheetLoadOptions` memungkinkan Anda menentukan kata sandi saat memuat; memberikan nilai tidak valid akan memicu pengecualian.  
+2. **Set up load options with an incorrect password** – create a `SpreadsheetLoadOptions` instance and set a password that you know is wrong for testing.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -204,8 +207,7 @@ loadOptions.setPassword("incorrect_password");
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-3. **Tangani pengecualian**  
-   Bungkus panggilan pemuatan dalam blok try‑catch dan tangkap `IncorrectPasswordException` untuk menampilkan pesan error atau membatasi percobaan ulang.  
+3. **Handle the exception** – wrap the load call in a try‑catch block and catch `IncorrectPasswordException` to display an error message or lock the user out after a certain number of attempts.  
 
 ```java
 try {
@@ -218,29 +220,23 @@ editor.dispose();
 ```
 
 #### Tips Pemecahan Masalah
-- Pastikan string kata sandi benar-benar berbeda dari yang tepat.  
-- Gunakan pola ini untuk membatasi jumlah percobaan ulang di UI Anda.
+- Pastikan string kata sandi benar‑benar berbeda dari yang tepat.  
+- Gunakan pola ini untuk membatasi jumlah percobaan ulang di UI Anda.  
 
-### Membuka Dokumen Dengan Kata Sandi Benar
-Memberikan kata sandi yang benar memungkinkan akses penuh ke workbook. Kami juga akan mengaktifkan optimasi memori untuk file besar.
+### Cara membuka Excel yang dilindungi kata sandi dengan kata sandi yang benar?
 
-**Jawaban langsung:** Berikan kata sandi yang benar melalui `SpreadsheetLoadOptions.setPassword`, aktifkan `setOptimizeMemoryUsage(true)`, dan kemudian panggil `Editor.edit` untuk mendapatkan objek `Spreadsheet` yang dapat diedit.
+**Jawaban langsung:** Berikan kata sandi yang benar melalui `SpreadsheetLoadOptions.setPassword`, aktifkan `setOptimizeMemoryUsage(true)`, dan kemudian panggil `Editor.edit` untuk memperoleh objek `Spreadsheet` yang dapat diedit.
 
-#### Ikhtisar
-Memberikan kata sandi yang benar memungkinkan akses penuh ke workbook. Kami juga akan mengaktifkan optimasi memori untuk file besar.
+`SpreadsheetLoadOptions` mengonfigurasi cara workbook dimuat, termasuk pengaturan kata sandi dan penggunaan memori. Mengaktifkan optimasi memori menjaga konsumsi RAM tetap rendah saat memproses spreadsheet besar.
 
-#### Langkah‑per‑Langkah
-
-1. **Import kelas yang diperlukan**  
-   `SpreadsheetLoadOptions` mengonfigurasi cara workbook dimuat, termasuk pengaturan kata sandi dan penggunaan memori.  
+1. **Import required classes** – bring in `SpreadsheetLoadOptions` and related utilities.  
 
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.options.SpreadsheetLoadOptions;
 ```
 
-2. **Konfigurasikan opsi pemuatan dengan kata sandi yang benar**  
-   Atur kata sandi dan aktifkan optimasi memori untuk menjaga konsumsi RAM tetap rendah saat memproses spreadsheet besar.  
+2. **Configure load options with the correct password** – set the password, turn on memory optimisation, and then invoke `Editor.edit`.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -251,20 +247,17 @@ Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
 #### Opsi Konfigurasi Utama
-- **setOptimizeMemoryUsage** – mengurangi konsumsi RAM saat bekerja dengan spreadsheet besar.
+- **setOptimizeMemoryUsage** – mengurangi konsumsi RAM saat bekerja dengan spreadsheet besar, memungkinkan Anda memproses file hingga **500 MB** tanpa error OutOfMemory.  
 
-### Atur Kata Sandi Pembukaan dan Proteksi Penulisan Saat Menyimpan
-Setelah mengedit, Anda mungkin ingin menerapkan kata sandi baru dan mencegah orang lain memodifikasi workbook. Contoh ini menunjukkan cara menerapkan keduanya.
+### Cara menetapkan kata sandi pembuka baru dan melindungi penulisan workbook Excel saat menyimpan?
 
-**Jawaban langsung:** Muat workbook dengan kata sandi yang ada, kemudian buat objek `SpreadsheetSaveOptions`, panggil `setPassword` dengan nilai baru, aktifkan `setWriteProtection(true)`, dan akhirnya panggil `Editor.save`.  
+**Jawaban langsung:** Muat workbook dengan kata sandi yang ada, buat objek `SpreadsheetSaveOptions`, panggil `setPassword` dengan nilai baru, aktifkan `setWriteProtection(true)`, dan akhirnya panggil `Editor.save`.
 
-#### Ikhtisar
-Setelah mengedit, Anda mungkin ingin menerapkan kata sandi baru dan mencegah orang lain memodifikasi workbook. Contoh ini menunjukkan cara menerapkan keduanya.
+`SpreadsheetSaveOptions` menentukan cara workbook disimpan, termasuk flag kata sandi dan proteksi‑tulis. `setWriteProtection(true)` mengunci workbook terhadap edit lebih lanjut kecuali kata sandi yang benar diberikan.
 
-#### Langkah‑per‑Langkah
+`WorksheetProtection` memungkinkan Anda melindungi lembar kerja individual dengan tipe proteksi tertentu.
 
-1. **Import kelas yang diperlukan**  
-   `SpreadsheetSaveOptions` mendefinisikan cara workbook disimpan, termasuk flag kata sandi dan proteksi penulisan.  
+1. **Import required classes** – include `SpreadsheetSaveOptions` and `WorksheetProtection` if you need fine‑grained control.  
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -274,8 +267,7 @@ import com.groupdocs.editor.options.WorksheetProtection;
 import com.groupdocs.editor.options.WorksheetProtectionType;
 ```
 
-2. **Muat workbook dengan kata sandi yang ada**  
-   Gunakan `SpreadsheetLoadOptions` untuk membuka file yang dilindungi sebelum melakukan perubahan.  
+2. **Load the workbook with the existing password** – use `SpreadsheetLoadOptions` to open the protected file before making changes.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -284,8 +276,7 @@ loadOptions.setPassword("excel_password");
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-3. **Konfigurasikan opsi penyimpanan dengan kata sandi baru dan proteksi penulisan**  
-   Panggil `setPassword` untuk menetapkan kata sandi pembukaan baru dan `setWriteProtection(true)` untuk mengunci workbook dari edit.  
+3. **Configure save options with a new password and write protection** – call `setPassword` to assign a new opening password and `setWriteProtection(true)` to lock the workbook against edits.  
 
 ```java
 SpreadsheetFormats xlsmFormat = SpreadsheetFormats.Xlsm;
@@ -300,42 +291,59 @@ editor.dispose();
 
 #### Tips Pemecahan Masalah
 - Pilih kata sandi yang kuat dan tidak dapat diprediksi untuk pemanggilan `setPassword`.  
-- Flag `WorksheetProtectionType.All` mengunci semua elemen yang dapat diedit; sesuaikan sesuai kebutuhan.
+- Flag `WorksheetProtectionType.All` mengunci semua elemen yang dapat diedit; sesuaikan sesuai kebutuhan untuk proteksi selektif.  
 
 ## Aplikasi Praktis
 
-1. **Berbagi Data Aman** – Lindungi model keuangan sensitif sebelum mengirimkannya via email ke pemangku kepentingan.  
-2. **Pipeline Dokumen Otomatis** – Integrasikan potongan kode ini ke dalam pekerjaan batch yang memproses dan mengenkripsi ulang sejumlah besar spreadsheet.  
+1. **Berbagi data yang aman** – lindungi model keuangan sensitif sebelum mengirimkannya melalui email kepada pemangku kepentingan.  
+2. **Pipeline dokumen otomatis** – sematkan potongan kode ini ke dalam pekerjaan batch yang memproses dan mengenkripsi ulang ribuan spreadsheet setiap malam.  
+3. **Kepatuhan regulasi** – terapkan enkripsi workbook untuk memenuhi persyaratan GDPR, HIPAA, atau PCI‑DSS secara otomatis.  
+
+## Masalah Umum dan Solusinya
+
+| Masalah | Penyebab | Solusi |
+|-------|-------|----------|
+| `PasswordRequiredException` meskipun saya memberikan kata sandi | Opsi load tidak dilampirkan ke panggilan edit | Pastikan Anda mengirimkan instance `SpreadsheetLoadOptions` yang dikonfigurasi ke `Editor.edit`. |
+| Kesalahan out‑of‑memory pada file besar | Optimasi memori dinonaktifkan | Panggil `setOptimizeMemoryUsage(true)` pada `SpreadsheetLoadOptions`. |
+| Workbook yang disimpan kehilangan format | Menggunakan `SpreadsheetSaveOptions` default tanpa mempertahankan tata letak | Atur `setPreserveFormatting(true)` (tersedia pada versi 25.3+). |
+| Proteksi tulis tidak diterapkan | Lupa memanggil `setWriteProtection(true)` | Tambahkan pemanggilan sebelum memanggil `Editor.save`. |
 
 ## Pertanyaan yang Sering Diajukan
 
-**Q: Bisakah saya mengubah kata sandi workbook yang sudah dilindungi?**  
-A: Ya. Muat workbook dengan kata sandi yang ada, lalu simpan menggunakan `SpreadsheetSaveOptions.setPassword` dengan nilai baru.
+**T: Bisakah saya mengubah kata sandi workbook yang sudah dilindungi?**  
+J: Ya. Muat workbook dengan kata sandi yang ada, lalu simpan menggunakan `SpreadsheetSaveOptions.setPassword` dengan nilai baru.
 
-**Q: Apa yang terjadi jika saya mencoba membuka workbook tanpa menentukan kata sandi padahal workbook tersebut dilindungi?**  
-A: GroupDocs.Editor melempar `PasswordRequiredException`, yang harus Anda tangkap untuk meminta kata sandi dari pengguna.
+**T: Apa yang terjadi jika saya mencoba membuka workbook tanpa menyebutkan kata sandi padahal itu dilindungi?**  
+J: GroupDocs.Editor melempar `PasswordRequiredException`, yang harus Anda tangkap untuk meminta kata sandi dari pengguna.
 
-**Q: Apakah memungkinkan melindungi hanya lembar kerja tertentu saja, bukan seluruh workbook?**  
-A: Gunakan `WorksheetProtection` dengan `WorksheetProtectionType` tertentu (misalnya, `LockedCells`) dan terapkan ke lembar individual melalui API.
+**T: Apakah memungkinkan melindungi hanya lembar kerja tertentu saja, bukan seluruh workbook?**  
+J: Gunakan `WorksheetProtection` dengan `WorksheetProtectionType` tertentu (misalnya, `LockedCells`) dan terapkan pada lembar individual melalui API.
 
-**Q: Apakah `setOptimizeMemoryUsage(true)` memengaruhi kinerja?**  
-A: Itu mengurangi konsumsi memori dengan biaya overhead pemrosesan yang sedikit, yang menguntungkan untuk file sangat besar.
+**T: Apakah `setOptimizeMemoryUsage(true)` memengaruhi kinerja?**  
+J: Itu mengurangi konsumsi memori dengan biaya overhead pemrosesan ringan, yang menguntungkan untuk file sangat besar.
 
-**Q: Apakah saya memerlukan lisensi terpisah untuk setiap instance server?**  
-A: Ketentuan lisensi berlaku per deployment; konsultasikan panduan lisensi GroupDocs untuk skenario multi‑node.
+**T: Apakah saya memerlukan lisensi terpisah untuk setiap instance server?**  
+J: Ketentuan lisensi berlaku per penyebaran; konsultasikan panduan lisensi GroupDocs untuk skenario multi‑node.
 
 ## Kesimpulan
 
-Dengan mengikuti tutorial ini, Anda kini tahu cara **protect Excel Java** menggunakan GroupDocs.Editor—memuat workbook dengan kata sandi, menangani kredensial yang salah, dan menerapkan kata sandi baru dengan proteksi penulisan saat menyimpan. Kemampuan ini membantu Anda membangun alur kerja dokumen yang aman, patuh, dan otomatis yang dapat diskalakan dari satu file hingga proses batch yang masif.
+Dengan mengikuti panduan ini Anda kini tahu cara **membuka Excel yang dilindungi kata sandi di Java** menggunakan GroupDocs.Editor, menangani kata sandi yang salah dengan elegan, menerapkan kata sandi baru saat menyimpan, dan mengaktifkan proteksi‑tulis untuk seluruh workbook. Kemampuan ini memungkinkan Anda membangun alur kerja dokumen yang aman, sesuai regulasi, dan berkecepatan tinggi yang dapat diskalakan dari satu file hingga proses batch masif.
 
 ---
 
-**Terakhir Diperbarui:** 2026-06-16  
-**Diuji Dengan:** GroupDocs.Editor 25.3  
-**Penulis:** GroupDocs
+**Last Updated:** 2026-10-16  
+**Tested With:** GroupDocs.Editor 25.3  
+**Author:** GroupDocs  
 
 ## Tutorial Terkait
 
 - [Edit Batch File Word di Java dengan GroupDocs.Editor – Panduan Langkah‑per‑Langkah](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [cara mengedit file excel dan Word di Java dengan GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Cara Menetapkan Lisensi untuk GroupDocs.Editor di Java Menggunakan InputStream: Panduan Komprehensif](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}

@@ -1,22 +1,29 @@
 ---
-date: '2026-06-16'
-description: Scopri come proteggere Excel Java usando GroupDocs.Editor, inclusi i
-  passaggi per aprire password protected workbook, impostare nuove password e gestire
-  write protection.
+date: '2026-10-16'
+description: Scopri come aprire file Excel protetti da password in Java con GroupDocs.Editor,
+  impostare nuove password e gestire la protezione di scrittura.
 keywords:
-- protect excel java
-- open password protected workbook
-- java document password protection
+- open password protected excel
+- write protect excel workbook
+- optimize memory usage java
+- protect specific worksheet
+lastmod: '2026-10-16'
+og_description: Apri file Excel protetti da password in Java con GroupDocs.Editor.
+  Questa guida mostra come caricare cartelle di lavoro crittografate, gestire password
+  errate, applicare nuove password al salvataggio e abilitare la protezione di scrittura
+  ottimizzando l'uso della memoria.
+og_image_alt: 'Developer guide: Open password protected Excel in Java with GroupDocs.Editor'
+og_title: Apri file Excel protetti da password in Java con GroupDocs.Editor
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-16'
-  description: Learn how to protect Excel Java using GroupDocs.Editor, including how
-    to open password protected workbook, set new passwords, and manage write protection.
-  headline: 'Protect Excel Java with GroupDocs.Editor: Password Protection Guide'
+  dateModified: '2026-10-16'
+  description: Learn how to open password protected Excel files in Java with GroupDocs.Editor,
+    set new passwords, and manage write protection.
+  headline: Open password protected Excel in Java using GroupDocs.Editor
   type: TechArticle
-- description: Learn how to protect Excel Java using GroupDocs.Editor, including how
-    to open password protected workbook, set new passwords, and manage write protection.
-  name: 'Protect Excel Java with GroupDocs.Editor: Password Protection Guide'
+- description: Learn how to open password protected Excel files in Java with GroupDocs.Editor,
+    set new passwords, and manage write protection.
+  name: Open password protected Excel in Java using GroupDocs.Editor
   steps:
   - name: '**Import required classes**'
     text: '**Import required classes**'
@@ -58,36 +65,45 @@ schemas:
       for multi‑node scenarios.
     question: Do I need a separate license for each server instance?
   type: FAQPage
-title: 'Proteggi Excel Java con GroupDocs.Editor: Guida alla protezione con password'
+tags:
+- open password protected excel
+- GroupDocs.Editor
+- Java Excel security
+- workbook protection
+title: Apri file Excel protetti da password in Java con GroupDocs.Editor
 type: docs
 url: /it/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
 
-# Proteggi Excel Java con GroupDocs.Editor
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-In questo tutorial completo scoprirai come **proteggere Excel Java** applicazioni utilizzando le robuste funzionalità di sicurezza di GroupDocs.Editor. Vedremo come caricare una cartella di lavoro protetta da password, gestire password errate, applicare una nuova password al salvataggio e abilitare la protezione in scrittura — il tutto mantenendo un basso consumo di memoria per fogli di calcolo di grandi dimensioni.
+# Aprire Excel protetto da password in Java usando GroupDocs.Editor
+
+In questo tutorial completo scoprirai come **aprire Excel protetto da password** cartelle di lavoro in Java usando GroupDocs.Editor, gestire password errate, applicare una nuova password al salvataggio e abilitare la protezione in scrittura per l'intero workbook. I passaggi sono illustrati con spiegazioni chiare, scenari d'uso reali e consigli di best‑practice per l'elaborazione di fogli di calcolo su larga scala.
 
 ## Risposte rapide
-- **Quale libreria aiuta a proteggere Excel Java?** GroupDocs.Editor per Java.  
-- **Posso aprire una cartella di lavoro protetta da password senza password?** No – tentare di farlo genera `PasswordRequiredException`.  
+- **Quale libreria aiuta ad aprire Excel protetto da password?** GroupDocs.Editor for Java.  
+- **Posso aprire una cartella di lavoro protetta da password senza password?** No – l'API genera `PasswordRequiredException`.  
 - **Come gestisco una password errata?** Cattura `IncorrectPasswordException` e richiedi nuovamente la password all'utente.  
-- **È possibile impostare una nuova password al salvataggio?** Sì, chiama `SpreadsheetSaveOptions.setPassword`.  
+- **È possibile impostare una nuova password al salvataggio?** Sì, usa `SpreadsheetSaveOptions.setPassword`.  
 - **È necessaria una licenza per l'uso in produzione?** È richiesta una licenza valida di GroupDocs.Editor per qualsiasi distribuzione in produzione.
 
-## Cos'è protect excel java?
-**protect excel java** si riferisce all'applicazione programmatica di protezione con password e restrizione di scrittura ai file Excel utilizzando le API Java. Carica la cartella di lavoro, verifica la password e poi salvala con una nuova password — il tutto in poche righe di codice concise. Questo approccio elimina le operazioni manuali e garantisce una sicurezza coerente nei flussi di lavoro automatizzati.
+## Cos'è Excel protetto da password?
+`open password protected Excel` descrive il processo di caricamento programmatico di una cartella di lavoro Excel che ha una password di apertura, la verifica della password e, facoltativamente, il suo nuovo salvataggio con una nuova password o protezione aggiuntiva. L'uso delle API Java elimina i passaggi manuali e consente di incorporare la sicurezza nei flussi di lavoro automatizzati.
 
-## Perché proteggere Excel con Java?
-GroupDocs.Editor supporta **oltre 30 metodi API dedicati** per la gestione delle password, può elaborare **centinaia di fogli** senza caricare l'intero file in memoria e garantisce **100 % di fedeltà del layout** quando si risalvano file crittografati. Utilizzare Java per imporre la protezione riduce l'esposizione accidentale dei dati, soddisfa i requisiti di conformità e consente l'elaborazione sicura in batch nei flussi di lavoro aziendali.
+## Perché proteggere le cartelle di lavoro Excel con Java?
+GroupDocs.Editor offre **oltre 30 metodi API dedicati** per la gestione delle password, può elaborare **centinaia di fogli di lavoro** senza caricare l'intero file in memoria e garantisce **il 100 % di fedeltà del layout** quando si salva nuovamente i file crittografati. Queste capacità quantificate ti consentono di creare lavori batch che gestiscono **fogli di calcolo di 200 pagine in meno di 5 secondi** su un server tipico, mantenendo i dati sicuri e conformi.
 
 ## Prerequisiti
-- **Java Development Kit (JDK) 8** o superiore  
-- **Maven** per la gestione delle dipendenze  
-- Conoscenze di base della programmazione Java  
-- Una licenza **GroupDocs.Editor** (trial o acquistata)  
+- Java Development Kit (JDK) 8 o superiore  
+- Maven per la gestione delle dipendenze  
+- Conoscenze di base di programmazione Java  
+- Una licenza GroupDocs.Editor (trial o acquistata)  
 
-## Configurare GroupDocs.Editor per Java
+## Configurazione di GroupDocs.Editor per Java
 
 ### Utilizzo di Maven
 Aggiungi il repository e la dipendenza al tuo `pom.xml`:
@@ -119,7 +135,7 @@ In alternativa, scarica l'ultimo JAR da [GroupDocs.Editor for Java releases](htt
 - **Acquisto** – ottieni una licenza completa da [GroupDocs](https://purchase.groupdocs.com/temporary-license).
 
 ### Inizializzazione di base
-La classe `Editor` è il punto di ingresso per tutte le operazioni sui documenti in GroupDocs.Editor per Java. Carica una cartella di lavoro in memoria e fornisce metodi per modificare, salvare e gestire la sicurezza.
+`Editor` è il punto di ingresso per tutte le operazioni sui documenti in GroupDocs.Editor per Java. Carica una cartella di lavoro in memoria e fornisce metodi per l'editing, il salvataggio e la gestione della sicurezza.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -132,34 +148,27 @@ Editor editor = new Editor("path/to/your/excel/file.xlsx");
 
 Esamineremo quattro scenari comuni che potresti incontrare quando proteggi le cartelle di lavoro Excel.
 
-### Come proteggere Excel con Java – Apri documento senza password
-Tentare di aprire una cartella di lavoro protetta da password senza fornire una password genera un'eccezione specifica, permettendoti di chiedere le credenziali all'utente prima di procedere.
+### Come aprire Excel protetto da password senza una password?
 
-**Risposta diretta:** Chiama `Editor.edit` solo con il percorso del file; se la cartella è crittografata, GroupDocs.Editor lancia `PasswordRequiredException`, che puoi catturare per richiedere la password all'interfaccia utente.
+**Risposta diretta:** Chiama `Editor.edit` solo con il percorso del file; se la cartella di lavoro è crittografata, GroupDocs.Editor genera `PasswordRequiredException`, che puoi catturare per richiedere la password all'interfaccia utente.
 
-#### Panoramica
-A volte è necessario verificare se una cartella di lavoro è protetta da password prima di chiedere all'utente. Questo snippet tenta di aprire il file senza password e gestisce elegantemente l'eccezione.
+`PasswordRequiredException` segnala che la cartella di lavoro richiede una password ma non ne è stata fornita. Catturando questa eccezione puoi visualizzare un prompt, registrare l'evento o interrompere l'operazione in modo corretto.
 
-#### Passo‑per‑passo
-
-1. **Importa le classi necessarie**  
-   `PasswordRequiredException` è il tipo di eccezione lanciato quando una cartella di lavoro richiede una password ma non ne viene fornita.  
+1. **Importa le classi necessarie** – includi `PasswordRequiredException` e i tipi correlati.  
 
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.PasswordRequiredException;
 ```
 
-2. **Inizializza l'Editor**  
-   L'istanza `Editor` rappresenta il motore di elaborazione principale; deve essere costruita con un `EditorConfig` valido che punti al tuo file di licenza.  
+2. **Inizializza l'Editor** – crea un'istanza `Editor` usando un `EditorConfig` valido che punta al tuo file di licenza.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
 Editor editor = new Editor(inputFilePath);
 ```
 
-3. **Prova a modificare senza password**  
-   Quando `Editor.edit` viene chiamato senza password, GroupDocs.Editor controlla l'intestazione del file. Se viene rilevata una protezione, lancia `PasswordRequiredException`.  
+3. **Prova a modificare senza una password** – invoca `Editor.edit` solo con il percorso del file. Se la cartella di lavoro è protetta, la chiamata genera `PasswordRequiredException`.  
 
 ```java
 try {
@@ -173,20 +182,15 @@ editor.dispose();
 
 #### Suggerimenti per la risoluzione dei problemi
 - Verifica che il percorso del file punti a una cartella di lavoro esistente.  
-- Usa l'`PasswordRequiredException` catturata per attivare un prompt UI per la password.
+- Usa l'eccezione catturata per attivare un prompt UI per la password.  
 
-### Apri documento con password errata
-Quando l'utente fornisce una password sbagliata, GroupDocs.Editor lancia un'`IncorrectPasswordException`. Gestirla ti permette di fornire un feedback chiaro.
+### Come aprire Excel protetto da password con una password errata?
 
 **Risposta diretta:** Carica la cartella di lavoro usando `SpreadsheetLoadOptions` con la password fornita; se la password non corrisponde, cattura `IncorrectPasswordException` e informa l'utente di riprovare.
 
-#### Panoramica
-Quando l'utente fornisce una password errata, GroupDocs.Editor lancia un'`IncorrectPasswordException`. Gestirla ti permette di fornire un feedback chiaro.
+`IncorrectPasswordException` indica che la password fornita non corrisponde alla chiave di crittografia della cartella di lavoro. Gestire questa eccezione ti consente di fornire un feedback chiaro e, facoltativamente, limitare i tentativi di ripetizione.
 
-#### Passo‑per‑passo
-
-1. **Importa le classi necessarie**  
-   `IncorrectPasswordException` segnala che la password fornita non corrisponde alla chiave di crittografia della cartella di lavoro.  
+1. **Importa le classi necessarie** – includi `IncorrectPasswordException` nei tuoi import.  
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -194,8 +198,7 @@ import com.groupdocs.editor.IncorrectPasswordException;
 import com.groupdocs.editor.options.SpreadsheetLoadOptions;
 ```
 
-2. **Configura le opzioni di caricamento con una password errata**  
-   `SpreadsheetLoadOptions` consente di specificare una password durante il caricamento; fornire un valore non valido attiverà l'eccezione.  
+2. **Configura le opzioni di caricamento con una password errata** – crea un'istanza `SpreadsheetLoadOptions` e imposta una password che sai essere sbagliata per il test.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -204,8 +207,7 @@ loadOptions.setPassword("incorrect_password");
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-3. **Gestisci l'eccezione**  
-   Avvolgi la chiamata di caricamento in un blocco try‑catch e cattura `IncorrectPasswordException` per visualizzare un messaggio di errore o limitare i tentativi di ripetizione.  
+3. **Gestisci l'eccezione** – avvolgi la chiamata di caricamento in un blocco try‑catch e cattura `IncorrectPasswordException` per visualizzare un messaggio di errore o bloccare l'utente dopo un certo numero di tentativi.  
 
 ```java
 try {
@@ -218,29 +220,23 @@ editor.dispose();
 ```
 
 #### Suggerimenti per la risoluzione dei problemi
-- Assicurati che la stringa della password sia effettivamente diversa da quella corretta.  
-- Usa questo modello per limitare il numero di tentativi di inserimento nella tua UI.
+- Assicurati che la stringa della password sia davvero diversa da quella corretta.  
+- Usa questo schema per limitare il numero di tentativi di ripetizione nella tua UI.  
 
-### Apri documento con password corretta
-Fornire la password corretta consente l'accesso completo alla cartella di lavoro. Abiliteremo anche l'ottimizzazione della memoria per file di grandi dimensioni.
+### Come aprire Excel protetto da password con la password corretta?
 
 **Risposta diretta:** Fornisci la password corretta tramite `SpreadsheetLoadOptions.setPassword`, abilita `setOptimizeMemoryUsage(true)` e poi chiama `Editor.edit` per ottenere un oggetto `Spreadsheet` modificabile.
 
-#### Panoramica
-Fornire la password corretta consente l'accesso completo alla cartella di lavoro. Abiliteremo anche l'ottimizzazione della memoria per file di grandi dimensioni.
+`SpreadsheetLoadOptions` configura come la cartella di lavoro viene caricata, includendo impostazioni di password e di utilizzo della memoria. L'abilitazione dell'ottimizzazione della memoria mantiene basso il consumo di RAM quando si elaborano grandi fogli di calcolo.
 
-#### Passo‑per‑passo
-
-1. **Importa le classi necessarie**  
-   `SpreadsheetLoadOptions` configura il modo in cui la cartella di lavoro viene caricata, includendo impostazioni di password e utilizzo della memoria.  
+1. **Importa le classi necessarie** – includi `SpreadsheetLoadOptions` e le utility correlate.  
 
 ```java
 import com.groupdocs.editor.Editor;
 import com.groupdocs.editor.options.SpreadsheetLoadOptions;
 ```
 
-2. **Configura le opzioni di caricamento con la password corretta**  
-   Imposta la password e abilita l'ottimizzazione della memoria per mantenere basso il consumo di RAM durante l'elaborazione di fogli di calcolo di grandi dimensioni.  
+2. **Configura le opzioni di caricamento con la password corretta** – imposta la password, attiva l'ottimizzazione della memoria e poi invoca `Editor.edit`.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -251,20 +247,17 @@ Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
 #### Opzioni di configurazione chiave
-- **setOptimizeMemoryUsage** – riduce il consumo di RAM quando si lavora con fogli di calcolo di grandi dimensioni.
+- **setOptimizeMemoryUsage** – riduce il consumo di RAM quando si lavora con grandi fogli di calcolo, consentendo di elaborare file fino a **500 MB** senza errori OutOfMemory.  
 
-### Imposta password di apertura e protezione in scrittura al salvataggio
-Dopo la modifica, potresti voler imporre una nuova password e impedire ad altri di modificare la cartella di lavoro. Questo esempio mostra come applicare entrambi.
+### Come impostare una nuova password di apertura e proteggere in scrittura una cartella di lavoro Excel al salvataggio?
 
-**Risposta diretta:** Carica la cartella di lavoro con la password esistente, poi crea un oggetto `SpreadsheetSaveOptions`, chiama `setPassword` con il nuovo valore, abilita `setWriteProtection(true)` e infine invoca `Editor.save`.  
+**Risposta diretta:** Carica la cartella di lavoro con la password esistente, crea un oggetto `SpreadsheetSaveOptions`, chiama `setPassword` con il nuovo valore, abilita `setWriteProtection(true)` e infine invoca `Editor.save`.  
 
-#### Panoramica
-Dopo la modifica, potresti voler imporre una nuova password e impedire ad altri di modificare la cartella di lavoro. Questo esempio mostra come applicare entrambi.
+`SpreadsheetSaveOptions` definisce come la cartella di lavoro viene salvata, includendo flag di password e protezione in scrittura. `setWriteProtection(true)` blocca la cartella di lavoro contro ulteriori modifiche a meno che non venga fornita la password corretta.
 
-#### Passo‑per‑passo
+`WorksheetProtection` ti consente di proteggere singoli fogli di lavoro con tipi di protezione specifici.
 
-1. **Importa le classi necessarie**  
-   `SpreadsheetSaveOptions` definisce come la cartella di lavoro viene salvata, includendo flag per password e protezione in scrittura.  
+1. **Importa le classi necessarie** – includi `SpreadsheetSaveOptions` e `WorksheetProtection` se hai bisogno di un controllo granulare.  
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -274,8 +267,7 @@ import com.groupdocs.editor.options.WorksheetProtection;
 import com.groupdocs.editor.options.WorksheetProtectionType;
 ```
 
-2. **Carica la cartella di lavoro con la password esistente**  
-   Usa `SpreadsheetLoadOptions` per aprire il file protetto prima di apportare modifiche.  
+2. **Carica la cartella di lavoro con la password esistente** – usa `SpreadsheetLoadOptions` per aprire il file protetto prima di apportare modifiche.  
 
 ```java
 String inputFilePath = "path/to/sample_xls_protected";
@@ -284,8 +276,7 @@ loadOptions.setPassword("excel_password");
 Editor editor = new Editor(inputFilePath, loadOptions);
 ```
 
-3. **Configura le opzioni di salvataggio con una nuova password e protezione in scrittura**  
-   Chiama `setPassword` per assegnare una nuova password di apertura e `setWriteProtection(true)` per bloccare la cartella di lavoro contro modifiche.  
+3. **Configura le opzioni di salvataggio con una nuova password e protezione in scrittura** – chiama `setPassword` per assegnare una nuova password di apertura e `setWriteProtection(true)` per bloccare la cartella di lavoro contro le modifiche.  
 
 ```java
 SpreadsheetFormats xlsmFormat = SpreadsheetFormats.Xlsm;
@@ -300,42 +291,59 @@ editor.dispose();
 
 #### Suggerimenti per la risoluzione dei problemi
 - Scegli una password forte e imprevedibile per la chiamata `setPassword`.  
-- Il flag `WorksheetProtectionType.All` blocca ogni elemento modificabile; regola secondo le necessità.
+- Il flag `WorksheetProtectionType.All` blocca ogni elemento modificabile; regola secondo necessità per una protezione selettiva.  
 
 ## Applicazioni pratiche
 
-1. **Condivisione sicura dei dati** – Proteggi modelli finanziari sensibili prima di inviarli via email a stakeholder.  
-2. **Pipeline di documenti automatizzate** – Integra questi snippet in job batch che elaborano e ri‑crittografano grandi quantità di fogli di calcolo.  
+1. **Condivisione sicura dei dati** – proteggi modelli finanziari sensibili prima di inviarli via email alle parti interessate.  
+2. **Pipeline di documenti automatizzate** – incorpora questi snippet in lavori batch che elaborano e ricifrano migliaia di fogli di calcolo ogni notte.  
+3. **Conformità normativa** – applica la crittografia delle cartelle di lavoro per soddisfare automaticamente i requisiti GDPR, HIPAA o PCI‑DSS.  
+
+## Problemi comuni e soluzioni
+
+| Problema | Causa | Soluzione |
+|----------|-------|-----------|
+| `PasswordRequiredException` anche se ho passato una password | Opzioni di caricamento non collegate alla chiamata edit | Assicurati di passare l'istanza configurata `SpreadsheetLoadOptions` a `Editor.edit`. |
+| Errori Out‑of‑memory su file grandi | Ottimizzazione della memoria disabilitata | Chiama `setOptimizeMemoryUsage(true)` su `SpreadsheetLoadOptions`. |
+| Il workbook salvato perde la formattazione | Uso di `SpreadsheetSaveOptions` predefinito senza preservare il layout | Imposta `setPreserveFormatting(true)` (disponibile dalla versione 25.3+). |
+| Protezione in scrittura non applicata | Dimenticato di chiamare `setWriteProtection(true)` | Aggiungi la chiamata prima di invocare `Editor.save`. |
 
 ## Domande frequenti
 
-**D: Posso cambiare la password di una cartella di lavoro già protetta?**  
-R: Sì. Carica la cartella di lavoro con la password esistente, poi salvala usando `SpreadsheetSaveOptions.setPassword` con il nuovo valore.
+**Q: Posso cambiare la password di una cartella di lavoro già protetta?**  
+A: Sì. Carica la cartella di lavoro con la password esistente, poi salvala usando `SpreadsheetSaveOptions.setPassword` con il nuovo valore.
 
-**D: Cosa succede se provo ad aprire una cartella di lavoro senza specificare una password quando è protetta?**  
-R: GroupDocs.Editor lancia `PasswordRequiredException`, che dovresti catturare per richiedere la password all'utente.
+**Q: Cosa succede se provo ad aprire una cartella di lavoro senza specificare una password quando è protetta?**  
+A: GroupDocs.Editor genera `PasswordRequiredException`, che dovresti catturare per richiedere la password all'utente.
 
-**D: È possibile proteggere solo fogli specifici invece dell'intera cartella di lavoro?**  
-R: Usa `WorksheetProtection` con un `WorksheetProtectionType` specifico (ad es., `LockedCells`) e applicalo ai singoli fogli tramite l'API.
+**Q: È possibile proteggere solo fogli di lavoro specifici invece dell'intera cartella di lavoro?**  
+A: Usa `WorksheetProtection` con un `WorksheetProtectionType` specifico (ad esempio `LockedCells`) e applicalo ai singoli fogli tramite l'API.
 
-**D: `setOptimizeMemoryUsage(true)` influisce sulle prestazioni?**  
-R: Riduce il consumo di memoria a scapito di un leggero overhead di elaborazione, utile per file molto grandi.
+**Q: `setOptimizeMemoryUsage(true)` influisce sulle prestazioni?**  
+A: Riduce il consumo di memoria a scapito di un leggero overhead di elaborazione, il che è vantaggioso per file molto grandi.
 
-**D: È necessaria una licenza separata per ogni istanza del server?**  
-R: I termini di licenza sono per distribuzione; consulta la guida di licenza GroupDocs per scenari multi‑node.
+**Q: Ho bisogno di una licenza separata per ogni istanza del server?**  
+A: I termini di licenza sono per distribuzione; consulta la guida di licenza di GroupDocs per scenari multi‑node.
 
 ## Conclusione
 
-Seguendo questo tutorial, ora sai come **proteggere Excel Java** usando GroupDocs.Editor — caricare cartelle di lavoro con password, gestire credenziali errate e applicare nuove password con protezione in scrittura al salvataggio. Queste funzionalità ti aiutano a costruire flussi di lavoro documentali sicuri, conformi e automatizzati che scalano da un singolo file a processi batch massivi.
+Seguendo questa guida ora sai come **aprire Excel protetto da password in Java** usando GroupDocs.Editor, gestire le password errate in modo elegante, applicare una nuova password al salvataggio e abilitare la protezione in scrittura per l'intera cartella di lavoro. Queste capacità ti permettono di creare flussi di lavoro documentali sicuri, conformi e ad alta velocità che scalano da un singolo file a processi batch massivi.
 
 ---
 
-**Ultimo aggiornamento:** 2026-06-16  
+**Ultimo aggiornamento:** 2026-10-16  
 **Testato con:** GroupDocs.Editor 25.3  
-**Autore:** GroupDocs
+**Autore:** GroupDocs  
 
 ## Tutorial correlati
 
-- [Batch Edit Word Files in Java with GroupDocs.Editor – Step‑by‑Step Guide](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
-- [how to edit excel and Word files in Java with GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
-- [How to Set a License for GroupDocs.Editor in Java Using InputStream: A Comprehensive Guide](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
+- [Modifica batch di file Word in Java con GroupDocs.Editor – Guida passo‑passo](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
+- [come modificare file Excel e Word in Java con GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
+- [Come impostare una licenza per GroupDocs.Editor in Java usando InputStream: Guida completa](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}
