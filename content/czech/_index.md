@@ -1,6 +1,6 @@
 ---
 additionalTitle: GroupDocs API References | Document Editing Solutions
-date: 2026-07-20
+date: 2026-10-22
 description: Objevte GroupDocs.Editor API, přední API pro úpravu dokumentů pro .NET
   a Java, které umožňuje rychlou konverzi PDF, úpravu Word a bezpečné zpracování.
 is_root: true
@@ -10,20 +10,20 @@ keywords:
 - convert PDF
 - .NET document editing
 - Java document editing
-- document conversion
-lastmod: 2026-07-20
+lastmod: 2026-10-22
 linktitle: Návody a dokumentace GroupDocs.Editor
-og_description: Objevte GroupDocs.Editor API, přední API pro úpravu dokumentů pro
-  .NET a Java, které umožňuje rychlou konverzi PDF, úpravu Word a bezpečné zpracování.
-og_image_alt: Guide to using GroupDocs.Editor API for document editing in .NET and
-  Java
-og_title: GroupDocs.Editor API – úprava dokumentů pro .NET a Java
+og_description: GroupDocs.Editor API umožňuje vysoce kvalitní úpravu dokumentů, konverzi
+  a bezpečné zpracování pro vývojáře .NET a Java, podporuje více než 40 formátů a
+  rychlé zpracování dokumentů o 500‑page.
+og_image_alt: Screenshot of GroupDocs.Editor API documentation showing .NET and Java
+  editing features
+og_title: GroupDocs.Editor API – Úprava dokumentů pro .NET a Java
 schemas:
 - author: GroupDocs
-  dateModified: '2026-07-20'
+  dateModified: '2026-10-22'
   description: Discover the GroupDocs.Editor API, a leading document editing API for
     .NET & Java that enables fast PDF conversion, Word editing, and secure processing.
-  headline: GroupDocs.Editor API – Document Editing for .NET & Java
+  headline: GroupDocs.Editor API – Document editing for .NET & Java
   type: TechArticle
 - questions:
   - answer: GroupDocs.Editor supports 40+ formats, including DOCX, DOC, XLSX, XLS,
@@ -48,7 +48,7 @@ tags:
 - .NET document editing
 - Java document editing
 - document conversion
-title: GroupDocs.Editor API – úprava dokumentů pro .NET a Java
+title: GroupDocs.Editor API – Úprava dokumentů pro .NET a Java
 type: docs
 url: /cs/
 weight: 11
@@ -56,90 +56,90 @@ weight: 11
 
 # GroupDocs.Editor API – Úprava dokumentů pro .NET a Java
 
-Vítejte v komplexním **GroupDocs.Editor API** hubu dokumentace a tutoriálů! Ať už jste zkušený vývojář nebo teprve začínáte, tento centrální zdroj vám poskytne vše, co potřebujete k integraci vysoce kvalitní úpravy, konverze a zpracování dokumentů do vašich .NET a Java aplikací. GroupDocs.Editor API vám umožní načíst, upravit a uložit dokumenty bez Microsoft Office nebo Adobe Acrobat, což je ideální pro cloud‑first a on‑premise řešení.
+Vítejte v komplexním hubu dokumentace a tutoriálů **GroupDocs.Editor API**! Ať už jste zkušený vývojář nebo teprve začínáte, tento centrální zdroj vám poskytne vše, co potřebujete k integraci vysoce věrné úpravy, konverze a zpracování dokumentů do vašich .NET a Java aplikací. GroupDocs.Editor API vám umožní načíst, upravit a uložit dokumenty bez Microsoft Office nebo Adobe Acrobat, což je ideální pro cloud‑first a on‑premise řešení.
 
 ## Rychlé odpovědi
-- **Co dělá GroupDocs.Editor API?** Načítá, konvertuje do editovatelného HTML, umožňuje upravovat obsah a ukládá zpět do původního formátu při zachování rozvržení.  
+- **Co dělá GroupDocs.Editor API?** Načítá dokumenty, převádí je do editovatelného HTML, umožňuje upravovat obsah a ukládá je zpět do původního formátu při zachování rozvržení.  
 - **Které platformy jsou podporovány?** Windows, Linux a macOS pro .NET 6+ i Java 8+.  
-- **Potřebuji mít nainstalovaný Office?** Není vyžadována žádná externí instalace Office ani Acrobat.  
+- **Potřebuji mít nainstalovaný Office?** Nejsou vyžadovány žádné externí instalace Office ani Acrobat.  
 - **Kolik formátů souborů je podporováno?** Více než 40 vstupních a výstupních formátů, včetně DOCX, XLSX, PPTX, PDF, HTML, XML, TXT a CSV.  
-- **Je API zabezpečené?** Ano – nabízí ochranu heslem, šifrování a podrobnou správu oprávnění přímo z krabice.
+- **Je API bezpečné?** Ano – poskytuje ochranu heslem, šifrování a podrobnou správu oprávnění přímo z krabice.
 
 ## Co je GroupDocs.Editor API?
-GroupDocs.Editor API je API pro úpravu dokumentů, které umožňuje vývojářům programově načítat, upravovat a ukládat široké spektrum typů souborů bez nutnosti Microsoft Office nebo Adobe Acrobat. Zpracovává konverzi dokumentů, zachovává rozvržení a podporuje pokročilé funkce, jako jsou formulářová pole a šifrování, vše prostřednictvím jediného konzistentního objektového modelu.
+`GroupDocs.Editor API` je API pro úpravu dokumentů, které umožňuje vývojářům programově načítat, měnit a ukládat široké spektrum typů souborů bez nutnosti Microsoft Office nebo Adobe Acrobat. Zpracovává konverzi dokumentů, zachovává rozvržení a podporuje pokročilé funkce, jako jsou formulářová pole a šifrování, vše prostřednictvím jednotného a konzistentního objektového modelu.
 
 ## Proč zvolit GroupDocs.Editor API?
-GroupDocs.Editor zpracuje 500‑stránkové dokumenty za méně než 5 sekund na standardním serverovém hardware a podporuje **40+** formátů souborů – včetně klasických Office souborů, PDF, XML, prostého textu a oddělených formátů. API eliminuje potřebu drahého softwaru třetích stran, nabízí vestavěné zabezpečení (ochrana heslem, šifrování a řízení oprávnění) a funguje konzistentně na Windows, Linuxu i macOS, což vám umožní poskytovat spolehlivý zážitek z úprav jakémukoli uživatelskému okruhu.
+GroupDocs.Editor zpracovává **500‑stránkových dokumentů za méně než 5 sekund** na standardním serverovém hardware a podporuje **více než 40** formátů souborů – včetně klasických Office souborů, PDF, XML, prostého textu a oddělených formátů. API eliminuje potřebu nákladného softwaru třetích stran, nabízí vestavěnou bezpečnost (ochrana heslem, šifrování a řízení oprávnění) a funguje konzistentně na Windows, Linuxu i macOS, což vám umožní poskytovat spolehlivý zážitek z úprav jakémukoli uživatelskému okruhu.
 
-## Kdo může mít prospěch?
-GroupDocs.Editor API je užitečné pro vývojáře CMS, kteří vytvářejí editory v aplikaci, automatizační inženýry potřebující hromadnou generaci dokumentů, podnikové týmy vyžadující zabezpečené server‑side zpracování, poskytovatele SaaS nabízející kolaborativní úpravy a řešení pro reportování, která generují nebo upravují PDF, tabulky a prezentace za běhu.
+## Pro koho je určen?
+GroupDocs.Editor API je užitečný pro vývojáře CMS, kteří vytvářejí editory v aplikaci, automatizační inženýry potřebující hromadnou generaci dokumentů, podnikové týmy vyžadující bezpečné zpracování na serveru, poskytovatele SaaS nabízející kolaborativní úpravy a řešení pro reporting, která generují nebo upravují PDF, tabulky a prezentace za běhu.
 
 ## Začínáme s GroupDocs.Editor
 
 ### [GroupDocs.Editor pro .NET tutoriály](./net/)
 
-GroupDocs.Editor pro .NET umožňuje vývojářům vytvářet, upravovat a konvertovat dokumenty s přesností a efektivitou. Naše komplexní .NET API podporuje všechny hlavní formáty dokumentů a poskytuje pokročilé možnosti úprav bez externích závislostí.
+GroupDocs.Editor pro .NET umožňuje vývojářům vytvářet, upravovat a konvertovat dokumenty s přesností a efektivitou. .NET API podporuje všechny hlavní formáty dokumentů a poskytuje pokročilé možnosti úprav bez externích závislostí.
 
 #### Klíčové funkce pro .NET
 - Kompletní pipeline úpravy dokumentů s konverzí do HTML
 - Pokročilé zachování formátování během obousměrných konverzí
-- Kompletní podpora pro práci s CSS a jeho manipulaci
+- Komplexní podpora pro práci a manipulaci s CSS
 - Správa formulářových polí a úprava interaktivních prvků
-- Zabezpečené zpracování dokumentů s možnostmi šifrování
+- Bezpečné zpracování dokumentů s možnostmi šifrování
 
-#### Kategorie .NET tutoriálů:
-- [**Manipulace s CSS**](./net/css-handling/) - Ovládněte manipulaci s CSS pro dokonalé stylování dokumentu
-- [**Získávání HTML obsahu**](./net/html-content-retrieval/) - Efektivně extrahujte a zpracovávejte HTML obsah
-- [**Správa formulářových polí**](./net/form-field-management/) - Ovládejte interaktivní formulářové prvky
-- [**Zpracování dokumentů**](./net/document-processing/) - Základní techniky manipulace s dokumenty
-- [**Průvodce rychlým startem**](./net/quick-start-guide/) - Začněte během několika minut
-- [**Načítání dokumentů**](./net/document-loading/) - Načtěte dokumenty z různých zdrojů
-- [**Úprava dokumentů**](./net/document-editing/) - Měňte obsah a strukturu dokumentu
-- [**Manipulace s HTML**](./net/html-manipulation/) - Pokročilé zpracování HTML
-- [**Dokumenty pro zpracování textu**](./net/word-processing-documents/) - Tutoriály úpravy DOCX, DOC, RTF
-- [**Tabulkové dokumenty**](./net/spreadsheet-documents/) - Průvodce manipulací se soubory Excel
-- [**Prezentace**](./net/presentation-documents/) - Techniky úpravy PowerPoint
-- [**PDF dokumenty**](./net/pdf-documents/) - Vytváření a úprava PDF
-- [**XML dokumenty**](./net/xml-documents/) - Zpracování a konverze XML
-- [**Formulářová pole**](./net/form-fields/) - Implementace interaktivních formulářů
-- [**Pokročilé funkce**](./net/advanced-features/) - Funkcionalita na úrovni experta
-- [**Licencování a konfigurace**](./net/licensing-configuration/) - Pokyny pro nastavení a nasazení
-- [**Ukládání a export dokumentů**](./net/document-saving/) - Export do různých formátů
-- [**Úprava HTML dokumentů**](./net/html-web-documents/) - Zpracování webových dokumentů
-- [**Úprava prostého textu a DSV dokumentů**](./net/plain-text-dsv-documents/) - Textové a oddělené soubory
+#### Kategorie .NET tutoriálů
+- [**Manipulace s CSS**](./net/css-handling/) – ovládněte manipulaci s CSS pro dokonalé stylování dokumentu
+- [**Získávání HTML obsahu**](./net/html-content-retrieval/) – efektivně extrahujte a zpracovávejte HTML obsah
+- [**Správa formulářových polí**](./net/form-field-management/) – ovládejte interaktivní formulářové prvky
+- [**Zpracování dokumentů**](./net/document-processing/) – základní techniky manipulace s dokumenty
+- [**Průvodce rychlým startem**](./net/quick-start-guide/) – začněte během několika minut
+- [**Načítání dokumentů**](./net/document-loading/) – načtěte dokumenty z různých zdrojů
+- [**Úprava dokumentů**](./net/document-editing/) – upravujte obsah a strukturu dokumentu
+- [**Manipulace s HTML**](./net/html-manipulation/) – pokročilé zpracování HTML
+- [**Dokumenty pro zpracování textu**](./net/word-processing-documents/) – tutoriály úpravy DOCX, DOC, RTF
+- [**Tabulkové dokumenty**](./net/spreadsheet-documents/) – průvodce manipulací s Excel soubory
+- [**Prezentace**](./net/presentation-documents/) – techniky úpravy PowerPoint
+- [**PDF dokumenty**](./net/pdf-documents/) – tvorba a úprava PDF
+- [**XML dokumenty**](./net/xml-documents/) – zpracování a konverze XML
+- [**Formulářová pole**](./net/form-fields/) – implementace interaktivních formulářů
+- [**Pokročilé funkce**](./net/advanced-features/) – funkce na úrovni expertů
+- [**Licencování a konfigurace**](./net/licensing-configuration/) – návod na nastavení a nasazení
+- [**Ukládání a export dokumentů**](./net/document-saving/) – export do různých formátů
+- [**Úprava HTML dokumentů**](./net/html-web-documents/) – zpracování webových dokumentů
+- [**Úprava prostého textu a DSV dokumentů**](./net/plain-text-dsv-documents/) – textové a oddělené soubory
 
 ### [GroupDocs.Editor pro Java tutoriály](./java/)
 
-GroupDocs.Editor pro Java poskytuje robustní možnosti úpravy dokumentů pro Java aplikace. Naše Java API umožňuje plynulou manipulaci s dokumenty napříč platformami, což je ideální pro podniková řešení a webové aplikace.
+GroupDocs.Editor pro Java poskytuje robustní možnosti úpravy dokumentů pro Java aplikace. Java API umožňuje plynulou manipulaci s dokumenty napříč platformami, což je ideální pro enterprise‑úrovňová řešení a webové aplikace.
 
 #### Klíčové funkce pro Java
 - Platformově nezávislé řešení úpravy dokumentů
-- Kompletní podpora formátů pro všechny typy obchodních dokumentů
-- Zabezpečené zpracování s šifrováním a řízením přístupu
+- Komplexní podpora formátů pro všechny typy obchodních dokumentů
+- Bezpečné zpracování se šifrováním a řízením přístupu
 - Extrakce zdrojů a optimalizace obsahu
 - Vysoce výkonný engine pro zpracování dokumentů
 
-#### Kategorie Java tutoriálů:
-- [**Tutoriály načítání dokumentů**](./java/document-loading/) - Načtěte dokumenty ze souborů, streamů a dalších zdrojů
-- [**Tutoriály úpravy dokumentů**](./java/document-editing/) - Upravujte dokumenty s přesností a kontrolou
-- [**Tutoriály ukládání a exportu dokumentů**](./java/document-saving/) - Ukládejte dokumenty v různých formátech
-- [**Úprava dokumentů pro zpracování textu**](./java/word-processing-documents/) - Manipulace s dokumenty Microsoft Word
-- [**Úprava tabulkových dokumentů**](./java/spreadsheet-documents/) - Zpracování Excel sešitů
-- [**Úprava prezentačních dokumentů**](./java/presentation-documents/) - Manipulace se snímky PowerPoint
-- [**Úprava prostého textu a DSV dokumentů**](./java/plain-text-dsv-documents/) - Zpracování textových souborů
-- [**Úprava XML dokumentů**](./java/xml-documents/) - Techniky zpracování XML
-- [**Úprava formulářových polí**](./java/form-fields/) - Správa interaktivních formulářů
-- [**Tutoriály pokročilých funkcí**](./java/advanced-features/) - Techniky pro experty
-- [**Licencování a konfigurace**](./java/licensing-configuration/) - Pokyny pro nasazení
+#### Kategorie Java tutoriálů
+- [**Tutoriály načítání dokumentů**](./java/document-loading/) – načtěte dokumenty ze souborů, streamů a dalších
+- [**Tutoriály úpravy dokumentů**](./java/document-editing/) – upravujte dokumenty s přesností a kontrolou
+- [**Tutoriály ukládání a exportu dokumentů**](./java/document-saving/) – ukládejte dokumenty v různých formátech
+- [**Úprava dokumentů pro zpracování textu**](./java/word-processing-documents/) – manipulace s Microsoft Word dokumenty
+- [**Úprava tabulkových dokumentů**](./java/spreadsheet-documents/) – zpracování Excel sešitů
+- [**Úprava prezentačních dokumentů**](./java/presentation-documents/) – manipulace se snímky PowerPoint
+- [**Úprava prostého textu a DSV dokumentů**](./java/plain-text-dsv-documents/) – práce s textovými soubory
+- [**Úprava XML dokumentů**](./java/xml-documents/) – techniky zpracování XML
+- [**Úprava formulářových polí**](./java/form-fields/) – správa interaktivních formulářů
+- [**Tutoriály pokročilých funkcí**](./java/advanced-features/) – techniky pro experty
+- [**Licencování a konfigurace**](./java/licensing-configuration/) – návod na nasazení
 
 ## Běžné případy použití
-- **Systémy pro správu obsahu** – Implementujte úpravu dokumentů v CMS platformách  
-- **Automatizace dokumentů** – Automatizujte generování a zpracování dokumentů  
-- **Kolaborativní úpravy** – Umožněte spolupráci více uživatelů na dokumentech  
-- **Konverze formátů** – Převádějte mezi formáty dokumentů s vysokou věrností  
-- **Sestavování dokumentů** – Vytvářejte komplexní dokumenty z více zdrojů  
-- **Řešení pro reportování** – Generujte a upravujte reporty programově  
-- **Webové editory dokumentů** – Vytvářejte vlastní online řešení úprav  
+- **Systémy pro správu obsahu** – implementujte úpravu dokumentů v CMS platformách
+- **Automatizace dokumentů** – automatizujte generování a zpracování dokumentů
+- **Kolaborativní úpravy** – umožněte spolupráci více uživatelů na dokumentech
+- **Konverze formátů** – převádějte mezi formáty dokumentů s vysokou věrností
+- **Sestavování dokumentů** – vytvářejte komplexní dokumenty z více zdrojů
+- **Řešení pro reporting** – generujte a upravujte reporty programově
+- **Weboví editory dokumentů** – vytvořte vlastní online řešení úprav
 
 ## Často kladené otázky
 
@@ -152,7 +152,7 @@ A: Ne, GroupDocs.Editor funguje nezávisle bez nutnosti Microsoft Office nebo ja
 **Q: Mohu implementovat GroupDocs.Editor ve webových aplikacích?**  
 A: Rozhodně! GroupDocs.Editor je ideální pro webové aplikace, umožňuje vám vytvářet řešení úpravy dokumentů založená na prohlížeči.
 
-**Q: Je GroupDocs.Editor zabezpečený?**  
+**Q: Je GroupDocs.Editor bezpečný?**  
 A: Ano, API zahrnuje ochranu heslem, šifrování a správu oprávnění pro zabezpečení vašich dokumentů.
 
 **Q: Jak mohu rychle začít?**  
@@ -165,10 +165,10 @@ A: Začněte s naším [Průvodcem rychlým startem](./net/quick-start-guide/) n
 - [Bezplatné fórum podpory](https://forum.groupdocs.com/c/editor)
 - [Placená podpora Helpdesk](https://helpdesk.groupdocs.com/)
 - [Blog](https://blog.groupdocs.com/category/editor/)
-- [Bezplatné školení webináře](https://groupdocs.com/webinars)
+- [Bezplatné školení a webináře](https://groupdocs.com/webinars)
 
 ---
 
-**Poslední aktualizace:** 2026-07-20  
-**Testováno s:** GroupDocs.Editor latest release (2026)  
+**Poslední aktualizace:** 2026-10-22  
+**Testováno s:** GroupDocs.Editor nejnovější vydání (2026)  
 **Autor:** GroupDocs
