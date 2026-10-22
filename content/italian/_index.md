@@ -1,9 +1,9 @@
 ---
 additionalTitle: GroupDocs API References | Document Editing Solutions
-date: 2026-07-20
-description: Scopri la GroupDocs.Editor API, un'API leader per la modifica di documenti
-  per .NET e Java che consente una rapida conversione PDF, la modifica di Word e l'elaborazione
-  sicura.
+date: 2026-10-22
+description: Scopri GroupDocs.Editor API, una delle principali API per la modifica
+  di documenti per .NET e Java che consente una rapida conversione PDF, la modifica
+  di Word e l'elaborazione sicura.
 is_root: true
 keywords:
 - GroupDocs.Editor API
@@ -11,21 +11,20 @@ keywords:
 - convert PDF
 - .NET document editing
 - Java document editing
-- document conversion
-lastmod: 2026-07-20
-linktitle: GroupDocs.Editor Tutorial e Documentazione
-og_description: Scopri la GroupDocs.Editor API, un'API leader per la modifica di documenti
-  per .NET e Java che consente una rapida conversione PDF, la modifica di Word e l'elaborazione
-  sicura.
-og_image_alt: Guide to using GroupDocs.Editor API for document editing in .NET and
-  Java
+lastmod: 2026-10-22
+linktitle: Guide e Documentazione di GroupDocs.Editor
+og_description: GroupDocs.Editor API consente una modifica di documenti ad alta fedeltà,
+  conversione e elaborazione sicura per sviluppatori .NET e Java, supportando oltre
+  40 formati e una gestione rapida di documenti fino a 500 pagine.
+og_image_alt: Screenshot of GroupDocs.Editor API documentation showing .NET and Java
+  editing features
 og_title: GroupDocs.Editor API – Modifica di documenti per .NET e Java
 schemas:
 - author: GroupDocs
-  dateModified: '2026-07-20'
+  dateModified: '2026-10-22'
   description: Discover the GroupDocs.Editor API, a leading document editing API for
     .NET & Java that enables fast PDF conversion, Word editing, and secure processing.
-  headline: GroupDocs.Editor API – Document Editing for .NET & Java
+  headline: GroupDocs.Editor API – Document editing for .NET & Java
   type: TechArticle
 - questions:
   - answer: GroupDocs.Editor supports 40+ formats, including DOCX, DOC, XLSX, XLS,
@@ -56,115 +55,111 @@ url: /it/
 weight: 11
 ---
 
-# GroupDocs.Editor API – Modifica di Documenti per .NET e Java
+# GroupDocs.Editor API – Modifica di documenti per .NET e Java
 
-Welcome to the comprehensive **GroupDocs.Editor API** documentation and tutorials hub! Whether you're a seasoned developer or just getting started, this central resource gives you everything you need to integrate high‑fidelity document editing, conversion, and processing into your .NET and Java applications. The GroupDocs.Editor API lets you load, edit, and save documents without Microsoft Office or Adobe Acrobat, making it ideal for cloud‑first and on‑premise solutions.
+Benvenuti al completo hub di documentazione e tutorial della **GroupDocs.Editor API**! Che siate sviluppatori esperti o alle prime armi, questa risorsa centrale vi fornisce tutto il necessario per integrare la modifica, la conversione e l'elaborazione di documenti ad alta fedeltà nelle vostre applicazioni .NET e Java. La GroupDocs.Editor API consente di caricare, modificare e salvare i documenti senza Microsoft Office o Adobe Acrobat, rendendola ideale per soluzioni cloud‑first e on‑premise.
 
-## Risposte Rapide
-- **What does GroupDocs.Editor API do?** It loads, converts to editable HTML, lets you modify content, and saves back to the original format while preserving layout.  
-- **Which platforms are supported?** Windows, Linux, and macOS for both .NET 6+ and Java 8+.  
-- **Do I need Office installed?** No external Office or Acrobat installations are required.  
-- **How many file formats are covered?** Over 40 input and output formats, including DOCX, XLSX, PPTX, PDF, HTML, XML, TXT, and CSV.  
-- **Is the API secure?** Yes – it offers password protection, encryption, and granular permission handling out of the box.
+## Risposte rapide
+- **Cosa fa GroupDocs.Editor API?** Carica i documenti, li converte in HTML modificabile, consente di modificare il contenuto e salva nuovamente nel formato originale preservando il layout.  
+- **Quali piattaforme sono supportate?** Windows, Linux e macOS per .NET 6+ e Java 8+.  
+- **È necessario avere Office installato?** Non è richiesta alcuna installazione esterna di Office o Acrobat.  
+- **Quanti formati di file sono supportati?** Oltre 40 formati di input e output, tra cui DOCX, XLSX, PPTX, PDF, HTML, XML, TXT e CSV.  
+- **L'API è sicura?** Sì – offre protezione con password, crittografia e gestione granulare delle autorizzazioni già pronta all'uso.
 
-## Che cos'è l'API GroupDocs.Editor?
-The **GroupDocs.Editor API** is a document editing API that lets developers programmatically load, modify, and save a broad spectrum of file types without requiring Microsoft Office or Adobe Acrobat. It handles document conversion, preserves layout, and supports advanced features such as form fields and encryption, all through a single, consistent object model.
+## Cos'è la GroupDocs.Editor API?
+`GroupDocs.Editor API` è un'API di modifica dei documenti che consente agli sviluppatori di caricare, modificare e salvare programmaticamente un'ampia gamma di tipi di file senza richiedere Microsoft Office o Adobe Acrobat. Gestisce la conversione dei documenti, preserva il layout e supporta funzionalità avanzate come campi modulo e crittografia, tutto tramite un unico modello di oggetti coerente.
 
-## Perché scegliere l'API GroupDocs.Editor?
-GroupDocs.Editor processes 500‑page documents in under 5 seconds on standard server hardware, and it supports **40+** file formats—including classic Office files, PDFs, XML, plain text, and delimited formats. The API eliminates the need for costly third‑party software, offers built‑in security (password protection, encryption, and permission control), and works consistently across Windows, Linux, and macOS, ensuring you can deliver a reliable editing experience to any user base.
+## Perché scegliere la GroupDocs.Editor API?
+GroupDocs.Editor elabora **documenti di 500 pagine in meno di 5 secondi** su hardware server standard e supporta **oltre 40** formati di file — inclusi i classici file Office, PDF, XML, testo semplice e formati delimitati. L'API elimina la necessità di costosi software di terze parti, offre sicurezza integrata (protezione con password, crittografia e controllo delle autorizzazioni) e funziona in modo coerente su Windows, Linux e macOS, garantendo di poter offrire un'esperienza di modifica affidabile a qualsiasi base di utenti.
 
-## Chi può beneficiare?
-The GroupDocs.Editor API is valuable for CMS developers building in‑app editors, automation engineers who need batch document generation, enterprise teams requiring secure server‑side processing, SaaS providers delivering collaborative editing, and reporting solutions that generate or modify PDFs, spreadsheets, and presentations on the fly.
+## Chi può trarne beneficio?
+La GroupDocs.Editor API è utile per gli sviluppatori di CMS che creano editor integrati, gli ingegneri di automazione che necessitano di generazione batch di documenti, i team aziendali che richiedono elaborazione sicura lato server, i fornitori SaaS che offrono modifica collaborativa e le soluzioni di reporting che generano o modificano PDF, fogli di calcolo e presentazioni al volo.
 
 ## Inizia con GroupDocs.Editor
 
 ### [Tutorial di GroupDocs.Editor per .NET](./net/)
 
-GroupDocs.Editor for .NET empowers developers to create, modify, and convert documents with precision and efficiency. Our comprehensive .NET API supports all major document formats and provides advanced editing capabilities without external dependencies.
+GroupDocs.Editor per .NET consente agli sviluppatori di creare, modificare e convertire documenti con precisione ed efficienza. L'API .NET supporta tutti i principali formati di documento e offre capacità di modifica avanzate senza dipendenze esterne.
 
 #### Caratteristiche principali per .NET
 - Pipeline completa di modifica dei documenti con conversione HTML  
-- Preservazione avanzata della formattazione durante conversioni round‑trip  
+- Preservazione avanzata della formattazione durante le conversioni round‑trip  
 - Supporto completo per la gestione e manipolazione di CSS  
 - Gestione dei campi modulo e modifica di elementi interattivi  
 - Elaborazione sicura dei documenti con opzioni di crittografia  
 
-#### Categorie dei tutorial .NET:
-
-- [**Gestione CSS**](./net/css-handling/) - Padroneggia la manipolazione di CSS per una stilizzazione perfetta del documento  
-- [**Recupero Contenuto HTML**](./net/html-content-retrieval/) - Estrai e processa il contenuto HTML in modo efficiente  
-- [**Gestione Campi Modulo**](./net/form-field-management/) - Controlla gli elementi di modulo interattivi  
-- [**Elaborazione Documenti**](./net/document-processing/) - Tecniche fondamentali di manipolazione dei documenti  
-- [**Guida Rapida**](./net/quick-start-guide/) - Inizia a lavorare in pochi minuti  
-- [**Caricamento Documenti**](./net/document-loading/) - Carica documenti da varie fonti  
-- [**Modifica Documenti**](./net/document-editing/) - Modifica il contenuto e la struttura del documento  
-- [**Manipolazione HTML**](./net/html-manipulation/) - Elaborazione avanzata di HTML  
-- [**Documenti di Elaborazione Testo**](./net/word-processing-documents/) - Tutorial di modifica per DOCX, DOC, RTF  
-- [**Documenti Foglio di Calcolo**](./net/spreadsheet-documents/) - Guide per la manipolazione di file Excel  
-- [**Documenti di Presentazione**](./net/presentation-documents/) - Tecniche di modifica PowerPoint  
-- [**Documenti PDF**](./net/pdf-documents/) - Creazione e modifica di PDF  
-- [**Documenti XML**](./net/xml-documents/) - Elaborazione e conversione XML  
-- [**Campi Modulo**](./net/form-fields/) - Implementazione di moduli interattivi  
-- [**Funzionalità Avanzate**](./net/advanced-features/) - Funzionalità a livello esperto  
-- [**Licenze e Configurazione**](./net/licensing-configuration/) - Guida all'installazione e al deployment  
-- [**Salvataggio ed Esportazione Documenti**](./net/document-saving/) - Esporta in vari formati  
-- [**Modifica Documenti HTML**](./net/html-web-documents/) - Elaborazione di documenti web  
-- [**Modifica Testo semplice e DSV**](./net/plain-text-dsv-documents/) - File di testo e delimitati  
+#### Categorie di tutorial .NET
+- [**Gestione CSS**](./net/css-handling/) – padroneggia la manipolazione di CSS per una stilizzazione perfetta del documento  
+- [**Recupero Contenuto HTML**](./net/html-content-retrieval/) – estrai e processa il contenuto HTML in modo efficiente  
+- [**Gestione Campi Modulo**](./net/form-field-management/) – controlla gli elementi interattivi del modulo  
+- [**Elaborazione Documenti**](./net/document-processing/) – tecniche fondamentali di manipolazione dei documenti  
+- [**Guida Rapida**](./net/quick-start-guide/) – inizia a lavorare in pochi minuti  
+- [**Caricamento Documenti**](./net/document-loading/) – carica documenti da varie fonti  
+- [**Modifica Documenti**](./net/document-editing/) – modifica il contenuto e la struttura del documento  
+- [**Manipolazione HTML**](./net/html-manipulation/) – elaborazione HTML avanzata  
+- [**Documenti di Elaborazione Testi**](./net/word-processing-documents/) – tutorial di modifica per DOCX, DOC, RTF  
+- [**Documenti di Foglio di Calcolo**](./net/spreadsheet-documents/) – guide per la manipolazione di file Excel  
+- [**Documenti di Presentazione**](./net/presentation-documents/) – tecniche di modifica PowerPoint  
+- [**Documenti PDF**](./net/pdf-documents/) – creazione e modifica di PDF  
+- [**Documenti XML**](./net/xml-documents/) – elaborazione e conversione XML  
+- [**Campi Modulo**](./net/form-fields/) – implementazione di moduli interattivi  
+- [**Funzionalità Avanzate**](./net/advanced-features/) – funzionalità a livello esperto  
+- [**Licenze & Configurazione**](./net/licensing-configuration/) – guida all'installazione e al deployment  
+- [**Salvataggio ed Esportazione Documenti**](./net/document-saving/) – esporta in vari formati  
+- [**Modifica Documenti HTML**](./net/html-web-documents/) – elaborazione di documenti web  
+- [**Modifica Testo Semplice e DSV**](./net/plain-text-dsv-documents/) – file di testo e delimitati  
 
 ### [Tutorial di GroupDocs.Editor per Java](./java/)
 
-GroupDocs.Editor for Java delivers robust document editing capabilities for Java applications. Our Java API enables seamless document manipulation across platforms, making it ideal for enterprise‑level solutions and web applications.
+GroupDocs.Editor per Java offre robuste capacità di modifica dei documenti per le applicazioni Java. L'API Java consente una manipolazione fluida dei documenti su più piattaforme, rendendola ideale per soluzioni a livello enterprise e applicazioni web.
 
 #### Caratteristiche principali per Java
-- Soluzione di modifica documenti indipendente dalla piattaforma  
-- Supporto completo per tutti i tipi di documenti aziendali  
+- Soluzione di modifica dei documenti indipendente dalla piattaforma  
+- Supporto completo dei formati per tutti i tipi di documenti aziendali  
 - Elaborazione sicura con crittografia e controllo degli accessi  
 - Estrazione delle risorse e ottimizzazione dei contenuti  
-- Motore di elaborazione documenti ad alte prestazioni  
+- Motore di elaborazione dei documenti ad alte prestazioni  
 
-#### Categorie dei tutorial Java:
-
-- [**Tutorial di Caricamento Documenti**](./java/document-loading/) - Carica documenti da file, stream e altro  
-- [**Tutorial di Modifica Documenti**](./java/document-editing/) - Modifica documenti con precisione e controllo  
-- [**Tutorial di Salvataggio ed Esportazione Documenti**](./java/document-saving/) - Salva documenti in vari formati  
-- [**Modifica Documenti di Elaborazione Testo**](./java/word-processing-documents/) - Manipolazione di documenti Microsoft Word  
-- [**Modifica Documenti Foglio di Calcolo**](./java/spreadsheet-documents/) - Elaborazione di cartelle di lavoro Excel  
-- [**Modifica Documenti di Presentazione**](./java/presentation-documents/) - Manipolazione di diapositive PowerPoint  
-- [**Modifica Testo semplice e DSV**](./java/plain-text-dsv-documents/) - Gestione di file di testo  
-- [**Modifica Documenti XML**](./java/xml-documents/) - Tecniche di elaborazione XML  
-- [**Modifica Campi Modulo**](./java/form-fields/) - Gestione di moduli interattivi  
-- [**Tutorial di Funzionalità Avanzate**](./java/advanced-features/) - Tecniche avanzate  
-- [**Licenze e Configurazione**](./java/licensing-configuration/) - Guida al deployment  
+#### Categorie di tutorial Java
+- [**Tutorial di Caricamento Documenti**](./java/document-loading/) – carica documenti da file, stream e altro  
+- [**Tutorial di Modifica Documenti**](./java/document-editing/) – modifica i documenti con precisione e controllo  
+- [**Tutorial di Salvataggio ed Esportazione Documenti**](./java/document-saving/) – salva i documenti in vari formati  
+- [**Modifica Documenti di Elaborazione Testi**](./java/word-processing-documents/) – manipolazione di documenti Microsoft Word  
+- [**Modifica Documenti di Foglio di Calcolo**](./java/spreadsheet-documents/) – elaborazione di cartelle di lavoro Excel  
+- [**Modifica Documenti di Presentazione**](./java/presentation-documents/) – manipolazione di diapositive PowerPoint  
+- [**Modifica Testo Semplice e DSV**](./java/plain-text-dsv-documents/) – gestione di file di testo  
+- [**Modifica Documenti XML**](./java/xml-documents/) – tecniche di elaborazione XML  
+- [**Modifica Campi Modulo**](./java/form-fields/) – gestione di moduli interattivi  
+- [**Tutorial di Funzionalità Avanzate**](./java/advanced-features/) – tecniche esperte  
+- [**Licenze e Configurazione**](./java/licensing-configuration/) – guida al deployment  
 
 ## Casi d'uso comuni
+- **Sistemi di gestione dei contenuti** – implementa la modifica dei documenti nelle piattaforme CMS  
+- **Automazione dei documenti** – automatizza la generazione e l'elaborazione dei documenti  
+- **Modifica collaborativa** – consente la collaborazione su documenti da più utenti  
+- **Conversione di formati** – converte tra formati di documento con alta fedeltà  
+- **Assemblaggio di documenti** – crea documenti complessi da più fonti  
+- **Soluzioni di reporting** – genera e modifica report programmaticamente  
+- **Editor di documenti basati sul web** – costruisci soluzioni di modifica online personalizzate  
 
-- **Sistemi di Gestione dei Contenuti** – Implementa la modifica dei documenti nelle piattaforme CMS  
-- **Automazione dei Documenti** – Automatizza la generazione e l'elaborazione dei documenti  
-- **Modifica Collaborativa** – Consenti la collaborazione su documenti da più utenti  
-- **Conversione di Formato** – Converti tra formati di documento con alta fedeltà  
-- **Assemblaggio di Documenti** – Crea documenti complessi da più fonti  
-- **Soluzioni di Reporting** – Genera e modifica report in modo programmatico  
-- **Editor di Documenti Basati sul Web** – Costruisci soluzioni di modifica online personalizzate  
+## Domande frequenti
 
-## Domande Frequenti
+**Q: Quali formati di documento sono supportati?**  
+A: GroupDocs.Editor supporta oltre 40 formati, tra cui DOCX, DOC, XLSX, XLS, PPTX, PPT, PDF, HTML, XML, RTF, ODT, ODS, ODP, TXT, CSV e molti altri.
 
-**D: Quali formati di documento sono supportati?**  
-R: GroupDocs.Editor supporta oltre 40 formati, tra cui DOCX, DOC, XLSX, XLS, PPTX, PPT, PDF, HTML, XML, RTF, ODT, ODS, ODP, TXT, CSV e molti altri.
+**Q: È necessario avere Microsoft Office installato?**  
+A: No, GroupDocs.Editor funziona in modo indipendente senza richiedere Microsoft Office o altre applicazioni esterne.
 
-**D: È necessario avere Microsoft Office installato?**  
-R: No, GroupDocs.Editor funziona in modo indipendente senza richiedere Microsoft Office o altre applicazioni esterne.
+**Q: Posso implementare GroupDocs.Editor nelle applicazioni web?**  
+A: Assolutamente! GroupDocs.Editor è perfetto per le applicazioni web, consentendo di creare soluzioni di modifica di documenti basate sul browser.
 
-**D: Posso implementare GroupDocs.Editor nelle applicazioni web?**  
-R: Assolutamente! GroupDocs.Editor è perfetto per le applicazioni web, consentendo di creare soluzioni di modifica di documenti basate sul browser.
+**Q: GroupDocs.Editor è sicura?**  
+A: Sì, l'API include protezione con password, crittografia e gestione delle autorizzazioni per mantenere i documenti al sicuro.
 
-**D: GroupDocs.Editor è sicuro?**  
-R: Sì, l'API include protezione con password, crittografia e gestione dei permessi per mantenere i documenti al sicuro.
+**Q: Come posso iniziare rapidamente?**  
+A: Inizia con la nostra [Guida Rapida](./net/quick-start-guide/) o scarica una prova gratuita dal [sito GroupDocs](https://products.groupdocs.com/editor/).
 
-**D: Come posso iniziare rapidamente?**  
-R: Inizia con la nostra [Guida Rapida](./net/quick-start-guide/) o scarica una prova gratuita dal [sito web di GroupDocs](https://products.groupdocs.com/editor/).
-
-## Risorse Aggiuntive
-
+## Risorse aggiuntive
 - [Documentazione](https://docs.groupdocs.com/editor/)
 - [Riferimento API](https://apireference.groupdocs.com/editor)
 - [Esempi su GitHub](https://github.com/groupdocs-editor)
@@ -175,6 +170,6 @@ R: Inizia con la nostra [Guida Rapida](./net/quick-start-guide/) o scarica una p
 
 ---
 
-**Ultimo aggiornamento:** 2026-07-20  
-**Testato con:** GroupDocs.Editor ultima release (2026)  
+**Last updated:** 2026-10-22  
+**Testato con:** GroupDocs.Editor latest release (2026)  
 **Autore:** GroupDocs
