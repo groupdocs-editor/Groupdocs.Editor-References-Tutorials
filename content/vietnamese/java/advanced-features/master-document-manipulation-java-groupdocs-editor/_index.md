@@ -1,22 +1,32 @@
 ---
-date: '2026-06-27'
-description: Tìm hiểu cách chỉnh sửa tài liệu word trong Java với GroupDocs.Editor—load,
-  edit, and save Word files, optimize memory usage, and remove form fields.
+date: '2026-10-27'
+description: Tìm hiểu cách xóa trường biểu mẫu và chỉnh sửa tài liệu Word trong Java
+  bằng GroupDocs.Editor, bao gồm tải tệp được bảo vệ, tối ưu hóa việc sử dụng bộ nhớ
+  và lưu với mật khẩu.
 keywords:
-- how to edit word
+- remove form fields
 - edit password protected word
-- optimize memory usage java
-- remove form field java
+- save word as pdf
+- convert word to html
+- load word document
+lastmod: '2026-10-27'
+og_description: Tìm hiểu cách xóa trường biểu mẫu và chỉnh sửa tài liệu Word trong
+  Java với GroupDocs.Editor. Bao gồm tải, tối ưu hóa bộ nhớ và bảo vệ bằng mật khẩu.
+og_image_alt: Guide showing removal of form fields from Word documents using GroupDocs.Editor
+  in Java
+og_title: Cách xóa trường biểu mẫu khi chỉnh sửa tài liệu Word trong Java
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-27'
-  description: Learn how to edit word documents in Java with GroupDocs.Editor—load,
-    edit, and save Word files, optimize memory usage, and remove form fields.
-  headline: How to Edit Word Documents in Java with GroupDocs.Editor
+  dateModified: '2026-10-27'
+  description: Learn how to remove form fields and edit Word documents in Java using
+    GroupDocs.Editor, including loading protected files, optimizing memory usage,
+    and saving with passwords.
+  headline: How to remove form fields while editing Word docs in Java
   type: TechArticle
-- description: Learn how to edit word documents in Java with GroupDocs.Editor—load,
-    edit, and save Word files, optimize memory usage, and remove form fields.
-  name: How to Edit Word Documents in Java with GroupDocs.Editor
+- description: Learn how to remove form fields and edit Word documents in Java using
+    GroupDocs.Editor, including loading protected files, optimizing memory usage,
+    and saving with passwords.
+  name: How to remove form fields while editing Word docs in Java
   steps:
   - name: '**Maven Setup** – Add the repository and dependency shown above.'
     text: '**Maven Setup** – Add the repository and dependency shown above.'
@@ -52,37 +62,37 @@ schemas:
       to free resources.
     question: Do I need to close streams manually?
   type: FAQPage
-title: Cách chỉnh sửa tài liệu Word trong Java với GroupDocs.Editor
+tags:
+- remove form fields
+- GroupDocs.Editor
+- Java document processing
+- Word automation
+title: Cách xóa trường biểu mẫu khi chỉnh sửa tài liệu Word trong Java
 type: docs
 url: /vi/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
 
-# Cách chỉnh sửa tài liệu Word trong Java với GroupDocs.Editor
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-## Giới thiệu
+# Cách xóa trường biểu mẫu khi chỉnh sửa tài liệu Word trong Java
 
-Nếu bạn cần **cách chỉnh sửa Word** tài liệu một cách lập trình, GroupDocs.Editor cho Java cung cấp cho bạn một API sạch sẽ, tiết kiệm bộ nhớ, hoạt động với cả các tệp được bảo vệ và không được bảo vệ. Cho dù bạn đang xây dựng dịch vụ tạo tài liệu, tự động dọn dẹp các trường biểu mẫu, hoặc bảo mật nội dung nhạy cảm, hướng dẫn này sẽ dẫn bạn qua việc tải, chỉnh sửa và lưu các tệp Word với các tùy chọn thực hành tốt nhất.
-
-**Những gì bạn sẽ đạt được trong hướng dẫn này:**
-- Tải tài liệu Word (bao gồm các tệp được bảo vệ bằng mật khẩu) bằng GroupDocs.Editor.  
-- Quản lý và xóa các trường biểu mẫu như ô nhập văn bản hoặc hộp kiểm.  
-- Lưu tài liệu đã chỉnh sửa đồng thời tối ưu hóa việc sử dụng bộ nhớ và áp dụng bảo vệ bằng mật khẩu ghi.  
-
-Bây giờ bạn đã thấy lợi ích, hãy thiết lập môi trường và bắt đầu chỉnh sửa tài liệu Word trong Java.
+Nếu bạn cần **xóa trường biểu mẫu** khỏi tài liệu Word một cách lập trình, GroupDocs.Editor cho Java cung cấp một API sạch sẽ, tiết kiệm bộ nhớ, hoạt động với cả tệp được bảo vệ và không được bảo vệ. Dù bạn đang xây dựng dịch vụ tạo tài liệu, dọn dẹp các mẫu cũ, hoặc bảo mật nội dung nhạy cảm, hướng dẫn này sẽ chỉ cho bạn cách tải, chỉnh sửa và lưu các tệp Word với các tùy chọn thực hành tốt nhất.
 
 ## Câu trả lời nhanh
-- **GroupDocs.Editor có thể mở các tệp được bảo vệ bằng mật khẩu không?** Có – chỉ cần cung cấp mật khẩu trong `WordProcessingLoadOptions`.  
+- **GroupDocs.Editor có thể mở tệp được bảo vệ bằng mật khẩu không?** Có – chỉ cần cung cấp mật khẩu trong `WordProcessingLoadOptions`.  
 - **Tùy chọn nào giảm tiêu thụ bộ nhớ cho tài liệu lớn?** `setOptimizeMemoryUsage(true)` trong `WordProcessingSaveOptions`.  
 - **Làm thế nào để xóa một trường biểu mẫu cụ thể?** Gọi `FormFieldManager.removeFormField(fieldName)`.  
-- **Tôi có cần giấy phép cho việc sử dụng trong môi trường sản xuất không?** Bản dùng thử hoạt động cho việc đánh giá; giấy phép đầy đủ mở khóa tất cả các tính năng.  
-- **Phiên bản Java nào được yêu cầu?** JDK 8 hoặc cao hơn.
+- **Tôi có cần giấy phép cho việc sử dụng trong môi trường sản xuất không?** Bản dùng thử hoạt động để đánh giá; giấy phép đầy đủ mở khóa tất cả tính năng.  
+- **Yêu cầu phiên bản Java nào?** JDK 8 hoặc cao hơn.
 
 ## Yêu cầu trước
 
 - **Java Development Kit (JDK)** 8 hoặc mới hơn.  
-- **IDE** – IntelliJ IDEA, Eclipse hoặc NetBeans.  
-- **Maven** cho quản lý phụ thuộc.  
+- **IDE** – IntelliJ IDEA, Eclipse, hoặc NetBeans.  
+- **Maven** để quản lý phụ thuộc.  
 
 ### Thư viện cần thiết
 
@@ -116,7 +126,7 @@ Thêm GroupDocs.Editor vào dự án Maven của bạn:
 
 Bạn cũng có thể tải xuống các tệp nhị phân từ cùng một [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
-Hoặc, tải thư viện trực tiếp từ [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+Hoặc tải trực tiếp thư viện từ [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 ### Cài đặt môi trường
 
@@ -124,21 +134,19 @@ Hoặc, tải thư viện trực tiếp từ [GroupDocs.Editor for Java releases
 
 ## Cài đặt GroupDocs.Editor cho Java
 
-GroupDocs.Editor hỗ trợ **hơn 30 định dạng đầu vào và đầu ra** và có thể xử lý tài liệu lên tới **500 MB** mà không cần tải toàn bộ tệp vào bộ nhớ, nhờ kiến trúc streaming của nó.
+GroupDocs.Editor hỗ trợ **hơn 30 định dạng đầu vào và đầu ra** và có thể xử lý tài liệu lên tới **500 MB** mà không cần tải toàn bộ tệp vào bộ nhớ, giảm mức sử dụng RAM lên tới **70 %** nhờ kiến trúc streaming. Nó cũng có thể xử lý tới **1.000 phiên chỉnh sửa đồng thời** trên một máy chủ tiêu chuẩn 8‑core.
 
-1. **Cài đặt Maven** – Thêm kho và phụ thuộc được hiển thị ở trên.  
-2. **Tải xuống trực tiếp** – Sử dụng cùng liên kết phát hành nếu bạn muốn thêm JAR thủ công.
+1. **Maven setup** – Thêm kho và phụ thuộc như đã hiển thị ở trên.  
+2. **Direct download** – Sử dụng cùng một liên kết phát hành nếu bạn muốn thêm JAR thủ công.
 
 ### Nhận giấy phép
 
-- **Bản dùng thử miễn phí** – Tải xuống và đánh giá mà không tốn phí.  
-- **Giấy phép đầy đủ** – Mua hoặc yêu cầu khóa tạm thời để mở khóa các tính năng nâng cao như xử lý hàng loạt và hỗ trợ cao cấp.
+- **Free trial** – Tải xuống và đánh giá mà không tốn phí.  
+- **Full license** – Mua hoặc yêu cầu khóa tạm thời để mở khóa các tính năng nâng cao như xử lý hàng loạt và hỗ trợ cao cấp.
 
 ## Cách tải tài liệu Word bằng GroupDocs.Editor?
 
-Việc tải tài liệu Word bằng GroupDocs.Editor rất đơn giản: bạn tạo một `InputStream` cho tệp, tùy chọn đặt mật khẩu trong `WordProcessingLoadOptions`, và sau đó khởi tạo `Editor` với các tham số này. Thư viện đọc tài liệu theo kiểu streaming và trả về một đối tượng `Editor` cho phép bạn truy cập đầy đủ để chỉnh sửa, quản lý các trường biểu mẫu và lưu tệp.
-
-`Editor` là lớp cốt lõi đại diện cho một tài liệu Word đã được tải và cung cấp các phương thức để chỉnh sửa, xử lý trường biểu mẫu và lưu.
+`FileInputStream` là lớp I/O của Java đọc byte từ tệp. `WordProcessingLoadOptions` cấu hình các tùy chọn mở như mật khẩu. `Editor` là lớp cốt lõi của GroupDocs.Editor dùng để tải, chỉnh sửa và lưu tài liệu. Để tải một tệp Word, tạo một `FileInputStream`, tùy chọn đặt mật khẩu trong các tùy chọn tải, và truyền cả hai vào hàm khởi tạo `Editor`, hàm này sẽ stream tài liệu mà không cần tải toàn bộ vào bộ nhớ.
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample_docx";
@@ -170,13 +178,11 @@ Editor editor = new Editor(inputStream, loadOptions);
 Editor editor = new Editor(fs, loadOptions);
 ```
 
-**Tại sao điều này quan trọng:** Cung cấp mật khẩu đúng là cần thiết; nếu không, thư viện sẽ coi tệp là không được bảo vệ và có thể ném ra ngoại lệ.
+**Tại sao điều này quan trọng:** Cung cấp đúng mật khẩu là thiết yếu; nếu không thư viện sẽ coi tệp là không được bảo vệ và có thể ném ra ngoại lệ.
 
 ## Cách xóa một trường biểu mẫu khỏi tài liệu Word bằng GroupDocs.Editor?
 
-Để xóa một trường biểu mẫu cụ thể, lấy `FormFieldManager` từ thể hiện `Editor` và gọi phương thức `removeFormField` của nó với tên của trường. Thao tác này loại bỏ định nghĩa trường khỏi cấu trúc tài liệu, đảm bảo rằng tệp kết quả không còn chứa phần tử nhập không mong muốn và sẽ không yêu cầu người dùng nhập dữ liệu.
-
-`FormFieldManager` là thành phần chịu trách nhiệm truy cập và thao tác các trường biểu mẫu trong một tài liệu Word đã tải.
+`FormFieldManager` quản lý các trường biểu mẫu trong tài liệu Word đã tải, cho phép truy xuất, thêm và xóa. Sau khi lấy nó từ thể hiện `Editor`, gọi `removeFormField` với tên trường mục tiêu để xóa trường đó khỏi cấu trúc tài liệu trước khi lưu. Điều này đảm bảo trường được xóa hoàn toàn và sẽ không xuất hiện trong đầu ra cuối cùng.
 
 ```java
 FormFieldManager fieldManager = editor.getFormFieldManager();
@@ -208,9 +214,7 @@ saveOptions.setProtection(com.groupdocs.editor.options.WordProcessingProtection.
 
 ## Cách lưu tài liệu Word với tối ưu hóa việc sử dụng bộ nhớ trong Java?
 
-Khi bạn đã sẵn sàng lưu các thay đổi, cấu hình một đối tượng `WordProcessingSaveOptions` và bật cờ `setOptimizeMemoryUsage(true)` của nó. Điều này yêu cầu GroupDocs.Editor ghi tài liệu theo từng phần thay vì tải toàn bộ nội dung vào bộ nhớ heap, giảm đáng kể việc tiêu thụ RAM. Bạn cũng có thể đặt mật khẩu ghi hoặc chọn định dạng đầu ra trước khi gọi phương thức `save`.
-
-`WordProcessingSaveOptions` cho phép bạn tinh chỉnh quá trình lưu, bao gồm tối ưu hóa bộ nhớ và bảo vệ tài liệu.
+`WordProcessingSaveOptions` kiểm soát cách tài liệu được lưu, bao gồm định dạng, bảo vệ bằng mật khẩu và tối ưu hóa bộ nhớ. Tạo một thể hiện, bật `setOptimizeMemoryUsage(true)`, tùy chọn đặt mật khẩu ghi, và truyền nó vào `editor.save`. Thư viện sau đó sẽ ghi tệp theo từng khối, giảm đáng kể việc tiêu thụ RAM và ngăn lỗi OutOfMemoryError cho các tài liệu lớn.
 
 ```java
 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -228,41 +232,41 @@ ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 editor.save(outputStream, saveOptions);
 ```
 
-**Tại sao điều này quan trọng:** Bật `optimizeMemoryUsage` là rất quan trọng đối với các tài liệu lớn (hàng trăm trang) vì nó ngăn ngừa lỗi OutOfMemoryError trên các cấu hình máy chủ thông thường.
+**Tại sao điều này quan trọng:** Bật `optimizeMemoryUsage` là yếu tố then chốt cho các tài liệu lớn (hàng trăm trang) vì nó ngăn lỗi OutOfMemoryError trên các cấu hình máy chủ thông thường.
 
 ## Ứng dụng thực tiễn
 
-- **Tự động hoá tài liệu hàng loạt** – Xử lý hàng nghìn tệp Word mỗi đêm mà không làm cạn kiệt RAM của máy chủ.  
-- **Cá nhân hoá mẫu động** – Thêm hoặc xóa các trường ngay lập tức dựa trên đầu vào của người dùng.  
-- **Phân phối tài liệu an toàn** – Áp dụng bảo vệ bằng mật khẩu ghi đồng thời vẫn cho phép chỉnh sửa các trường biểu mẫu.
+- **Batch document automation** – Xử lý hàng nghìn tệp Word mỗi đêm mà không làm cạn kiệt RAM của máy chủ.  
+- **Dynamic template personalization** – Thêm hoặc xóa các trường ngay lập tức dựa trên đầu vào của người dùng.  
+- **Secure document distribution** – Áp dụng bảo vệ bằng mật khẩu ghi đồng thời vẫn cho phép chỉnh sửa trường biểu mẫu.
 
-## Các cân nhắc về hiệu năng
+## Các cân nhắc về hiệu suất
 
-- **Tối ưu hóa bộ nhớ** – `setOptimizeMemoryUsage(true)` giảm tiêu thụ heap lên tới 70 % cho các tệp 200 trang.  
-- **Quản lý stream** – Luôn đóng các stream (`try‑with‑resources` được khuyến nghị) để tránh rò rỉ.  
-- **Cập nhật phiên bản** – Giữ GroupDocs.Editor luôn cập nhật; mỗi bản phát hành thêm hỗ trợ định dạng và các bản vá hiệu năng.
+- **Memory optimization** – `setOptimizeMemoryUsage(true)` giảm tiêu thụ heap lên tới 70 % cho các tệp 200 trang.  
+- **Stream management** – Luôn đóng các stream (`try‑with‑resources` được khuyến nghị) để tránh rò rỉ.  
+- **Version updates** – Giữ GroupDocs.Editor luôn cập nhật; mỗi bản phát hành thêm hỗ trợ định dạng và các bản vá hiệu suất.
 
 ## Kết luận
 
-Bây giờ bạn đã biết **cách chỉnh sửa word** tài liệu trong Java bằng GroupDocs.Editor: tải tệp (kể cả các tệp được bảo vệ), thao tác các trường biểu mẫu, và lưu với các tùy chọn tiết kiệm bộ nhớ và bảo vệ. Tích hợp các đoạn mã này vào dịch vụ của bạn để tăng năng suất và độ tin cậy.
+Bạn đã biết **cách xóa trường biểu mẫu** và chỉnh sửa tài liệu Word trong Java bằng GroupDocs.Editor: tải tệp (kể cả tệp được bảo vệ), thao tác với các trường biểu mẫu, và lưu với các tùy chọn tiết kiệm bộ nhớ và bảo vệ. Tích hợp các đoạn mã này vào dịch vụ của bạn để tăng năng suất và độ tin cậy.
 
-**Các bước tiếp theo:**
-- Thử nghiệm các `WordProcessingFormats` khác như PDF hoặc HTML.  
-- Kết hợp chỉnh sửa với các tính năng chuyển đổi cho quy trình tài liệu đầu‑cuối.  
-- Xem lại tài liệu tham khảo API chính thức cho các kịch bản nâng cao như chỉnh sửa cộng tác.
+**Bước tiếp theo:**  
+- Thử nghiệm với các `WordProcessingFormats` khác như PDF hoặc HTML.  
+- Kết hợp chỉnh sửa với các tính năng chuyển đổi để xây dựng quy trình tài liệu đầu‑tới‑đầu.  
+- Xem lại tài liệu API chính thức cho các kịch bản nâng cao như chỉnh sửa cộng tác.
 
-## Mục FAQ
+## Phần Câu hỏi thường gặp
 
 1. **Tôi có thể sử dụng GroupDocs.Editor mà không có giấy phép không?**  
-   Có, bản dùng thử miễn phí có sẵn để đánh giá, nhưng giấy phép là bắt buộc cho triển khai sản xuất.  
+   Có, bản dùng thử miễn phí có sẵn để đánh giá, nhưng giấy phép cần thiết cho triển khai sản xuất.  
 2. **GroupDocs.Editor có tương thích với tất cả các phiên bản Word không?**  
    Nó hỗ trợ đầy đủ các tệp DOCX, DOC và DOCM được tạo bởi Word 2007 đến Word 2021.  
 3. **Thư viện xử lý các tệp lớn như thế nào?**  
-   Bằng cách streaming nội dung và sử dụng `optimizeMemoryUsage`, nó có thể xử lý các tệp lên tới 500 MB mà không tải toàn bộ tệp vào bộ nhớ.  
+   Bằng cách stream nội dung và sử dụng `optimizeMemoryUsage`, nó có thể xử lý các tệp lên tới 500 MB mà không tải toàn bộ vào bộ nhớ.  
 4. **Tôi có thể tích hợp GroupDocs.Editor với Spring Boot không?**  
    Chắc chắn – chỉ cần khai báo phụ thuộc Maven và tiêm `Editor` ở nơi cần thiết.  
-5. **Tôi có thể nhận được sự trợ giúp ở đâu nếu gặp vấn đề?**  
-   Truy cập [GroupDocs Support Forum](https://forum.groupdocs.com/c/editor/) để nhận câu trả lời từ cộng đồng và hỗ trợ chính thức.
+5. **Tôi có thể nhận hỗ trợ ở đâu nếu gặp vấn đề?**  
+   Truy cập [GroupDocs Support Forum](https://forum.groupdocs.com/c/editor/) để được trợ giúp.
 
 ## Câu hỏi thường gặp
 
@@ -273,7 +277,7 @@ A: Cung cấp mật khẩu qua `WordProcessingLoadOptions.setPassword()` trướ
 A: Có—`WordProcessingSaveOptions` chấp nhận các định dạng như PDF, RTF và HTML thông qua enum `WordProcessingFormats`.
 
 **Q: `optimize memory usage java` thực sự làm gì?**  
-A: Nó stream tài liệu theo từng phần, ngăn toàn bộ tệp nằm trong bộ nhớ heap, rất thích hợp cho các tệp lớn.
+A: Nó stream tài liệu theo từng khối, ngăn toàn bộ tệp nằm trong bộ nhớ heap, rất phù hợp cho các tệp lớn.
 
 **Q: Có thể xóa tất cả các trường biểu mẫu cùng một lúc không?**  
 A: Duyệt qua `fieldManager.getFormFields()` và gọi `removeFormField` cho mỗi mục.
@@ -283,12 +287,19 @@ A: Có—sử dụng try‑with‑resources hoặc đóng rõ ràng `InputStream
 
 ---
 
-**Cập nhật lần cuối:** 2026-06-27  
-**Đã kiểm tra với:** GroupDocs.Editor 25.3 cho Java  
-**Tác giả:** GroupDocs  
+**Last Updated:** 2026-10-27  
+**Tested With:** GroupDocs.Editor 25.3 for Java  
+**Author:** GroupDocs  
 
 ## Hướng dẫn liên quan
 
 - [Cách tải tài liệu Word trong Java với GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
-- [Cách sử dụng GroupDocs - Tải & chỉnh sửa các trường biểu mẫu Word với Java](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
+- [Cách sử dụng GroupDocs - Tải & chỉnh sửa trường biểu mẫu Word với Java](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
 - [Lưu Word có mật khẩu bằng GroupDocs.Editor cho Java](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}

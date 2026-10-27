@@ -1,21 +1,28 @@
 ---
-date: '2026-06-16'
-description: Tanulja meg, hogyan kell metaadatokat kinyerni, hogyan kell metaadatokat
-  kinyerni Java-ban, és hogyan kell a document type-ot Java-val felismerni a GroupDocs.Editor
-  for Java segítségével a Word, Excel és szöveges fájlok esetén.
+date: '2026-10-27'
+description: Ismerje meg, hogyan nyerhet ki metaadatokat, hogyan nyerhet ki metaadatokat
+  Java-ban, és hogyan ismerheti fel a dokumentumtípust Java-val a GroupDocs.Editor
+  for Java segítségével Word, Excel és szöveges fájlok esetén.
 keywords:
 - how to extract metadata
-- java get page count
-- java get document properties
-- java read document info
 - java detect file format
+- groupdocs editor metadata
+- get page count java
+- java get document info
+lastmod: '2026-10-27'
+og_description: Ismerje meg, hogyan nyerhet ki metaadatokat Java-ban, hogyan ismerheti
+  fel a dokumentumtípust, és hogyan olvashatja ki a tulajdonságokat, például az oldalszámot
+  a GroupDocs.Editor segítségével – egy gyors, memóriahatékony megoldás.
+og_image_alt: Guide showing Java code extracting document metadata with GroupDocs.Editor
+og_title: Hogyan nyerhet ki metaadatokat a Java dokumentumokból a GroupDocs.Editor
+  használatával
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-16'
+  dateModified: '2026-10-27'
   description: Learn how to extract metadata, how to extract metadata in Java, and
     detect document type java with GroupDocs.Editor for Java across Word, Excel, and
     text files.
-  headline: How to Extract Metadata from Documents Java using GroupDocs.Editor
+  headline: How to extract metadata from Documents Java using GroupDocs.Editor
   type: TechArticle
 - questions:
   - answer: GroupDocs.Editor focuses on editable formats (DOCX, XLSX, etc.). For PDFs,
@@ -32,39 +39,45 @@ schemas:
   - answer: Java 8 or later; newer LTS versions (11, 17) are fully supported.
     question: What Java version is required?
   type: FAQPage
-title: Hogyan kell metaadatokat kinyerni dokumentumokból Java használatával a GroupDocs.Editor
-  segítségével
+tags:
+- extract metadata
+- GroupDocs.Editor
+- Java document processing
+- document type detection
+- metadata extraction
+title: Hogyan nyerhet ki metaadatokat a Java dokumentumokból a GroupDocs.Editor használatával
 type: docs
 url: /hu/java/advanced-features/groupdocs-editor-java-document-extraction-guide/
 weight: 1
 ---
 
-# Hogyan vonjunk ki metaadatokat dokumentumokból Java-ban a GroupDocs.Editor segítségével
+# Hogyan nyerjünk ki metaadatokat a Dokumentumok Java-ban a GroupDocs.Editor segítségével
 
-Ha fejlesztő vagy, aki **fáradt már a manuális információkinyerésből Word, Excel vagy egyszerű szövegfájlokból**, ez az útmutató megmutatja, **hogyan vonjunk ki metaadatokat** gyorsan és megbízhatóan. Megtudod, miért a GroupDocs.Editor for Java a legjobb könyvtár a **detect document type java** feladatokra, hogyan olvassuk ki a tulajdonságokat, mint például az oldalszám, a szerző és a titkosítás állapota, és hogyan kezeljünk jelszóval védett fájlokat – mindezt tömör, termelésre kész kódrészletekkel.
+Ha fejlesztő vagy, aki **fáradt már a manuális információkinyerésből Word, Excel vagy egyszerű szövegfájlokból**, ez az útmutató megmutatja, **hogyan nyerjünk ki metaadatokat** gyorsan és megbízhatóan. Megtudod, miért a GroupDocs.Editor for Java a legjobb könyvtár a **detect document type java** feladathoz, hogyan olvassuk ki a tulajdonságokat, mint például az oldalszám, a szerző és a titkosítás állapota, valamint hogyan kezeljünk jelszóval védett fájlokat – mindezt tömör, termelésre kész kódrészletekkel.
 
 ## Gyors válaszok
-- **Mi jelent a “extract document metadata java”?** Azt jelenti, hogy programozottan olvasunk ki olyan tulajdonságokat, mint a formátum, oldalszám, méret és a titkosítás állapota a dokumentumokból Java használatával.  
+- **Mit jelent a “extract document metadata java”?** Ez a dokumentumok formátuma, oldalszáma, mérete és titkosítási állapota programozott módon történő olvasását jelenti Java használatával.  
 - **Melyik könyvtár segít ebben?** A GroupDocs.Editor for Java egyszerű API-t biztosít a metaadatok kinyeréséhez és a típusdetektáláshoz.  
-- **Detektálhatom a dokumentum típusát java a folyamat részeként?** Igen – a visszaadott `IDocumentInfo` vizsgálatával meghatározható, hogy a fájl Word, táblázat vagy szöveges dokumentum-e.  
-- **Szükségem van licencre?** Egy ingyenes próbaalkalmazás használható értékeléshez; a termelésben való használathoz állandó licenc szükséges.  
-- **Mik a fő előfeltételek?** Java 8+, Maven (vagy manuális JAR letöltés), és alapvető Java ismeretek.
+- **Képes vagyok a dokumentumtípus java észlelésére a folyamat részeként?** Igen – a visszaadott `IDocumentInfo` vizsgálatával meghatározható, hogy a fájl Word, táblázat vagy szöveges dokumentum.  
+- **Szükségem van licencre?** Egy ingyenes próba a kiértékeléshez elegendő; a termelésben való használathoz állandó licenc szükséges.  
+- **Mik a fő előfeltételek?** Java 8+, Maven (vagy kézi JAR letöltés), valamint alapvető Java ismeretek.
 
-## Mi az a extract document metadata java?
-**A dokumentum metaadatainak kinyerése Java-ban azt jelenti, hogy leíró információkat (például fájlformátum, oldalszám, szerző vagy titkosítás állapota) olvasunk ki anélkül, hogy betöltenénk a teljes dokumentum tartalmát.** Ez a könnyű megközelítés felgyorsítja az indexelést, archiválást és megfelelőségi ellenőrzéseket, mivel lehetővé teszi a fájlok gyors elemzését, a memóriahasználat csökkentését, és megalapozott döntések meghozatalát a teljes dokumentumok megnyitása előtt.
+## Mi az a metaadatok kinyerése?
+`IDocumentInfo` egy interfész, amely általános metaadatokat képvisel bármely támogatott dokumentumhoz.  
+A metaadatok kinyerése Java-ban azt jelenti, hogy leíró információkat, például fájlformátumot, oldalszámot, szerzőt vagy titkosítási állapotot **a teljes dokumentumtartalom betöltése nélkül** kérünk le. Ez a könnyű megközelítés felgyorsítja az indexelést, archiválást és megfelelőségi ellenőrzéseket, mivel lehetővé teszi a fájlok gyors elemzését, csökkenti a memóriahasználatot, és megalapozott döntéseket hozhatunk a teljes dokumentumok megnyitása előtt.
 
-## Miért használjuk a GroupDocs.Editor for Java-t a document type java detektálásához?
-**A GroupDocs.Editor automatikusan azonosítja a dokumentum típusát, és típus‑specifikus tulajdonságokat biztosít több mint 30 szerkeszthető formátumhoz, akár 2 GB‑os fájlok feldolgozásával is, anélkül, hogy a teljes tartalmat a memóriába töltené.** Emellett beépített támogatást nyújt a jelszóval védett fájlok kezelésére, így a **detect document type java** helyzetekben a leghatékonyabb megoldás.
+## Miért használjuk a GroupDocs.Editor for Java-t a dokumentumtípus java észleléséhez?
+A GroupDocs.Editor automatikusan azonosítja a dokumentum típusát, és típus‑specifikus tulajdonságokat tesz elérhetővé **több mint 30 szerkeszthető formátum** esetén, akár **2 GB** méretű fájlok feldolgozásával is, miközben csak a fejlécet olvassa. Emellett natívan kezeli a jelszóval védett fájlokat, így a **detect document type java** forgatókönyvekhez a leghatékonyabb megoldást nyújtja.
 
 ## Előfeltételek
 - **Java Development Kit (JDK)** 8 vagy újabb.  
-- **Maven** a függőségkezeléshez (vagy manuális JAR letöltés).  
-- Alapvető ismeretek a Java osztályokról és kivételkezelésről.  
+- **Maven** a függőségkezeléshez (vagy kézi JAR letöltés).  
+- Alapvető ismeretek a Java osztályokról és a kivételkezelésről.  
 
 ## A GroupDocs.Editor for Java beállítása
 
 ### Telepítés Maven segítségével
-Add the repository and dependency to your `pom.xml`:
+Add hozzá a tárolót és a függőséget a `pom.xml` fájlodhoz:
 
 ```xml
 <repositories>
@@ -85,35 +98,23 @@ Add the repository and dependency to your `pom.xml`:
 ```
 
 ### Közvetlen letöltés
-Alternatively, download the latest JAR from [GroupDocs.Editor for Java kiadások](https://releases.groupdocs.com/editor/java/).
+Alternatívaként töltsd le a legújabb JAR‑t a [GroupDocs.Editor for Java kiadások](https://releases.groupdocs.com/editor/java/) oldaláról.
 
 ### Licenc beszerzése
-- **Ingyenes próba** – a API felfedezése költség nélkül.  
-- **Ideiglenes licenc** – időkorlátos kulcs beszerzése [ezen a linken](https://purchase.groupdocs.com/temporary-license).  
-- **Vásárlás** – állandó licenc vásárlása termelési környezethez.
+- **Ingyenes próba** – fedezd fel az API‑t költség nélkül.  
+- **Ideiglenes licenc** – szerezz időkorlátos kulcsot ezen a [linken](https://purchase.groupdocs.com/temporary-license).  
+- **Vásárlás** – szerezz állandó licencet a termelési környezethez.
 
 #### Alapvető inicializálás és beállítás
-The `Editor` class is the entry point that loads a document and provides access to its metadata. After creating an `Editor` instance you can call `getDocumentInfo(null)` to fetch lightweight information.
+Az `Editor` osztály a belépési pont, amely betölti a dokumentumot és hozzáférést biztosít a metaadatokhoz. Egy `Editor` példány létrehozása után meghívhatod a `getDocumentInfo(null)` metódust, hogy könnyűsúlyú információkat kapj.  
+A `getDocumentInfo(null)` csak a dokumentum metaadatait tölti le, a teljes tartalmat nem.
 
-```java
-import com.groupdocs.editor.Editor;
-
-public class DocumentEditorSetup {
-    public static void main(String[] args) {
-        String filePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_DOCX";
-        Editor editor = new Editor(filePath);
-        // Initialize your document processing workflow here
-        editor.dispose();
-    }
-}
-```
-
-## Hogyan vonjunk ki metaadatokat Java-ban
-Load the document, request its `IDocumentInfo`, and then cast to the format‑specific info class. This pattern works for Word, Excel, and plain‑text files while keeping memory usage low, because only the document header is read. By extracting metadata first, you can decide whether to process the full content, route the file, or reject unsupported formats.
+## Hogyan nyerjünk ki metaadatokat Java-ban
+Töltsd be a dokumentumot, kérd le az `IDocumentInfo`‑t, majd alakítsd át a formátum‑specifikus információs osztályra.
 
 ### 1. funkció: Metaadatok kinyerése Word dokumentumokból
 #### Dokumentum betöltése
-The `DocumentInfo` interface represents generic metadata for any supported file. Passing the file path to the `Editor` constructor prepares the document for inspection.
+A `DocumentInfo` interfész általános metaadatokat képvisel bármely támogatott fájlhoz. A fájl útvonalának átadása az `Editor` konstruktorának előkészíti a dokumentumot az ellenőrzésre.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -125,7 +126,7 @@ Editor editorDocx = new Editor(docxInputFilePath);
 ```
 
 #### Dokumentum információk kinyerése
-`WordProcessingDocumentInfo` is a concrete implementation that adds Word‑specific properties such as page count, author, and encryption status.
+A `WordProcessingDocumentInfo` konkrét implementáció, amely Word‑specifikus tulajdonságokat ad hozzá, mint például az oldalszám, a szerző és a titkosítás állapota.
 
 ```java
 IDocumentInfo infoDocx = editorDocx.getDocumentInfo(null);
@@ -137,12 +138,12 @@ editorDocx.dispose();
 ```
 
 *Magyarázat*:  
-- `getDocumentInfo(null)` fetches metadata without loading the full document body.  
-- Casting to `WordProcessingDocumentInfo` unlocks Word‑specific attributes such as **page count**, author name, and encryption flag.
+- `getDocumentInfo(null)` metaadatokat kér le a teljes dokumentumtörzs betöltése nélkül.  
+- A `WordProcessingDocumentInfo`‑ra való átalakítás lehetővé teszi a Word‑specifikus attribútumok, például **oldalszám**, szerző neve és titkosítási jelző elérését.
 
-### 2. funkció: document type java detektálása – Táblázatok
+### 2. funkció: Dokumentumtípus észlelése Java-ban – táblázatok
 #### Táblázatfájl betöltése
-`SpreadsheetDocumentInfo` provides spreadsheet‑specific metadata like sheet count and total size.
+A `SpreadsheetDocumentInfo` táblázat‑specifikus metaadatokat biztosít, mint például a lapok száma és a teljes méret.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -154,7 +155,8 @@ Editor editorXlsx = new Editor(xlsxInputFilePath);
 ```
 
 #### Ellenőrzés és információk kinyerése
-By using the `instanceof` operator you can **detect document type java** and then read spreadsheet‑specific metadata such as sheet count and total size.
+Az `instanceof` operátor használatával **detect document type java** észlelhető, majd a táblázat‑specifikus metaadatok, például a lapok száma és a teljes méret kiolvashatók.  
+A `getSheetCount()` visszaadja a táblázatban lévő munkalapok számát.
 
 ```java
 IDocumentInfo infoXlsx = editorXlsx.getDocumentInfo(null);
@@ -166,11 +168,11 @@ editorXlsx.dispose();
 ```
 
 *Magyarázat*:  
-- The `instanceof` check tells you whether the file is a spreadsheet, enabling you to call `getSheetCount()` and other spreadsheet‑only methods.
+- Az `instanceof` ellenőrzés megmutatja, hogy a fájl táblázat‑e, így meghívhatod a `getSheetCount()` és egyéb csak táblázatokra jellemző metódusokat.
 
 ### 3. funkció: Jelszóval védett dokumentumok kezelése
 #### Védett dokumentum betöltése
-The `Editor` constructor accepts an optional `LoadOptions` object where you can supply a password.
+Az `Editor` konstruktor opcionálisan egy `LoadOptions` objektumot fogad, ahol megadhatsz jelszót.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -182,8 +184,10 @@ String xlsInputFilePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_XLS_PROTECTED";
 Editor editorXls = new Editor(xlsInputFilePath);
 ```
 
-#### Próbálja meg a hozzáférést jelszóval
-If the password is missing or incorrect, the API throws `PasswordRequiredException` or `IncorrectPasswordException`, allowing you to prompt the user or log the issue.
+#### Próbálja meg a jelszóval való hozzáférést
+Ha a jelszó hiányzik vagy helytelen, az API `PasswordRequiredException` vagy `IncorrectPasswordException` kivételt dob, lehetővé téve a felhasználó figyelmeztetését vagy a hiba naplózását.  
+A `PasswordRequiredException` akkor keletkezik, ha a dokumentum jelszót igényel, de nincs megadva.  
+Az `IncorrectPasswordException` azt jelzi, hogy a megadott jelszó nem egyezik a dokumentummal.
 
 ```java
 try {
@@ -207,11 +211,11 @@ editorXls.dispose();
 ```
 
 *Magyarázat*:  
-- The API’s explicit exceptions let you implement graceful fallback logic without guessing.
+- Az API egyértelmű kivételei lehetővé teszik a kifinomult visszaeső logika megvalósítását anélkül, hogy találgatni kellene.
 
 ### 4. funkció: Szöveges dokumentum metaadatok kinyerése
 #### Szöveges dokumentum betöltése
-For plain‑text formats (TXT, XML, CSV) the `TextDocumentInfo` class returns encoding, line count, and file‑size details.
+Egyszerű szövegformátumok (TXT, XML, CSV) esetén a `TextDocumentInfo` osztály visszaadja a kódolást, a sorok számát és a fájlméret részleteit.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -223,7 +227,7 @@ Editor editorXml = new Editor(xmlInputFilePath);
 ```
 
 #### Információk kinyerése és megjelenítése
-Use the getters on `TextDocumentInfo` to retrieve the lightweight properties you need for indexing or validation.
+Használd a `TextDocumentInfo` getter metódusait a könnyűsúlyú tulajdonságok lekéréséhez, amelyeket indexeléshez vagy validáláshoz szükséges.
 
 ```java
 IDocumentInfo infoXml = editorXml.getDocumentInfo(null);
@@ -235,53 +239,66 @@ editorXml.dispose();
 ```
 
 *Magyarázat*:  
-- This approach works for plain‑text formats where you mainly need encoding and file‑size metadata.
+- Ez a megközelítés egyszerű szövegformátumoknál működik, ahol főként a kódolásra és a fájlméret metaadataira van szükség.
 
 ## Gyakorlati alkalmazások
-- **Automatizált dokumentumarchiválás** – Metaadatok kinyerése a fájlok címkézéséhez és kereshető tárolóban való elhelyezéséhez.  
-- **Munkafolyamat-automatizálás** – Metaadatok használata a dokumentumok a megfelelő osztályhoz irányításához vagy az alatta lévő folyamatok indításához.  
-- **Adatmigráció** – Az eredeti tulajdonságok megőrzése fájlok rendszerek közötti áthelyezésekor, biztosítva a szabályozási megfelelőséget.
+- **Automatizált dokumentumarchiválás** – Metaadatok kinyerése a fájlok címkézéséhez és kereshető tárolóba helyezéséhez.  
+- **Munkafolyamat-automatizálás** – Metaadatok felhasználása a dokumentumok megfelelő részleghez irányításához vagy downstream folyamatok indításához.  
+- **Adatmigráció** – Az eredeti tulajdonságok megőrzése a fájlok rendszerek közötti áthelyezésekor, biztosítva a szabályozási megfelelést.
 
-## Teljesítményfontosságú szempontok
-- **Editorok felszabadítása** – Mindig hívja a `dispose()` metódust a natív erőforrások felszabadításához és a memória szivárgás elkerüléséhez.  
-- **Nagy fájlok** – Feldolgozás stream-ekben vagy darabokban; a `getDocumentInfo(null)` csak a fejléceket olvassa, így a RAM használat 50 MB alatt marad még 2 GB-os fájlok esetén is.  
-- **Profilozás** – Használjon Java profilereket (pl. VisualVM) a szűk keresztmetszetek felderítéséhez több ezer fájl kezelésekor.
+## Teljesítmény szempontok
+- **Szerkesztők felszabadítása** – Mindig hívd meg a `dispose()` metódust a natív erőforrások felszabadításához és a memória‑szivárgások elkerüléséhez.  
+- **Nagy fájlok** – Dolgozz stream‑ekkel vagy darabokban; a `getDocumentInfo(null)` csak a fejlécet olvassa, így a RAM‑használat **50 MB** alatt marad még **2 GB** méretű fájlok esetén is.  
+- **Profilozás** – Használj Java profilereket (pl. VisualVM) a szűk keresztmetszetek felderítéséhez, ha több ezer fájlt kezelsz.
 
 ## Gyakori problémák és hibaelhárítás
 | Tünet | Valószínű ok | Megoldás |
 |-------|--------------|----------|
-| `PasswordRequiredException` még akkor is, ha a fájl nincs védve | Hibás fájlútvonal vagy sérült fájl | Ellenőrizze az útvonalat és a fájl integritását |
-| `null` érték visszatér metaadatoknál | Elavult könyvtárverzió használata | Frissítse a legújabb GroupDocs.Editor kiadásra |
-| Alacsony teljesítmény nagy Excel fájloknál | A teljes fájl betöltése a memóriába | Használja a `getDocumentInfo(null)` (csak metaadat) módszert és dolgozza fel kötegekben |
+| `PasswordRequiredException` akkor is, ha a fájl nincs védve | Hibás fájlútvonal vagy sérült fájl | Ellenőrizd az útvonalat és a fájl integritását |
+| `null` érték visszatér metaadatoknál | Elavult könyvtárverzió használata | Frissíts a legújabb GroupDocs.Editor kiadásra |
+| Alacsony teljesítmény nagy Excel fájloknál | A teljes fájl betöltése a memóriába | Használd a `getDocumentInfo(null)`‑t (csak metaadat) és dolgozz kötegben |
 
 ## Gyakran feltett kérdések
 
-**Q: Kinyerhetem a metaadatokat PDF fájlokból ugyanazzal az API-val?**  
-A: A GroupDocs.Editor szerkeszthető formátumokra (DOCX, XLSX, stb.) fókuszál. PDF-ekhez használja a GroupDocs.Metadata vagy a GroupDocs.Viewer szolgáltatást.
+**Q: Kinyerhetem-e a metaadatokat PDF fájlokból ugyanazzal az API‑val?**  
+A: A GroupDocs.Editor szerkeszthető formátumokra (DOCX, XLSX stb.) fókuszál. PDF‑ekhez használd a GroupDocs.Metadata vagy a GroupDocs.Viewer megoldást.
 
-**Q: Hogyan detektálom a dokumentum típusát anélkül, hogy cast-elném?**  
-A: Hívja meg az `info.getDocumentType()` metódust, amely egy enum értéket ad vissza (pl. `DocumentType.WordProcessing`, `DocumentType.Spreadsheet`).
+**Q: Hogyan tudom a dokumentumtípust anélkül észlelni, hogy cast‑elnék?**  
+A: Hívd meg az `info.getDocumentType()` metódust, amely egy enumot ad vissza (pl. `DocumentType.WordProcessing`, `DocumentType.Spreadsheet`).
 
-**Q: Lehetőség van egyedi, Office fájlokba ágyazott tulajdonságok kinyerésére?**  
-A: Igen – a `WordProcessingDocumentInfo` és a `SpreadsheetDocumentInfo` olyan metódusokat biztosít, mint a `getCustomProperties()`.
+**Q: Lehet-e egyedi, Office fájlokba ágyazott tulajdonságokat kinyerni?**  
+A: Igen – a `WordProcessingDocumentInfo` és a `SpreadsheetDocumentInfo` olyan metódusokat kínál, mint a `getCustomProperties()`.
 
-**Q: Külön licencre van szükség minden egyes dokumentumtípushoz?**  
+**Q: Szükség van külön licencre minden dokumentumtípushoz?**  
 A: Nem, egyetlen GroupDocs.Editor licenc lefedi az összes támogatott formátumot.
 
 **Q: Milyen Java verzió szükséges?**  
-A: Java 8 vagy újabb; a frissebb LTS verziók (11, 17) teljes mértékben támogatottak.
+A: Java 8 vagy újabb; a későbbi LTS verziók (11, 17) teljes mértékben támogatottak.
 
 ## Következtetés
-Most már rendelkezik egy teljes, termelésre kész munkafolyamattal a **hogyan vonjunk ki metaadatokat** és a **detect document type java** feladatok megoldására a GroupDocs.Editor segítségével. Integrálja ezeket a kódrészleteket saját üzleti logikájába az archiválás, megfelelőségi ellenőrzések vagy bármely olyan szituáció automatizálásához, ahol a dokumentumok betekintése értékes.
+Most már rendelkezésedre áll egy komplett, termelés‑kész munkafolyamat a **metaadatok kinyeréséhez** és a **detect document type java** feladatok megoldásához a GroupDocs.Editor segítségével. Integráld ezeket a kódrészleteket a saját üzleti logikáddal az archiválás, megfelelőség‑ellenőrzés vagy bármely olyan szituáció automatizálásához, ahol a dokumentumok betekintése értékes.
 
 ---
 
-**Utoljára frissítve:** 2026-06-16  
+**Last Updated:** 2026-10-27  
 **Tesztelve a következővel:** GroupDocs.Editor 25.3 for Java  
 **Szerző:** GroupDocs
 
 ## Kapcsolódó oktatóanyagok
 
-- [Word dokumentum betöltése Java-val a GroupDocs.Editor segítségével – Teljes útmutató](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
-- [Excel és Word fájlok szerkesztése Java-ban a GroupDocs.Editor-rel](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
-- [Erőforrások kinyerése Word dokumentumokból – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
+- [Load Word Document Java with GroupDocs.Editor – A Complete Guide](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
+- [how to edit excel and Word files in Java with GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
+- [How to Extract Resources from Word Docs – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
+
+```java
+import com.groupdocs.editor.Editor;
+
+public class DocumentEditorSetup {
+    public static void main(String[] args) {
+        String filePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_DOCX";
+        Editor editor = new Editor(filePath);
+        // Initialize your document processing workflow here
+        editor.dispose();
+    }
+}
+```

@@ -1,21 +1,27 @@
 ---
-date: '2026-06-16'
-description: Aprenda cómo extraer metadatos, cómo extraer metadatos en Java y detectar
+date: '2026-10-27'
+description: Aprenda cómo extraer metadata, cómo extraer metadata en Java y detectar
   el tipo de documento java con GroupDocs.Editor para Java en archivos Word, Excel
   y de texto.
 keywords:
 - how to extract metadata
-- java get page count
-- java get document properties
-- java read document info
 - java detect file format
+- groupdocs editor metadata
+- get page count java
+- java get document info
+lastmod: '2026-10-27'
+og_description: Aprenda cómo extraer metadata en Java, detectar el tipo de documento
+  y leer propiedades como el recuento de páginas con GroupDocs.Editor – una solución
+  rápida y eficiente en memoria.
+og_image_alt: Guide showing Java code extracting document metadata with GroupDocs.Editor
+og_title: Cómo extraer metadata de documentos Java usando GroupDocs.Editor
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-16'
+  dateModified: '2026-10-27'
   description: Learn how to extract metadata, how to extract metadata in Java, and
     detect document type java with GroupDocs.Editor for Java across Word, Excel, and
     text files.
-  headline: How to Extract Metadata from Documents Java using GroupDocs.Editor
+  headline: How to extract metadata from Documents Java using GroupDocs.Editor
   type: TechArticle
 - questions:
   - answer: GroupDocs.Editor focuses on editable formats (DOCX, XLSX, etc.). For PDFs,
@@ -32,7 +38,13 @@ schemas:
   - answer: Java 8 or later; newer LTS versions (11, 17) are fully supported.
     question: What Java version is required?
   type: FAQPage
-title: Cómo extraer metadatos de documentos Java usando GroupDocs.Editor
+tags:
+- extract metadata
+- GroupDocs.Editor
+- Java document processing
+- document type detection
+- metadata extraction
+title: Cómo extraer metadata de documentos Java usando GroupDocs.Editor
 type: docs
 url: /es/java/advanced-features/groupdocs-editor-java-document-extraction-guide/
 weight: 1
@@ -40,20 +52,21 @@ weight: 1
 
 # Cómo extraer metadatos de documentos Java usando GroupDocs.Editor
 
-Si eres un desarrollador que está **cansado de extraer manualmente información de archivos Word, Excel o de texto plano**, esta guía te muestra **cómo extraer metadatos** de forma rápida y fiable. Verás por qué GroupDocs.Editor para Java es la biblioteca preferida para **detect document type java**, cómo leer propiedades como el número de páginas, el autor y el estado de cifrado, y cómo manejar archivos protegidos con contraseña, todo con fragmentos de código concisos y listos para producción.
+Si eres un desarrollador que está **cansado de extraer manualmente información de archivos Word, Excel o de texto plano**, esta guía te muestra **cómo extraer metadatos** de forma rápida y fiable. Verás por qué GroupDocs.Editor para Java es la biblioteca de referencia para **detect document type java**, cómo leer propiedades como el número de páginas, el autor y el estado de cifrado, y cómo manejar archivos protegidos con contraseña, todo con fragmentos de código concisos y listos para producción.
 
 ## Respuestas rápidas
-- **What does “extract document metadata java” mean?** Se refiere a leer programáticamente propiedades como el formato, el número de páginas, el tamaño y el estado de cifrado de los documentos usando Java.  
-- **Which library helps with this?** GroupDocs.Editor for Java proporciona una API sencilla para la extracción de metadatos y la detección de tipos.  
-- **Can I detect document type java as part of the process?** Sí—inspeccionando el `IDocumentInfo` devuelto puedes determinar si un archivo es un documento Word, una hoja de cálculo o un documento de texto.  
-- **Do I need a license?** Una prueba gratuita sirve para evaluación; se requiere una licencia permanente para uso en producción.  
-- **What are the main prerequisites?** Java 8+, Maven (o descarga manual del JAR), y conocimientos básicos de Java.
+- **¿Qué significa “extract document metadata java”?** Se refiere a leer programáticamente propiedades como el formato, el número de páginas, el tamaño y el estado de cifrado de los documentos usando Java.  
+- **¿Qué biblioteca ayuda con esto?** GroupDocs.Editor para Java ofrece una API sencilla para la extracción de metadatos y la detección de tipos.  
+- **¿Puedo detectar el tipo de documento java como parte del proceso?** Sí, inspeccionando el `IDocumentInfo` devuelto puedes determinar si un archivo es un documento Word, una hoja de cálculo o un documento de texto.  
+- **¿Necesito una licencia?** Una prueba gratuita sirve para evaluación; se requiere una licencia permanente para uso en producción.  
+- **¿Cuáles son los requisitos principales?** Java 8+, Maven (o descarga manual del JAR) y conocimientos básicos de Java.
 
-## Qué es extract document metadata java?
-**Extraer metadatos de documentos en Java significa obtener información descriptiva—como el formato de archivo, el número de páginas, el autor o el estado de cifrado—sin cargar todo el contenido del documento.** Este enfoque ligero acelera la indexación, el archivado y las verificaciones de cumplimiento al permitirte analizar los archivos rápidamente, reducir el consumo de memoria y tomar decisiones informadas antes de abrir los documentos completos.
+## ¿Qué es extraer metadatos?
+`IDocumentInfo` es una interfaz que representa metadatos genéricos para cualquier documento compatible.  
+Extraer metadatos de documentos en Java significa obtener información descriptiva como el formato del archivo, el número de páginas, el autor o el estado de cifrado **sin cargar el contenido completo del documento**. Este enfoque ligero acelera la indexación, el archivado y las verificaciones de cumplimiento al permitir analizar los archivos rápidamente, reducir el consumo de memoria y tomar decisiones informadas antes de abrir los documentos completos.
 
-## Por qué usar GroupDocs.Editor para Java para detect document type java?
-**GroupDocs.Editor identifica automáticamente el tipo de documento y expone propiedades específicas del tipo para más de 30 formatos editables, procesando archivos de hasta 2 GB sin cargar todo el contenido en la memoria.** También maneja archivos protegidos con contraseña de forma nativa, lo que lo convierte en la solución más eficiente para escenarios de **detect document type java**.
+## ¿Por qué usar GroupDocs.Editor para Java para detectar el tipo de documento java?
+GroupDocs.Editor identifica automáticamente el tipo de documento y expone propiedades específicas del tipo para **más de 30 formatos editables**, procesando archivos de hasta **2 GB** leyendo solo el encabezado. También maneja archivos protegidos con contraseña de forma nativa, lo que lo convierte en la solución más eficiente para escenarios de **detect document type java**.
 
 ## Requisitos previos
 - **Java Development Kit (JDK)** 8 o superior.  
@@ -63,7 +76,7 @@ Si eres un desarrollador que está **cansado de extraer manualmente información
 ## Configuración de GroupDocs.Editor para Java
 
 ### Instalación mediante Maven
-Agrega el repositorio y la dependencia a tu `pom.xml`:
+Add the repository and dependency to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -84,31 +97,19 @@ Agrega el repositorio y la dependencia a tu `pom.xml`:
 ```
 
 ### Descarga directa
-Alternativamente, descarga el último JAR desde [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+Alternatively, download the latest JAR from [lanzamientos de GroupDocs.Editor para Java](https://releases.groupdocs.com/editor/java/).
 
 ### Obtención de licencia
-- **Free Trial** – explora la API sin costo.  
-- **Temporary License** – obtén una clave de tiempo limitado a través de [this link](https://purchase.groupdocs.com/temporary-license).  
-- **Purchase** – compra una licencia permanente para implementaciones en producción.
+- **Prueba gratuita** – explora la API sin costo.  
+- **Licencia temporal** – obtén una clave de tiempo limitado a través de [este enlace](https://purchase.groupdocs.com/temporary-license).  
+- **Compra** – adquiere una licencia permanente para implementaciones en producción.
 
 #### Inicialización y configuración básica
-La clase `Editor` es el punto de entrada que carga un documento y proporciona acceso a sus metadatos. Después de crear una instancia de `Editor` puedes llamar a `getDocumentInfo(null)` para obtener información ligera.
-
-```java
-import com.groupdocs.editor.Editor;
-
-public class DocumentEditorSetup {
-    public static void main(String[] args) {
-        String filePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_DOCX";
-        Editor editor = new Editor(filePath);
-        // Initialize your document processing workflow here
-        editor.dispose();
-    }
-}
-```
+La clase `Editor` es el punto de entrada que carga un documento y brinda acceso a sus metadatos. Después de crear una instancia de `Editor` puedes llamar a `getDocumentInfo(null)` para obtener información ligera.  
+`getDocumentInfo(null)` recupera solo los metadatos del documento sin cargar su contenido completo.
 
 ## Cómo extraer metadatos en Java
-Carga el documento, solicita su `IDocumentInfo` y luego conviértelo al clase de información específica del formato. Este patrón funciona para archivos Word, Excel y de texto plano mientras mantiene bajo el uso de memoria, ya que solo se lee el encabezado del documento. Al extraer primero los metadatos, puedes decidir si procesar el contenido completo, enrutar el archivo o rechazar formatos no compatibles.
+Carga el documento, solicita su `IDocumentInfo` y luego conviértelo al clase de información específica del formato.
 
 ### Función 1: Extracción de metadatos de documentos Word
 #### Cargar el documento
@@ -137,11 +138,11 @@ editorDocx.dispose();
 
 *Explicación*:  
 - `getDocumentInfo(null)` obtiene metadatos sin cargar el cuerpo completo del documento.  
-- Convertir a `WordProcessingDocumentInfo` desbloquea atributos específicos de Word como **page count**, nombre del autor y bandera de cifrado.
+- Convertir a `WordProcessingDocumentInfo` desbloquea atributos específicos de Word como **número de páginas**, nombre del autor y bandera de cifrado.
 
-### Función 2: Detect document type java – Hojas de cálculo
+### Función 2: Detectar tipo de documento java – hojas de cálculo
 #### Cargar el archivo de hoja de cálculo
-`SpreadsheetDocumentInfo` proporciona metadatos específicos de hojas de cálculo como el número de hojas y el tamaño total.
+`SpreadsheetDocumentInfo` proporciona metadatos específicos de hojas de cálculo como el recuento de hojas y el tamaño total.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -153,7 +154,8 @@ Editor editorXlsx = new Editor(xlsxInputFilePath);
 ```
 
 #### Verificar y extraer información
-Usando el operador `instanceof` puedes **detect document type java** y luego leer metadatos específicos de la hoja de cálculo como el número de hojas y el tamaño total.
+Usando el operador `instanceof` puedes **detect document type java** y luego leer metadatos específicos de la hoja de cálculo como el recuento de hojas y el tamaño total.  
+`getSheetCount()` devuelve el número de hojas de cálculo en la hoja.
 
 ```java
 IDocumentInfo infoXlsx = editorXlsx.getDocumentInfo(null);
@@ -165,7 +167,7 @@ editorXlsx.dispose();
 ```
 
 *Explicación*:  
-- La verificación `instanceof` indica si el archivo es una hoja de cálculo, permitiéndote llamar a `getSheetCount()` y a otros métodos exclusivos de hojas de cálculo.
+- La verificación `instanceof` indica si el archivo es una hoja de cálculo, lo que permite llamar a `getSheetCount()` y a otros métodos exclusivos de hojas de cálculo.
 
 ### Función 3: Manejo de documentos protegidos con contraseña
 #### Cargar el documento protegido
@@ -182,7 +184,9 @@ Editor editorXls = new Editor(xlsInputFilePath);
 ```
 
 #### Intentar acceder con contraseña
-Si la contraseña falta o es incorrecta, la API lanza `PasswordRequiredException` o `IncorrectPasswordException`, permitiéndote solicitar al usuario la contraseña o registrar el problema.
+Si la contraseña falta o es incorrecta, la API lanza `PasswordRequiredException` o `IncorrectPasswordException`, lo que te permite solicitarla al usuario o registrar el problema.  
+`PasswordRequiredException` se lanza cuando un documento requiere una contraseña pero no se ha proporcionado.  
+`IncorrectPasswordException` indica que la contraseña suministrada no coincide con el documento.
 
 ```java
 try {
@@ -210,7 +214,7 @@ editorXls.dispose();
 
 ### Función 4: Extracción de metadatos de documentos basados en texto
 #### Cargar el documento basado en texto
-Para formatos de texto plano (TXT, XML, CSV) la clase `TextDocumentInfo` devuelve la codificación, el número de líneas y los detalles del tamaño del archivo.
+Para formatos de texto plano (TXT, XML, CSV) la clase `TextDocumentInfo` devuelve la codificación, el recuento de líneas y los detalles del tamaño del archivo.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -237,28 +241,28 @@ editorXml.dispose();
 - Este enfoque funciona para formatos de texto plano donde principalmente necesitas la codificación y los metadatos de tamaño del archivo.
 
 ## Aplicaciones prácticas
-- **Automated Document Archiving** – Extrae metadatos para etiquetar y almacenar archivos en un repositorio searchable.  
-- **Workflow Automation** – Usa metadatos para dirigir documentos al departamento correcto o desencadenar procesos posteriores.  
-- **Data Migration** – Conserva las propiedades originales al mover archivos entre sistemas, garantizando el cumplimiento regulatorio.
+- **Archivado automático de documentos** – Extrae metadatos para etiquetar y almacenar archivos en un repositorio buscable.  
+- **Automatización de flujos de trabajo** – Usa los metadatos para dirigir documentos al departamento correcto o desencadenar procesos posteriores.  
+- **Migración de datos** – Conserva las propiedades originales al mover archivos entre sistemas, garantizando el cumplimiento normativo.
 
 ## Consideraciones de rendimiento
-- **Dispose Editors** – Siempre llama a `dispose()` para liberar recursos nativos y evitar fugas de memoria.  
-- **Large Files** – Procesa en streams o fragmentos; `getDocumentInfo(null)` lee solo el encabezado, manteniendo el uso de RAM bajo 50 MB incluso para archivos de 2 GB.  
-- **Profiling** – Usa perfiles de Java (p. ej., VisualVM) para detectar cuellos de botella al manejar miles de archivos.
+- **Liberar editores** – Siempre llama a `dispose()` para liberar recursos nativos y evitar fugas de memoria.  
+- **Archivos grandes** – Procesa en streams o fragmentos; `getDocumentInfo(null)` lee solo el encabezado, manteniendo el uso de RAM por debajo de **50 MB** incluso para archivos de **2 GB**.  
+- **Perfilado** – Usa perfiles de Java (p. ej., VisualVM) para detectar cuellos de botella al manejar miles de archivos.
 
 ## Problemas comunes y solución de problemas
 | Síntoma | Causa probable | Solución |
 |---------|----------------|----------|
-| `PasswordRequiredException` aunque el archivo no esté protegido | Ruta de archivo incorrecta o archivo corrupto | Verifica la ruta y la integridad del archivo |
-| `null` devuelto para metadatos | Uso de una versión antigua de la biblioteca | Actualiza a la última versión de GroupDocs.Editor |
-| Bajo rendimiento en archivos Excel grandes | Cargar todo el archivo en memoria | Usa `getDocumentInfo(null)` (solo metadatos) y procesa en lotes |
+| `PasswordRequiredException` aunque el archivo no está protegido | Ruta de archivo incorrecta o archivo corrupto | Verifica la ruta y la integridad del archivo |
+| `null` devuelto para metadatos | Uso de una versión de biblioteca obsoleta | Actualiza a la última versión de GroupDocs.Editor |
+| Rendimiento bajo en archivos Excel grandes | Cargar todo el archivo en memoria | Usa `getDocumentInfo(null)` (solo metadatos) y procesa en lotes |
 
 ## Preguntas frecuentes
 
 **Q: ¿Puedo extraer metadatos de archivos PDF con la misma API?**  
 A: GroupDocs.Editor se centra en formatos editables (DOCX, XLSX, etc.). Para PDFs, usa GroupDocs.Metadata o GroupDocs.Viewer.
 
-**Q: ¿Cómo detecto el tipo de documento sin hacer casting?**  
+**Q: ¿Cómo detecto el tipo de documento sin convertir?**  
 A: Llama a `info.getDocumentType()` que devuelve un enum (p. ej., `DocumentType.WordProcessing`, `DocumentType.Spreadsheet`).
 
 **Q: ¿Es posible extraer propiedades personalizadas incrustadas en archivos Office?**  
@@ -268,19 +272,32 @@ A: Sí—`WordProcessingDocumentInfo` y `SpreadsheetDocumentInfo` exponen métod
 A: No, una única licencia de GroupDocs.Editor cubre todos los formatos compatibles.
 
 **Q: ¿Qué versión de Java se requiere?**  
-A: Java 8 o posterior; versiones LTS más recientes (11, 17) son totalmente compatibles.
+A: Java 8 o posterior; las versiones LTS más recientes (11, 17) son totalmente compatibles.
 
 ## Conclusión
-Ahora tienes un flujo de trabajo completo y listo para producción para **how to extract metadata** y **detect document type java** usando GroupDocs.Editor. Integra estos fragmentos con tu propia lógica de negocio para automatizar el archivado, las verificaciones de cumplimiento o cualquier escenario donde la información del documento sea valiosa.
+Ahora tienes un flujo de trabajo completo y listo para producción para **cómo extraer metadatos** y **detect document type java** usando GroupDocs.Editor. Integra estos fragmentos con tu propia lógica de negocio para automatizar el archivado, las verificaciones de cumplimiento o cualquier escenario donde la información del documento sea valiosa.
 
 ---
 
-**Última actualización:** 2026-06-16  
-**Probado con:** GroupDocs.Editor 25.3 for Java  
+**Última actualización:** 2026-10-27  
+**Probado con:** GroupDocs.Editor 25.3 para Java  
 **Autor:** GroupDocs
 
 ## Tutoriales relacionados
 
 - [Cargar documento Word Java con GroupDocs.Editor – Guía completa](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
-- [Cómo editar archivos Excel y Word en Java con GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
+- [cómo editar archivos excel y Word en Java con GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Cómo extraer recursos de documentos Word – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
+
+```java
+import com.groupdocs.editor.Editor;
+
+public class DocumentEditorSetup {
+    public static void main(String[] args) {
+        String filePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_DOCX";
+        Editor editor = new Editor(filePath);
+        // Initialize your document processing workflow here
+        editor.dispose();
+    }
+}
+```

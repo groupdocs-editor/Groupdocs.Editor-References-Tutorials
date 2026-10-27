@@ -1,21 +1,27 @@
 ---
-date: '2026-06-16'
-description: Naučte se, jak extrahovat metadata, jak extrahovat metadata v Javě a
-  detekovat typ dokumentu v Javě pomocí GroupDocs.Editor pro Java napříč soubory Word,
+date: '2026-10-27'
+description: Naučte se, jak extrahovat metadata, jak extrahovat metadata v Java a
+  jak detekovat typ dokumentu v Java pomocí GroupDocs.Editor pro Java napříč Word,
   Excel a textovými soubory.
 keywords:
 - how to extract metadata
-- java get page count
-- java get document properties
-- java read document info
 - java detect file format
+- groupdocs editor metadata
+- get page count java
+- java get document info
+lastmod: '2026-10-27'
+og_description: Naučte se, jak extrahovat metadata v Java, detekovat typ dokumentu
+  a číst vlastnosti jako počet stránek pomocí GroupDocs.Editor – rychlé, paměťově
+  úsporné řešení.
+og_image_alt: Guide showing Java code extracting document metadata with GroupDocs.Editor
+og_title: Jak extrahovat metadata z dokumentů Java pomocí GroupDocs.Editor
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-16'
+  dateModified: '2026-10-27'
   description: Learn how to extract metadata, how to extract metadata in Java, and
     detect document type java with GroupDocs.Editor for Java across Word, Excel, and
     text files.
-  headline: How to Extract Metadata from Documents Java using GroupDocs.Editor
+  headline: How to extract metadata from Documents Java using GroupDocs.Editor
   type: TechArticle
 - questions:
   - answer: GroupDocs.Editor focuses on editable formats (DOCX, XLSX, etc.). For PDFs,
@@ -32,7 +38,13 @@ schemas:
   - answer: Java 8 or later; newer LTS versions (11, 17) are fully supported.
     question: What Java version is required?
   type: FAQPage
-title: Jak extrahovat metadata z dokumentů v Javě pomocí GroupDocs.Editor
+tags:
+- extract metadata
+- GroupDocs.Editor
+- Java document processing
+- document type detection
+- metadata extraction
+title: Jak extrahovat metadata z dokumentů Java pomocí GroupDocs.Editor
 type: docs
 url: /cs/java/advanced-features/groupdocs-editor-java-document-extraction-guide/
 weight: 1
@@ -40,30 +52,31 @@ weight: 1
 
 # Jak extrahovat metadata z dokumentů Java pomocí GroupDocs.Editor
 
-Pokud jste vývojář, který má **únava z ručního získávání informací z Word, Excel nebo prostých textových souborů**, tento průvodce vám ukáže **jak extrahovat metadata** rychle a spolehlivě. Uvidíte, proč je GroupDocs.Editor pro Java knihovnou číslo jedna pro **detect document type java**, jak číst vlastnosti jako počet stránek, autor a stav šifrování, a jak zacházet se soubory chráněnými heslem — vše s stručnými, připravenými k produkci ukázkami kódu.
+Pokud jste vývojář, který **má dost manuálního získávání informací z Word, Excel nebo prostých textových souborů**, tento průvodce vám ukáže **jak extrahovat metadata** rychle a spolehlivě. Uvidíte, proč je GroupDocs.Editor pro Java knihovna číslo jedna pro **detect document type java**, jak číst vlastnosti jako počet stránek, autor a stav šifrování a jak zacházet se soubory chráněnými heslem — vše s stručnými, připravenými k nasazení kódy.
 
 ## Rychlé odpovědi
 - **Co znamená “extract document metadata java”?** Jedná se o programové čtení vlastností jako formát, počet stránek, velikost a stav šifrování z dokumentů pomocí Javy.  
 - **Která knihovna s tím pomáhá?** GroupDocs.Editor pro Java poskytuje jednoduché API pro extrakci metadat a detekci typu.  
-- **Mohu během procesu detekovat typ dokumentu java?** Ano — inspekcí vráceného `IDocumentInfo` můžete určit, zda je soubor Word, tabulka nebo textový dokument.  
+- **Mohu během procesu detekovat document type java?** Ano — kontrolou vráceného `IDocumentInfo` můžete určit, zda je soubor Word, tabulka nebo textový dokument.  
 - **Potřebuji licenci?** Bezplatná zkušební verze funguje pro hodnocení; pro produkční použití je vyžadována trvalá licence.  
-- **Jaké jsou hlavní předpoklady?** Java 8+, Maven (nebo ruční stažení JAR), a základní znalost Javy.
+- **Jaké jsou hlavní předpoklady?** Java 8+, Maven (nebo ruční stažení JAR), a základní znalosti Javy.
 
-## Co je extract document metadata java?
-**Extrahování metadat dokumentu v Javě znamená získání popisných informací — jako je formát souboru, počet stránek, autor nebo stav šifrování — bez načítání celého obsahu dokumentu.** Tento odlehčený přístup urychluje indexování, archivaci a kontroly souladu tím, že vám umožní rychle analyzovat soubory, snížit spotřebu paměti a učinit informovaná rozhodnutí před otevřením celých dokumentů.
+## Co je extrakce metadat?
+`IDocumentInfo` je rozhraní, které představuje obecná metadata pro jakýkoli podporovaný dokument.  
+Extrahování metadat dokumentu v Javě znamená získání popisných informací, jako je formát souboru, počet stránek, autor nebo stav šifrování **bez načtení celého obsahu dokumentu**. Tento odlehčený přístup urychluje indexaci, archivaci a kontroly souladu tím, že vám umožní rychle analyzovat soubory, snížit spotřebu paměti a učinit informovaná rozhodnutí před otevřením celých dokumentů.
 
-## Proč použít GroupDocs.Editor pro Java k detekci typu dokumentu java?
-**GroupDocs.Editor automaticky identifikuje typ dokumentu a zpřístupňuje typově specifické vlastnosti pro více než 30 editovatelných formátů, zpracovává soubory až do 2 GB bez načítání celého obsahu do paměti.** Také zajišťuje zpracování souborů chráněných heslem přímo z krabice, což z něj činí nejefektivnější řešení pro scénáře **detect document type java**.
+## Proč použít GroupDocs.Editor pro Java k detect document type java?
+GroupDocs.Editor automaticky identifikuje typ dokumentu a zpřístupňuje typově specifické vlastnosti pro **více než 30 editovatelných formátů**, zpracovává soubory až do **2 GB** při čtení pouze hlavičky. Také zajišťuje zpracování souborů chráněných heslem bez další konfigurace, což z něj činí nejefektivnější řešení pro scénáře **detect document type java**.
 
 ## Předpoklady
 - **Java Development Kit (JDK)** 8 nebo novější.  
 - **Maven** pro správu závislostí (nebo ruční stažení JAR).  
-- Základní znalost Java tříd a zpracování výjimek.
+- Základní znalost Java tříd a zpracování výjimek.  
 
 ## Nastavení GroupDocs.Editor pro Java
 
 ### Instalace pomocí Maven
-Add the repository and dependency to your `pom.xml`:
+Přidejte úložiště a závislost do vašeho `pom.xml`:
 
 ```xml
 <repositories>
@@ -84,33 +97,21 @@ Add the repository and dependency to your `pom.xml`:
 ```
 
 ### Přímé stažení
-Alternatively, download the latest JAR from [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+Alternativně stáhněte nejnovější JAR z [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
 
 ### Získání licence
-- **Free Trial** – prozkoumejte API zdarma.  
-- **Temporary License** – získejte časově omezený klíč přes [this link](https://purchase.groupdocs.com/temporary-license).  
+- **Free trial** – prozkoumejte API zdarma.  
+- **Temporary license** – získejte časově omezený klíč přes [this link](https://purchase.groupdocs.com/temporary-license).  
 - **Purchase** – zakupte trvalou licenci pro produkční nasazení.
 
 #### Základní inicializace a nastavení
-Třída `Editor` je vstupním bodem, který načte dokument a poskytuje přístup k jeho metadatům. Po vytvoření instance `Editor` můžete zavolat `getDocumentInfo(null)`, abyste získali lehké informace.
-
-```java
-import com.groupdocs.editor.Editor;
-
-public class DocumentEditorSetup {
-    public static void main(String[] args) {
-        String filePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_DOCX";
-        Editor editor = new Editor(filePath);
-        // Initialize your document processing workflow here
-        editor.dispose();
-    }
-}
-```
+`Editor` třída je vstupní bod, který načítá dokument a poskytuje přístup k jeho metadatům. Po vytvoření instance `Editor` můžete zavolat `getDocumentInfo(null)`, abyste získali odlehčené informace.  
+`getDocumentInfo(null)` získá pouze metadata dokumentu bez načtení jeho úplného obsahu.
 
 ## Jak extrahovat metadata v Javě
-Načtěte dokument, požádejte o jeho `IDocumentInfo` a poté jej přetypujte na třídu specifickou pro formát. Tento vzor funguje pro Word, Excel i prosté textové soubory při nízké spotřebě paměti, protože se načte pouze hlavička dokumentu. Extrahováním metadat nejprve můžete rozhodnout, zda zpracovat celý obsah, směrovat soubor nebo odmítnout nepodporované formáty.
+Načtěte dokument, požádejte o jeho `IDocumentInfo` a poté jej přetypujte na třídu specifickou pro formát.
 
-### Funkce 1: Extrahování metadat z Word dokumentů
+### Funkce 1: Extrakce metadat z Word dokumentů
 #### Načtení dokumentu
 `DocumentInfo` rozhraní představuje obecná metadata pro jakýkoli podporovaný soubor. Předání cesty k souboru do konstruktoru `Editor` připraví dokument k inspekci.
 
@@ -123,8 +124,8 @@ String docxInputFilePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_DOCX";
 Editor editorDocx = new Editor(docxInputFilePath);
 ```
 
-#### Extrahování informací o dokumentu
-`WordProcessingDocumentInfo` je konkrétní implementace, která přidává Word‑specifické vlastnosti jako počet stránek, autor a stav šifrování.
+#### Extrakce informací o dokumentu
+`WordProcessingDocumentInfo` je konkrétní implementace, která přidává specifické vlastnosti pro Word, jako je počet stránek, autor a stav šifrování.
 
 ```java
 IDocumentInfo infoDocx = editorDocx.getDocumentInfo(null);
@@ -135,13 +136,13 @@ if (infoDocx instanceof WordProcessingDocumentInfo) {
 editorDocx.dispose();
 ```
 
-*Vysvětlení*:  
-- `getDocumentInfo(null)` získá metadata bez načtení celého těla dokumentu.  
-- Přetypování na `WordProcessingDocumentInfo` odemkne Word‑specifické atributy jako **page count**, jméno autora a příznak šifrování.
+*Vysvětlení*:
+- `getDocumentInfo(null)` získává metadata bez načtení celého těla dokumentu.  
+- Přetypování na `WordProcessingDocumentInfo` odemyká Word‑specifické atributy, jako je **počet stránek**, jméno autora a příznak šifrování.
 
-### Funkce 2: Detekce typu dokumentu java – Tabulky
+### Funkce 2: Detect document type java – tabulky
 #### Načtení souboru tabulky
-`SpreadsheetDocumentInfo` poskytuje specifická metadata pro tabulky, jako je počet listů a celková velikost.
+`SpreadsheetDocumentInfo` poskytuje metadata specifická pro tabulky, jako je počet listů a celková velikost.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -152,8 +153,9 @@ String xlsxInputFilePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_XLSX";
 Editor editorXlsx = new Editor(xlsxInputFilePath);
 ```
 
-#### Kontrola a extrahování informací
-Pomocí operátoru `instanceof` můžete **detect document type java** a poté číst tabulkově‑specifická metadata jako počet listů a celkovou velikost.
+#### Kontrola a extrakce informací
+Pomocí operátoru `instanceof` můžete **detect document type java** a poté číst metadata specifická pro tabulky, jako je počet listů a celková velikost.  
+`getSheetCount()` vrací počet listů v tabulce.
 
 ```java
 IDocumentInfo infoXlsx = editorXlsx.getDocumentInfo(null);
@@ -164,8 +166,8 @@ if (infoXlsx instanceof SpreadsheetDocumentInfo) {
 editorXlsx.dispose();
 ```
 
-*Vysvětlení*:  
-- Kontrola `instanceof` vám řekne, zda je soubor tabulkou, což vám umožní zavolat `getSheetCount()` a další metody specifické pro tabulky.
+*Vysvětlení*:
+- Kontrola `instanceof` vám říká, zda je soubor tabulkou, což vám umožní volat `getSheetCount()` a další metody určené jen pro tabulky.
 
 ### Funkce 3: Zpracování souborů chráněných heslem
 #### Načtení chráněného dokumentu
@@ -182,7 +184,9 @@ Editor editorXls = new Editor(xlsInputFilePath);
 ```
 
 #### Pokus o přístup s heslem
-Pokud heslo chybí nebo je nesprávné, API vyhodí `PasswordRequiredException` nebo `IncorrectPasswordException`, což vám umožní vyzvat uživatele nebo zaznamenat problém.
+Pokud heslo chybí nebo je nesprávné, API vyhodí `PasswordRequiredException` nebo `IncorrectPasswordException`, což vám umožní vyzvat uživatele nebo zaznamenat problém.  
+`PasswordRequiredException` je vyvolána, když dokument vyžaduje heslo, ale žádné nebylo poskytnuto.  
+`IncorrectPasswordException` naznačuje, že zadané heslo neodpovídá dokumentu.
 
 ```java
 try {
@@ -205,12 +209,12 @@ if (infoXls instanceof SpreadsheetDocumentInfo) {
 editorXls.dispose();
 ```
 
-*Vysvětlení*:  
-- Explicitní výjimky API vám umožní implementovat elegantní logiku náhradního řešení bez hádání.
+*Vysvětlení*:
+- Explicitní výjimky API vám umožní implementovat elegantní náhradní logiku bez hádání.
 
 ### Funkce 4: Extrakce metadat textových dokumentů
 #### Načtení textového dokumentu
-Pro prosté textové formáty (TXT, XML, CSV) třída `TextDocumentInfo` vrací kódování, počet řádků a podrobnosti o velikosti souboru.
+Pro formáty prostého textu (TXT, XML, CSV) třída `TextDocumentInfo` vrací kódování, počet řádků a podrobnosti o velikosti souboru.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -221,8 +225,8 @@ String xmlInputFilePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_XML";
 Editor editorXml = new Editor(xmlInputFilePath);
 ```
 
-#### Extrahování a zobrazení informací
-Použijte gettery na `TextDocumentInfo` k získání lehkých vlastností, které potřebujete pro indexování nebo validaci.
+#### Extrakce a zobrazení informací
+Použijte gettery v `TextDocumentInfo` k získání odlehčených vlastností, které potřebujete pro indexaci nebo validaci.
 
 ```java
 IDocumentInfo infoXml = editorXml.getDocumentInfo(null);
@@ -233,22 +237,22 @@ if (infoXml instanceof TextualDocumentInfo) {
 editorXml.dispose();
 ```
 
-*Vysvětlení*:  
-- Tento přístup funguje pro prosté textové formáty, kde hlavně potřebujete metadata o kódování a velikosti souboru.
+*Vysvětlení*:
+- Tento přístup funguje pro formáty prostého textu, kde hlavně potřebujete metadata o kódování a velikosti souboru.
 
 ## Praktické aplikace
-- **Automated Document Archiving** – Získejte metadata pro označení a uložení souborů do prohledávatelného úložiště.  
-- **Workflow Automation** – Použijte metadata k směrování dokumentů do správného oddělení nebo k spuštění následných procesů.  
-- **Data Migration** – Zachovejte původní vlastnosti při přesunu souborů mezi systémy, což zajišťuje soulad s předpisy.
+- **Automated document archiving** – Získejte metadata pro označení a uložení souborů v prohledávatelném úložišti.  
+- **Workflow automation** – Použijte metadata k nasměrování dokumentů do správného oddělení nebo k spuštění následných procesů.  
+- **Data migration** – Zachovejte původní vlastnosti při přesunu souborů mezi systémy, což zajišťuje soulad s předpisy.
 
 ## Úvahy o výkonu
-- **Dispose Editors** – Vždy zavolejte `dispose()`, abyste uvolnili nativní zdroje a předešli únikům paměti.  
-- **Large Files** – Zpracovávejte ve streamách nebo blocích; `getDocumentInfo(null)` čte jen hlavičku, udržuje využití RAM pod 50 MB i pro soubory 2 GB.  
+- **Dispose editors** – Vždy zavolejte `dispose()`, abyste uvolnili nativní zdroje a předešli únikům paměti.  
+- **Large files** – Zpracovávejte ve streamách nebo blocích; `getDocumentInfo(null)` čte jen hlavičku, udržuje využití RAM pod **50 MB** i pro soubory **2 GB**.  
 - **Profiling** – Použijte Java profilery (např. VisualVM) k odhalení úzkých míst při zpracování tisíců souborů.
 
 ## Časté problémy a řešení
-| Příznak | Předpokládaná příčina | Řešení |
-|---------|-----------------------|--------|
+| Symptom | Likely cause | Fix |
+|---------|--------------|-----|
 | `PasswordRequiredException` i když soubor není chráněn | Špatná cesta k souboru nebo poškozený soubor | Ověřte cestu a integritu souboru |
 | `null` vráceno pro metadata | Použití zastaralé verze knihovny | Aktualizujte na nejnovější verzi GroupDocs.Editor |
 | Nízký výkon u velkých Excel souborů | Načítání celého souboru do paměti | Použijte `getDocumentInfo(null)` (pouze metadata) a zpracovávejte po dávkách |
@@ -271,11 +275,11 @@ A: Ne, jedna licence GroupDocs.Editor pokrývá všechny podporované formáty.
 A: Java 8 nebo novější; novější LTS verze (11, 17) jsou plně podporovány.
 
 ## Závěr
-Nyní máte kompletní, připravený workflow pro **how to extract metadata** a **detect document type java** pomocí GroupDocs.Editor. Integrované tyto úryvky do vlastní obchodní logiky k automatizaci archivace, kontrol souladu nebo jakéhokoli scénáře, kde jsou informace o dokumentu cenné.
+Nyní máte kompletní, produkčně připravený workflow pro **how to extract metadata** a **detect document type java** pomocí GroupDocs.Editor. Integrujte tyto úryvky do vlastní obchodní logiky pro automatizaci archivace, kontrol souladu nebo jakéhokoli scénáře, kde jsou informace o dokumentu cenné.
 
 ---
 
-**Poslední aktualizace:** 2026-06-16  
+**Poslední aktualizace:** 2026-10-27  
 **Testováno s:** GroupDocs.Editor 25.3 for Java  
 **Autor:** GroupDocs
 
@@ -284,3 +288,16 @@ Nyní máte kompletní, připravený workflow pro **how to extract metadata** a 
 - [Načíst Word dokument v Javě s GroupDocs.Editor – Kompletní průvodce](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
 - [jak upravit Excel a Word soubory v Javě s GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Jak extrahovat zdroje z Word dokumentů – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
+
+```java
+import com.groupdocs.editor.Editor;
+
+public class DocumentEditorSetup {
+    public static void main(String[] args) {
+        String filePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_DOCX";
+        Editor editor = new Editor(filePath);
+        // Initialize your document processing workflow here
+        editor.dispose();
+    }
+}
+```

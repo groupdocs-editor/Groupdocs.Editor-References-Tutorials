@@ -1,22 +1,32 @@
 ---
-date: '2026-06-27'
-description: تعلم كيفية تحرير مستندات Word في Java باستخدام GroupDocs.Editor—تحميل،
-  تحرير، وحفظ ملفات Word، تحسين استخدام الذاكرة، وإزالة حقول النموذج.
+date: '2026-10-27'
+description: تعلم كيفية إزالة form fields وتحرير مستندات Word في Java باستخدام GroupDocs.Editor،
+  بما في ذلك تحميل protected files، optimizing memory usage، وحفظ المستندات باستخدام
+  passwords.
 keywords:
-- how to edit word
+- remove form fields
 - edit password protected word
-- optimize memory usage java
-- remove form field java
+- save word as pdf
+- convert word to html
+- load word document
+lastmod: '2026-10-27'
+og_description: تعلم كيفية إزالة form fields وتحرير مستندات Word في Java مع GroupDocs.Editor.
+  يتضمن loading، memory optimization، و password protection.
+og_image_alt: Guide showing removal of form fields from Word documents using GroupDocs.Editor
+  in Java
+og_title: كيفية إزالة form fields أثناء تحرير مستندات Word في Java
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-27'
-  description: Learn how to edit word documents in Java with GroupDocs.Editor—load,
-    edit, and save Word files, optimize memory usage, and remove form fields.
-  headline: How to Edit Word Documents in Java with GroupDocs.Editor
+  dateModified: '2026-10-27'
+  description: Learn how to remove form fields and edit Word documents in Java using
+    GroupDocs.Editor, including loading protected files, optimizing memory usage,
+    and saving with passwords.
+  headline: How to remove form fields while editing Word docs in Java
   type: TechArticle
-- description: Learn how to edit word documents in Java with GroupDocs.Editor—load,
-    edit, and save Word files, optimize memory usage, and remove form fields.
-  name: How to Edit Word Documents in Java with GroupDocs.Editor
+- description: Learn how to remove form fields and edit Word documents in Java using
+    GroupDocs.Editor, including loading protected files, optimizing memory usage,
+    and saving with passwords.
+  name: How to remove form fields while editing Word docs in Java
   steps:
   - name: '**Maven Setup** – Add the repository and dependency shown above.'
     text: '**Maven Setup** – Add the repository and dependency shown above.'
@@ -52,37 +62,37 @@ schemas:
       to free resources.
     question: Do I need to close streams manually?
   type: FAQPage
-title: كيفية تحرير مستندات Word في Java باستخدام GroupDocs.Editor
+tags:
+- remove form fields
+- GroupDocs.Editor
+- Java document processing
+- Word automation
+title: كيفية إزالة form fields أثناء تحرير مستندات Word في Java
 type: docs
 url: /ar/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
 
-# كيفية تعديل مستندات Word في Java باستخدام GroupDocs.Editor
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-## مقدمة
+# كيفية إزالة حقول النموذج أثناء تحرير مستندات Word في Java
 
-إذا كنت بحاجة إلى **كيفية تعديل Word** برمجياً، فإن GroupDocs.Editor for Java يوفّر لك API نظيفًا وفعّالًا في استهلاك الذاكرة يعمل مع الملفات المحمية وغير المحمية. سواءً كنت تبني خدمة توليد مستندات، أو تقوم بأتمتة تنظيف حقول النماذج، أو تأمين المحتوى الحسّاس، فإن هذا الدليل يشرح لك خطوة بخطوة كيفية تحميل، تعديل، وحفظ ملفات Word باستخدام أفضل الممارسات.
-
-**ما ستحققه في هذا الدليل:**
-- تحميل مستندات Word (بما في ذلك المحمية بكلمة مرور) باستخدام GroupDocs.Editor.  
-- إدارة وإزالة حقول النماذج مثل مدخلات النص أو مربعات الاختيار.  
-- حفظ المستند المعدل مع تحسين استهلاك الذاكرة وتطبيق حماية بكلمة مرور للكتابة.  
-
-الآن بعد أن رأيت الفوائد، لنقم بإعداد البيئة والبدء في تعديل مستندات Word في Java.
+إذا كنت بحاجة إلى **إزالة حقول النموذج** من مستندات Word برمجياً، يوفر GroupDocs.Editor for Java واجهة برمجة تطبيقات نظيفة وفعّالة في استهلاك الذاكرة تعمل مع الملفات المحمية وغير المحمية. سواءً كنت تبني خدمة توليد مستندات، أو تقوم بتنظيف القوالب القديمة، أو تأمين المحتوى الحساس، فإن هذا الدليل يشرح لك كيفية تحميل وتعديل وحفظ ملفات Word باستخدام خيارات أفضل الممارسات.
 
 ## إجابات سريعة
-- **هل يمكن لـ GroupDocs.Editor فتح ملفات محمية بكلمة مرور؟** نعم – ما عليك سوى تمرير كلمة المرور في `WordProcessingLoadOptions`.  
-- **أي خيار يقلل استهلاك الذاكرة للوثائق الكبيرة؟** `setOptimizeMemoryUsage(true)` في `WordProcessingSaveOptions`.  
+- **هل يمكن لـ GroupDocs.Editor فتح الملفات المحمية بكلمة مرور؟** نعم – ما عليك سوى تزويد كلمة المرور في `WordProcessingLoadOptions`.  
+- **ما الخيار الذي يقلل استهلاك الذاكرة للوثائق الكبيرة؟** `setOptimizeMemoryUsage(true)` في `WordProcessingSaveOptions`.  
 - **كيف يمكنني إزالة حقل نموذج محدد؟** استدعِ `FormFieldManager.removeFormField(fieldName)`.  
 - **هل أحتاج إلى ترخيص للاستخدام في الإنتاج؟** النسخة التجريبية تعمل للتقييم؛ الترخيص الكامل يفتح جميع الميزات.  
 - **ما نسخة Java المطلوبة؟** JDK 8 أو أعلى.
 
 ## المتطلبات المسبقة
 
-- **Java Development Kit (JDK)** 8 أو أحدث.  
-- **IDE** – IntelliJ IDEA، Eclipse، أو NetBeans.  
-- **Maven** لإدارة الاعتمادات.  
+- **مجموعة تطوير جافا (JDK)** 8 أو أحدث.  
+- **بيئة تطوير متكاملة (IDE)** – IntelliJ IDEA أو Eclipse أو NetBeans.  
+- **Maven** لإدارة التبعيات.  
 
 ### المكتبات المطلوبة
 
@@ -114,31 +124,29 @@ weight: 1
 </dependencies>
 ```
 
-يمكنك أيضًا تنزيل الثنائيات من نفس [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+يمكنك أيضاً تنزيل الملفات الثنائية من نفس [إصدارات GroupDocs.Editor for Java](https://releases.groupdocs.com/editor/java/).
 
-بدلاً من ذلك، حمّل المكتبة مباشرةً من [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+بدلاً من ذلك، قم بتنزيل المكتبة مباشرةً من [إصدارات GroupDocs.Editor for Java](https://releases.groupdocs.com/editor/java/).
 
 ### إعداد البيئة
 
-تأكد من تثبيت Maven وJDK بشكل صحيح وتكوينهما. إذا كنت جديدًا على أيٍ من الأدوات، راجع أدلة التثبيت الرسمية.
+تأكد من تثبيت Maven وJDK بشكل صحيح وتكوينهما. إذا كنت جديدًا على أيٍ من الأدوات، راجع أدلة التثبيت الرسمية الخاصة بهما.
 
-## إعداد GroupDocs.Editor لـ Java
+## إعداد GroupDocs.Editor for Java
 
-يدعم GroupDocs.Editor **أكثر من 30 تنسيق إدخال وإخراج** ويمكنه معالجة مستندات تصل إلى **500 ميغابايت** دون تحميل الملف بالكامل إلى الذاكرة، بفضل بنية البث.
+يدعم GroupDocs.Editor **أكثر من 30 صيغة إدخال وإخراج** ويمكنه معالجة المستندات حتى **500 ميغابايت** دون تحميل الملف بالكامل في الذاكرة، مما يقلل استهلاك RAM بنسبة تصل إلى **70 %** بفضل بنية البث الخاصة به. كما يدعم ما يصل إلى **1,000 جلسة تعديل متزامنة** على خادم قياسي بثمانية أنوية.
 
-1. **إعداد Maven** – أضف المستودع والاعتماد الموضحين أعلاه.  
+1. **إعداد Maven** – أضف المستودع والتبعيات الموضحة أعلاه.  
 2. **التنزيل المباشر** – استخدم رابط الإصدار نفسه إذا كنت تفضّل إضافة JAR يدويًا.
 
 ### الحصول على الترخيص
 
-- **نسخة تجريبية مجانية** – حمّل وقم بالتقييم دون تكلفة.  
+- **نسخة تجريبية مجانية** – قم بتنزيلها وتقييمها دون تكلفة.  
 - **ترخيص كامل** – اشترِ أو اطلب مفتاحًا مؤقتًا لفتح الميزات المتقدمة مثل المعالجة الدفعية والدعم المميز.
 
 ## كيفية تحميل مستند Word باستخدام GroupDocs.Editor؟
 
-تحميل مستند Word باستخدام GroupDocs.Editor سهل: تقوم بإنشاء `InputStream` للملف، وتحدد كلمة مرور اختيارية في `WordProcessingLoadOptions`، ثم تُنشئ كائن `Editor` بهذه المعلمات. المكتبة تقرأ المستند بطريقة بث وتعيد كائن `Editor` يتيح لك الوصول الكامل لتعديل، إدارة حقول النماذج، وحفظ الملف.
-
-`Editor` هو الصنف الأساسي الذي يمثل مستند Word محمّل ويوفر طرقًا للتعديل، معالجة حقول النماذج، والحفظ.
+FileInputStream هي فئة I/O في Java تقرأ البايتات من ملف. `WordProcessingLoadOptions` تُكوّن خيارات الفتح مثل كلمات المرور. `Editor` هي الفئة الأساسية في GroupDocs.Editor تُستخدم لتحميل وتعديل وحفظ المستندات. لتحميل ملف Word، أنشئ كائن `FileInputStream`، واختياريًا عيّن كلمة مرور في خيارات التحميل، ومرّرهما إلى مُنشئ `Editor`، الذي يبث المستند دون تحميله بالكامل في الذاكرة.
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample_docx";
@@ -170,13 +178,11 @@ Editor editor = new Editor(inputStream, loadOptions);
 Editor editor = new Editor(fs, loadOptions);
 ```
 
-**لماذا هذا مهم:** توفير كلمة المرور الصحيحة أمر أساسي؛ وإلا ستعامل المكتبة الملف كغير محمي وقد تُطلق استثناءً.
+**لماذا هذا مهم:** توفير كلمة المرور الصحيحة أمر أساسي؛ وإلا سيتعامل المكتبة مع الملف كأنه غير محمي وقد تُلقى استثناء.
 
 ## كيفية إزالة حقل نموذج من مستند Word باستخدام GroupDocs.Editor؟
 
-لحذف حقل نموذج محدد، احصل على `FormFieldManager` من كائن `Editor` واستدعِ طريقة `removeFormField` مع اسم الحقل. هذه العملية تُزيل تعريف الحقل من بنية المستند، مما يضمن أن الملف الناتج لن يحتوي على العنصر غير المرغوب ولن يطلب من المستخدمين إدخال بيانات.
-
-`FormFieldManager` هو المكوّن المسؤول عن الوصول إلى حقول النماذج ومعالجتها داخل مستند Word محمّل.
+`FormFieldManager` يدير حقول النموذج داخل مستند Word محمّل، مما يسمح بالاسترجاع والإضافة والإزالة. بعد الحصول عليه من كائن `Editor`، استدعِ `removeFormField` مع اسم الحقل المستهدف لحذف ذلك الحقل من بنية المستند قبل الحفظ. هذا يضمن إزالة الحقل بالكامل ولن يظهر في النتيجة النهائية.
 
 ```java
 FormFieldManager fieldManager = editor.getFormFieldManager();
@@ -204,13 +210,11 @@ saveOptions.setProtection(com.groupdocs.editor.options.WordProcessingProtection.
         com.groupdocs.editor.words.fieldmanagement.WordProcessingProtectionType.AllowOnlyFormFields, "write_password"));
 ```
 
-**لماذا هذا مهم:** في سير العمل الآلي، قد تتسبب الحقول المتروكة أو غير المستخدمة في أخطاء التحقق؛ إزالتها يضمن مستندًا نهائيًا نظيفًا.
+**لماذا هذا مهم:** في سير العمل الآلي، قد تتسبب الحقول المتبقية أو غير المستخدمة في أخطاء التحقق؛ وإزالتها تضمن مستندًا نهائيًا نظيفًا.
 
-## كيفية حفظ مستند Word مع تحسين استخدام الذاكرة في Java؟
+## كيفية حفظ مستند Word مع تحسين استهلاك الذاكرة في Java؟
 
-عند جاهزيتك لتثبيت التغييرات، قم بتهيئة كائن `WordProcessingSaveOptions` وفعل علم `setOptimizeMemoryUsage(true)`. هذا يُخبر GroupDocs.Editor بكتابة المستند على دفعات بدلاً من تحميل المحتوى بالكامل إلى ذاكرة الـ heap، مما يقلل استهلاك RAM بشكل كبير. يمكنك أيضًا تعيين كلمة مرور للكتابة أو اختيار تنسيق إخراج قبل استدعاء طريقة `save`.
-
-`WordProcessingSaveOptions` يتيح لك ضبط عملية الحفظ بدقة، بما في ذلك تحسين الذاكرة وحماية المستند.
+`WordProcessingSaveOptions` يتحكم في طريقة حفظ المستند، بما في ذلك الصيغة، وحماية كلمة المرور، وتحسين الذاكرة. أنشئ مثيلًا، فعّل `setOptimizeMemoryUsage(true)`, واختياريًا عيّن كلمة مرور للكتابة، ومرّرها إلى `editor.save`. ثم تقوم المكتبة بكتابة الملف على دفعات، مما يقلل استهلاك RAM بشكل كبير ويمنع حدوث OutOfMemoryError للوثائق الكبيرة.
 
 ```java
 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -228,67 +232,74 @@ ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 editor.save(outputStream, saveOptions);
 ```
 
-**لماذا هذا مهم:** تفعيل `optimizeMemoryUsage` ضروري للوثائق الكبيرة (مئات الصفحات) لأنه يمنع حدوث OutOfMemoryError على خوادم ذات إعدادات قياسية.
+**لماذا هذا مهم:** تفعيل `optimizeMemoryUsage` أمر حاسم للوثائق الكبيرة (مئات الصفحات) لأنه يمنع حدوث OutOfMemoryError على تكوينات الخوادم المعتادة.
 
 ## تطبيقات عملية
 
-- **أتمتة معالجة الوثائق دفعيًا** – معالجة آلاف ملفات Word كل ليلة دون استنزاف ذاكرة الخادم.  
-- **تخصيص القوالب الديناميكي** – إضافة أو إزالة حقول حسب مدخلات المستخدم.  
-- **توزيع المستندات بأمان** – تطبيق حماية بكلمة مرور للكتابة مع السماح بتحرير حقول النماذج.
+- **أتمتة المستندات دفعيًا** – معالجة آلاف ملفات Word كل ليلة دون استنزاف RAM الخادم.  
+- **تخصيص القوالب الديناميكي** – إضافة أو إزالة الحقول حسب مدخلات المستخدم.  
+- **توزيع المستندات بأمان** – تطبيق حماية كلمة مرور للكتابة مع السماح بتحرير حقول النموذج.
 
 ## اعتبارات الأداء
 
-- **تحسين الذاكرة** – `setOptimizeMemoryUsage(true)` يقلل استهلاك الـ heap بنسبة تصل إلى 70 % لملفات من 200 صفحة.  
-- **إدارة التدفقات** – أغلق التدفقات دائمًا (`try‑with‑resources` موصى به) لتجنب التسريبات.  
-- **تحديثات الإصدارات** – حافظ على تحديث GroupDocs.Editor؛ كل إصدار يضيف دعمًا لتنسيقات جديدة وتصحيحات أداء.
+- **تحسين الذاكرة** – `setOptimizeMemoryUsage(true)` يقلل استهلاك الكومة بنسبة تصل إلى 70 % لملفات من 200 صفحة.  
+- **إدارة التدفق** – أغلق التدفقات دائمًا (`try‑with‑resources` موصى به) لتجنب التسريبات.  
+- **تحديثات الإصدارات** – حافظ على تحديث GroupDocs.Editor؛ كل إصدار يضيف دعم صيغ وتصحيحات أداء.
 
 ## الخلاصة
 
-أنت الآن تعرف **كيفية تعديل Word** في Java باستخدام GroupDocs.Editor: تحميل الملفات (حتى المحمية)، معالجة حقول النماذج، وحفظها مع خيارات توفير الذاكرة والحماية. دمج هذه المقاطع في خدماتك سيزيد من الإنتاجية والموثوقية.
+أنت الآن تعرف **كيفية إزالة حقول النموذج** وتعديل مستندات Word في Java باستخدام GroupDocs.Editor: تحميل الملفات (حتى المحمية)، معالجة حقول النموذج، وحفظها مع خيارات توفير الذاكرة والحماية. دمج هذه المقاطع في خدماتك سيعزز الإنتاجية والموثوقية.
 
-**الخطوات التالية:**
-- جرّب تنسيقات `WordProcessingFormats` أخرى مثل PDF أو HTML.  
-- دمج التعديل مع ميزات التحويل لإنشاء خطوط معالجة مستندات شاملة من البداية إلى النهاية.  
+**الخطوات التالية:**  
+- جرّب صيغ `WordProcessingFormats` أخرى مثل PDF أو HTML.  
+- دمج التعديل مع ميزات التحويل لإنشاء خطوط معالجة مستندات شاملة.  
 - راجع مرجع API الرسمي للسيناريوهات المتقدمة مثل التحرير التعاوني.
 
 ## قسم الأسئلة المتكررة
 
 1. **هل يمكنني استخدام GroupDocs.Editor بدون ترخيص؟**  
    نعم، تتوفر نسخة تجريبية مجانية للتقييم، لكن الترخيص مطلوب للنشر في بيئات الإنتاج.  
-2. **هل يدعم GroupDocs.Editor جميع إصدارات Word؟**  
-   يدعم بالكامل ملفات DOCX، DOC، وDOCM التي تُنشئها إصدارات Word 2007 حتى Word 2021.  
-3. **كيف تتعامل المكتبة مع الملفات الكبيرة؟**  
-   عبر بث المحتوى واستخدام `optimizeMemoryUsage`، يمكنها معالجة ملفات تصل إلى 500 ميغابايت دون تحميلها بالكامل إلى الذاكرة.  
+2. **هل GroupDocs.Editor متوافق مع جميع إصدارات Word؟**  
+   يدعم بالكامل ملفات DOCX وDOC وDOCM التي تم إنشاؤها بواسطة Word 2007 حتى Word 2021.  
+3. **كيف يتعامل المكتبة مع الملفات الكبيرة؟**  
+   من خلال بث المحتوى واستخدام `optimizeMemoryUsage`، يمكنه معالجة ملفات تصل إلى 500 ميغابايت دون تحميل الملف بالكامل في الذاكرة.  
 4. **هل يمكن دمج GroupDocs.Editor مع Spring Boot؟**  
-   بالتأكيد – ما عليك سوى إعلان اعتماد Maven وحقن كائن `Editor` حيثما تحتاجه.  
-5. **أين يمكنني الحصول على المساعدة إذا واجهت مشاكل؟**  
-   زر [GroupDocs Support Forum](https://forum.groupdocs.com/c/editor/) للحصول على إجابات المجتمع والدعم الرسمي.
+   بالتأكيد – فقط أعلن عن تبعية Maven وقم بحقن `Editor` حيثما تحتاج.  
+5. **أين يمكنني الحصول على مساعدة إذا واجهت مشاكل؟**  
+   زر [منتدى دعم GroupDocs](https://forum.groupdocs.com/c/editor/) للحصول على المساعدة.
 
-## الأسئلة المتكررة
+## الأسئلة المتداولة
 
 **س: كيف يمكنني تعديل ملف Word محمي بكلمة مرور؟**  
 ج: قدّم كلمة المرور عبر `WordProcessingLoadOptions.setPassword()` قبل إنشاء كائن `Editor`.
 
-**س: هل يمكنني حفظ المستند بتنسيق غير DOCX؟**  
-ج: نعم—`WordProcessingSaveOptions` يدعم تنسيقات مثل PDF، RTF، وHTML عبر تعداد `WordProcessingFormats`.
+**س: هل يمكنني حفظ المستند بصيغة غير DOCX؟**  
+ج: نعم—`WordProcessingSaveOptions` يقبل صيغًا مثل PDF وRTF وHTML عبر تعداد `WordProcessingFormats`.
 
 **س: ماذا يفعل `optimize memory usage java` فعليًا؟**  
-ج: يبث المستند على دفعات، مما يمنع وجود الملف بالكامل في ذاكرة الـ heap، وهو ما يناسب الملفات الكبيرة.
+ج: يبث المستند على دفعات، مما يمنع وجود الملف بالكامل في ذاكرة الكومة، وهو مثالي للملفات الكبيرة.
 
-**س: هل يمكن إزالة جميع حقول النماذج مرة واحدة؟**  
-ج: كرّر على `fieldManager.getFormFields()` واستدعِ `removeFormField` لكل حقل.
+**س: هل يمكن إزالة جميع حقول النموذج مرة واحدة؟**  
+ج: قم بالتكرار على `fieldManager.getFormFields()` واستدعِ `removeFormField` لكل عنصر.
 
 **س: هل يجب إغلاق التدفقات يدويًا؟**  
-ج: نعم—استخدم `try‑with‑resources` أو أغلق `InputStream` و`OutputStream` صراحةً لتحرير الموارد.
+ج: نعم—استخدم `try‑with‑resources` أو أغلق صراحةً `InputStream` و`OutputStream` لتحرير الموارد.
 
 ---
 
-**Last Updated:** 2026-06-27  
-**Tested With:** GroupDocs.Editor 25.3 for Java  
-**Author:** GroupDocs  
+**آخر تحديث:** 2026-10-27  
+**تم الاختبار مع:** GroupDocs.Editor 25.3 for Java  
+**المؤلف:** GroupDocs  
 
 ## دروس ذات صلة
 
 - [كيفية تحميل مستندات Word في Java باستخدام GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
-- [كيفية استخدام GroupDocs - تحميل وتعديل حقول نماذج Word مع Java](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
-- [حفظ Word بكلمة مرور باستخدام GroupDocs.Editor for Java](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
+- [كيفية استخدام GroupDocs - تحميل وتعديل حقول نموذج Word باستخدام Java](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
+- [حفظ Word مع كلمة مرور باستخدام GroupDocs.Editor for Java](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}

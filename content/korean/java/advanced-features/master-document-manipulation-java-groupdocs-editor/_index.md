@@ -1,22 +1,31 @@
 ---
-date: '2026-06-27'
-description: Java와 GroupDocs.Editor를 사용하여 Word 문서를 편집하는 방법을 배우세요—Word 파일을 로드하고, 편집하고,
-  저장하며, 메모리 사용량을 최적화하고, 양식 필드를 제거합니다.
+date: '2026-10-27'
+description: GroupDocs.Editor를 사용하여 Java에서 Word 문서의 양식 필드를 제거하고 편집하는 방법을 배우세요. 여기에는
+  보호된 파일 로드, 메모리 사용 최적화, 비밀번호 저장이 포함됩니다.
 keywords:
-- how to edit word
+- remove form fields
 - edit password protected word
-- optimize memory usage java
-- remove form field java
+- save word as pdf
+- convert word to html
+- load word document
+lastmod: '2026-10-27'
+og_description: GroupDocs.Editor와 함께 Java에서 Word 문서의 양식 필드를 제거하고 편집하는 방법을 배우세요. 로드,
+  메모리 최적화 및 비밀번호 보호가 포함됩니다.
+og_image_alt: Guide showing removal of form fields from Word documents using GroupDocs.Editor
+  in Java
+og_title: Java에서 Word 문서를 편집하면서 양식 필드를 제거하는 방법
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-27'
-  description: Learn how to edit word documents in Java with GroupDocs.Editor—load,
-    edit, and save Word files, optimize memory usage, and remove form fields.
-  headline: How to Edit Word Documents in Java with GroupDocs.Editor
+  dateModified: '2026-10-27'
+  description: Learn how to remove form fields and edit Word documents in Java using
+    GroupDocs.Editor, including loading protected files, optimizing memory usage,
+    and saving with passwords.
+  headline: How to remove form fields while editing Word docs in Java
   type: TechArticle
-- description: Learn how to edit word documents in Java with GroupDocs.Editor—load,
-    edit, and save Word files, optimize memory usage, and remove form fields.
-  name: How to Edit Word Documents in Java with GroupDocs.Editor
+- description: Learn how to remove form fields and edit Word documents in Java using
+    GroupDocs.Editor, including loading protected files, optimizing memory usage,
+    and saving with passwords.
+  name: How to remove form fields while editing Word docs in Java
   steps:
   - name: '**Maven Setup** – Add the repository and dependency shown above.'
     text: '**Maven Setup** – Add the repository and dependency shown above.'
@@ -52,41 +61,41 @@ schemas:
       to free resources.
     question: Do I need to close streams manually?
   type: FAQPage
-title: Java와 GroupDocs.Editor를 사용하여 Word 문서를 편집하는 방법
+tags:
+- remove form fields
+- GroupDocs.Editor
+- Java document processing
+- Word automation
+title: Java에서 Word 문서를 편집하면서 양식 필드를 제거하는 방법
 type: docs
 url: /ko/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
 
-# Java와 GroupDocs.Editor를 사용한 Word 문서 편집 방법
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-## 소개
+# Java에서 Word 문서를 편집하면서 양식 필드를 제거하는 방법
 
-프로그래밍 방식으로 **how to edit word** 문서를 편집해야 한다면, GroupDocs.Editor for Java는 보호된 파일과 보호되지 않은 파일 모두에서 작동하는 깔끔하고 메모리 효율적인 API를 제공합니다. 문서 생성 서비스 구축, 양식 필드 정리 자동화, 민감한 콘텐츠 보호 등 어떤 작업을 하든, 이 튜토리얼은 Word 파일을 로드하고, 편집하고, 저장하는 과정을 모범 사례 옵션과 함께 안내합니다.
-
-**이 가이드에서 달성할 내용:**
-- GroupDocs.Editor를 사용하여 Word 문서(비밀번호로 보호된 문서 포함)를 로드합니다.  
-- 텍스트 입력 또는 체크박스와 같은 양식 필드를 관리하고 제거합니다.  
-- 메모리 사용을 최적화하고 쓰기 비밀번호 보호를 적용하면서 편집된 문서를 저장합니다.  
-
-이제 이점들을 확인했으니, 환경을 설정하고 Java에서 Word 문서 편집을 시작해 봅시다.
+Word 문서를 프로그래밍 방식으로 **remove form fields** 해야 하는 경우, GroupDocs.Editor for Java는 보호된 파일과 보호되지 않은 파일 모두에서 작동하는 깔끔하고 메모리 효율적인 API를 제공합니다. 문서 생성 서비스 구축, 레거시 템플릿 정리, 민감한 콘텐츠 보안 등 어떤 작업을 하시든, 이 튜토리얼에서는 Word 파일을 로드, 편집 및 저장하는 방법을 모범 사례 옵션과 함께 안내합니다.
 
 ## 빠른 답변
-- **GroupDocs.Editor가 비밀번호로 보호된 파일을 열 수 있나요?** 예 – `WordProcessingLoadOptions`에 비밀번호를 제공하면 됩니다.  
-- **대용량 문서의 메모리 사용량을 줄이는 옵션은?** `WordProcessingSaveOptions`의 `setOptimizeMemoryUsage(true)`.  
-- **특정 양식 필드를 어떻게 제거하나요?** `FormFieldManager.removeFormField(fieldName)` 호출.  
-- **프로덕션 사용에 라이선스가 필요합니까?** 평가용 트라이얼은 사용할 수 있지만, 전체 라이선스가 모든 기능을 활성화합니다.  
-- **필요한 Java 버전은?** JDK 8 이상.
+- **GroupDocs.Editor가 비밀번호로 보호된 파일을 열 수 있나요?** Yes – just supply the password in `WordProcessingLoadOptions`.  
+- **큰 문서의 메모리 사용량을 줄이는 옵션은 무엇인가요?** `setOptimizeMemoryUsage(true)` in `WordProcessingSaveOptions`.  
+- **특정 양식 필드를 제거하려면 어떻게 해야 하나요?** Call `FormFieldManager.removeFormField(fieldName)`.  
+- **프로덕션 사용에 라이선스가 필요합니까?** A trial works for evaluation; a full license unlocks all features.  
+- **필요한 Java 버전은 무엇인가요?** JDK 8 or higher.
 
-## 사전 요구 사항
+## 전제 조건
 
-- **Java Development Kit (JDK)** 8 이상.  
-- **IDE** – IntelliJ IDEA, Eclipse, 또는 NetBeans.  
+- **Java Development Kit (JDK)** 8 또는 최신 버전.  
+- **IDE** – IntelliJ IDEA, Eclipse, or NetBeans.  
 - **Maven** – 의존성 관리를 위해.  
 
-### 필수 라이브러리
+### 필요한 라이브러리
 
-프로젝트의 Maven에 GroupDocs.Editor를 추가합니다:
+Maven 프로젝트에 GroupDocs.Editor를 추가합니다:
 
 ```xml
 <dependency>
@@ -120,25 +129,23 @@ weight: 1
 
 ### 환경 설정
 
-Maven과 JDK가 올바르게 설치 및 구성되어 있는지 확인하십시오. 두 도구 중 하나에 익숙하지 않다면 공식 설치 가이드를 참고하세요.
+Maven와 JDK가 올바르게 설치되고 구성되었는지 확인하십시오. 두 도구 중 하나에 익숙하지 않다면 공식 설치 가이드를 참고하세요.
 
 ## GroupDocs.Editor for Java 설정
 
-GroupDocs.Editor는 **30개 이상의 입력 및 출력 형식**을 지원하며, 스트리밍 아키텍처 덕분에 전체 파일을 메모리에 로드하지 않고 **500 MB**까지의 문서를 처리할 수 있습니다.
+GroupDocs.Editor는 **30개 이상의 입력 및 출력 형식**을 지원하며 전체 파일을 메모리에 로드하지 않고 **500 MB**까지의 문서를 처리할 수 있어 스트리밍 아키텍처 덕분에 RAM 사용량을 최대 **70 %**까지 절감합니다. 또한 표준 8코어 서버에서 **1,000개의 동시 편집 세션**을 처리할 수 있습니다.
 
 1. **Maven 설정** – 위에 표시된 저장소와 종속성을 추가합니다.  
-2. **직접 다운로드** – 수동으로 JAR를 추가하려면 동일한 릴리스 링크를 사용하십시오.
+2. **직접 다운로드** – 수동 JAR 추가를 선호한다면 동일한 릴리스 링크를 사용하십시오.
 
 ### 라이선스 획득
 
-- **무료 체험** – 비용 없이 다운로드하고 평가합니다.  
-- **전체 라이선스** – 배치 처리 및 프리미엄 지원과 같은 고급 기능을 활성화하기 위해 구매하거나 임시 키를 요청합니다.
+- **Free trial** – 비용 없이 다운로드하고 평가합니다.  
+- **Full license** – 배치 처리 및 프리미엄 지원과 같은 고급 기능을 잠금 해제하기 위해 구매하거나 임시 키를 요청하십시오.
 
 ## GroupDocs.Editor로 Word 문서를 로드하는 방법?
 
-GroupDocs.Editor로 Word 문서를 로드하는 것은 간단합니다: 파일에 대한 `InputStream`을 생성하고, 필요에 따라 `WordProcessingLoadOptions`에 비밀번호를 설정한 뒤, 이러한 매개변수로 `Editor`를 인스턴스화합니다. 라이브러리는 스트리밍 방식으로 문서를 읽고, 편집, 양식 필드 관리 및 파일 저장에 대한 전체 접근 권한을 제공하는 `Editor` 객체를 반환합니다.
-
-`Editor`는 로드된 Word 문서를 나타내는 핵심 클래스이며, 편집, 양식 필드 처리 및 저장을 위한 메서드를 제공합니다.
+FileInputStream은 파일에서 바이트를 읽는 Java I/O 클래스입니다. `WordProcessingLoadOptions`는 비밀번호와 같은 열기 옵션을 구성합니다. `Editor`는 문서를 로드, 편집 및 저장하는 데 사용되는 핵심 GroupDocs.Editor 클래스입니다. Word 파일을 로드하려면 `FileInputStream`을 생성하고, 필요에 따라 로드 옵션에 비밀번호를 설정한 뒤 두 개를 `Editor` 생성자에 전달하면, 전체 파일을 메모리에 로드하지 않고 스트리밍 방식으로 문서를 처리합니다.
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample_docx";
@@ -170,13 +177,11 @@ Editor editor = new Editor(inputStream, loadOptions);
 Editor editor = new Editor(fs, loadOptions);
 ```
 
-**왜 중요한가:** 올바른 비밀번호를 제공하는 것이 필수이며, 그렇지 않으면 라이브러리가 파일을 보호되지 않은 것으로 처리하고 예외를 발생시킬 수 있습니다.
+**Why this matters:** 올바른 비밀번호를 제공하는 것이 필수적이며, 그렇지 않으면 라이브러리가 파일을 보호되지 않은 것으로 처리하고 예외를 발생시킬 수 있습니다.
 
 ## GroupDocs.Editor를 사용하여 Word 문서에서 양식 필드를 제거하는 방법?
 
-특정 양식 필드를 삭제하려면 `Editor` 인스턴스에서 `FormFieldManager`를 가져와 해당 필드 이름을 인자로 `removeFormField` 메서드를 호출합니다. 이 작업은 문서 구조에서 필드 정의를 제거하여 결과 파일에 원치 않는 입력 요소가 남지 않으며 사용자에게 데이터를 요청하지 않게 합니다.
-
-`FormFieldManager`는 로드된 Word 문서 내에서 양식 필드에 접근하고 조작하는 역할을 하는 구성 요소입니다.
+`FormFieldManager`는 로드된 Word 문서 내의 양식 필드를 관리하며, 검색, 추가 및 제거를 허용합니다. `Editor` 인스턴스에서 이를 얻은 후, 대상 필드 이름을 사용해 `removeFormField`를 호출하면 저장하기 전에 문서 구조에서 해당 필드를 삭제합니다. 이렇게 하면 필드가 완전히 제거되어 최종 출력에 나타나지 않게 됩니다.
 
 ```java
 FormFieldManager fieldManager = editor.getFormFieldManager();
@@ -204,13 +209,11 @@ saveOptions.setProtection(com.groupdocs.editor.options.WordProcessingProtection.
         com.groupdocs.editor.words.fieldmanagement.WordProcessingProtectionType.AllowOnlyFormFields, "write_password"));
 ```
 
-**왜 중요한가:** 자동화된 워크플로우에서 남아 있거나 사용되지 않은 필드는 검증 오류를 일으킬 수 있으며, 이를 제거하면 최종 문서를 깔끔하게 유지할 수 있습니다.
+**Why this matters:** 자동화된 워크플로에서 남아 있거나 사용되지 않은 필드는 검증 오류를 일으킬 수 있으며, 이를 제거하면 깨끗한 최종 문서를 보장합니다.
 
 ## Java에서 메모리 사용을 최적화하여 Word 문서를 저장하는 방법?
 
-변경 사항을 저장할 준비가 되면 `WordProcessingSaveOptions` 객체를 구성하고 `setOptimizeMemoryUsage(true)` 플래그를 활성화합니다. 이는 GroupDocs.Editor에게 전체 내용을 힙 메모리에 로드하지 않고 청크 단위로 문서를 기록하도록 지시하여 RAM 사용량을 크게 줄입니다. `save` 메서드를 호출하기 전에 쓰기 비밀번호를 설정하거나 출력 형식을 선택할 수도 있습니다.
-
-`WordProcessingSaveOptions`를 사용하면 메모리 최적화 및 문서 보호를 포함한 저장 프로세스를 세밀하게 조정할 수 있습니다.
+`WordProcessingSaveOptions`는 형식, 비밀번호 보호 및 메모리 최적화를 포함하여 문서 저장 방식을 제어합니다. 인스턴스를 생성하고 `setOptimizeMemoryUsage(true)`를 활성화한 뒤, 필요에 따라 쓰기 비밀번호를 설정하고 `editor.save`에 전달합니다. 라이브러리는 파일을 청크 단위로 기록하여 RAM 사용량을 크게 줄이고 대형 문서에서 OutOfMemoryError를 방지합니다.
 
 ```java
 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -228,67 +231,74 @@ ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 editor.save(outputStream, saveOptions);
 ```
 
-**왜 중요한가:** `optimizeMemoryUsage`를 활성화하면 수백 페이지에 이르는 대형 문서에서도 일반 서버 구성에서 OutOfMemoryError가 발생하는 것을 방지할 수 있어 매우 중요합니다.
+**Why this matters:** `optimizeMemoryUsage`를 활성화하는 것은 수백 페이지에 이르는 대형 문서에 필수적이며, 일반 서버 구성에서 OutOfMemoryError를 방지합니다.
 
 ## 실용적인 적용 사례
 
-- **배치 문서 자동화** – 서버 RAM을 소진하지 않고 매일 수천 개의 Word 파일을 처리합니다.  
-- **동적 템플릿 개인화** – 사용자 입력에 따라 실시간으로 필드를 추가하거나 제거합니다.  
-- **보안 문서 배포** – 양식 필드 편집을 허용하면서도 쓰기 비밀번호 보호를 적용합니다.
+- **Batch document automation** – 매일 밤 수천 개의 Word 파일을 처리하면서 서버 RAM을 고갈시키지 않습니다.  
+- **Dynamic template personalization** – 사용자 입력에 따라 실시간으로 필드를 추가하거나 제거합니다.  
+- **Secure document distribution** – 양식 필드 편집을 허용하면서 쓰기 비밀번호 보호를 적용합니다.  
 
 ## 성능 고려 사항
 
-- **메모리 최적화** – `setOptimizeMemoryUsage(true)`는 200페이지 파일의 힙 사용량을 최대 70 %까지 감소시킵니다.  
-- **스트림 관리** – 누수를 방지하기 위해 스트림을 항상 닫으세요(`try‑with‑resources` 권장).  
-- **버전 업데이트** – GroupDocs.Editor를 최신 상태로 유지하십시오; 각 릴리스는 형식 지원 및 성능 패치를 추가합니다.
+- **Memory optimization** – `setOptimizeMemoryUsage(true)`는 200페이지 파일에 대해 힙 사용량을 최대 70 %까지 줄입니다.  
+- **Stream management** – 스트림을 항상 닫으세요 (`try‑with‑resources` 권장) 누수를 방지합니다.  
+- **Version updates** – GroupDocs.Editor를 최신 상태로 유지하십시오; 각 릴리스는 형식 지원 및 성능 패치를 추가합니다.  
 
 ## 결론
 
-이제 GroupDocs.Editor를 사용하여 Java에서 **how to edit word** 문서를 편집하는 방법을 알게 되었습니다: 파일을 로드하고(보호된 파일도 포함), 양식 필드를 조작하며, 메모리 절약 옵션과 보호 기능을 적용하여 저장합니다. 이러한 코드를 서비스에 통합하면 생산성과 신뢰성을 높일 수 있습니다.
+이제 GroupDocs.Editor를 사용하여 Java에서 **how to remove form fields** 및 Word 문서를 편집하는 방법을 알게 되었습니다: 파일을 로드하고(보호된 파일도 가능), 양식 필드를 조작하고, 메모리 절약 옵션 및 보호와 함께 저장합니다. 이러한 코드를 서비스에 통합하면 생산성과 신뢰성을 높일 수 있습니다.
 
-**다음 단계:**
-- `WordProcessingFormats`의 다른 형식(PDF 또는 HTML 등)을 실험해 보세요.  
-- 편집과 변환 기능을 결합하여 엔드‑투‑엔드 문서 파이프라인을 구축합니다.  
-- 협업 편집과 같은 고급 시나리오를 위해 공식 API 레퍼런스를 검토합니다.
+**Next steps:**  
+- PDF 또는 HTML과 같은 다른 `WordProcessingFormats`를 실험해 보세요.  
+- 편집을 변환 기능과 결합하여 엔드‑투‑엔드 문서 파이프라인을 구축합니다.  
+- 협업 편집과 같은 고급 시나리오를 위해 공식 API 레퍼런스를 검토하십시오.
 
 ## FAQ 섹션
 
-1. **라이선스 없이 GroupDocs.Editor를 사용할 수 있나요?**  
-   예, 평가용 무료 트라이얼을 제공하지만, 프로덕션 배포에는 라이선스가 필요합니다.  
+1. **GroupDocs.Editor를 라이선스 없이 사용할 수 있나요?**  
+   Yes, a free trial is available for evaluation, but a license is required for production deployments.  
 2. **GroupDocs.Editor가 모든 Word 버전과 호환되나요?**  
-   Word 2007부터 Word 2021까지 생성된 DOCX, DOC, DOCM 파일을 완벽히 지원합니다.  
+   It fully supports DOCX, DOC, and DOCM files generated by Word 2007 through Word 2021.  
 3. **라이브러리는 대용량 파일을 어떻게 처리하나요?**  
-   콘텐츠를 스트리밍하고 `optimizeMemoryUsage`를 사용함으로써 전체 파일을 메모리에 로드하지 않고도 최대 500 MB 파일을 처리할 수 있습니다.  
+   By streaming content and using `optimizeMemoryUsage`, it can process files up to 500 MB without loading the whole file into memory.  
 4. **GroupDocs.Editor를 Spring Boot와 통합할 수 있나요?**  
-   물론입니다 – Maven 종속성을 선언하고 필요한 곳에 `Editor`를 주입하면 됩니다.  
-5. **문제가 발생하면 어디에서 도움을 받을 수 있나요?**  
-   커뮤니티 답변과 공식 지원을 위해 [GroupDocs Support Forum](https://forum.groupdocs.com/c/editor/)을 방문하십시오.
+   Absolutely – simply declare the Maven dependency and inject the `Editor` where needed.  
+5. **문제 발생 시 어디서 도움을 받을 수 있나요?**  
+   Visit the [GroupDocs Support Forum](https://forum.groupdocs.com/c/editor/) for assistance.  
 
 ## 자주 묻는 질문
 
-**Q: 비밀번호로 보호된 Word 파일을 어떻게 편집하나요?**  
-A: `Editor` 인스턴스를 만들기 전에 `WordProcessingLoadOptions.setPassword()`를 통해 비밀번호를 제공하십시오.
+**Q: How do I edit a password‑protected Word file?**  
+A: Provide the password via `WordProcessingLoadOptions.setPassword()` before creating the `Editor` instance.
 
-**Q: DOCX 외의 형식으로 문서를 저장할 수 있나요?**  
-A: 예—`WordProcessingSaveOptions`는 `WordProcessingFormats` 열거형을 통해 PDF, RTF, HTML 등 다양한 형식을 지원합니다.
+**Q: Can I save a document in a format other than DOCX?**  
+A: Yes—`WordProcessingSaveOptions` accepts formats like PDF, RTF, and HTML through the `WordProcessingFormats` enum.
 
-**Q: `optimize memory usage java`는 실제로 무엇을 하나요?**  
-A: 문서를 청크 단위로 스트리밍하여 전체 파일이 힙 메모리에 존재하지 않게 하며, 대용량 파일에 적합합니다.
+**Q: What does `optimize memory usage java` actually do?**  
+A: It streams the document in chunks, preventing the entire file from residing in heap memory, which is ideal for large files.
 
-**Q: 모든 양식 필드를 한 번에 제거할 수 있나요?**  
-A: `fieldManager.getFormFields()`를 순회하면서 각 항목에 대해 `removeFormField`를 호출하면 됩니다.
+**Q: Is it possible to remove all form fields at once?**  
+A: Iterate over `fieldManager.getFormFields()` and call `removeFormField` for each entry.
 
-**Q: 스트림을 수동으로 닫아야 하나요?**  
-A: 예—`try‑with‑resources`를 사용하거나 `InputStream` 및 `OutputStream`을 명시적으로 닫아 리소스를 해제하십시오.
+**Q: Do I need to close streams manually?**  
+A: Yes—use try‑with‑resources or explicitly close `InputStream` and `OutputStream` to free resources.
 
 ---
 
-**마지막 업데이트:** 2026-06-27  
+**마지막 업데이트:** 2026-10-27  
 **테스트 환경:** GroupDocs.Editor 25.3 for Java  
 **작성자:** GroupDocs  
 
 ## 관련 튜토리얼
 
 - [Java에서 GroupDocs.Editor로 Word 문서 로드하는 방법](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
-- [GroupDocs 사용 방법 - Java로 Word 양식 필드 로드 및 편집](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
+- [GroupDocs 사용 - Java로 Word 양식 필드 로드 및 편집](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
 - [GroupDocs.Editor for Java를 사용하여 비밀번호로 Word 저장](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}
