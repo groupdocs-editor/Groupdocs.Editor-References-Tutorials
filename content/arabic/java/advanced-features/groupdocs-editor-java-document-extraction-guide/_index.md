@@ -1,21 +1,25 @@
 ---
-date: '2026-06-16'
-description: تعلم كيفية استخراج البيانات الوصفية، وكيفية استخراج البيانات الوصفية
-  في Java، واكتشاف نوع المستند Java باستخدام GroupDocs.Editor لـ Java عبر ملفات Word
-  وExcel والملفات النصية.
+date: '2026-10-27'
+description: تعلم كيفية استخراج metadata، وكيفية استخراج metadata في Java، واكتشاف
+  document type Java باستخدام GroupDocs.Editor for Java عبر ملفات Word وExcel والنص.
 keywords:
 - how to extract metadata
-- java get page count
-- java get document properties
-- java read document info
 - java detect file format
+- groupdocs editor metadata
+- get page count java
+- java get document info
+lastmod: '2026-10-27'
+og_description: تعلم كيفية استخراج metadata في Java، واكتشاف document type، وقراءة
+  الخصائص مثل page count باستخدام GroupDocs.Editor – حل سريع وفعّال في استهلاك الذاكرة.
+og_image_alt: Guide showing Java code extracting document metadata with GroupDocs.Editor
+og_title: كيفية استخراج metadata من مستندات Java باستخدام GroupDocs.Editor
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-16'
+  dateModified: '2026-10-27'
   description: Learn how to extract metadata, how to extract metadata in Java, and
     detect document type java with GroupDocs.Editor for Java across Word, Excel, and
     text files.
-  headline: How to Extract Metadata from Documents Java using GroupDocs.Editor
+  headline: How to extract metadata from Documents Java using GroupDocs.Editor
   type: TechArticle
 - questions:
   - answer: GroupDocs.Editor focuses on editable formats (DOCX, XLSX, etc.). For PDFs,
@@ -32,7 +36,13 @@ schemas:
   - answer: Java 8 or later; newer LTS versions (11, 17) are fully supported.
     question: What Java version is required?
   type: FAQPage
-title: كيفية استخراج البيانات الوصفية من المستندات باستخدام Java وGroupDocs.Editor
+tags:
+- extract metadata
+- GroupDocs.Editor
+- Java document processing
+- document type detection
+- metadata extraction
+title: كيفية استخراج metadata من مستندات Java باستخدام GroupDocs.Editor
 type: docs
 url: /ar/java/advanced-features/groupdocs-editor-java-document-extraction-guide/
 weight: 1
@@ -40,30 +50,31 @@ weight: 1
 
 # كيفية استخراج البيانات الوصفية من المستندات Java باستخدام GroupDocs.Editor
 
-إذا كنت مطورًا **سئمت من استخراج المعلومات يدويًا من ملفات Word أو Excel أو ملفات النص العادي**، يوضح لك هذا الدليل **كيفية استخراج البيانات الوصفية** بسرعة وبشكل موثوق. سترى لماذا GroupDocs.Editor for Java هي المكتبة المفضلة لـ **detect document type java**، وكيفية قراءة الخصائص مثل عدد الصفحات، المؤلف، وحالة التشفير، وكيفية التعامل مع الملفات المحمية بكلمة مرور — كل ذلك باستخدام مقتطفات شفرة مختصرة وجاهزة للإنتاج.
+إذا كنت مطورًا **متعبًا من استخراج المعلومات يدويًا من ملفات Word أو Excel أو ملفات النص العادي**، فإن هذا الدليل يوضح لك **كيفية استخراج البيانات الوصفية** بسرعة وبشكل موثوق. ستتعرف على سبب كون GroupDocs.Editor for Java المكتبة المفضلة لـ **detect document type java**، وكيفية قراءة الخصائص مثل عدد الصفحات، المؤلف، وحالة التشفير، وكيفية التعامل مع الملفات المحمية بكلمة مرور — كل ذلك باستخدام مقتطفات شفرة مختصرة وجاهزة للإنتاج.
 
 ## إجابات سريعة
-- **ماذا يعني “extract document metadata java”؟** يشير إلى قراءة الخصائص برمجيًا مثل الصيغة، عدد الصفحات، الحجم، وحالة التشفير من المستندات باستخدام Java.  
-- **ما المكتبة التي تساعد في ذلك؟** توفر GroupDocs.Editor for Java واجهة برمجة تطبيقات بسيطة لاستخراج البيانات الوصفية واكتشاف النوع.  
-- **هل يمكنني اكتشاف نوع المستند java كجزء من العملية؟** نعم — من خلال فحص `IDocumentInfo` المسترجعة يمكنك تحديد ما إذا كان الملف Word أو جدول بيانات أو مستند نصي.  
-- **هل أحتاج إلى ترخيص؟** النسخة التجريبية المجانية تكفي للتقييم؛ الترخيص الدائم مطلوب للاستخدام في الإنتاج.  
-- **ما هي المتطلبات الأساسية؟** Java 8+، Maven (أو تنزيل JAR يدويًا)، ومعرفة أساسية بـ Java.
+- **What does “extract document metadata java” mean?** يشير إلى قراءة الخصائص برمجيًا مثل الصيغة، عدد الصفحات، الحجم، وحالة التشفير من المستندات باستخدام Java.  
+- **Which library helps with this?** GroupDocs.Editor for Java توفر واجهة برمجة تطبيقات بسيطة لاستخراج البيانات الوصفية واكتشاف النوع.  
+- **Can I detect document type java as part of the process?** نعم — من خلال فحص `IDocumentInfo` المرتجع يمكنك تحديد ما إذا كان الملف Word أو جدول بيانات أو مستند نصي.  
+- **Do I need a license?** النسخة التجريبية المجانية تكفي للتقييم؛ تحتاج إلى ترخيص دائم للاستخدام في الإنتاج.  
+- **What are the main prerequisites?** Java 8+، Maven (أو تحميل JAR يدويًا)، ومعرفة أساسية بـ Java.
 
-## ما هو extract document metadata java؟
-**استخراج البيانات الوصفية للمستند في Java يعني استرجاع معلومات وصفية — مثل صيغة الملف، عدد الصفحات، المؤلف، أو حالة التشفير — دون تحميل محتوى المستند بالكامل.** يسرّع هذا النهج الخفيف الوزن الفهرسة، الأرشفة، وفحوصات الامتثال من خلال السماح لك بتحليل الملفات بسرعة، تقليل استهلاك الذاكرة، واتخاذ قرارات مستنيرة قبل فتح المستندات بالكامل.
+## ما هو كيفية استخراج البيانات الوصفية؟
+`IDocumentInfo` هي واجهة تمثل البيانات الوصفية العامة لأي مستند مدعوم.  
+استخراج البيانات الوصفية للمستند في Java يعني استرجاع معلومات وصفية مثل تنسيق الملف، عدد الصفحات، المؤلف، أو حالة التشفير **دون تحميل محتوى المستند بالكامل**. هذه المقاربة الخفيفة تسرّع الفهرسة، الأرشفة، وفحوصات الامتثال من خلال السماح لك بتحليل الملفات بسرعة، تقليل استهلاك الذاكرة، واتخاذ قرارات مستنيرة قبل فتح المستندات بالكامل.
 
 ## لماذا تستخدم GroupDocs.Editor for Java لاكتشاف نوع المستند java؟
-**يقوم GroupDocs.Editor تلقائيًا بتحديد نوع المستند ويكشف عن خصائص خاصة بالنوع لأكثر من 30 صيغة قابلة للتحرير، مع معالجة ملفات تصل إلى 2 GB دون تحميل المحتوى الكامل إلى الذاكرة.** كما يتعامل مع الملفات المحمية بكلمة مرور مباشرةً، مما يجعله الحل الأكثر كفاءة لسيناريوهات **detect document type java**.
+GroupDocs.Editor يحدد نوع المستند تلقائيًا ويكشف عن خصائص خاصة بالنوع لـ **أكثر من 30 تنسيقًا قابلاً للتحرير**، ويعالج الملفات حتى **2 GB** مع قراءة الجزء العلوي فقط. كما يتعامل مع الملفات المحمية بكلمة مرور مباشرةً، مما يجعله الحل الأكثر كفاءة لسيناريوهات **detect document type java**.
 
 ## المتطلبات المسبقة
 - **Java Development Kit (JDK)** 8 أو أحدث.  
-- **Maven** لإدارة الاعتمادات (أو تنزيل JAR يدويًا).  
-- إلمام أساسي بفئات Java ومعالجة الاستثناءات.
+- **Maven** لإدارة التبعيات (أو تحميل JAR يدويًا).  
+- إلمام أساسي بفئات Java ومعالجة الاستثناءات.  
 
-## إعداد GroupDocs.Editor لـ Java
+## إعداد GroupDocs.Editor for Java
 
 ### التثبيت عبر Maven
-أضف المستودع والاعتماد إلى ملف `pom.xml` الخاص بك:
+Add the repository and dependency to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -84,35 +95,23 @@ weight: 1
 ```
 
 ### التحميل المباشر
-بدلاً من ذلك، قم بتنزيل أحدث JAR من [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+بدلاً من ذلك، قم بتحميل أحدث JAR من [إصدارات GroupDocs.Editor for Java](https://releases.groupdocs.com/editor/java/).
 
 ### الحصول على الترخيص
-- **Free Trial** – استكشاف الواجهة البرمجية دون تكلفة.  
-- **Temporary License** – الحصول على مفتاح مؤقت عبر [this link](https://purchase.groupdocs.com/temporary-license).  
-- **Purchase** – شراء ترخيص دائم للنشر في بيئة الإنتاج.
+- **Free trial** – استكشف الواجهة البرمجية بدون تكلفة.  
+- **Temporary license** – احصل على مفتاح محدود الزمن عبر [هذا الرابط](https://purchase.groupdocs.com/temporary-license).  
+- **Purchase** – اشترِ ترخيصًا دائمًا للنشر في بيئات الإنتاج.
 
 #### التهيئة الأساسية والإعداد
-فئة `Editor` هي نقطة الدخول التي تقوم بتحميل المستند وتوفر الوصول إلى بياناته الوصفية. بعد إنشاء مثيل `Editor` يمكنك استدعاء `getDocumentInfo(null)` لجلب معلومات خفيفة الوزن.
-
-```java
-import com.groupdocs.editor.Editor;
-
-public class DocumentEditorSetup {
-    public static void main(String[] args) {
-        String filePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_DOCX";
-        Editor editor = new Editor(filePath);
-        // Initialize your document processing workflow here
-        editor.dispose();
-    }
-}
-```
+فئة `Editor` هي نقطة الدخول التي تقوم بتحميل المستند وتوفر الوصول إلى بياناته الوصفية. بعد إنشاء كائن `Editor` يمكنك استدعاء `getDocumentInfo(null)` لجلب معلومات خفيفة الوزن.  
+`getDocumentInfo(null)` يسترجع فقط البيانات الوصفية للمستند دون تحميل محتواه بالكامل.
 
 ## كيفية استخراج البيانات الوصفية في Java
-حمّل المستند، اطلب `IDocumentInfo` الخاص به، ثم قم بالتحويل إلى فئة المعلومات الخاصة بالتنسيق. يعمل هذا النمط مع ملفات Word وExcel والنص العادي مع الحفاظ على استهلاك منخفض للذاكرة، لأن رأس المستند فقط يُقرأ. من خلال استخراج البيانات الوصفية أولاً، يمكنك اتخاذ قرار ما إذا كنت ستعالج المحتوى الكامل، أو توجيه الملف، أو رفض الصيغ غير المدعومة.
+حمّل المستند، اطلب `IDocumentInfo` الخاص به، ثم قم بالتحويل إلى فئة المعلومات الخاصة بالتنسيق.
 
 ### الميزة 1: استخراج البيانات الوصفية من مستندات Word
 #### تحميل المستند
-واجهة `DocumentInfo` تمثل بيانات وصفية عامة لأي ملف مدعوم. تمرير مسار الملف إلى مُنشئ `Editor` يجهز المستند للفحص.
+`DocumentInfo` هي واجهة تمثل البيانات الوصفية العامة لأي ملف مدعوم. تمرير مسار الملف إلى مُنشئ `Editor` يجهز المستند للفحص.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -124,7 +123,7 @@ Editor editorDocx = new Editor(docxInputFilePath);
 ```
 
 #### استخراج معلومات المستند
-`WordProcessingDocumentInfo` هو تنفيذ ملموس يضيف خصائص خاصة بـ Word مثل عدد الصفحات، المؤلف، وحالة التشفير.
+`WordProcessingDocumentInfo` هي تنفيذ ملموس يضيف خصائص خاصة بـ Word مثل عدد الصفحات، المؤلف، وحالة التشفير.
 
 ```java
 IDocumentInfo infoDocx = editorDocx.getDocumentInfo(null);
@@ -137,7 +136,7 @@ editorDocx.dispose();
 
 *شرح*:
 - `getDocumentInfo(null)` يجلب البيانات الوصفية دون تحميل جسم المستند بالكامل.  
-- التحويل إلى `WordProcessingDocumentInfo` يفتح خصائص Word الخاصة مثل **عدد الصفحات**، اسم المؤلف، وعلم التشفير.
+- التحويل إلى `WordProcessingDocumentInfo` يفتح خصائص خاصة بـ Word مثل **عدد الصفحات**، اسم المؤلف، وعلم التشفير.
 
 ### الميزة 2: اكتشاف نوع المستند java – جداول البيانات
 #### تحميل ملف جدول البيانات
@@ -153,7 +152,8 @@ Editor editorXlsx = new Editor(xlsxInputFilePath);
 ```
 
 #### التحقق واستخراج المعلومات
-باستخدام عامل `instanceof` يمكنك **detect document type java** ثم قراءة البيانات الوصفية الخاصة بجداول البيانات مثل عدد الأوراق والحجم الكلي.
+باستخدام عامل `instanceof` يمكنك **detect document type java** ثم قراءة البيانات الوصفية الخاصة بجداول البيانات مثل عدد الأوراق والحجم الكلي.  
+`getSheetCount()` تُعيد عدد أوراق العمل في جدول البيانات.
 
 ```java
 IDocumentInfo infoXlsx = editorXlsx.getDocumentInfo(null);
@@ -165,7 +165,7 @@ editorXlsx.dispose();
 ```
 
 *شرح*:
-- تحقق `instanceof` يخبرك ما إذا كان الملف جدول بيانات، مما يتيح لك استدعاء `getSheetCount()` وغيرها من الطرق الخاصة بجداول البيانات.
+- فحص `instanceof` يخبرك ما إذا كان الملف جدول بيانات، مما يتيح لك استدعاء `getSheetCount()` وغيرها من الطرق الخاصة بجداول البيانات.
 
 ### الميزة 3: التعامل مع المستندات المحمية بكلمة مرور
 #### تحميل المستند المحمي
@@ -181,8 +181,10 @@ String xlsInputFilePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_XLS_PROTECTED";
 Editor editorXls = new Editor(xlsInputFilePath);
 ```
 
-#### محاولة الوصول باستخدام كلمة المرور
-إذا كانت كلمة المرور مفقودة أو غير صحيحة، فإن الواجهة البرمجية ترمي استثناء `PasswordRequiredException` أو `IncorrectPasswordException`، مما يتيح لك طلب كلمة المرور من المستخدم أو تسجيل المشكلة.
+#### محاولة الوصول مع كلمة المرور
+إذا كانت كلمة المرور مفقودة أو غير صحيحة، فإن الواجهة البرمجية ترمي استثناء `PasswordRequiredException` أو `IncorrectPasswordException`، مما يتيح لك طلب كلمة المرور من المستخدم أو تسجيل المشكلة.  
+`PasswordRequiredException` يُرمى عندما يتطلب المستند كلمة مرور ولكن لم تُقدم أي كلمة.  
+`IncorrectPasswordException` يُشير إلى أن كلمة المرور المقدمة لا تتطابق مع المستند.
 
 ```java
 try {
@@ -210,7 +212,7 @@ editorXls.dispose();
 
 ### الميزة 4: استخراج البيانات الوصفية للمستندات النصية
 #### تحميل المستند النصي
-للتنسيقات النصية (TXT، XML، CSV) تُعيد فئة `TextDocumentInfo` الترميز، عدد الأسطر، وتفاصيل حجم الملف.
+بالنسبة لتنسيقات النص العادي (TXT، XML، CSV) تُرجع فئة `TextDocumentInfo` الترميز، عدد الأسطر، وتفاصيل حجم الملف.
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -234,20 +236,19 @@ editorXml.dispose();
 ```
 
 *شرح*:
-- هذا النهج يعمل مع التنسيقات النصية حيث تحتاج أساسًا إلى الترميز وبيانات حجم الملف.
+- هذه المقاربة تعمل لتنسيقات النص العادي حيث تحتاج أساسًا إلى الترميز وبيانات حجم الملف.
 
 ## التطبيقات العملية
-- **أرشفة المستندات تلقائيًا** – استخراج البيانات الوصفية لتوسيم وتخزين الملفات في مستودع قابل للبحث.  
-- **أتمتة سير العمل** – استخدام البيانات الوصفية لتوجيه المستندات إلى القسم المناسب أو تشغيل عمليات لاحقة.  
-- **ترحيل البيانات** – الحفاظ على الخصائص الأصلية عند نقل الملفات بين الأنظمة، مما يضمن الامتثال التنظيمي.
+- **Automated document archiving** – استخرج البيانات الوصفية لتوسيم وتخزين الملفات في مستودع قابل للبحث.  
+- **Workflow automation** – استخدم البيانات الوصفية لتوجيه المستندات إلى القسم المناسب أو تشغيل عمليات لاحقة.  
+- **Data migration** – حافظ على الخصائص الأصلية عند نقل الملفات بين الأنظمة، مما يضمن الامتثال التنظيمي.
 
 ## اعتبارات الأداء
-- **تحرير المحررات** – دائمًا استدعِ `dispose()` لتحرير الموارد الأصلية وتجنب تسرب الذاكرة.  
-- **الملفات الكبيرة** – المعالجة عبر التدفقات أو القطع؛ `getDocumentInfo(null)` يقرأ فقط الرأس، مما يحافظ على استهلاك الذاكرة تحت 50 MB حتى للملفات ذات 2 GB.  
-- **التحليل** – استخدم أدوات تحليل Java (مثل VisualVM) لتحديد نقاط الاختناق عند معالجة آلاف الملفات.
+- **Dispose editors** – دائمًا استدعِ `dispose()` لتحرير الموارد الأصلية وتجنب تسرب الذاكرة.  
+- **Large files** – عالجها في تدفقات أو قطع؛ `getDocumentInfo(null)` يقرأ فقط الجزء العلوي، مما يحافظ على استهلاك الذاكرة تحت **50 MB** حتى لملفات **2 GB**.  
+- **Profiling** – استخدم أدوات تحليل الأداء في Java (مثل VisualVM) لتحديد نقاط الاختناق عند معالجة آلاف الملفات.
 
-## المشكلات الشائعة واستكشاف الأخطاء
-
+## المشكلات الشائعة & استكشاف الأخطاء
 | العَرَض | السبب المحتمل | الحل |
 |---------|--------------|-----|
 | `PasswordRequiredException` رغم أن الملف غير محمي | مسار ملف غير صحيح أو ملف تالف | تحقق من المسار وسلامة الملف |
@@ -257,31 +258,44 @@ editorXml.dispose();
 ## الأسئلة المتكررة
 
 **س: هل يمكنني استخراج البيانات الوصفية من ملفات PDF باستخدام نفس الواجهة البرمجية؟**  
-ج: يركز GroupDocs.Editor على الصيغ القابلة للتحرير (DOCX، XLSX، إلخ). بالنسبة لملفات PDF، استخدم GroupDocs.Metadata أو GroupDocs.Viewer.
+ج: يركز GroupDocs.Editor على التنسيقات القابلة للتحرير (DOCX، XLSX، إلخ). بالنسبة لملفات PDF، استخدم GroupDocs.Metadata أو GroupDocs.Viewer.
 
 **س: كيف يمكنني اكتشاف نوع المستند دون التحويل (casting)؟**  
-ج: استدعِ `info.getDocumentType()` التي تُعيد تعدادًا (enum) مثل `DocumentType.WordProcessing` أو `DocumentType.Spreadsheet`.
+ج: استدعِ `info.getDocumentType()` التي تُعيد تعدادًا (enum) مثل `DocumentType.WordProcessing`، `DocumentType.Spreadsheet`.
 
 **س: هل يمكن استخراج الخصائص المخصصة المدمجة في ملفات Office؟**  
-ج: نعم — توفر `WordProcessingDocumentInfo` و `SpreadsheetDocumentInfo` طرقًا مثل `getCustomProperties()`.
+ج: نعم — `WordProcessingDocumentInfo` و `SpreadsheetDocumentInfo` يقدمان طرقًا مثل `getCustomProperties()`.
 
 **س: هل أحتاج إلى ترخيص منفصل لكل نوع مستند؟**  
-ج: لا، ترخيص واحد لـ GroupDocs.Editor يغطي جميع الصيغ المدعومة.
+ج: لا، ترخيص واحد لـ GroupDocs.Editor يغطي جميع التنسيقات المدعومة.
 
 **س: ما نسخة Java المطلوبة؟**  
 ج: Java 8 أو أحدث؛ إصدارات LTS الأحدث (11، 17) مدعومة بالكامل.
 
 ## الخلاصة
-أصبحت الآن تمتلك سير عمل كامل وجاهز للإنتاج لـ **كيفية استخراج البيانات الوصفية** و **detect document type java** باستخدام GroupDocs.Editor. دمج هذه المقتطفات مع منطق عملك الخاص لأتمتة الأرشفة، فحوصات الامتثال، أو أي سيناريو حيث تكون رؤى المستند ذات قيمة.
+أنت الآن تمتلك سير عمل كامل وجاهز للإنتاج لـ **how to extract metadata** و **detect document type java** باستخدام GroupDocs.Editor. دمج هذه المقتطفات مع منطق عملك الخاص لأتمتة الأرشفة، فحوصات الامتثال، أو أي سيناريو حيث تكون رؤى المستند ذات قيمة.
 
 ---
 
-**آخر تحديث:** 2026-06-16  
+**آخر تحديث:** 2026-10-27  
 **تم الاختبار مع:** GroupDocs.Editor 25.3 for Java  
 **المؤلف:** GroupDocs
 
 ## دروس ذات صلة
 
 - [تحميل مستند Word Java باستخدام GroupDocs.Editor – دليل كامل](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
-- [كيفية تحرير ملفات Excel وWord في Java باستخدام GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
+- [كيفية تعديل ملفات Excel و Word في Java باستخدام GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [كيفية استخراج الموارد من مستندات Word – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
+
+```java
+import com.groupdocs.editor.Editor;
+
+public class DocumentEditorSetup {
+    public static void main(String[] args) {
+        String filePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_DOCX";
+        Editor editor = new Editor(filePath);
+        // Initialize your document processing workflow here
+        editor.dispose();
+    }
+}
+```

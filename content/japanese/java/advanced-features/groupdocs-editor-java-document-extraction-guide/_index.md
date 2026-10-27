@@ -1,20 +1,25 @@
 ---
-date: '2026-06-16'
-description: GroupDocs.Editor for Java を使用して、Word、Excel、テキストファイル全般で metadata の抽出方法、Java
-  における metadata の抽出方法、そして document type の検出方法を学びましょう。
+date: '2026-10-27'
+description: GroupDocs.Editor for Java を使用して、metadata の抽出方法、Java での metadata 抽出、そして
+  Word、Excel、text files 全般での document type の検出方法を学びます。
 keywords:
 - how to extract metadata
-- java get page count
-- java get document properties
-- java read document info
 - java detect file format
+- groupdocs editor metadata
+- get page count java
+- java get document info
+lastmod: '2026-10-27'
+og_description: Java で metadata を抽出し、document type を検出し、page count などのプロパティを読む方法を、GroupDocs.Editor
+  の fast, memory‑efficient ソリューションで学びます。
+og_image_alt: Guide showing Java code extracting document metadata with GroupDocs.Editor
+og_title: GroupDocs.Editor を使用した Java ドキュメントからの metadata 抽出方法
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-16'
+  dateModified: '2026-10-27'
   description: Learn how to extract metadata, how to extract metadata in Java, and
     detect document type java with GroupDocs.Editor for Java across Word, Excel, and
     text files.
-  headline: How to Extract Metadata from Documents Java using GroupDocs.Editor
+  headline: How to extract metadata from Documents Java using GroupDocs.Editor
   type: TechArticle
 - questions:
   - answer: GroupDocs.Editor focuses on editable formats (DOCX, XLSX, etc.). For PDFs,
@@ -31,35 +36,42 @@ schemas:
   - answer: Java 8 or later; newer LTS versions (11, 17) are fully supported.
     question: What Java version is required?
   type: FAQPage
-title: GroupDocs.Editor を使用した Java におけるドキュメントの metadata 抽出方法
+tags:
+- extract metadata
+- GroupDocs.Editor
+- Java document processing
+- document type detection
+- metadata extraction
+title: GroupDocs.Editor を使用した Java ドキュメントからの metadata 抽出方法
 type: docs
 url: /ja/java/advanced-features/groupdocs-editor-java-document-extraction-guide/
 weight: 1
 ---
 
-# JavaでGroupDocs.Editorを使用してドキュメントのメタデータを抽出する方法
+# GroupDocs.Editor を使用した Java のドキュメントからメタデータを抽出する方法
 
-もしあなたが Word、Excel、またはプレーンテキストファイルから手動で情報を取得することに**うんざりしている**開発者であれば、このガイドでは**メタデータの抽出方法**を迅速かつ確実に示します。GroupDocs.Editor for Java が **detect document type java** のための定番ライブラリである理由や、ページ数、作者、暗号化ステータスなどのプロパティの読み取り方法、パスワード保護されたファイルの扱い方を、簡潔で本番環境向けのコードスニペットとともに確認できます。
+Word、Excel、またはプレーンテキストファイルから手作業で情報を取得することに**うんざりしている**開発者の方へ、このガイドでは**メタデータの抽出方法**を迅速かつ確実に示します。GroupDocs.Editor for Java が **detect document type java** に最適なライブラリである理由、ページ数、作者、暗号化ステータスといったプロパティの読み取り方法、パスワード保護されたファイルの扱い方を、簡潔で本番環境向けのコードスニペットと共に紹介します。
 
 ## クイック回答
-- **“extract document metadata java” とは何か？** Java を使用してドキュメントの形式、ページ数、サイズ、暗号化ステータスなどのプロパティをプログラムで読み取ることを指します。  
-- **どのライブラリがこれを支援しますか？** GroupDocs.Editor for Java はメタデータ抽出とタイプ検出のためのシンプルな API を提供します。  
-- **プロセスの一部として document type java を検出できますか？** はい。返される `IDocumentInfo` を調べることで、ファイルが Word、スプレッドシート、テキストドキュメントのいずれかを判別できます。  
-- **ライセンスは必要ですか？** 無料トライアルで評価は可能ですが、本番利用には永続ライセンスが必要です。  
-- **主な前提条件は何ですか？** Java 8 以上、Maven（または手動での JAR ダウンロード）、基本的な Java 知識です。
+- **「extract document metadata java」とは何ですか？** これは、Java を使用してドキュメントから形式、ページ数、サイズ、暗号化ステータスなどのプロパティをプログラム的に読み取ることを指します。  
+- **この作業に役立つライブラリはどれですか？** GroupDocs.Editor for Java は、メタデータ抽出とタイプ検出のためのシンプルな API を提供します。  
+- **プロセスの一部として document type java を検出できますか？** はい。返される `IDocumentInfo` を調べることで、ファイルが Word、スプレッドシート、またはテキストドキュメントのいずれかを判別できます。  
+- **ライセンスは必要ですか？** 評価には無料トライアルが利用可能ですが、本番環境で使用するには永続ライセンスが必要です。  
+- **主な前提条件は何ですか？** Java 8 以上、Maven（または手動での JAR ダウンロード）、基本的な Java の知識です。
 
-## extract document metadata java とは何か？
-**Java におけるドキュメントメタデータの抽出とは、ファイル全体の内容を読み込まずに、ファイル形式、ページ数、作者、暗号化ステータスなどの記述情報を取得することを意味します。** この軽量アプローチにより、ファイルを迅速に分析し、メモリ使用量を削減し、全文を開く前に情報に基づいた判断ができるため、インデックス作成、アーカイブ、コンプライアンスチェックが高速化されます。
+## メタデータ抽出とは何か？
+`IDocumentInfo` は、サポートされているすべてのドキュメントの汎用メタデータを表すインターフェイスです。  
+Java でドキュメントメタデータを抽出することは、ファイル形式、ページ数、作者、暗号化ステータスなどの記述情報を**ドキュメント全体の内容を読み込まずに**取得することを意味します。この軽量アプローチにより、ファイルを迅速に解析し、メモリ使用量を削減し、全文を開く前に情報に基づいた判断が可能になるため、インデックス作成、アーカイブ、コンプライアンスチェックが高速化されます。
 
-## document type java を検出するために Java 用 GroupDocs.Editor を使用する理由
-**GroupDocs.Editor はドキュメントタイプを自動的に識別し、30 以上の編集可能フォーマットに対してタイプ固有のプロパティを提供し、最大 2 GB のファイルをメモリに全体をロードせずに処理します。** また、パスワード保護されたファイルも即座に扱えるため、**detect document type java** シナリオに最も効率的なソリューションとなります。
+## なぜ GroupDocs.Editor for Java を使用して document type java を検出するのか？
+GroupDocs.Editor はドキュメントタイプを自動的に識別し、**30 以上の編集可能フォーマット**に対してタイプ固有のプロパティを提供します。ヘッダーのみを読み取ることで最大 **2 GB** のファイルを処理できます。また、パスワード保護されたファイルも標準で扱えるため、**detect document type java** シナリオにおいて最も効率的なソリューションとなります。
 
 ## 前提条件
 - **Java Development Kit (JDK)** 8 以上。  
 - **Maven**（依存関係管理用、または手動で JAR をダウンロード）。  
 - Java のクラスと例外処理に関する基本的な知識。
 
-## Java 用 GroupDocs.Editor の設定
+## GroupDocs.Editor for Java のセットアップ
 
 ### Maven でのインストール
 リポジトリと依存関係を `pom.xml` に追加します：
@@ -83,35 +95,23 @@ weight: 1
 ```
 
 ### 直接ダウンロード
-または、[GroupDocs.Editor for Java リリース](https://releases.groupdocs.com/editor/java/) から最新の JAR をダウンロードしてください。
+または、最新の JAR を [GroupDocs.Editor for Java のリリース](https://releases.groupdocs.com/editor/java/) からダウンロードします。
 
 ### ライセンス取得
-- **Free Trial** – コストなしで API を試すことができます。  
-- **Temporary License** – [このリンク](https://purchase.groupdocs.com/temporary-license) から期間限定キーを取得します。  
-- **Purchase** – 本番環境向けに永続ライセンスを購入します。
+- **無料トライアル** – コストなしで API を試せます。  
+- **一時ライセンス** – [このリンク](https://purchase.groupdocs.com/temporary-license) から期間限定キーを取得します。  
+- **購入** – 本番環境向けに永続ライセンスを購入します。
 
 #### 基本的な初期化と設定
-`Editor` クラスはドキュメントをロードし、そのメタデータにアクセスするエントリーポイントです。`Editor` インスタンスを作成した後、`getDocumentInfo(null)` を呼び出すことで軽量な情報を取得できます。
-
-```java
-import com.groupdocs.editor.Editor;
-
-public class DocumentEditorSetup {
-    public static void main(String[] args) {
-        String filePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_DOCX";
-        Editor editor = new Editor(filePath);
-        // Initialize your document processing workflow here
-        editor.dispose();
-    }
-}
-```
+`Editor` クラスはドキュメントをロードし、そのメタデータへのアクセスを提供するエントリーポイントです。`Editor` インスタンスを作成した後、`getDocumentInfo(null)` を呼び出すことで軽量情報を取得できます。  
+`getDocumentInfo(null)` はドキュメント全体の内容を読み込まずにメタデータのみを取得します。
 
 ## Java でメタデータを抽出する方法
-ドキュメントをロードし、`IDocumentInfo` を取得してからフォーマット固有の情報クラスにキャストします。このパターンは Word、Excel、プレーンテキストファイルでメモリ使用量を抑えつつ機能し、ドキュメントヘッダーのみが読み取られます。まずメタデータを抽出することで、全文を処理するか、ファイルをルーティングするか、サポート外フォーマットを拒否するかを判断できます。
+ドキュメントをロードし、`IDocumentInfo` を取得してから、フォーマット固有の情報クラスにキャストします。
 
-### 機能 1: Word ドキュメントからメタデータを抽出
+### 機能 1: Word ドキュメントからメタデータを抽出する
 #### ドキュメントのロード
-`DocumentInfo` インターフェイスは、サポートされているすべてのファイルの汎用メタデータを表します。ファイルパスを `Editor` コンストラクタに渡すことで、ドキュメントの検査準備が整います。
+`DocumentInfo` インターフェイスは、サポートされている任意のファイルの汎用メタデータを表します。ファイルパスを `Editor` コンストラクタに渡すことで、ドキュメントの検査準備が整います。
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -135,12 +135,12 @@ editorDocx.dispose();
 ```
 
 *説明*：
-- `getDocumentInfo(null)` は全文をロードせずにメタデータを取得します。  
-- `WordProcessingDocumentInfo` にキャストすることで、**ページ数**、作者名、暗号化フラグなどの Word 固有属性が取得できます。
+- `getDocumentInfo(null)` はドキュメント本体を読み込まずにメタデータを取得します。  
+- `WordProcessingDocumentInfo` にキャストすることで、**ページ数**、作者名、暗号化フラグなどの Word 固有属性が利用可能になります。
 
 ### 機能 2: document type java の検出 – スプレッドシート
 #### スプレッドシートファイルのロード
-`SpreadsheetDocumentInfo` は、シート数や総サイズなどスプレッドシート固有のメタデータを提供します。
+`SpreadsheetDocumentInfo` は、シート数や総サイズなど、スプレッドシート固有のメタデータを提供します。
 
 ```java
 import com.groupdocs.editor.Editor;
@@ -152,7 +152,8 @@ Editor editorXlsx = new Editor(xlsxInputFilePath);
 ```
 
 #### 情報の確認と抽出
-`instanceof` 演算子を使用することで **document type java** を検出し、シート数や総サイズなどスプレッドシート固有のメタデータを読み取れます。
+`instanceof` 演算子を使用することで **document type java** を検出し、シート数や総サイズなどのスプレッドシート固有メタデータを取得できます。  
+`getSheetCount()` はスプレッドシート内のワークシート数を返します。
 
 ```java
 IDocumentInfo infoXlsx = editorXlsx.getDocumentInfo(null);
@@ -164,9 +165,9 @@ editorXlsx.dispose();
 ```
 
 *説明*：
-- `instanceof` チェックによりファイルがスプレッドシートかどうかが判明し、`getSheetCount()` や他のスプレッドシート専用メソッドを呼び出せます。
+- `instanceof` チェックによりファイルがスプレッドシートかどうかが判明し、`getSheetCount()` やその他のスプレッドシート専用メソッドを呼び出すことができます。
 
-### 機能 3: パスワード保護されたドキュメントの処理
+### 機能 3: パスワード保護されたドキュメントの取り扱い
 #### 保護されたドキュメントのロード
 `Editor` コンストラクタはオプションの `LoadOptions` オブジェクトを受け取り、そこにパスワードを指定できます。
 
@@ -181,7 +182,9 @@ Editor editorXls = new Editor(xlsInputFilePath);
 ```
 
 #### パスワードでのアクセスを試みる
-パスワードが欠如しているか誤っている場合、API は `PasswordRequiredException` または `IncorrectPasswordException` をスローし、ユーザーに入力を促すか問題をログに記録できます。
+パスワードが未提供または誤っている場合、API は `PasswordRequiredException` または `IncorrectPasswordException` をスローし、ユーザーに入力を促すかログに記録できます。  
+`PasswordRequiredException` はドキュメントがパスワードを必要とするが提供されなかったときにスローされます。  
+`IncorrectPasswordException` は提供されたパスワードがドキュメントと一致しないことを示します。
 
 ```java
 try {
@@ -205,10 +208,10 @@ editorXls.dispose();
 ```
 
 *説明*：
-- API の明示的な例外により、推測せずに優雅なフォールバックロジックを実装できます。
+- API の明示的な例外により、推測せずに適切なフォールバックロジックを実装できます。
 
 ### 機能 4: テキストベースのドキュメントメタデータ抽出
-#### テキストベースのドキュメントのロード
+#### テキストベースのドキュメントをロード
 プレーンテキスト形式（TXT、XML、CSV）の場合、`TextDocumentInfo` クラスはエンコーディング、行数、ファイルサイズの詳細を返します。
 
 ```java
@@ -233,53 +236,66 @@ editorXml.dispose();
 ```
 
 *説明*：
-- このアプローチは、主にエンコーディングとファイルサイズのメタデータが必要なプレーンテキスト形式で機能します。
+- このアプローチは、エンコーディングとファイルサイズのメタデータが主に必要なプレーンテキスト形式で有効です。
 
-## 実用的な応用例
-- **Automated Document Archiving** – メタデータを取得してタグ付けし、検索可能なリポジトリにファイルを保存します。  
-- **Workflow Automation** – メタデータを使用してドキュメントを適切な部門にルーティングしたり、下流プロセスをトリガーしたりします。  
-- **Data Migration** – システム間でファイルを移行する際に元のプロパティを保持し、規制遵守を確保します。
+## 実用的な活用例
+- **自動ドキュメントアーカイブ** – メタデータを取得してファイルにタグ付けし、検索可能なリポジトリに保存します。  
+- **ワークフロー自動化** – メタデータを使用してドキュメントを適切な部門に振り分けたり、下流プロセスをトリガーします。  
+- **データ移行** – システム間でファイルを移動する際に元のプロパティを保持し、規制遵守を確保します。
 
 ## パフォーマンス上の考慮点
-- **Dispose Editors** – 常に `dispose()` を呼び出してネイティブリソースを解放し、メモリリークを防止します。  
-- **Large Files** – ストリームまたはチャンクで処理します。`getDocumentInfo(null)` はヘッダーのみを読み取り、2 GB のファイルでも RAM 使用量を 50 MB 未満に抑えます。  
-- **Profiling** – Java プロファイラ（例: VisualVM）を使用して、数千ファイル処理時のボトルネックを特定します。
+- **エディタの破棄** – `dispose()` を必ず呼び出してネイティブリソースを解放し、メモリリークを防止します。  
+- **大容量ファイル** – ストリームまたはチャンクで処理します。`getDocumentInfo(null)` はヘッダーのみを読み取り、**2 GB** のファイルでも RAM 使用量を **50 MB** 未満に抑えます。  
+- **プロファイリング** – Java プロファイラ（例: VisualVM）を使用して、数千ファイルを処理する際のボトルネックを特定します。
 
 ## よくある問題とトラブルシューティング
 | 症状 | 考えられる原因 | 対策 |
 |---------|--------------|-----|
-| `PasswordRequiredException` が出るがファイルは保護されていない場合 | ファイルパスが間違っているか、ファイルが破損している | パスとファイルの整合性を確認する |
-| メタデータが `null` を返す | 古いライブラリバージョンを使用している | 最新の GroupDocs.Editor リリースにアップグレードする |
-| 大きな Excel ファイルでパフォーマンスが低下 | ファイル全体をメモリにロードしている | `getDocumentInfo(null)`（メタデータのみ）を使用し、バッチ処理する |
+| `PasswordRequiredException` が発生するがファイルは保護されていない | ファイルパスが間違っているか、ファイルが破損している | パスとファイルの整合性を確認する |
+| メタデータが `null` を返す | 古いバージョンのライブラリを使用している | 最新の GroupDocs.Editor リリースにアップグレードする |
+| 大きな Excel ファイルでパフォーマンスが低下 | ファイル全体をメモリに読み込んでいる | `getDocumentInfo(null)`（メタデータのみ）を使用し、バッチ処理する |
 
 ## よくある質問
 
-**Q:** 同じ API で PDF ファイルのメタデータを抽出できますか？  
-**A:** GroupDocs.Editor は編集可能なフォーマット（DOCX、XLSX など）に焦点を当てています。PDF については GroupDocs.Metadata または GroupDocs.Viewer を使用してください。
+**Q: 同じ API で PDF ファイルからメタデータを抽出できますか？**  
+A: GroupDocs.Editor は編集可能なフォーマット（DOCX、XLSX など）に焦点を当てています。PDF の場合は GroupDocs.Metadata または GroupDocs.Viewer を使用してください。
 
-**Q:** キャストせずにドキュメントタイプを検出するには？  
-**A:** `info.getDocumentType()` を呼び出すと、列挙型（例: `DocumentType.WordProcessing`、`DocumentType.Spreadsheet`）が返ります。
+**Q: キャストせずにドキュメントタイプを検出するには？**  
+A: `info.getDocumentType()` を呼び出すと、列挙型（例: `DocumentType.WordProcessing`、`DocumentType.Spreadsheet`）が返ります。
 
-**Q:** Office ファイルに埋め込まれたカスタムプロパティを抽出できますか？  
-**A:** はい。`WordProcessingDocumentInfo` と `SpreadsheetDocumentInfo` は `getCustomProperties()` のようなメソッドを提供しています。
+**Q: Office ファイルに埋め込まれたカスタムプロパティを抽出できますか？**  
+A: はい。`WordProcessingDocumentInfo` と `SpreadsheetDocumentInfo` は `getCustomProperties()` などのメソッドを提供しています。
 
-**Q:** ドキュメントタイプごとに別々のライセンスが必要ですか？  
-**A:** いいえ、単一の GroupDocs.Editor ライセンスでサポートされているすべてのフォーマットをカバーします。
+**Q: ドキュメントタイプごとに別々のライセンスが必要ですか？**  
+A: いいえ、単一の GroupDocs.Editor ライセンスでサポートされているすべてのフォーマットがカバーされます。
 
-**Q:** 必要な Java バージョンは何ですか？  
-**A:** Java 8 以上。新しい LTS バージョン（11、17）も完全にサポートされています。
+**Q: 必要な Java バージョンは何ですか？**  
+A: Java 8 以上です。新しい LTS バージョン（11、17）も完全にサポートされています。
 
 ## 結論
-これで、GroupDocs.Editor を使用して **メタデータの抽出方法** と **document type java の検出** を行う、完全な本番環境向けワークフローが手に入りました。これらのスニペットを自社のビジネスロジックに統合すれば、アーカイブの自動化、コンプライアンスチェック、またはドキュメントに関する洞察が価値あるあらゆるシナリオを実現できます。
+これで、GroupDocs.Editor を使用した **メタデータ抽出方法** と **document type java の検出** の完全な本番対応ワークフローが手に入りました。これらのスニペットを自社のビジネスロジックに組み込んで、アーカイブの自動化、コンプライアンスチェック、またはドキュメントの洞察が重要なあらゆるシナリオを実現してください。
 
 ---
 
-**Last Updated:** 2026-06-16  
-**Tested With:** GroupDocs.Editor 25.3 for Java  
-**Author:** GroupDocs
+**最終更新日:** 2026-10-27  
+**テスト環境:** GroupDocs.Editor 25.3 for Java  
+**作者:** GroupDocs
 
 ## 関連チュートリアル
 
 - [GroupDocs.Editor を使用した Java の Word ドキュメントロード – 完全ガイド](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
-- [GroupDocs.Editor を使用した Java での Excel と Word ファイルの編集方法](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
+- [GroupDocs.Editor で Java の Excel と Word ファイルを編集する方法](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Word ドキュメントからリソースを抽出する方法 – GroupDocs.Editor Java](/editor/java/word-processing-documents/edit-extract-resources-groupdocs-editor-java/)
+
+```java
+import com.groupdocs.editor.Editor;
+
+public class DocumentEditorSetup {
+    public static void main(String[] args) {
+        String filePath = "YOUR_DOCUMENT_DIRECTORY/SAMPLE_DOCX";
+        Editor editor = new Editor(filePath);
+        // Initialize your document processing workflow here
+        editor.dispose();
+    }
+}
+```
