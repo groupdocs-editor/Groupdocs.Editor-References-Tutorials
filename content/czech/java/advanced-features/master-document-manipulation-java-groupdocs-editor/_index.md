@@ -1,22 +1,32 @@
 ---
-date: '2026-06-27'
-description: Naučte se, jak upravovat Word dokumenty v Javě s GroupDocs.Editor — load,
-  edit, and save Word files, optimize memory usage, and remove form fields.
+date: '2026-10-27'
+description: Zjistěte, jak odstranit formulářová pole a upravovat dokumenty Word v
+  Javě pomocí GroupDocs.Editor, včetně načítání chráněných souborů, optimalizace využití
+  paměti a ukládání s hesly.
 keywords:
-- how to edit word
+- remove form fields
 - edit password protected word
-- optimize memory usage java
-- remove form field java
+- save word as pdf
+- convert word to html
+- load word document
+lastmod: '2026-10-27'
+og_description: Zjistěte, jak odstranit formulářová pole a upravovat dokumenty Word
+  v Javě s GroupDocs.Editor. Obsahuje načítání, optimalizaci paměti a ochranu heslem.
+og_image_alt: Guide showing removal of form fields from Word documents using GroupDocs.Editor
+  in Java
+og_title: Jak odstranit formulářová pole při úpravě dokumentů Word v Javě
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-27'
-  description: Learn how to edit word documents in Java with GroupDocs.Editor—load,
-    edit, and save Word files, optimize memory usage, and remove form fields.
-  headline: How to Edit Word Documents in Java with GroupDocs.Editor
+  dateModified: '2026-10-27'
+  description: Learn how to remove form fields and edit Word documents in Java using
+    GroupDocs.Editor, including loading protected files, optimizing memory usage,
+    and saving with passwords.
+  headline: How to remove form fields while editing Word docs in Java
   type: TechArticle
-- description: Learn how to edit word documents in Java with GroupDocs.Editor—load,
-    edit, and save Word files, optimize memory usage, and remove form fields.
-  name: How to Edit Word Documents in Java with GroupDocs.Editor
+- description: Learn how to remove form fields and edit Word documents in Java using
+    GroupDocs.Editor, including loading protected files, optimizing memory usage,
+    and saving with passwords.
+  name: How to remove form fields while editing Word docs in Java
   steps:
   - name: '**Maven Setup** – Add the repository and dependency shown above.'
     text: '**Maven Setup** – Add the repository and dependency shown above.'
@@ -52,37 +62,37 @@ schemas:
       to free resources.
     question: Do I need to close streams manually?
   type: FAQPage
-title: Jak upravit Word dokumenty v Javě s GroupDocs.Editor
+tags:
+- remove form fields
+- GroupDocs.Editor
+- Java document processing
+- Word automation
+title: Jak odstranit formulářová pole při úpravě dokumentů Word v Javě
 type: docs
 url: /cs/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
 
-# Jak upravit Word dokumenty v Javě pomocí GroupDocs.Editor
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-## Úvod
+# Jak odstranit formulářová pole při úpravě Word dokumentů v Javě
 
-Pokud potřebujete **how to edit word** dokumenty programově, GroupDocs.Editor pro Java vám poskytuje čisté, paměťově úsporné API, které funguje jak s chráněnými, tak nechráněnými soubory. Ať už vytváříte službu pro generování dokumentů, automatizujete čištění formulářových polí nebo zabezpečujete citlivý obsah, tento tutoriál vás provede načítáním, úpravou a ukládáním Word souborů s osvědčenými možnostmi.
-
-**Co dosáhnete v tomto průvodci:**
-- Načíst Word dokumenty (včetně souborů chráněných heslem) pomocí GroupDocs.Editor.  
-- Spravovat a odstraňovat formulářová pole, jako jsou textové vstupy nebo zaškrtávací políčka.  
-- Uložit upravený dokument při optimalizaci využití paměti a aplikaci ochrany zápisem hesla.  
-
-Nyní, když vidíte výhody, nastavme prostředí a začněme upravovat Word dokumenty v Javě.
+Pokud potřebujete **odstranit formulářová pole** z Word dokumentů programově, GroupDocs.Editor pro Javu poskytuje čisté, paměťově úsporné API, které funguje jak s chráněnými, tak i nechráněnými soubory. Ať už vytváříte službu pro generování dokumentů, čistíte staré šablony nebo zabezpečujete citlivý obsah, tento tutoriál vás provede načítáním, úpravou a ukládáním Word souborů s nejlepšími postupy.
 
 ## Rychlé odpovědi
 - **Může GroupDocs.Editor otevřít soubory chráněné heslem?** Ano – stačí zadat heslo v `WordProcessingLoadOptions`.  
-- **Která volba snižuje spotřebu paměti u velkých dokumentů?** `setOptimizeMemoryUsage(true)` v `WordProcessingSaveOptions`.  
-- **Jak odebrat konkrétní formulářové pole?** Zavolejte `FormFieldManager.removeFormField(fieldName)`.  
+- **Která možnost snižuje spotřebu paměti u velkých dokumentů?** `setOptimizeMemoryUsage(true)` v `WordProcessingSaveOptions`.  
+- **Jak odstranit konkrétní formulářové pole?** Zavolejte `FormFieldManager.removeFormField(fieldName)`.  
 - **Potřebuji licenci pro produkční použití?** Zkušební verze funguje pro hodnocení; plná licence odemkne všechny funkce.  
 - **Jaká verze Javy je požadována?** JDK 8 nebo vyšší.
 
-## Předpoklady
+## Požadavky
 
 - **Java Development Kit (JDK)** 8 nebo novější.  
 - **IDE** – IntelliJ IDEA, Eclipse nebo NetBeans.  
-- **Maven** pro správu závislostí.  
+- **Maven** pro správu závislostí.
 
 ### Požadované knihovny
 
@@ -120,25 +130,23 @@ Alternativně stáhněte knihovnu přímo z [GroupDocs.Editor for Java releases]
 
 ### Nastavení prostředí
 
-Ujistěte se, že Maven a JDK jsou správně nainstalovány a nakonfigurovány. Pokud jste v některém z těchto nástrojů noví, podívejte se na jejich oficiální instalační průvodce.
+Ujistěte se, že Maven a JDK jsou správně nainstalovány a nakonfigurovány. Pokud jste v některém z nástrojů noví, podívejte se na jejich oficiální instalační průvodce.
 
-## Nastavení GroupDocs.Editor pro Java
+## Nastavení GroupDocs.Editor pro Javu
 
-GroupDocs.Editor podporuje **více než 30 vstupních a výstupních formátů** a dokáže zpracovat dokumenty až do **500 MB** bez načítání celého souboru do paměti, díky své streamovací architektuře.
+GroupDocs.Editor podporuje **více než 30 vstupních a výstupních formátů** a dokáže zpracovat dokumenty až do **500 MB** bez načtení celého souboru do paměti, čímž snižuje využití RAM až o **70 %** díky své streamovací architektuře. Také zvládne až **1 000 souběžných editačních relací** na standardním 8‑jádrovém serveru.
 
-1. **Maven Setup** – Přidejte repozitář a závislost uvedenou výše.  
-2. **Direct Download** – Použijte stejný odkaz na vydání, pokud dáváte přednost ručnímu přidání JAR.
+1. **Nastavení Maven** – Přidejte repozitář a závislost uvedenou výše.  
+2. **Přímé stažení** – Použijte stejný odkaz na vydání, pokud dáváte přednost ručnímu přidání JAR souboru.
 
 ### Získání licence
 
-- **Free trial** – Stáhněte a vyzkoušejte zdarma.  
-- **Full license** – Zakupte nebo požádejte o dočasný klíč k odemknutí pokročilých funkcí, jako je hromadné zpracování a prémiová podpora.
+- **Bezplatná zkušební verze** – Stáhněte a vyzkoušejte zdarma.  
+- **Plná licence** – Zakupte nebo požádejte o dočasný klíč k odemknutí pokročilých funkcí, jako je hromadné zpracování a prémiová podpora.
 
 ## Jak načíst Word dokument pomocí GroupDocs.Editor?
 
-Načtení Word dokumentu pomocí GroupDocs.Editor je jednoduché: vytvoříte `InputStream` pro soubor, volitelně nastavíte heslo v `WordProcessingLoadOptions` a poté vytvoříte instanci `Editor` s těmito parametry. Knihovna čte dokument ve streamovacím režimu a vrací objekt `Editor`, který vám poskytuje plný přístup k úpravám, správě formulářových polí a uložení souboru.
-
-`Editor` je hlavní třída, která představuje načtený Word dokument a poskytuje metody pro úpravy, manipulaci s formulářovými poli a ukládání.
+FileInputStream je třída Java I/O, která čte bajty ze souboru. `WordProcessingLoadOptions` konfiguruje možnosti otevírání, jako jsou hesla. `Editor` je hlavní třída GroupDocs.Editor používaná k načítání, úpravě a ukládání dokumentů. Pro načtení Word souboru vytvořte `FileInputStream`, volitelně nastavte heslo v možnostech načítání a oba předáte konstruktoru `Editor`, který dokument streamuje, aniž by jej načetl celý do paměti.
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample_docx";
@@ -170,13 +178,11 @@ Editor editor = new Editor(inputStream, loadOptions);
 Editor editor = new Editor(fs, loadOptions);
 ```
 
-**Proč je to důležité:** Poskytnutí správného hesla je nezbytné; jinak knihovna bude soubor považovat za nechráněný a může vyvolat výjimku.
+**Proč je to důležité:** Poskytnutí správného hesla je nezbytné; jinak knihovna bude soubor považovat za nechráněný a může vyhodit výjimku.
 
 ## Jak odstranit formulářové pole z Word dokumentu pomocí GroupDocs.Editor?
 
-Pro smazání konkrétního formulářového pole získáte `FormFieldManager` z instance `Editor` a zavoláte jeho metodu `removeFormField` s názvem pole. Tato operace odstraní definici pole ze struktury dokumentu, což zajistí, že výsledný soubor již nebude obsahovat nechtěný vstupní prvek a nebude uživatele vyzývat k zadání dat.
-
-`FormFieldManager` je komponenta zodpovědná za přístup a manipulaci s formulářovými poli v načteném Word dokumentu.
+`FormFieldManager` spravuje formulářová pole v načteném Word dokumentu, umožňuje jejich získání, přidání i odstranění. Po získání z instance `Editor` zavolejte `removeFormField` s názvem cílového pole, aby se pole odstranilo ze struktury dokumentu před uložením. Tím se zajistí, že pole bude zcela odstraněno a neobjeví se ve finálním výstupu.
 
 ```java
 FormFieldManager fieldManager = editor.getFormFieldManager();
@@ -208,9 +214,7 @@ saveOptions.setProtection(com.groupdocs.editor.options.WordProcessingProtection.
 
 ## Jak uložit Word dokument s optimalizovaným využitím paměti v Javě?
 
-Když jste připraveni změny uložit, nakonfigurujte objekt `WordProcessingSaveOptions` a povolte jeho příznak `setOptimizeMemoryUsage(true)`. Tím řeknete GroupDocs.Editor, aby zapisoval dokument po částech místo načítání celého obsahu do haldy, což dramaticky snižuje spotřebu RAM. Můžete také nastavit heslo pro zápis nebo zvolit výstupní formát před voláním metody `save`.
-
-`WordProcessingSaveOptions` vám umožňuje podrobně nastavit proces ukládání, včetně optimalizace paměti a ochrany dokumentu.
+`WordProcessingSaveOptions` řídí, jak je dokument uložen, včetně formátu, ochrany heslem a optimalizace paměti. Vytvořte instanci, povolte `setOptimizeMemoryUsage(true)`, volitelně nastavte heslo pro zápis a předáte ji metodě `editor.save`. Knihovna pak zapisuje soubor po částech, což dramaticky snižuje spotřebu RAM a zabraňuje chybě OutOfMemoryError u velkých dokumentů.
 
 ```java
 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -232,63 +236,68 @@ editor.save(outputStream, saveOptions);
 
 ## Praktické aplikace
 
-- **Batch Document Automation** – Zpracovávejte tisíce Word souborů během noci, aniž byste vyčerpali RAM serveru.  
-- **Dynamic Template Personalization** – Přidávejte nebo odstraňujte pole za běhu na základě vstupu uživatele.  
-- **Secure Document Distribution** – Aplikujte ochranu zápisem hesla a zároveň povolte úpravy formulářových polí.
+- **Hromadná automatizace dokumentů** – Zpracovávejte tisíce Word souborů během noci, aniž byste vyčerpali RAM serveru.  
+- **Dynamické personalizování šablon** – Přidávejte nebo odstraňujte pole za běhu na základě vstupu uživatele.  
+- **Zabezpečená distribuce dokumentů** – Použijte ochranu zápisem heslem a přitom umožněte úpravy formulářových polí.
 
 ## Úvahy o výkonu
 
-- **Memory Optimization** – `setOptimizeMemoryUsage(true)` snižuje spotřebu haldy až o 70 % u souborů o 200 stránkách.  
-- **Stream Management** – Vždy uzavírejte streamy (`try‑with‑resources` doporučeno), aby nedocházelo k únikům.  
-- **Version Updates** – Udržujte GroupDocs.Editor aktuální; každé vydání přidává podporu formátů a výkonnostní opravy.
+- **Optimalizace paměti** – `setOptimizeMemoryUsage(true)` snižuje spotřebu haldy až o 70 % u souborů o 200 stránkách.  
+- **Správa streamů** – Vždy uzavírejte streamy (`try‑with‑resources` doporučeno), aby nedocházelo k únikům.  
+- **Aktualizace verzí** – Udržujte GroupDocs.Editor aktuální; každé vydání přidává podporu formátů a výkonnostní opravy.
 
 ## Závěr
 
-Nyní víte **how to edit word** dokumenty v Javě pomocí GroupDocs.Editor: načíst soubory (i chráněné), manipulovat s formulářovými poli a uložit s možnostmi úspory paměti a ochranou. Integrujte tyto úryvky do svých služeb pro zvýšení produktivity a spolehlivosti.
+Nyní víte **jak odstranit formulářová pole** a upravovat Word dokumenty v Javě pomocí GroupDocs.Editor: načíst soubory (i chráněné), manipulovat s formulářovými poli a ukládat s možnostmi úspory paměti a ochranou. Integrujte tyto úryvky do svých služeb pro zvýšení produktivity a spolehlivosti.
 
-**Další kroky:**
+**Další kroky:**  
 - Experimentujte s dalšími `WordProcessingFormats`, jako jsou PDF nebo HTML.  
-- Kombinujte úpravy s konverzními funkcemi pro end‑to‑end pipeline dokumentů.  
+- Kombinujte úpravy s funkcemi konverze pro end‑to‑end pipeline dokumentů.  
 - Prohlédněte si oficiální referenci API pro pokročilé scénáře, jako je kolaborativní úprava.
 
 ## Sekce FAQ
 
 1. **Mohu používat GroupDocs.Editor bez licence?**  
-   Ano, k dispozici je zkušební verze pro hodnocení, ale licence je vyžadována pro produkční nasazení.  
+   Ano, je k dispozici bezplatná zkušební verze pro hodnocení, ale licence je vyžadována pro produkční nasazení.  
 2. **Je GroupDocs.Editor kompatibilní se všemi verzemi Wordu?**  
-   Plně podporuje soubory DOCX, DOC a DOCM generované Word 2007 až Word 2021.  
+   Plně podporuje soubory DOCX, DOC a DOCM vytvořené ve Word 2007 až po Word 2021.  
 3. **Jak knihovna zachází s velkými soubory?**  
-   Streamováním obsahu a použitím `optimizeMemoryUsage` může zpracovávat soubory až do 500 MB bez načítání celého souboru do paměti.  
+   Streamováním obsahu a použitím `optimizeMemoryUsage` dokáže zpracovat soubory až do 500 MB, aniž by načetla celý soubor do paměti.  
 4. **Mohu integrovat GroupDocs.Editor se Spring Boot?**  
    Rozhodně – stačí deklarovat Maven závislost a injektovat `Editor` tam, kde je potřeba.  
 5. **Kde mohu získat pomoc, pokud narazím na problémy?**  
-   Navštivte [GroupDocs Support Forum](https://forum.groupdocs.com/c/editor/) pro komunitní odpovědi a oficiální podporu.
+   Navštivte [GroupDocs Support Forum](https://forum.groupdocs.com/c/editor/) pro pomoc.
 
 ## Často kladené otázky
 
-**Q: Jak upravím Word soubor chráněný heslem?**  
-**A:** Poskytněte heslo pomocí `WordProcessingLoadOptions.setPassword()` před vytvořením instance `Editor`.
+**Q: Jak upravit Word soubor chráněný heslem?**  
+A: Poskytněte heslo pomocí `WordProcessingLoadOptions.setPassword()` před vytvořením instance `Editor`.
 
 **Q: Mohu uložit dokument v jiném formátu než DOCX?**  
-**A:** Ano—`WordProcessingSaveOptions` akceptuje formáty jako PDF, RTF a HTML prostřednictvím výčtu `WordProcessingFormats`.
+A: Ano—`WordProcessingSaveOptions` akceptuje formáty jako PDF, RTF a HTML prostřednictvím výčtu `WordProcessingFormats`.
 
-**Q: Co konkrétně dělá `optimize memory usage java`?**  
-**A:** Streamuje dokument po částech, což zabraňuje tomu, aby celý soubor byl v haldě, což je ideální pro velké soubory.
+**Q: Co vlastně dělá `optimize memory usage java`?**  
+A: Streamuje dokument po částech, což zabraňuje tomu, aby celý soubor byl v haldě, což je ideální pro velké soubory.
 
 **Q: Je možné odstranit všechna formulářová pole najednou?**  
-**A:** Projděte `fieldManager.getFormFields()` a pro každý prvek zavolejte `removeFormField`.
+A: Projděte `fieldManager.getFormFields()` a pro každý prvek zavolejte `removeFormField`.
 
 **Q: Musím streamy zavírat ručně?**  
-**A:** Ano—použijte try‑with‑resources nebo explicitně zavřete `InputStream` a `OutputStream` pro uvolnění zdrojů.
+A: Ano—použijte try‑with‑resources nebo explicitně zavřete `InputStream` a `OutputStream` pro uvolnění prostředků.
 
----
-
-**Last Updated:** 2026-06-27  
-**Tested With:** GroupDocs.Editor 25.3 for Java  
-**Author:** GroupDocs  
+**Poslední aktualizace:** 2026-10-27  
+**Testováno s:** GroupDocs.Editor 25.3 pro Javu  
+**Autor:** GroupDocs  
 
 ## Související tutoriály
 
 - [Jak načíst Word dokumenty v Javě pomocí GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
 - [Jak použít GroupDocs – načíst a upravit Word formulářová pole v Javě](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
-- [Uložit Word s heslem pomocí GroupDocs.Editor pro Java](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
+- [Uložit Word s heslem pomocí GroupDocs.Editor pro Javu](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}
