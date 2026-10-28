@@ -71,11 +71,6 @@ type: docs
 url: /th/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # วิธีลบฟิลด์ฟอร์มขณะแก้ไขเอกสาร Word ใน Java
 
 ## คำตอบสั้น
@@ -293,10 +288,3 @@ editor.save(outputStream, saveOptions);
 - [วิธีโหลดเอกสาร Word ใน Java ด้วย GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)  
 - [วิธีใช้ GroupDocs - โหลด & แก้ไขฟิลด์ฟอร์ม Word ด้วย Java](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)  
 - [บันทึก Word ด้วยรหัสผ่านโดยใช้ GroupDocs.Editor สำหรับ Java](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

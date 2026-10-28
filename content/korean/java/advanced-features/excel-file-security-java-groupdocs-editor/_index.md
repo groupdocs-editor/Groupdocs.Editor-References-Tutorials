@@ -74,11 +74,6 @@ type: docs
 url: /ko/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Java에서 GroupDocs.Editor를 사용하여 비밀번호로 보호된 Excel 열기
 
 이 포괄적인 튜토리얼에서는 GroupDocs.Editor를 사용하여 Java에서 **비밀번호로 보호된 Excel** 워크북을 여는 방법, 잘못된 비밀번호를 처리하는 방법, 저장 시 새 비밀번호를 적용하는 방법, 전체 워크북에 쓰기 보호를 활성화하는 방법을 알아봅니다. 단계별로 명확한 설명, 실제 사용 사례 시나리오, 대규모 스프레드시트 처리에 대한 모범 사례 팁을 제공합니다.
@@ -339,10 +334,3 @@ A: 라이선스 조건은 배포당 적용되며, 다중 노드 시나리오에 
 - [Java에서 GroupDocs.Editor를 사용한 Word 파일 일괄 편집 – 단계별 가이드](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [Java에서 GroupDocs.Editor로 Excel 및 Word 파일 편집 방법](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Java에서 InputStream을 사용해 GroupDocs.Editor 라이선스 설정 방법: 종합 가이드](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

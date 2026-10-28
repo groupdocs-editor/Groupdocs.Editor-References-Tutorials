@@ -71,11 +71,6 @@ type: docs
 url: /ko/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Java에서 Word 문서를 편집하면서 양식 필드를 제거하는 방법
 
 Word 문서를 프로그래밍 방식으로 **remove form fields** 해야 하는 경우, GroupDocs.Editor for Java는 보호된 파일과 보호되지 않은 파일 모두에서 작동하는 깔끔하고 메모리 효율적인 API를 제공합니다. 문서 생성 서비스 구축, 레거시 템플릿 정리, 민감한 콘텐츠 보안 등 어떤 작업을 하시든, 이 튜토리얼에서는 Word 파일을 로드, 편집 및 저장하는 방법을 모범 사례 옵션과 함께 안내합니다.
@@ -295,10 +290,3 @@ A: Yes—use try‑with‑resources or explicitly close `InputStream` and `Outpu
 - [Java에서 GroupDocs.Editor로 Word 문서 로드하는 방법](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
 - [GroupDocs 사용 - Java로 Word 양식 필드 로드 및 편집](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
 - [GroupDocs.Editor for Java를 사용하여 비밀번호로 Word 저장](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

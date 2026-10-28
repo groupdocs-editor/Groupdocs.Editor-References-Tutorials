@@ -75,11 +75,6 @@ type: docs
 url: /ar/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # فتح ملفات Excel المحمية بكلمة مرور في Java باستخدام GroupDocs.Editor
 
 في هذا الدرس الشامل ستكتشف كيفية **فتح ملفات Excel المحمية بكلمة مرور** في Java باستخدام GroupDocs.Editor، ومعالجة كلمات المرور غير الصحيحة، وتطبيق كلمة مرور جديدة عند الحفظ، وتمكين الحماية من الكتابة لكامل المصنف. يتم توضيح الخطوات بشرح واضح، وسيناريوهات استخدام واقعية، ونصائح أفضل الممارسات لمعالجة جداول البيانات على نطاق واسع.
@@ -340,10 +335,3 @@ editor.dispose();
 - [تحرير دفعة ملفات Word في Java باستخدام GroupDocs.Editor – دليل خطوة بخطوة](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [كيفية تحرير ملفات Excel و Word في Java باستخدام GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [كيفية تعيين ترخيص لـ GroupDocs.Editor في Java باستخدام InputStream: دليل شامل](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

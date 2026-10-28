@@ -71,11 +71,6 @@ type: docs
 url: /zh-hant/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 在 Java 中使用 GroupDocs.Editor 開啟受密碼保護的 Excel
 
 在本完整教學中，您將了解如何在 Java 中使用 GroupDocs.Editor **開啟受密碼保護的 Excel** 工作簿、處理錯誤密碼、在儲存時套用新密碼，以及為整個工作簿啟用寫入保護。步驟會以清晰說明、實務案例情境以及大型試算表處理的最佳實踐技巧呈現。
@@ -336,10 +331,3 @@ editor.dispose();
 - [在 Java 中使用 GroupDocs.Editor 批次編輯 Word 檔案 – 步驟指南](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [如何在 Java 中使用 GroupDocs.Editor 編輯 Excel 和 Word 檔案](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [如何在 Java 中使用 InputStream 為 GroupDocs.Editor 設定授權：完整指南](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

@@ -75,11 +75,6 @@ type: docs
 url: /vi/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Mở tệp Excel được bảo vệ bằng mật khẩu trong Java bằng GroupDocs.Editor
 
 Trong hướng dẫn toàn diện này, bạn sẽ khám phá cách **mở tệp Excel được bảo vệ bằng mật khẩu** trong Java bằng GroupDocs.Editor, xử lý mật khẩu không đúng, áp dụng mật khẩu mới khi lưu, và bật bảo vệ ghi cho toàn bộ workbook. Các bước được minh họa bằng các giải thích rõ ràng, kịch bản sử dụng thực tế, và các mẹo thực hành tốt cho việc xử lý bảng tính quy mô lớn.
@@ -340,10 +335,3 @@ Bằng cách làm theo hướng dẫn này, bạn đã biết cách **mở Excel
 - [Chỉnh sửa hàng loạt tệp Word trong Java với GroupDocs.Editor – Hướng dẫn từng bước](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [cách chỉnh sửa tệp excel và Word trong Java với GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Cách đặt giấy phép cho GroupDocs.Editor trong Java bằng InputStream: Hướng dẫn toàn diện](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

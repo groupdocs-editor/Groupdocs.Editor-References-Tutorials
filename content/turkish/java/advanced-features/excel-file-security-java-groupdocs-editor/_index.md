@@ -76,11 +76,6 @@ type: docs
 url: /tr/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Java'da GroupDocs.Editor kullanarak şifre korumalı Excel'i açma
 
 Bu kapsamlı öğreticide, GroupDocs.Editor kullanarak Java'da **şifre korumalı Excel** çalışma kitaplarını nasıl açacağınızı, hatalı şifreleri nasıl yöneteceğinizi, kaydederken yeni bir şifre nasıl uygulayacağınızı ve tüm çalışma kitabı için yazma korumasını nasıl etkinleştireceğinizi keşfedeceksiniz. Adımlar, net açıklamalar, gerçek dünya kullanım senaryoları ve büyük ölçekli elektronik tablo işleme için en iyi uygulama ipuçlarıyla gösterilmiştir.
@@ -341,10 +336,3 @@ Bu rehberi izleyerek, GroupDocs.Editor kullanarak Java'da **şifre korumalı Exc
 - [Java'da GroupDocs.Editor ile Word Dosyalarını Toplu Düzenleme – Adım Adım Kılavuz](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [Java'da GroupDocs.Editor ile Excel ve Word dosyalarını nasıl düzenlenir](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Java'da GroupDocs.Editor için InputStream kullanarak Lisans Ayarlama: Kapsamlı Kılavuz](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

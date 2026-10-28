@@ -75,11 +75,6 @@ type: docs
 url: /hu/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Hogyan távolítsuk el az űrlapmezőket a Word dokumentumok szerkesztése közben Java-ban
 
 Ha programozott módon **űrlapmezők eltávolítása** a Word dokumentumokból, a GroupDocs.Editor for Java tiszta, memóriahatékony API-t biztosít, amely mind védett, mind védtelen fájlokkal működik. Akár dokumentumgeneráló szolgáltatást építesz, örökölt sablonokat tisztítasz, vagy érzékeny tartalmat biztosítasz, ez az útmutató végigvezet a Word fájlok betöltésén, szerkesztésén és mentésén a legjobb gyakorlatok szerint.
@@ -299,10 +294,3 @@ A: Igen—használjon try‑with‑resources‑t vagy explicit módon zárja le 
 - [Hogyan töltsünk be Word dokumentumokat Java-val a GroupDocs.Editor segítségével](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
 - [Hogyan használjuk a GroupDocs‑t – Word űrlapmezők betöltése és szerkesztése Java-val](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
 - [Word mentése jelszóvel a GroupDocs.Editor for Java használatával](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

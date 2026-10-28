@@ -72,11 +72,6 @@ type: docs
 url: /nl/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Hoe formuliervelden te verwijderen tijdens het bewerken van Word‑documenten in Java
 
 Als je **formuliervelden verwijderen** uit Word‑documenten programmatically wilt, biedt GroupDocs.Editor for Java een schone, geheugen‑efficiënte API die werkt met zowel beveiligde als onbeveiligde bestanden. Of je nu een document‑generatieservice bouwt, verouderde sjablonen opschoont, of gevoelige inhoud beveiligt, deze tutorial leidt je door het laden, bewerken en opslaan van Word‑bestanden met best‑practice‑opties.
@@ -296,10 +291,3 @@ A: Ja—gebruik try‑with‑resources of sluit `InputStream` en `OutputStream` 
 - [Hoe Word‑documenten te laden in Java met GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
 - [Hoe GroupDocs te gebruiken - Word‑formuliervelden laden & bewerken met Java](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
 - [Word opslaan met wachtwoord met GroupDocs.Editor voor Java](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

@@ -75,11 +75,6 @@ type: docs
 url: /hu/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Jelszóval védett Excel megnyitása Java-ban a GroupDocs.Editor segítségével
 
 Ebben az átfogó útmutatóban megtudja, hogyan **jelszóval védett Excel megnyitása** munkafüzeteket Java-ban a GroupDocs.Editor segítségével, hogyan kezelje a helytelen jelszavakat, hogyan alkalmazzon új jelszót mentéskor, és hogyan engedélyezze a teljes munkafüzet írásvédelmét. A lépéseket világos magyarázatok, valós példák és a nagyméretű táblázatfeldolgozás legjobb gyakorlatai illusztrálják.
@@ -340,10 +335,3 @@ Ezzel az útmutatóval most már tudja, hogyan **nyithat meg jelszóval védett 
 - [Word fájlok kötegelt szerkesztése Java-ban a GroupDocs.Editor segítségével – Lépésről lépésre útmutató](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [Excel és Word fájlok szerkesztése Java-ban a GroupDocs.Editor-rel](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Hogyan állítsunk be licencet a GroupDocs.Editor-hez Java-ban InputStream használatával: Átfogó útmutató](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

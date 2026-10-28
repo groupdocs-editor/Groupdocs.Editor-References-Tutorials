@@ -72,11 +72,6 @@ type: docs
 url: /ar/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # كيفية إزالة حقول النموذج أثناء تحرير مستندات Word في Java
 
 إذا كنت بحاجة إلى **إزالة حقول النموذج** من مستندات Word برمجياً، يوفر GroupDocs.Editor for Java واجهة برمجة تطبيقات نظيفة وفعّالة في استهلاك الذاكرة تعمل مع الملفات المحمية وغير المحمية. سواءً كنت تبني خدمة توليد مستندات، أو تقوم بتنظيف القوالب القديمة، أو تأمين المحتوى الحساس، فإن هذا الدليل يشرح لك كيفية تحميل وتعديل وحفظ ملفات Word باستخدام خيارات أفضل الممارسات.
@@ -296,10 +291,3 @@ editor.save(outputStream, saveOptions);
 - [كيفية تحميل مستندات Word في Java باستخدام GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
 - [كيفية استخدام GroupDocs - تحميل وتعديل حقول نموذج Word باستخدام Java](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
 - [حفظ Word مع كلمة مرور باستخدام GroupDocs.Editor for Java](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

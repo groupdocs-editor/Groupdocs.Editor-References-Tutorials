@@ -74,11 +74,6 @@ type: docs
 url: /el/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Πώς να αφαιρέσετε πεδία φόρμας κατά την επεξεργασία εγγράφων Word σε Java
 
 Αν χρειάζεστε **αφαίρεση πεδίων φόρμας** από έγγραφα Word προγραμματιστικά, το GroupDocs.Editor for Java παρέχει μια καθαρή, αποδοτική σε μνήμη API που λειτουργεί τόσο με προστατευμένα όσο και με μη προστατευμένα αρχεία. Είτε δημιουργείτε μια υπηρεσία δημιουργίας εγγράφων, καθαρίζετε παλαιά πρότυπα ή ασφαλίζετε ευαίσθητο περιεχόμενο, αυτό το tutorial σας καθοδηγεί στη φόρτωση, επεξεργασία και αποθήκευση αρχείων Word με βέλτιστες πρακτικές.
@@ -296,10 +291,3 @@ editor.save(outputStream, saveOptions);
 - [Πώς να φορτώσετε έγγραφα Word σε Java με το GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
 - [Πώς να χρησιμοποιήσετε το GroupDocs - Φόρτωση & Επεξεργασία πεδίων φόρμας Word με Java](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
 - [Αποθήκευση Word με κωδικό χρησιμοποιώντας το GroupDocs.Editor για Java](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

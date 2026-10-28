@@ -72,11 +72,6 @@ type: docs
 url: /vi/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Cách xóa trường biểu mẫu khi chỉnh sửa tài liệu Word trong Java
 
 Nếu bạn cần **xóa trường biểu mẫu** khỏi tài liệu Word một cách lập trình, GroupDocs.Editor cho Java cung cấp một API sạch sẽ, tiết kiệm bộ nhớ, hoạt động với cả tệp được bảo vệ và không được bảo vệ. Dù bạn đang xây dựng dịch vụ tạo tài liệu, dọn dẹp các mẫu cũ, hoặc bảo mật nội dung nhạy cảm, hướng dẫn này sẽ chỉ cho bạn cách tải, chỉnh sửa và lưu các tệp Word với các tùy chọn thực hành tốt nhất.
@@ -296,10 +291,3 @@ A: Có—sử dụng try‑with‑resources hoặc đóng rõ ràng `InputStream
 - [Cách tải tài liệu Word trong Java với GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
 - [Cách sử dụng GroupDocs - Tải & chỉnh sửa trường biểu mẫu Word với Java](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
 - [Lưu Word có mật khẩu bằng GroupDocs.Editor cho Java](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

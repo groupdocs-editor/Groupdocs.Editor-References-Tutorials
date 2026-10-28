@@ -71,11 +71,6 @@ type: docs
 url: /zh/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 如何在 Java 中编辑 Word 文档时删除表单字段
 
 如果您需要以编程方式**删除表单字段**从 Word 文档中，GroupDocs.Editor for Java 提供了一个简洁、内存高效的 API，能够处理受保护和未受保护的文件。无论您是构建文档生成服务、清理旧模板，还是保护敏感内容，本教程将指导您如何加载、编辑和保存 Word 文件，并使用最佳实践选项。
@@ -295,10 +290,3 @@ editor.save(outputStream, saveOptions);
 - [如何使用 GroupDocs.Editor 在 Java 中加载 Word 文档](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
 - [如何使用 GroupDocs - 在 Java 中加载和编辑 Word 表单字段](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
 - [使用 GroupDocs.Editor for Java 为 Word 添加密码保存](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

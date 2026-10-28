@@ -75,11 +75,6 @@ type: docs
 url: /pl/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Otwieranie chronionego hasłem pliku Excel w Javie przy użyciu GroupDocs.Editor
 
 W tym obszernej poradniku dowiesz się, jak **otworzyć chroniony hasłem plik Excel** w Javie przy użyciu GroupDocs.Editor, obsłużyć nieprawidłowe hasła, zastosować nowe hasło przy zapisywaniu oraz włączyć ochronę przed zapisem dla całego skoroszytu. Kroki są zilustrowane jasnymi wyjaśnieniami, scenariuszami rzeczywistych zastosowań oraz wskazówkami najlepszych praktyk przy przetwarzaniu arkuszy kalkulacyjnych na dużą skalę.
@@ -340,10 +335,3 @@ Korzystając z tego przewodnika, teraz wiesz, jak **otworzyć chroniony hasłem 
 - [Masowa edycja plików Word w Javie z GroupDocs.Editor – Przewodnik krok po kroku](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [jak edytować pliki Excel i Word w Javie z GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Jak ustawić licencję dla GroupDocs.Editor w Javie przy użyciu InputStream: Kompletny przewodnik](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

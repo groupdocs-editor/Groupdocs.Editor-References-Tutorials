@@ -69,11 +69,6 @@ type: docs
 url: /zh-hant/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 如何在 Java 中編輯 Word 文件時移除表單欄位
 
 如果您需要以程式方式 **移除 Word 文件中的表單欄位**，GroupDocs.Editor for Java 提供一套乾淨且記憶體效能高的 API，支援受保護與未受保護的檔案。無論您是建置文件產生服務、清理舊有範本，或是保護敏感內容，本教學將逐步說明如何載入、編輯與儲存 Word 檔案，並使用最佳實踐選項。
@@ -293,10 +288,3 @@ A: 必須——使用 `try‑with‑resources` 或自行關閉 `InputStream`、`
 - [如何在 Java 中使用 GroupDocs.Editor 載入 Word 文件](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
 - [如何使用 GroupDocs - 載入與編輯 Word 表單欄位（Java）](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
 - [使用 GroupDocs.Editor for Java 以密碼儲存 Word](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

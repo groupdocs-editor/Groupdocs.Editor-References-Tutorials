@@ -73,11 +73,6 @@ type: docs
 url: /ru/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Как удалить поля формы при редактировании Word документов на Java
 
 Если вам нужно **удалить поля формы** из Word‑документов программно, GroupDocs.Editor for Java предоставляет чистый, экономичный по памяти API, который работает как с защищёнными, так и с незащищёнными файлами. Независимо от того, создаёте ли вы сервис генерации документов, очищаете устаревшие шаблоны или защищаете конфиденциальный контент, это руководство проведёт вас через загрузку, редактирование и сохранение Word‑файлов с рекомендациями по лучшим практикам.
@@ -297,10 +292,3 @@ A: Да — используйте `try‑with‑resources` или явно за
 - [How to Load Word Documents in Java with GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
 - [How to Use GroupDocs - Load & Edit Word Form Fields with Java](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
 - [Save Word with Password using GroupDocs.Editor for Java](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

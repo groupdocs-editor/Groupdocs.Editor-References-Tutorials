@@ -75,11 +75,6 @@ type: docs
 url: /id/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Membuka Excel yang Dilindungi Kata Sandi di Java menggunakan GroupDocs.Editor
 
 Dalam tutorial komprehensif ini Anda akan menemukan cara **membuka Excel yang dilindungi kata sandi** workbook di Java menggunakan GroupDocs.Editor, menangani kata sandi yang salah, menerapkan kata sandi baru saat menyimpan, dan mengaktifkan proteksi‑tulis untuk seluruh workbook. Langkah‑langkah tersebut diilustrasikan dengan penjelasan yang jelas, skenario penggunaan dunia nyata, dan tip praktik terbaik untuk pemrosesan spreadsheet berskala besar.
@@ -340,10 +335,3 @@ Dengan mengikuti panduan ini Anda kini tahu cara **membuka Excel yang dilindungi
 - [Edit Batch File Word di Java dengan GroupDocs.Editor – Panduan Langkah‑per‑Langkah](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [cara mengedit file excel dan Word di Java dengan GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Cara Menetapkan Lisensi untuk GroupDocs.Editor di Java Menggunakan InputStream: Panduan Komprehensif](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

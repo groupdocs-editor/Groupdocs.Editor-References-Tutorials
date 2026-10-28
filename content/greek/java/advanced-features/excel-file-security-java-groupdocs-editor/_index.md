@@ -77,11 +77,6 @@ type: docs
 url: /el/java/advanced-features/excel-file-security-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Άνοιγμα προστατευμένου με κωδικό Excel σε Java χρησιμοποιώντας το GroupDocs.Editor
 
 Σε αυτό το ολοκληρωμένο tutorial θα ανακαλύψετε πώς να **ανοίξετε προστατευμένο με κωδικό Excel** βιβλία εργασίας σε Java χρησιμοποιώντας το GroupDocs.Editor, να διαχειριστείτε λανθασμένους κωδικούς, να εφαρμόσετε νέο κωδικό κατά την αποθήκευση και να ενεργοποιήσετε την προστασία εγγραφής για ολόκληρο το βιβλίο εργασίας. Τα βήματα παρουσιάζονται με σαφείς εξηγήσεις, σενάρια πραγματικού κόσμου και συμβουλές βέλτιστων πρακτικών για επεξεργασία υπολογιστικών φύλλων μεγάλης κλίμακας.
@@ -333,10 +328,3 @@ editor.dispose();
 - [Μαζική επεξεργασία αρχείων Word σε Java με GroupDocs.Editor – Οδηγός βήμα προς βήμα](/editor/java/document-loading/groupdocs-editor-java-loading-word-documents/)
 - [πώς να επεξεργαστείτε αρχεία excel και Word σε Java με GroupDocs.Editor](/editor/java/document-editing/java-groupdocs-editor-master-document-editing/)
 - [Πώς να ορίσετε άδεια για το GroupDocs.Editor σε Java χρησιμοποιώντας InputStream: Ένας ολοκληρωμένος οδηγός](/editor/java/licensing-configuration/groupdocs-editor-java-inputstream-license-setup/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

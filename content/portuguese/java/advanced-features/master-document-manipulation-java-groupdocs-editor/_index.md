@@ -73,11 +73,6 @@ type: docs
 url: /pt/java/advanced-features/master-document-manipulation-java-groupdocs-editor/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Como remover campos de formulário ao editar documentos Word em Java
 
 Se você precisa **remover campos de formulário** de documentos Word programaticamente, o GroupDocs.Editor for Java oferece uma API limpa e eficiente em memória que funciona tanto com arquivos protegidos quanto desprotegidos. Seja construindo um serviço de geração de documentos, limpando modelos legados ou protegendo conteúdo sensível, este tutorial orienta você sobre como carregar, editar e salvar arquivos Word com opções de boas práticas.
@@ -295,10 +290,3 @@ A: Sim—use try‑with‑resources ou feche explicitamente `InputStream` e `Out
 - [Como carregar documentos Word em Java com o GroupDocs.Editor](/editor/java/document-editing/java-document-editing-groupdocs-editor-guide/)
 - [Como usar o GroupDocs - Carregar e editar campos de formulário Word com Java](/editor/java/document-editing/java-document-editing-groupdocs-editor-tutorial/)
 - [Salvar Word com senha usando o GroupDocs.Editor para Java](/editor/java/document-editing/implement-document-editing-java-groupdocs-editor/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}
