@@ -1,19 +1,26 @@
 ---
-date: 2026-06-16
-description: تعلم كيفية تحويل Word إلى HTML Java وحفظ PDF Java باستخدام GroupDocs.Editor
-  for Java. أنشئ حلول أتمتة المستندات مع ميزات تحرير المستندات المتقدمة.
+date: 2026-11-02
+description: تعلم كيفية تحويل docx إلى html في Java باستخدام GroupDocs.Editor وحفظ
+  ملفات pdf java. بناء أتمتة مستندات قوية مع تحرير متقدم وحماية بكلمة مرور.
 keywords:
-- word to html java
+- convert docx to html
+- load document java
 - save pdf java
 - password protect document
-- load document java
-- preserve formatting html
+- preserve html formatting
+lastmod: 2026-11-02
+og_description: تحويل docx إلى html في Java باستخدام GroupDocs.Editor. يوضح هذا الدليل
+  كيفية تحويل ملفات Word إلى HTML نظيف، وتصدير إلى PDF، ومعالجة المستندات المحمية
+  بكلمة مرور.
+og_image_alt: Guide showing Java code converting DOCX to HTML using GroupDocs.Editor
+og_title: تحويل docx إلى html في Java – دليل GroupDocs.Editor
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-16'
-  description: Learn how to convert word to html java and save pdf java using GroupDocs.Editor
+  dateModified: '2026-11-02'
+  description: Learn how to convert docx to html in Java and save pdf java using GroupDocs.Editor
     for Java. Build document automation solutions with advanced document editing features.
-  headline: Word to HTML Java – Document Editing Tutorial & Processing API
+  headline: Convert docx to html in Java – Document Editing Tutorial & Processing
+    API
   type: TechArticle
 - questions:
   - answer: Yes, GroupDocs.Editor for Java performs the conversion entirely on the
@@ -32,96 +39,144 @@ schemas:
       and convert them concurrently with a single API call.
     question: Can I perform batch conversions in a single call?
   type: FAQPage
-title: Word إلى HTML Java – دليل تحرير المستندات وواجهة برمجة التطبيقات للمعالجة
+tags:
+- convert docx
+- GroupDocs.Editor
+- Java document processing
+- HTML conversion
+- PDF export
+title: تحويل docx إلى html في Java باستخدام GroupDocs.Editor
 type: docs
 url: /ar/java/
 weight: 2
 ---
 
-# Word إلى HTML Java مع GroupDocs.Editor للـ Java
+# تحويل docx إلى html في Java باستخدام GroupDocs.Editor
 
-GroupDocs.Editor for Java هو حل قوي **word to html java** يتيح لك تحميل وتحرير وحفظ مجموعة واسعة من صيغ المستندات — بما في ذلك Word وExcel وPowerPoint وPDF وغيرها — مباشرةً من تطبيقات Java الخاصة بك. سواء كنت تبني نظام إدارة محتوى، أو خط أنابيب تقارير آلي، أو منصة تحرير تعاونية، فإن هذا API يمنحك المرونة لتحويل المستندات دون الاعتماد على برامج سطح مكتب خارجية.
+في تطبيقات الويب الحديثة غالبًا ما تحتاج إلى عرض محتوى Word غني داخل المتصفح. **Convert docx to html in Java** باستخدام GroupDocs.Editor يتيح لك تحويل ملفات Microsoft Word إلى HTML نظيف ومتوافق مع المعايير دون تثبيت Microsoft Office على الخادم. هذا البرنامج التعليمي يشرح لك كيفية تحميل ملف DOCX، وتحويله إلى HTML، وتصديره إلى PDF، ومعالجة الملفات المحمية بكلمة مرور، وتوسيع العملية لتعامل مع عمليات الدفعات.
 
-## مقدمة حول word to html java مع GroupDocs.Editor للـ Java
+## مقدمة حول word to html java مع GroupDocs.Editor لـ Java
 
-المكتبة تحول مستندات Word إلى HTML نظيف، مما يتيح دمجًا سلسًا مع أي محرر WYSIWYG. بعد انتهاء المستخدمين من التحرير، يمكنك تحويل HTML مرة أخرى إلى الصيغة الأصلية مع الحفاظ على التخطيط والأنماط والموارد المدمجة. كما يدعم API أيضًا معالجة **password protect document**، واستخراج الموارد، والعديد من خيارات التخصيص التي تجعل أتمتة المستندات بسيطة.
+GroupDocs.Editor for Java هو حل **word to html java** قوي يتيح لك تحميل وتحرير وحفظ مجموعة واسعة من صيغ المستندات — بما في ذلك Word وExcel وPowerPoint وPDF وغيرها — مباشرةً من تطبيقات Java الخاصة بك. سواء كنت تبني نظام إدارة محتوى، أو خط أنابيب تقارير آلي، أو منصة تحرير تعاونية، فإن هذه API توفر لك المرونة لتحويل المستندات دون الاعتماد على برامج سطح مكتب خارجية.
 
 ## إجابات سريعة
-- **هل يمكن لـ GroupDocs.Editor تحويل Word إلى HTML في Java؟** نعم، فهو يوفر تحويلًا بنقرة واحدة يحافظ على الأنماط والصور.  
-- **هل دعم تصدير PDF؟** بالتأكيد – استخدم ميزة `save pdf java` لإنشاء ملفات PDF تتطابق مع تخطيط المصدر.  
-- **هل أحتاج إلى ترخيص للإنتاج؟** يلزم الحصول على ترخيص تجاري للاستخدام في الإنتاج؛ تتوفر نسخة تجريبية مجانية للتقييم.  
-- **هل يمكنني تحرير الملفات المحمية بكلمة مرور؟** نعم، قدم كلمة المرور عند التحميل ويمكنك أيضًا تعيين كلمة مرور جديدة عند الحفظ.  
-- **ما أنواع الملفات المدعومة؟** أكثر من 50 صيغة، بما في ذلك DOCX وXLSX وPPTX وHTML والعديد من أنواع الصور.
+- **Can GroupDocs.Editor convert Word to HTML in Java?** نعم، يوفر تحويلًا بنقرة واحدة يحافظ على الأنماط والصور.  
+- **Is PDF export supported?** بالتأكيد – استخدم ميزة `save pdf java` لإنشاء ملفات PDF تتطابق مع تخطيط المصدر.  
+- **Do I need a license for production?** يلزم الحصول على ترخيص تجاري للاستخدام في الإنتاج؛ يتوفر نسخة تجريبية مجانية للتقييم.  
+- **Can I edit password‑protected files?** نعم، قدم كلمة المرور عند التحميل ويمكنك أيضًا تعيين كلمة مرور جديدة عند الحفظ.  
+- **What file types are supported?** أكثر من 50 صيغة، بما في ذلك DOCX وXLSX وPPTX وHTML والعديد من أنواع الصور.
 
 ## ما هو تحويل word to html java؟
-**Word to HTML Java conversion** هو عملية تحويل مستندات Microsoft Word إلى ترميز HTML متوافق مع المعايير باستخدام كود Java. قم بتحميل DOCX باستخدام GroupDocs.Editor، استدعِ طريقة التحويل، واحصل على HTML نظيف جاهز للمتصفح يحتفظ بالجداول والعناوين والصور المدمجة.
 
-## لماذا نستخدم تحويل Word إلى HTML Java؟
-تحميل وتحويل المستندات باستخدام GroupDocs.Editor للـ Java يلغي الحاجة إلى Microsoft Office على الخادم، ويقلل وقت المعالجة حتى 70 ٪، ويدعم المعالجة الدفعة لآلاف الملفات في الساعة. تتعامل المكتبة تلقائيًا مع **preserve formatting html**، مما يضمن أن التخطيطات المعقدة تبدو متطابقة في المتصفح.
+**Word to HTML Java conversion** يحول مستند Microsoft Word إلى ترميز HTML نظيف يمكن للمتصفحات عرضه مباشرةً. تحافظ العملية على الجداول والعناوين والأنماط والصور المدمجة، وتنتج مخرجات تعمل مع أي محرر WYSIWYG أو واجهة أمامية مخصصة. كما تقوم بتوحيد الخطوط والحفاظ على الروابط التشعبية، مما يضمن إمكانية تنسيق HTML الناتج أو معالجته لاحقًا دون فقدان الوظائف.
 
-## كيفية تحويل Word إلى HTML باستخدام GroupDocs.Editor للـ Java؟
-`Document` هي الفئة الأساسية التي تمثل ملفًا تم تحميله إلى GroupDocs.Editor. `convertToHtml` هي طريقة تحول المستند المحمل إلى ترميز HTML نظيف. قم بتحميل الملف المصدر باستخدام فئة `Document`، استدعِ طريقة `convertToHtml`، واكتب النتيجة إلى سلسلة أو ملف. يمكنك أيضًا تحديد خيارات التحويل مثل الحفاظ على الخطوط الأصلية، ومعالجة الموارد المدمجة، وتخصيص مخرجات CSS لتتناسب مع متطلبات تنسيق تطبيقك.
+## لماذا تستخدم تحويل word to html java؟
 
-## كيفية حفظ PDF باستخدام GroupDocs.Editor للـ Java
-حفظ المستند كملف PDF هو طلب شائع للتوزيع النهائي أو الأرشفة. باستخدام استدعاء طريقة واحد يمكنك تصدير أي صيغة مدعومة إلى ملفات متوافقة مع **save pdf java**، مما يضمن أن المخرجات تبدو تمامًا مثل المستند الأصلي. كما يتيح API تضمين الخطوط وتعيين بيانات تعريف PDF مثل العنوان والمؤلف والكلمات المفتاحية لتلبية معايير الامتثال.
+GroupDocs.Editor يلغي الحاجة إلى تثبيت Microsoft Office، ويقلل وقت المعالجة على الخادم بنسبة تصل إلى 70 ٪، ويمكنه معالجة آلاف الملفات في الساعة على دفعات. المكتبة أيضًا تقوم تلقائيًا **preserve formatting html**، مما يضمن أن التخطيطات المعقدة تظهر متطابقة في المتصفح.
+
+## كيفية تحويل word إلى html باستخدام GroupDocs.Editor لـ Java؟
+
+`Document` هي الفئة الأساسية التي تمثل ملفًا محملاً في GroupDocs.Editor. `convertToHtml()` تُعيد محتوى المستند كـ HTML نظيف. حمّل ملف المصدر باستخدام فئة `Document`، استدعِ طريقة `convertToHtml`، واكتب الترميز الناتج إلى سلسلة أو ملف. هذا النمط ذو الخطوتين يتعامل مع الخطوط والصور والجداول وCSS المخصص في استدعاء واحد.
+
+### تعريف فئة Document
+فئة `Document` هي الكائن الأساسي في GroupDocs.Editor الذي يمثل ملفًا واحدًا محملاً في الذاكرة.
+
+### خطوات التحويل
+1. **Load the DOCX** – مرّر مسار الملف أو تدفق الإدخال إلى مُنشئ `Document`.  
+2. **Configure options (optional)** – يمكنك تحديد معالجة CSS أو استخراج الصور أو تضمين الخطوط.  
+3. **Call `convertToHtml()`** – تُعيد الطريقة HTML نظيف ومجموعة من الموارد المستخرجة.  
+4. **Persist the HTML** – اكتب السلسلة إلى ملف `.html` أو أرسلها مباشرةً إلى العميل.
+
+## كيفية حفظ pdf java باستخدام GroupDocs.Editor؟
+
+`save()` يكتب المستند إلى الصيغة والموقع المختارين. أنشئ كائن `Document` باستخدام ملف المصدر الخاص بك، ثم استدعِ `save("output.pdf", SaveFormat.Pdf)` (أو الطريقة المكافئة `savePdf`). تقوم الـ API بتضمين الخطوط، والحفاظ على الرسومات المتجهية، وتتيح لك ضبط بيانات تعريف PDF مثل العنوان والمؤلف، لتنتج PDF يبدو تمامًا كالمستند الأصلي.
+
+### تفاصيل تصدير PDF
+- **Font embedding** يضمن عرض PDF بشكل صحيح على أي جهاز.  
+- **Metadata options** تتيح لك إضافة العنوان والمؤلف والموضوع والكلمات المفتاحية للامتثال.  
+- **Performance**: عادةً ما يكتمل تحويل DOCX مكوّن من 200 صفحة إلى PDF في أقل من 5 ثوانٍ على جهاز افتراضي قياسي.
 
 ## حماية المستند بكلمة مرور – تأمين ملفاتك
-إذا كنت بحاجة للعمل مع مواد سرية، يتيح لك API فتح الملفات المحمية بكلمة مرور وتحريرها وإعادة حفظها. ما عليك سوى تقديم كلمة المرور عند تحميل المستند، ويمكنك أيضًا تطبيق كلمة مرور جديدة عند الحفظ، مما يحافظ على أمان بياناتك طوال عملية المعالجة.
 
-## تحرير ملفات XML Java و Excel Java
-بعيدًا عن معالجة النصوص التقليدية، يتعامل GroupDocs.Editor أيضًا مع سيناريوهات **edit xml java** و **edit excel java**. يمكنك تعديل هياكل XML أو خلايا جداول البيانات أو الصيغ أو الأنماط برمجيًا، ثم كتابة التغييرات مرة أخرى إلى نوع الملف الأصلي.
+إذا كنت بحاجة للعمل مع مواد سرية، تتيح لك الـ API فتح الملفات المحمية بكلمة مرور وتحريرها وإعادة حفظها. ما عليك سوى تقديم كلمة المرور عند تحميل المستند، ويمكنك أيضًا تعيين كلمة مرور جديدة عند الحفظ، مما يحافظ على أمان بياناتك طوال عملية المعالجة.
 
-## إمكانيات تحرير المستند المتقدمة
-للمستخدمين المتقدمين، توفر المكتبة ميزات **advanced document editing** مثل تعيين الأنماط المخصصة، وتحسين الموارد، و **batch processing java**. تساعدك هذه الأدوات على بناء حلول عالية الأداء تتوسع مع أحجام المستندات الكبيرة.
+## تحرير ملفات XML Java وExcel Java
 
-## دروس GroupDocs.Editor للـ Java
+بخلاف معالجة النصوص التقليدية، يدعم GroupDocs.Editor أيضًا سيناريوهات **edit xml java** و**edit excel java**. يمكنك تعديل هياكل XML أو خلايا جداول البيانات أو الصيغ أو الأنماط برمجيًا، ثم كتابة التغييرات مرة أخرى إلى نوع الملف الأصلي.
 
-### [دروس تحميل المستندات مع GroupDocs.Editor للـ Java](./document-loading/)
+## قدرات تحرير المستند المتقدمة
+
+للمستخدمين المتقدمين، توفر المكتبة ميزات **advanced document editing** مثل تعيين الأنماط المخصصة، وتحسين الموارد، و**batch processing java**. تساعدك هذه الأدوات على بناء حلول عالية الأداء تتوسع مع أحجام المستندات الكبيرة.
+
+## دروس GroupDocs.Editor لـ Java
+
+### [دروس تحميل المستندات باستخدام GroupDocs.Editor لـ Java](./document-loading/)
+تعلم كيفية تحميل المستندات من مصادر مختلفة بصيغ متعددة مع هذه الدروس الخاصة بـ GroupDocs.Editor لـ Java.
+
 ### [دروس تحرير المستندات لـ GroupDocs.Editor Java](./document-editing/)
+دروس كاملة لتحرير المستندات، تعديل المحتوى، وتنفيذ قدرات تحرير المستندات باستخدام GroupDocs.Editor لـ Java.
+
 ### [دروس حفظ وتصدير المستندات لـ GroupDocs.Editor Java](./document-saving/)
-### [دروس تحرير مستندات معالجة النصوص مع GroupDocs.Editor للـ Java](./word-processing-documents/)
+دروس خطوة بخطوة لحفظ المستندات المعدلة بصيغ مختلفة وتنفيذ إمكانيات التصدير باستخدام GroupDocs.Editor لـ Java.
+
+### [دروس تحرير مستندات معالجة النصوص باستخدام GroupDocs.Editor لـ Java](./word-processing-documents/)
+تعلم تحرير مستندات Word، DOC، DOCX، RTF، وغيرها من صيغ معالجة النصوص مع هذه الدروس الخاصة بـ GroupDocs.Editor Java.
+
 ### [دروس تحرير مستندات جداول البيانات لـ GroupDocs.Editor Java](./spreadsheet-documents/)
+دروس كاملة لتحرير دفاتر Excel، أوراق العمل، الصيغ، ومحتوى الجداول باستخدام GroupDocs.Editor لـ Java.
+
 ### [دروس تحرير مستندات العروض التقديمية لـ GroupDocs.Editor Java](./presentation-documents/)
-### [دروس تحرير النصوص العادية وملفات DSV لـ GroupDocs.Editor Java](./plain-text-dsv-documents/)
+دروس خطوة بخطوة لتحرير عروض PowerPoint، الشرائح، وعناصر العرض باستخدام GroupDocs.Editor لـ Java.
+
+### [دروس تحرير المستندات النصية العادية وDSV لـ GroupDocs.Editor Java](./plain-text-dsv-documents/)
+دروس كاملة لتحرير المستندات النصية العادية، CSV، TSV، والملفات النصية ذات الفواصل باستخدام GroupDocs.Editor لـ Java.
+
 ### [دروس تحرير مستندات XML لـ GroupDocs.Editor Java](./xml-documents/)
-### [دروس تحرير حقول النماذج مع GroupDocs.Editor للـ Java](./form-fields/)
-### [دروس ميزات GroupDocs.Editor المتقدمة للـ Java](./advanced-features/)
-### [دروس الترخيص والتكوين لـ GroupDocs.Editor للـ Java](./licensing-configuration/)
+دروس خطوة بخطوة لتحرير مستندات XML، هيكلها، ومحتواها باستخدام GroupDocs.Editor لـ Java.
+
+### [دروس تحرير حقول النماذج باستخدام GroupDocs.Editor لـ Java](./form-fields/)
+دروس كاملة للعمل مع حقول نماذج المستندات، النماذج التفاعلية، ومحتوى النماذج باستخدام GroupDocs.Editor لـ Java.
+
+### [دروس ميزات GroupDocs.Editor المتقدمة لـ Java](./advanced-features/)
+دروس خطوة بخطوة لتنفيذ ميزات تحرير المستندات المتقدمة، التحسينات، والقدرات المتخصصة باستخدام GroupDocs.Editor لـ Java.
+
+### [دروس الترخيص والتكوين لـ GroupDocs.Editor لـ Java](./licensing-configuration/)
+دروس كاملة لإعداد الترخيص، تكوين GroupDocs.Editor، وتنفيذ خيارات النشر في تطبيقات Java.
 
 ## المشكلات الشائعة والحلول
-- **هل ينتج التحويل HTML فارغ؟** تأكد من أن ملف DOCX المصدر غير محمي بكلمة مرور أو تالف؛ قدم كلمة المرور الصحيحة إذا لزم الأمر.  
-- **هل الصور مفقودة بعد التحويل؟** استخدم خيار `extractResources` لاسترجاع الصور المدمجة والإشارة إليها بشكل صحيح في HTML المُولد.  
-- **هل مخرجات PDF مشوهة؟** تحقق من أنك تستخدم أحدث طريقة `save pdf java` وفعل تضمين الخطوط للحصول على عرض ثابت.  
-- **هل المعالجة الدفعة بطيئة؟** اضبط إعدادات `ThreadPool` وفعل `optimizeResources` لتقليل استهلاك الذاكرة عند معالجة العديد من الملفات في آن واحد.
+- **Conversion produces empty HTML?** تأكد من أن ملف DOCX المصدر غير محمي بكلمة مرور أو تالف؛ قدم كلمة المرور الصحيحة إذا لزم الأمر.  
+- **Images missing after conversion?** استخدم خيار `extractResources` لاسترجاع الصور المدمجة والإشارة إليها بشكل صحيح في HTML المُنتج.  
+- **PDF output looks distorted?** تحقق من أنك تستخدم أحدث طريقة `save pdf java` وفعل تضمين الخطوط للحصول على عرض ثابت.  
+- **Batch processing runs slowly?** اضبط إعدادات `ThreadPool` وفعل `optimizeResources` لتقليل استهلاك الذاكرة عند معالجة العديد من الملفات في آن واحد.
 
 ## الأسئلة المتكررة
 
-**س: هل يمكنني تحويل DOCX إلى HTML دون تثبيت Microsoft Office؟**  
-ج: نعم، يقوم GroupDocs.Editor للـ Java بإجراء التحويل بالكامل على الخادم، دون الحاجة إلى تثبيت Office.
+**Q: هل يمكنني تحويل DOCX إلى HTML دون تثبيت Microsoft Office؟**  
+A: نعم، يقوم GroupDocs.Editor for Java بإجراء التحويل بالكامل على الخادم، دون الحاجة إلى تثبيت Office.
 
-**س: هل يدعم API تحويل ملفات Word المحمية بكلمة مرور؟**  
-ج: بالتأكيد – قدم كلمة المرور عند تحميل المستند، ويمكنك أيضًا تعيين كلمة مرور جديدة على الملف المحفوظ.
+**Q: هل تدعم الـ API تحويل ملفات Word المحمية بكلمة مرور؟**  
+A: بالتأكيد – قدم كلمة المرور عند تحميل المستند، ويمكنك أيضًا تعيين كلمة مرور جديدة على الملف المحفوظ.
 
-**س: كم عدد صيغ الملفات التي يمكن لـ GroupDocs.Editor التعامل معها؟**  
-ج: تدعم المكتبة أكثر من 50 صيغة إدخال وإخراج، تغطي جميع أنواع المكتب والصور الرئيسية.
+**Q: كم عدد صيغ الملفات التي يمكن لـ GroupDocs.Editor التعامل معها؟**  
+A: تدعم المكتبة أكثر من 50 صيغة للإدخال والإخراج، تغطي جميع صيغ المكتب والأنواع الرئيسية للصور.
 
-**س: هل هناك حد لحجم المستندات التي يمكنني معالجتها؟**  
-ج: يتم معالجة المستندات حتى 500 ميغابايت بكفاءة؛ بالنسبة للملفات الأكبر، فعّل وضع البث لتجنب تحميل الملف بالكامل في الذاكرة.
+**Q: هل هناك حد لحجم المستندات التي يمكنني معالجتها؟**  
+A: يتم معالجة المستندات حتى حجم 500 ميغابايت بكفاءة؛ بالنسبة للملفات الأكبر، فعّل وضع البث لتجنب تحميل الملف بالكامل في الذاكرة.
 
-**س: هل يمكنني إجراء تحويلات دفعة في استدعاء واحد؟**  
-ج: نعم، ميزة **batch processing java** تتيح لك تجميع ملفات متعددة وتحويلها بشكل متزامن باستخدام استدعاء API واحد.
+**Q: هل يمكنني إجراء تحويلات دفعة في استدعاء واحد؟**  
+A: نعم، تتيح ميزة **batch processing java** وضع عدة ملفات في قائمة الانتظار وتحويلها بشكل متزامن باستخدام استدعاء API واحد.
 
 ## الخلاصة
-من خلال الاستفادة من GroupDocs.Editor للـ Java، يمكنك تنفيذ تحويل **word to html java** قوي، وتصدير **save pdf java** سلس، ومعالجة آمنة لسيناريوهات **password protect document** — كل ذلك دون الحاجة إلى برامج طرف ثالث. يدعم التنسيق الواسع، وعرض عالي الدقة، وقدرات المعالجة الدفعة، مما يجعلها المكتبة المفضلة لأتمتة المستندات على مستوى المؤسسات.
+باستخدام GroupDocs.Editor for Java، يمكنك تنفيذ تحويل **convert docx to html** قوي، وتصدير **save pdf java** سلس، ومعالجة آمنة لسيناريوهات **password protect document** — كل ذلك دون الحاجة إلى برامج طرف ثالث. الدعم الواسع للصيغ، وعرض عالي الدقة، وقدرات معالجة الدفعات تجعلها المكتبة المفضلة لأتمتة المستندات على مستوى المؤسسات.
 
 ---
 
-**آخر تحديث:** 2026-06-16  
+**آخر تحديث:** 2026-11-02  
 **تم الاختبار مع:** GroupDocs.Editor for Java 23.11  
 **المؤلف:** GroupDocs
 
-## دروس ذات صلة
+## الدروس ذات الصلة
 
-- [تحميل مستند Word Java مع GroupDocs.Editor – دليل كامل](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
-- [تحرير مستند Word Java: تحميل، تحرير واستخراج CSS مع GroupDocs.Editor](/editor/java/word-processing-documents/groupdocs-editor-java-word-doc-edit-extract-css/)
-- [تحويل HTML إلى DOCX في Java باستخدام GroupDocs.Editor: دليل كامل](/editor/java/document-saving/convert-html-docx-groupdocs-java-guide/)
+- [تحميل مستند Word Java باستخدام GroupDocs.Editor – دليل شامل](/editor/java/document-loading/load-word-document-groupdocs-editor-java/)
+- [تحرير مستند Word Java: تحميل، تحرير واستخراج CSS باستخدام GroupDocs.Editor](/editor/java/word-processing-documents/groupdocs-editor-java-word-doc-edit-extract-css/)
+- [تحويل HTML إلى DOCX في Java باستخدام GroupDocs.Editor: دليل شامل](/editor/java/document-saving/convert-html-docx-groupdocs-java-guide/)
