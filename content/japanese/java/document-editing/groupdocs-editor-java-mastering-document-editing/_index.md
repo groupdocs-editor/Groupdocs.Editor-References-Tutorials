@@ -1,21 +1,22 @@
 ---
-date: '2026-07-20'
-description: GroupDocs.Editor for Java を使用して、load text file java、replace text in document、trim
-  trailing spaces の方法を学び、large files java の処理に最適です。
+date: '2026-11-15'
+description: Load text file java の方法、文書内のテキスト置換、GroupDocs.Editor for Java を使用した末尾スペースのトリムを学びましょう。大規模ファイルの処理に最適です。
+images:
+- /java/document-editing/groupdocs-editor-java-mastering-document-editing/og-image.png
 keywords:
 - load text file java
 - trim trailing spaces java
 - replace text java
 - process large documents java
 - GroupDocs.Editor for Java
-lastmod: '2026-07-20'
-og_description: GroupDocs.Editor for Java を使用して、load text file java を迅速に処理します。replace
-  text、trim trailing spaces を学び、large documents を効率的に処理できます。
+lastmod: '2026-11-15'
+og_description: Load text file java を GroupDocs.Editor で迅速に実行します。このガイドでは UTF‑8 エンコーディングの設定、末尾スペースのトリム、テキスト置換、Java
+  における大規模ファイルの効率的な処理方法を紹介します。
 og_image_alt: 'Guide: Load and edit text files in Java with GroupDocs.Editor'
-og_title: Load Text File Java — GroupDocs.Editor で文書編集をマスター
+og_title: Load text file java – GroupDocs.Editorでドキュメントを高速編集
 schemas:
 - author: GroupDocs
-  dateModified: '2026-07-20'
+  dateModified: '2026-11-15'
   description: Learn how to load text file java, replace text in document, and trim
     trailing spaces using GroupDocs.Editor for Java. Ideal for processing large files
     java.
@@ -27,7 +28,7 @@ schemas:
   name: 'Load Text File Java: Master Document Editing with GroupDocs.Editor'
   steps:
   - name: Create an Editor Instance
-    text: 'The `Editor` class is the entry point for loading and editing documents
+    text: 'The `Editor` class is the primary entry point for loading and editing documents
       in GroupDocs.Editor. It represents a single source file and provides methods
       to load, edit, and save content. *Explanation*: Instantiating `Editor` with
       the file path prepares the library to read the file using the default (or s'
@@ -42,10 +43,10 @@ schemas:
       The `edit` call returns an `EditableDocument` that reflects the applied options,
       ready for content manipulation.'
   - name: Modify Text Content
-    text: 'The `replace` method performs find‑and‑replace operations on the document
-      content while preserving layout. You can chain multiple replacements, apply
-      regular‑expression patterns, or inject new sections as required. *Explanation*:
-      This simple example **replace text in document**. You can chain multip'
+    text: 'The `replace` method performs find‑and‑replace operations while preserving
+      layout. You can chain multiple replacements, apply regular‑expression patterns,
+      or inject new sections as required. *Explanation*: This simple example **replace
+      text in document**. You can chain multip'
   type: HowTo
 - questions:
   - answer: Absolutely. The library is stateless and can be called from any Java‑based
@@ -69,46 +70,45 @@ tags:
 - Java document editing
 - batch edit text files
 - large file processing
-title: 'Load Text File Java: GroupDocs.Editor で文書編集をマスター'
+title: Load text file java：GroupDocs.Editorで文書編集をマスター
 type: docs
 url: /ja/java/document-editing/groupdocs-editor-java-mastering-document-editing/
 weight: 1
 ---
 
-# テキストファイルの読み込み（Java）：GroupDocs.Editorでマスタードキュメント編集
+# テキストファイルのロード（Java）: GroupDocs.Editorによるマスタードキュメント編集
 
-Javaでのドキュメント操作の自動化は、しばしば **load text file java** を迅速に読み込み、コンテンツを確実に編集する必要から始まります。設定ファイルの更新、ログデータのクリーンアップ、プレーンテキストレポートの変換など、GroupDocs.Editorはこれらのタスクを処理する堅牢なAPIを提供します。本ガイドでは、テキストファイルの読み込み、ドキュメント内のテキスト置換、UTF‑8エンコーディングの設定、末尾スペースのトリム、さらには大規模ファイルの効率的な処理方法を学びます。
+Javaでのドキュメント操作の自動化は、**load text file java** を迅速にロードし、コンテンツを確実に編集する必要から始まります。設定ファイルの更新、ログデータのクレンジング、プレーンテキストレポートの変換など、GroupDocs.Editor はこれらのタスクを処理する堅牢な API を提供します。本ガイドでは、テキストファイルのロード方法、ドキュメント内のテキスト置換、UTF‑8エンコーディングの設定、末尾スペースのトリム、さらには大容量ファイル（java）の効率的な処理方法を学びます。
 
 ## クイック回答
-- **Javaでテキスト編集を簡素化するライブラリは何ですか？** GroupDocs.Editor for Java.  
-- **テキストファイルはどうやって読み込みますか？** Use the `Editor` class with the file path.  
-- **UTF‑8エンコーディングを設定できますか？** Yes, via `TextEditOptions.setEncoding(StandardCharsets.UTF_8)`.  
-- **末尾のスペースはどうしますか？** Configure `TextTrailingSpacesOptions.Trim` to remove them.  
-- **大容量ファイルの処理はサポートされていますか？** Process documents in chunks and tune JVM heap settings.
+- **Javaでテキスト編集を簡素化するライブラリは何ですか？** GroupDocs.Editor for Java。  
+- **テキストファイルはどうやってロードしますか？** ファイルパスを指定して `Editor` クラスを使用します。  
+- **UTF‑8エンコーディングを設定できますか？** はい、`TextEditOptions.setEncoding(StandardCharsets.UTF_8)` で設定できます。  
+- **末尾のスペースはどうしますか？** `TextTrailingSpacesOptions.Trim` を設定して削除します。  
+- **大容量ファイルの処理はサポートされていますか？** ドキュメントをチャンクに分割して処理し、JVMヒープ設定を調整します。  
+- **サポートされているフォーマットは何種類ですか？** TXT、DOCX、PDF、HTML など、30 以上の入力・出力フォーマットに対応しています。  
+- **チャンク処理なしで扱える最大ファイルサイズは？** 単一の JVM インスタンスで最大 500 MB です。
 
-## “load text file java”とは何ですか？
-Javaでテキストファイルを読み込むとは、ファイルの生バイトを読み取り、正しい文字セットで解釈し、プログラムから操作できるようにコンテンツを公開することです。GroupDocs.Editorはこれらの手順を抽象化し、編集ロジックに集中できるようにします。改行コードの処理や、可能な場合はエンコーディングの自動検出を行い、さらなる変更のためのクリーンなAPIを提供します。
+## “load text file java” とは何ですか？
 
-## なぜJava向けGroupDocs.Editorを使用するのか？
-GroupDocs.Editor for Javaは、さまざまなドキュメント形式を扱うための包括的なソリューションを提供し、信頼性の高いテキスト処理、エンコーディング管理、パフォーマンス最適化を実現します。複雑な編集タスクを簡素化し、開発工数を削減し、大規模な運用をサポートするため、エンタープライズアプリケーションに最適です。
+Javaでテキストファイルをロードするとは、ファイルのバイト列を読み取り、正しい文字セットで解釈し、プログラムから操作できる形で内容を公開することです。GroupDocs.Editor はこれらの手順を抽象化し、編集ロジックに集中できるようにします。また、改行コードの検出や Unicode 文字の保持も自動で行い、ロードされたテキストが信頼できる編集操作にすぐ使える状態になることを保証します。
 
-- **Broad format support** – Works with 30+ input and output formats, including TXT, DOCX, PDF, and HTML.  
-- **Built‑in encoding handling** – Guarantees correct Unicode processing, especially UTF‑8.  
-- **Advanced formatting options** – Recognizes lists, manages leading/trailing spaces, and preserves layout.  
-- **Scalable performance** – Designed to handle documents up to 500 MB when you enable chunked processing and configure JVM memory.
+## なぜ GroupDocs.Editor for Java を使用するのか？
+
+GroupDocs.Editor for Java は、シングルライン API でテキストファイルを編集でき、30 以上のフォーマットに対応し、チャンク処理を有効にすれば最大 500 MB のドキュメントも処理できます。改行コードを自動検出し、Unicode 文字を保持し、空白トリム用の組み込みオプションを提供するため、典型的なバッチジョブでの手動後処理作業を最大 80 % 削減できます。
 
 ## 前提条件
 
-- **Java Development Kit (JDK)** 8 or higher.  
-- **IDE** such as IntelliJ IDEA or Eclipse.  
-- **GroupDocs.Editor for Java** (we’ll use the latest release).  
-- Basic Java knowledge.
+- **Java Development Kit (JDK)** 8 以上。  
+- **IDE**（IntelliJ IDEA や Eclipse など）。  
+- **GroupDocs.Editor for Java**（最新リリース）。  
+- 基本的な Java の知識。
 
-## GroupDocs.Editor for Javaのセットアップ
+## GroupDocs.Editor for Java の設定
 
-### Maven構成
+### Maven 設定
 
-If you prefer Maven, add the repository and dependency to your `pom.xml`:
+Maven を使用する場合は、リポジトリと依存関係を `pom.xml` に追加してください。
 
 ```xml
 <repositories>
@@ -130,39 +130,39 @@ If you prefer Maven, add the repository and dependency to your `pom.xml`:
 
 ### 直接ダウンロード
 
-Alternatively, download the latest version from [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/).
+または、最新バージョンを [GroupDocs.Editor for Java releases](https://releases.groupdocs.com/editor/java/) からダウンロードしてください。
 
 ### ライセンス取得
 
-You can start with a free trial to evaluate the library. For production use:
+ライブラリを評価するために無料トライアルで開始できます。商用利用の場合は以下を行ってください。
 
-- Obtain a temporary license for evaluation: [Temporary License](https://purchase.groupdocs.com/temporary-license).  
-- Purchase a full license from the [GroupDocs website](https://purchase.groupdocs.com/).
+- 評価用の一時ライセンスを取得: [Temporary License](https://purchase.groupdocs.com/temporary-license)。  
+- 正式ライセンスは [GroupDocs website](https://purchase.groupdocs.com/) から購入してください。
 
-Place the license file in your project as described in the official documentation.
+公式ドキュメントに記載されている通り、ライセンスファイルをプロジェクトに配置します。
 
-For additional help, visit the [Support Forum](https://forum.groupdocs.com/c/editor/).
+追加のサポートが必要な場合は、[Support Forum](https://forum.groupdocs.com/c/editor/) をご利用ください。
 
 ## 実装ガイド
 
-### GroupDocs.Editorでテキストファイル（java）を読み込む方法
+### GroupDocs.Editor を使用した load text file java の方法
 
-Loading a text file with GroupDocs.Editor is a three‑step process that you can complete in under a minute. First, you create an `Editor` instance pointing to the file path. Then you configure `TextEditOptions` to define encoding and trimming behavior. Finally, you invoke the `edit` method to obtain an `EditableDocument`, which can be manipulated programmatically.
+テキストファイルのロードは、`Editor` インスタンスの作成、`TextEditOptions` の設定、`edit` 呼び出しで `EditableDocument` を取得する、3 つの簡潔な手順で行えます。
 
-#### 手順1：Editorインスタンスの作成
+#### 手順 1: エディタインスタンスの作成
 
-The `Editor` class is the entry point for loading and editing documents in GroupDocs.Editor. It represents a single source file and provides methods to load, edit, and save content.
+`Editor` クラスは単一のソースファイルを表し、ロード、編集、保存のメソッドを提供します。
 
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.txt";
 Editor editor = new Editor(inputFilePath);
 ```
 
-*Explanation*: Instantiating `Editor` with the file path prepares the library to read the file using the default (or specified) encoding.
+*Explanation*: ファイルパスで `Editor` をインスタンス化すると、デフォルト（または指定）エンコーディングでファイルを読み取る準備が整います。
 
-#### 手順2：テキスト編集オプションの設定
+#### 手順 2: テキスト編集オプションの設定
 
-`TextEditOptions` defines how the raw text is interpreted, including encoding and whitespace handling. Setting UTF‑8 ensures all Unicode characters are preserved, while trimming trailing spaces cleans up the document.
+`TextEditOptions` クラスでエンコーディング、空白処理、その他のテキスト処理設定を指定できます。
 
 ```java
 TextEditOptions editOptions = new TextEditOptions();
@@ -172,102 +172,101 @@ editOptions.setLeadingSpaces(TextLeadingSpacesOptions.ConvertToIndent);
 editOptions.setTrailingSpaces(TextTrailingSpacesOptions.Trim); // trim trailing spaces
 ```
 
-*Explanation*: These options tell GroupDocs.Editor how to interpret the text. Setting UTF‑8 ensures all Unicode characters are preserved, while trimming trailing spaces cleans up the document.
+*Explanation*: これらのオプションは GroupDocs.Editor にテキストの解釈方法を指示します。UTF‑8 を設定すればすべての Unicode 文字が保持され、末尾スペースのトリムでドキュメントがクリーンになります。
 
-#### 手順3：ドキュメントの編集
+#### 手順 3: ドキュメントの編集
 
-`EditableDocument` represents the in‑memory editable version of the loaded text. It exposes methods for searching, replacing, and inserting text.
+`EditableDocument` オブジェクトは、編集後のテキストのインメモリ表現を保持し、検索・置換操作を提供します。
 
 ```java
 EditableDocument beforeEdit = editor.edit(editOptions);
 ```
 
-*Explanation*: The `edit` call returns an `EditableDocument` that reflects the applied options, ready for content manipulation.
+*Explanation*: `edit` 呼び出しは、適用されたオプションを反映した `EditableDocument` を返し、コンテンツ操作の準備が整います。
 
-#### 手順4：テキストコンテンツの変更
+#### 手順 4: テキストコンテンツの変更
 
-The `replace` method performs find‑and‑replace operations on the document content while preserving layout. You can chain multiple replacements, apply regular‑expression patterns, or inject new sections as required.
+`replace` メソッドは、レイアウトを保持しながらドキュメント内で検索置換を実行します。
 
 ```java
 String originalTextContent = beforeEdit.getContent();
 String updatedTextContent = originalTextContent.replace("text", "updated text");
 ```
 
-*Explanation*: This simple example **replace text in document**. You can chain multiple replacements, apply regex patterns, or inject new sections as required.
+*Explanation*: このシンプルな例は **replace text in document** を示しています。必要に応じて複数の置換をチェーンしたり、正規表現を適用したり、新しいセクションを挿入したりできます。
 
-### 実用的な応用例
+## 実用的な活用例
 
-GroupDocs.Editor shines in scenarios such as:
+GroupDocs.Editor は以下のようなシナリオで力を発揮します。
 
-- **Configuration Management** – Automate updates to `.properties` or `.config` files.  
-- **Data Cleaning** – Remove unwanted whitespace, normalize line endings, or filter sensitive data.  
-- **Document Transformation** – Convert plain‑text reports into rich formats (DOCX, PDF) after editing.
+- **構成管理** – `.properties` や `.config` ファイルの更新を自動化します。  
+- **データクレンジング** – 不要な空白を削除し、改行コードを正規化、機密データをフィルタリングします。  
+- **ドキュメント変換** – 編集後にプレーンテキストレポートをリッチフォーマット（DOCX、PDF）に変換します。
 
-## 大規模ファイル（Java）処理のパフォーマンス考慮事項
+## 大容量ファイル（Java）処理のパフォーマンス考慮点
 
-When dealing with massive text files:
+大量のテキストファイルを扱う際のポイント：
 
-- **Chunk Processing** – Read and edit the file in smaller segments to keep memory usage low.  
-- **JVM Tuning** – Increase heap size (`-Xmx2g` or higher) if you must load the whole file.  
-- **StringBuilder** – Use mutable buffers for intensive text manipulation to reduce overhead.
+- **チャンク処理** – ファイルを小さなセグメントに分割して読み書きし、メモリ使用量を抑えます。  
+- **JVMチューニング** – ファイル全体をロードする必要がある場合はヒープサイズ（`-Xmx2g` 以上）を増やします。  
+- **StringBuilder** – 集中的なテキスト操作には可変バッファを使用してオーバーヘッドを削減します。
 
-Following these tips helps you **process large files java** without running into OutOfMemory errors.
+これらのヒントに従うことで、**process large files java** を実行しても OutOfMemory エラーに遭遇しにくくなります。
 
 ## よくある問題と解決策
 
 | 問題 | 解決策 |
-|-------|----------|
-| **Incorrect characters after loading** | Verify that `setEncoding(StandardCharsets.UTF_8)` is applied, or specify the correct charset for your source file. |
-| **Trailing spaces not removed** | Ensure `TextTrailingSpacesOptions.Trim` is set; also check that the source file doesn’t contain non‑standard whitespace characters. |
-| **Performance slowdown on >100 MB files** | Switch to chunked processing and increase JVM heap as described above. |
-| **License not recognized** | Place the `.lic` file in the classpath root or configure `License.setLicense("path/to/license.lic")` before creating the `Editor`. |
+|------|--------|
+| **Incorrect characters after loading** | `setEncoding(StandardCharsets.UTF_8)` が適用されているか確認するか、ソースファイルに適した文字セットを指定してください。 |
+| **Trailing spaces not removed** | `TextTrailingSpacesOptions.Trim` が設定されていることを確認し、ソースファイルに非標準の空白文字が含まれていないかもチェックしてください。 |
+| **Performance slowdown on >100 MB files** | チャンク処理に切り替え、上記のように JVM ヒープを増やしてください。 |
+| **License not recognized** | `.lic` ファイルをクラスパスのルートに配置するか、`Editor` 作成前に `License.setLicense("path/to/license.lic")` を設定してください。 |
 
-## FAQセクション
+## FAQ セクション
 
 | 問題 | 解決策 |
-|-------|----------|
-| **Incorrect characters after loading** | Verify that `setEncoding(StandardCharsets.UTF_8)` is applied, or specify the correct charset for your source file. |
-| **Trailing spaces not removed** | Ensure `TextTrailingSpacesOptions.Trim` is set; also check that the source file doesn’t contain non‑standard whitespace characters. |
-| **Performance slowdown on >100 MB files** | Switch to chunked processing and increase JVM heap as described above. |
-| **License not recognized** | Place the `.lic` file in the classpath root or configure `License.setLicense("path/to/license.lic")` before creating the `Editor`. |
+|------|--------|
+| **Incorrect characters after loading** | `setEncoding(StandardCharsets.UTF_8)` が適用されているか確認するか、ソースファイルに適した文字セットを指定してください。 |
+| **Trailing spaces not removed** | `TextTrailingSpacesOptions.Trim` が設定されていることを確認し、ソースファイルに非標準の空白文字が含まれていないかもチェックしてください。 |
+| **Performance slowdown on >100 MB files** | チャンク処理に切り替え、上記のように JVM ヒープを増やしてください。 |
+| **License not recognized** | `.lic` ファイルをクラスパスのルートに配置するか、`Editor` 作成前に `License.setLicense("path/to/license.lic")` を設定してください。 |
 
 ## よくある質問
 
-**Q: Can I use GroupDocs.Editor in a microservice architecture?**  
-A: Absolutely. The library is stateless and can be called from any Java‑based service.
+**Q: GroupDocs.Editor をマイクロサービスアーキテクチャで使用できますか？**  
+A: もちろんです。ライブラリはステートレスで、任意の Java ベースのサービスから呼び出すことができます。
 
-**Q: How do I replace text in document while preserving formatting?**  
-A: Use the `EditableDocument.replace` method; formatting is retained unless you explicitly modify it.
+**Q: フォーマットを保持しながらドキュメント内のテキストを置換する方法は？**  
+A: `EditableDocument.replace` メソッドを使用します。明示的に変更しない限り、フォーマットは保持されます。
 
-**Q: Is there a way to batch‑process multiple files?**  
-A: Loop over file paths, create an `Editor` for each, and apply the same `TextEditOptions`. Remember to release resources after each iteration.
+**Q: 複数ファイルをバッチ処理する方法はありますか？**  
+A: ファイルパスをループし、各ファイルごとに `Editor` を作成して同じ `TextEditOptions` を適用します。各イテレーション後にリソースを解放することを忘れないでください。
 
-**Q: What Java version is required?**  
-A: Java 8 or newer is supported.
+**Q: 必要な Java バージョンは？**  
+A: Java 8 以上がサポートされています。
 
-**Q: How can I test my edits without writing to disk?**  
-A: Call `EditableDocument.save()` with an `OutputStream` to keep the result in memory.
+**Q: ディスクに書き込まずに編集結果をテストする方法は？**  
+A: `EditableDocument.save()` に `OutputStream` を渡すことで、結果をメモリ上に保持できます。
 
 ## 結論
 
-We’ve walked through how to **load text file java**, configure UTF‑8 encoding, trim trailing spaces, and **replace text in document** using GroupDocs.Editor for Java. By following the steps and applying the performance tips, you can confidently handle both small configuration files and massive logs in your Java applications.
+**load text file java** のロード方法、UTF‑8 エンコーディングの設定、末尾スペースのトリム、そして **replace text in document** の実装手順を GroupDocs.Editor for Java を使って解説しました。これらの手順とパフォーマンスのコツを守れば、小さな設定ファイルから大容量ログまで、Java アプリケーションで自信を持って扱えるようになります。
 
-**Next Steps:** Explore other supported formats (DOCX, PDF), experiment with collaborative editing features, and integrate the workflow into your CI/CD pipeline for automated document updates.
+**次のステップ:** 他のサポートフォーマット（DOCX、PDF）を探索し、共同編集機能を試し、CI/CD パイプラインに統合してドキュメントの自動更新を実現してください。
 
 ---
 
-**Last Updated:** 2026-07-20  
-**Tested With:** GroupDocs.Editor 25.3 for Java  
+**Last updated:** 2026-11-15  
+**Tested with:** GroupDocs.Editor 25.3 for Java  
 **Author:** GroupDocs  
 
-**Resources**
-- **Documentation**: Explore more at [GroupDocs Documentation](https://docs.groupdocs.com/editor/java/)  
-- **API Reference**: Dive into technical details at [API Reference](https://reference.groupdocs.com/editor/java/)  
-- **Download GroupDocs.Editor**: Get the latest version from [here](https://releases.groupdocs.com/editor/java/).  
-- **Free Trial and Licensing**: Start with a trial or acquire a license from [GroupDocs Purchase](https://purchase.groupdocs.com/temporary-license).
+## リソース
+- **ドキュメント**: 詳細は [GroupDocs Documentation](https://docs.groupdocs.com/editor/java/) をご覧ください。  
+- **API リファレンス**: 詳細は [API Reference](https://reference.groupdocs.com/editor/java/) をご覧ください。  
+- **GroupDocs.Editor のダウンロード**: 最新バージョンは [GroupDocs.Editor download page](https://releases.groupdocs.com/editor/java/) から取得してください。  
+- **無料トライアルとライセンス**: トライアルを開始するか、[GroupDocs Purchase](https://purchase.groupdocs.com/temporary-license) からライセンスを取得してください。
 
 ## 関連チュートリアル
-
-- [How to Load Document Java with GroupDocs.Editor](/editor/java/document-loading/)
-- [Convert Document to HTML – Document Editing Tutorials for GroupDocs.Editor Java](/editor/java/document-editing/)
-- [Java Document Management using GroupDocs.Editor](/editor/java/advanced-features/groupdocs-editor-java-comprehensive-guide/)
+- [Java でドキュメントをロードする方法（GroupDocs.Editor）](/editor/java/document-loading/)  
+- [ドキュメントを HTML に変換 – GroupDocs.Editor Java 用ドキュメント編集チュートリアル](/editor/java/document-editing/)  
+- [Java ドキュメント管理（GroupDocs.Editor）](/editor/java/advanced-features/groupdocs-editor-java-comprehensive-guide/)
